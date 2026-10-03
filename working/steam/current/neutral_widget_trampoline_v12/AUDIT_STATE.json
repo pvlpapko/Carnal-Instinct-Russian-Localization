@@ -2,13 +2,13 @@
   "schema_version": "1.0",
   "edition": "Steam",
   "task": "neutral_widget_trampoline_v12",
-  "status": "in_progress",
+  "status": "release_uploaded_static_validation_runtime_pending",
   "source_state_id": "steam_current_2026-10-03_16321_asset_verified_index_stale",
   "verified_game_version": "0.7.9.16321",
   "verified_build": null,
-  "current_phase": "pre_container_checkpoint",
-  "last_completed_unit": "trampoline_patch_static_validation",
-  "next_unit": "rebuild_v12_iostore_installer_archive",
+  "current_phase": "v12_uploaded_static_validation_complete",
+  "last_completed_unit": "drive_readback_sha256_crc_validation",
+  "next_unit": "user_runtime_validation",
   "completed_units": [
     "confirmed v11 crashes only when opening Map",
     "parsed CrashContext(10): undefined opcode 0x74 at Neutral_Widget ExecuteUbergraph offset 1169",
@@ -18,17 +18,24 @@
     "relocated only MainText/SubText display assignments to appended blocks",
     "added 884/884 map display cases in relocated blocks",
     "validated bad control-flow targets = 0 and bad import refs = 0",
-    "validated all non-ExecuteUbergraph exports byte-identical to current 0.7.9.16321 source"
+    "validated all non-ExecuteUbergraph exports byte-identical to current 0.7.9.16321 source",
+    "rebuilt Steam_current IoStore with trampoline Neutral_Widget",
+    "preserved NoSteam native full-map popup",
+    "validated both IoStore containers: BLAKE3 PASS and exact UCAS physical coverage",
+    "rebuilt installer; go test PASS; go vet -unsafeptr=false PASS; Windows x64 cross-build PASS",
+    "validated installer staged payload byte-for-byte against release Files",
+    "built ZIP; CRC PASS and 154/154 internal SHA-256 entries verified",
+    "uploaded to CI GPT/Releases and verified Drive readback SHA-256/CRC"
   ],
   "pending_units": [
-    "rebuild Steam_current IoStore with trampoline Neutral_Widget",
-    "preserve NoSteam native full-map popup",
-    "validate BLAKE3/UCAS/package paths",
-    "rebuild installer",
-    "ZIP CRC/SHA256 validation",
-    "Drive upload/readback",
-    "runtime Steam Map validation",
-    "quest/Lovense/character/combat smoke tests"
+    "runtime Steam: open Map tab without crash",
+    "runtime Steam: verify map hover translations across marker types",
+    "runtime Steam: quest tab and tracked badge layout",
+    "runtime Steam: Lovense bottom buttons",
+    "runtime Steam: exact character layout",
+    "runtime Steam: combat/AI/death smoke test",
+    "runtime NoSteam: map hover smoke test",
+    "global CI_SOURCE_INDEX refresh"
   ],
   "source_files_used": [
     "CrashContext(10).runtime-xml",
@@ -49,16 +56,36 @@
     "relocated MainText start 13816; SubText start 136070; final EndOfScript 258324",
     "all explicit control-flow targets resolve to parsed expression boundaries",
     "object imports 122 -> 124; bad import refs 0",
-    "map switches 884/884"
+    "map switches 884/884",
+    "Steam_current 58 packages; WB_WorldMapPopup override absent",
+    "NoSteam 71 packages; native full translated popup retained",
+    "v11 crash address 1169 restored to current-source EX_JumpIfNot opcode 0x07",
+    "bad control-flow targets 0; bad import refs 0",
+    "installer SHA-256 3453b019c76d793375f1aedbf3b08684a73cd82412fb73f46679c4b8eb22bc24",
+    "Drive readback SHA-256 a8bd52dc6437725888f5c5bd38933c5703f3b387455015e753b01418e8c3e0bf"
   ],
   "validation_pending": [
-    "container validation",
-    "installer/archive validation",
-    "game runtime validation"
+    "game runtime validation",
+    "global current-source reindex"
   ],
   "notes": [
     "v11 Steam must not be used; it is runtime-invalid when the Map tab executes Neutral_Widget.",
     "v12 does not shift any original control-flow destination before the original EndOfScript; only fixed-size jump+NOP trampolines replace the two display assignments.",
     "Steam WB_WorldMapPopup remains unmodified/current-game-owned."
-  ]
+  ],
+  "release": {
+    "name": "Carnal_Instinct_RU_DontLook_Installer_MapTrampoline_2026-10-04_v12.zip",
+    "sha256": "a8bd52dc6437725888f5c5bd38933c5703f3b387455015e753b01418e8c3e0bf",
+    "archive_bytes": 25017732,
+    "installer_sha256": "3453b019c76d793375f1aedbf3b08684a73cd82412fb73f46679c4b8eb22bc24",
+    "installer_bytes": 20246016,
+    "drive_folder_id": "1DVIGnV-LE0G6JPGUcwx_ftcwkdNSPtuG",
+    "drive_file_id": "1ZvQN9wc5lAbUqDv5cCeRA7BxseKNEJM_",
+    "drive_readback_sha256_verified": true,
+    "steam_payload_id": "Steam_current",
+    "steam_verified_game_version": "0.7.9.16321",
+    "steam_verified_build": null,
+    "nosteam_baseline_build": "0.7.9.16232",
+    "runtime_validation": "pending"
+  }
 }
