@@ -24,6 +24,7 @@
     "verified_build": null,
     "active_binary_packages": 26,
     "technical_state_rows_restored": 144,
+    "target_ai_state_rows_still_translated": 0,
     "pak_sha256": "4aa7aff39bbc525345bb4f3194dff5953b58ba934ecf95818cb249fe03208e9c",
     "utoc_sha256": "977feb8136c89e3b6a72e169b7f4b1158789a27cfc081964e93f3ce8a3a28be2",
     "ucas_sha256": "116d60c92eeca10723c99b27458f758a1ff8783ec3ec8f367504efadbcc17d7b"
@@ -33,23 +34,26 @@
     "verified_build": "0.7.9.16232",
     "active_binary_packages": 26,
     "technical_state_rows_restored": 144,
+    "target_ai_state_rows_still_translated": 0,
     "pak_sha256": "09f26693296f352d49006b3c9efe8411d92ff80fee9823ef27e0aa380b80c5ba",
     "utoc_sha256": "b795fc727b26fe00bd0302146aa47a963ca3508ca4080a8b8674ed163402686b",
     "ucas_sha256": "f0a094a778dac446ed98c2628fec89b893dca2847e1318c40804d1b2685f9fe0"
   },
   "safety": {
     "forbidden_gameplay_blueprint_overrides_absent": true,
+    "boss_ai_override_absent": true,
     "steam_character_patch_uses_current_schema": true,
     "steam_character_cross_build_package_copy": false,
     "placeholders_preserved": true,
     "missing_package_dependencies": 0
   },
   "drive": {
-    "folder_id": "1sCom4iYdLaReTz8lfJvmm0FMyKxRzUqQ",
-    "file_id": "1dcQn1NlIqh_A80mY_naNiwHe4cMiu3OM",
+    "folder_id": "18L6chgJrb0HiAFKC_GKRWY_ge6fE32DW",
+    "file_id": "1y94IeDDRw1cEeNtJ0Mx6i4eCJTrz13DM",
     "readback_bytes": 18832103,
     "readback_sha256_verified": true,
     "readback_zip_crc_verified": true
   },
+  "global_source_index_status": "stale after current Steam upload; build-dependent target files were fetched directly from current Drive bytes",
   "runtime_tested": false
 }
