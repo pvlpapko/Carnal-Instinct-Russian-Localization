@@ -1,0 +1,44 @@
+{
+  "schema_version": "1.0",
+  "edition": "Steam",
+  "task": "animation_isolation_fix",
+  "status": "in_progress",
+  "source_state_id": "steam_current_2026-10-03_16321_asset_verified_index_stale",
+  "verified_game_version": "0.7.9.16321",
+  "verified_build": null,
+  "current_phase": "identify_animation_affecting_overrides",
+  "last_completed_unit": "task_initialized",
+  "next_unit": "audit_latest_release_override_paths_for_combat_animation_ai",
+  "completed_units": [
+    "task_initialized"
+  ],
+  "pending_units": [
+    "audit latest release override paths for combat/animation/AI impact",
+    "compare offending override packages with current Steam originals",
+    "remove or replace all nonessential combat/animation/AI-affecting overrides",
+    "rebuild Steam FULL payload",
+    "validate package/container integrity",
+    "rebuild installer/archive",
+    "Drive readback validation",
+    "in-game validation"
+  ],
+  "source_files_used": [
+    "CI_SOURCE_INDEX.json",
+    "working/STATE_INDEX.json",
+    "steam/current/BUILD_STATE.json"
+  ],
+  "working_files": [
+    "working/steam/current/animation_isolation_fix/AUDIT_STATE.json"
+  ],
+  "validation_completed": [
+    "task state initialized"
+  ],
+  "validation_pending": [
+    "all package/container/runtime validation"
+  ],
+  "notes": [
+    "Goal: localization must not override gameplay combat, AI, death or animation behavior.",
+    "Current Steam source version evidence is 0.7.9.16321; exact Steam BuildID remains unknown.",
+    "Do not reuse invalidated 0.7.9.16315 cooked overrides without per-package validation."
+  ]
+}
