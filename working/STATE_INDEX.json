@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "updated_at": "2026-10-04T00:49:00+03:00",
+  "updated_at": "2026-10-04T01:07:00+03:00",
   "active_tasks": [
     {
       "edition": "Steam",
@@ -84,22 +84,24 @@
       "edition": "Steam",
       "task": "map_data_ftext_v13",
       "state_path": "working/steam/current/map_data_ftext_v13/AUDIT_STATE.json",
-      "status": "in_progress"
+      "status": "v13_uploaded_static_validation_runtime_pending"
     }
   ],
   "latest_release": {
-    "name": "Carnal_Instinct_RU_DontLook_Installer_MapTrampoline_2026-10-04_v12.zip",
-    "sha256": "a8bd52dc6437725888f5c5bd38933c5703f3b387455015e753b01418e8c3e0bf",
-    "archive_bytes": 25017732,
-    "installer_sha256": "3453b019c76d793375f1aedbf3b08684a73cd82412fb73f46679c4b8eb22bc24",
-    "installer_bytes": 20246016,
-    "drive_folder_id": "1DVIGnV-LE0G6JPGUcwx_ftcwkdNSPtuG",
-    "drive_file_id": "1ZvQN9wc5lAbUqDv5cCeRA7BxseKNEJM_",
+    "name": "Carnal_Instinct_RU_DontLook_Installer_MapDataFText_2026-10-04_v13.zip",
+    "sha256": "a71d44e02673c5578c9f112ee8ab4bf6ce7b18c09dc0d4240d06ac05aba0dc82",
+    "archive_bytes": 30418858,
+    "archive_entries": 262,
+    "installer_sha256": "688148786bb3b9884c38118516160ef8a2d49e4091a2b173a21af1f3132f02f5",
+    "installer_bytes": 36970496,
+    "drive_folder_id": "1kb822pHAaWISEznC1R53CS0p8f09jU93",
+    "drive_file_id": "1tFQhmA6W_lxhSpHbCyR0sCSfFZKAinoT",
     "drive_readback_sha256_verified": true,
+    "drive_readback_zip_crc_verified": true,
     "steam_payload_id": "Steam_current",
     "steam_verified_game_version": "0.7.9.16321",
     "steam_verified_build": null,
     "nosteam_baseline_build": "0.7.9.16232",
-    "runtime_validation": "Steam failed on first map marker hover: access violation writing 0x0"
+    "runtime_validation": "pending"
   }
 }
