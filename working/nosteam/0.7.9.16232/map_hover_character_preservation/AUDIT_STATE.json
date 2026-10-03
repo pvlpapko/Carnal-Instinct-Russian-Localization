@@ -1,0 +1,38 @@
+{
+  "schema_version": "1.0",
+  "edition": "NoSteam",
+  "task": "map_hover_character_preservation",
+  "status": "in_progress",
+  "source_state_id": "nosteam_0.7.9.16232_baseline",
+  "verified_game_version": "0.7.9",
+  "verified_build": "0.7.9.16232",
+  "current_phase": "pre_binary_checkpoint",
+  "last_completed_unit": "runtime_feedback_received",
+  "next_unit": "build_v9_preserving_exact_character_and_map_hover",
+  "completed_units": [
+    "confirmed NoSteam character layout is desired reference",
+    "confirmed newer NoSteam profiles share Steam_current payload and therefore inherit Steam map-hover regression"
+  ],
+  "pending_units": [
+    "retain NoSteam exact character layout",
+    "retain full map hover patch",
+    "preserve AI/combat safety",
+    "validate and package",
+    "runtime validation"
+  ],
+  "source_files_used": [
+    "validated NoSteam display/UI payload",
+    "v6 technical-state-safe PAK"
+  ],
+  "working_files": [
+    "working/nosteam/0.7.9.16232/map_hover_character_preservation/AUDIT_STATE.json"
+  ],
+  "validation_completed": [],
+  "validation_pending": [
+    "container validation",
+    "game runtime validation"
+  ],
+  "notes": [
+    "NoSteam 0.7.9.16232 remains separate; newer compatible NoSteam profiles use Steam_current by installer policy."
+  ]
+}
