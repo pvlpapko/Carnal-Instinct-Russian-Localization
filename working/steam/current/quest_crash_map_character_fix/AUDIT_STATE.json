@@ -2,30 +2,34 @@
   "schema_version": "1.0",
   "edition": "Steam",
   "task": "quest_crash_map_character_fix",
-  "status": "in_progress",
+  "status": "release_uploaded_static_validation_runtime_pending",
   "source_state_id": "steam_current_2026-10-03_16321_asset_verified_index_stale",
   "verified_game_version": "0.7.9.16321",
   "verified_build": null,
-  "current_phase": "pre_binary_checkpoint",
-  "last_completed_unit": "runtime_defects_reproduced_and_assets_classified",
-  "next_unit": "build_v9_quest_crash_isolation_map_hover_exact_character",
+  "current_phase": "v9_uploaded_static_validation_complete",
+  "last_completed_unit": "drive_readback_v9",
+  "next_unit": "user_runtime_validation",
   "completed_units": [
     "confirmed v6 quest-tab runtime crash from user test",
     "parsed CrashContext: EXCEPTION_ACCESS_VIOLATION read 0x8c8a on UE 5.5.4",
-    "identified Steam quest widget binary overrides as crash isolation target",
-    "verified current w_03_map_icon lacks CI_RU_Display_Audit2MapCaptions",
-    "verified NoSteam localized w_03_map_icon shares current Steam package/import/export schema and carries complete display switch localization",
-    "confirmed exact NoSteam character layout requires four different cooked widget packages"
+    "removed all Steam /UI/Quests/ cooked overrides",
+    "restored full localized w_03_map_icon display switch patch",
+    "validated map icon package/import/export schema against current Steam 0.7.9.16321 source",
+    "applied four exact NoSteam character/stat layout packages to Steam",
+    "preserved v6 144 technical AI/combat/locomotion/state English restorations",
+    "rebuilt Steam IoStore",
+    "validated BLAKE3 and UCAS physical coverage",
+    "rebuilt installer; go test/go vet/Windows x64 build passed",
+    "built ZIP; CRC/SHA256 passed",
+    "uploaded release to Drive and verified readback SHA256"
   ],
   "pending_units": [
-    "build Steam_current with zero quest binary overrides",
-    "restore full map hover display patch",
-    "apply exact NoSteam character layout packages",
-    "preserve 144 technical AI/combat/state English restorations",
-    "validate IoStore BLAKE3/package/dependencies",
-    "rebuild installer",
-    "zip/hash/Drive readback",
-    "runtime validation"
+    "Steam runtime: open quest tab without crash",
+    "Steam runtime: verify character screen matches NoSteam target",
+    "Steam/newer-NoSteam runtime: map hover translations across marker types",
+    "Steam runtime: combat/death/AI cycle smoke test",
+    "final runtime sign-off",
+    "global CI_SOURCE_INDEX refresh for current source upload"
   ],
   "source_files_used": [
     "CrashContext(8).runtime-xml",
@@ -39,18 +43,40 @@
     "/mnt/data/validate_v9.py"
   ],
   "validation_completed": [
-    "current Steam version 0.7.9.16321 previously verified",
-    "NoSteam localized map icon normalized current-Steam schema/import/export compatibility verified",
-    "character target screenshot captured from user-provided NoSteam reference"
+    "Steam_current IoStore 56 named packages; BLAKE3 PASS; UCAS coverage exact",
+    "Steam binary /UI/Quests/ overrides = 0",
+    "localized map icon namespace occurrences = 1292",
+    "historical map display switch coverage = 158 map-label cases plus dynamic quest/map fields",
+    "four Steam character/stat packages byte-identical to NoSteam target",
+    "forbidden gameplay override hits = 0",
+    "installer payload byte identity PASS",
+    "go test PASS",
+    "go vet -unsafeptr=false PASS",
+    "Windows x64 build PASS",
+    "ZIP CRC PASS",
+    "Drive readback SHA-256 e5893b35b5993b88b3a1dcbd3b6ed9e4b0f6fe9e2a8c3cc8d850e275dda7569c"
   ],
   "validation_pending": [
-    "container validation",
-    "installer validation",
-    "game runtime validation"
+    "game runtime validation",
+    "global current-source reindex"
   ],
   "notes": [
-    "Steam quest crash will be isolated by removing every /UI/Quests/ cooked override; current game 0.7.9.16321 owns those widgets.",
-    "Exact NoSteam character appearance requires cross-build character widget packages whose export counts differ from current Steam; runtime compatibility remains to be proven by user test.",
-    "Global CI_SOURCE_INDEX snapshot predates 0.7.9.16321; build-dependent target files were fetched directly."
-  ]
+    "Quest crash mitigation is binary isolation: current Steam 0.7.9.16321 owns all quest widgets. Shipping crash stack is not symbolicated.",
+    "Exact character appearance intentionally uses four NoSteam cooked UI packages; their current Steam export counts differ, so runtime compatibility is pending.",
+    "Map icon patch is structurally compatible with current Steam package/import/export schema.",
+    "Global CI_SOURCE_INDEX snapshot is stale for 0.7.9.16321; direct current Drive bytes were used for build-dependent targets."
+  ],
+  "release": {
+    "name": "Carnal_Instinct_RU_DontLook_Installer_QuestCrash_MapHover_ExactCharacter_2026-10-03_v9.zip",
+    "sha256": "e5893b35b5993b88b3a1dcbd3b6ed9e4b0f6fe9e2a8c3cc8d850e275dda7569c",
+    "installer_sha256": "a97e7c612acf51a6cafd324122de5583136f9be591f93aab899b30b127ae0713",
+    "drive_folder_id": "1Yb2sVQlVzbYDdnYDb6wCVqJ-3FLFpeEK",
+    "drive_file_id": "1qGLh_xodQF3rdSnWxihj9uYudmSljuC4",
+    "drive_readback_sha256_verified": true,
+    "steam_payload_id": "Steam_current",
+    "steam_verified_game_version": "0.7.9.16321",
+    "steam_verified_build": null,
+    "nosteam_baseline_build": "0.7.9.16232",
+    "runtime_validation": "pending"
+  }
 }
