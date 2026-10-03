@@ -2,13 +2,13 @@
   "schema_version": "1.0",
   "edition": "Steam",
   "task": "map_popup_bad_import_v11",
-  "status": "release_uploaded_static_validation_runtime_pending",
+  "status": "runtime_failed_undefined_opcode",
   "source_state_id": "steam_current_2026-10-03_16321_asset_verified_index_stale",
   "verified_game_version": "0.7.9.16321",
   "verified_build": null,
-  "current_phase": "v11_uploaded_static_validation_complete",
-  "last_completed_unit": "drive_readback_sha256_crc_validation",
-  "next_unit": "user_runtime_validation",
+  "current_phase": "superseded_by_v12",
+  "last_completed_unit": "runtime_failure_map_tab_undefined_opcode_0x74",
+  "next_unit": "see working/steam/current/neutral_widget_trampoline_v12/AUDIT_STATE.json",
   "completed_units": [
     "parsed user CrashContext(9)",
     "confirmed UE 5.5.4 CL-40574608 and AsyncLoading2 ObjectSerializationError",
@@ -84,7 +84,8 @@
     "v10 Steam is invalid and superseded.",
     "v11 ships NO WB_WorldMapPopup override for Steam.",
     "Steam map translation is now at current 0.7.9.16321 Neutral_Widget display boundary.",
-    "No old 0.7.9.16315 popup ExecuteUbergraph is present in Steam v11."
+    "No old 0.7.9.16315 popup ExecuteUbergraph is present in Steam v11.",
+    "User runtime test: opening Map executes Neutral_Widget and fails with undefined opcode 0x74 at offset 1169."
   ],
   "release": {
     "name": "Carnal_Instinct_RU_DontLook_Installer_MapCurrentBoundary_2026-10-03_v11.zip",
