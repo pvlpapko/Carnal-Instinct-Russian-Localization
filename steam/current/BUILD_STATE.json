@@ -3,31 +3,35 @@
   "edition": "Steam",
   "channel": "current",
   "rolling": true,
-  "source_state_id": "CI_SOURCE_INDEX_2026-10-03T12:48:51Z_91b95dbc38b2",
-  "verified_game_version": "0.7.9.16315",
+  "source_state_id": "steam_current_2026-10-03_16321_asset_verified_index_stale",
+  "verified_game_version": "0.7.9.16321",
   "verified_build": null,
   "product_version": null,
-  "source_verified": "partial",
+  "source_verified": "version asset verified; complete source reindex pending",
   "executable_product_version_verified": false,
   "steam_build_id_verified": false,
   "embedded_version_evidence": {
     "asset": "Content/RPG_InventorySystem/Blueprints/SaveSystem/RPGInventory_GameInstance.uasset",
-    "version": "0.7.9.16315",
-    "sha256": "3958712461b9fba215294fc534633583135170079ee9a6bfd9d9b6e30e554842"
+    "version": "0.7.9.16321",
+    "byte_offset": 313692,
+    "bytes": 313816,
+    "sha256": "756887fd7ef918293f74de69e5bec51f7a54c6dc43408a2e24599cfd9382e898",
+    "drive_modified_time": "2026-10-03T11:49:25.623Z"
   },
   "source_index_sha256": "91b95dbc38b2f4ffbd3fbea35bb1e4906cec7ddb588be87a15cec17048282274",
   "source_tree_sha256": "f12967fe7bd1c3729caa285519b2acc0059959214bf1f453aefe6437b8fbfef3",
   "source_stock_status": "contains localization modifications; not a clean stock game extraction",
-  "binary_compatibility": "static validation only; runtime pending",
-  "ui_override_compatibility": "static validation only; runtime pending",
-  "last_source_check_at": "2026-10-03T12:48:51Z",
+  "binary_compatibility": "previous 0.7.9.16315 cooked overrides invalidated pending full audit",
+  "ui_override_compatibility": "previous 0.7.9.16315 cooked overrides invalidated pending full audit",
+  "last_source_check_at": "2026-10-03T14:18:00Z",
   "evidence": [
-    "complete recursive source index",
-    "selected source SHA-256 verification",
-    "embedded RPGInventory_GameInstance version"
+    "current Google Drive RPGInventory_GameInstance.uasset raw bytes",
+    "embedded ASCII version 0.7.9.16321 at byte offset 313692",
+    "source tree still has no EXE/appmanifest/Build.version/stock IoStore containers"
   ],
   "notes": [
-    "EXE, appmanifest and Build.version are absent from supplied source.",
-    "Do not silently reuse cooked overrides after a future Steam source change."
+    "Current source differs from the CI_SOURCE_INDEX snapshot generated at 2026-10-03T12:48:51Z; that index is stale for build-dependent work.",
+    "Exact Steam BuildID remains unknown because executable/appmanifest/Build.version are absent.",
+    "Do not reuse 0.7.9.16315 cooked overrides until revalidated against current source."
   ]
 }
