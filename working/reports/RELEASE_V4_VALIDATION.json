@@ -8,6 +8,13 @@
   "zip_crc_test_passed": true,
   "installer_sha256": "0407587077bb3df6a9a078d256d2717ae1030afb0442b101f26d61977b23d982",
   "installer_bytes": 15400960,
+  "Drive": {
+    "folder_id": "1EDbgsiiQaFIKeuJ2HFSg9X9AsqqNRPx8",
+    "file_id": "1uCgpjIZEIY-IhEZnyOodfVMaOzsrix8G",
+    "file_size_bytes": 22912848,
+    "readback_sha256": "c60079a9d3f91124bc966911c0246e7e72cd456cb30ea4e9dfc73d441782ed19",
+    "readback_verified": true
+  },
   "Steam": {
     "pak": "e6a017564171ad975858c9abf78489a90bd20969c69f98a75c3e71a2a03a60b6",
     "utoc": "39d62a2c5a0f7d68cd9eeccbf78308954f95080f9e1df1d69ffb5780dde6e31c",
