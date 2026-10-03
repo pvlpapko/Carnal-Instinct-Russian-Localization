@@ -1,0 +1,61 @@
+{
+  "schema_version": "1.0",
+  "edition": "Steam",
+  "task": "map_quest_lovense_v10",
+  "status": "in_progress",
+  "source_state_id": "steam_current_2026-10-03_16321_asset_verified_index_stale",
+  "verified_game_version": "0.7.9.16321",
+  "verified_build": null,
+  "current_phase": "pre_binary_checkpoint",
+  "last_completed_unit": "runtime_feedback_and_map_display_path_traced",
+  "next_unit": "patch_current_popup_quest_layout_lovense_and_build_v10",
+  "completed_units": [
+    "confirmed v9 quest tab opens without crash",
+    "confirmed map hover remains English on Steam and NoSteam",
+    "traced scalable map hover to WB_WorldMapPopup MainText/SubText display boundary",
+    "verified v9 w_03_map_icon alone cannot translate scalable-map popup",
+    "ported full 884-case map caption switch to current Steam WB_WorldMapPopup schema with all non-function exports unchanged",
+    "identified Steam quest tracked-label overlap as layout-only WB_QuestName overlay issue",
+    "identified v9 Lovense package as older cross-build layout; current 0.7.9.16321 Lovense contains expanded bottom-slot layout"
+  ],
+  "pending_units": [
+    "patch WB_QuestName layout only with current script unchanged",
+    "replace Steam Lovense with current source package",
+    "add current-schema full translated WB_WorldMapPopup to Steam",
+    "restore full translated WB_WorldMapPopup to NoSteam",
+    "audit map translation corpus for untranslated captions",
+    "rebuild both IoStore payloads",
+    "validate BLAKE3/package/dependencies/gameplay override exclusion",
+    "rebuild installer and archive",
+    "upload/readback/hash validation",
+    "runtime validation"
+  ],
+  "source_files_used": [
+    "current Steam 0.7.9.16321 WB_WorldMapPopup/WB_QuestName/WB_T3_Lovense from Drive",
+    "v4 map popup translation reports and validated localized popup",
+    "v9 release payload",
+    "v9 translation.tsv/Game.locres"
+  ],
+  "working_files": [
+    "working/steam/current/map_quest_lovense_v10/AUDIT_STATE.json",
+    "/mnt/data/v10work/map/WB_WorldMapPopup_16321_fullRU.uasset"
+  ],
+  "validation_completed": [
+    "current popup: 28 exports; old localized popup: same 28 exports and identical imports",
+    "current name map is exact prefix of localized popup name map",
+    "all non-ExecuteUbergraph popup exports byte-identical",
+    "ported current-schema popup has switch counts 884/884",
+    "Bull's Shield and The Gilded Fold mapped through CI_RU_Display_Audit2MapCaptions"
+  ],
+  "validation_pending": [
+    "quest layout validation",
+    "container validation",
+    "installer validation",
+    "runtime validation"
+  ],
+  "notes": [
+    "Map translation corpus already contains Russian values for discovered, quest, custom and Undiscovered labels; runtime routing was the regression.",
+    "AI/combat/state technical English restorations from v6/v9 must be preserved.",
+    "Exact NoSteam character layout remains the target for Steam."
+  ]
+}
