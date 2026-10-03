@@ -1,0 +1,16 @@
+{
+  "schema_version": "1.0",
+  "edition": "Steam",
+  "channel": "current",
+  "rolling": true,
+  "verified_game_version": null,
+  "verified_build": null,
+  "product_version": null,
+  "source_state_id": null,
+  "source_verified": false,
+  "binary_compatibility": "unverified",
+  "ui_override_compatibility": "unverified",
+  "last_source_check_at": null,
+  "evidence": [],
+  "notes": "Rolling Steam state. Version/build must be filled only from verified current-source evidence."
+}
