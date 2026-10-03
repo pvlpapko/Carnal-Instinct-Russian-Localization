@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "updated_at": "2026-10-03",
+  "updated_at": "2026-10-03T21:39:00+03:00",
   "active_tasks": [
     {
       "edition": "Steam",
@@ -18,27 +18,27 @@
       "edition": "Steam",
       "task": "full_override_audit_after_source_update",
       "state_path": "working/steam/current/full_override_audit/AUDIT_STATE.json",
-      "status": "in_progress"
+      "status": "completed_static_runtime_pending"
     },
     {
       "edition": "Steam",
       "task": "animation_isolation_fix",
       "state_path": "working/steam/current/animation_isolation_fix/AUDIT_STATE.json",
-      "status": "runtime_validation_pending"
+      "status": "v6_uploaded_static_validation_runtime_pending"
     },
     {
       "edition": "NoSteam",
       "task": "animation_isolation_fix",
       "state_path": "working/nosteam/0.7.9.16232/animation_isolation_fix/AUDIT_STATE.json",
-      "status": "runtime_validation_pending"
+      "status": "v6_uploaded_static_validation_runtime_pending"
     }
   ],
   "latest_release": {
-    "name": "Carnal_Instinct_RU_DontLook_AnimationIsolation_2026-10-03_v5.zip",
-    "sha256": "09b794bf5f69cf996c6f5ceff856afe81b95a667f5415d4def45b05146edb4b1",
-    "installer_sha256": "2fdf0fae6564d8050c9b887ceecc7b718370ba5ba106e7bad4469fe5790f0277",
-    "drive_folder_id": "1CBVQnIXReV-lepRotgz6a2Dz6nMiLT7S",
-    "drive_file_id": "1NO52YefCXArK6RvQznih2uSd8p8AhxV9",
+    "name": "Carnal_Instinct_RU_DontLook_Installer_SafeUI_2026-10-03_v6.zip",
+    "sha256": "9a13a6cb22016a5fa6adfee9f15d7be30a87b345e9844dba5db5a1a00bf698ab",
+    "installer_sha256": "520c01f75f66720f7589a4305a2b0a0bab5c5c1ab8836ddf49d727b6016472e0",
+    "drive_folder_id": "18L6chgJrb0HiAFKC_GKRWY_ge6fE32DW",
+    "drive_file_id": "1y94IeDDRw1cEeNtJ0Mx6i4eCJTrz13DM",
     "drive_readback_sha256_verified": true,
     "steam_payload_id": "Steam_current",
     "steam_verified_game_version": "0.7.9.16321",
