@@ -1,0 +1,39 @@
+{
+  "schema_version": "1.0",
+  "edition": "Steam",
+  "task": "ai_combat_state_safety",
+  "status": "in_progress",
+  "source_state_id": "steam_current_2026-10-03_16321_asset_verified_index_stale",
+  "verified_game_version": "0.7.9.16321",
+  "verified_build": null,
+  "current_phase": "technical_key_and_override_sanitization",
+  "last_completed_unit": "task_initialized",
+  "next_unit": "restore_technical_state_text_and_build_safe_ui_whitelist",
+  "completed_units": [
+    "task_initialized"
+  ],
+  "pending_units": [
+    "restore technical AI/combat/movement/state locres entries to original English",
+    "exclude gameplay/AI/NPC/quest-logic cooked overrides",
+    "merge with current 0.7.9.16321 Steam UI audit",
+    "rebuild IoStore and pak",
+    "rebuild installer",
+    "static validation",
+    "runtime validation"
+  ],
+  "source_files_used": [
+    "current Steam 0.7.9.16321 source assets",
+    "v4 release translation.tsv/Game.locres",
+    "NoSteam FULL 151 package manifest"
+  ],
+  "working_files": [
+    "working/steam/current/ai_combat_state_safety/AUDIT_STATE.json"
+  ],
+  "validation_completed": [],
+  "validation_pending": [
+    "all"
+  ],
+  "notes": [
+    "No gameplay Blueprint or technical AI/combat/animation-state translation may be overridden without a display-only necessity."
+  ]
+}
