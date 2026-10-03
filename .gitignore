@@ -1,0 +1,31 @@
+# Original / cooked game binaries
+*.pak
+*.utoc
+*.ucas
+*.ubulk
+*.uptnl
+*.uasset
+*.umap
+*.exe
+*.dll
+
+# Archives and large generated deliverables
+*.zip
+*.7z
+*.rar
+
+# Temporary/runtime workspace
+/tmp/
+/temp/
+/cache/
+__pycache__/
+*.pyc
+
+# Local secrets / machine state
+.env
+.env.*
+*.key
+
+# Generated binary outputs should live outside GitHub unless explicitly whitelisted
+/dist/
+/build/
