@@ -2,13 +2,13 @@
   "schema_version": "1.0",
   "edition": "Steam",
   "task": "map_popup_bad_import_v11",
-  "status": "in_progress",
+  "status": "release_uploaded_static_validation_runtime_pending",
   "source_state_id": "steam_current_2026-10-03_16321_asset_verified_index_stale",
   "verified_game_version": "0.7.9.16321",
   "verified_build": null,
-  "current_phase": "containers_built_validated_pre_installer",
-  "last_completed_unit": "rebuild_and_validate_v11_iostore",
-  "next_unit": "rebuild_installer_archive_upload",
+  "current_phase": "v11_uploaded_static_validation_complete",
+  "last_completed_unit": "drive_readback_sha256_crc_validation",
+  "next_unit": "user_runtime_validation",
   "completed_units": [
     "parsed user CrashContext(9)",
     "confirmed UE 5.5.4 CL-40574608 and AsyncLoading2 ObjectSerializationError",
@@ -28,20 +28,19 @@
     "retained four NoSteam target character packages",
     "rebuilt NoSteam with native full translated popup",
     "validated all IoStore chunk BLAKE3 hashes and exact UCAS physical coverage",
-    "confirmed forbidden gameplay override hits = 0"
+    "confirmed forbidden gameplay override hits = 0",
+    "rebuilt installer: go test PASS, go vet -unsafeptr=false PASS, Windows x64 cross-build PASS",
+    "built ZIP; CRC and 141 internal SHA-256 entries verified",
+    "uploaded to CI GPT/Releases and verified Drive readback SHA-256/CRC"
   ],
   "pending_units": [
-    "restore exact current 0.7.9.16321 WB_WorldMapPopup or omit override",
-    "implement map translation at current 0.7.9.16321 display boundary without old imports",
-    "preserve quest crash isolation and quest layout-only patch",
-    "preserve current Lovense layout",
-    "preserve exact NoSteam character layout target",
-    "preserve 144 AI/combat/state English restorations",
-    "rebuild Steam IoStore and validate imports/exports/BLAKE3",
-    "validate NoSteam map payload remains safe",
-    "rebuild installer/archive",
-    "upload/readback/hash validation",
-    "runtime validation"
+    "runtime Steam startup (confirm Bad import crash gone)",
+    "runtime map hover across discovered/undiscovered/quest/custom/location markers",
+    "runtime quest tab and tracked badge layout",
+    "runtime Lovense bottom buttons",
+    "runtime exact character layout",
+    "runtime combat/AI/death smoke test",
+    "global CI_SOURCE_INDEX refresh"
   ],
   "source_files_used": [
     "CrashContext(9).runtime-xml",
@@ -71,16 +70,35 @@
     "Steam UTOC SHA-256 3e50dc3964fdd9add4ab2ae8985fd524a1e79bda7b60318142cc3092769ff292",
     "Steam UCAS SHA-256 7ab35883b16f2d1146c7dbe324e840501e22b21c44d6e2a08bed1abad5f46370",
     "NoSteam: 71 named packages; native full map popup retained",
-    "NoSteam UTOC/UCAS BLAKE3 validation PASS"
+    "NoSteam UTOC/UCAS BLAKE3 validation PASS",
+    "installer payload byte identity PASS",
+    "ZIP CRC PASS; SHA256SUMS 141/141 PASS",
+    "Drive readback bytes 24724358 and SHA-256 87363320b4e1625d1d0853217570bc52162fa4ccbea24dd71a363cc20c48f653",
+    "Drive readback ZIP CRC PASS"
   ],
   "validation_pending": [
-    "installer/archive validation",
-    "Drive readback",
-    "game runtime validation"
+    "game runtime validation",
+    "global current-source reindex"
   ],
   "notes": [
-    "v10 Steam must not be used.",
-    "Do not transplant any 0.7.9.16315 WB_WorldMapPopup function bytecode into 0.7.9.16321.",
-    "Map translation corpus is already substantially complete; runtime display routing is the remaining problem."
-  ]
+    "v10 Steam is invalid and superseded.",
+    "v11 ships NO WB_WorldMapPopup override for Steam.",
+    "Steam map translation is now at current 0.7.9.16321 Neutral_Widget display boundary.",
+    "No old 0.7.9.16315 popup ExecuteUbergraph is present in Steam v11."
+  ],
+  "release": {
+    "name": "Carnal_Instinct_RU_DontLook_Installer_MapCurrentBoundary_2026-10-03_v11.zip",
+    "sha256": "87363320b4e1625d1d0853217570bc52162fa4ccbea24dd71a363cc20c48f653",
+    "archive_bytes": 24724358,
+    "installer_sha256": "d21e36eec029d3fc4cc8f2febb92e1424a84980cee3eabf7a7042e2b38013263",
+    "installer_bytes": 20246016,
+    "drive_folder_id": "1Ryb1vR3MNHXQShRKEszQer1aixyr57T0",
+    "drive_file_id": "1TYlUrb1p_VJlRF7jYDSkI5GoIeQO3azw",
+    "drive_readback_sha256_verified": true,
+    "steam_payload_id": "Steam_current",
+    "steam_verified_game_version": "0.7.9.16321",
+    "steam_verified_build": null,
+    "nosteam_baseline_build": "0.7.9.16232",
+    "runtime_validation": "pending"
+  }
 }
