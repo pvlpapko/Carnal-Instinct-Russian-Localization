@@ -6,9 +6,9 @@
   "source_state_id": "steam_current_2026-10-03_16321_asset_verified_index_stale",
   "verified_game_version": "0.7.9.16321",
   "verified_build": null,
-  "current_phase": "pre_binary_checkpoint",
-  "last_completed_unit": "runtime_feedback_and_map_display_path_traced",
-  "next_unit": "patch_current_popup_quest_layout_lovense_and_build_v10",
+  "current_phase": "containers_built_validated_pre_installer",
+  "last_completed_unit": "rebuild_and_validate_steam_iostore",
+  "next_unit": "rebuild_installer_archive_upload",
   "completed_units": [
     "confirmed v9 quest tab opens without crash",
     "confirmed map hover remains English on Steam and NoSteam",
@@ -16,16 +16,19 @@
     "verified v9 w_03_map_icon alone cannot translate scalable-map popup",
     "ported full 884-case map caption switch to current Steam WB_WorldMapPopup schema with all non-function exports unchanged",
     "identified Steam quest tracked-label overlap as layout-only WB_QuestName overlay issue",
-    "identified v9 Lovense package as older cross-build layout; current 0.7.9.16321 Lovense contains expanded bottom-slot layout"
+    "identified v9 Lovense package as older cross-build layout; current 0.7.9.16321 Lovense contains expanded bottom-slot layout",
+    "patched current WB_QuestName OverlaySlot_4 top padding 8 -> -16 with all function scripts byte-identical",
+    "replaced Steam WB_T3_Lovense with current 0.7.9.16321 source layout (bottom container 900 -> 1320)",
+    "added current-schema Steam full translated WB_WorldMapPopup with 884/884 cases",
+    "audited map corpus: 887 rows, 884 unique casefold labels, 886 translated, only ??? intentionally unchanged",
+    "verified exact Namespace+Key+SourceStringHash locres relation for all 887 map rows",
+    "rebuilt Steam_current IoStore: 58 named packages / 59 chunks",
+    "validated all chunk BLAKE3 hashes and exact UCAS physical coverage",
+    "confirmed four exact NoSteam character layout packages retained",
+    "confirmed forbidden gameplay override hits = 0"
   ],
   "pending_units": [
-    "patch WB_QuestName layout only with current script unchanged",
-    "replace Steam Lovense with current source package",
-    "add current-schema full translated WB_WorldMapPopup to Steam",
     "restore full translated WB_WorldMapPopup to NoSteam",
-    "audit map translation corpus for untranslated captions",
-    "rebuild both IoStore payloads",
-    "validate BLAKE3/package/dependencies/gameplay override exclusion",
     "rebuild installer and archive",
     "upload/readback/hash validation",
     "runtime validation"
@@ -45,7 +48,12 @@
     "current name map is exact prefix of localized popup name map",
     "all non-ExecuteUbergraph popup exports byte-identical",
     "ported current-schema popup has switch counts 884/884",
-    "Bull's Shield and The Gilded Fold mapped through CI_RU_Display_Audit2MapCaptions"
+    "Bull's Shield and The Gilded Fold mapped through CI_RU_Display_Audit2MapCaptions",
+    "Steam popup current-schema port: only ExecuteUbergraph changed; imports equal; non-function exports unchanged",
+    "Steam popup switches 884/884",
+    "QuestName only changed export 33 OverlaySlot_4; all function scripts current-source identical",
+    "Lovense runtime package is exact current 0.7.9.16321 source",
+    "Steam IoStore BLAKE3 PASS; UCAS coverage exact"
   ],
   "validation_pending": [
     "quest layout validation",
