@@ -3,14 +3,15 @@
   "edition": "Steam",
   "task": "full_override_audit_after_source_update",
   "status": "in_progress",
-  "source_state_id": "pending_reindex_2026-10-03_source_changed_after_2026-10-03T12:37:21Z",
-  "verified_game_version": null,
+  "source_state_id": "steam_current_2026-10-03_16321_asset_verified_index_stale",
+  "verified_game_version": "0.7.9.16321",
   "verified_build": null,
-  "current_phase": "source_identity_and_reindex",
-  "last_completed_unit": "task_initialized",
-  "next_unit": "verify_current_source_version_and_rebuild_source_index",
+  "current_phase": "full_151_override_source_fetch",
+  "last_completed_unit": "verify_current_source_version",
+  "next_unit": "fetch_and_compare_151_nosteam_override_paths_against_current_steam",
   "completed_units": [
-    "task_initialized"
+    "task_initialized",
+    "verify_current_source_version"
   ],
   "pending_units": [
     "verify_current Steam source version/build",
@@ -31,12 +32,17 @@
   "working_files": [
     "working/steam/current/full_override_audit/AUDIT_STATE.json"
   ],
-  "validation_completed": [],
+  "validation_completed": [
+    "Current RPGInventory_GameInstance.uasset SHA-256 verified",
+    "Embedded current version verified as 0.7.9.16321 at byte offset 313692",
+    "Confirmed previous CI_SOURCE_INDEX snapshot is stale for build-dependent work"
+  ],
   "validation_pending": [
     "all"
   ],
   "notes": [
-    "Current source files on Google Drive changed after the last CI_SOURCE_INDEX crawl; old Steam 0.7.9.16315 cooked overrides are invalidated pending audit.",
-    "User recalls current Steam version may be 0.7.9.16321; must verify from source evidence, not assume."
+    "Current Steam version is verified as 0.7.9.16321 from embedded asset evidence; exact Steam BuildID remains unknown.",
+    "Previous 0.7.9.16315 cooked overrides are invalidated pending this audit.",
+    "Full 151-path comparison will use current Drive file bytes; stale index is used only as a path/Drive-ID navigation map."
   ]
 }
