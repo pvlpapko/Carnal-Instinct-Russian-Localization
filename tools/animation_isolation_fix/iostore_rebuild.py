@@ -1,6 +1,6 @@
 from pathlib import Path
 import struct, os, json, hashlib, sys
-sys.path.insert(0,'/mnt/data')
+sys.path.insert(0,str(Path(__file__).resolve().parent))
 from iostore_simple import parse_utoc, extract_chunk, parse_container_header, parse_dir_index, fstring_write
 from blake3_pure import blake3
 INVALID=0xffffffff
