@@ -1,0 +1,46 @@
+{
+  "schema_version": "1.0",
+  "edition": "NoSteam",
+  "task": "map_hover_full_audit_v14",
+  "status": "in_progress",
+  "source_state_id": "nosteam_0.7.9.16232_baseline",
+  "verified_game_version": "0.7.9",
+  "verified_build": "0.7.9.16232",
+  "current_phase": "map_display_alias_audit",
+  "last_completed_unit": "v13_runtime_feedback_ingested",
+  "next_unit": "extend_matching_native_map_popup_display_cases",
+  "completed_units": [
+    "user confirmed NoSteam has more translated map hover captions than Steam but still misses some",
+    "matching NoSteam native WB_WorldMapPopup 885/885 switch strategy remains the valid baseline",
+    "identified additional translated map/progression display aliases not covered by the 885-case historical corpus"
+  ],
+  "pending_units": [
+    "extend NoSteam popup display cases without changing gameplay identifiers",
+    "rebuild NoSteam IoStore from v13 baseline",
+    "static structural/readback validation",
+    "release packaging and Drive readback",
+    "runtime validation by user"
+  ],
+  "source_files_used": [
+    "v13 NoSteam 0.7.9.16232 payload",
+    "NoSteam translation.tsv",
+    "historical validated NoSteam map popup"
+  ],
+  "working_files": [
+    "working/nosteam/0.7.9.16232/map_hover_full_audit_v14/AUDIT_STATE.json"
+  ],
+  "validation_completed": [
+    "NoSteam baseline remains 0.7.9.16232",
+    "Steam current cooked data packages will not be mixed into NoSteam baseline"
+  ],
+  "validation_pending": [
+    "popup roundtrip validation",
+    "IoStore validation",
+    "archive CRC/SHA-256",
+    "runtime map hover/progression smoke test"
+  ],
+  "notes": [
+    "NoSteam receives only matching-source popup/display changes.",
+    "Runtime validation remains pending until user tests the built release."
+  ]
+}
