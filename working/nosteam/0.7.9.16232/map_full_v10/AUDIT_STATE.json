@@ -6,12 +6,18 @@
   "source_state_id": "nosteam_0.7.9.16232_baseline",
   "verified_game_version": "0.7.9",
   "verified_build": "0.7.9.16232",
-  "current_phase": "pre_binary_checkpoint",
-  "last_completed_unit": "runtime_map_regression_confirmed",
-  "next_unit": "restore_full_map_popup_and_build_v10",
+  "current_phase": "container_built_validated_pre_installer",
+  "last_completed_unit": "restore_full_popup_and_validate_nosteam_iostore",
+  "next_unit": "rebuild_installer_archive_upload",
   "completed_units": [
     "confirmed map hover remains English in v9",
-    "located validated NoSteam full translated WB_WorldMapPopup with 885/885 map-caption cases"
+    "located validated NoSteam full translated WB_WorldMapPopup with 885/885 map-caption cases",
+    "restored validated full translated NoSteam WB_WorldMapPopup",
+    "validated popup switches 885/885",
+    "audited shared map translation corpus and locres exact Namespace+Key+hash relations",
+    "rebuilt NoSteam IoStore: 71 named packages / 72 chunks",
+    "validated all chunk BLAKE3 hashes and exact UCAS physical coverage",
+    "confirmed forbidden gameplay override hits = 0"
   ],
   "pending_units": [
     "replace NoSteam map popup",
@@ -28,7 +34,9 @@
     "working/nosteam/0.7.9.16232/map_full_v10/AUDIT_STATE.json"
   ],
   "validation_completed": [
-    "NoSteam historical popup report has 885/885 cases and sample Bull's Shield → Щит Быка"
+    "NoSteam historical popup report has 885/885 cases and sample Bull's Shield → Щит Быка",
+    "NoSteam popup switches 885/885",
+    "NoSteam IoStore BLAKE3 PASS; UCAS coverage exact"
   ],
   "validation_pending": [
     "container validation",
