@@ -6,9 +6,9 @@
   "source_state_id": "steam_current_2026-10-03_16321_asset_verified_index_stale",
   "verified_game_version": "0.7.9.16321",
   "verified_build": null,
-  "current_phase": "map_display_patch_complete_pre_container",
-  "last_completed_unit": "patch_current_neutral_widget_display_boundary",
-  "next_unit": "rebuild_and_validate_v11_iostore",
+  "current_phase": "containers_built_validated_pre_installer",
+  "last_completed_unit": "rebuild_and_validate_v11_iostore",
+  "next_unit": "rebuild_installer_archive_upload",
   "completed_units": [
     "parsed user CrashContext(9)",
     "confirmed UE 5.5.4 CL-40574608 and AsyncLoading2 ObjectSerializationError",
@@ -21,7 +21,14 @@
     "added only two proven native text-conversion script imports to Neutral_Widget import map",
     "validated every package-index-bearing Kismet expression stays within 124-import table",
     "validated every non-ExecuteUbergraph Neutral_Widget export byte-identical to current source",
-    "validated all Kismet jump/switch offsets by full parse/serialize roundtrip"
+    "validated all Kismet jump/switch offsets by full parse/serialize roundtrip",
+    "rebuilt Steam_current from v9 safe baseline with patched current Neutral_Widget",
+    "confirmed Steam WB_WorldMapPopup override absent",
+    "retained current-source WB_QuestName layout-only override and exact current Lovense package",
+    "retained four NoSteam target character packages",
+    "rebuilt NoSteam with native full translated popup",
+    "validated all IoStore chunk BLAKE3 hashes and exact UCAS physical coverage",
+    "confirmed forbidden gameplay override hits = 0"
   ],
   "pending_units": [
     "restore exact current 0.7.9.16321 WB_WorldMapPopup or omit override",
@@ -59,12 +66,17 @@
     "Neutral_Widget patched SHA-256 48af98f066512d1f5d659d099c6f9bf9e620a8adb40c9625c46f42cd0544f6cc",
     "object imports 122 -> 124; bad Kismet import references 0",
     "map switches 884/884 at current Neutral_Widget display boundary",
-    "Steam WB_WorldMapPopup override no longer required"
+    "Steam WB_WorldMapPopup override no longer required",
+    "Steam_current: 58 named packages; popup override 0; Neutral_Widget current-boundary map patch present",
+    "Steam UTOC SHA-256 3e50dc3964fdd9add4ab2ae8985fd524a1e79bda7b60318142cc3092769ff292",
+    "Steam UCAS SHA-256 7ab35883b16f2d1146c7dbe324e840501e22b21c44d6e2a08bed1abad5f46370",
+    "NoSteam: 71 named packages; native full map popup retained",
+    "NoSteam UTOC/UCAS BLAKE3 validation PASS"
   ],
   "validation_pending": [
-    "new map display patch serialization validation",
-    "container validation",
-    "runtime validation"
+    "installer/archive validation",
+    "Drive readback",
+    "game runtime validation"
   ],
   "notes": [
     "v10 Steam must not be used.",
