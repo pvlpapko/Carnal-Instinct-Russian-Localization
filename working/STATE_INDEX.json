@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "updated_at": "2026-10-04T01:07:00+03:00",
+  "updated_at": "2026-10-04T01:10:00+03:00",
   "active_tasks": [
     {
       "edition": "Steam",
@@ -85,6 +85,18 @@
       "task": "map_data_ftext_v13",
       "state_path": "working/steam/current/map_data_ftext_v13/AUDIT_STATE.json",
       "status": "v13_uploaded_static_validation_runtime_pending"
+    },
+    {
+      "edition": "Steam",
+      "task": "map_hover_full_audit_v14",
+      "state_path": "working/steam/current/map_hover_full_audit_v14/AUDIT_STATE.json",
+      "status": "in_progress"
+    },
+    {
+      "edition": "NoSteam",
+      "task": "map_hover_full_audit_v14",
+      "state_path": "working/nosteam/0.7.9.16232/map_hover_full_audit_v14/AUDIT_STATE.json",
+      "status": "in_progress"
     }
   ],
   "latest_release": {
