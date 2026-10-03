@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "updated_at": "2026-10-03T23:19:00+03:00",
+  "updated_at": "2026-10-03T23:44:00+03:00",
   "active_tasks": [
     {
       "edition": "Steam",
@@ -60,21 +60,23 @@
       "edition": "Steam",
       "task": "map_quest_lovense_v10",
       "state_path": "working/steam/current/map_quest_lovense_v10/AUDIT_STATE.json",
-      "status": "in_progress"
+      "status": "v10_uploaded_static_validation_runtime_pending"
     },
     {
       "edition": "NoSteam",
       "task": "map_full_v10",
       "state_path": "working/nosteam/0.7.9.16232/map_full_v10/AUDIT_STATE.json",
-      "status": "in_progress"
+      "status": "v10_uploaded_static_validation_runtime_pending"
     }
   ],
   "latest_release": {
-    "name": "Carnal_Instinct_RU_DontLook_Installer_QuestCrash_MapHover_ExactCharacter_2026-10-03_v9.zip",
-    "sha256": "e5893b35b5993b88b3a1dcbd3b6ed9e4b0f6fe9e2a8c3cc8d850e275dda7569c",
-    "installer_sha256": "a97e7c612acf51a6cafd324122de5583136f9be591f93aab899b30b127ae0713",
-    "drive_folder_id": "1Yb2sVQlVzbYDdnYDb6wCVqJ-3FLFpeEK",
-    "drive_file_id": "1qGLh_xodQF3rdSnWxihj9uYudmSljuC4",
+    "name": "Carnal_Instinct_RU_DontLook_Installer_MapFull_QuestLayout_Lovense_2026-10-03_v10.zip",
+    "sha256": "884895067a3bbb2d3fface05847b50b060ed272cf7d6ce9c9e93c27c37dfc23a",
+    "archive_bytes": 24703582,
+    "installer_sha256": "91fb7d6bc24bee7707b87ae7f9325e501dc232480df12dc90a9bd62759fe1ece",
+    "installer_bytes": 20246016,
+    "drive_folder_id": "18L4fccF20V6QKDNVFxB1CoxQQjkT_VFb",
+    "drive_file_id": "1xo1zut2dAepHiatGcdJptdWxPoc-Zk4d",
     "drive_readback_sha256_verified": true,
     "steam_payload_id": "Steam_current",
     "steam_verified_game_version": "0.7.9.16321",
