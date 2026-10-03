@@ -1,0 +1,68 @@
+{
+  "schema_version": "1.0",
+  "release": "Carnal_Instinct_RU_DontLook_Installer_MapCurrentBoundary_2026-10-03_v11.zip",
+  "author": "Don't Look",
+  "archive": {
+    "bytes": 24724358,
+    "sha256": "87363320b4e1625d1d0853217570bc52162fa4ccbea24dd71a363cc20c48f653",
+    "entries": 179,
+    "zip_crc": true,
+    "sha256sums": "141/141"
+  },
+  "installer": {
+    "bytes": 20246016,
+    "sha256": "d21e36eec029d3fc4cc8f2febb92e1424a84980cee3eabf7a7042e2b38013263",
+    "go_test": true,
+    "go_vet": true,
+    "windows_x64": true,
+    "steam_label": "Steam"
+  },
+  "drive": {
+    "folder_id": "1Ryb1vR3MNHXQShRKEszQer1aixyr57T0",
+    "file_id": "1TYlUrb1p_VJlRF7jYDSkI5GoIeQO3azw",
+    "readback_sha256_verified": true,
+    "readback_crc": true
+  },
+  "crash_fix": {
+    "v10_error": "WB_WorldMapPopup ExecuteUbergraph Bad import index 58/57",
+    "v10_root_cause": "0.7.9.16315 translated popup bytecode transplanted into 0.7.9.16321 package",
+    "v11_steam_popup_override_present": false
+  },
+  "steam": {
+    "verified_game_version": "0.7.9.16321",
+    "verified_build": null,
+    "packages": 58,
+    "map_display_boundary": "Neutral_Widget",
+    "neutral_source_sha256": "c5c1cc5bff1250430f33bc2f9d6b29d49c02c3bfbdf2b350629bccd1e497fa76",
+    "neutral_patched_sha256": "48af98f066512d1f5d659d099c6f9bf9e620a8adb40c9625c46f42cd0544f6cc",
+    "object_imports_before": 122,
+    "object_imports_after": 124,
+    "bad_import_refs": 0,
+    "map_switches": [
+      884,
+      884
+    ],
+    "map_rows": 887,
+    "map_unique": 884,
+    "map_locres_mismatches": 0,
+    "quest_override": "current WB_QuestName layout-only",
+    "lovense": "exact current 0.7.9.16321 source",
+    "exact_nosteam_character_reference_packages": 4
+  },
+  "nosteam": {
+    "verified_build": "0.7.9.16232",
+    "packages": 71,
+    "map_popup_switches": [
+      885,
+      885
+    ],
+    "map_rows": 888,
+    "map_unique": 885
+  },
+  "ai_safety": {
+    "technical_state_rows_restored": 144,
+    "forbidden_gameplay_overrides": 0,
+    "boss_ai_override_present": false
+  },
+  "runtime_tested": false
+}
