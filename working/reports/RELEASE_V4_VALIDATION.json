@@ -1,0 +1,34 @@
+{
+  "schema_version": "1.0",
+  "release": "Carnal_Instinct_RU_DontLook_Installer_UIQuestMap_2026-10-03_v4",
+  "source_state_id": "CI_SOURCE_INDEX_2026-10-03T12:48:51Z_91b95dbc38b2",
+  "archive_sha256": "c60079a9d3f91124bc966911c0246e7e72cd456cb30ea4e9dfc73d441782ed19",
+  "archive_bytes": 22912848,
+  "archive_entries": 79,
+  "zip_crc_test_passed": true,
+  "installer_sha256": "0407587077bb3df6a9a078d256d2717ae1030afb0442b101f26d61977b23d982",
+  "installer_bytes": 15400960,
+  "Steam": {
+    "pak": "e6a017564171ad975858c9abf78489a90bd20969c69f98a75c3e71a2a03a60b6",
+    "utoc": "39d62a2c5a0f7d68cd9eeccbf78308954f95080f9e1df1d69ffb5780dde6e31c",
+    "ucas": "571630f967080f58e58da8da8415c648b06e08bab7d204759b0f36b615b79440",
+    "named_packages_parsed": "34/34"
+  },
+  "NoSteam": {
+    "pak": "7a4ec472643a1cf83e191f02ac08207b3b9c27650e1240f634396134b51cc1f1",
+    "utoc": "66de9b7222bfd7cdb7004fb57bfae39a5ecb9d4849c5533aeab3dbcca3b76408",
+    "ucas": "1eca622fc38d6a861810f980c5169c9857912a143295d6c33af3ac26a913b65b",
+    "named_packages_parsed": "151/151"
+  },
+  "checks": {
+    "all_iostore_chunk_meta_blake3_verified": true,
+    "all_target_overrides_readback_byte_identical": true,
+    "steam_quest_translation_refs_missing": 0,
+    "steam_map_hover_translation_refs_missing": 0,
+    "nosteam_map_hover_translation_refs_missing": 0,
+    "go_test_passed": true,
+    "go_vet_passed": true,
+    "windows_crossbuild_passed": true
+  },
+  "runtime_tested": false
+}
