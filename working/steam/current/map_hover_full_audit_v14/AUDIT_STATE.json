@@ -1,0 +1,52 @@
+{
+  "schema_version": "1.0",
+  "edition": "Steam",
+  "task": "map_hover_full_audit_v14",
+  "status": "in_progress",
+  "source_state_id": "steam_current_2026-10-03_16321_asset_verified_index_stale",
+  "verified_game_version": "0.7.9.16321",
+  "verified_build": null,
+  "current_phase": "map_display_source_audit",
+  "last_completed_unit": "v13_runtime_feedback_ingested",
+  "next_unit": "patch_display_data_without_map_widget_bytecode",
+  "completed_units": [
+    "user confirmed v13 Map opens",
+    "user confirmed most hover captions remain untranslated",
+    "v10-v12 Steam runtime-failed map widget bytecode strategies remain invalidated",
+    "audited current map architecture: Neutral_Widget consumes Main Text/Sub Text FText from Map_Return_BP; ReturnTypes remains a technical Name",
+    "identified quest_list, quest_objectives and quest_sub_objectives as DataTable-backed map/quest display producers with separate technical q_/marker identifiers",
+    "established safe strategy: preserve technical identifiers and export payload indices; localize display-only NameMap values plus exact FText source pairs"
+  ],
+  "pending_units": [
+    "build patched Steam display data packages",
+    "rebuild Steam IoStore from v13 baseline",
+    "static structural/readback validation",
+    "release packaging and Drive readback",
+    "runtime validation by user"
+  ],
+  "source_files_used": [
+    "CI_SOURCE_INDEX.json",
+    "CI_SOURCE_TREE.txt",
+    "v13 release payload/reports",
+    "current Steam map/quest source packages fetched from Drive"
+  ],
+  "working_files": [
+    "working/steam/current/map_hover_full_audit_v14/AUDIT_STATE.json"
+  ],
+  "validation_completed": [
+    "v13 Steam WB_WorldMapPopup and Neutral_Widget overrides absent",
+    "current Steam game version evidence 0.7.9.16321; exact Steam BuildID unavailable",
+    "884 unique case-insensitive map-caption labels audited",
+    "current quest DataTables expose technical q_/marker names separately from human display captions"
+  ],
+  "validation_pending": [
+    "IoStore validation",
+    "archive CRC/SHA-256",
+    "runtime map hover/progression smoke test"
+  ],
+  "notes": [
+    "Do not reintroduce Steam WB_WorldMapPopup or Neutral_Widget ExecuteUbergraph overrides.",
+    "Do not rename technical q_/npc_/marker_/path identifiers.",
+    "Runtime validation remains pending until user tests the built release."
+  ]
+}
