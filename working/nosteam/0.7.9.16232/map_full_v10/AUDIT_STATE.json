@@ -1,0 +1,40 @@
+{
+  "schema_version": "1.0",
+  "edition": "NoSteam",
+  "task": "map_full_v10",
+  "status": "in_progress",
+  "source_state_id": "nosteam_0.7.9.16232_baseline",
+  "verified_game_version": "0.7.9",
+  "verified_build": "0.7.9.16232",
+  "current_phase": "pre_binary_checkpoint",
+  "last_completed_unit": "runtime_map_regression_confirmed",
+  "next_unit": "restore_full_map_popup_and_build_v10",
+  "completed_units": [
+    "confirmed map hover remains English in v9",
+    "located validated NoSteam full translated WB_WorldMapPopup with 885/885 map-caption cases"
+  ],
+  "pending_units": [
+    "replace NoSteam map popup",
+    "audit map translation corpus",
+    "rebuild/validate",
+    "installer/archive/readback",
+    "runtime validation"
+  ],
+  "source_files_used": [
+    "v4 validated NoSteam map popup",
+    "v9 safe payload and technical-key-safe PAK"
+  ],
+  "working_files": [
+    "working/nosteam/0.7.9.16232/map_full_v10/AUDIT_STATE.json"
+  ],
+  "validation_completed": [
+    "NoSteam historical popup report has 885/885 cases and sample Bull's Shield → Щит Быка"
+  ],
+  "validation_pending": [
+    "container validation",
+    "runtime validation"
+  ],
+  "notes": [
+    "Gameplay AI/NPC/item/quest logic overrides remain excluded."
+  ]
+}
