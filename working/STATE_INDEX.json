@@ -1,0 +1,23 @@
+{
+  "schema_version": "1.0",
+  "updated_at": "2026-10-03T15:47:00+03:00",
+  "active_tasks": [
+    {
+      "edition": "Steam",
+      "task": "character_quest_map_fix",
+      "state_path": "working/steam/current/character_quest_map_fix/AUDIT_STATE.json",
+      "status": "release_ready_static_validation"
+    },
+    {
+      "edition": "NoSteam",
+      "task": "character_quest_map_fix",
+      "state_path": "working/nosteam/0.7.9.16232/character_quest_map_fix/AUDIT_STATE.json",
+      "status": "release_ready_static_validation"
+    }
+  ],
+  "latest_release": {
+    "name": "Carnal_Instinct_RU_DontLook_Installer_UIQuestMap_2026-10-03_v4.zip",
+    "sha256": "c60079a9d3f91124bc966911c0246e7e72cd456cb30ea4e9dfc73d441782ed19",
+    "installer_sha256": "0407587077bb3df6a9a078d256d2717ae1030afb0442b101f26d61977b23d982"
+  }
+}
