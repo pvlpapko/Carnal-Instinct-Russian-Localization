@@ -1,0 +1,62 @@
+{
+  "schema_version": "1.0",
+  "edition": "Steam",
+  "task": "character_quest_map_fix",
+  "status": "release_ready_static_validation",
+  "source_state_id": "CI_SOURCE_INDEX_2026-10-03T12:48:51Z_91b95dbc38b2",
+  "verified_game_version": "0.7.9.16315 (embedded asset evidence)",
+  "verified_build": null,
+  "current_phase": "final_validation",
+  "last_completed_unit": "release_archive_validation",
+  "next_unit": "in_game_validation",
+  "completed_units": [
+    "source_recheck",
+    "steam_character_ui_override",
+    "steam_new_game_quest_display_fix",
+    "map_hover_extension",
+    "iostore_rebuild",
+    "container_validation",
+    "installer_rebuild",
+    "installer_tests",
+    "release_archive_crc_sha256_validation"
+  ],
+  "pending_units": [
+    "in_game character menu validation",
+    "in_game new-game quest journal validation",
+    "in_game map hover validation"
+  ],
+  "source_files_used": [
+    "CI_SOURCE_INDEX.json",
+    "current Steam cooked UI/quest/map assets",
+    "NoSteam 0.7.9.16232 character UI reference assets",
+    "v3 release payload"
+  ],
+  "working_files": [
+    "Files/Steam_0.7.9.16315",
+    "Developer/CharacterUIFix",
+    "Developer/QuestFix",
+    "Developer/MapFix",
+    "Installer/CarnalInstinct_RU_Setup.exe"
+  ],
+  "validation_completed": [
+    "34/34 named Steam container packages parsed as UE5.5 Zen packages",
+    "all IoStore chunk BLAKE3-20 metadata verified",
+    "target override extraction byte-identical to Developer references",
+    "quest FText exact Namespace+Key+English lookup: zero missing",
+    "map hover FText exact Namespace+Key+English lookup: zero missing",
+    "go test passed",
+    "go vet -unsafeptr=false passed",
+    "Windows x64 cross-build passed"
+  ],
+  "validation_pending": [
+    "game runtime",
+    "native Windows GUI visual check"
+  ],
+  "release_archive_sha256": "c60079a9d3f91124bc966911c0246e7e72cd456cb30ea4e9dfc73d441782ed19",
+  "installer_sha256": "0407587077bb3df6a9a078d256d2717ae1030afb0442b101f26d61977b23d982",
+  "notes": [
+    "Steam character UI uses exact NoSteam cooked reference packages at identical logical /Game paths.",
+    "Visible /Game dependencies resolve in current Steam source index, but export schemas differ; runtime compatibility is not claimed.",
+    "Exact Steam BuildID is unknown."
+  ]
+}
