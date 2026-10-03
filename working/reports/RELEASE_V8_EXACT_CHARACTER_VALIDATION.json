@@ -1,0 +1,14 @@
+{
+  "schema_version": "1.0",
+  "release": "Carnal_Instinct_RU_DontLook_Installer_ExactCharacterCrashFix_2026-10-03_v8",
+  "archive_sha256": "d366a08f8a462dabd8f974639bb27e83c85f6e705124d053a2cc0bc4a10dd5ea",
+  "archive_bytes": 24518529,
+  "installer_sha256": "342e36e3dba4d6cbe0c54ad9de1e4bd9349fb67cbebaabba5f4c4cc8905707c8",
+  "steam_packages": 56,
+  "steam_binary_quest_overrides": 0,
+  "steam_exact_nosteam_character_packages": 4,
+  "steam_other_schema_checks_passed": 52,
+  "nosteam_packages": 71,
+  "drive_readback_verified": true,
+  "runtime_tested": false
+}
