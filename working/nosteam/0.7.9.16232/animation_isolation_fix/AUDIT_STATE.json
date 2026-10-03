@@ -6,25 +6,23 @@
   "source_state_id": "nosteam_0.7.9.16232_baseline",
   "verified_game_version": "0.7.9",
   "verified_build": "0.7.9.16232",
-  "current_phase": "release_candidate_uploaded_static_validation_complete",
-  "last_completed_unit": "build_upload_and_readback_v5_animation_isolation_release_candidate",
-  "next_unit": "in_game_runtime_validation_combat_ai_death_map_quests",
+  "current_phase": "v6_release_uploaded_static_validation_complete",
+  "last_completed_unit": "build_upload_and_readback_v6_safe_ui_release_candidate",
+  "next_unit": "in_game_runtime_validation_combat_ai_death_character_map_quests",
   "completed_units": [
     "task_initialized",
-    "audited latest release override paths for combat/animation/AI impact",
-    "confirmed old NoSteam binary payload overrode gameplay AI including BP_FindersKeepers_CrocodileAI_Boss",
-    "restored 126 technical AI/combat/locomotion FText entries to exact English source strings",
-    "reproduced original UE Pak v3 byte-for-byte and rebuilt fixed localization pak",
-    "parsed existing IoStore and validated original chunk BLAKE3 hashes",
-    "removed 83 non-UI overrides including boss AI, NPC dialogue blueprints, quest conditions/actor/data, item blueprints and other non-widget packages",
-    "retained 68 display/UI widget packages only",
-    "rebuilt NoSteam IoStore: 69 chunks, 68 named packages, container header and all BLAKE3 hashes validated",
-    "rebuilt installer with isolated NoSteam 0.7.9.16232 payload",
-    "go test, go vet -unsafeptr=false and Windows x64 cross-build passed",
-    "built ZIP, CRC validated, uploaded to Drive Releases and verified readback SHA-256"
+    "audited old NoSteam 151-package override set",
+    "restored 144 technical AI/combat/locomotion/state FText rows to exact English",
+    "verified E_AIBehavior/E_State/E_MovementState/AdvancedLocomotionV2/BP_CI_BaseAI_DLG/BP_CI_SellswordAI target rows have zero remaining translated technical values",
+    "removed gameplay AI/NPC/item/quest-logic binary overrides including BP_FindersKeepers_CrocodileAI_Boss",
+    "rebuilt NoSteam IoStore to 26 audited display/UI packages",
+    "preserved safe UI/map/quest fixes",
+    "rebuilt pak and installer",
+    "go test, go vet -unsafeptr=false, Windows x64 cross-build passed",
+    "ZIP CRC/SHA256 validated, uploaded to Drive and readback SHA256 verified"
   ],
   "pending_units": [
-    "in-game combat/AI/death animation validation on NoSteam",
+    "in-game combat/AI/death validation on NoSteam",
     "UI/map/quest smoke test on NoSteam",
     "final runtime sign-off"
   ],
@@ -40,29 +38,34 @@
     "Reports/NoSteam_IOSTORE_SAFE_UI_REPORT.json"
   ],
   "validation_completed": [
-    "126 technical key restoration and locres parse/refcount validation",
-    "fixed Pak v3 index/data SHA1 validation",
-    "NoSteam IoStore: 69 chunks/68 named widget packages; all chunk BLAKE3 hashes passed and UCAS physical coverage exact",
-    "container header contains exactly 68 retained package IDs",
-    "BP_FindersKeepers_CrocodileAI_Boss and all non-widget old override paths absent from rebuilt payload",
+    "144 technical key restoration and locres parse/index/refcount validation",
+    "placeholder mismatch count 0",
+    "NoSteam IoStore: 27 chunks / 26 named packages; all chunk BLAKE3 hashes valid",
+    "forbidden gameplay override hits 0",
+    "BP_FindersKeepers_CrocodileAI_Boss absent from runtime payload",
     "installer payload matches Files byte-for-byte",
     "ZIP CRC test passed",
-    "Drive readback SHA-256 09b794bf5f69cf996c6f5ceff856afe81b95a667f5415d4def45b05146edb4b1"
+    "Drive readback SHA-256 9a13a6cb22016a5fa6adfee9f15d7be30a87b345e9844dba5db5a1a00bf698ab"
   ],
   "validation_pending": [
     "game runtime validation"
   ],
   "release": {
-    "name": "Carnal_Instinct_RU_DontLook_AnimationIsolation_2026-10-03_v5.zip",
-    "sha256": "09b794bf5f69cf996c6f5ceff856afe81b95a667f5415d4def45b05146edb4b1",
-    "installer_sha256": "2fdf0fae6564d8050c9b887ceecc7b718370ba5ba106e7bad4469fe5790f0277",
-    "drive_folder_id": "1CBVQnIXReV-lepRotgz6a2Dz6nMiLT7S",
-    "drive_file_id": "1NO52YefCXArK6RvQznih2uSd8p8AhxV9",
-    "drive_readback_sha256_verified": true
+    "name": "Carnal_Instinct_RU_DontLook_Installer_SafeUI_2026-10-03_v6.zip",
+    "sha256": "9a13a6cb22016a5fa6adfee9f15d7be30a87b345e9844dba5db5a1a00bf698ab",
+    "installer_sha256": "520c01f75f66720f7589a4305a2b0a0bab5c5c1ab8836ddf49d727b6016472e0",
+    "drive_folder_id": "18L6chgJrb0HiAFKC_GKRWY_ge6fE32DW",
+    "drive_file_id": "1y94IeDDRw1cEeNtJ0Mx6i4eCJTrz13DM",
+    "drive_readback_sha256_verified": true,
+    "steam_payload_id": "Steam_current",
+    "steam_verified_game_version": "0.7.9.16321",
+    "steam_verified_build": null,
+    "nosteam_baseline_build": "0.7.9.16232",
+    "runtime_validation": "pending"
   },
   "notes": [
-    "Goal: localization must not override gameplay combat, AI, death or animation behavior.",
-    "NoSteam 0.7.9.16232 remains a separate payload and is not mixed with Steam_current.",
-    "Static validation cannot prove the reported runtime freeze/death-animation symptom is gone until tested in game."
+    "NoSteam 0.7.9.16232 remains a separate payload.",
+    "Localization runtime contains only audited display/UI packages plus BP_BookTemplate and AC_RadialMenu exceptions.",
+    "Runtime symptom cannot be claimed fixed until tested in game."
   ]
 }
