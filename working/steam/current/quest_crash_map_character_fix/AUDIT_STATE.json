@@ -1,0 +1,56 @@
+{
+  "schema_version": "1.0",
+  "edition": "Steam",
+  "task": "quest_crash_map_character_fix",
+  "status": "in_progress",
+  "source_state_id": "steam_current_2026-10-03_16321_asset_verified_index_stale",
+  "verified_game_version": "0.7.9.16321",
+  "verified_build": null,
+  "current_phase": "pre_binary_checkpoint",
+  "last_completed_unit": "runtime_defects_reproduced_and_assets_classified",
+  "next_unit": "build_v9_quest_crash_isolation_map_hover_exact_character",
+  "completed_units": [
+    "confirmed v6 quest-tab runtime crash from user test",
+    "parsed CrashContext: EXCEPTION_ACCESS_VIOLATION read 0x8c8a on UE 5.5.4",
+    "identified Steam quest widget binary overrides as crash isolation target",
+    "verified current w_03_map_icon lacks CI_RU_Display_Audit2MapCaptions",
+    "verified NoSteam localized w_03_map_icon shares current Steam package/import/export schema and carries complete display switch localization",
+    "confirmed exact NoSteam character layout requires four different cooked widget packages"
+  ],
+  "pending_units": [
+    "build Steam_current with zero quest binary overrides",
+    "restore full map hover display patch",
+    "apply exact NoSteam character layout packages",
+    "preserve 144 technical AI/combat/state English restorations",
+    "validate IoStore BLAKE3/package/dependencies",
+    "rebuild installer",
+    "zip/hash/Drive readback",
+    "runtime validation"
+  ],
+  "source_files_used": [
+    "CrashContext(8).runtime-xml",
+    "current Steam 0.7.9.16321 target assets from Drive",
+    "NoSteam 0.7.9.16232 validated display assets",
+    "v6 technical-state-safe PAK"
+  ],
+  "working_files": [
+    "working/steam/current/quest_crash_map_character_fix/AUDIT_STATE.json",
+    "/mnt/data/build_v9.py",
+    "/mnt/data/validate_v9.py"
+  ],
+  "validation_completed": [
+    "current Steam version 0.7.9.16321 previously verified",
+    "NoSteam localized map icon normalized current-Steam schema/import/export compatibility verified",
+    "character target screenshot captured from user-provided NoSteam reference"
+  ],
+  "validation_pending": [
+    "container validation",
+    "installer validation",
+    "game runtime validation"
+  ],
+  "notes": [
+    "Steam quest crash will be isolated by removing every /UI/Quests/ cooked override; current game 0.7.9.16321 owns those widgets.",
+    "Exact NoSteam character appearance requires cross-build character widget packages whose export counts differ from current Steam; runtime compatibility remains to be proven by user test.",
+    "Global CI_SOURCE_INDEX snapshot predates 0.7.9.16321; build-dependent target files were fetched directly."
+  ]
+}
