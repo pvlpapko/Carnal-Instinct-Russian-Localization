@@ -1,0 +1,73 @@
+{
+  "schema_version": "1.0",
+  "release": "Carnal_Instinct_RU_DontLook_Installer_MapTrampoline_2026-10-04_v12.zip",
+  "archive": {
+    "bytes": 25017732,
+    "sha256": "a8bd52dc6437725888f5c5bd38933c5703f3b387455015e753b01418e8c3e0bf",
+    "entries": 193,
+    "zip_crc_passed": true,
+    "internal_sha256sums": "154/154"
+  },
+  "installer": {
+    "bytes": 20246016,
+    "sha256": "3453b019c76d793375f1aedbf3b08684a73cd82412fb73f46679c4b8eb22bc24",
+    "go_test": true,
+    "go_vet": true,
+    "windows_x64_crossbuild": true,
+    "steam_label": "Steam",
+    "steam_payload_id": "Steam_current"
+  },
+  "drive": {
+    "folder_id": "1DVIGnV-LE0G6JPGUcwx_ftcwkdNSPtuG",
+    "file_id": "1ZvQN9wc5lAbUqDv5cCeRA7BxseKNEJM_",
+    "readback_bytes": 25017732,
+    "readback_sha256_verified": true,
+    "readback_zip_crc_verified": true
+  },
+  "steam": {
+    "verified_game_version": "0.7.9.16321",
+    "verified_build": null,
+    "packages": 58,
+    "wb_world_map_popup_override_present": false,
+    "neutral_widget_patch": "fixed-size trampoline",
+    "neutral_source_sha256": "c5c1cc5bff1250430f33bc2f9d6b29d49c02c3bfbdf2b350629bccd1e497fa76",
+    "neutral_patched_sha256": "74f6de09ea7c7b0ec241937b69ed663f910d0a91033830c85ba35cc6d2c4f364",
+    "imports_before": 122,
+    "imports_after": 124,
+    "bad_import_refs": 0,
+    "bad_control_flow_targets": 0,
+    "original_script_memory": 13812,
+    "original_offsets_preserved_through": 13811,
+    "crash_offset_1169_opcode": "0x07",
+    "map_switches": [
+      884,
+      884
+    ],
+    "map_rows": 887,
+    "map_unique": 884,
+    "map_locres_mismatches": 0,
+    "quest_override": "current WB_QuestName layout-only",
+    "lovense": "exact current 0.7.9.16321 source",
+    "exact_nosteam_character_reference_packages": 4
+  },
+  "nosteam": {
+    "verified_build": "0.7.9.16232",
+    "packages": 71,
+    "map_popup_switches": [
+      885,
+      885
+    ],
+    "map_rows": 888,
+    "map_unique": 885
+  },
+  "ai_safety": {
+    "technical_state_rows_restored": 144,
+    "forbidden_gameplay_overrides": 0,
+    "boss_ai_override_present": false
+  },
+  "supersedes": {
+    "v10": "Steam runtime-invalid: WB_WorldMapPopup Bad import index 58/57",
+    "v11": "Steam runtime-invalid on Map: Neutral_Widget undefined opcode 0x74 at offset 1169"
+  },
+  "runtime_tested": false
+}
