@@ -21,9 +21,9 @@
   "source_index_sha256": "91b95dbc38b2f4ffbd3fbea35bb1e4906cec7ddb588be87a15cec17048282274",
   "source_tree_sha256": "f12967fe7bd1c3729caa285519b2acc0059959214bf1f453aefe6437b8fbfef3",
   "source_stock_status": "contains localization modifications; not a clean stock game extraction",
-  "binary_compatibility": "v11 audited UI/display-only runtime; Steam WB_WorldMapPopup is not overridden; runtime validation pending",
-  "ui_override_compatibility": "v11 map translation uses current 0.7.9.16321 Neutral_Widget schema with two script-import conversions and 884/884 MainText/SubText cases; bad Kismet import refs 0; runtime pending",
-  "last_source_check_at": "2026-10-03T21:14:00Z",
+  "binary_compatibility": "v12 audited UI/display runtime; Steam WB_WorldMapPopup not overridden; Neutral_Widget original VM offsets preserved by fixed-size trampolines; runtime validation pending",
+  "ui_override_compatibility": "v12 current 0.7.9.16321 Neutral_Widget: MainText/SubText assignments trampoline-relocated, 884/884 display cases each, imports 124, bad import refs 0, bad control-flow targets 0",
+  "last_source_check_at": "2026-10-03T21:35:00Z",
   "evidence": [
     "current Google Drive RPGInventory_GameInstance.uasset raw bytes",
     "embedded ASCII version 0.7.9.16321 at byte offset 313692",
@@ -31,9 +31,9 @@
   ],
   "notes": [
     "Current embedded game version verified as 0.7.9.16321; exact Steam BuildID unavailable.",
-    "v10 is runtime-invalid: WB_WorldMapPopup ExecuteUbergraph referenced import 58 with 57 available.",
-    "v11 removes Steam WB_WorldMapPopup override completely and patches current Neutral_Widget display boundary instead.",
-    "Current Neutral_Widget non-ExecuteUbergraph exports are byte-identical to current source; object import table 122 -> 124 using two ScriptImport values; all package-index-bearing Kismet refs validated in range.",
-    "Global CI_SOURCE_INDEX refresh remains pending; direct current Drive bytes were used for build-dependent targets."
+    "v10 runtime-invalid: WB_WorldMapPopup Bad import index 58/57.",
+    "v11 runtime-invalid on Map: Neutral_Widget undefined opcode 0x74 at byte offset 1169.",
+    "v12 removes the in-place bytecode expansion. Original Neutral_Widget VM offsets through original EndOfScript are preserved; offset 1169 is again the source EX_JumpIfNot 0x07.",
+    "Steam WB_WorldMapPopup remains current-game-owned. Global CI_SOURCE_INDEX refresh remains pending."
   ]
 }
