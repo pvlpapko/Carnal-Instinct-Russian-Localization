@@ -1,0 +1,115 @@
+{
+  "schema_version": "1.0",
+  "release": "Carnal_Instinct_RU_DontLook_Installer_MapFull_QuestLayout_Lovense_2026-10-03_v10",
+  "author": "Don't Look",
+  "archive": {
+    "bytes": 24703582,
+    "sha256": "884895067a3bbb2d3fface05847b50b060ed272cf7d6ce9c9e93c27c37dfc23a",
+    "entries": 178,
+    "zip_crc_passed": true,
+    "internal_sha256sums_verified": "140/140"
+  },
+  "installer": {
+    "bytes": 20246016,
+    "sha256": "91fb7d6bc24bee7707b87ae7f9325e501dc232480df12dc90a9bd62759fe1ece",
+    "go_test": true,
+    "go_vet_unsafeptr_false": true,
+    "windows_x64_crossbuild": true,
+    "steam_label": "Steam",
+    "steam_payload_id": "Steam_current"
+  },
+  "drive": {
+    "folder_id": "18L4fccF20V6QKDNVFxB1CoxQQjkT_VFb",
+    "file_id": "1xo1zut2dAepHiatGcdJptdWxPoc-Zk4d",
+    "readback_bytes": 24703582,
+    "readback_sha256_verified": true
+  },
+  "Steam_current": {
+    "verified_game_version": "0.7.9.16321",
+    "verified_build": null,
+    "packages": 58,
+    "pak_sha256": "4aa7aff39bbc525345bb4f3194dff5953b58ba934ecf95818cb249fe03208e9c",
+    "utoc_sha256": "19c93675ef52a97489e07f709e9a24192ed7aaae471421a8042412f50245d30e",
+    "ucas_sha256": "231699d45ff90a99ede20e348dc2733435b9aa3834246864cd5ae69d11bc8095",
+    "map_corpus": {
+      "rows": 887,
+      "unique_casefold": 884,
+      "translated_rows": 886,
+      "intentionally_unchanged": [
+        "???"
+      ],
+      "locres_exact_mismatches": 0
+    },
+    "map_popup": {
+      "sha256": "847e9a0c04bafe2c8d33818e9e810633856dda039ed1efeb65026d91da926309",
+      "switch_cases": [
+        884,
+        884
+      ],
+      "current_16321_schema": true,
+      "changed_exports": [
+        "ExecuteUbergraph_WB_WorldMapPopup"
+      ],
+      "non_function_exports_unchanged": true
+    },
+    "quest_layout": {
+      "package": "WB_QuestName",
+      "source_sha256": "2351128a6f646645fd11e0a90336b07c534409bee302f7979c0575a3b98f91f3",
+      "patched_sha256": "5e6c498451b8f09bad7db6e884a316e79a915f21cda7b17d50c0d6b5f3e633a9",
+      "changed_export": "OverlaySlot_4",
+      "top_padding_before": 8,
+      "top_padding_after": -16,
+      "all_function_scripts_source_identical": true
+    },
+    "lovense": {
+      "sha256": "9a2ac7c2a87df56d0fa9f741a61abcbbe0521b6751ed3db5554d3c5e5047c3f5",
+      "uses_exact_current_16321_source": true,
+      "bottom_container_width_old_v9": 900,
+      "bottom_container_width_current": 1320
+    },
+    "exact_nosteam_character_reference_packages": 4
+  },
+  "NoSteam_0_7_9_16232": {
+    "verified_build": "0.7.9.16232",
+    "packages": 71,
+    "pak_sha256": "09f26693296f352d49006b3c9efe8411d92ff80fee9823ef27e0aa380b80c5ba",
+    "utoc_sha256": "fc5a27899f6a268c74fb3945383a702b17103c0364e04b4d506616de2dbc25c4",
+    "ucas_sha256": "acd295ae8c4f8592fcad493e3b799a5dcbedc925630b328e1f695328c018dbc3",
+    "map_corpus": {
+      "rows": 888,
+      "unique_casefold": 885,
+      "translated_rows": 887,
+      "intentionally_unchanged": [
+        "???"
+      ],
+      "locres_exact_mismatches": 0
+    },
+    "map_popup": {
+      "sha256": "a72115bff25b77e1423875beaae8587c1b4c0c74e0bdaff3d973955ee46472b9",
+      "switch_cases": [
+        885,
+        885
+      ]
+    }
+  },
+  "map_examples": {
+    "Bull's Shield": "Щит Быка",
+    "The Gilded Fold": "Златое стадо",
+    "Undiscovered": "Не обнаружено",
+    "Maz Arjeni": "Маз-Аржени",
+    "Tal-Senet": "Тал-Сенет",
+    "Custom Marker": "Пользовательская метка",
+    "Search Area": "Область поиска"
+  },
+  "ai_safety": {
+    "technical_state_rows_restored": 144,
+    "forbidden_gameplay_override_hits": 0,
+    "boss_ai_override_present": false
+  },
+  "runtime_tested": false,
+  "notes": [
+    "Map hover regression was traced to WB_WorldMapPopup display routing; w_03_map_icon alone was insufficient.",
+    "Old translated Steam quest bytecode remains excluded after the 0x8c8a runtime crash. Only current-source WB_QuestName geometry is overridden.",
+    "Global CI_SOURCE_INDEX snapshot is stale for 0.7.9.16321; build-dependent target assets were fetched directly from current Drive bytes."
+  ]
+}
