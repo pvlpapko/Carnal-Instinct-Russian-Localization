@@ -6,19 +6,21 @@
   "source_state_id": "nosteam_0.7.9.16232_baseline",
   "verified_game_version": "0.7.9",
   "verified_build": "0.7.9.16232",
-  "current_phase": "technical_key_and_override_sanitization",
-  "last_completed_unit": "task_initialized",
-  "next_unit": "restore_technical_state_text_and_build_safe_ui_whitelist",
+  "current_phase": "safe_display_whitelist_and_technical_keys_completed",
+  "last_completed_unit": "safe_display_whitelist_and_technical_key_restore",
+  "next_unit": "current_schema_ui_repatch_and_container_rebuild",
   "completed_units": [
-    "task_initialized"
+    "task_initialized",
+    "technical_key_restore",
+    "safe_display_whitelist"
   ],
   "pending_units": [
-    "restore technical AI/combat/movement/state locres entries to original English",
-    "exclude gameplay/AI/NPC/quest-logic cooked overrides",
-    "merge with current 0.7.9.16321 Steam UI audit",
-    "rebuild IoStore and pak",
-    "rebuild installer",
-    "static validation",
+    "current Steam 0.7.9.16321 character UI current-schema patch",
+    "current-source quest/map display revalidation",
+    "IoStore rebuild",
+    "pak rebuild",
+    "installer rebuild",
+    "final static validation",
     "runtime validation"
   ],
   "source_files_used": [
@@ -29,11 +31,18 @@
   "working_files": [
     "working/nosteam/0.7.9.16232/ai_combat_state_safety/AUDIT_STATE.json"
   ],
-  "validation_completed": [],
+  "validation_completed": [
+    "142 technical AI/combat/movement/state-related localization rows restored exactly to original English in each edition",
+    "Namespace+Key+SourceStringHash identities preserved",
+    "NoSteam safe display whitelist reduced from 151 cooked packages to 26 required edition-compatible display packages",
+    "Steam safe display whitelist identified from explicit layout/script reports; gameplay/NPC/item/quest-actor Blueprints excluded"
+  ],
   "validation_pending": [
     "all"
   ],
   "notes": [
-    "No gameplay Blueprint or technical AI/combat/animation-state translation may be overridden without a display-only necessity."
+    "No gameplay Blueprint or technical AI/combat/animation-state translation may be overridden without a display-only necessity.",
+    "BP_FindersKeepers_CrocodileAI_Boss and all NPC/quest-condition/item gameplay Blueprints are excluded from the new safe whitelist.",
+    "Technical state values are restored at localization level; E_StatType remains translated because it is user-facing."
   ]
 }
