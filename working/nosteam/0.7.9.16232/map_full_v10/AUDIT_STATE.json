@@ -2,13 +2,13 @@
   "schema_version": "1.0",
   "edition": "NoSteam",
   "task": "map_full_v10",
-  "status": "in_progress",
+  "status": "release_uploaded_static_validation_runtime_pending",
   "source_state_id": "nosteam_0.7.9.16232_baseline",
   "verified_game_version": "0.7.9",
   "verified_build": "0.7.9.16232",
-  "current_phase": "container_built_validated_pre_installer",
-  "last_completed_unit": "restore_full_popup_and_validate_nosteam_iostore",
-  "next_unit": "rebuild_installer_archive_upload",
+  "current_phase": "v10_uploaded_static_validation_complete",
+  "last_completed_unit": "drive_readback_sha256_validation",
+  "next_unit": "user_runtime_validation",
   "completed_units": [
     "confirmed map hover remains English in v9",
     "located validated NoSteam full translated WB_WorldMapPopup with 885/885 map-caption cases",
@@ -17,14 +17,15 @@
     "audited shared map translation corpus and locres exact Namespace+Key+hash relations",
     "rebuilt NoSteam IoStore: 71 named packages / 72 chunks",
     "validated all chunk BLAKE3 hashes and exact UCAS physical coverage",
-    "confirmed forbidden gameplay override hits = 0"
+    "confirmed forbidden gameplay override hits = 0",
+    "rebuilt installer/archive",
+    "ZIP CRC and internal SHA256SUMS verification",
+    "uploaded v10 and verified Drive readback SHA-256"
   ],
   "pending_units": [
-    "replace NoSteam map popup",
-    "audit map translation corpus",
-    "rebuild/validate",
-    "installer/archive/readback",
-    "runtime validation"
+    "runtime: verify map hover labels across all marker types",
+    "runtime: combat/AI/death smoke test",
+    "final runtime sign-off"
   ],
   "source_files_used": [
     "v4 validated NoSteam map popup",
@@ -36,13 +37,30 @@
   "validation_completed": [
     "NoSteam historical popup report has 885/885 cases and sample Bull's Shield → Щит Быка",
     "NoSteam popup switches 885/885",
-    "NoSteam IoStore BLAKE3 PASS; UCAS coverage exact"
+    "NoSteam IoStore BLAKE3 PASS; UCAS coverage exact",
+    "NoSteam map corpus: 888 rows / 885 unique / 887 translated; only ??? intentionally unchanged; locres exact mismatches 0",
+    "NoSteam map popup switches 885/885",
+    "Drive readback SHA-256 884895067a3bbb2d3fface05847b50b060ed272cf7d6ce9c9e93c27c37dfc23a"
   ],
   "validation_pending": [
-    "container validation",
-    "runtime validation"
+    "game runtime validation"
   ],
   "notes": [
-    "Gameplay AI/NPC/item/quest logic overrides remain excluded."
-  ]
+    "NoSteam 0.7.9.16232 remains a separate payload; gameplay AI/NPC/item/quest-logic overrides remain excluded."
+  ],
+  "release": {
+    "name": "Carnal_Instinct_RU_DontLook_Installer_MapFull_QuestLayout_Lovense_2026-10-03_v10.zip",
+    "sha256": "884895067a3bbb2d3fface05847b50b060ed272cf7d6ce9c9e93c27c37dfc23a",
+    "archive_bytes": 24703582,
+    "installer_sha256": "91fb7d6bc24bee7707b87ae7f9325e501dc232480df12dc90a9bd62759fe1ece",
+    "installer_bytes": 20246016,
+    "drive_folder_id": "18L4fccF20V6QKDNVFxB1CoxQQjkT_VFb",
+    "drive_file_id": "1xo1zut2dAepHiatGcdJptdWxPoc-Zk4d",
+    "drive_readback_sha256_verified": true,
+    "steam_payload_id": "Steam_current",
+    "steam_verified_game_version": "0.7.9.16321",
+    "steam_verified_build": null,
+    "nosteam_baseline_build": "0.7.9.16232",
+    "runtime_validation": "pending"
+  }
 }
