@@ -6,36 +6,58 @@
   "source_state_id": "nosteam_0.7.9.16232_baseline",
   "verified_game_version": "0.7.9",
   "verified_build": "0.7.9.16232",
-  "current_phase": "identify_animation_affecting_overrides",
-  "last_completed_unit": "task_initialized",
-  "next_unit": "audit_latest_release_override_paths_for_combat_animation_ai",
+  "current_phase": "iostore_ui_only_rebuild",
+  "last_completed_unit": "restore_126_ai_combat_locomotion_technical_ftext_and_rebuild_pak_v3",
+  "next_unit": "remove_gameplay_blueprints_and_rebuild_ui_only_iostore",
   "completed_units": [
-    "task_initialized"
+    "task_initialized",
+    "audited latest release override paths for combat/animation/AI impact",
+    "confirmed NoSteam binary payload overrides gameplay AI including BP_FindersKeepers_CrocodileAI_Boss",
+    "identified gameplay-coupled FText enum/state translations",
+    "restored 126 technical AI/combat/locomotion FText entries to exact English source strings",
+    "validated optimized CityHash64 UTF16 locres structure, entry indices and LUT refcounts",
+    "reproduced original UE Pak v3 byte-for-byte and rebuilt fixed localization pak",
+    "parsed existing IoStore UTOC/UCAS and validated every existing chunk BLAKE3 hash"
   ],
   "pending_units": [
-    "audit latest release override paths for combat/animation/AI impact",
-    "compare offending override packages with NoSteam baseline",
-    "remove or replace all nonessential combat/animation/AI-affecting overrides",
-    "rebuild NoSteam FULL payload",
-    "validate package/container integrity",
+    "remove all nonessential gameplay/AI/combat cooked overrides and retain display-only UI subset",
+    "rebuild NoSteam UI-only IoStore payload",
+    "validate rebuilt package/container integrity",
     "rebuild installer/archive",
     "Drive readback validation",
     "in-game validation"
   ],
   "source_files_used": [
     "CI_SOURCE_INDEX.json",
-    "working/STATE_INDEX.json"
+    "working/STATE_INDEX.json",
+    "Carnal_Instinct_RU_DontLook_Installer_UIQuestMap_2026-10-03_v4.zip/Data/NoSteam_0.7.9.16232/Game.locres",
+    "Carnal_Instinct_RU_DontLook_Installer_UIQuestMap_2026-10-03_v4/Data/NoSteam_0.7.9.16232/translation.tsv",
+    "Carnal_Instinct_RU_DontLook_Installer_UIQuestMap_2026-10-03_v4/Files/NoSteam_0.7.9.16232/pakchunk1015-Windows_P.pak",
+    "Carnal_Instinct_RU_DontLook_Installer_UIQuestMap_2026-10-03_v4/Files/NoSteam_0.7.9.16232/pakchunk1015-Windows_P.utoc",
+    "Carnal_Instinct_RU_DontLook_Installer_UIQuestMap_2026-10-03_v4/Files/NoSteam_0.7.9.16232/pakchunk1015-Windows_P.ucas"
   ],
   "working_files": [
-    "working/nosteam/0.7.9.16232/animation_isolation_fix/AUDIT_STATE.json"
+    "working/nosteam/0.7.9.16232/animation_isolation_fix/AUDIT_STATE.json",
+    "TECHNICAL_KEY_RESTORE.json (126 restored keys; local working output)",
+    "Game.locres fixed local output sha256 ad2b15701733a45f7a6fe6eaecd732571b772c5ca97c100962de42ec4f785e36",
+    "pakchunk1015-Windows_P.pak fixed local output sha256 f07309924a24da59ab5176a2f5e7622298d8685d7ad3ada0ba5066a41163fc80"
   ],
   "validation_completed": [
-    "task state initialized"
+    "126 selected technical keys restored and post-parse values match SourceString",
+    "locres full parse/refcount validation passed",
+    "original NoSteam Pak v3 exact byte-for-byte reproduction passed",
+    "fixed NoSteam Pak index/SHA1 validation passed",
+    "existing NoSteam IoStore: 152 chunks, 151 named files, all chunk BLAKE3 hashes passed, UCAS physical coverage exact"
   ],
   "validation_pending": [
-    "all package/container/runtime validation"
+    "rebuilt minimal IoStore validation",
+    "installer/archive/readback validation",
+    "in-game validation"
   ],
   "notes": [
-    "Goal: localization must not override gameplay combat, AI, death or animation behavior."
+    "Goal: localization must not override gameplay combat, AI, death or animation behavior.",
+    "Current NoSteam v4 IoStore definitely contains gameplay AI BP_FindersKeepers_CrocodileAI_Boss and will be reduced.",
+    "126 technical keys were restored; E_StatType and user-facing enemy/tutorial strings intentionally remain translated.",
+    "Static fixes are not an in-game confirmation of the reported freeze/death-animation symptom."
   ]
 }
