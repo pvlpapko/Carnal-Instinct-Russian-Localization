@@ -1,0 +1,64 @@
+{
+  "schema_version": "1.0",
+  "edition": "Steam",
+  "task": "neutral_widget_trampoline_v12",
+  "status": "in_progress",
+  "source_state_id": "steam_current_2026-10-03_16321_asset_verified_index_stale",
+  "verified_game_version": "0.7.9.16321",
+  "verified_build": null,
+  "current_phase": "pre_container_checkpoint",
+  "last_completed_unit": "trampoline_patch_static_validation",
+  "next_unit": "rebuild_v12_iostore_installer_archive",
+  "completed_units": [
+    "confirmed v11 crashes only when opening Map",
+    "parsed CrashContext(10): undefined opcode 0x74 at Neutral_Widget ExecuteUbergraph offset 1169",
+    "invalidated v11 inline Neutral_Widget switch strategy",
+    "identified root cause class as control-flow displacement after in-place expansion of current Neutral_Widget bytecode",
+    "built current-source trampoline patch preserving every original VM offset through original EndOfScript",
+    "relocated only MainText/SubText display assignments to appended blocks",
+    "added 884/884 map display cases in relocated blocks",
+    "validated bad control-flow targets = 0 and bad import refs = 0",
+    "validated all non-ExecuteUbergraph exports byte-identical to current 0.7.9.16321 source"
+  ],
+  "pending_units": [
+    "rebuild Steam_current IoStore with trampoline Neutral_Widget",
+    "preserve NoSteam native full-map popup",
+    "validate BLAKE3/UCAS/package paths",
+    "rebuild installer",
+    "ZIP CRC/SHA256 validation",
+    "Drive upload/readback",
+    "runtime Steam Map validation",
+    "quest/Lovense/character/combat smoke tests"
+  ],
+  "source_files_used": [
+    "CrashContext(10).runtime-xml",
+    "current Steam 0.7.9.16321 Neutral_Widget",
+    "v9/v11 safe runtime payload",
+    "CI_RU_Display_Audit2MapCaptions translation corpus"
+  ],
+  "working_files": [
+    "working/steam/current/neutral_widget_trampoline_v12/AUDIT_STATE.json",
+    "/mnt/data/v12work/patch_neutral_trampoline.py",
+    "/mnt/data/v12work/Neutral_Widget_16321_full_map_ru_trampoline.uasset",
+    "/mnt/data/v12work/NEUTRAL_WIDGET_TRAMPOLINE_PATCH.json"
+  ],
+  "validation_completed": [
+    "original script memory 13812 preserved unchanged through offset 13811",
+    "MainText trampoline original range 322..363",
+    "SubText trampoline original range 363..404",
+    "relocated MainText start 13816; SubText start 136070; final EndOfScript 258324",
+    "all explicit control-flow targets resolve to parsed expression boundaries",
+    "object imports 122 -> 124; bad import refs 0",
+    "map switches 884/884"
+  ],
+  "validation_pending": [
+    "container validation",
+    "installer/archive validation",
+    "game runtime validation"
+  ],
+  "notes": [
+    "v11 Steam must not be used; it is runtime-invalid when the Map tab executes Neutral_Widget.",
+    "v12 does not shift any original control-flow destination before the original EndOfScript; only fixed-size jump+NOP trampolines replace the two display assignments.",
+    "Steam WB_WorldMapPopup remains unmodified/current-game-owned."
+  ]
+}
