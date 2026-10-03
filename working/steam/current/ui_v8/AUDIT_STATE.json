@@ -3,8 +3,47 @@
   "edition": "Steam",
   "task": "ui_v8",
   "status": "runtime_validation_pending",
+  "source_state_id": "steam_current_0.7.9.16321_live_targets",
   "verified_game_version": "0.7.9.16321",
+  "verified_build": null,
   "current_phase": "runtime_validation",
-  "last_completed_unit": "release_uploaded",
-  "next_unit": "user_runtime_validation"
+  "last_completed_unit": "v8_release_uploaded_and_readback_verified",
+  "next_unit": "user_runtime_validation",
+  "completed_units": [
+    "removed binary quest widget overrides",
+    "restored UI/settings visual package set",
+    "matched four character/stat packages to NoSteam reference bytes",
+    "validated all character package dependencies",
+    "validated remaining Steam package schemas",
+    "preserved technical state identifiers in original English",
+    "rebuilt containers and installer",
+    "verified archive and Drive readback"
+  ],
+  "pending_units": [
+    "quest journal test",
+    "character screen test",
+    "Lovense/settings test",
+    "map test",
+    "combat/death test"
+  ],
+  "validation_completed": [
+    "Steam packages: 56",
+    "binary quest overrides: 0",
+    "character reference byte match: 4/4",
+    "missing character dependencies: 0",
+    "other Steam schema checks: 52/52",
+    "Drive SHA-256 verified"
+  ],
+  "validation_pending": ["game runtime"],
+  "release": {
+    "name": "Carnal_Instinct_RU_DontLook_Installer_ExactCharacterCrashFix_2026-10-03_v8.zip",
+    "sha256": "d366a08f8a462dabd8f974639bb27e83c85f6e705124d053a2cc0bc4a10dd5ea",
+    "installer_sha256": "342e36e3dba4d6cbe0c54ad9de1e4bd9349fb67cbebaabba5f4c4cc8905707c8",
+    "drive_folder_id": "1j5INEDsY7wIM_Q1VStI3cTawIMP4mzSy",
+    "drive_file_id": "1mMvz1NkZqnSROzR90--bAXK_XacMHni8"
+  },
+  "notes": [
+    "Four character/stat UI packages intentionally use the NoSteam visual reference.",
+    "Runtime confirmation is still required."
+  ]
 }
