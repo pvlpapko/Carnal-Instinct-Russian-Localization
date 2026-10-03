@@ -1,0 +1,44 @@
+{
+  "schema_version": "1.0",
+  "release": "Carnal_Instinct_RU_DontLook_Installer_QuestCrash_MapHover_ExactCharacter_2026-10-03_v9.zip",
+  "archive_sha256": "e5893b35b5993b88b3a1dcbd3b6ed9e4b0f6fe9e2a8c3cc8d850e275dda7569c",
+  "archive_bytes": 23829648,
+  "archive_entries": 162,
+  "zip_crc_test_passed": true,
+  "sha256sums_entries": 125,
+  "installer_sha256": "a97e7c612acf51a6cafd324122de5583136f9be591f93aab899b30b127ae0713",
+  "drive": {
+    "folder_id": "1Yb2sVQlVzbYDdnYDb6wCVqJ-3FLFpeEK",
+    "file_id": "1qGLh_xodQF3rdSnWxihj9uYudmSljuC4",
+    "readback_bytes": 23829648,
+    "readback_sha256_verified": true,
+    "readback_zip_crc_verified": true
+  },
+  "steam": {
+    "verified_game_version": "0.7.9.16321",
+    "verified_build": null,
+    "named_packages": 56,
+    "binary_quest_overrides": 0,
+    "map_hover_namespace_occurrences": 1292,
+    "exact_nosteam_character_packages": 4
+  },
+  "nosteam": {
+    "verified_build": "0.7.9.16232",
+    "named_packages": 71,
+    "map_hover_full_patch": true
+  },
+  "ai_safety": {
+    "technical_state_rows_restored": 144,
+    "forbidden_gameplay_overrides": 0,
+    "boss_ai_override_present": false
+  },
+  "checks": {
+    "iostore_blake3": true,
+    "ucas_coverage_exact": true,
+    "installer_payload_identity": true,
+    "go_test": true,
+    "go_vet": true,
+    "windows_x64_crossbuild": true
+  },
+  "runtime_tested": false
+}
