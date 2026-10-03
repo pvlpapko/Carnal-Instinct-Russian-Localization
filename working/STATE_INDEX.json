@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "updated_at": "2026-10-04T00:36:00+03:00",
+  "updated_at": "2026-10-04T00:49:00+03:00",
   "active_tasks": [
     {
       "edition": "Steam",
@@ -78,7 +78,13 @@
       "edition": "Steam",
       "task": "neutral_widget_trampoline_v12",
       "state_path": "working/steam/current/neutral_widget_trampoline_v12/AUDIT_STATE.json",
-      "status": "v12_uploaded_static_validation_runtime_pending"
+      "status": "runtime_failed_on_marker_hover"
+    },
+    {
+      "edition": "Steam",
+      "task": "map_data_ftext_v13",
+      "state_path": "working/steam/current/map_data_ftext_v13/AUDIT_STATE.json",
+      "status": "in_progress"
     }
   ],
   "latest_release": {
@@ -94,6 +100,6 @@
     "steam_verified_game_version": "0.7.9.16321",
     "steam_verified_build": null,
     "nosteam_baseline_build": "0.7.9.16232",
-    "runtime_validation": "pending"
+    "runtime_validation": "Steam failed on first map marker hover: access violation writing 0x0"
   }
 }
