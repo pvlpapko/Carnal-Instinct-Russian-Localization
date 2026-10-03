@@ -1,0 +1,42 @@
+{
+  "schema_version": "1.0",
+  "edition": "Steam",
+  "task": "full_override_audit_after_source_update",
+  "status": "in_progress",
+  "source_state_id": "pending_reindex_2026-10-03_source_changed_after_2026-10-03T12:37:21Z",
+  "verified_game_version": null,
+  "verified_build": null,
+  "current_phase": "source_identity_and_reindex",
+  "last_completed_unit": "task_initialized",
+  "next_unit": "verify_current_source_version_and_rebuild_source_index",
+  "completed_units": [
+    "task_initialized"
+  ],
+  "pending_units": [
+    "verify_current Steam source version/build",
+    "rebuild CI_SOURCE_INDEX.json and CI_SOURCE_TREE.txt",
+    "compare all 151 NoSteam override packages against current Steam originals",
+    "classify Steam-required/obsolete/incompatible overrides",
+    "audit localization differences and new English strings",
+    "rebuild Steam FULL only from verified current source",
+    "validate IoStore/package schemas/references",
+    "update installer payload and metadata",
+    "final archive/hash/readback validation",
+    "in-game validation"
+  ],
+  "source_files_used": [
+    "CI_SOURCE_INDEX.json (stale snapshot detected)",
+    "current Google Drive source tree"
+  ],
+  "working_files": [
+    "working/steam/current/full_override_audit/AUDIT_STATE.json"
+  ],
+  "validation_completed": [],
+  "validation_pending": [
+    "all"
+  ],
+  "notes": [
+    "Current source files on Google Drive changed after the last CI_SOURCE_INDEX crawl; old Steam 0.7.9.16315 cooked overrides are invalidated pending audit.",
+    "User recalls current Steam version may be 0.7.9.16321; must verify from source evidence, not assume."
+  ]
+}
