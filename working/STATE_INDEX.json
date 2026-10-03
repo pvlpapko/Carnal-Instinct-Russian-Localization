@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "updated_at": "2026-10-03T17:52:00+03:00",
+  "updated_at": "2026-10-03T19:09:00+03:00",
   "active_tasks": [
     {
       "edition": "Steam",
@@ -18,6 +18,18 @@
       "edition": "Steam",
       "task": "full_override_audit_after_source_update",
       "state_path": "working/steam/current/full_override_audit/AUDIT_STATE.json",
+      "status": "in_progress"
+    },
+    {
+      "edition": "Steam",
+      "task": "animation_isolation_fix",
+      "state_path": "working/steam/current/animation_isolation_fix/AUDIT_STATE.json",
+      "status": "in_progress"
+    },
+    {
+      "edition": "NoSteam",
+      "task": "animation_isolation_fix",
+      "state_path": "working/nosteam/0.7.9.16232/animation_isolation_fix/AUDIT_STATE.json",
       "status": "in_progress"
     }
   ],
