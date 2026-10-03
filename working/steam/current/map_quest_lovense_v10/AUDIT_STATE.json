@@ -2,13 +2,13 @@
   "schema_version": "1.0",
   "edition": "Steam",
   "task": "map_quest_lovense_v10",
-  "status": "in_progress",
+  "status": "release_uploaded_static_validation_runtime_pending",
   "source_state_id": "steam_current_2026-10-03_16321_asset_verified_index_stale",
   "verified_game_version": "0.7.9.16321",
   "verified_build": null,
-  "current_phase": "containers_built_validated_pre_installer",
-  "last_completed_unit": "rebuild_and_validate_steam_iostore",
-  "next_unit": "rebuild_installer_archive_upload",
+  "current_phase": "v10_uploaded_static_validation_complete",
+  "last_completed_unit": "drive_readback_sha256_validation",
+  "next_unit": "user_runtime_validation",
   "completed_units": [
     "confirmed v9 quest tab opens without crash",
     "confirmed map hover remains English on Steam and NoSteam",
@@ -25,13 +25,18 @@
     "rebuilt Steam_current IoStore: 58 named packages / 59 chunks",
     "validated all chunk BLAKE3 hashes and exact UCAS physical coverage",
     "confirmed four exact NoSteam character layout packages retained",
-    "confirmed forbidden gameplay override hits = 0"
+    "confirmed forbidden gameplay override hits = 0",
+    "rebuilt installer; go test PASS; go vet -unsafeptr=false PASS; Windows x64 build PASS",
+    "built ZIP and verified CRC plus 140 internal SHA-256 entries",
+    "uploaded v10 to CI GPT/Releases and verified Drive readback SHA-256"
   ],
   "pending_units": [
-    "restore full translated WB_WorldMapPopup to NoSteam",
-    "rebuild installer and archive",
-    "upload/readback/hash validation",
-    "runtime validation"
+    "runtime: verify all map hover labels across marker types/discovered/undiscovered",
+    "runtime: verify quest tracked label position and quest-tab stability",
+    "runtime: verify Lovense bottom buttons no longer overlap",
+    "runtime: verify exact NoSteam character layout in Steam",
+    "runtime: combat/AI/death smoke test",
+    "global CI_SOURCE_INDEX refresh for current 0.7.9.16321 upload"
   ],
   "source_files_used": [
     "current Steam 0.7.9.16321 WB_WorldMapPopup/WB_QuestName/WB_T3_Lovense from Drive",
@@ -53,17 +58,36 @@
     "Steam popup switches 884/884",
     "QuestName only changed export 33 OverlaySlot_4; all function scripts current-source identical",
     "Lovense runtime package is exact current 0.7.9.16321 source",
-    "Steam IoStore BLAKE3 PASS; UCAS coverage exact"
+    "Steam IoStore BLAKE3 PASS; UCAS coverage exact",
+    "map corpus: Steam 887 rows / 884 unique / 886 translated; only ??? intentionally unchanged; locres exact mismatches 0",
+    "Steam map popup switches 884/884; current schema; only ExecuteUbergraph changed",
+    "installer payload byte identity PASS",
+    "ZIP CRC PASS; internal SHA256SUMS 140/140 PASS",
+    "Drive readback SHA-256 884895067a3bbb2d3fface05847b50b060ed272cf7d6ce9c9e93c27c37dfc23a"
   ],
   "validation_pending": [
-    "quest layout validation",
-    "container validation",
-    "installer validation",
-    "runtime validation"
+    "game runtime validation",
+    "global current-source reindex"
   ],
   "notes": [
-    "Map translation corpus already contains Russian values for discovered, quest, custom and Undiscovered labels; runtime routing was the regression.",
-    "AI/combat/state technical English restorations from v6/v9 must be preserved.",
-    "Exact NoSteam character layout remains the target for Steam."
-  ]
+    "Steam quest crash mitigation is preserved: old translated quest scripts remain excluded. The only quest binary override is current 0.7.9.16321 WB_QuestName with geometry-only OverlaySlot_4 edit; all functions/bytecode are source-identical.",
+    "Map regression root cause was display-boundary routing: v9 patched w_03_map_icon but scalable-map hover is rendered by WB_WorldMapPopup.",
+    "Exact NoSteam character appearance intentionally retains four cross-build UI packages; runtime compatibility remains to be proven.",
+    "Exact Steam BuildID remains unknown because EXE/appmanifest/Build.version are absent."
+  ],
+  "release": {
+    "name": "Carnal_Instinct_RU_DontLook_Installer_MapFull_QuestLayout_Lovense_2026-10-03_v10.zip",
+    "sha256": "884895067a3bbb2d3fface05847b50b060ed272cf7d6ce9c9e93c27c37dfc23a",
+    "archive_bytes": 24703582,
+    "installer_sha256": "91fb7d6bc24bee7707b87ae7f9325e501dc232480df12dc90a9bd62759fe1ece",
+    "installer_bytes": 20246016,
+    "drive_folder_id": "18L4fccF20V6QKDNVFxB1CoxQQjkT_VFb",
+    "drive_file_id": "1xo1zut2dAepHiatGcdJptdWxPoc-Zk4d",
+    "drive_readback_sha256_verified": true,
+    "steam_payload_id": "Steam_current",
+    "steam_verified_game_version": "0.7.9.16321",
+    "steam_verified_build": null,
+    "nosteam_baseline_build": "0.7.9.16232",
+    "runtime_validation": "pending"
+  }
 }
