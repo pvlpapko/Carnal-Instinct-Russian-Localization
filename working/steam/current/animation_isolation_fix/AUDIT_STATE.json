@@ -6,18 +6,22 @@
   "source_state_id": "steam_current_2026-10-03_16321_asset_verified_index_stale",
   "verified_game_version": "0.7.9.16321",
   "verified_build": null,
-  "current_phase": "identify_animation_affecting_overrides",
-  "last_completed_unit": "task_initialized",
-  "next_unit": "audit_latest_release_override_paths_for_combat_animation_ai",
+  "current_phase": "iostore_ui_only_rebuild_and_current_source_revalidation",
+  "last_completed_unit": "restore_126_ai_combat_locomotion_technical_ftext_and_rebuild_pak_v3",
+  "next_unit": "rebuild_ui_only_iostore_and_revalidate_retained_packages_against_current_steam",
   "completed_units": [
-    "task_initialized"
+    "task_initialized",
+    "audited latest release override paths for combat/animation/AI impact",
+    "identified gameplay-coupled FText enum/state translations",
+    "restored 126 technical AI/combat/locomotion FText entries to exact English source strings",
+    "validated optimized CityHash64 UTF16 locres structure, entry indices and LUT refcounts",
+    "reproduced original UE Pak v3 byte-for-byte and rebuilt fixed localization pak",
+    "parsed existing IoStore UTOC/UCAS and validated every existing chunk BLAKE3 hash"
   ],
   "pending_units": [
-    "audit latest release override paths for combat/animation/AI impact",
-    "compare offending override packages with current Steam originals",
-    "remove or replace all nonessential combat/animation/AI-affecting overrides",
-    "rebuild Steam FULL payload",
-    "validate package/container integrity",
+    "revalidate retained UI packages against current Steam 0.7.9.16321 source",
+    "rebuild minimal Steam UI-only IoStore payload",
+    "validate rebuilt package/container integrity",
     "rebuild installer/archive",
     "Drive readback validation",
     "in-game validation"
@@ -25,20 +29,37 @@
   "source_files_used": [
     "CI_SOURCE_INDEX.json",
     "working/STATE_INDEX.json",
-    "steam/current/BUILD_STATE.json"
+    "steam/current/BUILD_STATE.json",
+    "Carnal_Instinct_RU_DontLook_Installer_UIQuestMap_2026-10-03_v4.zip/Data/Steam_0.7.9.16315/Game.locres",
+    "Carnal_Instinct_RU_DontLook_Installer_UIQuestMap_2026-10-03_v4/Data/Steam_0.7.9.16315/translation.tsv",
+    "Carnal_Instinct_RU_DontLook_Installer_UIQuestMap_2026-10-03_v4/Files/Steam_0.7.9.16315/pakchunk1015-Windows_P.pak",
+    "Carnal_Instinct_RU_DontLook_Installer_UIQuestMap_2026-10-03_v4/Files/Steam_0.7.9.16315/pakchunk1015-Windows_P.utoc",
+    "Carnal_Instinct_RU_DontLook_Installer_UIQuestMap_2026-10-03_v4/Files/Steam_0.7.9.16315/pakchunk1015-Windows_P.ucas"
   ],
   "working_files": [
-    "working/steam/current/animation_isolation_fix/AUDIT_STATE.json"
+    "working/steam/current/animation_isolation_fix/AUDIT_STATE.json",
+    "TECHNICAL_KEY_RESTORE.json (126 restored keys; local working output)",
+    "Game.locres fixed local output sha256 252ec161af7a674041b36355fa99384ad1ca92f6fd70a05c3879ac853146f5e0",
+    "pakchunk1015-Windows_P.pak fixed local output sha256 feeb659a2961ca4d990c70e58a098c5b2afec5675bc4ef882f67f174542608e4"
   ],
   "validation_completed": [
-    "task state initialized"
+    "126 selected technical keys restored and post-parse values match SourceString",
+    "locres full parse/refcount validation passed",
+    "original Steam Pak v3 exact byte-for-byte reproduction passed",
+    "fixed Steam Pak index/SHA1 validation passed",
+    "existing Steam IoStore: 35 chunks, 34 named files, all chunk BLAKE3 hashes passed, UCAS physical coverage exact"
   ],
   "validation_pending": [
-    "all package/container/runtime validation"
+    "current 0.7.9.16321 per-package Steam UI compatibility",
+    "rebuilt minimal IoStore validation",
+    "installer/archive/readback validation",
+    "in-game validation"
   ],
   "notes": [
     "Goal: localization must not override gameplay combat, AI, death or animation behavior.",
+    "126 technical keys were restored; E_StatType and user-facing enemy/tutorial strings intentionally remain translated.",
     "Current Steam source version evidence is 0.7.9.16321; exact Steam BuildID remains unknown.",
-    "Do not reuse invalidated 0.7.9.16315 cooked overrides without per-package validation."
+    "Old 0.7.9.16315 cooked UI overrides are not considered current-compatible until per-package revalidation.",
+    "Static fixes are not an in-game confirmation of the reported freeze/death-animation symptom."
   ]
 }
