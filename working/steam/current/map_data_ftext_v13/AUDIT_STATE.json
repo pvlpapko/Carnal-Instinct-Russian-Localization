@@ -6,9 +6,9 @@
   "source_state_id": "steam_current_2026-10-03_16321_asset_verified_index_stale",
   "verified_game_version": "0.7.9.16321",
   "verified_build": null,
-  "current_phase": "data_ftext_patch_validated_pre_container",
-  "last_completed_unit": "patch_103_current_map_display_assets",
-  "next_unit": "rebuild_v13_iostore",
+  "current_phase": "steam_container_validated_pre_installer",
+  "last_completed_unit": "rebuild_and_validate_v13_steam_iostore",
+  "next_unit": "assemble_v13_installer_archive",
   "completed_units": [
     "confirmed v12 Steam opens Map successfully",
     "confirmed first marker hover crashes with EXCEPTION_ACCESS_VIOLATION writing 0x0",
@@ -22,16 +22,22 @@
     "patched 247 translation rows / 281 exact cooked FText occurrences",
     "verified every patched occurrence as exact Key+Russian fallback after rebuild",
     "verified all unmodified exports byte-identical and export object references/flags unchanged",
-    "kept all Steam map widget bytecode unmodified/game-owned"
+    "kept all Steam map widget bytecode unmodified/game-owned",
+    "rebuilt Steam_current IoStore with 103 data-only map display packages",
+    "Steam_current now has 160 named packages / 161 chunks",
+    "validated all IoStore chunk BLAKE3 hashes and exact UCAS physical coverage",
+    "validated all 103 map data packages read back byte-identical to patched current-source assets",
+    "verified Steam WB_WorldMapPopup and Neutral_Widget overrides are both absent",
+    "verified current-source WB_QuestName layout-only patch, current Lovense and four character target packages retained",
+    "verified forbidden gameplay override hits = 0"
   ],
   "pending_units": [
-    "rebuild Steam_current IoStore with 103 current data-only map display assets",
-    "validate IoStore BLAKE3/UCAS/path/package structure",
-    "verify Neutral_Widget and WB_WorldMapPopup overrides absent",
-    "preserve quest layout/current Lovense/exact character target/AI safety",
-    "rebuild installer/archive",
+    "assemble v13 release using unchanged safe NoSteam 0.7.9.16232 payload",
+    "rebuild installer",
+    "ZIP CRC/SHA256 validation",
     "Drive upload/readback/hash validation",
-    "runtime map open/hover validation"
+    "runtime Steam map open/hover validation",
+    "runtime quest/Lovense/character/combat smoke tests"
   ],
   "source_files_used": [
     "CrashContext(20261003-214145).runtime-xml",
@@ -54,12 +60,16 @@
     "247 rows / 281 exact Key+English occurrences -> Key+Russian fallback",
     "post-patch old exact patterns remaining = 0 for selected rows",
     "all unmodified exports byte-identical; package/export identities preserved",
-    "patch report: /mnt/data/v13work/MAP_DATA_FTEXT_PATCH_REPORT.json"
+    "patch report: /mnt/data/v13work/MAP_DATA_FTEXT_PATCH_REPORT.json",
+    "Steam IoStore paths 160; bad_hashes 0; block_cover_exact true",
+    "Steam UTOC SHA-256 14451ee01a0374eb5c70933809cea45a9390dae3d7988b57aa92b531011138bf",
+    "Steam UCAS SHA-256 e5b60fdcf33076dc963ea2c68b707a8d32c9e7fcb74ed03522c20a4ebc9aec0c",
+    "Steam map widget bytecode overrides = 0"
   ],
   "validation_pending": [
-    "asset patch audit",
-    "IoStore validation",
-    "runtime validation"
+    "installer/archive validation",
+    "Drive readback",
+    "game runtime validation"
   ],
   "notes": [
     "v13 abandons Steam map Kismet/VM translation entirely.",
