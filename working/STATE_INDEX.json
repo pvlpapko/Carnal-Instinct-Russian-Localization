@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "updated_at": "2026-10-03T23:58:00+03:00",
+  "updated_at": "2026-10-04T00:14:00+03:00",
   "active_tasks": [
     {
       "edition": "Steam",
@@ -72,22 +72,22 @@
       "edition": "Steam",
       "task": "map_popup_bad_import_v11",
       "state_path": "working/steam/current/map_popup_bad_import_v11/AUDIT_STATE.json",
-      "status": "in_progress"
+      "status": "v11_uploaded_static_validation_runtime_pending"
     }
   ],
   "latest_release": {
-    "name": "Carnal_Instinct_RU_DontLook_Installer_MapFull_QuestLayout_Lovense_2026-10-03_v10.zip",
-    "sha256": "884895067a3bbb2d3fface05847b50b060ed272cf7d6ce9c9e93c27c37dfc23a",
-    "archive_bytes": 24703582,
-    "installer_sha256": "91fb7d6bc24bee7707b87ae7f9325e501dc232480df12dc90a9bd62759fe1ece",
+    "name": "Carnal_Instinct_RU_DontLook_Installer_MapCurrentBoundary_2026-10-03_v11.zip",
+    "sha256": "87363320b4e1625d1d0853217570bc52162fa4ccbea24dd71a363cc20c48f653",
+    "archive_bytes": 24724358,
+    "installer_sha256": "d21e36eec029d3fc4cc8f2febb92e1424a84980cee3eabf7a7042e2b38013263",
     "installer_bytes": 20246016,
-    "drive_folder_id": "18L4fccF20V6QKDNVFxB1CoxQQjkT_VFb",
-    "drive_file_id": "1xo1zut2dAepHiatGcdJptdWxPoc-Zk4d",
+    "drive_folder_id": "1Ryb1vR3MNHXQShRKEszQer1aixyr57T0",
+    "drive_file_id": "1TYlUrb1p_VJlRF7jYDSkI5GoIeQO3azw",
     "drive_readback_sha256_verified": true,
     "steam_payload_id": "Steam_current",
     "steam_verified_game_version": "0.7.9.16321",
     "steam_verified_build": null,
     "nosteam_baseline_build": "0.7.9.16232",
-    "runtime_validation": "Steam failed: WB_WorldMapPopup Bad import index 58/57"
+    "runtime_validation": "pending"
   }
 }
