@@ -1,0 +1,49 @@
+{
+  "schema_version": "1.0",
+  "edition": "NoSteam",
+  "task": "character_quest_map_fix",
+  "status": "release_ready_static_validation",
+  "source_state_id": "CI_SOURCE_INDEX_2026-10-03T12:48:51Z_91b95dbc38b2",
+  "verified_game_version": "0.7.9",
+  "verified_build": "0.7.9.16232",
+  "current_phase": "final_validation",
+  "last_completed_unit": "release_archive_validation",
+  "next_unit": "in_game_validation",
+  "completed_units": [
+    "map_hover_extension",
+    "iostore_rebuild",
+    "container_validation",
+    "installer_rebuild",
+    "installer_tests",
+    "release_archive_crc_sha256_validation"
+  ],
+  "pending_units": [
+    "in_game map hover validation"
+  ],
+  "source_files_used": [
+    "CI_SOURCE_INDEX.json",
+    "NoSteam 0.7.9.16232 baseline payload",
+    "NoSteam w_03_map_icon source"
+  ],
+  "working_files": [
+    "Files/NoSteam_0.7.9.16232",
+    "Developer/MapFix",
+    "Installer/CarnalInstinct_RU_Setup.exe"
+  ],
+  "validation_completed": [
+    "151/151 named NoSteam container packages parsed as UE5.5 Zen packages",
+    "all IoStore chunk BLAKE3-20 metadata verified",
+    "map hover override extraction byte-identical to Developer reference",
+    "map hover FText exact Namespace+Key+English lookup: zero missing",
+    "go test passed",
+    "go vet -unsafeptr=false passed",
+    "Windows x64 cross-build passed"
+  ],
+  "validation_pending": [
+    "game runtime"
+  ],
+  "release_archive_sha256": "c60079a9d3f91124bc966911c0246e7e72cd456cb30ea4e9dfc73d441782ed19",
+  "notes": [
+    "NoSteam 0.7.9.16232 remains a separate payload from Steam."
+  ]
+}
