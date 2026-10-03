@@ -1,0 +1,68 @@
+{
+  "schema_version": "1.0",
+  "generated_at": "2026-10-03",
+  "edition": "Steam",
+  "verified_game_version": "0.7.9.16321",
+  "verified_build": null,
+  "version_evidence": {
+    "asset": "Content/RPG_InventorySystem/Blueprints/SaveSystem/RPGInventory_GameInstance.uasset",
+    "byte_offset": 313692,
+    "asset_bytes": 313816,
+    "sha256": "756887fd7ef918293f74de69e5bec51f7a54c6dc43408a2e24599cfd9382e898"
+  },
+  "source_index_status": "stale_for_build-dependent-work",
+  "global_source_index_generated_at": "2026-10-03T12:48:51.032584Z",
+  "audit_scope": {
+    "nosteam_override_packages_checked": 151,
+    "previous_steam_v4_packages_checked": 34,
+    "unique_target_packages_if_full_parity_plus_steam_specific": 157,
+    "current_live_drive_files_downloaded_and_hashed": 157
+  },
+  "nosteam_151_vs_current_steam": {
+    "byte_identical": 10,
+    "export_names_order_equal": 140,
+    "omitted_from_old_steam_v4": 123,
+    "omitted_purpose_evidence_counts": {
+      "embedded_russian_display_patch": 21,
+      "technical_key_or_hash_patch": 11,
+      "binary_identity_or_display_patch": 91
+    },
+    "omitted_structural_counts": {
+      "exact_header_schema_static_compatible": 98,
+      "same_export_schema_name_map_changed": 21,
+      "schema_or_export_mapping_changed": 4
+    },
+    "conclusion": "All 123 packages omitted from old Steam v4 carry localization-specific changes; none are proven redundant."
+  },
+  "previous_steam_v4_vs_current_16321": {
+    "packages_checked": 34,
+    "byte_identical_to_current_source": 23,
+    "changed_need_revalidation_or_repatch": 11,
+    "changed_paths": [
+      "Content/DLG_Tree/dmap_system/widgets/w_03_map_icon.uasset",
+      "Content/RPG_InventorySystem/UI/Character/WB_CharacterScreen.uasset",
+      "Content/RPG_InventorySystem/UI/PlayerInventory/WB_Stats_Full.uasset",
+      "Content/RPG_InventorySystem/UI/PlayerInventory/WB_Stats_Main.uasset",
+      "Content/RPG_InventorySystem/UI/PlayerInventory/WB_Stats_Main_Slot.uasset",
+      "Content/RPG_InventorySystem/UI/Quests/WB_QuestName.uasset",
+      "Content/RPG_InventorySystem/UI/Quests/WB_QuestObjectiveDescription.uasset",
+      "Content/RPG_InventorySystem/UI/Quests/WB_QuestObjectiveName.uasset",
+      "Content/RPG_InventorySystem/UI/Quests/WB_QuestType.uasset",
+      "Content/RPG_InventorySystem/UI/WorldMap/WB_MapLegend_Item.uasset",
+      "Content/RPG_InventorySystem/UI/WorldMap/WB_WorldMapPopup.uasset"
+    ]
+  },
+  "game_locres": {
+    "current_sha256": "6a5a4bd1e795b7e47f96a723cf5e0a2bd74434cc8f557f0085c7c5f312c81d71",
+    "v4_steam_sha256": "6a5a4bd1e795b7e47f96a723cf5e0a2bd74434cc8f557f0085c7c5f312c81d71",
+    "byte_identical_to_v4_steam": true
+  },
+  "required_next_actions": [
+    "Retain/reuse the 98 omitted packages whose normalized Zen headers, name maps, export order and export reference fields match current Steam 0.7.9.16321.",
+    "Port the 21 omitted packages with unchanged export schema but changed name maps onto current Steam packages instead of copying NoSteam wholesale.",
+    "Manually re-port 4 omitted packages with changed schema/export mappings: bp_quest_actor, WB_CheatMenuOption_Quests, WB_FormScreen, WB_HUD.",
+    "Rebuild/revalidate the 11 previously-Steam-patched packages changed in current 0.7.9.16321.",
+    "Build a Steam FULL set targeting 157 binary packages only after current-source porting validation."
+  ],
+  "runtime_tested": false
+}
