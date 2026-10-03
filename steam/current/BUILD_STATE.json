@@ -21,18 +21,18 @@
   "source_index_sha256": "91b95dbc38b2f4ffbd3fbea35bb1e4906cec7ddb588be87a15cec17048282274",
   "source_tree_sha256": "f12967fe7bd1c3729caa285519b2acc0059959214bf1f453aefe6437b8fbfef3",
   "source_stock_status": "contains localization modifications; not a clean stock game extraction",
-  "binary_compatibility": "v9 runtime contains only audited UI/display overrides; all quest widget binary overrides removed; runtime validation pending",
-  "ui_override_compatibility": "map hover patch structurally validated on current 0.7.9.16321; exact NoSteam character four-package cross-build override runtime validation pending",
-  "last_source_check_at": "2026-10-03T20:00:00Z",
+  "binary_compatibility": "v10 runtime contains audited UI/display overrides only; gameplay AI/NPC/item/quest-logic overrides excluded; runtime validation pending",
+  "ui_override_compatibility": "v10 map popup is ported onto current 0.7.9.16321 package schema; Lovense uses exact current source; WB_QuestName is current source with layout-only edit; exact NoSteam character four-package cross-build reference remains runtime-pending",
+  "last_source_check_at": "2026-10-03T20:44:00Z",
   "evidence": [
     "current Google Drive RPGInventory_GameInstance.uasset raw bytes",
     "embedded ASCII version 0.7.9.16321 at byte offset 313692",
     "source tree still has no EXE/appmanifest/Build.version/stock IoStore containers"
   ],
   "notes": [
-    "Current source version remains verified as 0.7.9.16321; exact Steam BuildID unavailable.",
-    "v9 does not reuse old 0.7.9.16315 quest widgets or WorldMapPopup.",
-    "Full current CI_SOURCE_INDEX refresh is still pending; direct current Drive bytes were used for all build-dependent v9 target checks.",
-    "Exact NoSteam character layout is intentionally cross-build and must be runtime tested."
+    "Current embedded game version remains verified as 0.7.9.16321; exact Steam BuildID unavailable.",
+    "v10 fixes map hover at the actual WB_WorldMapPopup display boundary with 884/884 unique map labels.",
+    "Old translated Steam quest script overrides remain excluded to preserve v9 crash isolation.",
+    "Global CI_SOURCE_INDEX refresh remains pending; direct current Drive bytes were used for v10 build-dependent targets."
   ]
 }
