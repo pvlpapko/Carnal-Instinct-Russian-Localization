@@ -21,17 +21,18 @@
   "source_index_sha256": "91b95dbc38b2f4ffbd3fbea35bb1e4906cec7ddb588be87a15cec17048282274",
   "source_tree_sha256": "f12967fe7bd1c3729caa285519b2acc0059959214bf1f453aefe6437b8fbfef3",
   "source_stock_status": "contains localization modifications; not a clean stock game extraction",
-  "binary_compatibility": "previous 0.7.9.16315 cooked overrides invalidated pending full audit",
-  "ui_override_compatibility": "previous 0.7.9.16315 cooked overrides invalidated pending full audit",
-  "last_source_check_at": "2026-10-03T14:18:00Z",
+  "binary_compatibility": "v9 runtime contains only audited UI/display overrides; all quest widget binary overrides removed; runtime validation pending",
+  "ui_override_compatibility": "map hover patch structurally validated on current 0.7.9.16321; exact NoSteam character four-package cross-build override runtime validation pending",
+  "last_source_check_at": "2026-10-03T20:00:00Z",
   "evidence": [
     "current Google Drive RPGInventory_GameInstance.uasset raw bytes",
     "embedded ASCII version 0.7.9.16321 at byte offset 313692",
     "source tree still has no EXE/appmanifest/Build.version/stock IoStore containers"
   ],
   "notes": [
-    "Current source differs from the CI_SOURCE_INDEX snapshot generated at 2026-10-03T12:48:51Z; that index is stale for build-dependent work.",
-    "Exact Steam BuildID remains unknown because executable/appmanifest/Build.version are absent.",
-    "Do not reuse 0.7.9.16315 cooked overrides until revalidated against current source."
+    "Current source version remains verified as 0.7.9.16321; exact Steam BuildID unavailable.",
+    "v9 does not reuse old 0.7.9.16315 quest widgets or WorldMapPopup.",
+    "Full current CI_SOURCE_INDEX refresh is still pending; direct current Drive bytes were used for all build-dependent v9 target checks.",
+    "Exact NoSteam character layout is intentionally cross-build and must be runtime tested."
   ]
 }
