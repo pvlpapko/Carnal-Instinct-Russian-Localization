@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "updated_at": "2026-10-04T00:28:00+03:00",
+  "updated_at": "2026-10-04T00:36:00+03:00",
   "active_tasks": [
     {
       "edition": "Steam",
@@ -78,22 +78,22 @@
       "edition": "Steam",
       "task": "neutral_widget_trampoline_v12",
       "state_path": "working/steam/current/neutral_widget_trampoline_v12/AUDIT_STATE.json",
-      "status": "in_progress"
+      "status": "v12_uploaded_static_validation_runtime_pending"
     }
   ],
   "latest_release": {
-    "name": "Carnal_Instinct_RU_DontLook_Installer_MapCurrentBoundary_2026-10-03_v11.zip",
-    "sha256": "87363320b4e1625d1d0853217570bc52162fa4ccbea24dd71a363cc20c48f653",
-    "archive_bytes": 24724358,
-    "installer_sha256": "d21e36eec029d3fc4cc8f2febb92e1424a84980cee3eabf7a7042e2b38013263",
+    "name": "Carnal_Instinct_RU_DontLook_Installer_MapTrampoline_2026-10-04_v12.zip",
+    "sha256": "a8bd52dc6437725888f5c5bd38933c5703f3b387455015e753b01418e8c3e0bf",
+    "archive_bytes": 25017732,
+    "installer_sha256": "3453b019c76d793375f1aedbf3b08684a73cd82412fb73f46679c4b8eb22bc24",
     "installer_bytes": 20246016,
-    "drive_folder_id": "1Ryb1vR3MNHXQShRKEszQer1aixyr57T0",
-    "drive_file_id": "1TYlUrb1p_VJlRF7jYDSkI5GoIeQO3azw",
+    "drive_folder_id": "1DVIGnV-LE0G6JPGUcwx_ftcwkdNSPtuG",
+    "drive_file_id": "1ZvQN9wc5lAbUqDv5cCeRA7BxseKNEJM_",
     "drive_readback_sha256_verified": true,
     "steam_payload_id": "Steam_current",
     "steam_verified_game_version": "0.7.9.16321",
     "steam_verified_build": null,
     "nosteam_baseline_build": "0.7.9.16232",
-    "runtime_validation": "Steam failed on Map: Neutral_Widget undefined opcode 0x74"
+    "runtime_validation": "pending"
   }
 }
