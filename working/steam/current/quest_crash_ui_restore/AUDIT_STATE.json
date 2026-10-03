@@ -1,0 +1,57 @@
+{
+  "schema_version": "1.0",
+  "edition": "Steam",
+  "task": "quest_crash_ui_restore",
+  "status": "release_uploaded_static_validation_runtime_pending",
+  "source_state_id": "steam_current_0.7.9.16321_target_files_live_verified_global_index_stale",
+  "verified_game_version": "0.7.9.16321",
+  "verified_build": null,
+  "current_phase": "runtime_validation",
+  "last_completed_unit": "v7_upload_drive_readback_validation",
+  "next_unit": "user_in_game_quest_ui_combat_validation",
+  "completed_units": [
+    "recorded v6 runtime crash when opening quest journal",
+    "removed all Steam binary /UI/Quests overrides",
+    "restored Steam Lovense and Character/Stats current-compatible visual patches",
+    "built 56-package Steam UI/display payload",
+    "validated 56/56 package/export/import schemas against current 0.7.9.16321",
+    "preserved 144 English technical AI/combat/locomotion/state FText rows",
+    "kept gameplay logic overrides absent",
+    "rebuilt IoStore and installer",
+    "validated ZIP checksums and Drive readback"
+  ],
+  "pending_units": [
+    "confirm quest journal opens without crash",
+    "confirm Lovense visual layout",
+    "confirm character/stat layout",
+    "confirm map hover",
+    "confirm combat/death/AI cycle",
+    "final runtime sign-off"
+  ],
+  "validation_completed": [
+    "Steam packages 56",
+    "Steam /UI/Quests binary overrides 0",
+    "schema checks 56/56 PASS",
+    "IoStore BLAKE3 and UCAS coverage PASS",
+    "forbidden gameplay overrides 0",
+    "go test/vet/Windows x64 build PASS",
+    "Drive readback SHA-256 11aef810697cfeaad0ee81293cf16346a7d4abbf65f2aae845dbffe253b4ca8b"
+  ],
+  "validation_pending": [
+    "game runtime validation"
+  ],
+  "release": {
+    "name": "Carnal_Instinct_RU_DontLook_Installer_UIRestoreCrashFix_2026-10-03_v7.zip",
+    "sha256": "11aef810697cfeaad0ee81293cf16346a7d4abbf65f2aae845dbffe253b4ca8b",
+    "bytes": 21822955,
+    "installer_sha256": "95a5347a9b2ce3ab49befcd0ab7fc356c026ae0b72ee2b3fe67cb7c62264a472",
+    "drive_folder_id": "1ODfp_kJQkeclbPqZB8NDkGI_P6fzA70D",
+    "drive_file_id": "1NMtoX8f8zDzP7Mwf4TVxQ0cM3JZxFAjc",
+    "drive_readback_sha256_verified": true
+  },
+  "notes": [
+    "Do not reintroduce older injected quest widget binary switch patches.",
+    "Crash candidate is isolated but runtime confirmation is still required.",
+    "Global source index predates current Steam upload; v7 target files were fetched directly and schema-validated."
+  ]
+}
