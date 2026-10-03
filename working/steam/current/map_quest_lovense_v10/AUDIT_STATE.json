@@ -2,13 +2,13 @@
   "schema_version": "1.0",
   "edition": "Steam",
   "task": "map_quest_lovense_v10",
-  "status": "release_uploaded_static_validation_runtime_pending",
+  "status": "runtime_failed_invalid_steam_popup",
   "source_state_id": "steam_current_2026-10-03_16321_asset_verified_index_stale",
   "verified_game_version": "0.7.9.16321",
   "verified_build": null,
-  "current_phase": "v10_uploaded_static_validation_complete",
-  "last_completed_unit": "drive_readback_sha256_validation",
-  "next_unit": "user_runtime_validation",
+  "current_phase": "superseded_by_v11",
+  "last_completed_unit": "runtime_failure_bad_import_58_57",
+  "next_unit": "see working/steam/current/map_popup_bad_import_v11/AUDIT_STATE.json",
   "completed_units": [
     "confirmed v9 quest tab opens without crash",
     "confirmed map hover remains English on Steam and NoSteam",
@@ -66,14 +66,14 @@
     "Drive readback SHA-256 884895067a3bbb2d3fface05847b50b060ed272cf7d6ce9c9e93c27c37dfc23a"
   ],
   "validation_pending": [
-    "game runtime validation",
-    "global current-source reindex"
+    "superseded"
   ],
   "notes": [
     "Steam quest crash mitigation is preserved: old translated quest scripts remain excluded. The only quest binary override is current 0.7.9.16321 WB_QuestName with geometry-only OverlaySlot_4 edit; all functions/bytecode are source-identical.",
     "Map regression root cause was display-boundary routing: v9 patched w_03_map_icon but scalable-map hover is rendered by WB_WorldMapPopup.",
     "Exact NoSteam character appearance intentionally retains four cross-build UI packages; runtime compatibility remains to be proven.",
-    "Exact Steam BuildID remains unknown because EXE/appmanifest/Build.version are absent."
+    "Exact Steam BuildID remains unknown because EXE/appmanifest/Build.version are absent.",
+    "User runtime test proved v10 Steam invalid: WB_WorldMapPopup ExecuteUbergraph Bad import index 58/57 during AsyncLoading2."
   ],
   "release": {
     "name": "Carnal_Instinct_RU_DontLook_Installer_MapFull_QuestLayout_Lovense_2026-10-03_v10.zip",
