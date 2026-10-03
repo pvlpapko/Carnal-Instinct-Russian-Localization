@@ -2,13 +2,13 @@
   "schema_version": "1.0",
   "edition": "Steam",
   "task": "neutral_widget_trampoline_v12",
-  "status": "release_uploaded_static_validation_runtime_pending",
+  "status": "runtime_failed_on_marker_hover",
   "source_state_id": "steam_current_2026-10-03_16321_asset_verified_index_stale",
   "verified_game_version": "0.7.9.16321",
   "verified_build": null,
-  "current_phase": "v12_uploaded_static_validation_complete",
-  "last_completed_unit": "drive_readback_sha256_crc_validation",
-  "next_unit": "user_runtime_validation",
+  "current_phase": "superseded_by_v13",
+  "last_completed_unit": "runtime_hover_crash_access_violation_write_null",
+  "next_unit": "see working/steam/current/map_data_ftext_v13/AUDIT_STATE.json",
   "completed_units": [
     "confirmed v11 crashes only when opening Map",
     "parsed CrashContext(10): undefined opcode 0x74 at Neutral_Widget ExecuteUbergraph offset 1169",
@@ -71,7 +71,8 @@
   "notes": [
     "v11 Steam must not be used; it is runtime-invalid when the Map tab executes Neutral_Widget.",
     "v12 does not shift any original control-flow destination before the original EndOfScript; only fixed-size jump+NOP trampolines replace the two display assignments.",
-    "Steam WB_WorldMapPopup remains unmodified/current-game-owned."
+    "Steam WB_WorldMapPopup remains unmodified/current-game-owned.",
+    "User runtime test: Map opens, first marker hover crashes with EXCEPTION_ACCESS_VIOLATION writing address 0x0."
   ],
   "release": {
     "name": "Carnal_Instinct_RU_DontLook_Installer_MapTrampoline_2026-10-04_v12.zip",
