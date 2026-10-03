@@ -2,62 +2,67 @@
   "schema_version": "1.0",
   "edition": "NoSteam",
   "task": "animation_isolation_fix",
-  "status": "in_progress",
+  "status": "runtime_validation_pending",
   "source_state_id": "nosteam_0.7.9.16232_baseline",
   "verified_game_version": "0.7.9",
   "verified_build": "0.7.9.16232",
-  "current_phase": "iostore_ui_only_rebuild",
-  "last_completed_unit": "restore_126_ai_combat_locomotion_technical_ftext_and_rebuild_pak_v3",
-  "next_unit": "remove_gameplay_blueprints_and_rebuild_ui_only_iostore",
+  "current_phase": "release_candidate_uploaded_static_validation_complete",
+  "last_completed_unit": "build_upload_and_readback_v5_animation_isolation_release_candidate",
+  "next_unit": "in_game_runtime_validation_combat_ai_death_map_quests",
   "completed_units": [
     "task_initialized",
     "audited latest release override paths for combat/animation/AI impact",
-    "confirmed NoSteam binary payload overrides gameplay AI including BP_FindersKeepers_CrocodileAI_Boss",
-    "identified gameplay-coupled FText enum/state translations",
+    "confirmed old NoSteam binary payload overrode gameplay AI including BP_FindersKeepers_CrocodileAI_Boss",
     "restored 126 technical AI/combat/locomotion FText entries to exact English source strings",
-    "validated optimized CityHash64 UTF16 locres structure, entry indices and LUT refcounts",
     "reproduced original UE Pak v3 byte-for-byte and rebuilt fixed localization pak",
-    "parsed existing IoStore UTOC/UCAS and validated every existing chunk BLAKE3 hash"
+    "parsed existing IoStore and validated original chunk BLAKE3 hashes",
+    "removed 83 non-UI overrides including boss AI, NPC dialogue blueprints, quest conditions/actor/data, item blueprints and other non-widget packages",
+    "retained 68 display/UI widget packages only",
+    "rebuilt NoSteam IoStore: 69 chunks, 68 named packages, container header and all BLAKE3 hashes validated",
+    "rebuilt installer with isolated NoSteam 0.7.9.16232 payload",
+    "go test, go vet -unsafeptr=false and Windows x64 cross-build passed",
+    "built ZIP, CRC validated, uploaded to Drive Releases and verified readback SHA-256"
   ],
   "pending_units": [
-    "remove all nonessential gameplay/AI/combat cooked overrides and retain display-only UI subset",
-    "rebuild NoSteam UI-only IoStore payload",
-    "validate rebuilt package/container integrity",
-    "rebuild installer/archive",
-    "Drive readback validation",
-    "in-game validation"
+    "in-game combat/AI/death animation validation on NoSteam",
+    "UI/map/quest smoke test on NoSteam",
+    "final runtime sign-off"
   ],
   "source_files_used": [
     "CI_SOURCE_INDEX.json",
     "working/STATE_INDEX.json",
-    "Carnal_Instinct_RU_DontLook_Installer_UIQuestMap_2026-10-03_v4.zip/Data/NoSteam_0.7.9.16232/Game.locres",
-    "Carnal_Instinct_RU_DontLook_Installer_UIQuestMap_2026-10-03_v4/Data/NoSteam_0.7.9.16232/translation.tsv",
-    "Carnal_Instinct_RU_DontLook_Installer_UIQuestMap_2026-10-03_v4/Files/NoSteam_0.7.9.16232/pakchunk1015-Windows_P.pak",
-    "Carnal_Instinct_RU_DontLook_Installer_UIQuestMap_2026-10-03_v4/Files/NoSteam_0.7.9.16232/pakchunk1015-Windows_P.utoc",
-    "Carnal_Instinct_RU_DontLook_Installer_UIQuestMap_2026-10-03_v4/Files/NoSteam_0.7.9.16232/pakchunk1015-Windows_P.ucas"
+    "latest v4 NoSteam payload and reports"
   ],
   "working_files": [
     "working/nosteam/0.7.9.16232/animation_isolation_fix/AUDIT_STATE.json",
-    "TECHNICAL_KEY_RESTORE.json (126 restored keys; local working output)",
-    "Game.locres fixed local output sha256 ad2b15701733a45f7a6fe6eaecd732571b772c5ca97c100962de42ec4f785e36",
-    "pakchunk1015-Windows_P.pak fixed local output sha256 f07309924a24da59ab5176a2f5e7622298d8685d7ad3ada0ba5066a41163fc80"
+    "tools/animation_isolation_fix/ (reproducibility scripts; checkpointed separately)",
+    "Reports/NoSteam_TECHNICAL_KEY_RESTORE.json",
+    "Reports/NoSteam_IOSTORE_SAFE_UI_REPORT.json"
   ],
   "validation_completed": [
-    "126 selected technical keys restored and post-parse values match SourceString",
-    "locres full parse/refcount validation passed",
-    "original NoSteam Pak v3 exact byte-for-byte reproduction passed",
-    "fixed NoSteam Pak index/SHA1 validation passed",
-    "existing NoSteam IoStore: 152 chunks, 151 named files, all chunk BLAKE3 hashes passed, UCAS physical coverage exact"
+    "126 technical key restoration and locres parse/refcount validation",
+    "fixed Pak v3 index/data SHA1 validation",
+    "NoSteam IoStore: 69 chunks/68 named widget packages; all chunk BLAKE3 hashes passed and UCAS physical coverage exact",
+    "container header contains exactly 68 retained package IDs",
+    "BP_FindersKeepers_CrocodileAI_Boss and all non-widget old override paths absent from rebuilt payload",
+    "installer payload matches Files byte-for-byte",
+    "ZIP CRC test passed",
+    "Drive readback SHA-256 09b794bf5f69cf996c6f5ceff856afe81b95a667f5415d4def45b05146edb4b1"
   ],
   "validation_pending": [
-    "rebuilt minimal IoStore validation",
-    "installer/archive/readback validation",
-    "in-game validation"
+    "game runtime validation"
   ],
+  "release": {
+    "name": "Carnal_Instinct_RU_DontLook_AnimationIsolation_2026-10-03_v5.zip",
+    "sha256": "09b794bf5f69cf996c6f5ceff856afe81b95a667f5415d4def45b05146edb4b1",
+    "installer_sha256": "2fdf0fae6564d8050c9b887ceecc7b718370ba5ba106e7bad4469fe5790f0277",
+    "drive_folder_id": "1CBVQnIXReV-lepRotgz6a2Dz6nMiLT7S",
+    "drive_file_id": "1NO52YefCXArK6RvQznih2uSd8p8AhxV9",
+    "drive_readback_sha256_verified": true
+  },
   "notes": [
     "Goal: localization must not override gameplay combat, AI, death or animation behavior.",
-    "Current NoSteam v4 IoStore definitely contains gameplay AI BP_FindersKeepers_CrocodileAI_Boss and will be reduced.",
-    "126 technical keys were restored; E_StatType and user-facing enemy/tutorial strings intentionally remain translated.",
-    "Static fixes are not an in-game confirmation of the reported freeze/death-animation symptom."
+    "NoSteam 0.7.9.16232 remains a separate payload and is not mixed with Steam_current.",
+    "Static validation cannot prove the reported runtime freeze/death-animation symptom is gone until tested in game."
   ]
 }
