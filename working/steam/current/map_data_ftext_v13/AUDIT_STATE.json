@@ -2,13 +2,13 @@
   "schema_version": "1.0",
   "edition": "Steam",
   "task": "map_data_ftext_v13",
-  "status": "in_progress",
+  "status": "release_uploaded_static_validation_runtime_pending",
   "source_state_id": "steam_current_2026-10-03_16321_asset_verified_index_stale",
   "verified_game_version": "0.7.9.16321",
   "verified_build": null,
-  "current_phase": "steam_container_validated_pre_installer",
-  "last_completed_unit": "rebuild_and_validate_v13_steam_iostore",
-  "next_unit": "assemble_v13_installer_archive",
+  "current_phase": "v13_uploaded_static_validation_complete",
+  "last_completed_unit": "drive_readback_sha256_crc_validation",
+  "next_unit": "user_runtime_validation",
   "completed_units": [
     "confirmed v12 Steam opens Map successfully",
     "confirmed first marker hover crashes with EXCEPTION_ACCESS_VIOLATION writing 0x0",
@@ -29,15 +29,22 @@
     "validated all 103 map data packages read back byte-identical to patched current-source assets",
     "verified Steam WB_WorldMapPopup and Neutral_Widget overrides are both absent",
     "verified current-source WB_QuestName layout-only patch, current Lovense and four character target packages retained",
-    "verified forbidden gameplay override hits = 0"
+    "verified forbidden gameplay override hits = 0",
+    "assembled v13 release with Steam data-only map payload and unchanged matching NoSteam 0.7.9.16232 payload",
+    "rebuilt installer: go test PASS, go vet -unsafeptr=false PASS, Windows x64 cross-build PASS",
+    "verified installer staged payload byte-for-byte against release Files",
+    "built ZIP; CRC PASS; SHA256SUMS 261/261 verified",
+    "uploaded to CI GPT/Releases and verified Drive readback SHA-256 and ZIP CRC"
   ],
   "pending_units": [
-    "assemble v13 release using unchanged safe NoSteam 0.7.9.16232 payload",
-    "rebuild installer",
-    "ZIP CRC/SHA256 validation",
-    "Drive upload/readback/hash validation",
-    "runtime Steam map open/hover validation",
-    "runtime quest/Lovense/character/combat smoke tests"
+    "runtime Steam: open Map",
+    "runtime Steam: hover discovered/undiscovered/location/quest/custom markers",
+    "runtime Steam: quest tab and tracked badge layout",
+    "runtime Steam: Lovense buttons",
+    "runtime Steam: exact character layout",
+    "runtime Steam: combat/AI/death smoke test",
+    "runtime NoSteam/newer-NoSteam map hover smoke test",
+    "global CI_SOURCE_INDEX refresh"
   ],
   "source_files_used": [
     "CrashContext(20261003-214145).runtime-xml",
@@ -64,17 +71,40 @@
     "Steam IoStore paths 160; bad_hashes 0; block_cover_exact true",
     "Steam UTOC SHA-256 14451ee01a0374eb5c70933809cea45a9390dae3d7988b57aa92b531011138bf",
     "Steam UCAS SHA-256 e5b60fdcf33076dc963ea2c68b707a8d32c9e7fcb74ed03522c20a4ebc9aec0c",
-    "Steam map widget bytecode overrides = 0"
+    "Steam map widget bytecode overrides = 0",
+    "Steam map widget bytecode overrides = 0",
+    "Steam current map data assets 103/103; 247 rows / 281 exact cooked FText fallback occurrences",
+    "Steam IoStore 160 packages / 161 chunks; BLAKE3 PASS; UCAS coverage exact",
+    "installer payload identity PASS",
+    "ZIP entries 262; CRC PASS; SHA256SUMS 261/261 PASS",
+    "Drive readback SHA-256 a71d44e02673c5578c9f112ee8ab4bf6ce7b18c09dc0d4240d06ac05aba0dc82"
   ],
   "validation_pending": [
-    "installer/archive validation",
-    "Drive readback",
-    "game runtime validation"
+    "game runtime validation",
+    "global current-source reindex"
   ],
   "notes": [
-    "v13 abandons Steam map Kismet/VM translation entirely.",
-    "Only display FText source fallback strings are changed, keyed by exact original Key+English pair in current 0.7.9.16321 packages.",
-    "No gameplay IDs, enum numeric values, function bytecode, AI/combat/state, quest logic or save identifiers are changed.",
+    "v10, v11 and v12 Steam map runtime strategies are superseded and must not be used.",
+    "v13 has zero Steam map widget VM/ExecuteUbergraph translation overrides.",
+    "v13 map translation is current-source data-only display FText fallback in 102 generated map packages plus e_mapreturn_types.",
+    "NoSteam 0.7.9.16232 keeps its matching native full-popup payload; current 0.7.9.16321 generated packages are not mixed into that baseline.",
     "Runtime remains pending."
-  ]
+  ],
+  "release": {
+    "name": "Carnal_Instinct_RU_DontLook_Installer_MapDataFText_2026-10-04_v13.zip",
+    "sha256": "a71d44e02673c5578c9f112ee8ab4bf6ce7b18c09dc0d4240d06ac05aba0dc82",
+    "archive_bytes": 30418858,
+    "archive_entries": 262,
+    "installer_sha256": "688148786bb3b9884c38118516160ef8a2d49e4091a2b173a21af1f3132f02f5",
+    "installer_bytes": 36970496,
+    "drive_folder_id": "1kb822pHAaWISEznC1R53CS0p8f09jU93",
+    "drive_file_id": "1tFQhmA6W_lxhSpHbCyR0sCSfFZKAinoT",
+    "drive_readback_sha256_verified": true,
+    "drive_readback_zip_crc_verified": true,
+    "steam_payload_id": "Steam_current",
+    "steam_verified_game_version": "0.7.9.16321",
+    "steam_verified_build": null,
+    "nosteam_baseline_build": "0.7.9.16232",
+    "runtime_validation": "pending"
+  }
 }
