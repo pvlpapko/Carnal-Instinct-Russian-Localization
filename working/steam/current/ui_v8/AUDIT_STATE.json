@@ -1,0 +1,10 @@
+{
+  "schema_version": "1.0",
+  "edition": "Steam",
+  "task": "ui_v8",
+  "status": "runtime_validation_pending",
+  "verified_game_version": "0.7.9.16321",
+  "current_phase": "runtime_validation",
+  "last_completed_unit": "release_uploaded",
+  "next_unit": "user_runtime_validation"
+}
