@@ -6,9 +6,9 @@
   "source_state_id": "steam_current_2026-10-03_16321_asset_verified_index_stale",
   "verified_game_version": "0.7.9.16321",
   "verified_build": null,
-  "current_phase": "root_cause_and_data_driven_redesign",
-  "last_completed_unit": "runtime_hover_crash_confirmed",
-  "next_unit": "fetch_and_patch_current_map_generated_display_ftext",
+  "current_phase": "data_ftext_patch_validated_pre_container",
+  "last_completed_unit": "patch_103_current_map_display_assets",
+  "next_unit": "rebuild_v13_iostore",
   "completed_units": [
     "confirmed v12 Steam opens Map successfully",
     "confirmed first marker hover crashes with EXCEPTION_ACCESS_VIOLATION writing 0x0",
@@ -16,16 +16,19 @@
     "invalidated all Steam runtime bytecode map-translation strategies (v10-v12)",
     "verified current map generated packages still contain stable English display FText keys for sample markers",
     "verified v12 Game.locres already contains Russian values for those original map FText keys",
-    "selected v13 architecture: no Steam map widget bytecode overrides; patch only current map display FText source fallback in exact source packages"
+    "selected v13 architecture: no Steam map widget bytecode overrides; patch only current map display FText source fallback in exact source packages",
+    "fetched all 102 exact current Steam generated map packages from Drive",
+    "patched 102 generated map packages plus current e_mapreturn_types using exact Key+English FText pairs only",
+    "patched 247 translation rows / 281 exact cooked FText occurrences",
+    "verified every patched occurrence as exact Key+Russian fallback after rebuild",
+    "verified all unmodified exports byte-identical and export object references/flags unchanged",
+    "kept all Steam map widget bytecode unmodified/game-owned"
   ],
   "pending_units": [
-    "fetch 102 current generated map packages containing map-caption FText",
-    "patch exact key+English FText source occurrences to Russian fallback only",
-    "patch safe map-return display enum labels where required",
-    "remove Steam Neutral_Widget/WB_WorldMapPopup map bytecode overrides",
-    "rebuild Steam_current IoStore",
-    "validate modified exports only and all untouched bytes",
-    "validate gameplay override exclusion",
+    "rebuild Steam_current IoStore with 103 current data-only map display assets",
+    "validate IoStore BLAKE3/UCAS/path/package structure",
+    "verify Neutral_Widget and WB_WorldMapPopup overrides absent",
+    "preserve quest layout/current Lovense/exact character target/AI safety",
     "rebuild installer/archive",
     "Drive upload/readback/hash validation",
     "runtime map open/hover validation"
@@ -37,12 +40,21 @@
     "CI_RU_Display_Audit2MapCaptions corpus"
   ],
   "working_files": [
-    "working/steam/current/map_data_ftext_v13/AUDIT_STATE.json"
+    "working/steam/current/map_data_ftext_v13/AUDIT_STATE.json",
+    "/mnt/data/v13work/patch_map_ftext_data.py",
+    "/mnt/data/v13work/MAP_DATA_FTEXT_PATCH_REPORT.json",
+    "/mnt/data/v13work/patched"
   ],
   "validation_completed": [
     "sample current keys verified unchanged: Bull's Shield 9352718F..., Maz Arjeni 2993D1FA..., The Gilded Fold F38891CF...",
     "sample locres values already Russian for exact key+source-hash",
-    "no further Steam map VM/ExecuteUbergraph patch will be shipped in v13"
+    "no further Steam map VM/ExecuteUbergraph patch will be shipped in v13",
+    "103/103 current source assets patched",
+    "102 generated .umap + 1 e_mapreturn_types.uasset",
+    "247 rows / 281 exact Key+English occurrences -> Key+Russian fallback",
+    "post-patch old exact patterns remaining = 0 for selected rows",
+    "all unmodified exports byte-identical; package/export identities preserved",
+    "patch report: /mnt/data/v13work/MAP_DATA_FTEXT_PATCH_REPORT.json"
   ],
   "validation_pending": [
     "asset patch audit",
@@ -50,8 +62,9 @@
     "runtime validation"
   ],
   "notes": [
-    "v12 Steam must not be used for map hover; opening the map works, hovering the first marker crashes.",
-    "v13 changes strategy from runtime bytecode translation to data-only display FText fallback patches on exact current packages.",
-    "Gameplay logic, IDs, enum numeric values, AI/combat/state and quest logic remain untouched."
+    "v13 abandons Steam map Kismet/VM translation entirely.",
+    "Only display FText source fallback strings are changed, keyed by exact original Key+English pair in current 0.7.9.16321 packages.",
+    "No gameplay IDs, enum numeric values, function bytecode, AI/combat/state, quest logic or save identifiers are changed.",
+    "Runtime remains pending."
   ]
 }
