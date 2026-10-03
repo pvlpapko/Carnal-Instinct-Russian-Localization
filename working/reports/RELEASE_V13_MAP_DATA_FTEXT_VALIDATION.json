@@ -1,0 +1,59 @@
+{
+  "schema_version": "1.0",
+  "release": "Carnal_Instinct_RU_DontLook_Installer_MapDataFText_2026-10-04_v13.zip",
+  "archive": {
+    "bytes": 30418858,
+    "sha256": "a71d44e02673c5578c9f112ee8ab4bf6ce7b18c09dc0d4240d06ac05aba0dc82",
+    "entries": 262,
+    "zip_crc_passed": true,
+    "sha256sums": "261/261"
+  },
+  "installer": {
+    "bytes": 36970496,
+    "sha256": "688148786bb3b9884c38118516160ef8a2d49e4091a2b173a21af1f3132f02f5",
+    "go_test": true,
+    "go_vet_unsafeptr_false": true,
+    "windows_x64_crossbuild": true,
+    "steam_label": "Steam",
+    "steam_payload_id": "Steam_current"
+  },
+  "drive": {
+    "folder_id": "1kb822pHAaWISEznC1R53CS0p8f09jU93",
+    "file_id": "1tFQhmA6W_lxhSpHbCyR0sCSfFZKAinoT",
+    "readback_bytes": 30418858,
+    "readback_sha256_verified": true,
+    "readback_zip_crc_verified": true
+  },
+  "steam": {
+    "verified_game_version": "0.7.9.16321",
+    "verified_build": null,
+    "packages": 160,
+    "chunks": 161,
+    "map_widget_bytecode_overrides": 0,
+    "wb_world_map_popup_override_present": false,
+    "neutral_widget_override_present": false,
+    "map_data_assets": 103,
+    "generated_map_assets": 102,
+    "enum_assets": 1,
+    "map_translation_rows": 247,
+    "exact_cooked_ftext_occurrences_patched": 281,
+    "strategy": "exact current-source Key+English display FText fallback -> same Key+Russian; functions/imports/gameplay logic untouched",
+    "utoc_sha256": "14451ee01a0374eb5c70933809cea45a9390dae3d7988b57aa92b531011138bf",
+    "ucas_sha256": "e5b60fdcf33076dc963ea2c68b707a8d32c9e7fcb74ed03522c20a4ebc9aec0c"
+  },
+  "nosteam": {
+    "verified_build": "0.7.9.16232",
+    "strategy": "unchanged matching v12 native full map popup payload; no 0.7.9.16321 generated map packages mixed"
+  },
+  "ai_safety": {
+    "technical_state_rows_restored": 144,
+    "forbidden_gameplay_overrides": 0,
+    "boss_ai_override_present": false
+  },
+  "supersedes": {
+    "v10": "Steam runtime-invalid: WB_WorldMapPopup Bad import index 58/57",
+    "v11": "Steam runtime-invalid on Map: Neutral_Widget undefined opcode 0x74",
+    "v12": "Steam Map opens, first marker hover runtime crash: access violation writing 0x0"
+  },
+  "runtime_tested": false
+}
