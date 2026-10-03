@@ -2,23 +2,26 @@
   "schema_version": "1.0",
   "edition": "NoSteam",
   "task": "map_hover_character_preservation",
-  "status": "in_progress",
+  "status": "release_uploaded_static_validation_runtime_pending",
   "source_state_id": "nosteam_0.7.9.16232_baseline",
   "verified_game_version": "0.7.9",
   "verified_build": "0.7.9.16232",
-  "current_phase": "pre_binary_checkpoint",
-  "last_completed_unit": "runtime_feedback_received",
-  "next_unit": "build_v9_preserving_exact_character_and_map_hover",
+  "current_phase": "v9_uploaded_static_validation_complete",
+  "last_completed_unit": "drive_readback_v9",
+  "next_unit": "user_runtime_validation",
   "completed_units": [
-    "confirmed NoSteam character layout is desired reference",
-    "confirmed newer NoSteam profiles share Steam_current payload and therefore inherit Steam map-hover regression"
+    "preserved exact NoSteam character layout",
+    "restored/preserved full localized w_03_map_icon patch",
+    "preserved v6 144 technical AI/combat/locomotion/state English restorations",
+    "kept gameplay AI/NPC/item/quest-logic overrides excluded",
+    "rebuilt NoSteam IoStore",
+    "validated BLAKE3 and UCAS physical coverage",
+    "packaged installer and verified Drive readback"
   ],
   "pending_units": [
-    "retain NoSteam exact character layout",
-    "retain full map hover patch",
-    "preserve AI/combat safety",
-    "validate and package",
-    "runtime validation"
+    "NoSteam map hover runtime smoke test",
+    "NoSteam combat/death/AI runtime smoke test",
+    "final runtime sign-off"
   ],
   "source_files_used": [
     "validated NoSteam display/UI payload",
@@ -27,12 +30,29 @@
   "working_files": [
     "working/nosteam/0.7.9.16232/map_hover_character_preservation/AUDIT_STATE.json"
   ],
-  "validation_completed": [],
+  "validation_completed": [
+    "NoSteam 71 named UI/display packages; BLAKE3 PASS; UCAS coverage exact",
+    "localized map icon is same full patch used by Steam_current",
+    "forbidden gameplay override hits = 0",
+    "Drive readback SHA-256 e5893b35b5993b88b3a1dcbd3b6ed9e4b0f6fe9e2a8c3cc8d850e275dda7569c"
+  ],
   "validation_pending": [
-    "container validation",
     "game runtime validation"
   ],
   "notes": [
     "NoSteam 0.7.9.16232 remains separate; newer compatible NoSteam profiles use Steam_current by installer policy."
-  ]
+  ],
+  "release": {
+    "name": "Carnal_Instinct_RU_DontLook_Installer_QuestCrash_MapHover_ExactCharacter_2026-10-03_v9.zip",
+    "sha256": "e5893b35b5993b88b3a1dcbd3b6ed9e4b0f6fe9e2a8c3cc8d850e275dda7569c",
+    "installer_sha256": "a97e7c612acf51a6cafd324122de5583136f9be591f93aab899b30b127ae0713",
+    "drive_folder_id": "1Yb2sVQlVzbYDdnYDb6wCVqJ-3FLFpeEK",
+    "drive_file_id": "1qGLh_xodQF3rdSnWxihj9uYudmSljuC4",
+    "drive_readback_sha256_verified": true,
+    "steam_payload_id": "Steam_current",
+    "steam_verified_game_version": "0.7.9.16321",
+    "steam_verified_build": null,
+    "nosteam_baseline_build": "0.7.9.16232",
+    "runtime_validation": "pending"
+  }
 }
