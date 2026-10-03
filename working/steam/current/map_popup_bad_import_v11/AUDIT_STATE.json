@@ -6,16 +6,22 @@
   "source_state_id": "steam_current_2026-10-03_16321_asset_verified_index_stale",
   "verified_game_version": "0.7.9.16321",
   "verified_build": null,
-  "current_phase": "root_cause_and_current_architecture_trace",
-  "last_completed_unit": "runtime_crash_root_cause_confirmed",
-  "next_unit": "patch_current_map_display_boundary_without_cross_build_popup_bytecode",
+  "current_phase": "map_display_patch_complete_pre_container",
+  "last_completed_unit": "patch_current_neutral_widget_display_boundary",
+  "next_unit": "rebuild_and_validate_v11_iostore",
   "completed_units": [
     "parsed user CrashContext(9)",
     "confirmed UE 5.5.4 CL-40574608 and AsyncLoading2 ObjectSerializationError",
     "confirmed v10 Steam WB_WorldMapPopup ExecuteUbergraph contains invalid import index 58 while current package has 57 imports",
     "confirmed v10 popup bytecode was old 0.7.9.16315 translated ExecuteUbergraph transplanted into current 0.7.9.16321 package",
     "invalidated v10 Steam popup override",
-    "traced current 0.7.9.16321 scalable-map popup creation and MainText/SubText assignment through Neutral_Widget"
+    "traced current 0.7.9.16321 scalable-map popup creation and MainText/SubText assignment through Neutral_Widget",
+    "restored strategy: Steam WB_WorldMapPopup will not be overridden",
+    "patched current 0.7.9.16321 Neutral_Widget MainText/SubText display assignments with 884/884 localized cases",
+    "added only two proven native text-conversion script imports to Neutral_Widget import map",
+    "validated every package-index-bearing Kismet expression stays within 124-import table",
+    "validated every non-ExecuteUbergraph Neutral_Widget export byte-identical to current source",
+    "validated all Kismet jump/switch offsets by full parse/serialize roundtrip"
   ],
   "pending_units": [
     "restore exact current 0.7.9.16321 WB_WorldMapPopup or omit override",
@@ -39,12 +45,21 @@
   ],
   "working_files": [
     "working/steam/current/map_popup_bad_import_v11/AUDIT_STATE.json",
-    "/mnt/data/v11work/kismet_parse.py"
+    "/mnt/data/v11work/kismet_parse.py",
+    "/mnt/data/v11work/Neutral_Widget_16321_full_map_ru.uasset",
+    "/mnt/data/v11work/NEUTRAL_WIDGET_MAP_PATCH.json",
+    "/mnt/data/v11work/kismet_neutral.py",
+    "/mnt/data/v11work/patch_neutral_map.py"
   ],
   "validation_completed": [
     "CrashContext exact error: Bad import index 58/57",
     "current source popup has 57 imports and no translated switch bytecode",
-    "Neutral_Widget current script parses completely and directly assigns popup MainText/SubText"
+    "Neutral_Widget current script parses completely and directly assigns popup MainText/SubText",
+    "Neutral_Widget source SHA-256 c5c1cc5bff1250430f33bc2f9d6b29d49c02c3bfbdf2b350629bccd1e497fa76",
+    "Neutral_Widget patched SHA-256 48af98f066512d1f5d659d099c6f9bf9e620a8adb40c9625c46f42cd0544f6cc",
+    "object imports 122 -> 124; bad Kismet import references 0",
+    "map switches 884/884 at current Neutral_Widget display boundary",
+    "Steam WB_WorldMapPopup override no longer required"
   ],
   "validation_pending": [
     "new map display patch serialization validation",
