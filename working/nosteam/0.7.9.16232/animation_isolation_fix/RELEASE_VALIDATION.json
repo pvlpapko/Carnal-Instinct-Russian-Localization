@@ -1,0 +1,50 @@
+{
+  "schema_version": "1.0",
+  "edition": "NoSteam",
+  "task": "animation_isolation_fix",
+  "release": "Carnal_Instinct_RU_DontLook_AnimationIsolation_2026-10-03_v5.zip",
+  "source_state_id": "nosteam_0.7.9.16232_baseline",
+  "verified_game_version": "0.7.9",
+  "verified_build": "0.7.9.16232",
+  "changes": {
+    "technical_ftext_restored": 126,
+    "old_named_cooked_overrides": 151,
+    "retained_ui_widget_packages": 68,
+    "removed_non_ui_or_gameplay_packages": 83,
+    "explicitly_removed_examples": [
+      "BP_FindersKeepers_CrocodileAI_Boss",
+      "NPC dialogue Blueprints",
+      "quest actor/condition/data packages",
+      "item Blueprints"
+    ]
+  },
+  "validation": {
+    "locres": "PASS",
+    "pak_v3_index_and_sha1": "PASS",
+    "iostore_chunk_hashes_blake3": "PASS",
+    "iostore_toc_entries": 69,
+    "iostore_named_packages": 68,
+    "iostore_container_packages": 68,
+    "ucas_physical_coverage": "PASS",
+    "offending_boss_ai_absent": "PASS",
+    "installer_payload_isolated_from_steam_current": "PASS",
+    "installer_go_test": "PASS",
+    "installer_go_vet_unsafeptr_false": "PASS",
+    "installer_windows_amd64_crossbuild": "PASS",
+    "zip_crc": "PASS",
+    "drive_readback_sha256": "PASS",
+    "runtime_game_test": "PENDING"
+  },
+  "hashes": {
+    "pak_sha256": "f07309924a24da59ab5176a2f5e7622298d8685d7ad3ada0ba5066a41163fc80",
+    "utoc_sha256": "ab22f0016470f164865a51d5b95c8e0d4b71379f5f631ca09deb658db19e3150",
+    "ucas_sha256": "2a6a43cb7795eb414dc451c8345ea1ebb84ad1bf092f255937f3b2ea64a395a6",
+    "release_sha256": "09b794bf5f69cf996c6f5ceff856afe81b95a667f5415d4def45b05146edb4b1",
+    "installer_sha256": "2fdf0fae6564d8050c9b887ceecc7b718370ba5ba106e7bad4469fe5790f0277"
+  },
+  "drive": {
+    "folder_id": "1CBVQnIXReV-lepRotgz6a2Dz6nMiLT7S",
+    "file_id": "1NO52YefCXArK6RvQznih2uSd8p8AhxV9"
+  },
+  "note": "Static compatibility and container validation only. Runtime combat/AI/death-animation behavior still requires an in-game test."
+}
