@@ -2,27 +2,24 @@
   "schema_version": "1.0",
   "edition": "Steam",
   "task": "full_override_audit_after_source_update",
-  "status": "in_progress",
+  "status": "completed_static_runtime_pending",
   "source_state_id": "steam_current_2026-10-03_16321_asset_verified_index_stale",
   "verified_game_version": "0.7.9.16321",
   "verified_build": null,
-  "current_phase": "full_151_override_source_fetch",
-  "last_completed_unit": "verify_current_source_version",
-  "next_unit": "fetch_and_compare_151_nosteam_override_paths_against_current_steam",
+  "current_phase": "audit_concluded_safe_ui_architecture_selected",
+  "last_completed_unit": "classify_all_overrides_and_build_v6_safe_set",
+  "next_unit": "runtime_validation",
   "completed_units": [
     "task_initialized",
-    "verify_current_source_version"
+    "verify_current_source_version",
+    "compare old 151 NoSteam override packages against current Steam source",
+    "classify binary overrides by schema and gameplay risk",
+    "invalidate old 0.7.9.16315 Steam cooked overrides",
+    "select strict 26-package current-safe display/UI runtime set",
+    "build and validate v6"
   ],
   "pending_units": [
-    "verify_current Steam source version/build",
-    "rebuild CI_SOURCE_INDEX.json and CI_SOURCE_TREE.txt",
-    "compare all 151 NoSteam override packages against current Steam originals",
-    "classify Steam-required/obsolete/incompatible overrides",
-    "audit localization differences and new English strings",
-    "rebuild Steam FULL only from verified current source",
-    "validate IoStore/package schemas/references",
-    "update installer payload and metadata",
-    "final archive/hash/readback validation",
+    "global CI_SOURCE_INDEX rebuild for current upload",
     "in-game validation"
   ],
   "source_files_used": [
@@ -33,16 +30,18 @@
     "working/steam/current/full_override_audit/AUDIT_STATE.json"
   ],
   "validation_completed": [
-    "Current RPGInventory_GameInstance.uasset SHA-256 verified",
-    "Embedded current version verified as 0.7.9.16321 at byte offset 313692",
-    "Confirmed previous CI_SOURCE_INDEX snapshot is stale for build-dependent work"
+    "0.7.9.16321 verified from current RPGInventory_GameInstance",
+    "old 151/34 package sets audited",
+    "gameplay AI/NPC/item/quest-logic overrides removed",
+    "v6 Steam_current 26-package runtime validated statically"
   ],
   "validation_pending": [
-    "all"
+    "global source reindex",
+    "game runtime validation"
   ],
   "notes": [
-    "Current Steam version is verified as 0.7.9.16321 from embedded asset evidence; exact Steam BuildID remains unknown.",
-    "Previous 0.7.9.16315 cooked overrides are invalidated pending this audit.",
-    "Full 151-path comparison will use current Drive file bytes; stale index is used only as a path/Drive-ID navigation map."
+    "The audit showed that blindly copying all 151 NoSteam packages into Steam would be unsafe.",
+    "Final v6 policy is strict display/UI boundary, not package-count parity.",
+    "Current global source index is stale; target files used for v6 were fetched directly from current Drive bytes."
   ]
 }
