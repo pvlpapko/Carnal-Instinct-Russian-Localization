@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "updated_at": "2026-10-03T23:05:00+03:00",
+  "updated_at": "2026-10-03T23:19:00+03:00",
   "active_tasks": [
     {
       "edition": "Steam",
@@ -55,6 +55,18 @@
       "task": "map_hover_character_preservation",
       "state_path": "working/nosteam/0.7.9.16232/map_hover_character_preservation/AUDIT_STATE.json",
       "status": "v9_uploaded_runtime_validation_pending"
+    },
+    {
+      "edition": "Steam",
+      "task": "map_quest_lovense_v10",
+      "state_path": "working/steam/current/map_quest_lovense_v10/AUDIT_STATE.json",
+      "status": "in_progress"
+    },
+    {
+      "edition": "NoSteam",
+      "task": "map_full_v10",
+      "state_path": "working/nosteam/0.7.9.16232/map_full_v10/AUDIT_STATE.json",
+      "status": "in_progress"
     }
   ],
   "latest_release": {
