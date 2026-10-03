@@ -1,0 +1,59 @@
+{
+  "schema_version": "1.0",
+  "edition": "Steam",
+  "task": "map_popup_bad_import_v11",
+  "status": "in_progress",
+  "source_state_id": "steam_current_2026-10-03_16321_asset_verified_index_stale",
+  "verified_game_version": "0.7.9.16321",
+  "verified_build": null,
+  "current_phase": "root_cause_and_current_architecture_trace",
+  "last_completed_unit": "runtime_crash_root_cause_confirmed",
+  "next_unit": "patch_current_map_display_boundary_without_cross_build_popup_bytecode",
+  "completed_units": [
+    "parsed user CrashContext(9)",
+    "confirmed UE 5.5.4 CL-40574608 and AsyncLoading2 ObjectSerializationError",
+    "confirmed v10 Steam WB_WorldMapPopup ExecuteUbergraph contains invalid import index 58 while current package has 57 imports",
+    "confirmed v10 popup bytecode was old 0.7.9.16315 translated ExecuteUbergraph transplanted into current 0.7.9.16321 package",
+    "invalidated v10 Steam popup override",
+    "traced current 0.7.9.16321 scalable-map popup creation and MainText/SubText assignment through Neutral_Widget"
+  ],
+  "pending_units": [
+    "restore exact current 0.7.9.16321 WB_WorldMapPopup or omit override",
+    "implement map translation at current 0.7.9.16321 display boundary without old imports",
+    "preserve quest crash isolation and quest layout-only patch",
+    "preserve current Lovense layout",
+    "preserve exact NoSteam character layout target",
+    "preserve 144 AI/combat/state English restorations",
+    "rebuild Steam IoStore and validate imports/exports/BLAKE3",
+    "validate NoSteam map payload remains safe",
+    "rebuild installer/archive",
+    "upload/readback/hash validation",
+    "runtime validation"
+  ],
+  "source_files_used": [
+    "CrashContext(9).runtime-xml",
+    "current Steam 0.7.9.16321 WB_WorldMapPopup",
+    "current Steam 0.7.9.16321 Neutral_Widget",
+    "current Steam map architecture assets",
+    "v9/v10 release payloads and map translation corpus"
+  ],
+  "working_files": [
+    "working/steam/current/map_popup_bad_import_v11/AUDIT_STATE.json",
+    "/mnt/data/v11work/kismet_parse.py"
+  ],
+  "validation_completed": [
+    "CrashContext exact error: Bad import index 58/57",
+    "current source popup has 57 imports and no translated switch bytecode",
+    "Neutral_Widget current script parses completely and directly assigns popup MainText/SubText"
+  ],
+  "validation_pending": [
+    "new map display patch serialization validation",
+    "container validation",
+    "runtime validation"
+  ],
+  "notes": [
+    "v10 Steam must not be used.",
+    "Do not transplant any 0.7.9.16315 WB_WorldMapPopup function bytecode into 0.7.9.16321.",
+    "Map translation corpus is already substantially complete; runtime display routing is the remaining problem."
+  ]
+}
