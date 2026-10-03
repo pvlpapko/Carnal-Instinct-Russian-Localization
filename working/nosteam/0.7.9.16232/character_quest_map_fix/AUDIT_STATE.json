@@ -2,12 +2,12 @@
   "schema_version": "1.0",
   "edition": "NoSteam",
   "task": "character_quest_map_fix",
-  "status": "release_ready_static_validation",
+  "status": "release_uploaded_static_validation_runtime_pending",
   "source_state_id": "CI_SOURCE_INDEX_2026-10-03T12:48:51Z_91b95dbc38b2",
   "verified_game_version": "0.7.9",
   "verified_build": "0.7.9.16232",
-  "current_phase": "final_validation",
-  "last_completed_unit": "release_archive_validation",
+  "current_phase": "runtime_validation_pending",
+  "last_completed_unit": "drive_release_readback_validation",
   "next_unit": "in_game_validation",
   "completed_units": [
     "map_hover_extension",
@@ -15,7 +15,9 @@
     "container_validation",
     "installer_rebuild",
     "installer_tests",
-    "release_archive_crc_sha256_validation"
+    "release_archive_crc_sha256_validation",
+    "drive_release_upload",
+    "drive_release_readback_validation"
   ],
   "pending_units": [
     "in_game map hover validation"
@@ -37,12 +39,15 @@
     "map hover FText exact Namespace+Key+English lookup: zero missing",
     "go test passed",
     "go vet -unsafeptr=false passed",
-    "Windows x64 cross-build passed"
+    "Windows x64 cross-build passed",
+    "ZIP CRC passed",
+    "Drive readback SHA-256 matched"
   ],
   "validation_pending": [
     "game runtime"
   ],
   "release_archive_sha256": "c60079a9d3f91124bc966911c0246e7e72cd456cb30ea4e9dfc73d441782ed19",
+  "drive_release_file_id": "1uCgpjIZEIY-IhEZnyOodfVMaOzsrix8G",
   "notes": [
     "NoSteam 0.7.9.16232 remains a separate payload from Steam."
   ]
