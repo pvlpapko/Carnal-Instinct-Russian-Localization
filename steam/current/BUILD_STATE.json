@@ -3,14 +3,31 @@
   "edition": "Steam",
   "channel": "current",
   "rolling": true,
-  "verified_game_version": null,
+  "source_state_id": "CI_SOURCE_INDEX_2026-10-03T12:48:51Z_91b95dbc38b2",
+  "verified_game_version": "0.7.9.16315",
   "verified_build": null,
   "product_version": null,
-  "source_state_id": null,
-  "source_verified": false,
-  "binary_compatibility": "unverified",
-  "ui_override_compatibility": "unverified",
-  "last_source_check_at": null,
-  "evidence": [],
-  "notes": "Rolling Steam state. Version/build must be filled only from verified current-source evidence."
+  "source_verified": "partial",
+  "executable_product_version_verified": false,
+  "steam_build_id_verified": false,
+  "embedded_version_evidence": {
+    "asset": "Content/RPG_InventorySystem/Blueprints/SaveSystem/RPGInventory_GameInstance.uasset",
+    "version": "0.7.9.16315",
+    "sha256": "3958712461b9fba215294fc534633583135170079ee9a6bfd9d9b6e30e554842"
+  },
+  "source_index_sha256": "91b95dbc38b2f4ffbd3fbea35bb1e4906cec7ddb588be87a15cec17048282274",
+  "source_tree_sha256": "f12967fe7bd1c3729caa285519b2acc0059959214bf1f453aefe6437b8fbfef3",
+  "source_stock_status": "contains localization modifications; not a clean stock game extraction",
+  "binary_compatibility": "static validation only; runtime pending",
+  "ui_override_compatibility": "static validation only; runtime pending",
+  "last_source_check_at": "2026-10-03T12:48:51Z",
+  "evidence": [
+    "complete recursive source index",
+    "selected source SHA-256 verification",
+    "embedded RPGInventory_GameInstance version"
+  ],
+  "notes": [
+    "EXE, appmanifest and Build.version are absent from supplied source.",
+    "Do not silently reuse cooked overrides after a future Steam source change."
+  ]
 }
