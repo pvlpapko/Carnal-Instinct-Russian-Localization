@@ -1,0 +1,59 @@
+{
+  "schema_version": "1.0",
+  "edition": "Steam",
+  "task": "animation_isolation_fix",
+  "release": "Carnal_Instinct_RU_DontLook_AnimationIsolation_2026-10-03_v5.zip",
+  "source_state_id": "steam_current_2026-10-03_16321_asset_verified_index_stale",
+  "verified_game_version": "0.7.9.16321",
+  "verified_build": null,
+  "changes": {
+    "technical_ftext_restored": 126,
+    "technical_domains": [
+      "DynamicCombatSystem state/AI/combat enums",
+      "AdvancedLocomotion gait/movement direction/stance",
+      "AI faction/base labels"
+    ],
+    "retained_cooked_overrides": [
+      "Content/Carnal_Instinct_UE5/Maps/WorldMap/w_03_map_icon.uasset",
+      "Content/UI/Journal/WB_QuestName.uasset",
+      "Content/UI/Journal/WB_QuestObjectiveName.uasset",
+      "Content/UI/Journal/WB_QuestObjectiveDescription.uasset"
+    ],
+    "excluded_stale_or_cross_build_overrides": [
+      "WB_CharacterScreen",
+      "WB_Stats_Full",
+      "WB_Stats_Main",
+      "WB_Stats_Main_Slot",
+      "WB_WorldMap",
+      "WB_WorldMapPopup",
+      "all other unvalidated 0.7.9.16315 cooked overrides"
+    ]
+  },
+  "validation": {
+    "locres": "PASS",
+    "pak_v3_index_and_sha1": "PASS",
+    "iostore_chunk_hashes_blake3": "PASS",
+    "iostore_toc_entries": 5,
+    "iostore_named_packages": 4,
+    "iostore_container_packages": 4,
+    "ucas_physical_coverage": "PASS",
+    "installer_go_test": "PASS",
+    "installer_go_vet_unsafeptr_false": "PASS",
+    "installer_windows_amd64_crossbuild": "PASS",
+    "zip_crc": "PASS",
+    "drive_readback_sha256": "PASS",
+    "runtime_game_test": "PENDING"
+  },
+  "hashes": {
+    "pak_sha256": "feeb659a2961ca4d990c70e58a098c5b2afec5675bc4ef882f67f174542608e4",
+    "utoc_sha256": "d4a3ab1922b0bf684935debfa602b5da995a051bc0d1bc52e4d986bbadd0a2fb",
+    "ucas_sha256": "0ff7c7eedbd0990a28e970b8dc22069c8fe23d57916fb0321176cbad1bd0dea2",
+    "release_sha256": "09b794bf5f69cf996c6f5ceff856afe81b95a667f5415d4def45b05146edb4b1",
+    "installer_sha256": "2fdf0fae6564d8050c9b887ceecc7b718370ba5ba106e7bad4469fe5790f0277"
+  },
+  "drive": {
+    "folder_id": "1CBVQnIXReV-lepRotgz6a2Dz6nMiLT7S",
+    "file_id": "1NO52YefCXArK6RvQznih2uSd8p8AhxV9"
+  },
+  "note": "Static compatibility and container validation only. Runtime combat/AI/death-animation behavior still requires an in-game test."
+}
