@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "updated_at": "2026-10-04T13:00:00+03:00",
+  "updated_at": "2026-10-04T21:12:00+03:00",
   "active_tasks": [
     {
       "edition": "Steam",
@@ -102,28 +102,28 @@
       "edition": "Steam",
       "task": "full_clean_localization_audit_v15",
       "state_path": "working/steam/current/full_clean_localization_audit_v15/AUDIT_STATE.json",
-      "status": "in_progress"
+      "status": "release_uploaded_static_validation_runtime_pending"
     },
     {
       "edition": "NoSteam",
       "task": "full_clean_localization_audit_v15",
       "state_path": "working/nosteam/0.7.9.16232/full_clean_localization_audit_v15/AUDIT_STATE.json",
-      "status": "in_progress"
+      "status": "release_uploaded_static_validation_runtime_pending"
     }
   ],
   "latest_release": {
-    "name": "Carnal_Instinct_RU_DontLook_Installer_MapDataFText_2026-10-04_v13.zip",
-    "sha256": "a71d44e02673c5578c9f112ee8ab4bf6ce7b18c09dc0d4240d06ac05aba0dc82",
-    "archive_bytes": 30418858,
-    "archive_entries": 262,
-    "installer_sha256": "688148786bb3b9884c38118516160ef8a2d49e4091a2b173a21af1f3132f02f5",
-    "installer_bytes": 36970496,
-    "drive_folder_id": "1kb822pHAaWISEznC1R53CS0p8f09jU93",
-    "drive_file_id": "1tFQhmA6W_lxhSpHbCyR0sCSfFZKAinoT",
+    "name": "Carnal_Instinct_RU_DontLook_FullCleanAudit_2026-10-04_v15_FINAL.zip",
+    "sha256": "79f41864593bc019ecc2d8dd2a32692a61f8232f6a29b182ac3c7f3169890a72",
+    "archive_bytes": 24836275,
+    "archive_entries": 336,
+    "installer_sha256": "efa1485dd1246b95ff721205150843f1a5052bfd21869d3f8fa72d9b03fb12e6",
+    "installer_bytes": 20976640,
+    "drive_folder_id": "1xFBqd8cXNZkrfAUDCxlzA2J6mvFPanmv",
+    "drive_file_id": "1i8d6071d8WRdC5chLzfgd347MXxTvBGP",
     "drive_readback_sha256_verified": true,
     "drive_readback_zip_crc_verified": true,
     "steam_payload_id": "Steam_current",
-    "steam_verified_game_version": "0.7.9.16321",
+    "steam_verified_game_version": null,
     "steam_verified_build": null,
     "nosteam_baseline_build": "0.7.9.16232",
     "runtime_validation": "pending"
