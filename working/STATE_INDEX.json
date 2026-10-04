@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "updated_at": "2026-10-04T22:30:00+03:00",
+  "updated_at": "2026-10-04T22:35:00+03:00",
   "active_tasks": [
     {
       "edition": "Steam",
@@ -114,7 +114,7 @@
       "edition": "Steam",
       "task": "v15_startup_async_loading_crash",
       "state_path": "working/steam/current/v15_startup_async_loading_crash/AUDIT_STATE.json",
-      "status": "v15_2_text_only_runtime_pass_binary_iostore_isolated"
+      "status": "v15_3_iostore_canary_uploaded_runtime_pending"
     }
   ],
   "latest_release": {
@@ -137,11 +137,12 @@
   "latest_test_hotfix": {
     "edition": "Steam",
     "task": "v15_startup_async_loading_crash",
-    "name": "Carnal_Instinct_RU_DontLook_Steam_v15.2_TEXT_ONLY_CrashIsolation_TEST.zip",
-    "sha256": "05e9d58c3957c5bffc0524213e4d0c226ab5ffac97fdd1372eca1b1c6fa10a57",
-    "bytes": 1061338,
-    "drive_file_id": "1sZirNX8TL2yoWE9g3IzI241p0y_QGrPo",
-    "runtime_validation": "PASS: Steam starts successfully; custom IoStore binary layer isolated as crash source",
-    "binary_iostore_overrides": "none"
+    "name": "Carnal_Instinct_RU_DontLook_Steam_v15.3_IOSTORE_CANARY_TEST.zip",
+    "sha256": "74d3570a446875ad8fac2eadfdc9b4d703b0d14408100c1d50c719be75277830",
+    "bytes": 1132902,
+    "drive_folder_id": "182D2VOTGO0I4E1tKWcWvGuaiaTIj6Nbt",
+    "drive_file_id": "1oUh7b_89-IYZSEgJJKT7J9RjINL7zs5r",
+    "runtime_validation": "pending",
+    "binary_iostore_overrides": "one byte-identical current Steam RPGInventory_GameInstance package"
   }
 }
