@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "updated_at": "2026-10-04T21:27:00+03:00",
+  "updated_at": "2026-10-04T21:45:00+03:00",
   "active_tasks": [
     {
       "edition": "Steam",
@@ -114,24 +114,24 @@
       "edition": "Steam",
       "task": "v15_startup_async_loading_crash",
       "state_path": "working/steam/current/v15_startup_async_loading_crash/AUDIT_STATE.json",
-      "status": "runtime_failure_confirmed_diagnosis_in_progress"
+      "status": "v16_release_uploaded_static_validation_runtime_pending"
     }
   ],
   "latest_release": {
-    "name": "Carnal_Instinct_RU_DontLook_FullCleanAudit_2026-10-04_v15_FINAL.zip",
-    "sha256": "79f41864593bc019ecc2d8dd2a32692a61f8232f6a29b182ac3c7f3169890a72",
-    "archive_bytes": 24836275,
-    "archive_entries": 336,
-    "installer_sha256": "efa1485dd1246b95ff721205150843f1a5052bfd21869d3f8fa72d9b03fb12e6",
+    "name": "Carnal_Instinct_RU_DontLook_SteamAsyncLoadHotfix_2026-10-04_v16_FINAL.zip",
+    "sha256": "c61b4f30b7a4e3bf95dfa005306672fe1a52e8b81d0fd2a2409ab72d71032911",
+    "archive_bytes": 29085003,
+    "archive_entries": 345,
+    "installer_sha256": "3184b383533b68757af97ccc8be8dbaf5a9eb481bdeff4b5fa32bb91b9bed565",
     "installer_bytes": 20976640,
-    "drive_folder_id": "1xFBqd8cXNZkrfAUDCxlzA2J6mvFPanmv",
-    "drive_file_id": "1i8d6071d8WRdC5chLzfgd347MXxTvBGP",
+    "drive_folder_id": "1GK2OWhdupfIcxS0vkBJ_0EaM7oM2Vp1o",
+    "drive_file_id": "18eR6ykzUcKk3gF58PO3WEdVUbb0ZkW1y",
     "drive_readback_sha256_verified": true,
     "drive_readback_zip_crc_verified": true,
     "steam_payload_id": "Steam_current",
-    "steam_verified_game_version": null,
+    "steam_verified_game_version": "0.7.9.16321",
     "steam_verified_build": null,
     "nosteam_baseline_build": "0.7.9.16232",
-    "runtime_validation": "steam_failed_startup_async_loading_thread; nosteam_user_report_working"
+    "runtime_validation": "Steam v16 pending; NoSteam v15 user-reported working"
   }
 }
