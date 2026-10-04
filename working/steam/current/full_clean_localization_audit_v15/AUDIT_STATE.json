@@ -3,24 +3,35 @@
   "edition": "Steam",
   "task": "full_clean_localization_audit_v15",
   "status": "in_progress",
-  "source_state_id": "CI_SOURCE_INDEX_sha256:91b95dbc38b2f4ffbd3fbea35bb1e4906cec7ddb588be87a15cec17048282274",
+  "source_state_id": "steam_current_live_2026-10-03_source_changed_after_index",
   "verified_game_version": null,
   "verified_build": null,
   "current_phase": "full_text_source_inventory",
-  "last_completed_unit": "source_index_and_v14_translation_memory_loaded",
-  "next_unit": "inventory_all_user_visible_text_sources_and_build_clean_translation_queue",
+  "last_completed_unit": "dialogue_items_interactables_quest_settings_partial_ui_inventory",
+  "next_unit": "finish_HQUI_and_other_high_risk_UI_subsystems_then_build_translation_queue",
   "completed_units": [
-    "CI_SOURCE_INDEX complete: 54909 files, 3078 folders, no traversal errors",
-    "source stock status noted: contains localization modifications; not a clean stock extraction",
-    "v14 Steam translation memory loaded: 21583 keyed rows across 1733 referenced assets",
-    "clean rebuild policy established: no patch-on-patch runtime payload"
+    "CI_SOURCE_INDEX traversal metadata: 54909 files, 3078 folders, complete flag true, but source bytes changed after snapshot",
+    "current Drive Game.locres differs from indexed metadata: current size 2517591 bytes; indexed snapshot is stale for build-dependent work",
+    "v14 Steam translation memory loaded: 21583 keyed rows across about 1733 referenced assets",
+    "MSL localization source audit: 253/253 files fetched from current Drive",
+    "MSL exact FText audit: 9049 unique current keys; 26 new Kordon dialogue keys; one new settings year abbreviation; punctuation-only fallbacks separated; 5 existing keys have changed current English source",
+    "MainItemClasses coverage: 460 total; 447 already referenced by translation TSV; 13 uncovered current assets fetched and scanned with no new exact FText rows",
+    "Interactable coverage: 96 total; 71 TSV-referenced; 25 uncovered fetched and scanned with no new exact FText rows",
+    "ItemsData coverage: 64 total; 32 TSV-referenced; 32 uncovered fetched/scanned; crafting and loot tables confirmed to use technical identifiers where applicable",
+    "RPG Inventory UI uncovered candidate set fetched; missing display candidates isolated from technical/template values",
+    "DLG quest structural assets and dmap non-texture assets fetched/scanned",
+    "new q_HellKitchen quest identified with separate display name, six objective titles/descriptions and preserved q_/npc_/event technical identifiers",
+    "NiceSettings text-bearing candidate assets fetched/scanned; only low-risk display/template FText candidates isolated from technical controls",
+    "HQUI audit started; first 40 likely text-bearing uncovered widgets fetched"
   ],
   "pending_units": [
-    "inventory localization/crafting/items/containers/interactions/quests/dialogues/books/settings/save/map/UI text sources",
-    "audit untranslated and partially translated strings",
-    "review display strings versus technical identifiers",
-    "rebuild Game.locres from preserved Namespace+Key+SourceStringHash identities",
-    "build minimal current-source cooked overrides only where locres cannot affect runtime display",
+    "finish HQUI uncovered text-bearing candidate audit",
+    "audit DynamicCombatSystem, MagicModule and remaining BlueprintSystems user-facing candidates",
+    "audit books/notes/letters/chests/containers/tooltips/save/menu/settings by unreferenced-path heuristic",
+    "finalize reviewed translation additions and source-hash update queue",
+    "rebuild Game.locres from current identities",
+    "patch only proven display-only FName/FString fields not reachable through locres",
+    "reduce historical Steam override set to one minimal clean current-source-compatible set",
     "rebuild one clean Steam pak/utoc/ucas set",
     "container/readback/static validation",
     "runtime validation"
@@ -28,26 +39,37 @@
   "source_files_used": [
     "CI_SOURCE_INDEX.json",
     "CI_SOURCE_TREE.txt",
+    "current Drive Game.locres",
     "v14 Steam translation.tsv",
-    "v14 Steam Game.locres"
+    "253 current MSL localization source assets",
+    "current RPG Inventory item/interactable/items-data/UI assets",
+    "current DLG quest/dmap structural assets",
+    "current NiceSettings text-bearing assets",
+    "current HQUI candidate assets"
   ],
   "working_files": [
-    "working/steam/current/full_clean_localization_audit_v15/AUDIT_STATE.json"
+    "working/steam/current/full_clean_localization_audit_v15/AUDIT_STATE.json",
+    "v15_loc_extract.json",
+    "v15_all_downloaded_exact_ftext.json"
   ],
   "validation_completed": [
-    "source index complete flag true",
-    "source root has no proven EXE/appmanifest/Build.version; Steam BuildID not yet proven"
+    "source index complete flag true but byte metadata stale after source update",
+    "Steam exact game version/BuildID not proven; remains null",
+    "technical row names and gameplay identifiers kept separate from display fields",
+    "locres v3 key/namespace and SourceStringHash algorithms validated against existing entries"
   ],
   "validation_pending": [
-    "full source coverage",
-    "translation identity audit",
-    "clean cooked-override audit",
+    "remaining subsystem coverage",
+    "translation identity audit after additions",
+    "minimal cooked override audit",
     "IoStore validation",
     "runtime validation"
   ],
   "notes": [
     "Final payload must not layer historical override packages.",
     "Technical IDs, row names, paths, event/function names, bindings and save identifiers must remain unchanged.",
-    "Steam exact build/version stays null until proven from authoritative source evidence."
+    "Steam exact build/version stays null until proven from authoritative source evidence.",
+    "Do not claim map-hover translation complete; user confirmed it remains incomplete and it may be deferred to a later dedicated fix.",
+    "Do not reintroduce runtime-failed Steam Neutral_Widget or WB_WorldMapPopup bytecode strategies."
   ]
 }
