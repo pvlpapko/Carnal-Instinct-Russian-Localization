@@ -1,0 +1,49 @@
+{
+  "schema_version": "1.0",
+  "edition": "NoSteam",
+  "task": "full_clean_localization_audit_v15",
+  "status": "in_progress",
+  "source_state_id": "nosteam_0.7.9.16232_baseline",
+  "verified_game_version": "0.7.9",
+  "verified_build": "0.7.9.16232",
+  "current_phase": "full_text_source_inventory",
+  "last_completed_unit": "v14_translation_memory_loaded",
+  "next_unit": "inventory_all_user_visible_text_sources_and_build_clean_translation_queue",
+  "completed_units": [
+    "NoSteam baseline fixed at 0.7.9.16232",
+    "v14 NoSteam translation memory loaded: 19485 keyed rows across 1717 referenced assets",
+    "clean rebuild policy established: no Steam-current cooked assets mixed into 0.7.9.16232 baseline"
+  ],
+  "pending_units": [
+    "inventory localization/crafting/items/containers/interactions/quests/dialogues/books/settings/save/map/UI text sources",
+    "audit untranslated and partially translated strings",
+    "review display strings versus technical identifiers",
+    "rebuild Game.locres preserving original identities",
+    "build matching-source cooked overrides only where locres cannot affect runtime display",
+    "rebuild one clean NoSteam pak/utoc/ucas set",
+    "container/readback/static validation",
+    "runtime validation"
+  ],
+  "source_files_used": [
+    "v14 NoSteam translation.tsv",
+    "v14 NoSteam Game.locres",
+    "matching NoSteam 0.7.9.16232 historical source references"
+  ],
+  "working_files": [
+    "working/nosteam/0.7.9.16232/full_clean_localization_audit_v15/AUDIT_STATE.json"
+  ],
+  "validation_completed": [
+    "NoSteam baseline identity retained"
+  ],
+  "validation_pending": [
+    "full source coverage",
+    "translation identity audit",
+    "matching-source cooked override audit",
+    "IoStore validation",
+    "runtime validation"
+  ],
+  "notes": [
+    "NoSteam payload must be built separately from Steam.",
+    "Technical IDs, row names, paths, event/function names, bindings and save identifiers must remain unchanged."
+  ]
+}
