@@ -2,13 +2,13 @@
   "schema_version": "1.0",
   "edition": "Steam",
   "task": "full_clean_localization_audit_v15",
-  "status": "runtime_failed_startup_async_loading_thread",
+  "status": "runtime_failed_startup_async_loading_thread_superseded_by_v16",
   "source_state_id": "steam_current_live_2026-10-03_source_changed_after_index",
   "verified_game_version": null,
   "verified_build": null,
-  "current_phase": "runtime_failure_diagnosis",
-  "last_completed_unit": "runtime_startup_test_failed",
-  "next_unit": "working/steam/current/v15_startup_async_loading_crash/AUDIT_STATE.json",
+  "current_phase": "superseded",
+  "last_completed_unit": "runtime_startup_failure_recorded",
+  "next_unit": "see working/steam/current/v15_startup_async_loading_crash/AUDIT_STATE.json",
   "completed_units": [
     "CI_SOURCE_INDEX snapshot complete: 54909 files, 3078 folders, no traversal errors",
     "current build-dependent source files fetched directly from Drive because source changed after index snapshot",
@@ -69,8 +69,7 @@
     "final archive Drive readback SHA256 and ZIP CRC PASS"
   ],
   "validation_pending": [
-    "Steam crash fix",
-    "runtime game validation after fix"
+    "v15 Steam is superseded; validate v16 instead"
   ],
   "notes": [
     "Steam exact BuildID/ProductVersion remains null because it is not provable from authoritative executable/appmanifest evidence in the available source snapshot.",
@@ -78,6 +77,7 @@
     "Do not reintroduce Neutral_Widget or Steam WB_WorldMapPopup bytecode strategies.",
     "Drive release folder: 1xFBqd8cXNZkrfAUDCxlzA2J6mvFPanmv; file: 1i8d6071d8WRdC5chLzfgd347MXxTvBGP",
     "Runtime evidence 2026-10-04: Steam v15 crashes at SecondsSinceStart=0 with EXCEPTION_ACCESS_VIOLATION reading 0xffffffffffffffff on FAsyncLoadingThread; NoSteam works per user.",
-    "Crash dump contains RPGInventory_GameInstance load-path evidence; follow-up task: working/steam/current/v15_startup_async_loading_crash/AUDIT_STATE.json."
+    "Crash dump contains RPGInventory_GameInstance load-path evidence; follow-up task: working/steam/current/v15_startup_async_loading_crash/AUDIT_STATE.json.",
+    "User runtime test: v15 Steam crashes in FAsyncLoadingThread at startup; NoSteam works. Steam v15 superseded by v16 current-schema hotfix."
   ]
 }
