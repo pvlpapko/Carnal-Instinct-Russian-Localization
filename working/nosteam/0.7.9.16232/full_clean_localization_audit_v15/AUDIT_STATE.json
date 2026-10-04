@@ -2,13 +2,13 @@
   "schema_version": "1.0",
   "edition": "NoSteam",
   "task": "full_clean_localization_audit_v15",
-  "status": "release_packaging",
+  "status": "release_uploaded_static_validation_runtime_pending",
   "source_state_id": "nosteam_0.7.9.16232_baseline",
   "verified_game_version": "0.7.9",
   "verified_build": "0.7.9.16232",
-  "current_phase": "final_archive_validation",
-  "last_completed_unit": "v15_clean_payload_and_installer_build",
-  "next_unit": "final_zip_hash_crc_drive_readback",
+  "current_phase": "runtime_validation",
+  "last_completed_unit": "final_zip_drive_readback",
+  "next_unit": "runtime_in_game_validation",
   "completed_units": [
     "NoSteam baseline fixed at 0.7.9.16232",
     "NoSteam translation/locres exact identities: 19486/19486",
@@ -21,11 +21,12 @@
     "NoSteam clean IoStore rebuilt: 71 packages",
     "NoSteam 71/71 exact byte readback PASS",
     "NoSteam TOC hash validation PASS and exact physical block cover",
-    "installer embeds NoSteam 0.7.9.16232 separately from Steam_current"
+    "installer embeds NoSteam 0.7.9.16232 separately from Steam_current",
+    "final ZIP CRC PASS: 336 entries",
+    "final ZIP SHA256 79f41864593bc019ecc2d8dd2a32692a61f8232f6a29b182ac3c7f3169890a72",
+    "Drive upload/readback PASS: 24836275 bytes, SHA256 unchanged, ZIP CRC PASS"
   ],
   "pending_units": [
-    "final release archive SHA-256 and ZIP CRC/readback",
-    "Drive upload and readback",
     "runtime NoSteam regression validation"
   ],
   "source_files_used": [
@@ -43,14 +44,15 @@
     "NoSteam locres/TSV 19486/19486 exact identity/value consistency",
     "matching-source cooked payload only",
     "clean NoSteam IoStore exact readback 71/71",
-    "Steam-current cooked payload isolation PASS"
+    "Steam-current cooked payload isolation PASS",
+    "final archive Drive readback SHA256 and ZIP CRC PASS"
   ],
   "validation_pending": [
-    "final archive readback",
     "runtime game validation"
   ],
   "notes": [
     "NoSteam 0.7.9.16232 remains a separate matching-source payload.",
-    "NoSteam 0.7.9.16313/16315+ installer option uses Steam_current by design and does not alter this baseline."
+    "NoSteam 0.7.9.16313/16315+ installer option uses Steam_current by design and does not alter this baseline.",
+    "Drive release folder: 1xFBqd8cXNZkrfAUDCxlzA2J6mvFPanmv; file: 1i8d6071d8WRdC5chLzfgd347MXxTvBGP"
   ]
 }
