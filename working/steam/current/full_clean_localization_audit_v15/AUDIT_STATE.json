@@ -2,13 +2,13 @@
   "schema_version": "1.0",
   "edition": "Steam",
   "task": "full_clean_localization_audit_v15",
-  "status": "release_packaging",
+  "status": "release_uploaded_static_validation_runtime_pending",
   "source_state_id": "steam_current_live_2026-10-03_source_changed_after_index",
   "verified_game_version": null,
   "verified_build": null,
-  "current_phase": "final_archive_validation",
-  "last_completed_unit": "v15_clean_payload_and_installer_build",
-  "next_unit": "final_zip_hash_crc_drive_readback",
+  "current_phase": "runtime_validation",
+  "last_completed_unit": "final_zip_drive_readback",
+  "next_unit": "runtime_in_game_validation",
   "completed_units": [
     "CI_SOURCE_INDEX snapshot complete: 54909 files, 3078 folders, no traversal errors",
     "current build-dependent source files fetched directly from Drive because source changed after index snapshot",
@@ -32,11 +32,12 @@
     "Steam 71/71 named-package exact byte readback PASS",
     "Steam TOC hash validation PASS and exact physical block cover",
     "installer Go unit tests PASS",
-    "installer Windows amd64 build PASS"
+    "installer Windows amd64 build PASS",
+    "final ZIP CRC PASS: 336 entries",
+    "final ZIP SHA256 79f41864593bc019ecc2d8dd2a32692a61f8232f6a29b182ac3c7f3169890a72",
+    "Drive upload/readback PASS: 24836275 bytes, SHA256 unchanged, ZIP CRC PASS"
   ],
   "pending_units": [
-    "final release archive SHA-256 and ZIP CRC/readback",
-    "Drive upload and readback",
     "runtime in-game validation: startup/load, combat/input/death/saves, quests, crafting/vendor, books, settings/Lovense, map hover/progression"
   ],
   "source_files_used": [
@@ -63,15 +64,16 @@
     "clean Steam IoStore exact readback 71/71",
     "forbidden crash-prone map widget overrides absent",
     "map icon source/schema/name-map/export metadata validation PASS",
-    "installer tests/build PASS"
+    "installer tests/build PASS",
+    "final archive Drive readback SHA256 and ZIP CRC PASS"
   ],
   "validation_pending": [
-    "final archive readback",
     "runtime game validation"
   ],
   "notes": [
     "Steam exact BuildID/ProductVersion remains null because it is not provable from authoritative executable/appmanifest evidence in the available source snapshot.",
     "Map hover is statically covered by current-schema w_03 + locres corpus, but must not be advertised as runtime-verified until tested in game.",
-    "Do not reintroduce Neutral_Widget or Steam WB_WorldMapPopup bytecode strategies."
+    "Do not reintroduce Neutral_Widget or Steam WB_WorldMapPopup bytecode strategies.",
+    "Drive release folder: 1xFBqd8cXNZkrfAUDCxlzA2J6mvFPanmv; file: 1i8d6071d8WRdC5chLzfgd347MXxTvBGP"
   ]
 }
