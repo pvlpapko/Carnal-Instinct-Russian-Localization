@@ -2,13 +2,13 @@
   "schema_version": "1.0",
   "edition": "Steam",
   "task": "v15_startup_async_loading_crash",
-  "status": "v15_2_text_only_isolation_uploaded_runtime_pending",
+  "status": "v15_2_text_only_runtime_pass_binary_iostore_isolated",
   "source_state_id": "steam_current_2026-10-03_16321_asset_verified_index_stale",
   "verified_game_version": "0.7.9.16321",
   "verified_build": null,
-  "current_phase": "binary_layer_isolation",
-  "last_completed_unit": "v15_2_text_only_drive_readback",
-  "next_unit": "runtime_test_v15_2_text_only",
+  "current_phase": "rebuild_binary_layer_from_current_unpacked_steam_source",
+  "last_completed_unit": "v15_2_text_only_runtime_pass",
+  "next_unit": "audit_iostore_builder_against_current_unpacked_steam_packages",
   "completed_units": [
     "v15 Steam startup failure reproduced by user; NoSteam v15 works",
     "full 71-package v15 Steam override comparison against current source completed",
@@ -39,12 +39,20 @@
     "v15.2 cleanup script removes pakchunk1015-Windows_P.utoc/.ucas before installing PAK",
     "v15.2 ZIP CRC PASS, no .utoc/.ucas entries, SHA256 05e9d58c3957c5bffc0524213e4d0c226ab5ffac97fdd1372eca1b1c6fa10a57",
     "v15.2 Drive upload/readback bytes and SHA256 PASS; file id 1sZirNX8TL2yoWE9g3IzI241p0y_QGrPo",
-    "CI_SOURCE_INDEX recheck: current source tree contains 0 stock .utoc, 0 stock .ucas, 0 stock .pak files"
+    "CI_SOURCE_INDEX recheck: current source tree contains 0 stock .utoc, 0 stock .ucas, 0 stock .pak files",
+    "USER RUNTIME PASS: Steam v15.2 TEXT_ONLY starts successfully after custom pakchunk1015 .utoc/.ucas removal",
+    "Game.locres-only PAK therefore runtime-safe on current Steam source",
+    "binary crash isolated to custom Steam IoStore/cooked override layer",
+    "live Drive readback confirms current unpacked Steam cooked source exists: RPGInventory_GameInstance.uasset 313816 bytes, embedded 0.7.9.16321, SHA256 756887fd7ef918293f74de69e5bec51f7a54c6dc43408a2e24599cfd9382e898",
+    "live Drive readback confirms WB_Master_Slider.uasset 138120 bytes from 2026-10-03 current source",
+    "live Drive readback confirms WB_CharacterScreen.uasset 22623 bytes from 2026-10-03 current source",
+    "live Drive readback confirms DLG_Tree/dmap_system/widgets/w_03_map_icon.uasset 167207 bytes, SHA256 bf60cbfa681dc042744a2fd2de2265f6fc6555ebe4f65780682f9bddc264ffda"
   ],
   "pending_units": [
-    "runtime Steam startup test with v15.2 TEXT_ONLY after confirmed deletion of pakchunk1015-Windows_P.utoc/.ucas",
-    "if v15.2 starts: rebuild binary layer only after obtaining authoritative current Steam stock IoStore container metadata",
-    "if v15.2 still crashes: isolate Game.locres vs leftover patch files and verify pristine Steam startup"
+    "audit custom IoStore builder/package-store metadata against current unpacked Steam cooked packages",
+    "rebuild the smallest binary Steam override exclusively from current 0.7.9.16321 unpacked cooked assets",
+    "runtime test minimal binary layer before restoring map/UI/quest batches",
+    "restore binary features incrementally only after each batch passes runtime"
   ],
   "source_files_used": [
     "CI_SOURCE_INDEX.json",
@@ -69,10 +77,13 @@
     "Drive readback SHA256 and ZIP CRC",
     "second crash context/minidump comparison",
     "v15.2 ZIP verified to contain no IoStore binary files",
-    "v15.2 Drive readback hash verification"
+    "v15.2 Drive readback hash verification",
+    "runtime Steam v15.2 TEXT_ONLY startup PASS reported by user",
+    "live current-source Drive byte readback for GameInstance, Master Slider, CharacterScreen and w_03_map_icon"
   ],
   "validation_pending": [
-    "runtime v15.2 TEXT_ONLY startup"
+    "runtime validation of next minimal binary IoStore rebuild",
+    "map/settings/save-load/quests/character/stats/input/death regressions after binary layer is restored"
   ],
   "notes": [
     "Static root cause: v15 inherited WB_CharacterScreen, WB_Stats_Main, WB_Stats_Full and WB_Stats_Main_Slot from an older Steam schema.",
@@ -84,6 +95,8 @@
     "Text-only fallback is bundled in the test ZIP to isolate all cooked binary overrides if the 8-package safe build still fails.",
     "v15.1 failure means the 8-package safe-current-source IoStore is still not runtime-safe; exact culprit remains one of the retained cooked packages or the custom IoStore/package-store metadata.",
     "Do not claim any Steam cooked payload compatible until v15.2 isolation passes.",
-    "Authoritative current Steam stock .utoc/.ucas/.pak are absent from the indexed source tree; this is now a proven blocker for a metadata-preserving binary rebuild if text-only succeeds."
+    "Authoritative current Steam stock .utoc/.ucas/.pak are absent from the indexed source tree; this is now a proven blocker for a metadata-preserving binary rebuild if text-only succeeds.",
+    "Correction after user clarification and live Drive verification: current Steam 0.7.9.16321 unpacked cooked assets ARE present on Drive. Only the original packed stock .utoc/.ucas/.pak containers are absent from the indexed source tree.",
+    "Absence of stock containers is not a blocker for source asset provenance. The next investigation targets custom IoStore/package-store construction because v15.1 failed even with current-source-derived assets while v15.2 PAK-only passes."
   ]
 }
