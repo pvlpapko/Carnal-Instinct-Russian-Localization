@@ -1,0 +1,43 @@
+{
+  "schema_version": "1.0",
+  "edition": "Steam",
+  "task": "v15_startup_async_loading_crash",
+  "variant": "v15.3_iostore_canary",
+  "status": "uploaded_static_validation_runtime_pending",
+  "source_state_id": "steam_current_2026-10-03_16321_asset_verified_index_stale",
+  "verified_game_version": "0.7.9.16321",
+  "purpose": "Test custom IoStore/package-store construction using one byte-identical current Steam startup package",
+  "source_verification": {
+    "package": "/Game/RPG_InventorySystem/Blueprints/SaveSystem/RPGInventory_GameInstance",
+    "mount": "Carnal_Instinct_UE5/Content/RPG_InventorySystem/Blueprints/SaveSystem/RPGInventory_GameInstance.uasset",
+    "bytes": 313816,
+    "sha256": "756887fd7ef918293f74de69e5bec51f7a54c6dc43408a2e24599cfd9382e898",
+    "embedded_game_version": "0.7.9.16321",
+    "drive_id": "1NlHv5C5CCcXMEjg3gKiZLX71dqKo1eX6",
+    "modified_time": "2026-10-03T11:49:25.623Z",
+    "modified_by_localization": false
+  },
+  "archive": {
+    "name": "Carnal_Instinct_RU_DontLook_Steam_v15.3_IOSTORE_CANARY_TEST.zip",
+    "bytes": 1132902,
+    "sha256": "74d3570a446875ad8fac2eadfdc9b4d703b0d14408100c1d50c719be75277830",
+    "zip_crc": "PASS",
+    "drive_folder_id": "182D2VOTGO0I4E1tKWcWvGuaiaTIj6Nbt",
+    "drive_file_id": "1oUh7b_89-IYZSEgJJKT7J9RjINL7zs5r",
+    "drive_readback_sha256_verified": true
+  },
+  "validation": {
+    "exact_package_readback": "PASS",
+    "utoc_ucas_meta_hashes": "PASS",
+    "runtime_tested": false
+  },
+  "interpretation": {
+    "if_boots": "IoStore construction works for this startup-loaded current package; add modified current-Steam packages in small batches.",
+    "if_crashes": "Fault is in custom IoStore/package-store construction or duplicate-package mounting semantics, not translated asset modifications."
+  },
+  "notes": [
+    "v15.2 TEXT_ONLY already user-reported startup PASS.",
+    "Current unpacked Steam cooked assets on Drive are valid source material; only original packed stock containers are absent.",
+    "The archived ci_formats.build_container helper has an argument-order defect in its directory builder call; v15 clean build used a local build_container_fixed wrapper. v15.3 also uses the corrected wrapper."
+  ]
+}
