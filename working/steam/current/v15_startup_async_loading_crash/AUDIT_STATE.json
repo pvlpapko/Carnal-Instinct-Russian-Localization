@@ -2,13 +2,13 @@
   "schema_version": "1.0",
   "edition": "Steam",
   "task": "v15_startup_async_loading_crash",
-  "status": "v15_2_text_only_runtime_pass_binary_iostore_isolated",
+  "status": "v15_3_iostore_canary_uploaded_runtime_pending",
   "source_state_id": "steam_current_2026-10-03_16321_asset_verified_index_stale",
   "verified_game_version": "0.7.9.16321",
   "verified_build": null,
-  "current_phase": "rebuild_binary_layer_from_current_unpacked_steam_source",
-  "last_completed_unit": "v15_2_text_only_runtime_pass",
-  "next_unit": "audit_iostore_builder_against_current_unpacked_steam_packages",
+  "current_phase": "iostore_builder_runtime_canary",
+  "last_completed_unit": "v15_3_single_current_gameinstance_canary_build_and_drive_readback",
+  "next_unit": "runtime_test_v15_3_iostore_canary",
   "completed_units": [
     "v15 Steam startup failure reproduced by user; NoSteam v15 works",
     "full 71-package v15 Steam override comparison against current source completed",
@@ -46,13 +46,17 @@
     "live Drive readback confirms current unpacked Steam cooked source exists: RPGInventory_GameInstance.uasset 313816 bytes, embedded 0.7.9.16321, SHA256 756887fd7ef918293f74de69e5bec51f7a54c6dc43408a2e24599cfd9382e898",
     "live Drive readback confirms WB_Master_Slider.uasset 138120 bytes from 2026-10-03 current source",
     "live Drive readback confirms WB_CharacterScreen.uasset 22623 bytes from 2026-10-03 current source",
-    "live Drive readback confirms DLG_Tree/dmap_system/widgets/w_03_map_icon.uasset 167207 bytes, SHA256 bf60cbfa681dc042744a2fd2de2265f6fc6555ebe4f65780682f9bddc264ffda"
+    "live Drive readback confirms DLG_Tree/dmap_system/widgets/w_03_map_icon.uasset 167207 bytes, SHA256 bf60cbfa681dc042744a2fd2de2265f6fc6555ebe4f65780682f9bddc264ffda",
+    "v15.3 canary built with exactly one byte-identical current Steam RPGInventory_GameInstance package plus known-good v15.2 locres PAK",
+    "v15.3 canary exact package readback PASS and UTOC/UCAS meta hashes PASS",
+    "v15.3 ZIP CRC PASS; SHA256 74d3570a446875ad8fac2eadfdc9b4d703b0d14408100c1d50c719be75277830",
+    "v15.3 Drive upload/readback exact SHA256 PASS; file id 1oUh7b_89-IYZSEgJJKT7J9RjINL7zs5r",
+    "archived ci_formats.build_container helper directory argument-order defect identified; v15 clean build and v15.3 use corrected build_container_fixed wrapper"
   ],
   "pending_units": [
-    "audit custom IoStore builder/package-store metadata against current unpacked Steam cooked packages",
-    "rebuild the smallest binary Steam override exclusively from current 0.7.9.16321 unpacked cooked assets",
-    "runtime test minimal binary layer before restoring map/UI/quest batches",
-    "restore binary features incrementally only after each batch passes runtime"
+    "runtime Steam startup test with v15.3 single-package IoStore canary",
+    "if v15.3 passes: add modified current-Steam packages in small subsystem batches",
+    "if v15.3 crashes: replace synthetic IoStore construction path; do not reintroduce binary overrides until corrected"
   ],
   "source_files_used": [
     "CI_SOURCE_INDEX.json",
@@ -64,7 +68,9 @@
     "working/steam/current/v15_startup_async_loading_crash/AUDIT_STATE.json",
     "working/steam/current/v15_startup_async_loading_crash/V16_RELEASE.json",
     "working/steam/current/v15_startup_async_loading_crash/CRASH_DIAGNOSIS_AND_V15_1_BUILD.json",
-    "CI GPT/Releases/Carnal_Instinct_RU_DontLook_Steam_v15.1_StartupCrashFix_TEST.zip"
+    "CI GPT/Releases/Carnal_Instinct_RU_DontLook_Steam_v15.1_StartupCrashFix_TEST.zip",
+    "working/steam/current/v15_startup_async_loading_crash/V15_3_IOSTORE_CANARY.json",
+    "CI GPT/Releases/SteamIoStoreCanary_2026-10-04_v15.3/Carnal_Instinct_RU_DontLook_Steam_v15.3_IOSTORE_CANARY_TEST.zip"
   ],
   "validation_completed": [
     "root-cause static schema audit",
@@ -79,11 +85,12 @@
     "v15.2 ZIP verified to contain no IoStore binary files",
     "v15.2 Drive readback hash verification",
     "runtime Steam v15.2 TEXT_ONLY startup PASS reported by user",
-    "live current-source Drive byte readback for GameInstance, Master Slider, CharacterScreen and w_03_map_icon"
+    "live current-source Drive byte readback for GameInstance, Master Slider, CharacterScreen and w_03_map_icon",
+    "v15.3 exact current-source GameInstance byte readback from custom IoStore",
+    "v15.3 Drive readback SHA256 and ZIP CRC"
   ],
   "validation_pending": [
-    "runtime validation of next minimal binary IoStore rebuild",
-    "map/settings/save-load/quests/character/stats/input/death regressions after binary layer is restored"
+    "runtime v15.3 IoStore canary startup"
   ],
   "notes": [
     "Static root cause: v15 inherited WB_CharacterScreen, WB_Stats_Main, WB_Stats_Full and WB_Stats_Main_Slot from an older Steam schema.",
