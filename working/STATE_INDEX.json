@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "updated_at": "2026-10-04T22:13:00+03:00",
+  "updated_at": "2026-10-04T22:30:00+03:00",
   "active_tasks": [
     {
       "edition": "Steam",
@@ -114,7 +114,7 @@
       "edition": "Steam",
       "task": "v15_startup_async_loading_crash",
       "state_path": "working/steam/current/v15_startup_async_loading_crash/AUDIT_STATE.json",
-      "status": "v15_2_text_only_isolation_uploaded_runtime_pending"
+      "status": "v15_2_text_only_runtime_pass_binary_iostore_isolated"
     }
   ],
   "latest_release": {
@@ -132,7 +132,7 @@
     "steam_verified_game_version": "0.7.9.16321",
     "steam_verified_build": null,
     "nosteam_baseline_build": "0.7.9.16232",
-    "runtime_validation": "Steam v16 pending; NoSteam v15 user-reported working"
+    "runtime_validation": "Steam binary payload remains unverified/unsafe; v15.2 TEXT_ONLY user-reported startup PASS; NoSteam v15 user-reported working"
   },
   "latest_test_hotfix": {
     "edition": "Steam",
@@ -141,7 +141,7 @@
     "sha256": "05e9d58c3957c5bffc0524213e4d0c226ab5ffac97fdd1372eca1b1c6fa10a57",
     "bytes": 1061338,
     "drive_file_id": "1sZirNX8TL2yoWE9g3IzI241p0y_QGrPo",
-    "runtime_validation": "pending",
+    "runtime_validation": "PASS: Steam starts successfully; custom IoStore binary layer isolated as crash source",
     "binary_iostore_overrides": "none"
   }
 }
