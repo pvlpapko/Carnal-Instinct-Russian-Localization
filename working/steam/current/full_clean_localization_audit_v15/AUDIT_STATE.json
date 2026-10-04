@@ -1,0 +1,53 @@
+{
+  "schema_version": "1.0",
+  "edition": "Steam",
+  "task": "full_clean_localization_audit_v15",
+  "status": "in_progress",
+  "source_state_id": "CI_SOURCE_INDEX_sha256:91b95dbc38b2f4ffbd3fbea35bb1e4906cec7ddb588be87a15cec17048282274",
+  "verified_game_version": null,
+  "verified_build": null,
+  "current_phase": "full_text_source_inventory",
+  "last_completed_unit": "source_index_and_v14_translation_memory_loaded",
+  "next_unit": "inventory_all_user_visible_text_sources_and_build_clean_translation_queue",
+  "completed_units": [
+    "CI_SOURCE_INDEX complete: 54909 files, 3078 folders, no traversal errors",
+    "source stock status noted: contains localization modifications; not a clean stock extraction",
+    "v14 Steam translation memory loaded: 21583 keyed rows across 1733 referenced assets",
+    "clean rebuild policy established: no patch-on-patch runtime payload"
+  ],
+  "pending_units": [
+    "inventory localization/crafting/items/containers/interactions/quests/dialogues/books/settings/save/map/UI text sources",
+    "audit untranslated and partially translated strings",
+    "review display strings versus technical identifiers",
+    "rebuild Game.locres from preserved Namespace+Key+SourceStringHash identities",
+    "build minimal current-source cooked overrides only where locres cannot affect runtime display",
+    "rebuild one clean Steam pak/utoc/ucas set",
+    "container/readback/static validation",
+    "runtime validation"
+  ],
+  "source_files_used": [
+    "CI_SOURCE_INDEX.json",
+    "CI_SOURCE_TREE.txt",
+    "v14 Steam translation.tsv",
+    "v14 Steam Game.locres"
+  ],
+  "working_files": [
+    "working/steam/current/full_clean_localization_audit_v15/AUDIT_STATE.json"
+  ],
+  "validation_completed": [
+    "source index complete flag true",
+    "source root has no proven EXE/appmanifest/Build.version; Steam BuildID not yet proven"
+  ],
+  "validation_pending": [
+    "full source coverage",
+    "translation identity audit",
+    "clean cooked-override audit",
+    "IoStore validation",
+    "runtime validation"
+  ],
+  "notes": [
+    "Final payload must not layer historical override packages.",
+    "Technical IDs, row names, paths, event/function names, bindings and save identifiers must remain unchanged.",
+    "Steam exact build/version stays null until proven from authoritative source evidence."
+  ]
+}
