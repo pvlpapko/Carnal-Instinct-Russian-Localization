@@ -2,24 +2,24 @@
   "schema_version": "1.0",
   "edition": "NoSteam",
   "task": "map_hover_full_audit_v14",
-  "status": "in_progress",
+  "status": "static_build_complete_release_packaging",
   "source_state_id": "nosteam_0.7.9.16232_baseline",
   "verified_game_version": "0.7.9",
   "verified_build": "0.7.9.16232",
-  "current_phase": "map_display_alias_audit",
-  "last_completed_unit": "v13_runtime_feedback_ingested",
-  "next_unit": "extend_matching_native_map_popup_display_cases",
+  "current_phase": "release_packaging",
+  "last_completed_unit": "nosteam_v13_payload_identity_preserved",
+  "next_unit": "final_archive_and_drive_readback",
   "completed_units": [
-    "user confirmed NoSteam has more translated map hover captions than Steam but still misses some",
-    "matching NoSteam native WB_WorldMapPopup 885/885 switch strategy remains the valid baseline",
-    "identified additional translated map/progression display aliases not covered by the 885-case historical corpus"
+    "v13 runtime feedback ingested",
+    "NoSteam 0.7.9.16232 matching payload reviewed",
+    "decision: do not mix Steam current quest/map cooked assets into NoSteam baseline",
+    "NoSteam v13 pak/utoc/ucas copied byte-identically into v14",
+    "NoSteam payload SHA-256 identity verified"
   ],
   "pending_units": [
-    "extend NoSteam popup display cases without changing gameplay identifiers",
-    "rebuild NoSteam IoStore from v13 baseline",
-    "static structural/readback validation",
-    "release packaging and Drive readback",
-    "runtime validation by user"
+    "final archive CRC/SHA-256",
+    "Drive upload/readback",
+    "runtime NoSteam regression map-hover smoke test"
   ],
   "source_files_used": [
     "v13 NoSteam 0.7.9.16232 payload",
@@ -31,16 +31,15 @@
   ],
   "validation_completed": [
     "NoSteam baseline remains 0.7.9.16232",
-    "Steam current cooked data packages will not be mixed into NoSteam baseline"
+    "Steam current cooked data packages not mixed into NoSteam baseline",
+    "NoSteam pak/utoc/ucas byte-identical to v13"
   ],
   "validation_pending": [
-    "popup roundtrip validation",
-    "IoStore validation",
-    "archive CRC/SHA-256",
+    "final archive readback",
     "runtime map hover/progression smoke test"
   ],
   "notes": [
-    "NoSteam receives only matching-source popup/display changes.",
-    "Runtime validation remains pending until user tests the built release."
+    "NoSteam v14 intentionally preserves the matching-source v13 runtime payload rather than risking cross-build binary overrides.",
+    "Runtime validation remains pending."
   ]
 }
