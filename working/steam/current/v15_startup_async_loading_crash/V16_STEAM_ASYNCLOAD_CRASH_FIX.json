@@ -1,0 +1,33 @@
+{
+  "schema_version": "1.0",
+  "release": "v16",
+  "edition": "Steam",
+  "fix": "current-source schema rebase for four stale v15 character/stats packages",
+  "source_state_id": "steam_current_2026-10-03_16321_asset_verified_index_stale",
+  "verified_game_version": "0.7.9.16321",
+  "verified_build": null,
+  "root_cause_static_evidence": {
+    "v15_schema_mismatch_count": 4,
+    "paths": [
+      "Carnal_Instinct_UE5/Content/RPG_InventorySystem/UI/Character/WB_CharacterScreen.uasset",
+      "Carnal_Instinct_UE5/Content/RPG_InventorySystem/UI/PlayerInventory/WB_Stats_Main.uasset",
+      "Carnal_Instinct_UE5/Content/RPG_InventorySystem/UI/PlayerInventory/WB_Stats_Full.uasset",
+      "Carnal_Instinct_UE5/Content/RPG_InventorySystem/UI/PlayerInventory/WB_Stats_Main_Slot.uasset"
+    ]
+  },
+  "postfix_validation": {
+    "packages": 71,
+    "all_package_names_match_current": true,
+    "all_import_lists_match_current": true,
+    "all_export_schemas_match_current": true,
+    "toc_hash_validation": "PASS",
+    "exact_named_readback": "71/71",
+    "physical_block_cover": "exact contiguous cover"
+  },
+  "files": {
+    "pak_sha256": "270dd12b1a431d5454f5ae8fdc711a5d28bc53b0f11f1b40d28e8d701093d268",
+    "utoc_sha256": "71a8b37138ae3b13aeff2348d291ed4441d1915c52552f1956cc13336caead90",
+    "ucas_sha256": "d126133094c2594582f61206ca4f2bfd53712c952443cb92ef716c7d75c887ea"
+  },
+  "runtime_tested": false
+}
