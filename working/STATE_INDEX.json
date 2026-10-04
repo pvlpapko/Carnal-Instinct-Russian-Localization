@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "updated_at": "2026-10-04T21:12:00+03:00",
+  "updated_at": "2026-10-04T21:27:00+03:00",
   "active_tasks": [
     {
       "edition": "Steam",
@@ -102,13 +102,19 @@
       "edition": "Steam",
       "task": "full_clean_localization_audit_v15",
       "state_path": "working/steam/current/full_clean_localization_audit_v15/AUDIT_STATE.json",
-      "status": "release_uploaded_static_validation_runtime_pending"
+      "status": "runtime_failed_startup_async_loading_thread"
     },
     {
       "edition": "NoSteam",
       "task": "full_clean_localization_audit_v15",
       "state_path": "working/nosteam/0.7.9.16232/full_clean_localization_audit_v15/AUDIT_STATE.json",
       "status": "release_uploaded_static_validation_runtime_pending"
+    },
+    {
+      "edition": "Steam",
+      "task": "v15_startup_async_loading_crash",
+      "state_path": "working/steam/current/v15_startup_async_loading_crash/AUDIT_STATE.json",
+      "status": "runtime_failure_confirmed_diagnosis_in_progress"
     }
   ],
   "latest_release": {
@@ -126,6 +132,6 @@
     "steam_verified_game_version": null,
     "steam_verified_build": null,
     "nosteam_baseline_build": "0.7.9.16232",
-    "runtime_validation": "pending"
+    "runtime_validation": "steam_failed_startup_async_loading_thread; nosteam_user_report_working"
   }
 }
