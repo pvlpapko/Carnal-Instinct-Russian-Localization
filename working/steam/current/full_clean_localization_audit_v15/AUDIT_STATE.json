@@ -6,9 +6,9 @@
   "source_state_id": "steam_current_live_2026-10-03_source_changed_after_index",
   "verified_game_version": null,
   "verified_build": null,
-  "current_phase": "hud_settings_save_load_direct_string_audit",
-  "last_completed_unit": "abilities_and_books_full_text_audit",
-  "next_unit": "hud_settings_save_load_main_menu_and_remaining_direct_string_audit",
+  "current_phase": "nosteam_clean_audit_and_rebuild",
+  "last_completed_unit": "steam_v15_clean_locres_and_single_iostore_build",
+  "next_unit": "nosteam_exact_identity_translation_audit_and_single-container rebuild",
   "completed_units": [
     "CI_SOURCE_INDEX complete: 54909 files, 3078 folders, no traversal errors",
     "source stock status noted: source contains localization modifications; not treated as pristine stock",
@@ -25,17 +25,22 @@
     "interactable prompts include storage/chests/loot/locks/keys/pickups/harvest/doors/levers/cages/shrines/world interactions",
     "ability/buff subsystem: 61 current assets audited, 171 FText occurrences, 169 exact; 1 changed-source Requires \"Blink\" and 1 numeric UI value",
     "books/readables subsystem: 25 current assets audited, 54/54 FText exact including UTF-16 long page bodies",
-    "all 12 current BP_Book_* source assets accounted for; stale BP_Book_Ata translation reference has no current source asset"
+    "all 12 current BP_Book_* source assets accounted for; stale BP_Book_Ata translation reference has no current source asset",
+    "v15 Steam Game.locres rebuilt from v14 technical-safe base: 5 unique current-source identities updated, 21583 entries preserved",
+    "v15 Steam translation corpus expanded to 21637 rows; 54 current-source local-fallback identities recorded",
+    "v15 quest display current-source patch: 684 display refs (48 quest titles, 267 objective titles, 264 descriptions, 105 subobjectives)",
+    "v15 Steam clean IoStore rebuilt from one selected layer: 169 inherited paths -> 70 final paths",
+    "110 old incomplete map-hover/generated overrides removed",
+    "14 v15 overlay paths integrated into the single clean container",
+    "Steam clean container full readback PASS: 70/70 package bytes exact, TOC hashes valid, physical block cover exact",
+    "Steam WB_WorldMapPopup and Neutral_Widget overrides absent"
   ],
   "pending_units": [
-    "audit HUD/inventory/vendor/crafting/character/radial/save/load/settings/main-menu direct strings",
-    "translate current-source UI display rows that are still English but safe as locres display values",
-    "resolve changed-source dialogue and ability identities",
-    "audit remaining current-source FString/FName user-visible strings outside locres",
-    "build clean Steam cooked override whitelist",
-    "rebuild one clean Steam pak/utoc/ucas payload",
-    "container/readback/static validation",
-    "separate matching-source NoSteam 0.7.9.16232 clean rebuild and validation",
+    "NoSteam exact-identity translation audit against 0.7.9.16232 baseline",
+    "NoSteam one-container clean rebuild without Steam cooked assets",
+    "NoSteam container/readback/static validation",
+    "final cross-edition remaining-English/placeholder/technical classification",
+    "installer/archive v15 rebuild and readback",
     "runtime validation"
   ],
   "source_files_used": [
@@ -62,15 +67,22 @@
     "Reports/INTERACTABLE_TEXT_AUDIT_V15.json",
     "Reports/V15_ABILITY_TEXT_AUDIT.json",
     "Reports/V15_BOOK_READABLE_AUDIT.json",
-    "Reports/V15_CURRENT_FTEXT_DELTA_UTF16.json"
+    "Reports/V15_CURRENT_FTEXT_DELTA_UTF16.json",
+    "Developer/V15_FullClean/build_v15_translation_data.py",
+    "Developer/V15_FullClean/build_clean_steam_container.py",
+    "Reports/V15_TRANSLATION_DATA_BUILD.json",
+    "Reports/V15_STEAM_CLEAN_CONTAINER_BUILD.json"
   ],
   "validation_completed": [
     "source index complete flag true",
     "Steam exact game build remains unproven from authoritative indexed executable/app manifest evidence",
-    "v15 locres reparses after write",
-    "item registry 447/447 current-source assets parsed with zero parse failures",
-    "interactable registry 96/96 current-source assets parsed with zero parse failures",
-    "technical item IDs/quest row IDs not translated"
+    "v15 locres reparses; exactly five source-hash/value identities changed, all other locres identities logically preserved",
+    "item/interactable/ability/readable audits completed",
+    "Steam clean IoStore full named-file readback 70/70",
+    "Steam IoStore TOC bad hashes 0",
+    "Steam IoStore exact physical block cover",
+    "old generated world partition map translation overrides absent",
+    "Steam crash-prone WB_WorldMapPopup and Neutral_Widget overrides absent"
   ],
   "validation_pending": [
     "remaining subsystem coverage",
