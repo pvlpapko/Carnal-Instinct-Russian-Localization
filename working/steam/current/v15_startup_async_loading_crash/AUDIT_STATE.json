@@ -2,13 +2,13 @@
   "schema_version": "1.0",
   "edition": "Steam",
   "task": "v15_startup_async_loading_crash",
-  "status": "v16_release_uploaded_static_validation_runtime_pending",
+  "status": "v15_1_test_hotfix_uploaded_static_validation_runtime_pending",
   "source_state_id": "steam_current_2026-10-03_16321_asset_verified_index_stale",
   "verified_game_version": "0.7.9.16321",
   "verified_build": null,
   "current_phase": "runtime_validation",
-  "last_completed_unit": "v16_drive_readback",
-  "next_unit": "runtime_in_game_startup_validation",
+  "last_completed_unit": "v15_1_current_source_safe_hotfix_drive_readback",
+  "next_unit": "runtime_test_v15_1_safe_current_source",
   "completed_units": [
     "v15 Steam startup failure reproduced by user; NoSteam v15 works",
     "full 71-package v15 Steam override comparison against current source completed",
@@ -21,13 +21,21 @@
     "installer Go unit tests PASS",
     "installer Windows amd64 build PASS",
     "v16 ZIP CRC PASS",
-    "v16 Drive readback SHA256 and ZIP CRC PASS"
+    "v16 Drive readback SHA256 and ZIP CRC PASS",
+    "all 71 v15 Steam cooked overrides compared byte-for-byte against current 0.7.9.16321 source",
+    "classification: 14 byte-identical current, 57 modified; 42 modified were inherited pre-v15",
+    "9 inherited packages proven structurally unsafe/current-mismatched by name-map/import comparison",
+    "v9 provenance confirmed: old Steam 0.7.9.16313 UI and four NoSteam character/stat binaries were explicitly reintroduced into Steam_current",
+    "v15.1 test hotfix rebuilt from 8 current-source-derived packages only; all stale/cross-build cooked overrides removed",
+    "v15.1 IoStore 8/8 exact named-package readback PASS; TOC hashes PASS",
+    "v15 Game.locres PAK preserved unchanged",
+    "test ZIP CRC PASS and SHA256 4c7b42ca46172348c82b77804464541d7262a655a22444aec263fceec578fee7",
+    "Drive upload/readback exact SHA256 PASS; file id 14V4Qw2UtUxc2FKiJXd7t8C2J8Z-ibUXA"
   ],
   "pending_units": [
-    "runtime Steam startup/load test",
-    "character/stats UI test",
-    "combat/input/death/saves test",
-    "quests/map hover/settings/crafting/vendor/books regression test"
+    "runtime Steam startup test with v15.1 SAFE_CURRENT_SOURCE payload",
+    "if startup passes: map, settings, save/load, quests, character/stats, crafting/vendor, combat/input/death regression",
+    "reimplement removed map-hover and legacy UI behavior only from current Steam source after runtime stability is confirmed"
   ],
   "source_files_used": [
     "CI_SOURCE_INDEX.json",
@@ -37,22 +45,31 @@
   ],
   "working_files": [
     "working/steam/current/v15_startup_async_loading_crash/AUDIT_STATE.json",
-    "working/steam/current/v15_startup_async_loading_crash/V16_RELEASE.json"
+    "working/steam/current/v15_startup_async_loading_crash/V16_RELEASE.json",
+    "working/steam/current/v15_startup_async_loading_crash/CRASH_DIAGNOSIS_AND_V15_1_BUILD.json",
+    "CI GPT/Releases/Carnal_Instinct_RU_DontLook_Steam_v15.1_StartupCrashFix_TEST.zip"
   ],
   "validation_completed": [
     "root-cause static schema audit",
     "71/71 container readback",
     "71/71 current-source schema validation",
     "installer tests/build",
-    "final archive Drive readback"
+    "final archive Drive readback",
+    "71/71 v15 Steam override vs current-source byte/schema/import audit",
+    "v15.1 safe current-source IoStore static validation",
+    "Drive readback SHA256 and ZIP CRC"
   ],
   "validation_pending": [
-    "runtime game validation"
+    "runtime Steam startup",
+    "full runtime regression after startup pass"
   ],
   "notes": [
     "Static root cause: v15 inherited WB_CharacterScreen, WB_Stats_Main, WB_Stats_Full and WB_Stats_Main_Slot from an older Steam schema.",
     "v16 release SHA256 c61b4f30b7a4e3bf95dfa005306672fe1a52e8b81d0fd2a2409ab72d71032911.",
     "Drive file ID 18eR6ykzUcKk3gF58PO3WEdVUbb0ZkW1y.",
-    "Runtime fix remains pending until tested in Steam."
+    "Runtime fix remains pending until tested in Steam.",
+    "Primary root cause class identified: v15 inherited stale/cross-build cooked Steam overrides from v9 despite current-source v15 overlay work.",
+    "v15.1 deliberately removes w_03_map_icon bytecode override and other old UI binaries; some map-hover/UI enhancements may temporarily fall back to stock behavior until rebuilt from current source.",
+    "Text-only fallback is bundled in the test ZIP to isolate all cooked binary overrides if the 8-package safe build still fails."
   ]
 }
