@@ -1,0 +1,57 @@
+{
+  "schema_version": "1.0",
+  "edition": "Steam",
+  "task": "v15_startup_async_loading_crash",
+  "status": "runtime_failure_confirmed_diagnosis_in_progress",
+  "source_state_id": "steam_current_2026-10-03_16321_asset_verified_index_stale",
+  "verified_game_version": "0.7.9.16321",
+  "verified_build": null,
+  "current_phase": "runtime_crash_root_cause_analysis",
+  "last_completed_unit": "crash_context_and_v15_payload_correlation",
+  "next_unit": "build_minimal_current_source_safe_steam_payload",
+  "completed_units": [
+    "v15 runtime failure confirmed by user: Steam crashes while NoSteam works",
+    "CrashContext parsed: EXCEPTION_ACCESS_VIOLATION reading 0xffffffffffffffff at SecondsSinceStart=0",
+    "crashed thread confirmed FAsyncLoadingThread",
+    "minidump string evidence includes /Game/RPG_InventorySystem/Blueprints/SaveSystem/RPGInventory_GameInstance",
+    "v15 Steam payload audited against v14: 14 cooked package byte changes plus Game.locres",
+    "current Drive source bytes fetched for all 14 v15 changed/new packages and hashes match recorded v15 source hashes",
+    "six inherited overridden UI packages importing RPGInventory_GameInstance identified; four are modified and two are byte-identical stock",
+    "Steam w_03_map_icon override remains executable bytecode-changing cooked asset; patched hash equals historical NoSteam translated asset and differs from current Steam source"
+  ],
+  "pending_units": [
+    "remove unnecessary/risky startup-load cooked overrides from Steam payload",
+    "rebuild clean Steam IoStore from current-source-safe subset",
+    "static package/TOC/readback validation",
+    "runtime in-game startup validation by user",
+    "after startup pass: map/settings/save/quest/combat regression validation"
+  ],
+  "source_files_used": [
+    "CrashContext(20261004-182723).runtime-xml",
+    "CrashReportClient(20261004-182723).ini",
+    "UEMinidump(20261004-182725).dmp",
+    "CI_SOURCE_INDEX.json",
+    "v15 FINAL release from CI GPT/Releases",
+    "current Drive RPGInventory_GameInstance.uasset",
+    "current Drive w_03_map_icon.uasset",
+    "current Drive v15 changed/new cooked source assets"
+  ],
+  "working_files": [
+    "working/steam/current/v15_startup_async_loading_crash/AUDIT_STATE.json"
+  ],
+  "validation_completed": [
+    "crash thread and zero-second startup timing verified from CrashContext",
+    "NoSteam runtime works per user report",
+    "v15 source hash provenance for changed/new Steam packages rechecked against current Drive bytes"
+  ],
+  "validation_pending": [
+    "runtime Steam startup after rebuilt safe payload",
+    "full regression validation"
+  ],
+  "notes": [
+    "This crash invalidates v15 Steam runtime status; v15 Steam must not be distributed as runtime-verified.",
+    "NoSteam v15 is not implicated by this crash report.",
+    "Exact Steam BuildID remains unavailable; embedded game version 0.7.9.16321 is the current source evidence.",
+    "Do not reuse old Steam cooked overrides merely because static schema checks pass; runtime failure proves those checks are insufficient."
+  ]
+}
