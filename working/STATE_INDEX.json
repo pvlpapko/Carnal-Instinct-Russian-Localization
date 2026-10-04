@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "updated_at": "2026-10-04T21:49:00+03:00",
+  "updated_at": "2026-10-04T22:13:00+03:00",
   "active_tasks": [
     {
       "edition": "Steam",
@@ -114,7 +114,7 @@
       "edition": "Steam",
       "task": "v15_startup_async_loading_crash",
       "state_path": "working/steam/current/v15_startup_async_loading_crash/AUDIT_STATE.json",
-      "status": "v15_1_test_hotfix_uploaded_static_validation_runtime_pending"
+      "status": "v15_2_text_only_isolation_uploaded_runtime_pending"
     }
   ],
   "latest_release": {
@@ -137,10 +137,11 @@
   "latest_test_hotfix": {
     "edition": "Steam",
     "task": "v15_startup_async_loading_crash",
-    "name": "Carnal_Instinct_RU_DontLook_Steam_v15.1_StartupCrashFix_TEST.zip",
-    "sha256": "4c7b42ca46172348c82b77804464541d7262a655a22444aec263fceec578fee7",
-    "bytes": 2228618,
-    "drive_file_id": "14V4Qw2UtUxc2FKiJXd7t8C2J8Z-ibUXA",
-    "runtime_validation": "pending"
+    "name": "Carnal_Instinct_RU_DontLook_Steam_v15.2_TEXT_ONLY_CrashIsolation_TEST.zip",
+    "sha256": "05e9d58c3957c5bffc0524213e4d0c226ab5ffac97fdd1372eca1b1c6fa10a57",
+    "bytes": 1061338,
+    "drive_file_id": "1sZirNX8TL2yoWE9g3IzI241p0y_QGrPo",
+    "runtime_validation": "pending",
+    "binary_iostore_overrides": "none"
   }
 }
