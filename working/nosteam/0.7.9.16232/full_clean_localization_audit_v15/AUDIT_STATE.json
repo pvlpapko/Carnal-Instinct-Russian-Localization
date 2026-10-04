@@ -2,48 +2,55 @@
   "schema_version": "1.0",
   "edition": "NoSteam",
   "task": "full_clean_localization_audit_v15",
-  "status": "in_progress",
+  "status": "release_packaging",
   "source_state_id": "nosteam_0.7.9.16232_baseline",
   "verified_game_version": "0.7.9",
   "verified_build": "0.7.9.16232",
-  "current_phase": "full_text_source_inventory",
-  "last_completed_unit": "v14_translation_memory_loaded",
-  "next_unit": "inventory_all_user_visible_text_sources_and_build_clean_translation_queue",
+  "current_phase": "final_archive_validation",
+  "last_completed_unit": "v15_clean_payload_and_installer_build",
+  "next_unit": "final_zip_hash_crc_drive_readback",
   "completed_units": [
     "NoSteam baseline fixed at 0.7.9.16232",
-    "v14 NoSteam translation memory loaded: 19485 keyed rows across 1717 referenced assets",
-    "clean rebuild policy established: no Steam-current cooked assets mixed into 0.7.9.16232 baseline"
+    "NoSteam translation/locres exact identities: 19486/19486",
+    "common reviewed display fixes integrated without changing technical identities",
+    "remaining equal-English classification review_needed=0",
+    "matching-source NoSteam cooked payload selected once and rebuilt into one clean IoStore",
+    "Steam-current cooked overlay intersection=0",
+    "matching-source WB_WorldMapPopup preserved",
+    "matching-source w_03 map icon preserved SHA256 5c7ec711eb3599ff3f67d45c5967c3a79e15008b866830e2eb4a3cc0889a1c08",
+    "NoSteam clean IoStore rebuilt: 71 packages",
+    "NoSteam 71/71 exact byte readback PASS",
+    "NoSteam TOC hash validation PASS and exact physical block cover",
+    "installer embeds NoSteam 0.7.9.16232 separately from Steam_current"
   ],
   "pending_units": [
-    "inventory localization/crafting/items/containers/interactions/quests/dialogues/books/settings/save/map/UI text sources",
-    "audit untranslated and partially translated strings",
-    "review display strings versus technical identifiers",
-    "rebuild Game.locres preserving original identities",
-    "build matching-source cooked overrides only where locres cannot affect runtime display",
-    "rebuild one clean NoSteam pak/utoc/ucas set",
-    "container/readback/static validation",
-    "runtime validation"
+    "final release archive SHA-256 and ZIP CRC/readback",
+    "Drive upload and readback",
+    "runtime NoSteam regression validation"
   ],
   "source_files_used": [
-    "v14 NoSteam translation.tsv",
-    "v14 NoSteam Game.locres",
-    "matching NoSteam 0.7.9.16232 historical source references"
+    "matching NoSteam 0.7.9.16232 v14 source-native payload",
+    "NoSteam translation.tsv",
+    "NoSteam Game.locres"
   ],
   "working_files": [
-    "working/nosteam/0.7.9.16232/full_clean_localization_audit_v15/AUDIT_STATE.json"
+    "Developer/V15_FullClean/",
+    "Reports/V15_FULL_LOCALIZATION_AUDIT.json",
+    "Reports/V15_NOSTEAM_CLEAN_CONTAINER_BUILD.json",
+    "Reports/V15_REMAINING_ENGLISH_CLASSIFICATION.json"
   ],
   "validation_completed": [
-    "NoSteam baseline identity retained"
+    "NoSteam locres/TSV 19486/19486 exact identity/value consistency",
+    "matching-source cooked payload only",
+    "clean NoSteam IoStore exact readback 71/71",
+    "Steam-current cooked payload isolation PASS"
   ],
   "validation_pending": [
-    "full source coverage",
-    "translation identity audit",
-    "matching-source cooked override audit",
-    "IoStore validation",
-    "runtime validation"
+    "final archive readback",
+    "runtime game validation"
   ],
   "notes": [
-    "NoSteam payload must be built separately from Steam.",
-    "Technical IDs, row names, paths, event/function names, bindings and save identifiers must remain unchanged."
+    "NoSteam 0.7.9.16232 remains a separate matching-source payload.",
+    "NoSteam 0.7.9.16313/16315+ installer option uses Steam_current by design and does not alter this baseline."
   ]
 }
