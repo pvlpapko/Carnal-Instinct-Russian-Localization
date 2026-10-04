@@ -21,9 +21,9 @@
   "source_index_sha256": "91b95dbc38b2f4ffbd3fbea35bb1e4906cec7ddb588be87a15cec17048282274",
   "source_tree_sha256": "f12967fe7bd1c3729caa285519b2acc0059959214bf1f453aefe6437b8fbfef3",
   "source_stock_status": "contains localization modifications; not a clean stock game extraction",
-  "binary_compatibility": "v13 audited UI/display runtime plus current-source map data FText overrides; no Steam map widget bytecode override; runtime validation pending",
-  "ui_override_compatibility": "v13 map: 102 current 0.7.9.16321 generated map packages + current e_mapreturn_types, display FText source fallback only; WB_WorldMapPopup/Neutral_Widget game-owned",
-  "last_source_check_at": "2026-10-03T22:07:00Z",
+  "binary_compatibility": "v16 Steam current-schema hotfix: 71/71 override packages validated against current 0.7.9.16321 source package/import/export schema; runtime validation pending",
+  "ui_override_compatibility": "v16: stale WB_CharacterScreen/WB_Stats_Main/WB_Stats_Full/WB_Stats_Main_Slot overrides rebased to current source schema; map widget bytecode overrides remain absent; current-source w_03 display localizer retained",
+  "last_source_check_at": "2026-10-04T18:45:00Z",
   "evidence": [
     "current Google Drive RPGInventory_GameInstance.uasset raw bytes",
     "embedded ASCII version 0.7.9.16321 at byte offset 313692",
@@ -35,6 +35,7 @@
     "v11 invalid: Neutral_Widget undefined opcode 0x74 on Map.",
     "v12 invalid: Map opens but first marker hover crashes with access violation writing 0x0.",
     "v13 removes all Steam map translation bytecode. Only current-source display FText fallback data is changed by exact original Key+English pair.",
-    "Global CI_SOURCE_INDEX refresh remains pending; all v13 map target packages were fetched directly from current Drive bytes."
+    "Global CI_SOURCE_INDEX refresh remains pending; all v13 map target packages were fetched directly from current Drive bytes.",
+    "v15 Steam startup failed in FAsyncLoadingThread; v16 replaced four stale character/stats package schemas and passed 71/71 static source-schema validation. Runtime retest pending."
   ]
 }
