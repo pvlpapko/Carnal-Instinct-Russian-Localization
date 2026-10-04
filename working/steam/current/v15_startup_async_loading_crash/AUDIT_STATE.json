@@ -2,13 +2,13 @@
   "schema_version": "1.0",
   "edition": "Steam",
   "task": "v15_startup_async_loading_crash",
-  "status": "v15_1_test_hotfix_uploaded_static_validation_runtime_pending",
+  "status": "v15_2_text_only_isolation_uploaded_runtime_pending",
   "source_state_id": "steam_current_2026-10-03_16321_asset_verified_index_stale",
   "verified_game_version": "0.7.9.16321",
   "verified_build": null,
-  "current_phase": "runtime_validation",
-  "last_completed_unit": "v15_1_current_source_safe_hotfix_drive_readback",
-  "next_unit": "runtime_test_v15_1_safe_current_source",
+  "current_phase": "binary_layer_isolation",
+  "last_completed_unit": "v15_2_text_only_drive_readback",
+  "next_unit": "runtime_test_v15_2_text_only",
   "completed_units": [
     "v15 Steam startup failure reproduced by user; NoSteam v15 works",
     "full 71-package v15 Steam override comparison against current source completed",
@@ -30,12 +30,21 @@
     "v15.1 IoStore 8/8 exact named-package readback PASS; TOC hashes PASS",
     "v15 Game.locres PAK preserved unchanged",
     "test ZIP CRC PASS and SHA256 4c7b42ca46172348c82b77804464541d7262a655a22444aec263fceec578fee7",
-    "Drive upload/readback exact SHA256 PASS; file id 14V4Qw2UtUxc2FKiJXd7t8C2J8Z-ibUXA"
+    "Drive upload/readback exact SHA256 PASS; file id 14V4Qw2UtUxc2FKiJXd7t8C2J8Z-ibUXA",
+    "v15.1 runtime failed: EXCEPTION_ACCESS_VIOLATION writing 0x000001d603ea5980 at SecondsSinceStart=0",
+    "second crash confirmed again on FAsyncLoadingThread",
+    "v15.1 and v15 crashes share the same UE loader call sequence after ASLR normalization; v15.1 adds a VCRUNTIME140 frame but does not leave the failing async-load phase",
+    "second minidump again contains /Game/RPG_InventorySystem/Blueprints/SaveSystem/RPGInventory_GameInstance",
+    "v15.2 TEXT_ONLY package built with zero .utoc/.ucas files; only Game.locres PAK retained",
+    "v15.2 cleanup script removes pakchunk1015-Windows_P.utoc/.ucas before installing PAK",
+    "v15.2 ZIP CRC PASS, no .utoc/.ucas entries, SHA256 05e9d58c3957c5bffc0524213e4d0c226ab5ffac97fdd1372eca1b1c6fa10a57",
+    "v15.2 Drive upload/readback bytes and SHA256 PASS; file id 1sZirNX8TL2yoWE9g3IzI241p0y_QGrPo",
+    "CI_SOURCE_INDEX recheck: current source tree contains 0 stock .utoc, 0 stock .ucas, 0 stock .pak files"
   ],
   "pending_units": [
-    "runtime Steam startup test with v15.1 SAFE_CURRENT_SOURCE payload",
-    "if startup passes: map, settings, save/load, quests, character/stats, crafting/vendor, combat/input/death regression",
-    "reimplement removed map-hover and legacy UI behavior only from current Steam source after runtime stability is confirmed"
+    "runtime Steam startup test with v15.2 TEXT_ONLY after confirmed deletion of pakchunk1015-Windows_P.utoc/.ucas",
+    "if v15.2 starts: rebuild binary layer only after obtaining authoritative current Steam stock IoStore container metadata",
+    "if v15.2 still crashes: isolate Game.locres vs leftover patch files and verify pristine Steam startup"
   ],
   "source_files_used": [
     "CI_SOURCE_INDEX.json",
@@ -57,11 +66,13 @@
     "final archive Drive readback",
     "71/71 v15 Steam override vs current-source byte/schema/import audit",
     "v15.1 safe current-source IoStore static validation",
-    "Drive readback SHA256 and ZIP CRC"
+    "Drive readback SHA256 and ZIP CRC",
+    "second crash context/minidump comparison",
+    "v15.2 ZIP verified to contain no IoStore binary files",
+    "v15.2 Drive readback hash verification"
   ],
   "validation_pending": [
-    "runtime Steam startup",
-    "full runtime regression after startup pass"
+    "runtime v15.2 TEXT_ONLY startup"
   ],
   "notes": [
     "Static root cause: v15 inherited WB_CharacterScreen, WB_Stats_Main, WB_Stats_Full and WB_Stats_Main_Slot from an older Steam schema.",
@@ -70,6 +81,9 @@
     "Runtime fix remains pending until tested in Steam.",
     "Primary root cause class identified: v15 inherited stale/cross-build cooked Steam overrides from v9 despite current-source v15 overlay work.",
     "v15.1 deliberately removes w_03_map_icon bytecode override and other old UI binaries; some map-hover/UI enhancements may temporarily fall back to stock behavior until rebuilt from current source.",
-    "Text-only fallback is bundled in the test ZIP to isolate all cooked binary overrides if the 8-package safe build still fails."
+    "Text-only fallback is bundled in the test ZIP to isolate all cooked binary overrides if the 8-package safe build still fails.",
+    "v15.1 failure means the 8-package safe-current-source IoStore is still not runtime-safe; exact culprit remains one of the retained cooked packages or the custom IoStore/package-store metadata.",
+    "Do not claim any Steam cooked payload compatible until v15.2 isolation passes.",
+    "Authoritative current Steam stock .utoc/.ucas/.pak are absent from the indexed source tree; this is now a proven blocker for a metadata-preserving binary rebuild if text-only succeeds."
   ]
 }
