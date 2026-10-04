@@ -1,0 +1,119 @@
+{
+  "schema_version": "1.0",
+  "edition": "Steam",
+  "source_state_id": "steam_current_2026-10-03_16321_asset_verified_index_stale",
+  "verified_game_version": "0.7.9.16321",
+  "verified_build": null,
+  "crash": {
+    "exception": "EXCEPTION_ACCESS_VIOLATION reading address 0xffffffffffffffff",
+    "seconds_since_start": 0,
+    "thread": "FAsyncLoadingThread",
+    "minidump_string": "/Game/RPG_InventorySystem/Blueprints/SaveSystem/RPGInventory_GameInstance"
+  },
+  "v15_current_source_comparison": {
+    "steam_override_packages": 71,
+    "byte_identical_to_current_source": 14,
+    "modified": 57,
+    "inherited_modified_from_pre_v15": 42,
+    "v15_current_source_overlays": 15,
+    "structurally_high_risk_inherited": 9,
+    "high_risk_examples": [
+      [
+        "WB_Master_Slider.uasset",
+        138120,
+        40244,
+        "name-map/source mismatch"
+      ],
+      [
+        "WB_Master_KeyMapper.uasset",
+        171228,
+        73352,
+        "name-map/source mismatch"
+      ],
+      [
+        "WB_Master_OptionSwitcher.uasset",
+        172558,
+        74702,
+        "name-map/source mismatch"
+      ],
+      [
+        "WB_Master_Toggler.uasset",
+        122725,
+        24849,
+        "name-map/source mismatch"
+      ],
+      [
+        "W_MenuItem.uasset",
+        52591,
+        33389,
+        "name-map/source mismatch"
+      ],
+      [
+        "WB_Stats_Main_Slot.uasset",
+        35411,
+        34922,
+        "imports/name-map differ from current Steam"
+      ],
+      [
+        "WB_Stats_Main.uasset",
+        42273,
+        46477,
+        "imports/name-map differ from current Steam"
+      ],
+      [
+        "WB_Stats_Full.uasset",
+        123541,
+        124607,
+        "imports/name-map differ from current Steam"
+      ],
+      [
+        "WB_CharacterScreen.uasset",
+        22623,
+        26138,
+        "imports/name-map differ from current Steam"
+      ]
+    ],
+    "provenance_findings": [
+      "v9 build explicitly restored cooked Steam 0.7.9.16313 UI assets into Steam_current",
+      "v9 build explicitly copied four NoSteam character/stat packages into Steam_current",
+      "v15 inherited these assets through v14; v15 static readback validated the rebuilt container bytes but did not prove current Steam package compatibility"
+    ]
+  },
+  "v15_1_test_hotfix": {
+    "strategy": "discard all inherited cooked overrides; retain only eight current-source-derived packages plus unchanged v15 Game.locres",
+    "package_count": 8,
+    "retained": [
+      "quest_list.uasset",
+      "quest_objectives.uasset",
+      "quest_sub_objectives.uasset",
+      "Essence_Tier_1_Small.uasset",
+      "loc_dlg_bored_anubite.uasset",
+      "WB_QuestName.uasset",
+      "WB_CharacterScreen.uasset",
+      "WB_Stats_Main.uasset"
+    ],
+    "removed": [
+      "all Steam 0.7.9.16313 inherited cooked UI",
+      "all NoSteam-derived Steam character/stat cooked assets",
+      "w_03_map_icon bytecode override",
+      "all stock-byte-identical cooked overrides"
+    ],
+    "validation": {
+      "named_package_readback": "8/8 exact",
+      "toc_hashes": "PASS",
+      "package_mount_identity": "PASS",
+      "source_import_identity": "PASS for retained packages",
+      "zip_crc": "PASS",
+      "zip_sha256": "4c7b42ca46172348c82b77804464541d7262a655a22444aec263fceec578fee7",
+      "zip_bytes": 2228618,
+      "drive_readback_sha256": "4c7b42ca46172348c82b77804464541d7262a655a22444aec263fceec578fee7",
+      "runtime_tested": false
+    },
+    "drive": {
+      "file_id": "14V4Qw2UtUxc2FKiJXd7t8C2J8Z-ibUXA",
+      "parent_folder_id": "1xFBqd8cXNZkrfAUDCxlzA2J6mvFPanmv",
+      "file_name": "Carnal_Instinct_RU_DontLook_Steam_v15.1_StartupCrashFix_TEST.zip"
+    }
+  },
+  "conclusion": "v15 Steam runtime failure is consistent with inherited stale/cross-build cooked package compatibility, not the v15 Game.locres. NoSteam working is consistent with those binaries matching the NoSteam baseline."
+}
