@@ -2,51 +2,69 @@
   "schema_version": "1.0",
   "edition": "Steam",
   "task": "map_hover_full_audit_v14",
-  "status": "in_progress",
-  "source_state_id": "steam_current_2026-10-03_16321_asset_verified_index_stale",
-  "verified_game_version": "0.7.9.16321",
-  "verified_build": null,
-  "current_phase": "map_display_source_audit",
-  "last_completed_unit": "v13_runtime_feedback_ingested",
-  "next_unit": "patch_display_data_without_map_widget_bytecode",
+  "status": "static_build_complete_release_packaging",
+  "source_state_id": "CI_SOURCE_INDEX_sha256:91b95dbc38b2f4ffbd3fbea35bb1e4906cec7ddb588be87a15cec17048282274",
+  "verified_game_version": {"Steam": null, "Steam_embedded_asset_version": "0.7.9.16315", "NoSteam": "0.7.9"},
+  "verified_build": {"Steam": null, "NoSteam": "0.7.9.16232"},
+  "current_phase": "release_packaging",
+  "last_completed_unit": "v14_container_installer_static_validation",
+  "next_unit": "final_archive_and_drive_readback",
   "completed_units": [
-    "user confirmed v13 Map opens",
-    "user confirmed most hover captions remain untranslated",
-    "v10-v12 Steam runtime-failed map widget bytecode strategies remain invalidated",
-    "audited current map architecture: Neutral_Widget consumes Main Text/Sub Text FText from Map_Return_BP; ReturnTypes remains a technical Name",
-    "identified quest_list, quest_objectives and quest_sub_objectives as DataTable-backed map/quest display producers with separate technical q_/marker identifiers",
-    "established safe strategy: preserve technical identifiers and export payload indices; localize display-only NameMap values plus exact FText source pairs"
+    "full current source index read",
+    "v13 static map data retained",
+    "current quest_list display FName audit",
+    "current quest_objectives display FName audit",
+    "current quest_sub_objectives display FName audit",
+    "map-specific exact FText audit",
+    "482 quest display FName refs patched by field-aware rules",
+    "25 exact display FText occurrences patched",
+    "Steam IoStore rebuild",
+    "10 patched assets exact-readback from rebuilt Steam container",
+    "Steam directory 169 paths and physical block cover exact",
+    "Steam WB_WorldMapPopup override absent",
+    "Steam Neutral_Widget override absent",
+    "forbidden gameplay override scan empty",
+    "installer rebuild",
+    "installer Go unit tests PASS"
   ],
   "pending_units": [
-    "build patched Steam display data packages",
-    "rebuild Steam IoStore from v13 baseline",
-    "static structural/readback validation",
-    "release packaging and Drive readback",
-    "runtime validation by user"
+    "final archive CRC/SHA-256",
+    "Drive upload/readback",
+    "in-game Steam map hover validation across early and late quest states"
   ],
   "source_files_used": [
     "CI_SOURCE_INDEX.json",
-    "CI_SOURCE_TREE.txt",
-    "v13 release payload/reports",
-    "current Steam map/quest source packages fetched from Drive"
+    "Steam_current translation.tsv",
+    "current source quest_list.uasset",
+    "current source quest_objectives.uasset",
+    "current source quest_sub_objectives.uasset",
+    "current source map UI/dmap assets",
+    "v13 payload"
   ],
   "working_files": [
-    "working/steam/current/map_hover_full_audit_v14/AUDIT_STATE.json"
+    "Developer/V14_MapHoverFullAudit/patch_v14_map_hover.py",
+    "Developer/V14_MapHoverFullAudit/build_v14.py",
+    "Reports/MAP_HOVER_FULL_AUDIT_V14.json",
+    "Reports/MAP_HOVER_COVERAGE_V14.json",
+    "Reports/V14_PAYLOAD_REPORT.json",
+    "Reports/V14_STEAM_VALIDATION.json"
   ],
   "validation_completed": [
-    "v13 Steam WB_WorldMapPopup and Neutral_Widget overrides absent",
-    "current Steam game version evidence 0.7.9.16321; exact Steam BuildID unavailable",
-    "884 unique case-insensitive map-caption labels audited",
-    "current quest DataTables expose technical q_/marker names separately from human display captions"
+    "source index complete flag confirmed",
+    "direct safe data coverage 577/584 Steam map-marker strings",
+    "retained current-schema w_03 map localization handles the remaining synthetic/notification cases without reintroducing map-widget VM overrides",
+    "targeted patched-asset container readback 10/10",
+    "NoSteam package payload left byte-identical to v13",
+    "installer go test PASS",
+    "installer x64 Windows build PASS"
   ],
   "validation_pending": [
-    "IoStore validation",
-    "archive CRC/SHA-256",
-    "runtime map hover/progression smoke test"
+    "full per-chunk BLAKE3 rehash not rerun; builder emitted chunk metadata and targeted exact readback passed",
+    "final archive readback",
+    "game runtime validation"
   ],
   "notes": [
-    "Do not reintroduce Steam WB_WorldMapPopup or Neutral_Widget ExecuteUbergraph overrides.",
-    "Do not rename technical q_/npc_/marker_/path identifiers.",
-    "Runtime validation remains pending until user tests the built release."
+    "Steam BuildID/ProductVersion cannot be proven from indexed source snapshot; only embedded asset version 0.7.9.16315 is observed.",
+    "Do not reintroduce Steam WB_WorldMapPopup or Neutral_Widget ExecuteUbergraph overrides."
   ]
 }
