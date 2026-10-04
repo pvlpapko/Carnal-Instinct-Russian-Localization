@@ -1,0 +1,22 @@
+{
+  "schema_version": "1.0",
+  "release": "v16",
+  "status": "static_validation_complete_runtime_pending",
+  "root_cause": "four stale Steam character/stats cooked packages had import/export schemas incompatible with current source",
+  "verified_game_version": "0.7.9.16321",
+  "corrected_packages": [
+    "WB_CharacterScreen.uasset",
+    "WB_Stats_Main.uasset",
+    "WB_Stats_Full.uasset",
+    "WB_Stats_Main_Slot.uasset"
+  ],
+  "steam_schema_validation": "71/71",
+  "steam_exact_readback": "71/71",
+  "installer_tests": "PASS",
+  "installer_windows_amd64_build": "PASS",
+  "archive_sha256": "c61b4f30b7a4e3bf95dfa005306672fe1a52e8b81d0fd2a2409ab72d71032911",
+  "drive_file_id": "18eR6ykzUcKk3gF58PO3WEdVUbb0ZkW1y",
+  "drive_readback_sha256_verified": true,
+  "drive_zip_crc_verified": true,
+  "runtime_tested": false
+}
