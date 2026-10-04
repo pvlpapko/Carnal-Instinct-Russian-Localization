@@ -6,9 +6,9 @@
   "source_state_id": "steam_current_live_2026-10-03_source_changed_after_index",
   "verified_game_version": null,
   "verified_build": null,
-  "current_phase": "abilities_ui_books_and_direct_string_audit",
-  "last_completed_unit": "items_and_interactables_full_text_audit",
-  "next_unit": "abilities_statuses_books_notes_hud_save_settings_direct_string_audit",
+  "current_phase": "hud_settings_save_load_direct_string_audit",
+  "last_completed_unit": "abilities_and_books_full_text_audit",
+  "next_unit": "hud_settings_save_load_main_menu_and_remaining_direct_string_audit",
   "completed_units": [
     "CI_SOURCE_INDEX complete: 54909 files, 3078 folders, no traversal errors",
     "source stock status noted: source contains localization modifications; not treated as pristine stock",
@@ -22,12 +22,15 @@
     "item subsystem complete: 447/447 current item assets downloaded and parsed, 1009 FText occurrences audited, 1006 global exact + 3 local conflict fallbacks",
     "item NameMap audit found no additional human display labels",
     "interactable subsystem complete: 96/96 current assets downloaded and parsed, 179/179 FText occurrences exact",
-    "interactable prompts include storage/chests/loot/locks/keys/pickups/harvest/doors/levers/cages/shrines/world interactions"
+    "interactable prompts include storage/chests/loot/locks/keys/pickups/harvest/doors/levers/cages/shrines/world interactions",
+    "ability/buff subsystem: 61 current assets audited, 171 FText occurrences, 169 exact; 1 changed-source Requires \"Blink\" and 1 numeric UI value",
+    "books/readables subsystem: 25 current assets audited, 54/54 FText exact including UTF-16 long page bodies",
+    "all 12 current BP_Book_* source assets accounted for; stale BP_Book_Ata translation reference has no current source asset"
   ],
   "pending_units": [
-    "audit abilities/skills/statuses/buffs and resolve Blackfall direct-string use",
-    "audit books/notes/lore readable content",
     "audit HUD/inventory/vendor/crafting/character/radial/save/load/settings/main-menu direct strings",
+    "translate current-source UI display rows that are still English but safe as locres display values",
+    "resolve changed-source dialogue and ability identities",
     "audit remaining current-source FString/FName user-visible strings outside locres",
     "build clean Steam cooked override whitelist",
     "rebuild one clean Steam pak/utoc/ucas payload",
@@ -56,7 +59,10 @@
     "Reports/V15_FTEXT_CONFLICT_FALLBACKS.json",
     "Reports/ITEM_FTEXT_COVERAGE_V15.json",
     "Reports/ITEM_NAMEMAP_REVIEW_V15.json",
-    "Reports/INTERACTABLE_TEXT_AUDIT_V15.json"
+    "Reports/INTERACTABLE_TEXT_AUDIT_V15.json",
+    "Reports/V15_ABILITY_TEXT_AUDIT.json",
+    "Reports/V15_BOOK_READABLE_AUDIT.json",
+    "Reports/V15_CURRENT_FTEXT_DELTA_UTF16.json"
   ],
   "validation_completed": [
     "source index complete flag true",
