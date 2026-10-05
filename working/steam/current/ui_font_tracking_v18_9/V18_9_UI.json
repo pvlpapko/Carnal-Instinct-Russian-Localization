@@ -1,0 +1,410 @@
+{
+  "release": "18.9",
+  "runtime_tested": false,
+  "assets": [
+    {
+      "source_sha256": "75ac6569b3b3478aada3db9b8182d661216751bffd7c8e763a4ef3095203109c",
+      "patched_sha256": "8bfaf8b4840793dbcd8851090484cd89dc5fecb33411e97a71b3fb1b33928811",
+      "source_header": 3695,
+      "patched_header": 3695,
+      "source_exports": 18,
+      "patched_exports": 18,
+      "changed_exports": [
+        11
+      ],
+      "evidence": [
+        {
+          "export": "T_SubHeadline",
+          "field": "Font",
+          "old": {
+            "FontObject": -38,
+            "OutlineSettings": {
+              "OutlineSize": 1,
+              "bApplyOutlineToDropShadows": 1,
+              "OutlineColor": [
+                0.0,
+                0.0,
+                0.0,
+                0.5
+              ]
+            },
+            "TypefaceFontName": "FF_BarlowCondensed-SemiBold",
+            "Size": 32.0,
+            "LetterSpacing": 0
+          },
+          "new": {
+            "FontObject": -38,
+            "OutlineSettings": {
+              "OutlineSize": 1,
+              "bApplyOutlineToDropShadows": 1,
+              "OutlineColor": [
+                0.0,
+                0.0,
+                0.0,
+                0.5
+              ]
+            },
+            "TypefaceFontName": "FF_BarlowCondensed-SemiBold",
+            "Size": 16.0,
+            "LetterSpacing": 0
+          }
+        },
+        {
+          "export": "T_SubHeadline",
+          "field": "Justification",
+          "old": 1,
+          "new": 0
+        }
+      ],
+      "name": "WB_T3_SubHeadline",
+      "edition": "Steam_current",
+      "mount": "Carnal_Instinct_UE5/Content/NiceSettingsMenu/UI/Theme_3/WB_T3_SubHeadline.uasset"
+    },
+    {
+      "source_sha256": "6e676ac380c26d382f08471e7438d1f48b9c8c85c1b112af22e3c77811272975",
+      "patched_sha256": "54f37c2341de21588f8412957747a005d29d9a7110f6508a90c99be46bb2ff9a",
+      "source_header": 40168,
+      "patched_header": 40168,
+      "source_exports": 149,
+      "patched_exports": 149,
+      "changed_exports": [
+        85,
+        86
+      ],
+      "evidence": [
+        {
+          "export": "ObjectivesText",
+          "field": "Font",
+          "old": {
+            "FontObject": -122,
+            "OutlineSettings": {
+              "OutlineSize": 1,
+              "OutlineColor": [
+                0.0,
+                0.0,
+                0.0,
+                0.5
+              ]
+            },
+            "TypefaceFontName": "Barlow-SemiBold",
+            "Size": 22.0,
+            "LetterSpacing": 0
+          },
+          "new": {
+            "FontObject": -122,
+            "OutlineSettings": {
+              "OutlineSize": 1,
+              "OutlineColor": [
+                0.0,
+                0.0,
+                0.0,
+                0.5
+              ]
+            },
+            "TypefaceFontName": "Barlow-SemiBold",
+            "Size": 18.0,
+            "LetterSpacing": 0
+          }
+        },
+        {
+          "export": "ObjectivesText_1",
+          "field": "Font",
+          "old": {
+            "FontObject": -122,
+            "OutlineSettings": {
+              "OutlineSize": 1,
+              "OutlineColor": [
+                0.0,
+                0.0,
+                0.0,
+                0.5
+              ]
+            },
+            "TypefaceFontName": "Barlow-SemiBold",
+            "Size": 22.0,
+            "LetterSpacing": 0
+          },
+          "new": {
+            "FontObject": -122,
+            "OutlineSettings": {
+              "OutlineSize": 1,
+              "OutlineColor": [
+                0.0,
+                0.0,
+                0.0,
+                0.5
+              ]
+            },
+            "TypefaceFontName": "Barlow-SemiBold",
+            "Size": 18.0,
+            "LetterSpacing": 0
+          }
+        }
+      ],
+      "name": "WB_QuestScreen",
+      "edition": "Steam_current",
+      "mount": "Carnal_Instinct_UE5/Content/RPG_InventorySystem/UI/Quests/WB_QuestScreen.uasset"
+    },
+    {
+      "source_sha256": "7c62376368f3a18771b9c0914ea1a0620ce67f5683c3168da6d5f2ec7dfd1ce3",
+      "patched_sha256": "6428bba3495ef042fb70cf4fae88b4f50a31bf3a70b7664cee7af7f6d344bd92",
+      "source_header": 12739,
+      "patched_header": 12739,
+      "source_exports": 12,
+      "patched_exports": 12,
+      "changed_exports": [
+        6,
+        8
+      ],
+      "evidence": [
+        {
+          "export": "Text_ObjectiveName",
+          "field": "Font",
+          "old": {
+            "FontObject": -35,
+            "OutlineSettings": {
+              "OutlineSize": 1,
+              "bApplyOutlineToDropShadows": 1,
+              "OutlineColor": [
+                0.0,
+                0.0,
+                0.0,
+                0.5
+              ]
+            },
+            "TypefaceFontName": "FF_BarlowCondensed-Regular",
+            "Size": 20.0
+          },
+          "new": {
+            "FontObject": -35,
+            "OutlineSettings": {
+              "OutlineSize": 1,
+              "bApplyOutlineToDropShadows": 1,
+              "OutlineColor": [
+                0.0,
+                0.0,
+                0.0,
+                0.5
+              ]
+            },
+            "TypefaceFontName": "FF_BarlowCondensed-Regular",
+            "Size": 16.0,
+            "LetterSpacing": 0
+          }
+        },
+        {
+          "export": "SizeBox_63",
+          "field": "WidthOverride",
+          "old": 32.0,
+          "new": 24.0
+        },
+        {
+          "export": "SizeBox_63",
+          "field": "HeightOverride",
+          "old": 32.0,
+          "new": 24.0
+        }
+      ],
+      "name": "WB_QuestObjectiveName",
+      "edition": "Steam_current",
+      "mount": "Carnal_Instinct_UE5/Content/RPG_InventorySystem/UI/Quests/WB_QuestObjectiveName.uasset"
+    },
+    {
+      "source_sha256": "9ccbfdea4e7efe9913c15171b648f37f45f1a443cee91b454fce7c4d0d0b59f0",
+      "patched_sha256": "fa4ea192031ad34a30f640bc1809b6427754ce5575c6584b7f5861a762dab1e4",
+      "source_header": 35732,
+      "patched_header": 35732,
+      "source_exports": 6,
+      "patched_exports": 6,
+      "changed_exports": [
+        2
+      ],
+      "evidence": [
+        {
+          "export": "Text_ObjectiveName",
+          "field": "Font",
+          "old": {
+            "FontObject": -23,
+            "OutlineSettings": {
+              "OutlineSize": 1,
+              "bApplyOutlineToDropShadows": 1,
+              "OutlineColor": [
+                0.0,
+                0.0,
+                0.0,
+                0.5
+              ]
+            },
+            "TypefaceFontName": "FF_BarlowCondensed-Regular",
+            "Size": 20.0
+          },
+          "new": {
+            "FontObject": -23,
+            "OutlineSettings": {
+              "OutlineSize": 1,
+              "bApplyOutlineToDropShadows": 1,
+              "OutlineColor": [
+                0.0,
+                0.0,
+                0.0,
+                0.5
+              ]
+            },
+            "TypefaceFontName": "FF_BarlowCondensed-Regular",
+            "Size": 16.0,
+            "LetterSpacing": 0
+          }
+        }
+      ],
+      "name": "WB_QuestObjectiveDescription",
+      "edition": "Steam_current",
+      "mount": "Carnal_Instinct_UE5/Content/RPG_InventorySystem/UI/Quests/WB_QuestObjectiveDescription.uasset"
+    },
+    {
+      "source_sha256": "2b99091627fa4ece78e766f0afecd38a22169c72862ed3b56b0ff59d7715eced",
+      "patched_sha256": "6456f9bcd466c2ce892086471b8d142c56184ff2d718f6f5c6aaf3bb562afdcc",
+      "source_header": 13222,
+      "patched_header": 13222,
+      "source_exports": 49,
+      "patched_exports": 49,
+      "changed_exports": [
+        1,
+        33,
+        35,
+        36
+      ],
+      "evidence": [
+        {
+          "export": "Checkbox_Tracked",
+          "field": "WidgetStyle",
+          "old": {
+            "UncheckedImage": {
+              "DrawAs": 0,
+              "ImageSize": [
+                64.0,
+                64.0
+              ]
+            },
+            "UncheckedHoveredImage": {
+              "DrawAs": 0
+            },
+            "UncheckedPressedImage": {
+              "DrawAs": 0
+            },
+            "CheckedImage": {
+              "ImageSize": [
+                64.0,
+                64.0
+              ],
+              "ResourceObject": -122
+            },
+            "Padding": {
+              "Left": 0
+            }
+          },
+          "new": {
+            "UncheckedImage": {
+              "DrawAs": 0,
+              "ImageSize": [
+                28.0,
+                28.0
+              ]
+            },
+            "UncheckedHoveredImage": {
+              "DrawAs": 0,
+              "ImageSize": [
+                28.0,
+                28.0
+              ]
+            },
+            "UncheckedPressedImage": {
+              "DrawAs": 0,
+              "ImageSize": [
+                28.0,
+                28.0
+              ]
+            },
+            "CheckedImage": {
+              "ImageSize": [
+                28.0,
+                28.0
+              ],
+              "ResourceObject": -122
+            },
+            "Padding": {
+              "Left": 0
+            },
+            "CheckedHoveredImage": {
+              "ImageSize": [
+                28.0,
+                28.0
+              ],
+              "ResourceObject": -122
+            },
+            "CheckedPressedImage": {
+              "ImageSize": [
+                28.0,
+                28.0
+              ],
+              "ResourceObject": -122
+            }
+          }
+        },
+        {
+          "export": "Checkbox_Tracked",
+          "field": "RenderTransform",
+          "old": {
+            "Scale": [
+              1.1,
+              1.1
+            ]
+          },
+          "new": {
+            "Scale": [
+              1.0,
+              1.0
+            ]
+          }
+        },
+        {
+          "export": "OverlaySlot_4",
+          "field": "Padding",
+          "old": {
+            "Top": 8.0,
+            "Right": -16.0,
+            "Bottom": 8.0
+          },
+          "new": {
+            "Top": 8.0,
+            "Right": 10.0,
+            "Bottom": 8.0
+          }
+        },
+        {
+          "export": "SizeBoxSlot_0",
+          "field": "Padding",
+          "old": {
+            "Left": 10.0,
+            "Top": 5.0,
+            "Bottom": 5.0
+          },
+          "new": {
+            "Left": 10.0,
+            "Top": 5.0,
+            "Bottom": 5.0,
+            "Right": 10.0
+          }
+        },
+        {
+          "export": "SizeBox_27",
+          "field": "WidthOverride",
+          "old": 550.0,
+          "new": 530.0
+        }
+      ],
+      "name": "WB_QuestName",
+      "edition": "Steam_current",
+      "mount": "Carnal_Instinct_UE5/Content/RPG_InventorySystem/UI/Quests/WB_QuestName.uasset"
+    }
+  ]
+}

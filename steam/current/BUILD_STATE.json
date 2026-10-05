@@ -21,8 +21,8 @@
   "source_index_sha256": "91b95dbc38b2f4ffbd3fbea35bb1e4906cec7ddb588be87a15cec17048282274",
   "source_tree_sha256": "f12967fe7bd1c3729caa285519b2acc0059959214bf1f453aefe6437b8fbfef3",
   "source_stock_status": "contains localization modifications; not a clean stock game extraction",
-  "binary_compatibility": "18.8 release: 39 Steam packages statically verified; user reports 18.7 startup/UI working and Crafting visible; new 18.8 native title refinement runtime pending. Exact Steam BuildID unknown.",
-  "ui_override_compatibility": "18.7 modern character/crafting and wide journal retained; 18.8 selected quest title centered and underlined; 17 journal functions/class/CDO unchanged; 19 final cooked regression tests PASS.",
+  "binary_compatibility": "18.9 RELEASE:39 Steam packages statically verified, including five native-only typography/tracking edits.39 functions and generated classes/CDOs unchanged. 18.8 user screenshots show running Steam; new18.9 runtime pending, exact BuildID unknown.",
+  "ui_override_compatibility": "Shared Theme3 settings heading restored32→16; journal body20→16 and labels22→18; tracked marker64→28, scale1.1→1, negative right margin removed, 530px card+20px padding fits550px host.23 final UI/map/crash/display checks PASS.",
   "last_source_check_at": "2026-10-05T20:30:54.542956+00:00",
   "evidence": [
     "current Google Drive RPGInventory_GameInstance.uasset raw bytes",

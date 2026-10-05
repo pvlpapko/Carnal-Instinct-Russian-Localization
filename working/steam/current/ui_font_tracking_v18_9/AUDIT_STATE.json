@@ -7,10 +7,10 @@
   "verified_game_version": "0.7.9.16321",
   "verified_build": null,
   "created_at": "2026-10-05T20:30:54.542956+00:00",
-  "updated_at": "2026-10-05T20:33:56.400632+00:00",
-  "current_phase": "native_only_build",
-  "last_completed_unit": "three_prepatch_ui_failures_and_plugin_manifest_root_cause",
-  "next_unit": "native_only_fonts_and_tracking_overlay_build",
+  "updated_at": "2026-10-05T20:37:27.462196+00:00",
+  "current_phase": "clean_release_packaging",
+  "last_completed_unit": "five_native_ui_overrides_and_final_installer_validation",
+  "next_unit": "release_archive_and_direct_drive_download_verification",
   "completed_units": [
     "New screenshot ZIP CRC and image review",
     "Fresh live GameInstance and Theme3 source identity unchanged",
@@ -19,7 +19,9 @@
     "Tracked checkbox 64x64 with render scale1.1; negative right padding -16 extends outside quest card",
     "Both Plugin and Plugins roots listed; ShaderCompilationScreen absent at root and exact search returned empty",
     "Three meaningful 18.8 UI failures reproduced; unchanged gameplay-code baseline passes",
-    "Plugin manifest locates ShaderCompilationScreen in absent Engine/Plugins/Marketplace folder"
+    "Plugin manifest locates ShaderCompilationScreen in absent Engine/Plugins/Marketplace folder",
+    "Five native-only font/layout assets built; all 39 functions and all gameplay class/CDO records unchanged",
+    "Final Steam39/NoSteam71 package exact readback and independent hashes/imports/export spans PASS"
   ],
   "pending_units": [
     "Native font and tracking geometry fixes preserving handlers",
@@ -43,7 +45,11 @@
     "Screenshot CRC",
     "Current source identity",
     "Actual cooked property root cause inspection",
-    "Prepatch RED: heading 32 vs original 16, body20 vs16, marker64 vs28"
+    "Prepatch RED: heading 32 vs original 16, body20 vs16, marker64 vs28",
+    "23 final UI/map/crash/display tests PASS",
+    "30 installer race tests PASS",
+    "Windows amd64 installer rebuilt with exact final payloads",
+    "All final fonts, bounds and native dependency graphs PASS"
   ],
   "validation_pending": [
     "18.9 UI appearance in game",
