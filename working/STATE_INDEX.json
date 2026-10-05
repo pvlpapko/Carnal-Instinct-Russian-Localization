@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "updated_at": "2026-10-05T20:09:30.974223+00:00",
+  "updated_at": "2026-10-05T20:30:54.542956+00:00",
   "active_tasks": [
     {
       "edition": "Steam",
@@ -175,6 +175,12 @@
       "task": "release_ui_startup_cache_v18_8",
       "state_path": "working/nosteam/0.7.9.16232/release_ui_startup_cache_v18_8/AUDIT_STATE.json",
       "status": "release_uploaded_static_verified_runtime_pending"
+    },
+    {
+      "edition": "Steam",
+      "task": "ui_font_tracking_v18_9",
+      "state_path": "working/steam/current/ui_font_tracking_v18_9/AUDIT_STATE.json",
+      "status": "in_progress"
     }
   ],
   "latest_release": {

@@ -1,0 +1,56 @@
+{
+  "schema_version": "1.0",
+  "edition": "Steam",
+  "task": "ui_font_tracking_v18_9",
+  "status": "in_progress",
+  "source_state_id": "steam_current_2026-10-03_16321_asset_verified_index_stale",
+  "verified_game_version": "0.7.9.16321",
+  "verified_build": null,
+  "created_at": "2026-10-05T20:30:54.542956+00:00",
+  "updated_at": "2026-10-05T20:30:54.542956+00:00",
+  "current_phase": "root_cause_and_baseline_regressions",
+  "last_completed_unit": "screenshots_source_identity_and_plugin_folder_review",
+  "next_unit": "font_tracking_prepatch_tests_and_native_only_fix",
+  "completed_units": [
+    "New screenshot ZIP CRC and image review",
+    "Fresh live GameInstance and Theme3 source identity unchanged",
+    "Settings root cause: 18.7 shared SubHeadline font changed source 16 to 32 for journal",
+    "Quest body 20 and section labels 22 too large per user feedback",
+    "Tracked checkbox 64x64 with render scale1.1; negative right padding -16 extends outside quest card",
+    "Both Plugin and Plugins roots listed; ShaderCompilationScreen absent at root and exact search returned empty"
+  ],
+  "pending_units": [
+    "Native font and tracking geometry fixes preserving handlers",
+    "Shader plugin manifest review",
+    "Final containers, checks and updated RELEASE installer",
+    "Direct upload/download verification"
+  ],
+  "source_files_used": [
+    "CI_SOURCE_INDEX.json",
+    "18.8 verified release",
+    "user скрины.zip SHA256 4c86632e4fef61ddab9d445172b686a58d61f434b4c646f3c84dd37c59c6c608",
+    "fresh live GameInstance, Theme3SubHeadline and three quest rows",
+    "Drive Plugin and Plugins folder listings, upluginmanifest"
+  ],
+  "working_files": [
+    "tools/ui_parity_v18_7",
+    "tools/release_v18_8",
+    "tools/ui_font_tracking_v18_9"
+  ],
+  "validation_completed": [
+    "Screenshot CRC",
+    "Current source identity",
+    "Actual cooked property root cause inspection"
+  ],
+  "validation_pending": [
+    "18.9 UI appearance in game",
+    "Actual settings FPS",
+    "Shader repeated startup timing",
+    "Full manual dialogue proofreading"
+  ],
+  "notes": [
+    "RELEASE, direct download, no subagents",
+    "NoSteam 0.7.9.16232 payload remains unchanged because new reported regression concerns Steam",
+    "Do not disable shader preparation or alter gameplay IDs/functions"
+  ]
+}

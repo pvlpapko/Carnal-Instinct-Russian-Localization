@@ -23,14 +23,15 @@
   "source_stock_status": "contains localization modifications; not a clean stock game extraction",
   "binary_compatibility": "18.8 release: 39 Steam packages statically verified; user reports 18.7 startup/UI working and Crafting visible; new 18.8 native title refinement runtime pending. Exact Steam BuildID unknown.",
   "ui_override_compatibility": "18.7 modern character/crafting and wide journal retained; 18.8 selected quest title centered and underlined; 17 journal functions/class/CDO unchanged; 19 final cooked regression tests PASS.",
-  "last_source_check_at": "2026-10-05T19:54:35.914522+00:00",
+  "last_source_check_at": "2026-10-05T20:30:54.542956+00:00",
   "evidence": [
     "current Google Drive RPGInventory_GameInstance.uasset raw bytes",
     "embedded ASCII version 0.7.9.16321 at byte offset 313692",
     "source tree still has no EXE/appmanifest/Build.version/stock IoStore containers",
     "2026-10-05 live GameInstance readback SHA256 unchanged; v18.4 targeted UI packages fetched from live indexed Drive IDs",
     "v18.6 Essence native serialization root cause and exact corrected container readback; 11 regression tests PASS; uploaded release hash verified",
-    "v18.8 fresh live GameInstance SHA256 unchanged; user reports 18.7 crafting tab appears and UI almost matches requested style"
+    "v18.8 fresh live GameInstance SHA256 unchanged; user reports 18.7 crafting tab appears and UI almost matches requested style",
+    "18.9 fresh live GameInstance version/hash unchanged; current shared Theme_3 SubHeadline source SHA256 23becd97217ef516ac08c5b51388a7acbb8ca1aeb5d5da64d9e7dbe9f2d7c9ef unchanged; user 18.8 settings heading and tracking clipping regression screenshots"
   ],
   "notes": [
     "Current embedded game version verified as 0.7.9.16321; exact Steam BuildID unavailable.",
