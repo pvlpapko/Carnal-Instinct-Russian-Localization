@@ -24,7 +24,7 @@ class Expr:
     def children(self):
         if self.op==0x69:
             return [self.index]+[x for kv in self.cases for x in kv]+[self.default]
-        if self.op in (0x19,0x1a): return [self.object,self.context]
+        if self.op in (0x12,0x19,0x1a): return [self.object,self.context]
         return [x for x in self.parts if isinstance(x,Expr)]
 
 def walk(e):
@@ -62,7 +62,7 @@ class Reader:
         elif op==0x0f: e.parts=[self.pointer(),self.expr(),self.expr()]
         elif op==0x11:e.parts=[self.pointer(),self.raw(1)]
         elif op in (0x14,0x43,0x44,0x5c,0x5f,0x60,0x62):e.parts=[self.expr(),self.expr()]
-        elif op in (0x19,0x1a):
+        elif op in (0x12,0x19,0x1a):
             e.object=self.expr();skip=self.uint(4);e.pointer=self.pointer();cstart=self.m;e.context=self.expr()
             if self.m-cstart!=skip:raise ValueError(('context skip',old,skip,self.m-cstart))
         elif op in (0x1b,0x45):
@@ -99,6 +99,11 @@ class Reader:
             while True:
                 x=self.expr();e.parts.append(x)
                 if x.op==0x32:break
+        elif op==0x39:
+            e.parts=[self.expr(),self.raw(4)]
+            while True:
+                x=self.expr();e.parts.append(x)
+                if x.op==0x3a:break
         elif op==0x2f:
             e.parts=[self.i32raw(),self.raw(4)]
             while True:
@@ -131,7 +136,7 @@ def memory_size(x):
     if isinstance(x,Target):return 4
     if x.op==0x69:
         return 1+2+4+memory_size(x.index)+sum(memory_size(k)+4+memory_size(v) for k,v in x.cases)+memory_size(x.default)
-    if x.op in (0x19,0x1a):return 1+memory_size(x.object)+4+8+memory_size(x.context)
+    if x.op in (0x12,0x19,0x1a):return 1+memory_size(x.object)+4+8+memory_size(x.context)
     return 1+sum(memory_size(p) for p in x.parts)
 
 class Writer:
@@ -161,7 +166,7 @@ class Writer:
                 else:self.uint(self.m+4+memory_size(v),4)
                 self.emit(v)
             self.emit(e.default)
-        elif e.op in (0x19,0x1a):
+        elif e.op in (0x12,0x19,0x1a):
             self.emit(e.object);self.uint(memory_size(e.context),4);self.emit(e.pointer);self.emit(e.context)
         else:
             for p in e.parts:self.emit(p)
