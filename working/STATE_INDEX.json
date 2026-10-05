@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "updated_at": "2026-10-05T16:51:26.459719+00:00",
+  "updated_at": "2026-10-05T17:21:24.500298+00:00",
   "active_tasks": [
     {
       "edition": "Steam",
@@ -132,13 +132,25 @@
       "edition": "Steam",
       "task": "crash_map_radial_grammar_v18_5",
       "state_path": "working/steam/current/crash_map_radial_grammar_v18_5/AUDIT_STATE.json",
-      "status": "release_uploaded_static_verified_runtime_and_editorial_pending"
+      "status": "Steam runtime failed; NoSteam runs with incomplete map popup rows"
     },
     {
       "edition": "NoSteam",
       "task": "crash_map_radial_grammar_v18_5",
       "state_path": "working/nosteam/0.7.9.16232/crash_map_radial_grammar_v18_5/AUDIT_STATE.json",
-      "status": "release_uploaded_static_verified_runtime_and_editorial_pending"
+      "status": "NoSteam runs with incomplete map popup rows"
+    },
+    {
+      "edition": "Steam",
+      "task": "crash_map_radial_grammar_v18_6",
+      "state_path": "working/steam/current/crash_map_radial_grammar_v18_6/AUDIT_STATE.json",
+      "status": "in_progress"
+    },
+    {
+      "edition": "NoSteam",
+      "task": "crash_map_radial_grammar_v18_6",
+      "state_path": "working/nosteam/0.7.9.16232/crash_map_radial_grammar_v18_6/AUDIT_STATE.json",
+      "status": "in_progress"
     }
   ],
   "latest_release": {
@@ -206,7 +218,7 @@
       "drive_readback_zip_crc_verified": true,
       "verified_at": "2026-10-05T16:51:26.459719+00:00"
     },
-    "runtime_validation": "not performed for 18.5; Steam 18.4 startup failed; crash root cause unconfirmed",
+    "runtime_validation": "Steam 18.5 startup FAIL; probe 0–8 PASS, 9 + Essence class FAIL; NoSteam 18.5 runs with both-row map popup gaps",
     "full_manual_dialogue_proofread": "pending",
     "drive_folder_id": "1VwdnxngtZLDsPl1kP5H5HCJBePoRCF_a",
     "drive_url": "https://drive.google.com/file/d/10eop1T1x76Ll3GHYQVvvZijZEJSnljEJ/view",

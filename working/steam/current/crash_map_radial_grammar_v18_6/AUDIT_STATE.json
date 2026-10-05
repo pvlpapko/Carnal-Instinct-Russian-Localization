@@ -1,0 +1,48 @@
+{
+  "schema_version": "1.0",
+  "edition": "Steam",
+  "task": "crash_map_radial_grammar_v18_6",
+  "status": "in_progress",
+  "source_state_id": "steam_current_2026-10-03_16321_asset_verified_index_stale",
+  "verified_game_version": "0.7.9.16321",
+  "verified_build": null,
+  "created_at": "2026-10-05T17:21:24.500298+00:00",
+  "updated_at": "2026-10-05T17:21:24.500298+00:00",
+  "current_phase": "runtime_regression_cause_isolated",
+  "last_completed_unit": "user_confirms_stages_0_to_8_pass_and_9_fail",
+  "next_unit": "display_path_trace_for_item_and_both_map_popup_rows",
+  "completed_units": [
+    "New crash archives read: both startup at seconds=0 and same normalized shipping stack",
+    "User confirms all startup probes except 9 run; only delta 8→9 Essence_Tier_1_Small",
+    "NoSteam 18.5 user-reported working except both-row map caption gaps",
+    "Current Steam GameInstance source SHA256 unchanged"
+  ],
+  "pending_units": [
+    "Remove crashing Steam item-class override and translate at a display boundary",
+    "Validate Steam settings display-only activation vs all old probes lagging",
+    "Trace and translate both map popup rows and minimap labels for both editions",
+    "Build, static verification, installer and direct Drive download links",
+    "Actual game validation and remaining linguistic review"
+  ],
+  "source_files_used": [
+    "CI_SOURCE_INDEX.json",
+    "v18.5 verified release",
+    "v18.4 exact failed release",
+    "startup probe stages 8 and 9",
+    "user new crash ZIPs"
+  ],
+  "working_files": [],
+  "validation_completed": [
+    "Adjacent probe resource delta identified by user runtime tests"
+  ],
+  "validation_pending": [
+    "New release static and runtime checks"
+  ],
+  "notes": [
+    "No subagents; minimize Codex usage",
+    "Do not infer full crash binary root details beyond isolated offending resource",
+    "Do not change internal gameplay/quest/save identifiers",
+    "Stage 0–8 use old v18.3 main menu; v18.5 Steam settings fix has not run because startup failed",
+    "Map raw input examples requested; analysis continues independently"
+  ]
+}
