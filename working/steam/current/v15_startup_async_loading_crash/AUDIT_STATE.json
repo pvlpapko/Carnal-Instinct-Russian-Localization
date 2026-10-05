@@ -2,13 +2,13 @@
   "schema_version": "1.0",
   "edition": "Steam",
   "task": "v15_startup_async_loading_crash",
-  "status": "v18_full_current_source_ui_restore_uploaded_static_validation_runtime_pending",
+  "status": "v18_runtime_failed_v18_1_redundant_override_prune_in_progress",
   "source_state_id": "steam_current_2026-10-03_16321_asset_verified_index_stale",
   "verified_game_version": "0.7.9.16321",
   "verified_build": null,
-  "current_phase": "v18_runtime_validation",
-  "last_completed_unit": "v18_drive_readback",
-  "next_unit": "runtime_test_v18_full_steam",
+  "current_phase": "full_payload_runtime_crash_prune",
+  "last_completed_unit": "v18_runtime_startup_failure_received",
+  "next_unit": "build_v18_1_only_real_modified_overrides",
   "completed_units": [
     "v15 Steam startup failure reproduced by user; NoSteam v15 works",
     "full 71-package v15 Steam override comparison against current source completed",
@@ -66,12 +66,19 @@
     "v18 current-source Settings/Controls WB_Master_* + Theme_3, radial W_MenuItem, HQUI and other prior UI paths restored without old 16313/NoSteam binary bases",
     "v18 installer rebuilt with license/version visibility and separate Steam_current / NoSteam_0.7.9.16232 payloads",
     "v18 final ZIP CRC PASS; SHA256 f9864d38925418b5c0dfd17b187de887d3839b988bebd1d1bb5969a0402d3df7",
-    "v18 Drive upload/readback exact size/SHA256/ZIP CRC PASS; file id 1-0GzxB7_diN0v9IgWjpfDefvXdq27ziy"
+    "v18 Drive upload/readback exact size/SHA256/ZIP CRC PASS; file id 1-0GzxB7_diN0v9IgWjpfDefvXdq27ziy",
+    "USER RUNTIME FAIL: Steam v18 FULL 77-package payload crashes at startup in FAsyncLoadingThread",
+    "v18 crash: EXCEPTION_ACCESS_VIOLATION writing address 0x00000215d554c580, SecondsSinceStart=0",
+    "v18 minidump again contains /Game/RPG_InventorySystem/Blueprints/SaveSystem/RPGInventory_GameInstance",
+    "v18 package diff classified: 52/77 overrides are byte-identical to current Steam source; 19 are modified with locally available current originals; 6 are current-schema v14 map patches with verified current-source metadata in v18 report",
+    "AC_RadialMenu is byte-identical current source and is the only v18 override that is a direct import of RPGInventory_GameInstance"
   ],
   "pending_units": [
-    "runtime Steam startup test v18",
-    "runtime regression: Settings/Controls, radial TAB selection, map/hover, quests/tracking, Character/Stats, HQUI/save-load, books/dialogue/AbilityTree",
-    "if PASS: promote exact v18 payload to FINAL canonical release"
+    "remove all 52 byte-identical current-Steam overrides",
+    "retain the 25 real current-schema modified UI/map/quest overrides",
+    "rebuild installer trusted hashes for new Steam payload",
+    "validate exact IoStore readback, ZIP CRC, payload separation",
+    "runtime Steam startup test v18.1"
   ],
   "source_files_used": [
     "CI_SOURCE_INDEX.json",
@@ -111,10 +118,13 @@
     "v17 archive ZIP CRC PASS",
     "v18 77/77 current package identity/export-count validation PASS",
     "v18 current-source CI_RU marker UI assets verified",
-    "v18 Drive readback SHA256 and ZIP CRC PASS"
+    "v18 Drive readback SHA256 and ZIP CRC PASS",
+    "v18 runtime startup FAIL reported by user",
+    "77-package current-source equality classification"
   ],
   "validation_pending": [
-    "runtime v18 full Steam startup and UI regression"
+    "v18.1 static validation",
+    "v18.1 runtime startup and UI regression"
   ],
   "notes": [
     "Static root cause: v15 inherited WB_CharacterScreen, WB_Stats_Main, WB_Stats_Full and WB_Stats_Main_Slot from an older Steam schema.",
@@ -132,6 +142,7 @@
     "v15.3 PASS removes synthetic IoStore format as the immediate blocker. Full rebuild may proceed, but only current Steam 0.7.9.16321 cooked packages may be used as binary bases.",
     "v17 restores functionality without wholesale reuse of stale 0.7.9.16313/NoSteam binaries. WB_WorldMapPopup and Neutral_Widget remain intentionally absent due prior crash evidence.",
     "User requested all previous interface fixes at once; v18 expands v17 to all 71 historical UI/display paths but replaces every stale old base with current Steam source.",
-    "v17 minimal is superseded by v18 for testing because v18 restores all current-source Settings/Controls/radial/HQUI historical UI paths. v18 is still TEST until user runtime confirmation."
+    "v17 minimal is superseded by v18 for testing because v18 restores all current-source Settings/Controls/radial/HQUI historical UI paths. v18 is still TEST until user runtime confirmation.",
+    "v18 failure does not invalidate all UI fixes: 52 stock-identical overrides can be removed without changing any feature. AC_RadialMenu is the prime startup-graph suspect because it is the sole direct RPGInventory_GameInstance import overridden by v18."
   ]
 }
