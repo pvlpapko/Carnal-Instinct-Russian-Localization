@@ -2,13 +2,13 @@
   "schema_version": "1.0",
   "edition": "Steam",
   "task": "v15_startup_async_loading_crash",
-  "status": "v18_runtime_failed_v18_1_redundant_override_prune_in_progress",
+  "status": "v18_1_startup_safe_full_ui_built_runtime_pending",
   "source_state_id": "steam_current_2026-10-03_16321_asset_verified_index_stale",
   "verified_game_version": "0.7.9.16321",
   "verified_build": null,
-  "current_phase": "full_payload_runtime_crash_prune",
-  "last_completed_unit": "v18_runtime_startup_failure_received",
-  "next_unit": "build_v18_1_only_real_modified_overrides",
+  "current_phase": "runtime_validate_v18_1",
+  "last_completed_unit": "v18_1_20_package_current_schema_build_and_installer",
+  "next_unit": "runtime_test_v18_1_main_then_startup_branch_diagnostics_if_needed",
   "completed_units": [
     "v15 Steam startup failure reproduced by user; NoSteam v15 works",
     "full 71-package v15 Steam override comparison against current source completed",
@@ -71,14 +71,21 @@
     "v18 crash: EXCEPTION_ACCESS_VIOLATION writing address 0x00000215d554c580, SecondsSinceStart=0",
     "v18 minidump again contains /Game/RPG_InventorySystem/Blueprints/SaveSystem/RPGInventory_GameInstance",
     "v18 package diff classified: 52/77 overrides are byte-identical to current Steam source; 19 are modified with locally available current originals; 6 are current-schema v14 map patches with verified current-source metadata in v18 report",
-    "AC_RadialMenu is byte-identical current source and is the only v18 override that is a direct import of RPGInventory_GameInstance"
+    "AC_RadialMenu is byte-identical current source and is the only v18 override that is a direct import of RPGInventory_GameInstance",
+    "v18.1 main Steam payload built with 20 real modified/current-schema packages; 52 stock-identical overrides removed",
+    "five startup dependency overrides isolated from main payload: quest_list, quest_objectives, quest_sub_objectives, bp_newQuest_marker, Essence_Tier_1_Small",
+    "v18.1 main IoStore exact named-package readback 20/20 PASS",
+    "diagnostic A quest startup branch exact readback 24/24 PASS",
+    "diagnostic B Essence startup branch exact readback 21/21 PASS",
+    "installer Go unit tests PASS and Windows amd64 build PASS",
+    "NoSteam 0.7.9.16232 payload byte-identical to v18/v15 lineage",
+    "v18.1 archive ZIP CRC PASS; SHA256 922238893484fbe630e145664c38d63702fb504d1c3e6b70c61756a529cc5ee6"
   ],
   "pending_units": [
-    "remove all 52 byte-identical current-Steam overrides",
-    "retain the 25 real current-schema modified UI/map/quest overrides",
-    "rebuild installer trusted hashes for new Steam payload",
-    "validate exact IoStore readback, ZIP CRC, payload separation",
-    "runtime Steam startup test v18.1"
+    "runtime Steam startup with v18.1 main installer payload",
+    "if main starts: test UI/map/character/stats/crafting/vendor/dialogue regressions",
+    "then test Diagnostics/A_QUEST_STARTUP_BRANCH and Diagnostics/B_ESSENCE_STARTUP_BRANCH separately to identify startup-data culprit",
+    "replace failing startup-data patch with safer display-boundary/locres implementation before FINAL"
   ],
   "source_files_used": [
     "CI_SOURCE_INDEX.json",
@@ -94,7 +101,9 @@
     "working/steam/current/v15_startup_async_loading_crash/V15_3_IOSTORE_CANARY.json",
     "CI GPT/Releases/SteamIoStoreCanary_2026-10-04_v15.3/Carnal_Instinct_RU_DontLook_Steam_v15.3_IOSTORE_CANARY_TEST.zip",
     "working/steam/current/v15_startup_async_loading_crash/V17_CURRENT_SOURCE_FULL_RESTORE.json",
-    "working/steam/current/v15_startup_async_loading_crash/V18_FULL_CURRENT_SOURCE_UI_RESTORE.json"
+    "working/steam/current/v15_startup_async_loading_crash/V18_FULL_CURRENT_SOURCE_UI_RESTORE.json",
+    "Carnal_Instinct_RU_DontLook_StartupSafeFullUI_2026-10-05_v18.1_TEST.zip",
+    "working/steam/current/v15_startup_async_loading_crash/V18_1_STARTUP_SAFE_FULL_UI.json"
   ],
   "validation_completed": [
     "root-cause static schema audit",
@@ -120,11 +129,16 @@
     "v18 current-source CI_RU marker UI assets verified",
     "v18 Drive readback SHA256 and ZIP CRC PASS",
     "v18 runtime startup FAIL reported by user",
-    "77-package current-source equality classification"
+    "77-package current-source equality classification",
+    "v18.1 main 20/20 exact IoStore readback",
+    "v18.1 diagnostic A 24/24 and diagnostic B 21/21 exact readback",
+    "v18.1 installer Go tests and Windows build",
+    "v18.1 ZIP CRC PASS"
   ],
   "validation_pending": [
-    "v18.1 static validation",
-    "v18.1 runtime startup and UI regression"
+    "v18.1 main runtime startup",
+    "v18.1 UI regression",
+    "startup branch A/B runtime isolation"
   ],
   "notes": [
     "Static root cause: v15 inherited WB_CharacterScreen, WB_Stats_Main, WB_Stats_Full and WB_Stats_Main_Slot from an older Steam schema.",
@@ -143,6 +157,7 @@
     "v17 restores functionality without wholesale reuse of stale 0.7.9.16313/NoSteam binaries. WB_WorldMapPopup and Neutral_Widget remain intentionally absent due prior crash evidence.",
     "User requested all previous interface fixes at once; v18 expands v17 to all 71 historical UI/display paths but replaces every stale old base with current Steam source.",
     "v17 minimal is superseded by v18 for testing because v18 restores all current-source Settings/Controls/radial/HQUI historical UI paths. v18 is still TEST until user runtime confirmation.",
-    "v18 failure does not invalidate all UI fixes: 52 stock-identical overrides can be removed without changing any feature. AC_RadialMenu is the prime startup-graph suspect because it is the sole direct RPGInventory_GameInstance import overridden by v18."
+    "v18 failure does not invalidate all UI fixes: 52 stock-identical overrides can be removed without changing any feature. AC_RadialMenu is the prime startup-graph suspect because it is the sole direct RPGInventory_GameInstance import overridden by v18.",
+    "Dependency audit: GameInstance->bp_quest_component->quest_list->quest_objectives/quest_sub_objectives and GameInstance->DTC_All_Items->Essence_Tier_1_Small. These are now isolated from the main runtime payload."
   ]
 }
