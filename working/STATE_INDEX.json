@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "updated_at": "2026-10-05T20:30:54.542956+00:00",
+  "updated_at": "2026-10-05T20:41:33.444057+00:00",
   "active_tasks": [
     {
       "edition": "Steam",
@@ -180,34 +180,33 @@
       "edition": "Steam",
       "task": "ui_font_tracking_v18_9",
       "state_path": "working/steam/current/ui_font_tracking_v18_9/AUDIT_STATE.json",
-      "status": "in_progress"
+      "status": "release_uploaded_static_verified_runtime_pending"
     }
   ],
   "latest_release": {
-    "release": "18.8",
+    "release": "18.9",
     "channel": "release",
-    "name": "Carnal_Instinct_RU_DontLook_2026-10-05_v18.8_RELEASE.zip",
-    "sha256": "75c7f905d640a4670803daa1cc51b352d6c609f51ef6e2663f1dd09d9d1158e8",
-    "archive_bytes": 18309950,
-    "archive_entries": 88,
+    "name": "Carnal_Instinct_RU_DontLook_2026-10-05_v18.9_RELEASE.zip",
+    "sha256": "82bb78d5b6bd45be9a0eba84110462de469231e1bdf58d0ca3e8853947c381c3",
+    "archive_bytes": 18322768,
+    "archive_entries": 92,
     "zip_crc_and_exact_entry_readback": "PASS",
-    "installer_sha256": "0ac01e89430a67e9b7c19c85d966f1328366777ca08d804290b5cb7c8f3aa530",
+    "installer_sha256": "44c0c2baa1f29dd0692ca3ec85406759396563134273e7a1a90602078644b636",
     "exact_installer_payload": "PASS",
     "runtime_tested": false,
     "shader_acceleration_applied": false,
     "drive_upload": "verified",
-    "drive_file_id": "1gh0K8kAnSrcTrkc3GQkMJpBhRIiU7cBO",
+    "drive_file_id": "1nY4543dev1vuNj-xX9ho07Uctyv1fqMd",
     "drive_folder_id": "1VwdnxngtZLDsPl1kP5H5HCJBePoRCF_a",
-    "direct_download_url": "https://drive.google.com/uc?export=download&id=1gh0K8kAnSrcTrkc3GQkMJpBhRIiU7cBO",
+    "direct_download_url": "https://drive.google.com/uc?export=download&id=1nY4543dev1vuNj-xX9ho07Uctyv1fqMd",
     "drive_readback_sha256_verified": true,
     "drive_readback_zip_crc_verified": true,
-    "drive_readback_all_entries_verified": 88,
-    "verified_at": "2026-10-05T20:09:30.974223+00:00",
+    "drive_readback_all_entries_verified": 92,
+    "verified_at": "2026-10-05T20:41:33.444057+00:00",
     "static_tests": {
-      "game_payload": 19,
+      "game_payload": 23,
       "installer_race": 30
     },
-    "user_runtime_feedback": "18.7 Steam starts, crafting appeared, UI nearly matches; 18.8 refinement/cache UI not yet run",
     "full_manual_dialogue_proofread": "pending",
     "steam_payload_id": "Steam_current",
     "steam_verified_game_version": "0.7.9.16321",
@@ -323,20 +322,34 @@
     "verified_at": "2026-10-05T16:51:26.459719+00:00"
   },
   "previous_final_release": {
-    "name": "Carnal_Instinct_RU_DontLook_SteamAsyncLoadHotfix_2026-10-04_v16_FINAL.zip",
-    "sha256": "c61b4f30b7a4e3bf95dfa005306672fe1a52e8b81d0fd2a2409ab72d71032911",
-    "archive_bytes": 29085003,
-    "archive_entries": 345,
-    "installer_sha256": "3184b383533b68757af97ccc8be8dbaf5a9eb481bdeff4b5fa32bb91b9bed565",
-    "installer_bytes": 20976640,
-    "drive_folder_id": "1GK2OWhdupfIcxS0vkBJ_0EaM7oM2Vp1o",
-    "drive_file_id": "18eR6ykzUcKk3gF58PO3WEdVUbb0ZkW1y",
+    "release": "18.8",
+    "channel": "release",
+    "name": "Carnal_Instinct_RU_DontLook_2026-10-05_v18.8_RELEASE.zip",
+    "sha256": "75c7f905d640a4670803daa1cc51b352d6c609f51ef6e2663f1dd09d9d1158e8",
+    "archive_bytes": 18309950,
+    "archive_entries": 88,
+    "zip_crc_and_exact_entry_readback": "PASS",
+    "installer_sha256": "0ac01e89430a67e9b7c19c85d966f1328366777ca08d804290b5cb7c8f3aa530",
+    "exact_installer_payload": "PASS",
+    "runtime_tested": false,
+    "shader_acceleration_applied": false,
+    "drive_upload": "verified",
+    "drive_file_id": "1gh0K8kAnSrcTrkc3GQkMJpBhRIiU7cBO",
+    "drive_folder_id": "1VwdnxngtZLDsPl1kP5H5HCJBePoRCF_a",
+    "direct_download_url": "https://drive.google.com/uc?export=download&id=1gh0K8kAnSrcTrkc3GQkMJpBhRIiU7cBO",
     "drive_readback_sha256_verified": true,
     "drive_readback_zip_crc_verified": true,
+    "drive_readback_all_entries_verified": 88,
+    "verified_at": "2026-10-05T20:09:30.974223+00:00",
+    "static_tests": {
+      "game_payload": 19,
+      "installer_race": 30
+    },
+    "user_runtime_feedback": "18.7 Steam starts, crafting appeared, UI nearly matches; 18.8 refinement/cache UI not yet run",
+    "full_manual_dialogue_proofread": "pending",
     "steam_payload_id": "Steam_current",
     "steam_verified_game_version": "0.7.9.16321",
     "steam_verified_build": null,
-    "nosteam_baseline_build": "0.7.9.16232",
-    "runtime_validation": "Steam v18 full failed startup; Q1/Q2/Q4 quest isolation PASS, Q3 quest_objectives FAIL; v18.3 objective display-boundary candidate pending. NoSteam v15 user-reported working"
+    "nosteam_baseline_build": "0.7.9.16232"
   }
 }

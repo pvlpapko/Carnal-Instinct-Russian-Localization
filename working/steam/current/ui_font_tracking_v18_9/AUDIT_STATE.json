@@ -2,15 +2,15 @@
   "schema_version": "1.0",
   "edition": "Steam",
   "task": "ui_font_tracking_v18_9",
-  "status": "in_progress",
+  "status": "release_uploaded_static_verified_runtime_pending",
   "source_state_id": "steam_current_2026-10-03_16321_asset_verified_index_stale",
   "verified_game_version": "0.7.9.16321",
   "verified_build": null,
   "created_at": "2026-10-05T20:30:54.542956+00:00",
-  "updated_at": "2026-10-05T20:37:27.462196+00:00",
-  "current_phase": "clean_release_packaging",
-  "last_completed_unit": "five_native_ui_overrides_and_final_installer_validation",
-  "next_unit": "release_archive_and_direct_drive_download_verification",
+  "updated_at": "2026-10-05T20:41:33.444057+00:00",
+  "current_phase": "released",
+  "last_completed_unit": "upload_verified_sha256_crc_and_92_exact_entries",
+  "next_unit": "user_runtime_feedback_and_missing_engine_shader_plugin",
   "completed_units": [
     "New screenshot ZIP CRC and image review",
     "Fresh live GameInstance and Theme3 source identity unchanged",
@@ -21,13 +21,15 @@
     "Three meaningful 18.8 UI failures reproduced; unchanged gameplay-code baseline passes",
     "Plugin manifest locates ShaderCompilationScreen in absent Engine/Plugins/Marketplace folder",
     "Five native-only font/layout assets built; all 39 functions and all gameplay class/CDO records unchanged",
-    "Final Steam39/NoSteam71 package exact readback and independent hashes/imports/export spans PASS"
+    "Final Steam39/NoSteam71 package exact readback and independent hashes/imports/export spans PASS",
+    "18.9 RELEASE clean archive and exact six embedded payloads verified",
+    "Uploaded download SHA256/CRC/all92 entries PASS"
   ],
   "pending_units": [
-    "Native font and tracking geometry fixes preserving handlers",
-    "Shader plugin manifest review",
-    "Final containers, checks and updated RELEASE installer",
-    "Direct upload/download verification"
+    "User in-game appearance check of18.9",
+    "Engine ShaderCompilationScreen plugin and startup timings if shader work continues",
+    "Actual settings FPS",
+    "Full manual dialogue proofreading"
   ],
   "source_files_used": [
     "CI_SOURCE_INDEX.json",
@@ -49,7 +51,9 @@
     "23 final UI/map/crash/display tests PASS",
     "30 installer race tests PASS",
     "Windows amd64 installer rebuilt with exact final payloads",
-    "All final fonts, bounds and native dependency graphs PASS"
+    "All final fonts, bounds and native dependency graphs PASS",
+    "Release SHA256SUMS PASS",
+    "Uploaded Drive archive SHA256/CRC/all92 entries PASS"
   ],
   "validation_pending": [
     "18.9 UI appearance in game",
@@ -61,5 +65,31 @@
     "RELEASE, direct download, no subagents",
     "NoSteam 0.7.9.16232 payload remains unchanged because new reported regression concerns Steam",
     "Do not disable shader preparation or alter gameplay IDs/functions"
-  ]
+  ],
+  "release": {
+    "release": "18.9",
+    "channel": "release",
+    "name": "Carnal_Instinct_RU_DontLook_2026-10-05_v18.9_RELEASE.zip",
+    "sha256": "82bb78d5b6bd45be9a0eba84110462de469231e1bdf58d0ca3e8853947c381c3",
+    "archive_bytes": 18322768,
+    "archive_entries": 92,
+    "zip_crc_and_exact_entry_readback": "PASS",
+    "installer_sha256": "44c0c2baa1f29dd0692ca3ec85406759396563134273e7a1a90602078644b636",
+    "exact_installer_payload": "PASS",
+    "runtime_tested": false,
+    "shader_acceleration_applied": false,
+    "drive_upload": "verified",
+    "drive_file_id": "1nY4543dev1vuNj-xX9ho07Uctyv1fqMd",
+    "drive_folder_id": "1VwdnxngtZLDsPl1kP5H5HCJBePoRCF_a",
+    "direct_download_url": "https://drive.google.com/uc?export=download&id=1nY4543dev1vuNj-xX9ho07Uctyv1fqMd",
+    "drive_readback_sha256_verified": true,
+    "drive_readback_zip_crc_verified": true,
+    "drive_readback_all_entries_verified": 92,
+    "verified_at": "2026-10-05T20:41:33.444057+00:00",
+    "static_tests": {
+      "game_payload": 23,
+      "installer_race": 30
+    },
+    "full_manual_dialogue_proofread": "pending"
+  }
 }
