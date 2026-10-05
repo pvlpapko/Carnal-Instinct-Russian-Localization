@@ -2,15 +2,15 @@
   "schema_version": "1.0",
   "edition": "NoSteam",
   "task": "ui_parity_crafting_v18_7",
-  "status": "in_progress",
+  "status": "static_verified_runtime_pending",
   "source_state_id": "nosteam_0.7.9.16232_fixed",
   "verified_game_version": "0.7.9.16232",
   "verified_build": "0.7.9.16232",
   "created_at": "2026-10-05T18:27:25.092492+00:00",
-  "updated_at": "2026-10-05T19:32:07.972483+00:00",
-  "current_phase": "static_validation_passed_installer_pending",
-  "last_completed_unit": "final_containers_and_17_regressions_pass",
-  "next_unit": "build_windows_installer_clean_zip_upload_verify_direct_link",
+  "updated_at": "2026-10-05T19:34:39.698432+00:00",
+  "current_phase": "release_uploaded",
+  "last_completed_unit": "v18_7_zip_installer_uploaded_and_download_verified",
+  "next_unit": "in_game_steam_character_journal_crafting_and_settings_retest",
   "completed_units": [
     "Six screenshots compared: NoSteam magenta borders, grouped vertical journal, crafting after Lore; Steam gold and horizontal objectives/journal, missing crafting tab",
     "Fresh Steam GameInstance SHA256 unchanged 756887fd...; source CharacterScreen and QuestScreen exact prior bytes",
@@ -55,11 +55,15 @@
     "Native slot reciprocity, dependency ranges and acyclic Create/Serialize graphs PASS for all 12 UI packages",
     "Independent full container BLAKE3, package IDs/import dependencies, export spans PASS; both translation tables/locres and NoSteam payload unchanged",
     "Imported font/texture creation dependencies explicitly added to serialization graph; rebuilt containers and 17 regression checks PASS",
-    "Go installer core tests -race PASS; Windows EXE rebuilt from the final six files"
+    "Go installer core tests -race PASS; Windows EXE rebuilt from the final six files",
+    "85-entry ZIP CRC, exact entries, six installer payloads PASS; uploaded Drive download SHA256 and all ZIP entries match"
   ],
   "validation_pending": [
-    "Native serialization and complete functions readback",
-    "In-game parity and crafting behavior"
+    "Actual Steam startup after Essence fix",
+    "Exact visual equivalence with screenshots",
+    "Crafting tab click/hover and availability conditions",
+    "Settings FPS and Theme_3 heading fit",
+    "Full manual dialogue proofreading"
   ],
   "notes": [
     "No subagents; minimize Codex usage",
@@ -69,5 +73,21 @@
     "NoSteam payload will remain byte-identical to 18.6 because its screenshot layout and crafting are already correct",
     "Exact pixel/visual equivalence and actual startup/crafting/settings FPS are unverified",
     "Selected quest heading native font enlarged; its golden centered styling retained; shared Steam Theme_3 headings affected, runtime fit pending"
-  ]
+  ],
+  "release": {
+    "release": "18.7 TEST",
+    "name": "Carnal_Instinct_RU_DontLook_UI_Crafting_2026-10-05_v18.7_TEST.zip",
+    "sha256": "804ce0c2a71d2ef1934bc140dfcc403a93a13a39b1611bdc747e137fe806eeec",
+    "archive_bytes": 18429675,
+    "archive_entries": 85,
+    "zip_crc_and_exact_entry_readback": "PASS",
+    "installer_sha256": "d05b1dd2c9b5df9a28ff64b6ec43940135b58782b492934a18e848c688ebade7",
+    "exact_installer_payload": "PASS",
+    "runtime_tested": false,
+    "drive_upload": "verified",
+    "drive_id": "1QnzepnXzepiJiudTiDQTqkZa-tkIOlzC",
+    "direct_download_url": "https://drive.google.com/uc?export=download&id=1QnzepnXzepiJiudTiDQTqkZa-tkIOlzC",
+    "drive_download_sha256": "804ce0c2a71d2ef1934bc140dfcc403a93a13a39b1611bdc747e137fe806eeec",
+    "uploaded_zip_crc_and_exact_entry_readback": "PASS"
+  }
 }
