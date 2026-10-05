@@ -1,0 +1,138 @@
+{
+  "schema_version": "1.0",
+  "edition": "Steam",
+  "release": "v18.3 Objective Display Boundary TEST",
+  "author": "Don't Look",
+  "source_state_id": "steam_current_2026-10-03_16321_asset_verified_index_stale",
+  "verified_game_version": "0.7.9.16321",
+  "verified_build": null,
+  "runtime_evidence": {
+    "Q1_bp_newQuest_marker": "PASS user reported",
+    "Q2_quest_list": "PASS user reported",
+    "Q3_full_quest_objectives": "FAIL user reported",
+    "Q4_quest_sub_objectives": "PASS user reported"
+  },
+  "strategy": {
+    "legacy_objective_titles": "WB_QuestObjectiveName source-native display switch -> CI_RU_Display_Quest locres",
+    "legacy_objective_descriptions": "WB_QuestObjectiveDescription source-native display switch -> CI_RU_Display_Quest locres",
+    "new_Hell_of_a_Kitchen": "minimal current-source quest_objectives FName patch, 12 refs only",
+    "full_crashing_q3_patch": "excluded"
+  },
+  "objective_widget_current_source_compatibility": {
+    "name": {
+      "source_sha256": "5d0eaba6b987539d923cb58004ca98581002ca2b2dde72fd3ab366c62206510f",
+      "patch_sha256": "8bfe06eb57e484ac6e8eab4e464b2bb34bda513180f1aa29985350bdd76290fa",
+      "package_equal": true,
+      "imports_equal": true,
+      "export_count_equal": true,
+      "source_exports": 12,
+      "patched_exports": 12,
+      "source_names": 26,
+      "patched_names": 310,
+      "name_prefix_equal": true
+    },
+    "description": {
+      "source_sha256": "9e14810d7bb9857e4d6ee7eb2147fea72f16715daaf4181b9cf5405043ec6476",
+      "patch_sha256": "fc8cc6034ff69b593c4337dddc66ec0dd81f3c206f4ec9f87d5fe35b1b2a2844",
+      "package_equal": true,
+      "imports_equal": true,
+      "export_count_equal": true,
+      "source_exports": 6,
+      "patched_exports": 6,
+      "source_names": 21,
+      "patched_names": 306,
+      "name_prefix_equal": true
+    }
+  },
+  "locres_coverage": {
+    "objective_name": {
+      "ftext_literals": 284,
+      "unique_keys": 284,
+      "locres_missing": 0,
+      "locres_empty": 0,
+      "source_mismatch": 0
+    },
+    "objective_description": {
+      "ftext_literals": 285,
+      "unique_keys": 285,
+      "locres_missing": 0,
+      "locres_empty": 0,
+      "source_mismatch": 0
+    }
+  },
+  "q3_minimal": {
+    "source_sha256": "0b652a2c39dbc7b45e9c6e799463bedc59bb256853932797c540d37299706fbf",
+    "patched_sha256": "98ced7a892dcf88d6ceaec3108ec7496160b7a6d4ab885eb165f57069964bb1c",
+    "source_header_bytes": 59213,
+    "patched_header_bytes": 60905,
+    "source_name_count": 1079,
+    "patched_name_count": 1091,
+    "appended_names": 12,
+    "patched_refs": 12,
+    "full_old_patch_refs": 531,
+    "full_old_patch_appended_names": 479,
+    "full_old_patch_header_bytes": 124533,
+    "header_below_65536": true,
+    "rows": [
+      "q_HellKitchen_o1",
+      "q_HellKitchen_o2",
+      "q_HellKitchen_o3",
+      "q_HellKitchen_o4",
+      "q_HellKitchen_o5",
+      "q_HellKitchen_o6"
+    ]
+  },
+  "combined_objective_translation_evidence": {
+    "full_reviewed_q3_refs": 531,
+    "covered_by_display_or_minimal_q3": 531,
+    "missing": 0,
+    "status": "531/531 covered"
+  },
+  "steam_main": {
+    "packages": 26,
+    "toc_entries": 27,
+    "blocks": 32,
+    "utoc_bytes": 3609,
+    "ucas_bytes": 2097152,
+    "container_id": 17329019104982968000,
+    "exact_readback": "26/26 PASS",
+    "utoc_sha256": "7db9f7acf5312ac19b1be7b6464e7d77c73fbca00b4830bc1494bf95dd2e13dd",
+    "ucas_sha256": "8544b99d43f81d8ce00b73beb58d21f5d4acfd7e059c430a44314b671f1a0220",
+    "pak_sha256": "270dd12b1a431d5454f5ae8fdc711a5d28bc53b0f11f1b40d28e8d701093d268"
+  },
+  "diagnostics": {
+    "D1_OBJECTIVE_NAME_ONLY": {
+      "packages": 24,
+      "readback": "24/24 PASS"
+    },
+    "D2_OBJECTIVE_DESCRIPTION_ONLY": {
+      "packages": 24,
+      "readback": "24/24 PASS"
+    },
+    "D3_DISPLAY_PAIR_NO_Q3": {
+      "packages": 25,
+      "readback": "25/25 PASS"
+    },
+    "D4_HELLKITCHEN_Q3_ONLY": {
+      "packages": 24,
+      "readback": "24/24 PASS"
+    }
+  },
+  "nosteam_payload": {
+    "byte_identical_to_v18_2": true
+  },
+  "installer": {
+    "bytes": 16581120,
+    "sha256": "204f5049bb76c3d3ad226e801a0aeb0879878347da5c879b4408d1cda8e7fad2",
+    "go_tests": "PASS",
+    "windows_amd64_build": "PASS"
+  },
+  "archive": {
+    "name": "Carnal_Instinct_RU_DontLook_ObjectiveDisplayBoundary_2026-10-05_v18.3_TEST.zip",
+    "bytes": 34826861,
+    "sha256": "acb8b64ddd4caece240e29b6deae0e1aafe6d8d501578fa1bfe924d128c79b5b",
+    "zip_crc": "PASS",
+    "entries": 373
+  },
+  "runtime_tested": false
+}
