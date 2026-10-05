@@ -1,0 +1,39 @@
+{
+  "schema_version": "1.0",
+  "edition": "Steam",
+  "task": "v18_1_quest_startup_isolation",
+  "verified_game_version": "0.7.9.16321",
+  "runtime_evidence": {
+    "A_QUEST_STARTUP_BRANCH": {
+      "result": "FAIL",
+      "crash_thread": "FAsyncLoadingThread",
+      "seconds_since_start": 0,
+      "error": "EXCEPTION_ACCESS_VIOLATION reading 0xffffffffffffffff",
+      "pcallstack_hash": "DD86935AFAAB9C98D7F655038E711FE54C99BF9D",
+      "minidump_sha256": "76a96631585b30cff67dce2be8ebec5a9235852d8ff4cdea2edc35b57b0281c5",
+      "minidump_contains": [
+        "/Game/RPG_InventorySystem/Blueprints/SaveSystem/RPGInventory_GameInstance"
+      ]
+    }
+  },
+  "A_delta": [
+    "Carnal_Instinct_UE5/Content/DLG_Tree/dmap_system/blueprints/bp_newQuest_marker.uasset",
+    "Carnal_Instinct_UE5/Content/DLG_Tree/dqst_system/common/quest_list.uasset",
+    "Carnal_Instinct_UE5/Content/DLG_Tree/dqst_system/common/quest_objectives.uasset",
+    "Carnal_Instinct_UE5/Content/DLG_Tree/dqst_system/common/quest_sub_objectives.uasset"
+  ],
+  "strategy": "four independent payloads: v18.1 main 20 + exactly one A-delta package",
+  "artifact": {
+    "name": "Carnal_Instinct_RU_DontLook_Steam_v18.1_QUEST_ISOLATION_TEST.zip",
+    "sha256": "fe25d0198a53c974c597f70212d3ea0fa6a421059f50aebcb75ad3e3db5360d1",
+    "bytes": 6361165,
+    "zip_crc": "PASS"
+  },
+  "diagnostics": {
+    "Q1_MARKER_ONLY": "21/21 exact readback PASS",
+    "Q2_QUEST_LIST_ONLY": "21/21 exact readback PASS",
+    "Q3_QUEST_OBJECTIVES_ONLY": "21/21 exact readback PASS",
+    "Q4_QUEST_SUBOBJECTIVES_ONLY": "21/21 exact readback PASS"
+  },
+  "runtime_tested": false
+}
