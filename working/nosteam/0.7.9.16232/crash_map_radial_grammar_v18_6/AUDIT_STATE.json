@@ -7,18 +7,21 @@
   "verified_game_version": "0.7.9.16232",
   "verified_build": "0.7.9.16232",
   "created_at": "2026-10-05T17:21:24.500298+00:00",
-  "updated_at": "2026-10-05T17:21:24.500298+00:00",
-  "current_phase": "runtime_regression_cause_isolated",
-  "last_completed_unit": "user_confirms_stages_0_to_8_pass_and_9_fail",
-  "next_unit": "display_path_trace_for_item_and_both_map_popup_rows",
+  "updated_at": "2026-10-05T17:42:35.177749+00:00",
+  "current_phase": "native_text_corruption_proven",
+  "last_completed_unit": "typed_native_essence_fix_and_reported_map_gaps",
+  "next_unit": "extend_all_seven_map_display_switches_and_package",
   "completed_units": [
     "New crash archives read: both startup at seconds=0 and same normalized shipping stack",
     "User confirms all startup probes except 9 run; only delta 8→9 Essence_Tier_1_Small",
     "NoSteam 18.5 user-reported working except both-row map caption gaps",
-    "Current Steam GameInstance source SHA256 unchanged"
+    "Current Steam GameInstance source SHA256 unchanged",
+    "Essence source empty Namespace uses five serialized bytes; old substring replacement left 0x01 and created invalid length 6657",
+    "Corrected three full native FText fields; all flags/keys/English/class/other item bytes retained",
+    "RAQOTE, THE BREADBASKET and ANUBITE CAMP missing from both popup lookup tables; Breadbasket locres already exists"
   ],
   "pending_units": [
-    "Remove crashing Steam item-class override and translate at a display boundary",
+    "Build corrected Essence package; validate complete native FText from shipped readback",
     "Validate Steam settings display-only activation vs all old probes lagging",
     "Trace and translate both map popup rows and minimap labels for both editions",
     "Build, static verification, installer and direct Drive download links",
@@ -40,9 +43,9 @@
   ],
   "notes": [
     "No subagents; minimize Codex usage",
-    "Do not infer full crash binary root details beyond isolated offending resource",
     "Do not change internal gameplay/quest/save identifiers",
     "Stage 0–8 use old v18.3 main menu; v18.5 Steam settings fix has not run because startup failed",
-    "Map raw input examples requested; analysis continues independently"
+    "Native serialization root cause proven from bounded source/failing payload readback; corrected runtime still pending",
+    "Map examples supplied by user: top RAQOTE; lower THE BREADBASKET / ANUBITE CAMP"
   ]
 }

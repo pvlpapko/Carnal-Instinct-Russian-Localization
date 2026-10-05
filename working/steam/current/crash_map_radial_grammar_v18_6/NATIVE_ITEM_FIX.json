@@ -1,0 +1,37 @@
+{
+  "release": "18.6",
+  "source_sha256": "f3482cfad2d1bd914ce710fed75387a7a4f8e4ead0b6f040046b82678726b6ce",
+  "patched_sha256": "75d5e3cf8af662edb5382f71f7e0b4e7afabfa1bdfa52e3f4d7f07661fd436ab",
+  "source_bytes": 1416,
+  "patched_bytes": 1491,
+  "fields": [
+    {
+      "key": "7161373344630149D4AE198A780FAC9B",
+      "original_text_start": 10,
+      "original_empty_namespace_count": 1,
+      "original_namespace_serialized_bytes": 5,
+      "written_namespace_count": 26,
+      "new_native_text_start": 10
+    },
+    {
+      "key": "A5DAC0B440486F2FF22295AB9517C97B",
+      "original_text_start": 83,
+      "original_empty_namespace_count": 1,
+      "original_namespace_serialized_bytes": 5,
+      "written_namespace_count": 26,
+      "new_native_text_start": 108
+    },
+    {
+      "key": "444A551D4C5C423C08DF8F86C652F88E",
+      "original_text_start": 144,
+      "original_empty_namespace_count": 1,
+      "original_namespace_serialized_bytes": 5,
+      "written_namespace_count": 26,
+      "new_native_text_start": 194
+    }
+  ],
+  "root_cause": "v18.4 substring replacement matched inside a 5-byte empty FString, leaving count byte 0x01; new count became 0x1a01=6657.",
+  "other_class_and_item_bytes": "UNCHANGED",
+  "complete_native_ftext_bounded_readback": "3/3 PASS",
+  "runtime_tested": false
+}

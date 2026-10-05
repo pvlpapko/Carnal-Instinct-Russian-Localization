@@ -8,6 +8,8 @@ import sys, csv, json, struct, hashlib, re, collections, zlib
 import ui_properties as ui
 from ci_formats import Toc, Locres, build_pak_one
 import ci_formats as cf
+sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
+from native_ftext import guid_base_texts, replace_namespace
 
 ROOT = Path(sys.argv[1])
 SOURCE = Path(sys.argv[2])
@@ -149,14 +151,15 @@ def item_display_namespace(edition, rows, loc):
         for export in p.package["exports"]:
             raw = p.changed.get(export["index"], p.package["bytes"][export["start"]:export["end"]])
             for english in variants:
-                old = cf.fstring_write("") + cf.fstring_write(row["Key"]) + cf.fstring_write(english)
-                count = raw.count(old)
-                if count:
+                records = [text for text in guid_base_texts(raw)
+                           if text.namespace == "" and text.key == row["Key"] and text.source == english]
+                if records:
                     assert export["name"].startswith("Default__"), export["name"]
-                    new = cf.fstring_write(namespace) + cf.fstring_write(row["Key"]) + cf.fstring_write(english)
-                    raw = raw.replace(old, new)
+                    for text in reversed(records):
+                        new = replace_namespace(raw, text, namespace, cf.fstring_write)
+                        raw = raw[:text.start] + new + raw[text.end:]
                     p.changed[export["index"]] = raw
-                    hits += count
+                    hits += len(records)
                     actual_source = english
             
         assert hits == 1, (row["Key"], hits)
