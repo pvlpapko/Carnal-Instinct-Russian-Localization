@@ -5,6 +5,7 @@ package main
 import (
 	"embed"
 	"fmt"
+	"os"
 	"runtime"
 	"strings"
 	"syscall"
@@ -71,6 +72,7 @@ const (
 	idPath             = 121
 	idBrowse           = 122
 	idRemove           = 123
+	idCache            = 124
 	idBack             = 130
 	idNext             = 131
 	idCancel           = 132
@@ -201,6 +203,7 @@ type uiEvent struct {
 	Kind, Text, Operation string
 	Plan                  *installPlan
 	Removal               *removalReview
+	Cache                 *cachePlan
 	Success               bool
 }
 type removalReview struct{ Root, Paks, Edition string }
@@ -226,6 +229,7 @@ var (
 	progressText                                                         string
 	currentPlan                                                          *installPlan
 	currentRemoval                                                       *removalReview
+	currentCache                                                         *cachePlan
 	uiEvents                                                             = make(chan uiEvent, 128)
 )
 
@@ -405,7 +409,7 @@ func payloadSourceLabel(e edition) string {
 func editionNote(index int) string {
 	switch index {
 	case 0:
-		return "Русификатор 18.7 TEST. Обновлены меню персонажа и журнал, показана вкладка «Изготовление». Требуется проверка в игре. Исходная версия игры: 0.7.9.16321."
+		return "Русификатор 18.8. Меню персонажа и журнал обновлены, вкладка «Изготовление» показана. Исходная версия игры: 0.7.9.16321."
 	case 1:
 		return "Отдельный комплект для NoSteam 0.7.9.16232. Сохранены файлы перевода 18.6."
 	default:
@@ -443,8 +447,18 @@ func showPage(next int) {
 		pageButton("remove", idRemove, "Удалить русификацию", "", "action", -1)
 		pageLabel("removeHelp", "Для удаления укажите папку с установленной русификацией.", smallFont)
 		setFont(controls["removeHelp"], smallFont)
+		pageButton("cache", idCache, "Очистить кэш игры", "", "action", -1)
+		pageLabel("cacheHelp", "Отдельная очистка временных данных. Следующий запуск может быть дольше. Сохранения и настройки остаются.", smallFont)
 	case pageReview:
-		if currentRemoval != nil {
+		if currentCache != nil {
+			setText(pageHeading, "4. Очистка кэша игры")
+			pageLabel("intro", "Очистка выполняется отдельно от установки русификатора.", bodyFont)
+			detail := fmt.Sprintf("Папка игры:\r\n%s\r\n\r\nНайдено файлов кэша: %d (%.1f МБ).\r\n\r\nКэш будет создан игрой заново. Первый запуск после очистки может занять больше времени.\r\n\r\nСохранения, настройки, журналы и другие моды сохраняются. Общий кэш видеодрайвера не очищается.\r\n\r\nЗакройте игру перед продолжением.", currentCache.Root, len(currentCache.Files), float64(currentCache.Bytes)/(1024*1024))
+			if len(currentCache.Files) == 0 {
+				detail += "\r\n\r\nПодходящий кэш не найден. Удалять нечего."
+			}
+			pageEdit("review", detail, esMultiline|esAutoVScroll|esReadOnly|wsVScroll, 0)
+		} else if currentRemoval != nil {
 			setText(pageHeading, "4. Проверка удаления")
 			pageLabel("intro", "Проверьте папку и действие перед продолжением.", bodyFont)
 			detail := "Действие: удалить установленную русификацию и её старые резервные копии.\r\n\r\nПапка игры:\r\n" + currentRemoval.Root + "\r\n\r\nТекущий комплект: " + currentRemoval.Edition + "\r\n\r\nФайлы:\r\n" + strings.Join(runtimeNames, "\r\n")
@@ -511,7 +525,9 @@ func updateFooter() {
 	case pageEdition:
 		canNext = selected >= 0
 	case pageReview:
-		if currentRemoval != nil {
+		if currentCache != nil {
+			changeButton(idNext, "Очистить кэш")
+		} else if currentRemoval != nil {
 			changeButton(idNext, "Удалить русификацию")
 		} else {
 			changeButton(idNext, "Установить")
@@ -601,6 +617,11 @@ func layout() {
 		y += dip(56)
 		removeH := textHeight(windowText(controls["removeHelp"]), contentW, smallFont)
 		move(controls["removeHelp"], margin, y, contentW, removeH)
+		y += removeH + dip(16)
+		move(controls["cache"], margin, y, removeW, dip(42))
+		y += dip(50)
+		cacheH := textHeight(windowText(controls["cacheHelp"]), contentW, smallFont)
+		move(controls["cacheHelp"], margin, y, contentW, cacheH)
 	case pageReview:
 		move(controls["review"], margin, y, contentW, bodyBottom-y)
 	case pageProgress:
@@ -739,6 +760,7 @@ func prepareSelected() {
 	choice := editions[selected]
 	currentRemoval = nil
 	currentPlan = nil
+	currentCache = nil
 	startWork("Проверка встроенного комплекта и папки игры…")
 	go func() {
 		p, err := prepareInstall(embedded, choice, input)
@@ -754,6 +776,7 @@ func prepareRemoval() {
 	input := pathText
 	currentPlan = nil
 	currentRemoval = nil
+	currentCache = nil
 	startWork("Проверка записи установки…")
 	go func() {
 		root, paks, err := locatePaks(input)
@@ -784,8 +807,51 @@ func prepareRemoval() {
 		sendEvent(uiEvent{Kind: "removalPrepared", Removal: &removalReview{root, paks, label}})
 	}()
 }
+func prepareCache() {
+	pathText = windowText(controls["path"])
+	input := pathText
+	currentPlan, currentRemoval, currentCache = nil, nil, nil
+	startWork("Поиск кэша игры…")
+	go func() {
+		if err := requireGameClosed(); err != nil {
+			sendEvent(uiEvent{Kind: "complete", Text: err.Error()})
+			return
+		}
+		local, err := os.UserCacheDir()
+		if err != nil {
+			sendEvent(uiEvent{Kind: "complete", Text: err.Error()})
+			return
+		}
+		p, err := prepareCacheCleanup(input, local)
+		if err != nil {
+			sendEvent(uiEvent{Kind: "complete", Text: "Очистка не началась.\r\n\r\n" + err.Error()})
+			return
+		}
+		sendEvent(uiEvent{Kind: "cachePrepared", Cache: &p})
+	}()
+}
+
 func commitOperation() {
-	if currentRemoval != nil {
+	if currentCache != nil {
+		p := *currentCache
+		startWork("Очистка кэша игры…")
+		go func() {
+			if err := requireGameClosed(); err != nil {
+				sendEvent(uiEvent{Kind: "complete", Text: err.Error()})
+				return
+			}
+			n, err := clearGameCache(p)
+			if err != nil {
+				sendEvent(uiEvent{Kind: "complete", Text: fmt.Sprintf("Очистка остановлена. Удалено файлов: %d.\r\n\r\n%s", n, err)})
+				return
+			}
+			text := fmt.Sprintf("Кэш игры очищен. Удалено файлов: %d.\r\n\r\nСохранения и настройки сохранены. Следующий запуск может быть дольше.", n)
+			if n == 0 {
+				text = "Подходящий кэш игры не найден. Файлы не удалялись."
+			}
+			sendEvent(uiEvent{Kind: "complete", Success: true, Text: text})
+		}()
+	} else if currentRemoval != nil {
 		info := *currentRemoval
 		startWork("Удаление русификации…")
 		go func() {
@@ -794,7 +860,7 @@ func commitOperation() {
 				sendEvent(uiEvent{Kind: "complete", Text: "Удаление остановлено.\r\n\r\n" + err.Error()})
 				return
 			}
-				sendEvent(uiEvent{Kind: "complete", Success: true, Text: "Русификация и её старые резервные копии удалены.\r\n\r\nПапка игры:\r\n" + info.Root})
+			sendEvent(uiEvent{Kind: "complete", Success: true, Text: "Русификация и её старые резервные копии удалены.\r\n\r\nПапка игры:\r\n" + info.Root})
 		}()
 	} else if currentPlan != nil {
 		p := *currentPlan
@@ -825,11 +891,18 @@ func drainEvents() {
 				busy = false
 				currentPlan = e.Plan
 				currentRemoval = nil
+				currentCache = nil
 				showPage(pageReview)
 			case "removalPrepared":
 				busy = false
 				currentRemoval = e.Removal
 				currentPlan = nil
+				currentCache = nil
+				showPage(pageReview)
+			case "cachePrepared":
+				busy = false
+				currentCache = e.Cache
+				currentPlan, currentRemoval = nil, nil
 				showPage(pageReview)
 			case "complete":
 				busy = false
@@ -877,10 +950,16 @@ func onCommand(id uint16) {
 			return
 		}
 		prepareRemoval()
+	case id == idCache:
+		if page != pageFolder {
+			return
+		}
+		prepareCache()
 	case id == idBack:
 		if page == pageProgress || page == pageReview {
 			currentPlan = nil
 			currentRemoval = nil
+			currentCache = nil
 			showPage(pageFolder)
 		} else if page > pageLicense {
 			showPage(page - 1)
@@ -1005,7 +1084,7 @@ func wndProc(window syscall.Handle, msg uint32, wParam, lParam uintptr) uintptr 
 	case wmGetMinMaxInfo:
 		if lParam != 0 {
 			m := (*minMaxInfo)(unsafe.Pointer(lParam))
-			r := rect{Right: dip(740), Bottom: dip(590)}
+			r := rect{Right: dip(740), Bottom: dip(700)}
 			adjustOuter(&r, dpi)
 			m.MinTrack = point{r.Right - r.Left, r.Bottom - r.Top}
 		}
@@ -1097,7 +1176,7 @@ func main() {
 		pMessageBoxW.Call(0, uintptr(unsafe.Pointer(utf16("Не удалось создать окно установщика."))), uintptr(unsafe.Pointer(utf16(appTitle))), 0x10)
 		return
 	}
-	r := rect{Right: dip(780), Bottom: dip(640)}
+	r := rect{Right: dip(780), Bottom: dip(740)}
 	adjustOuter(&r, dpi)
 	width, height := r.Right-r.Left, r.Bottom-r.Top
 	screenW, _, _ := pGetSystemMetrics.Call(0)

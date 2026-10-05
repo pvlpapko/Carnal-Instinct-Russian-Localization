@@ -31,7 +31,7 @@ def main():
         if digest not in values:values.append(digest)
     trusted.write_text(json.dumps(known,indent=2)+'\n',encoding='utf-8')
     env=os.environ.copy();env.update(GOOS='windows',GOARCH='amd64',CGO_ENABLED='0',GOTOOLCHAIN='local',GOPROXY='off')
-    subprocess.run([args.go,'test','-buildvcs=false','-count=1','-c','-o',str(HERE/'core-tests.exe'),'core.go','core_test.go','no_backup_test.go'],env=env,cwd=HERE,check=True)
+    subprocess.run([args.go,'test','-buildvcs=false','-count=1','-c','-o',str(HERE/'core-tests.exe'),'core.go','cache.go','core_test.go','no_backup_test.go','cache_test.go'],env=env,cwd=HERE,check=True)
     raw=HERE/'CarnalInstinct_RU_Setup_raw.exe'
     flags='-H windowsgui -s -w -X main.steamPayloadEditionID='+steam.name
     subprocess.run([args.go,'build','-buildvcs=false','-trimpath','-ldflags='+flags,'-o',str(raw),'.'],env=env,cwd=HERE,check=True)

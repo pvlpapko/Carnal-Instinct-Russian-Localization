@@ -1,0 +1,38 @@
+{
+  "release": "18.8",
+  "status": "investigated_no_unverified_shader_patch",
+  "source_game": "0.7.9.16321",
+  "source_assets": {
+    "GameInstance": {
+      "bytes": 313816,
+      "sha256": "756887fd7ef918293f74de69e5bec51f7a54c6dc43408a2e24599cfd9382e898"
+    },
+    "DefaultEngine": {
+      "bytes": 26420,
+      "sha256": "6490d50874f322f0a03a3f648472d2ff3d74522fa0e6be5e45ccc3de729fabfb"
+    },
+    "DefaultGame": {
+      "bytes": 4139,
+      "sha256": "076a37cbe290b320b9f79a54880d46672d7ddfb8e72c562abc37cd258f789a5c"
+    },
+    "BP_CI_ShaderCompiler": {
+      "bytes": 3164,
+      "sha256": "0990774ed1faa980fdefa95d1b171f8a3af381bfa85d1305a36e1a6de90ed087"
+    },
+    "W_CI_ShaderCompilationProgress": {
+      "bytes": 13516,
+      "sha256": "c623595d2aa373c3ff69b74f9df0b7843ca59e0ff99d91f9b83313c97a366d4d"
+    }
+  },
+  "findings": [
+    "BP_CI_ShaderCompiler inherits /ShaderCompilationScreen/Blueprints/BP_ShaderCompiler; inherited plugin source absent from source index and Drive search",
+    "Progress widget counts MaterialsToCompile + SystemsToCompile and LoadedMaterials + LoadedSystems, not a measured engine PSO compilation queue",
+    "Current DefaultEngine.ini has no explicit PSO cache disable, flushing or recompilation rule",
+    "No evidence establishes a redundant forced compile in accessible source; no shader skipping or speculative Engine.ini overrides added",
+    "Ordinary installation retains game shader cache; separate cache cleanup can increase next startup time"
+  ],
+  "timing_before_seconds": null,
+  "timing_after_seconds": null,
+  "runtime_acceleration_verified": false,
+  "pending": "user repeated-startup timing, without-mod comparison, inherited plugin and runtime log if startup investigation continues"
+}
