@@ -2,13 +2,13 @@
   "schema_version": "1.0",
   "edition": "Steam",
   "task": "v15_startup_async_loading_crash",
-  "status": "v15_3_iostore_canary_runtime_pass_full_rebuild_in_progress",
+  "status": "v17_full_current_source_restore_built_static_validation_runtime_pending",
   "source_state_id": "steam_current_2026-10-03_16321_asset_verified_index_stale",
   "verified_game_version": "0.7.9.16321",
   "verified_build": null,
-  "current_phase": "full_current_source_binary_restore",
-  "last_completed_unit": "runtime_v15_3_iostore_canary_startup_pass",
-  "next_unit": "rebuild_full_steam_payload_from_current_source_and_restore_ui_fixes",
+  "current_phase": "full_current_source_restore_runtime_validation",
+  "last_completed_unit": "v17_full_restore_build_static_validation",
+  "next_unit": "runtime_test_v17_full_restore",
   "completed_units": [
     "v15 Steam startup failure reproduced by user; NoSteam v15 works",
     "full 71-package v15 Steam override comparison against current source completed",
@@ -53,14 +53,16 @@
     "v15.3 Drive upload/readback exact SHA256 PASS; file id 1oUh7b_89-IYZSEgJJKT7J9RjINL7zs5r",
     "archived ci_formats.build_container helper directory argument-order defect identified; v15 clean build and v15.3 use corrected build_container_fixed wrapper",
     "USER RUNTIME PASS: Steam v15.3 single-package current-source IoStore canary starts successfully",
-    "custom corrected IoStore construction is therefore runtime-compatible with current Steam startup for byte-identical current package"
+    "custom corrected IoStore construction is therefore runtime-compatible with current Steam startup for byte-identical current package",
+    "v17 full restore built with corrected IoStore builder and 39 targeted current-source/current-source-derived Steam packages",
+    "v17 exact named-package readback 39/39 PASS; TOC hashes PASS; physical UCAS block cover exact",
+    "v17 installer rebuilt with visible Steam verified-version label, license flow, separate Steam_current and NoSteam_0.7.9.16232 embedded payloads",
+    "v17 NoSteam 0.7.9.16232 payload byte-identical to user-confirmed-working v15",
+    "v17 final ZIP CRC PASS; SHA256 4abf564c13884789ea86f99795f1ba6135bcb605ebd51073093fbac37d90002c"
   ],
   "pending_units": [
-    "rebuild full Steam binary payload from current 0.7.9.16321 cooked sources only",
-    "port prior UI/map/quest/character/stat fixes onto matching current-source packages",
-    "assemble installer with strict Steam/NoSteam payload separation",
-    "static validate package provenance, exact readback, locres, installer and final archive",
-    "runtime regression test full Steam build"
+    "runtime Steam startup and regression test of v17 full restore",
+    "if PASS: promote v17 from TEST to FINAL and update canonical release metadata"
   ],
   "source_files_used": [
     "CI_SOURCE_INDEX.json",
@@ -74,7 +76,8 @@
     "working/steam/current/v15_startup_async_loading_crash/CRASH_DIAGNOSIS_AND_V15_1_BUILD.json",
     "CI GPT/Releases/Carnal_Instinct_RU_DontLook_Steam_v15.1_StartupCrashFix_TEST.zip",
     "working/steam/current/v15_startup_async_loading_crash/V15_3_IOSTORE_CANARY.json",
-    "CI GPT/Releases/SteamIoStoreCanary_2026-10-04_v15.3/Carnal_Instinct_RU_DontLook_Steam_v15.3_IOSTORE_CANARY_TEST.zip"
+    "CI GPT/Releases/SteamIoStoreCanary_2026-10-04_v15.3/Carnal_Instinct_RU_DontLook_Steam_v15.3_IOSTORE_CANARY_TEST.zip",
+    "working/steam/current/v15_startup_async_loading_crash/V17_CURRENT_SOURCE_FULL_RESTORE.json"
   ],
   "validation_completed": [
     "root-cause static schema audit",
@@ -92,11 +95,14 @@
     "live current-source Drive byte readback for GameInstance, Master Slider, CharacterScreen and w_03_map_icon",
     "v15.3 exact current-source GameInstance byte readback from custom IoStore",
     "v15.3 Drive readback SHA256 and ZIP CRC",
-    "runtime Steam v15.3 single-package IoStore canary startup PASS reported by user"
+    "runtime Steam v15.3 single-package IoStore canary startup PASS reported by user",
+    "v17 39/39 exact IoStore package readback",
+    "v17 installer Go unit tests/build PASS",
+    "v17 archive ZIP CRC PASS"
   ],
   "validation_pending": [
-    "static full-current-source binary payload validation",
-    "runtime full Steam regression"
+    "runtime v17 Steam startup",
+    "runtime map/settings/save-load/quests/character-stats/radial/books regression"
   ],
   "notes": [
     "Static root cause: v15 inherited WB_CharacterScreen, WB_Stats_Main, WB_Stats_Full and WB_Stats_Main_Slot from an older Steam schema.",
@@ -111,6 +117,7 @@
     "Authoritative current Steam stock .utoc/.ucas/.pak are absent from the indexed source tree; this is now a proven blocker for a metadata-preserving binary rebuild if text-only succeeds.",
     "Correction after user clarification and live Drive verification: current Steam 0.7.9.16321 unpacked cooked assets ARE present on Drive. Only the original packed stock .utoc/.ucas/.pak containers are absent from the indexed source tree.",
     "Absence of stock containers is not a blocker for source asset provenance. The next investigation targets custom IoStore/package-store construction because v15.1 failed even with current-source-derived assets while v15.2 PAK-only passes.",
-    "v15.3 PASS removes synthetic IoStore format as the immediate blocker. Full rebuild may proceed, but only current Steam 0.7.9.16321 cooked packages may be used as binary bases."
+    "v15.3 PASS removes synthetic IoStore format as the immediate blocker. Full rebuild may proceed, but only current Steam 0.7.9.16321 cooked packages may be used as binary bases.",
+    "v17 restores functionality without wholesale reuse of stale 0.7.9.16313/NoSteam binaries. WB_WorldMapPopup and Neutral_Widget remain intentionally absent due prior crash evidence."
   ]
 }
