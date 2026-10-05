@@ -114,7 +114,7 @@
       "edition": "Steam",
       "task": "v15_startup_async_loading_crash",
       "state_path": "working/steam/current/v15_startup_async_loading_crash/AUDIT_STATE.json",
-      "status": "v15_3_iostore_canary_runtime_pass_full_rebuild_in_progress"
+      "status": "v17_full_current_source_restore_built_static_validation_runtime_pending"
     }
   ],
   "latest_release": {
@@ -137,12 +137,11 @@
   "latest_test_hotfix": {
     "edition": "Steam",
     "task": "v15_startup_async_loading_crash",
-    "name": "Carnal_Instinct_RU_DontLook_Steam_v15.3_IOSTORE_CANARY_TEST.zip",
-    "sha256": "74d3570a446875ad8fac2eadfdc9b4d703b0d14408100c1d50c719be75277830",
-    "bytes": 1132902,
-    "drive_folder_id": "182D2VOTGO0I4E1tKWcWvGuaiaTIj6Nbt",
-    "drive_file_id": "1oUh7b_89-IYZSEgJJKT7J9RjINL7zs5r",
-    "runtime_validation": "PASS: user confirmed Steam startup",
-    "binary_iostore_overrides": "one byte-identical current Steam RPGInventory_GameInstance package"
+    "name": "Carnal_Instinct_RU_DontLook_CurrentSteamFullRestore_2026-10-05_v17_TEST.zip",
+    "sha256": "4abf564c13884789ea86f99795f1ba6135bcb605ebd51073093fbac37d90002c",
+    "bytes": 27474741,
+    "runtime_validation": "pending full v17 test",
+    "steam_packages": 39,
+    "installer_sha256": "70b4973086a988592a2901f00238b8d93edba8ccdc4922604b33b9cbf35d2c73"
   }
 }
