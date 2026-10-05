@@ -1,0 +1,59 @@
+{
+  "schema_version": "1.0",
+  "edition": "Steam",
+  "task": "shader_startup_investigation",
+  "status": "missing_inherited_shader_plugin_assets",
+  "source_state_id": "steam_current_2026-10-03_16321_asset_verified_index_stale",
+  "verified_game_version": "0.7.9.16321",
+  "verified_build": null,
+  "created_at": "2026-10-05T20:52:12.770026+00:00",
+  "updated_at": "2026-10-05T20:55:22.423943+00:00",
+  "current_phase": "source_discovery",
+  "last_completed_unit": "registry_confirms_parent_and_binary_search_positive_control_confirms_missing_accessible_file",
+  "next_unit": "retrieve_inherited_BP_ShaderCompiler_and_plugin_assets_from_extraction",
+  "completed_units": [
+    "Read existing 18.8 startup investigation and 18.9 plugin report",
+    "Fresh live GameInstance hash and embedded version unchanged",
+    "Rechecked project root, its parent, Plugin and Plugins; missing inherited shader parent remains inaccessible",
+    "Recorded descriptor versus cooked-asset distinction and provider file-search limitations",
+    "User confirmed the same Drive source root",
+    "Fresh AssetRegistry confirms the parent and eight plugin assets under /ShaderCompilationScreen",
+    "Exact binary filename search returned no plugin targets; known BP_CI_ShaderCompiler binary found as positive control"
+  ],
+  "pending_units": [
+    "Access inherited BP_ShaderCompiler.uasset and related assets from the complete extraction",
+    "Inspect inherited plugin initialization and scheduling",
+    "Obtain repeated-startup timing and without-localization comparison",
+    "Implement and verify a startup change only if a concrete cause is established"
+  ],
+  "source_files_used": [
+    "CI_SOURCE_INDEX.json",
+    "CI_SOURCE_TREE.txt",
+    "steam/current/BUILD_STATE.json",
+    "working/steam/current/release_ui_startup_cache_v18_8/STARTUP_INVESTIGATION.json",
+    "working/steam/current/ui_font_tracking_v18_9/PLUGIN_REVIEW.json",
+    "Current Drive root, parent, Plugin and Plugins listings",
+    "Fresh live RPGInventory_GameInstance.uasset",
+    "Fresh live AssetRegistry.bin",
+    "Exact binary Drive search with successful known-file control"
+  ],
+  "working_files": [
+    "EXTRACTION_RECHECK.json"
+  ],
+  "validation_completed": [
+    "Current GameInstance SHA256 and version verified",
+    "All four refreshed direct folder listings are below 100-child truncation limit",
+    "AssetRegistry SHA256 and exact package-name presence",
+    "Binary lookup positive control"
+  ],
+  "validation_pending": [
+    "Inherited parent source inspection",
+    "Actual startup timings",
+    "Runtime validation of any future change"
+  ],
+  "notes": [
+    "Latest verified distributed artifact remains 18.9 RELEASE; no payload or installer changes in this investigation.",
+    "User requested minimal usage; no subagents or repeated whole-source download.",
+    "Keep shader preparation intact until its actual source and behavior are understood."
+  ]
+}

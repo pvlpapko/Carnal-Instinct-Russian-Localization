@@ -23,7 +23,7 @@
   "source_stock_status": "contains localization modifications; not a clean stock game extraction",
   "binary_compatibility": "18.9 RELEASE:39 Steam packages statically verified, including five native-only typography/tracking edits.39 functions and generated classes/CDOs unchanged. 18.8 user screenshots show running Steam; new18.9 runtime pending, exact BuildID unknown.",
   "ui_override_compatibility": "Shared Theme3 settings heading restored32→16; journal body20→16 and labels22→18; tracked marker64→28, scale1.1→1, negative right margin removed, 530px card+20px padding fits550px host.23 final UI/map/crash/display checks PASS.",
-  "last_source_check_at": "2026-10-05T20:30:54.542956+00:00",
+  "last_source_check_at": "2026-10-05T20:55:22.423943+00:00",
   "evidence": [
     "current Google Drive RPGInventory_GameInstance.uasset raw bytes",
     "embedded ASCII version 0.7.9.16321 at byte offset 313692",
@@ -31,7 +31,8 @@
     "2026-10-05 live GameInstance readback SHA256 unchanged; v18.4 targeted UI packages fetched from live indexed Drive IDs",
     "v18.6 Essence native serialization root cause and exact corrected container readback; 11 regression tests PASS; uploaded release hash verified",
     "v18.8 fresh live GameInstance SHA256 unchanged; user reports 18.7 crafting tab appears and UI almost matches requested style",
-    "18.9 fresh live GameInstance version/hash unchanged; current shared Theme_3 SubHeadline source SHA256 23becd97217ef516ac08c5b51388a7acbb8ca1aeb5d5da64d9e7dbe9f2d7c9ef unchanged; user 18.8 settings heading and tracking clipping regression screenshots"
+    "18.9 fresh live GameInstance version/hash unchanged; current shared Theme_3 SubHeadline source SHA256 23becd97217ef516ac08c5b51388a7acbb8ca1aeb5d5da64d9e7dbe9f2d7c9ef unchanged; user 18.8 settings heading and tracking clipping regression screenshots",
+    "2026-10-05 shader continuation: fresh live GameInstance SHA256 and embedded 0.7.9.16321 unchanged; registry confirms /ShaderCompilationScreen parent, exact binary search with positive control does not find plugin implementation in accessible Drive files."
   ],
   "notes": [
     "Current embedded game version verified as 0.7.9.16321; exact Steam BuildID unavailable.",

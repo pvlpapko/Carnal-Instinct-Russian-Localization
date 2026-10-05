@@ -1,0 +1,94 @@
+{
+  "schema_version": "1.0",
+  "checked_at": "2026-10-05T20:55:22.423943+00:00",
+  "user_clarification": "User reports the PAK/UTOC/UCAS contents have already been fully extracted onto Drive. Do not request re-upload of the same archives merely because the plugin descriptor is missing.",
+  "source_identity": {
+    "edition": "Steam",
+    "source_state_id": "steam_current_2026-10-03_16321_asset_verified_index_stale",
+    "embedded_game_version": "0.7.9.16321",
+    "steam_build_id": null,
+    "GameInstance_bytes": 313816,
+    "GameInstance_sha256": "756887fd7ef918293f74de69e5bec51f7a54c6dc43408a2e24599cfd9382e898",
+    "fresh_download": "/workspace/attachments/4e243c00-baf9-4508-96d4-2fff2e4cf757/RPGInventory_GameInstance.uasset.bin",
+    "unchanged": true
+  },
+  "scope": {
+    "project_root_id": "1-kOUHTe33iZDj4wvLk-KpA6rqWGvmFnC",
+    "project_root_direct_children": [
+      "AssetRegistry.bin",
+      "Carnal_Instinct_UE5.uproject",
+      "Plugins",
+      "Content",
+      "Config",
+      "Plugin"
+    ],
+    "project_parent_id": "1Feh2Pjo_QqUp9laniV1oaD-206lS3_BD",
+    "project_parent_direct_children": [
+      "Carnal_Instinct_UE5"
+    ],
+    "Plugin_direct_children_count": 4,
+    "Plugins_direct_children_count": 19,
+    "all_four_direct_folder_listings_below_100_limit": true,
+    "index_generated_at": "2026-10-03T12:48:51.032584Z",
+    "index_file_count": 54909,
+    "index_freshness": "Historical full index; new Plugin folder not indexed. Target asset missing from historical index. Current direct roots separately refreshed."
+  },
+  "findings": [
+    "The visible extraction contains /Game/BlueprintSystems/ShaderComp/BP_CI_ShaderCompiler and W_CI_ShaderCompilationProgress.",
+    "Parent /ShaderCompilationScreen/Blueprints/BP_ShaderCompiler remains unavailable in the visible indexed project extraction.",
+    "No Engine folder is in the current project root or its visible parent.",
+    "Metadata folder search for Engine, Marketplace, ShaderCompilationScreen and ShaderCodcddcf8247c4V6 returned no accessible results.",
+    "Broader shader-folder search returned ShaderComp and _Shaders; neither identifies the missing inherited parent plugin.",
+    "The .uplugin descriptor may be absent from cooked extraction; the actionable target is BP_ShaderCompiler.uasset, with associated files if present."
+  ],
+  "search_limitations": [
+    "An initial legacy search restricted MIME types; that negative result was not used as evidence. Subsequent exact binary searches included an explicit octet-stream alternative and a successful known-file positive control.",
+    "The complete local extraction itself is not accessible; the conclusion concerns currently accessible Drive files only."
+  ],
+  "needed_asset": {
+    "virtual_package": "/ShaderCompilationScreen/Blueprints/BP_ShaderCompiler",
+    "file_name": "BP_ShaderCompiler.uasset",
+    "manifest_descriptor": "../../../Engine/Plugins/Marketplace/ShaderCodcddcf8247c4V6/ShaderCompilationScreen.uplugin",
+    "expected_cooked_relative_location": "Engine/Plugins/Marketplace/ShaderCodcddcf8247c4V6/Content/Blueprints/BP_ShaderCompiler.uasset (or virtual ShaderCompilationScreen/Blueprints/BP_ShaderCompiler.uasset, depending on exporter)",
+    "descriptor_required": false
+  },
+  "pending": "The inherited BP_ShaderCompiler.uasset and related plugin assets must become accessible. The registry confirms their names but cannot substitute for their Blueprint code.",
+  "binary_changes": false,
+  "shader_acceleration_verified": false,
+  "user_location_reply": "The complete extraction is in the same Carnal_Instinct_UE5 Drive folder.",
+  "asset_registry_evidence": {
+    "drive_id": "1EWbg2ialZJYDbq6Kf0bqp_f8kVqdTh58",
+    "bytes": 12275196,
+    "sha256": "f2b6e2380f844a045f5c012c5a162c7f3c4bee848a519df8e2acb1b92cc1ba65",
+    "local_file": "/workspace/attachments/dc716147-83f6-4930-90ed-53f4c34f4a32/AssetRegistry.bin",
+    "inspection_method": "Exact ASCII/UTF-16 search for package/object names. This is reference/name evidence, not a full parsed registry or the Blueprint implementation.",
+    "parent_package_name_offset": 4196753,
+    "parent_asset_name_offset": 4196788,
+    "plugin_asset_names": [
+      "BP_IShaderCompilationLoadingScreen",
+      "BP_MaterialInstanceLoader",
+      "BP_MaterialLoader",
+      "BP_ShaderCompiler",
+      "BP_StaticMeshLoader",
+      "BP_SystemLoader",
+      "RT_CompilationRenderTarget",
+      "W_ShaderCompilationProgress"
+    ],
+    "plugin_package_prefix": "/ShaderCompilationScreen/",
+    "main_menu_child_reference": "/Game/NiceSettingsMenu/Maps/MainMenu_NSM_SplashScreen.MainMenu_NSM_SplashScreen:PersistentLevel.BP_CI_ShaderCompiler_C_0"
+  },
+  "current_binary_filename_search": {
+    "method": "Raw Drive q includes an explicit application/octet-stream alternative, with no text hydration. Positive control confirms the binary lookup works.",
+    "exact_targets": [
+      "BP_ShaderCompiler.uasset",
+      "BP_MaterialLoader.uasset",
+      "BP_MaterialInstanceLoader.uasset",
+      "BP_SystemLoader.uasset"
+    ],
+    "target_results": [],
+    "positive_control_name": "BP_CI_ShaderCompiler.uasset",
+    "positive_control_id": "1hHo9dkYPRO4IHHT2E2uQf0ZQwupanKR8",
+    "positive_control_bytes": 3164,
+    "control_results_count": 1
+  }
+}
