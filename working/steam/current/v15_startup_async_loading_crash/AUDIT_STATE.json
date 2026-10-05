@@ -2,13 +2,13 @@
   "schema_version": "1.0",
   "edition": "Steam",
   "task": "v15_startup_async_loading_crash",
-  "status": "v18_2_runtime_validated_ui_built_runtime_pending",
+  "status": "q3_quest_objectives_isolated_display_boundary_rebuild_in_progress",
   "source_state_id": "steam_current_2026-10-03_16321_asset_verified_index_stale",
   "verified_game_version": "0.7.9.16321",
   "verified_build": null,
-  "current_phase": "runtime_validate_v18_2",
-  "last_completed_unit": "q3_isolated_and_v18_2_built_uploaded_verified",
-  "next_unit": "runtime_test_v18_2_main_payload",
+  "current_phase": "quest_objectives_display_boundary_rebuild",
+  "last_completed_unit": "q1_q2_q4_runtime_pass_q3_runtime_fail",
+  "next_unit": "build_current_source_objective_name_description_display_boundary_variants",
   "completed_units": [
     "v15 Steam startup failure reproduced by user; NoSteam v15 works",
     "full 71-package v15 Steam override comparison against current source completed",
@@ -98,13 +98,19 @@
     "v18.2 Steam exact named-package readback 23/23 PASS",
     "v18.2 installer native Go tests PASS and Windows amd64 build PASS",
     "v18.2 ZIP CRC PASS; SHA256 900c26c9bd28010eb69961f8c9c22b7161db97518ad3b4c3eabc33cda1754765",
-    "v18.2 uploaded to CI GPT/Releases and Drive readback SHA256 + ZIP CRC PASS; Drive file id 1wrpv2_tWWhYz49TjW_Qiyhlb4jjX-BP5"
+    "v18.2 uploaded to CI GPT/Releases and Drive readback SHA256 + ZIP CRC PASS; Drive file id 1wrpv2_tWWhYz49TjW_Qiyhlb4jjX-BP5",
+    "USER RUNTIME PASS: Q1 bp_newQuest_marker only",
+    "USER RUNTIME PASS: Q2 quest_list only",
+    "USER RUNTIME FAIL: Q3 quest_objectives only -> EXCEPTION_ACCESS_VIOLATION reading 0x0000000d00000033 in FAsyncLoadingThread",
+    "USER RUNTIME PASS: Q4 quest_sub_objectives only",
+    "Exact crashing quest asset isolated to quest_objectives.uasset override",
+    "Current Steam WB_QuestObjectiveName and WB_QuestObjectiveDescription source assets re-fetched from Drive and match historical current-source hashes used by source-native QuestFix patches"
   ],
   "pending_units": [
-    "runtime Steam startup test v18.2 main installer payload",
-    "if startup passes: regression test map hover, journal/tracking, character/stats, settings/controls, TAB radial, saves, crafting/vendor, dialogue/books",
-    "redesign quest_objectives translation at display boundary without modifying quest_objectives startup data asset",
-    "optionally runtime-test isolated Essence_Tier_1_Small branch before inclusion"
+    "build v18.3 objective display-boundary variants from current-source WB_QuestObjectiveName/WB_QuestObjectiveDescription only",
+    "runtime open quest journal and inspect objective title/description translation",
+    "if display-boundary pair passes, rebuild installer with them in Steam main payload and keep quest_objectives stock",
+    "if one display widget fails, retain the passing widget and redesign only the failing field"
   ],
   "source_files_used": [
     "CI_SOURCE_INDEX.json",
@@ -165,12 +171,12 @@
     "Q3 independent runtime FAIL isolates quest_objectives",
     "v18.2 23/23 exact IoStore readback",
     "v18.2 installer native Go tests / Windows build",
-    "v18.2 Drive readback SHA256 and ZIP CRC"
+    "v18.2 Drive readback SHA256 and ZIP CRC",
+    "Q1/Q2/Q4 individual runtime PASS",
+    "Q3 individual runtime FAIL"
   ],
   "validation_pending": [
-    "v18.2 main runtime startup",
-    "v18.2 full UI/gameplay regression",
-    "safe display-boundary quest_objectives localization"
+    "v18.3 objective display-boundary runtime validation"
   ],
   "notes": [
     "Static root cause: v15 inherited WB_CharacterScreen, WB_Stats_Main, WB_Stats_Full and WB_Stats_Main_Slot from an older Steam schema.",
@@ -192,6 +198,8 @@
     "v18 failure does not invalidate all UI fixes: 52 stock-identical overrides can be removed without changing any feature. AC_RadialMenu is the prime startup-graph suspect because it is the sole direct RPGInventory_GameInstance import overridden by v18.",
     "Dependency audit: GameInstance->bp_quest_component->quest_list->quest_objectives/quest_sub_objectives and GameInstance->DTC_All_Items->Essence_Tier_1_Small. These are now isolated from the main runtime payload.",
     "V15 quest_list/objectives/sub_objectives were field-aware FName display patches that append name-map entries; they remain suspect until individual runtime tests. Do not restore them wholesale.",
-    "quest_objectives old patch appended 479 FNames and rewrote 531 references (267 objective_title, 264 objective_description); this method is now forbidden on current Steam because Q3 independently crashes AsyncLoading."
+    "quest_objectives old patch appended 479 FNames and rewrote 531 references (267 objective_title, 264 objective_description); this method is now forbidden on current Steam because Q3 independently crashes AsyncLoading.",
+    "Do not reintroduce quest_objectives.uasset FName patch on Steam current. Previous patch appends 479 names and rewrites 531 title/description references.",
+    "Historical source-native display widgets WB_QuestObjectiveName and WB_QuestObjectiveDescription remain candidates; prior v6 quest-tab crash bundled them together with WB_QuestName, so they were never individually runtime-isolated."
   ]
 }
