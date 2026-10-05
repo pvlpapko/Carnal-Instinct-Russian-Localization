@@ -7,7 +7,7 @@
   "verified_game_version": "0.7.9.16321",
   "verified_build": null,
   "current_phase": "runtime_validate_v18_3_objective_display_boundary",
-  "last_completed_unit": "v18_3_full_objective_display_boundary_build",
+  "last_completed_unit": "v18_3_drive_readback_verified",
   "next_unit": "runtime_startup_then_open_quest_journal_v18_3",
   "completed_units": [
     "v15 Steam startup failure reproduced by user; NoSteam v15 works",
@@ -113,7 +113,8 @@
     "Combined reviewed objective coverage 531/531",
     "v18.3 Steam IoStore exact readback 26/26 PASS; NoSteam payload byte-identical to v18.2",
     "v18.3 installer Go tests PASS and Windows amd64 build PASS",
-    "v18.3 ZIP CRC PASS; SHA256 acb8b64ddd4caece240e29b6deae0e1aafe6d8d501578fa1bfe924d128c79b5b"
+    "v18.3 ZIP CRC PASS; SHA256 acb8b64ddd4caece240e29b6deae0e1aafe6d8d501578fa1bfe924d128c79b5b",
+    "v18.3 Drive readback SHA256 and ZIP CRC PASS"
   ],
   "pending_units": [
     "runtime Steam startup with v18.3 main installer payload",
@@ -192,7 +193,8 @@
     "v18.3 objective FText locres coverage 569/569",
     "v18.3 reviewed objective reference coverage 531/531",
     "v18.3 minimal Q3 header below 65536",
-    "v18.3 installer Go tests/build and ZIP CRC"
+    "v18.3 installer Go tests/build and ZIP CRC",
+    "v18.3 Drive readback exact SHA256 and ZIP CRC"
   ],
   "validation_pending": [
     "v18.3 runtime startup",
@@ -221,6 +223,7 @@
     "quest_objectives old patch appended 479 FNames and rewrote 531 references (267 objective_title, 264 objective_description); this method is now forbidden on current Steam because Q3 independently crashes AsyncLoading.",
     "Do not reintroduce quest_objectives.uasset FName patch on Steam current. Previous patch appends 479 names and rewrites 531 title/description references.",
     "Historical source-native display widgets WB_QuestObjectiveName and WB_QuestObjectiveDescription remain candidates; prior v6 quest-tab crash bundled them together with WB_QuestName, so they were never individually runtime-isolated.",
-    "v18.3 does not use the crashing 531-reference quest_objectives patch. Legacy objectives are localized at WB_QuestObjectiveName/WB_QuestObjectiveDescription display boundary; only 12 Hell of a Kitchen refs remain in a minimal current-source data patch."
+    "v18.3 does not use the crashing 531-reference quest_objectives patch. Legacy objectives are localized at WB_QuestObjectiveName/WB_QuestObjectiveDescription display boundary; only 12 Hell of a Kitchen refs remain in a minimal current-source data patch.",
+    "v18.3 Drive release file id 1IE3t9ruN-dHD2JT4OlNO4cPxJ2F5iE7T; folder id 1tz_EhbVqYV-8gVDPaQ9zgu_KpEjCNN1Y; readback SHA256 matches local."
   ]
 }
