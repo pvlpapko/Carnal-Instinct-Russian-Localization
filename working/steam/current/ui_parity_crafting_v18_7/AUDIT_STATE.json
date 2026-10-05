@@ -7,10 +7,10 @@
   "verified_game_version": "0.7.9.16321",
   "verified_build": null,
   "created_at": "2026-10-05T18:27:25.092492+00:00",
-  "updated_at": "2026-10-05T18:50:12.266314+00:00",
-  "current_phase": "native_layout_schema_verified",
-  "last_completed_unit": "native_UMG_graphs_and_scripts_decoded",
-  "next_unit": "test_and_apply_edition_preserving_native_layout_theme_crafting_fix",
+  "updated_at": "2026-10-05T19:12:28.475509+00:00",
+  "current_phase": "native_ui_prepared_container_validation_pending",
+  "last_completed_unit": "nine_source_based_steam_ui_packages_prepared",
+  "next_unit": "build_containers_and_validate_graph_bindings_existing_regressions",
   "completed_units": [
     "Six screenshots compared: NoSteam magenta borders, grouped vertical journal, crafting after Lore; Steam gold and horizontal objectives/journal, missing crafting tab",
     "Fresh Steam GameInstance SHA256 unchanged 756887fd...; source CharacterScreen and QuestScreen exact prior bytes",
@@ -19,7 +19,11 @@
     "Full native UMG properties parsed with zero errors in compared character/stats/quest/window widgets; corrected Slate float-vector schema",
     "Steam Character SizeBox widths have disabled/absent override flags unlike NoSteam",
     "QuestScreen has modern category widgets but old two-column layout; original 18.6 does not override screen",
-    "Steam and NoSteam Stats_Main bytecode strictly decoded and reserialized identically after adding ClassContext/SetSet support"
+    "Steam and NoSteam Stats_Main bytecode strictly decoded and reserialized identically after adding ClassContext/SetSet support",
+    "Steam modern hidden sections activated; old duplicate controls collapsed without removing bindings",
+    "Crafting tab visible after Lore; source enabled-state/progression/click/hover logic preserved",
+    "Steam quest layout changed from columns to objectives above journal; source functions preserved",
+    "154 functions decoded and roundtripped; only one form-caption route and dependent event entry offsets edited; calculation/progression functions retained"
   ],
   "pending_units": [
     "Determine compatibility and minimal native theme/layout edits preserving functions",
@@ -34,12 +38,15 @@
     "live Drive GameInstance/CharacterScreen/QuestScreen/WindowSwitcher/UpperUIBar"
   ],
   "working_files": [
-    "tools/ui_parity_v18_7/inspect_native.py",
+    "tools/ui_parity_v18_7",
+    "tools/map_audit_v18_5/display_tools.py",
     "tools/map_audit_v18_5/kismet.py"
   ],
   "validation_completed": [
     "ZIP CRC and safe image extraction PASS",
-    "Fresh source GameInstance identity and CharacterScreen/QuestScreen bytes match prior source"
+    "Fresh source GameInstance identity and CharacterScreen/QuestScreen bytes match prior source",
+    "Baseline five layout regressions fail for the reported reasons",
+    "Prepared 9 Steam UI packages: all native widgets parse; 154 function scripts strictly valid"
   ],
   "validation_pending": [
     "Native serialization and complete functions readback",
@@ -49,6 +56,9 @@
     "No subagents; minimize Codex usage",
     "User has not checked Steam UI without localization; do not assume mod causes all stock theme differences",
     "Crafting tab must follow Lore",
-    "NoSteam known good screenshot/reference; preserve edition gameplay logic"
+    "NoSteam known good screenshot/reference; preserve edition gameplay logic",
+    "NoSteam payload will remain byte-identical to 18.6 because its screenshot layout and crafting are already correct",
+    "Selected quest heading source class native font/color updated; this also affects Steam Theme_3 headings, runtime fit pending",
+    "Exact pixel/visual equivalence and actual startup/crafting/settings FPS are unverified"
   ]
 }

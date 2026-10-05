@@ -4,8 +4,7 @@ import json, sys, hashlib
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / 'map_audit_v18_5'))
 from display_tools import ui, cf, k, find_script, expr_name
 
-META = Path('/workspace/project-context/carnal-instinct/legacy-reference/CarnalInstinct_0.7.9.16232.usm')
-metadata = json.loads(META.read_text())['objects']
+metadata = json.loads(Path(__file__).with_name('native_schema.json').read_text())
 ui.NATIVE['/Script/CoreUObject.Box2D'] = '4dB'
 ui.NATIVE['/Script/SlateCore.DeprecateSlateVector2D'] = '2f'
 ui.NATIVE['/Script/CoreUObject.Vector4f'] = '4f'
@@ -25,16 +24,13 @@ def semantic(value):
         return [semantic(v) for v in value]
     return value
 
-for key, obj in metadata.items():
-    if not key.startswith('/Script/') or obj['type'] not in ('Class', 'ScriptStruct'):
-        continue
-    schema = {'super': obj.get('super_struct'), 'properties': [clean(f) for f in obj.get('properties', [])]}
+for key, schema in metadata.items():
     if key in ui.SCHEMA:
         old = ui.SCHEMA[key]
         assert old['super'] == schema['super']
         assert semantic({'super': old['super'], 'properties': [clean(f) for f in old['properties']]}) == semantic(schema), key
     ui.SCHEMA[key] = schema
-    if key.startswith('/Script/UMG.') and obj['type'] == 'Class':
+    if key.startswith('/Script/UMG.'):
         path = key.replace('.', '/')
         ident = (cf.CityHash64(path.lower().encode('utf-16-le')) & ((1 << 62) - 1)) | (1 << 62)
         ui.CLASS[ident] = key.split('.')[-1]
@@ -45,6 +41,14 @@ def props(package, export):
     values, end = ui.obj(raw, 0, '/Script/UMG.' + cls, package['names'])
     assert raw[end:] == b'\0' * 4, (export['name'], cls, raw[end:].hex())
     return values
+
+def is_widget(export):
+    if export['cls'] not in ui.CLASS:return False
+    cls='/Script/UMG.'+ui.CLASS[export['cls']]
+    while cls:
+        if cls in ('/Script/UMG.Widget','/Script/UMG.PanelSlot','/Script/UMG.WidgetTree'):return True
+        cls=ui.SCHEMA[cls]['super']
+    return False
 
 def describe(path):
     p = ui.zen.package(path)

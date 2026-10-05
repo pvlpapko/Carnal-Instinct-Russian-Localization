@@ -1,0 +1,3489 @@
+{
+  "release": "18.7 TEST",
+  "runtime_tested": false,
+  "assets": [
+    {
+      "source_sha256": "b8f5f3e8916ce3013c4737f40d6c52b863704911bf12cbc84957cad3b91f0878",
+      "patched_sha256": "a585bba0946c4201975188c011d4ffe7f63c6d864bcc5aaefa8a13f98760f5eb",
+      "source_header": 13055,
+      "patched_header": 16031,
+      "source_exports": 41,
+      "patched_exports": 47,
+      "changed_exports": [
+        5,
+        16,
+        17,
+        20,
+        26,
+        27,
+        28,
+        29,
+        30,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46
+      ],
+      "evidence": [
+        {
+          "export": "CI_RU_ViewportSize",
+          "field": "Slots",
+          "old": {},
+          "new": [
+            43
+          ]
+        },
+        {
+          "export": "ScaleBoxSlot_0",
+          "field": "Content",
+          "old": 21,
+          "new": 42
+        },
+        {
+          "export": "Overlay_0",
+          "field": "Slot",
+          "old": 27,
+          "new": 43
+        },
+        {
+          "export": "SizeBox_161",
+          "field": "bOverride_WidthOverride",
+          "old": {},
+          "new": 1
+        },
+        {
+          "export": "StatsSize",
+          "field": "bOverride_WidthOverride",
+          "old": {},
+          "new": 1
+        },
+        {
+          "export": "HorizontalBoxSlot_3",
+          "field": "Padding",
+          "old": {
+            "Left": 50.0
+          },
+          "new": {
+            "Left": 0.0,
+            "Top": 0.0,
+            "Right": 0.0,
+            "Bottom": 0.0
+          }
+        },
+        {
+          "export": "HorizontalBoxSlot_8",
+          "field": "Padding",
+          "old": {},
+          "new": {
+            "Left": 20.0,
+            "Top": 0.0,
+            "Right": 0.0,
+            "Bottom": 0.0
+          }
+        },
+        {
+          "export": "HorizontalBoxSlot_8",
+          "field": "Size",
+          "old": {
+            "SizeRule": 1
+          },
+          "new": {
+            "Value": 1.0,
+            "SizeRule": 0
+          }
+        },
+        {
+          "export": "CanvasPanelSlot_0",
+          "field": "LayoutData",
+          "old": {
+            "Offsets": {
+              "Right": 0,
+              "Bottom": 0
+            },
+            "Anchors": {
+              "Maximum": [
+                1.0,
+                1.0
+              ]
+            }
+          },
+          "new": {
+            "Offsets": {
+              "Right": 50.0,
+              "Bottom": 0,
+              "Left": 50.0
+            },
+            "Anchors": {
+              "Maximum": [
+                1.0,
+                1.0
+              ]
+            }
+          }
+        },
+        {
+          "export": "SizeBox_161",
+          "field": "Slots",
+          "old": [
+            30
+          ],
+          "new": [
+            45
+          ]
+        },
+        {
+          "export": "CI_RU_SizeBox_161_Background",
+          "field": "Slot",
+          "old": {},
+          "new": 45
+        },
+        {
+          "export": "StatsSize",
+          "field": "Slots",
+          "old": [
+            31
+          ],
+          "new": [
+            47
+          ]
+        },
+        {
+          "export": "CI_RU_StatsSize_Background",
+          "field": "Slot",
+          "old": {},
+          "new": 47
+        }
+      ],
+      "name": "WB_CharacterScreen",
+      "edition": "Steam_current",
+      "mount": "Carnal_Instinct_UE5/Content/RPG_InventorySystem/UI/Character/WB_CharacterScreen.uasset",
+      "strict_functions": 9
+    },
+    {
+      "source_sha256": "622552cc553e9e98249ed305bf7761bc590e8a5213b0f1743fec2b48c1295226",
+      "patched_sha256": "6473f7952fc343867bdeb989486da25dedc5ef1b1cffe3fb8e49cd022d78c0e0",
+      "source_header": 27595,
+      "patched_header": 27800,
+      "source_exports": 151,
+      "patched_exports": 151,
+      "changed_exports": [
+        0,
+        7,
+        8,
+        13,
+        14,
+        15,
+        16,
+        18,
+        20,
+        21,
+        24,
+        25,
+        36,
+        37,
+        40,
+        41,
+        45,
+        49,
+        66,
+        71,
+        73,
+        80,
+        95,
+        96,
+        101,
+        102,
+        103,
+        104,
+        105,
+        106,
+        107,
+        137,
+        138,
+        147,
+        148
+      ],
+      "evidence": [
+        {
+          "export": "Image",
+          "field": "ColorAndOpacity",
+          "old": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "new": [
+            1.0,
+            1.0,
+            0.9900000095367432,
+            1.0
+          ]
+        },
+        {
+          "export": "Image",
+          "field": "Brush",
+          "old": {
+            "ImageType": 1,
+            "ImageSize": [
+              1600.0,
+              128.0
+            ],
+            "ResourceObject": -197
+          },
+          "new": {
+            "ResourceObject": -224
+          }
+        },
+        {
+          "export": "Image_88",
+          "field": "ColorAndOpacity",
+          "old": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "new": [
+            1.0,
+            1.0,
+            0.9900000095367432,
+            1.0
+          ]
+        },
+        {
+          "export": "Image_88",
+          "field": "Brush",
+          "old": {
+            "ImageType": 1,
+            "ImageSize": [
+              1600.0,
+              128.0
+            ],
+            "ResourceObject": -197
+          },
+          "new": {
+            "ResourceObject": -224
+          }
+        },
+        {
+          "export": "Image_Border",
+          "field": "ColorAndOpacity",
+          "old": {},
+          "new": [
+            0.6352940201759338,
+            0.05490199849009514,
+            0.8196079730987549,
+            1.0
+          ]
+        },
+        {
+          "export": "Image_Border",
+          "field": "Brush",
+          "old": {
+            "ImageType": 1,
+            "ImageSize": [
+              128.0,
+              128.0
+            ],
+            "ResourceObject": -201
+          },
+          "new": {
+            "ImageSize": [
+              128.0,
+              128.0
+            ],
+            "ResourceObject": -225
+          }
+        },
+        {
+          "export": "Image_Border_1",
+          "field": "ColorAndOpacity",
+          "old": {},
+          "new": [
+            0.6352940201759338,
+            0.05490199849009514,
+            0.8196079730987549,
+            1.0
+          ]
+        },
+        {
+          "export": "Image_Border_1",
+          "field": "Brush",
+          "old": {
+            "ImageType": 1,
+            "ImageSize": [
+              128.0,
+              128.0
+            ],
+            "ResourceObject": -201
+          },
+          "new": {
+            "ImageSize": [
+              128.0,
+              128.0
+            ],
+            "ResourceObject": -225
+          }
+        },
+        {
+          "export": "Text_Attributes",
+          "field": "Font",
+          "old": {
+            "Size": 18.0
+          },
+          "new": {
+            "FontObject": -88,
+            "OutlineSettings": {
+              "OutlineSize": 1,
+              "bApplyOutlineToDropShadows": 1,
+              "OutlineColor": [
+                0.0,
+                0.0,
+                0.0,
+                0.5
+              ]
+            },
+            "TypefaceFontName": "FF_BarlowCondensed-Medium",
+            "Size": 18.0
+          }
+        },
+        {
+          "export": "Text_Attributes",
+          "field": "ColorAndOpacity",
+          "old": {
+            "SpecifiedColor": [
+              0.8645830154418945,
+              0.8250290155410767,
+              0.7306979894638062,
+              1.0
+            ]
+          },
+          "new": {
+            "SpecifiedColor": [
+              0.3294120132923126,
+              0.3294120132923126,
+              0.3294120132923126,
+              1.0
+            ]
+          }
+        },
+        {
+          "export": "TP_Agility",
+          "field": "Font",
+          "old": {
+            "FontObject": -89,
+            "TypefaceFontName": "Barlow-Medium",
+            "Size": 12.0
+          },
+          "new": {
+            "FontObject": -88,
+            "OutlineSettings": {
+              "bApplyOutlineToDropShadows": 1,
+              "OutlineColor": [
+                0.0,
+                0.0,
+                0.0,
+                0.5
+              ]
+            },
+            "TypefaceFontName": "FF_BarlowCondensed-Light",
+            "Size": 14.0
+          }
+        },
+        {
+          "export": "TP_Agility",
+          "field": "ColorAndOpacity",
+          "old": {
+            "SpecifiedColor": [
+              0.8645830154418945,
+              0.8250290155410767,
+              0.7306979894638062,
+              1.0
+            ]
+          },
+          "new": {
+            "SpecifiedColor": [
+              0.75,
+              0.75,
+              0.75,
+              1.0
+            ]
+          }
+        },
+        {
+          "export": "TP_Arcana",
+          "field": "Font",
+          "old": {
+            "FontObject": -89,
+            "TypefaceFontName": "Barlow-Medium",
+            "Size": 12.0
+          },
+          "new": {
+            "FontObject": -88,
+            "OutlineSettings": {
+              "bApplyOutlineToDropShadows": 1,
+              "OutlineColor": [
+                0.0,
+                0.0,
+                0.0,
+                0.5
+              ]
+            },
+            "TypefaceFontName": "FF_BarlowCondensed-Light",
+            "Size": 14.0
+          }
+        },
+        {
+          "export": "TP_Arcana",
+          "field": "ColorAndOpacity",
+          "old": {
+            "SpecifiedColor": [
+              0.8645830154418945,
+              0.8250290155410767,
+              0.7306979894638062,
+              1.0
+            ]
+          },
+          "new": {
+            "SpecifiedColor": [
+              0.75,
+              0.75,
+              0.75,
+              1.0
+            ]
+          }
+        },
+        {
+          "export": "TP_Endurance",
+          "field": "Font",
+          "old": {
+            "FontObject": -89,
+            "TypefaceFontName": "Barlow-Medium",
+            "Size": 12.0
+          },
+          "new": {
+            "FontObject": -88,
+            "OutlineSettings": {
+              "bApplyOutlineToDropShadows": 1,
+              "OutlineColor": [
+                0.0,
+                0.0,
+                0.0,
+                0.5
+              ]
+            },
+            "TypefaceFontName": "FF_BarlowCondensed-Light",
+            "Size": 14.0
+          }
+        },
+        {
+          "export": "TP_Endurance",
+          "field": "ColorAndOpacity",
+          "old": {
+            "SpecifiedColor": [
+              0.8645830154418945,
+              0.8250290155410767,
+              0.7306979894638062,
+              1.0
+            ]
+          },
+          "new": {
+            "SpecifiedColor": [
+              0.75,
+              0.75,
+              0.75,
+              1.0
+            ]
+          }
+        },
+        {
+          "export": "TP_Fate",
+          "field": "Font",
+          "old": {
+            "FontObject": -89,
+            "TypefaceFontName": "Barlow-Medium",
+            "Size": 12.0
+          },
+          "new": {
+            "FontObject": -88,
+            "OutlineSettings": {
+              "bApplyOutlineToDropShadows": 1,
+              "OutlineColor": [
+                0.0,
+                0.0,
+                0.0,
+                0.5
+              ]
+            },
+            "TypefaceFontName": "FF_BarlowCondensed-Light",
+            "Size": 14.0
+          }
+        },
+        {
+          "export": "TP_Fate",
+          "field": "ColorAndOpacity",
+          "old": {
+            "SpecifiedColor": [
+              0.8645830154418945,
+              0.8250290155410767,
+              0.7306979894638062,
+              1.0
+            ]
+          },
+          "new": {
+            "SpecifiedColor": [
+              0.75,
+              0.75,
+              0.75,
+              1.0
+            ]
+          }
+        },
+        {
+          "export": "TP_Presence",
+          "field": "Font",
+          "old": {
+            "FontObject": -89,
+            "TypefaceFontName": "Barlow-Medium",
+            "Size": 12.0
+          },
+          "new": {
+            "FontObject": -88,
+            "OutlineSettings": {
+              "bApplyOutlineToDropShadows": 1,
+              "OutlineColor": [
+                0.0,
+                0.0,
+                0.0,
+                0.5
+              ]
+            },
+            "TypefaceFontName": "FF_BarlowCondensed-Light",
+            "Size": 14.0
+          }
+        },
+        {
+          "export": "TP_Presence",
+          "field": "ColorAndOpacity",
+          "old": {
+            "SpecifiedColor": [
+              0.8645830154418945,
+              0.8250290155410767,
+              0.7306979894638062,
+              1.0
+            ]
+          },
+          "new": {
+            "SpecifiedColor": [
+              0.75,
+              0.75,
+              0.75,
+              1.0
+            ]
+          }
+        },
+        {
+          "export": "TP_Strength",
+          "field": "Font",
+          "old": {
+            "FontObject": -89,
+            "TypefaceFontName": "Barlow-Medium",
+            "Size": 12.0
+          },
+          "new": {
+            "FontObject": -88,
+            "OutlineSettings": {
+              "bApplyOutlineToDropShadows": 1,
+              "OutlineColor": [
+                0.0,
+                0.0,
+                0.0,
+                0.5
+              ]
+            },
+            "TypefaceFontName": "FF_BarlowCondensed-Light",
+            "Size": 14.0
+          }
+        },
+        {
+          "export": "TP_Strength",
+          "field": "ColorAndOpacity",
+          "old": {
+            "SpecifiedColor": [
+              0.8645830154418945,
+              0.8250290155410767,
+              0.7306979894638062,
+              1.0
+            ]
+          },
+          "new": {
+            "SpecifiedColor": [
+              0.75,
+              0.75,
+              0.75,
+              1.0
+            ]
+          }
+        },
+        {
+          "export": "TP_Vitality",
+          "field": "Font",
+          "old": {
+            "FontObject": -89,
+            "TypefaceFontName": "Barlow-Medium",
+            "Size": 12.0
+          },
+          "new": {
+            "FontObject": -88,
+            "OutlineSettings": {
+              "bApplyOutlineToDropShadows": 1,
+              "OutlineColor": [
+                0.0,
+                0.0,
+                0.0,
+                0.5
+              ]
+            },
+            "TypefaceFontName": "FF_BarlowCondensed-Light",
+            "Size": 14.0
+          }
+        },
+        {
+          "export": "TP_Vitality",
+          "field": "ColorAndOpacity",
+          "old": {
+            "SpecifiedColor": [
+              0.8645830154418945,
+              0.8250290155410767,
+              0.7306979894638062,
+              1.0
+            ]
+          },
+          "new": {
+            "SpecifiedColor": [
+              0.75,
+              0.75,
+              0.75,
+              1.0
+            ]
+          }
+        },
+        {
+          "export": "SizeBox_7",
+          "field": "Visibility",
+          "old": 1,
+          "new": 3
+        },
+        {
+          "export": "SizeBox_10",
+          "field": "Visibility",
+          "old": 1,
+          "new": 3
+        },
+        {
+          "export": "Level",
+          "field": "Visibility",
+          "old": 1,
+          "new": 0
+        },
+        {
+          "export": "LevelXP",
+          "field": "Visibility",
+          "old": 1,
+          "new": 0
+        },
+        {
+          "export": "CarnalInstinct",
+          "field": "Visibility",
+          "old": 1,
+          "new": 0
+        },
+        {
+          "export": "CarnalInstinctXP",
+          "field": "Visibility",
+          "old": 1,
+          "new": 0
+        },
+        {
+          "export": "WB_T3_SubHeadline_1",
+          "inherited_slot_index": 31,
+          "visibility_index": 48,
+          "visibility": 1,
+          "slot_ref": 118,
+          "typed_native_suffix": "PASS"
+        },
+        {
+          "export": "WB_T3_SubHeadline_321",
+          "inherited_slot_index": 31,
+          "visibility_index": 48,
+          "visibility": 1,
+          "slot_ref": 66,
+          "typed_native_suffix": "PASS"
+        },
+        {
+          "export": "WB_LevelExpBar",
+          "inherited_slot_index": 34,
+          "visibility_index": 51,
+          "visibility": 1,
+          "slot_ref": 119,
+          "typed_native_suffix": "PASS"
+        },
+        {
+          "export": "WB_LevelExpBar_Carnal",
+          "inherited_slot_index": 34,
+          "visibility_index": 51,
+          "visibility": 1,
+          "slot_ref": 120,
+          "typed_native_suffix": "PASS"
+        },
+        {
+          "export": "SizeBox_0",
+          "field": "Visibility",
+          "old": {},
+          "new": 1
+        },
+        {
+          "export": "BG_Border",
+          "field": "Visibility",
+          "old": {},
+          "new": 1
+        },
+        {
+          "export": "Text_Attributes_1",
+          "field": "Visibility",
+          "old": {},
+          "new": 1
+        },
+        {
+          "export": "Text_Attributes",
+          "field": "MinDesiredWidth",
+          "old": 96.0,
+          "new": 64.0
+        },
+        {
+          "export": "Overlay_5",
+          "field": "Slots",
+          "old": [
+            66,
+            67
+          ],
+          "new": [
+            66
+          ]
+        },
+        {
+          "export": "Overlay_1",
+          "field": "Slots",
+          "old": [
+            57,
+            56
+          ],
+          "new": [
+            57,
+            56,
+            67
+          ]
+        },
+        {
+          "export": "OverlaySlot_1",
+          "field": "Parent",
+          "old": 50,
+          "new": 46
+        },
+        {
+          "export": "OverlaySlot_1",
+          "field": "Padding",
+          "old": {
+            "Right": 20.0
+          },
+          "new": {
+            "Left": 0.0,
+            "Top": 0.0,
+            "Right": 20.0,
+            "Bottom": 0.0
+          }
+        },
+        {
+          "form_caption_route": "Text_Form",
+          "script_rebase": {
+            "old_memory": 2249,
+            "new_memory": 2227,
+            "old_disk": 3209,
+            "new_disk": 3171,
+            "latent_linkages_rebased": 0,
+            "wrappers_rebased": 6,
+            "wrapper_entries": [
+              {
+                "wrapper": "Construct",
+                "old": 15,
+                "new": 15,
+                "old_invalid_entry_repaired": false
+              },
+              {
+                "wrapper": "Decrease Stat",
+                "old": 1277,
+                "new": 1255,
+                "old_invalid_entry_repaired": false
+              },
+              {
+                "wrapper": "Hide Buttons",
+                "old": 895,
+                "new": 873,
+                "old_invalid_entry_repaired": false
+              },
+              {
+                "wrapper": "Increase Stat",
+                "old": 1201,
+                "new": 1179,
+                "old_invalid_entry_repaired": false
+              },
+              {
+                "wrapper": "Select Down",
+                "old": 1747,
+                "new": 1725,
+                "old_invalid_entry_repaired": false
+              },
+              {
+                "wrapper": "Select Up",
+                "old": 1353,
+                "new": 1331,
+                "old_invalid_entry_repaired": false
+              },
+              {
+                "wrapper": "Update Selected",
+                "old": 1148,
+                "new": 1126,
+                "old_invalid_entry_repaired": false
+              }
+            ]
+          }
+        }
+      ],
+      "name": "WB_Stats_Main",
+      "edition": "Steam_current",
+      "mount": "Carnal_Instinct_UE5/Content/RPG_InventorySystem/UI/PlayerInventory/WB_Stats_Main.uasset",
+      "strict_functions": 13
+    },
+    {
+      "source_sha256": "cffd06217ccf656d12df7c86c1cfc6adfd6d3579a894a81de8a2635f5badd188",
+      "patched_sha256": "fcd63781ad5a88a9516eda11a440366914ef04e177534173fa89d298a7d5c60f",
+      "source_header": 72495,
+      "patched_header": 72531,
+      "source_exports": 496,
+      "patched_exports": 496,
+      "changed_exports": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        275,
+        276,
+        311,
+        372,
+        373,
+        374,
+        375,
+        376,
+        377,
+        378,
+        379,
+        380,
+        381,
+        382,
+        383,
+        384,
+        385,
+        386,
+        387,
+        388,
+        389,
+        390,
+        391,
+        392,
+        393,
+        394,
+        395,
+        396,
+        397,
+        398,
+        399,
+        400,
+        401,
+        402,
+        403,
+        404,
+        405,
+        406,
+        407,
+        408,
+        409,
+        410,
+        411,
+        412,
+        413,
+        414,
+        415,
+        416,
+        418,
+        419,
+        420,
+        421,
+        422,
+        423,
+        424,
+        425,
+        426,
+        427,
+        428,
+        429,
+        430,
+        431,
+        432,
+        433,
+        434,
+        435,
+        436,
+        437,
+        439,
+        440,
+        441,
+        442,
+        443,
+        444,
+        445,
+        493
+      ],
+      "evidence": [
+        {
+          "export": "Glow_Armour",
+          "field": "BrushColor",
+          "old": [
+            1.0,
+            1.0,
+            1.0,
+            0.25
+          ],
+          "new": [
+            0.6065739989280701,
+            0.0,
+            1.0,
+            0.6000000238418579
+          ]
+        },
+        {
+          "export": "Glow_ColdResist",
+          "field": "BrushColor",
+          "old": [
+            1.0,
+            1.0,
+            1.0,
+            0.25
+          ],
+          "new": [
+            0.6065739989280701,
+            0.0,
+            1.0,
+            0.6000000238418579
+          ]
+        },
+        {
+          "export": "Glow_Crit_Chance",
+          "field": "BrushColor",
+          "old": [
+            1.0,
+            1.0,
+            1.0,
+            0.25
+          ],
+          "new": [
+            0.6065739989280701,
+            0.0,
+            1.0,
+            0.6000000238418579
+          ]
+        },
+        {
+          "export": "Glow_Crit_Multi",
+          "field": "BrushColor",
+          "old": [
+            1.0,
+            1.0,
+            1.0,
+            0.25
+          ],
+          "new": [
+            0.6065739989280701,
+            0.0,
+            1.0,
+            0.6000000238418579
+          ]
+        },
+        {
+          "export": "Glow_Damage",
+          "field": "BrushColor",
+          "old": [
+            1.0,
+            1.0,
+            1.0,
+            0.25
+          ],
+          "new": [
+            0.6065739989280701,
+            0.0,
+            1.0,
+            0.6000000238418579
+          ]
+        },
+        {
+          "export": "Glow_Fertility",
+          "field": "BrushColor",
+          "old": [
+            1.0,
+            1.0,
+            1.0,
+            0.25
+          ],
+          "new": [
+            0.6065739989280701,
+            0.0,
+            1.0,
+            0.6000000238418579
+          ]
+        },
+        {
+          "export": "Glow_FireResist",
+          "field": "BrushColor",
+          "old": [
+            1.0,
+            1.0,
+            1.0,
+            0.25
+          ],
+          "new": [
+            0.6065739989280701,
+            0.0,
+            1.0,
+            0.6000000238418579
+          ]
+        },
+        {
+          "export": "Glow_Health",
+          "field": "BrushColor",
+          "old": [
+            1.0,
+            1.0,
+            1.0,
+            0.25
+          ],
+          "new": [
+            0.6065739989280701,
+            0.0,
+            1.0,
+            0.6000000238418579
+          ]
+        },
+        {
+          "export": "Glow_Mana",
+          "field": "BrushColor",
+          "old": [
+            1.0,
+            1.0,
+            1.0,
+            0.25
+          ],
+          "new": [
+            0.6065739989280701,
+            0.0,
+            1.0,
+            0.6000000238418579
+          ]
+        },
+        {
+          "export": "Glow_Presence",
+          "field": "BrushColor",
+          "old": [
+            1.0,
+            1.0,
+            1.0,
+            0.25
+          ],
+          "new": [
+            0.6065739989280701,
+            0.0,
+            1.0,
+            0.6000000238418579
+          ]
+        },
+        {
+          "export": "Glow_Ran_Damage",
+          "field": "BrushColor",
+          "old": [
+            1.0,
+            1.0,
+            1.0,
+            0.25
+          ],
+          "new": [
+            0.6065739989280701,
+            0.0,
+            1.0,
+            0.6000000238418579
+          ]
+        },
+        {
+          "export": "Glow_Sorc_Damage",
+          "field": "BrushColor",
+          "old": [
+            1.0,
+            1.0,
+            1.0,
+            0.25
+          ],
+          "new": [
+            0.6065739989280701,
+            0.0,
+            1.0,
+            0.6000000238418579
+          ]
+        },
+        {
+          "export": "Glow_Stamina",
+          "field": "BrushColor",
+          "old": [
+            1.0,
+            1.0,
+            1.0,
+            0.25
+          ],
+          "new": [
+            0.6065739989280701,
+            0.0,
+            1.0,
+            0.6000000238418579
+          ]
+        },
+        {
+          "export": "Glow_Virility",
+          "field": "BrushColor",
+          "old": [
+            1.0,
+            1.0,
+            1.0,
+            0.25
+          ],
+          "new": [
+            0.6065739989280701,
+            0.0,
+            1.0,
+            0.6000000238418579
+          ]
+        },
+        {
+          "export": "Glow_VoidResistance",
+          "field": "BrushColor",
+          "old": [
+            1.0,
+            1.0,
+            1.0,
+            0.25
+          ],
+          "new": [
+            0.6065739989280701,
+            0.0,
+            1.0,
+            0.6000000238418579
+          ]
+        },
+        {
+          "export": "TextBlock",
+          "field": "Font",
+          "old": {
+            "FontObject": -132,
+            "TypefaceFontName": "Barlow-Medium",
+            "Size": 16.0
+          },
+          "new": {
+            "FontObject": -131,
+            "OutlineSettings": {
+              "OutlineSize": 1,
+              "bApplyOutlineToDropShadows": 1,
+              "OutlineColor": [
+                0.0,
+                0.0,
+                0.0,
+                0.5
+              ]
+            },
+            "TypefaceFontName": "FF_BarlowCondensed-Medium",
+            "Size": 16.0
+          }
+        },
+        {
+          "export": "TextBlock_0",
+          "field": "Font",
+          "old": {
+            "FontObject": -132,
+            "TypefaceFontName": "Barlow-Medium",
+            "Size": 16.0
+          },
+          "new": {
+            "FontObject": -131,
+            "OutlineSettings": {
+              "OutlineSize": 1,
+              "bApplyOutlineToDropShadows": 1,
+              "OutlineColor": [
+                0.0,
+                0.0,
+                0.0,
+                0.5
+              ]
+            },
+            "TypefaceFontName": "FF_BarlowCondensed-Regular",
+            "Size": 16.0
+          }
+        },
+        {
+          "export": "TextBlock_1",
+          "field": "Font",
+          "old": {
+            "FontObject": -132,
+            "TypefaceFontName": "Barlow-Medium",
+            "Size": 14.0
+          },
+          "new": {
+            "FontObject": -131,
+            "OutlineSettings": {
+              "OutlineSize": 1,
+              "bApplyOutlineToDropShadows": 1,
+              "OutlineColor": [
+                0.0,
+                0.0,
+                0.0,
+                0.5
+              ]
+            },
+            "TypefaceFontName": "FF_BarlowCondensed-Regular",
+            "Size": 16.0
+          }
+        },
+        {
+          "export": "TextBlock_10",
+          "field": "Font",
+          "old": {
+            "FontObject": -132,
+            "TypefaceFontName": "Barlow-Medium",
+            "Size": 16.0
+          },
+          "new": {
+            "FontObject": -131,
+            "OutlineSettings": {
+              "OutlineSize": 1,
+              "bApplyOutlineToDropShadows": 1,
+              "OutlineColor": [
+                0.0,
+                0.0,
+                0.0,
+                0.5
+              ]
+            },
+            "TypefaceFontName": "FF_BarlowCondensed-Regular",
+            "Size": 16.0
+          }
+        },
+        {
+          "export": "TextBlock_11",
+          "field": "Font",
+          "old": {
+            "FontObject": -132,
+            "TypefaceFontName": "Barlow-Medium",
+            "Size": 14.0
+          },
+          "new": {
+            "FontObject": -131,
+            "OutlineSettings": {
+              "OutlineSize": 1,
+              "bApplyOutlineToDropShadows": 1,
+              "OutlineColor": [
+                0.0,
+                0.0,
+                0.0,
+                0.5
+              ]
+            },
+            "TypefaceFontName": "FF_BarlowCondensed-Regular",
+            "Size": 16.0
+          }
+        },
+        {
+          "export": "TextBlock_12",
+          "field": "Font",
+          "old": {
+            "FontObject": -132,
+            "TypefaceFontName": "Barlow-Medium",
+            "Size": 16.0
+          },
+          "new": {
+            "FontObject": -131,
+            "OutlineSettings": {
+              "OutlineSize": 1,
+              "bApplyOutlineToDropShadows": 1,
+              "OutlineColor": [
+                0.0,
+                0.0,
+                0.0,
+                0.5
+              ]
+            },
+            "TypefaceFontName": "FF_BarlowCondensed-Regular",
+            "Size": 16.0
+          }
+        },
+        {
+          "export": "TextBlock_129",
+          "field": "Font",
+          "old": {
+            "FontObject": -132,
+            "TypefaceFontName": "Barlow-Medium",
+            "Size": 16.0
+          },
+          "new": {
+            "FontObject": -131,
+            "OutlineSettings": {
+              "OutlineSize": 1,
+              "bApplyOutlineToDropShadows": 1,
+              "OutlineColor": [
+                0.0,
+                0.0,
+                0.0,
+                0.5
+              ]
+            },
+            "TypefaceFontName": "FF_BarlowCondensed-Regular",
+            "Size": 16.0
+          }
+        },
+        {
+          "export": "TextBlock_13",
+          "field": "Font",
+          "old": {
+            "FontObject": -132,
+            "TypefaceFontName": "Barlow-Medium",
+            "Size": 14.0
+          },
+          "new": {
+            "FontObject": -131,
+            "OutlineSettings": {
+              "OutlineSize": 1,
+              "bApplyOutlineToDropShadows": 1,
+              "OutlineColor": [
+                0.0,
+                0.0,
+                0.0,
+                0.5
+              ]
+            },
+            "TypefaceFontName": "FF_BarlowCondensed-Regular",
+            "Size": 16.0
+          }
+        },
+        {
+          "export": "TextBlock_130",
+          "field": "Font",
+          "old": {
+            "FontObject": -132,
+            "TypefaceFontName": "Barlow-Medium",
+            "Size": 14.0
+          },
+          "new": {
+            "FontObject": -131,
+            "OutlineSettings": {
+              "OutlineSize": 1,
+              "bApplyOutlineToDropShadows": 1,
+              "OutlineColor": [
+                0.0,
+                0.0,
+                0.0,
+                0.5
+              ]
+            },
+            "TypefaceFontName": "FF_BarlowCondensed-Regular",
+            "Size": 16.0
+          }
+        },
+        {
+          "export": "TextBlock_14",
+          "field": "Font",
+          "old": {
+            "FontObject": -132,
+            "TypefaceFontName": "Barlow-Medium",
+            "Size": 16.0
+          },
+          "new": {
+            "FontObject": -131,
+            "OutlineSettings": {
+              "OutlineSize": 1,
+              "bApplyOutlineToDropShadows": 1,
+              "OutlineColor": [
+                0.0,
+                0.0,
+                0.0,
+                0.5
+              ]
+            },
+            "TypefaceFontName": "FF_BarlowCondensed-Regular",
+            "Size": 16.0
+          }
+        },
+        {
+          "export": "TextBlock_15",
+          "field": "Font",
+          "old": {
+            "FontObject": -132,
+            "TypefaceFontName": "Barlow-Medium",
+            "Size": 14.0
+          },
+          "new": {
+            "FontObject": -131,
+            "OutlineSettings": {
+              "OutlineSize": 1,
+              "bApplyOutlineToDropShadows": 1,
+              "OutlineColor": [
+                0.0,
+                0.0,
+                0.0,
+                0.5
+              ]
+            },
+            "TypefaceFontName": "FF_BarlowCondensed-Regular",
+            "Size": 16.0
+          }
+        },
+        {
+          "export": "TextBlock_16",
+          "field": "Font",
+          "old": {
+            "FontObject": -132,
+            "TypefaceFontName": "Barlow-Medium",
+            "Size": 16.0
+          },
+          "new": {
+            "FontObject": -131,
+            "OutlineSettings": {
+              "OutlineSize": 1,
+              "bApplyOutlineToDropShadows": 1,
+              "OutlineColor": [
+                0.0,
+                0.0,
+                0.0,
+                0.5
+              ]
+            },
+            "TypefaceFontName": "FF_BarlowCondensed-Regular",
+            "Size": 16.0
+          }
+        },
+        {
+          "export": "TextBlock_17",
+          "field": "Font",
+          "old": {
+            "FontObject": -132,
+            "TypefaceFontName": "Barlow-Medium",
+            "Size": 14.0
+          },
+          "new": {
+            "FontObject": -131,
+            "OutlineSettings": {
+              "OutlineSize": 1,
+              "bApplyOutlineToDropShadows": 1,
+              "OutlineColor": [
+                0.0,
+                0.0,
+                0.0,
+                0.5
+              ]
+            },
+            "TypefaceFontName": "FF_BarlowCondensed-Regular",
+            "Size": 16.0
+          }
+        },
+        {
+          "export": "TextBlock_18",
+          "field": "Font",
+          "old": {
+            "FontObject": -132,
+            "TypefaceFontName": "Barlow-Medium",
+            "Size": 16.0
+          },
+          "new": {
+            "FontObject": -131,
+            "OutlineSettings": {
+              "OutlineSize": 1,
+              "bApplyOutlineToDropShadows": 1,
+              "OutlineColor": [
+                0.0,
+                0.0,
+                0.0,
+                0.5
+              ]
+            },
+            "TypefaceFontName": "FF_BarlowCondensed-Regular",
+            "Size": 16.0
+          }
+        },
+        {
+          "export": "TextBlock_19",
+          "field": "Font",
+          "old": {
+            "FontObject": -132,
+            "TypefaceFontName": "Barlow-Medium",
+            "Size": 14.0
+          },
+          "new": {
+            "FontObject": -131,
+            "OutlineSettings": {
+              "OutlineSize": 1,
+              "bApplyOutlineToDropShadows": 1,
+              "OutlineColor": [
+                0.0,
+                0.0,
+                0.0,
+                0.5
+              ]
+            },
+            "TypefaceFontName": "FF_BarlowCondensed-Regular",
+            "Size": 16.0
+          }
+        },
+        {
+          "export": "TextBlock_2",
+          "field": "Font",
+          "old": {
+            "FontObject": -132,
+            "TypefaceFontName": "Barlow-Medium",
+            "Size": 14.0
+          },
+          "new": {
+            "FontObject": -131,
+            "OutlineSettings": {
+              "OutlineSize": 1,
+              "bApplyOutlineToDropShadows": 1,
+              "OutlineColor": [
+                0.0,
+                0.0,
+                0.0,
+                0.5
+              ]
+            },
+            "TypefaceFontName": "FF_BarlowCondensed-SemiBold",
+            "Size": 16.0
+          }
+        },
+        {
+          "export": "TextBlock_20",
+          "field": "Font",
+          "old": {
+            "FontObject": -132,
+            "TypefaceFontName": "Barlow-Medium",
+            "Size": 16.0
+          },
+          "new": {
+            "FontObject": -131,
+            "OutlineSettings": {
+              "OutlineSize": 1,
+              "bApplyOutlineToDropShadows": 1,
+              "OutlineColor": [
+                0.0,
+                0.0,
+                0.0,
+                0.5
+              ]
+            },
+            "TypefaceFontName": "FF_BarlowCondensed-Regular",
+            "Size": 16.0
+          }
+        },
+        {
+          "export": "TextBlock_21",
+          "field": "Font",
+          "old": {
+            "FontObject": -132,
+            "TypefaceFontName": "Barlow-Medium",
+            "Size": 14.0
+          },
+          "new": {
+            "FontObject": -131,
+            "OutlineSettings": {
+              "OutlineSize": 1,
+              "bApplyOutlineToDropShadows": 1,
+              "OutlineColor": [
+                0.0,
+                0.0,
+                0.0,
+                0.5
+              ]
+            },
+            "TypefaceFontName": "FF_BarlowCondensed-Regular",
+            "Size": 16.0
+          }
+        },
+        {
+          "export": "TextBlock_22",
+          "field": "Font",
+          "old": {
+            "FontObject": -132,
+            "TypefaceFontName": "Barlow-Medium",
+            "Size": 16.0
+          },
+          "new": {
+            "FontObject": -131,
+            "OutlineSettings": {
+              "OutlineSize": 1,
+              "bApplyOutlineToDropShadows": 1,
+              "OutlineColor": [
+                0.0,
+                0.0,
+                0.0,
+                0.5
+              ]
+            },
+            "TypefaceFontName": "FF_BarlowCondensed-Medium",
+            "Size": 16.0
+          }
+        },
+        {
+          "export": "TextBlock_23",
+          "field": "Font",
+          "old": {
+            "FontObject": -132,
+            "TypefaceFontName": "Barlow-Medium",
+            "Size": 16.0
+          },
+          "new": {
+            "FontObject": -131,
+            "OutlineSettings": {
+              "OutlineSize": 1,
+              "bApplyOutlineToDropShadows": 1,
+              "OutlineColor": [
+                0.0,
+                0.0,
+                0.0,
+                0.5
+              ]
+            },
+            "TypefaceFontName": "FF_BarlowCondensed-Regular",
+            "Size": 16.0
+          }
+        },
+        {
+          "export": "TextBlock_24",
+          "field": "Font",
+          "old": {
+            "FontObject": -132,
+            "TypefaceFontName": "Barlow-Medium",
+            "Size": 14.0
+          },
+          "new": {
+            "FontObject": -131,
+            "OutlineSettings": {
+              "OutlineSize": 1,
+              "bApplyOutlineToDropShadows": 1,
+              "OutlineColor": [
+                0.0,
+                0.0,
+                0.0,
+                0.5
+              ]
+            },
+            "TypefaceFontName": "FF_BarlowCondensed-Regular",
+            "Size": 16.0
+          }
+        },
+        {
+          "export": "TextBlock_25",
+          "field": "Font",
+          "old": {
+            "FontObject": -132,
+            "TypefaceFontName": "Barlow-Medium",
+            "Size": 14.0
+          },
+          "new": {
+            "FontObject": -131,
+            "OutlineSettings": {
+              "OutlineSize": 1,
+              "bApplyOutlineToDropShadows": 1,
+              "OutlineColor": [
+                0.0,
+                0.0,
+                0.0,
+                0.5
+              ]
+            },
+            "TypefaceFontName": "FF_BarlowCondensed-SemiBold",
+            "Size": 16.0
+          }
+        },
+        {
+          "export": "TextBlock_26",
+          "field": "Font",
+          "old": {
+            "FontObject": -132,
+            "TypefaceFontName": "Barlow-Medium",
+            "Size": 14.0
+          },
+          "new": {
+            "FontObject": -131,
+            "OutlineSettings": {
+              "OutlineSize": 1,
+              "bApplyOutlineToDropShadows": 1,
+              "OutlineColor": [
+                0.0,
+                0.0,
+                0.0,
+                0.5
+              ]
+            },
+            "TypefaceFontName": "FF_BarlowCondensed-Regular",
+            "Size": 16.0
+          }
+        },
+        {
+          "export": "TextBlock_27",
+          "field": "Font",
+          "old": {
+            "FontObject": -132,
+            "TypefaceFontName": "Barlow-Medium",
+            "Size": 16.0
+          },
+          "new": {
+            "FontObject": -131,
+            "OutlineSettings": {
+              "OutlineSize": 1,
+              "bApplyOutlineToDropShadows": 1,
+              "OutlineColor": [
+                0.0,
+                0.0,
+                0.0,
+                0.5
+              ]
+            },
+            "TypefaceFontName": "FF_BarlowCondensed-Medium",
+            "Size": 16.0
+          }
+        },
+        {
+          "export": "TextBlock_28",
+          "field": "Font",
+          "old": {
+            "FontObject": -132,
+            "TypefaceFontName": "Barlow-Medium",
+            "Size": 14.0
+          },
+          "new": {
+            "FontObject": -131,
+            "OutlineSettings": {
+              "OutlineSize": 1,
+              "bApplyOutlineToDropShadows": 1,
+              "OutlineColor": [
+                0.0,
+                0.0,
+                0.0,
+                0.5
+              ]
+            },
+            "TypefaceFontName": "FF_BarlowCondensed-SemiBold",
+            "Size": 16.0
+          }
+        },
+        {
+          "export": "TextBlock_29",
+          "field": "Font",
+          "old": {
+            "FontObject": -132,
+            "TypefaceFontName": "Barlow-Medium",
+            "Size": 16.0
+          },
+          "new": {
+            "FontObject": -131,
+            "OutlineSettings": {
+              "OutlineSize": 1,
+              "bApplyOutlineToDropShadows": 1,
+              "OutlineColor": [
+                0.0,
+                0.0,
+                0.0,
+                0.5
+              ]
+            },
+            "TypefaceFontName": "FF_BarlowCondensed-Regular",
+            "Size": 16.0
+          }
+        },
+        {
+          "export": "TextBlock_3",
+          "field": "Font",
+          "old": {
+            "FontObject": -132,
+            "TypefaceFontName": "Barlow-Medium",
+            "Size": 16.0
+          },
+          "new": {
+            "FontObject": -131,
+            "OutlineSettings": {
+              "OutlineSize": 1,
+              "bApplyOutlineToDropShadows": 1,
+              "OutlineColor": [
+                0.0,
+                0.0,
+                0.0,
+                0.5
+              ]
+            },
+            "TypefaceFontName": "FF_BarlowCondensed-Regular",
+            "Size": 16.0
+          }
+        },
+        {
+          "export": "TextBlock_30",
+          "field": "Font",
+          "old": {
+            "FontObject": -132,
+            "TypefaceFontName": "Barlow-Medium",
+            "Size": 14.0
+          },
+          "new": {
+            "FontObject": -131,
+            "OutlineSettings": {
+              "OutlineSize": 1,
+              "bApplyOutlineToDropShadows": 1,
+              "OutlineColor": [
+                0.0,
+                0.0,
+                0.0,
+                0.5
+              ]
+            },
+            "TypefaceFontName": "FF_BarlowCondensed-Regular",
+            "Size": 16.0
+          }
+        },
+        {
+          "export": "TextBlock_31",
+          "field": "Font",
+          "old": {
+            "FontObject": -132,
+            "TypefaceFontName": "Barlow-Medium",
+            "Size": 16.0
+          },
+          "new": {
+            "FontObject": -131,
+            "OutlineSettings": {
+              "OutlineSize": 1,
+              "bApplyOutlineToDropShadows": 1,
+              "OutlineColor": [
+                0.0,
+                0.0,
+                0.0,
+                0.5
+              ]
+            },
+            "TypefaceFontName": "FF_BarlowCondensed-Medium",
+            "Size": 16.0
+          }
+        },
+        {
+          "export": "TextBlock_32",
+          "field": "Font",
+          "old": {
+            "FontObject": -132,
+            "TypefaceFontName": "Barlow-Medium",
+            "Size": 14.0
+          },
+          "new": {
+            "FontObject": -131,
+            "OutlineSettings": {
+              "OutlineSize": 1,
+              "bApplyOutlineToDropShadows": 1,
+              "OutlineColor": [
+                0.0,
+                0.0,
+                0.0,
+                0.5
+              ]
+            },
+            "TypefaceFontName": "FF_BarlowCondensed-SemiBold",
+            "Size": 16.0
+          }
+        },
+        {
+          "export": "TextBlock_33",
+          "field": "Font",
+          "old": {
+            "FontObject": -132,
+            "TypefaceFontName": "Barlow-Medium",
+            "Size": 16.0
+          },
+          "new": {
+            "FontObject": -131,
+            "OutlineSettings": {
+              "OutlineSize": 1,
+              "bApplyOutlineToDropShadows": 1,
+              "OutlineColor": [
+                0.0,
+                0.0,
+                0.0,
+                0.5
+              ]
+            },
+            "TypefaceFontName": "FF_BarlowCondensed-Regular",
+            "Size": 16.0
+          }
+        },
+        {
+          "export": "TextBlock_34",
+          "field": "Font",
+          "old": {
+            "FontObject": -132,
+            "TypefaceFontName": "Barlow-Medium",
+            "Size": 14.0
+          },
+          "new": {
+            "FontObject": -131,
+            "OutlineSettings": {
+              "OutlineSize": 1,
+              "bApplyOutlineToDropShadows": 1,
+              "OutlineColor": [
+                0.0,
+                0.0,
+                0.0,
+                0.5
+              ]
+            },
+            "TypefaceFontName": "FF_BarlowCondensed-Regular",
+            "Size": 16.0
+          }
+        },
+        {
+          "export": "TextBlock_35",
+          "field": "Font",
+          "old": {
+            "FontObject": -132,
+            "TypefaceFontName": "Barlow-Medium",
+            "Size": 16.0
+          },
+          "new": {
+            "FontObject": -131,
+            "OutlineSettings": {
+              "OutlineSize": 1,
+              "bApplyOutlineToDropShadows": 1,
+              "OutlineColor": [
+                0.0,
+                0.0,
+                0.0,
+                0.5
+              ]
+            },
+            "TypefaceFontName": "FF_BarlowCondensed-Regular",
+            "Size": 16.0
+          }
+        },
+        {
+          "export": "TextBlock_36",
+          "field": "Font",
+          "old": {
+            "FontObject": -132,
+            "TypefaceFontName": "Barlow-Medium",
+            "Size": 14.0
+          },
+          "new": {
+            "FontObject": -131,
+            "OutlineSettings": {
+              "OutlineSize": 1,
+              "bApplyOutlineToDropShadows": 1,
+              "OutlineColor": [
+                0.0,
+                0.0,
+                0.0,
+                0.5
+              ]
+            },
+            "TypefaceFontName": "FF_BarlowCondensed-Regular",
+            "Size": 16.0
+          }
+        },
+        {
+          "export": "TextBlock_37",
+          "field": "Font",
+          "old": {
+            "FontObject": -132,
+            "TypefaceFontName": "Barlow-Medium",
+            "Size": 16.0
+          },
+          "new": {
+            "FontObject": -131,
+            "OutlineSettings": {
+              "OutlineSize": 1,
+              "bApplyOutlineToDropShadows": 1,
+              "OutlineColor": [
+                0.0,
+                0.0,
+                0.0,
+                0.5
+              ]
+            },
+            "TypefaceFontName": "FF_BarlowCondensed-Regular",
+            "Size": 16.0
+          }
+        },
+        {
+          "export": "TextBlock_38",
+          "field": "Font",
+          "old": {
+            "FontObject": -132,
+            "TypefaceFontName": "Barlow-Medium",
+            "Size": 14.0
+          },
+          "new": {
+            "FontObject": -131,
+            "OutlineSettings": {
+              "OutlineSize": 1,
+              "bApplyOutlineToDropShadows": 1,
+              "OutlineColor": [
+                0.0,
+                0.0,
+                0.0,
+                0.5
+              ]
+            },
+            "TypefaceFontName": "FF_BarlowCondensed-Regular",
+            "Size": 16.0
+          }
+        },
+        {
+          "export": "TextBlock_39",
+          "field": "Font",
+          "old": {
+            "FontObject": -132,
+            "TypefaceFontName": "Barlow-Medium",
+            "Size": 16.0
+          },
+          "new": {
+            "FontObject": -131,
+            "OutlineSettings": {
+              "OutlineSize": 1,
+              "bApplyOutlineToDropShadows": 1,
+              "OutlineColor": [
+                0.0,
+                0.0,
+                0.0,
+                0.5
+              ]
+            },
+            "TypefaceFontName": "FF_BarlowCondensed-Medium",
+            "Size": 16.0
+          }
+        },
+        {
+          "export": "TextBlock_4",
+          "field": "Font",
+          "old": {
+            "FontObject": -132,
+            "TypefaceFontName": "Barlow-Medium",
+            "Size": 14.0
+          },
+          "new": {
+            "FontObject": -131,
+            "OutlineSettings": {
+              "OutlineSize": 1,
+              "bApplyOutlineToDropShadows": 1,
+              "OutlineColor": [
+                0.0,
+                0.0,
+                0.0,
+                0.5
+              ]
+            },
+            "TypefaceFontName": "FF_BarlowCondensed-Regular",
+            "Size": 16.0
+          }
+        },
+        {
+          "export": "TextBlock_40",
+          "field": "Font",
+          "old": {
+            "FontObject": -132,
+            "TypefaceFontName": "Barlow-Medium",
+            "Size": 14.0
+          },
+          "new": {
+            "FontObject": -131,
+            "OutlineSettings": {
+              "OutlineSize": 1,
+              "bApplyOutlineToDropShadows": 1,
+              "OutlineColor": [
+                0.0,
+                0.0,
+                0.0,
+                0.5
+              ]
+            },
+            "TypefaceFontName": "FF_BarlowCondensed-SemiBold",
+            "Size": 16.0
+          }
+        },
+        {
+          "export": "TextBlock_41",
+          "field": "Font",
+          "old": {
+            "FontObject": -132,
+            "TypefaceFontName": "Barlow-Medium",
+            "Size": 16.0
+          },
+          "new": {
+            "FontObject": -131,
+            "OutlineSettings": {
+              "OutlineSize": 1,
+              "bApplyOutlineToDropShadows": 1,
+              "OutlineColor": [
+                0.0,
+                0.0,
+                0.0,
+                0.5
+              ]
+            },
+            "TypefaceFontName": "FF_BarlowCondensed-Medium",
+            "Size": 16.0
+          }
+        },
+        {
+          "export": "TextBlock_42",
+          "field": "Font",
+          "old": {
+            "FontObject": -132,
+            "TypefaceFontName": "Barlow-Medium",
+            "Size": 14.0
+          },
+          "new": {
+            "FontObject": -131,
+            "OutlineSettings": {
+              "OutlineSize": 1,
+              "bApplyOutlineToDropShadows": 1,
+              "OutlineColor": [
+                0.0,
+                0.0,
+                0.0,
+                0.5
+              ]
+            },
+            "TypefaceFontName": "FF_BarlowCondensed-SemiBold",
+            "Size": 16.0
+          }
+        },
+        {
+          "export": "TextBlock_43",
+          "field": "Font",
+          "old": {
+            "FontObject": -132,
+            "TypefaceFontName": "Barlow-Medium",
+            "Size": 16.0
+          },
+          "new": {
+            "FontObject": -131,
+            "OutlineSettings": {
+              "OutlineSize": 1,
+              "bApplyOutlineToDropShadows": 1,
+              "OutlineColor": [
+                0.0,
+                0.0,
+                0.0,
+                0.5
+              ]
+            },
+            "TypefaceFontName": "FF_BarlowCondensed-Regular",
+            "Size": 16.0
+          }
+        },
+        {
+          "export": "TextBlock_44",
+          "field": "Font",
+          "old": {
+            "FontObject": -132,
+            "TypefaceFontName": "Barlow-Medium",
+            "Size": 14.0
+          },
+          "new": {
+            "FontObject": -131,
+            "OutlineSettings": {
+              "OutlineSize": 1,
+              "bApplyOutlineToDropShadows": 1,
+              "OutlineColor": [
+                0.0,
+                0.0,
+                0.0,
+                0.5
+              ]
+            },
+            "TypefaceFontName": "FF_BarlowCondensed-Regular",
+            "Size": 16.0
+          }
+        },
+        {
+          "export": "TextBlock_45",
+          "field": "Font",
+          "old": {
+            "FontObject": -132,
+            "TypefaceFontName": "Barlow-Medium",
+            "Size": 16.0
+          },
+          "new": {
+            "FontObject": -131,
+            "OutlineSettings": {
+              "OutlineSize": 1,
+              "bApplyOutlineToDropShadows": 1,
+              "OutlineColor": [
+                0.0,
+                0.0,
+                0.0,
+                0.5
+              ]
+            },
+            "TypefaceFontName": "FF_BarlowCondensed-Regular",
+            "Size": 16.0
+          }
+        },
+        {
+          "export": "TextBlock_46",
+          "field": "Font",
+          "old": {
+            "FontObject": -132,
+            "TypefaceFontName": "Barlow-Medium",
+            "Size": 14.0
+          },
+          "new": {
+            "FontObject": -131,
+            "OutlineSettings": {
+              "OutlineSize": 1,
+              "bApplyOutlineToDropShadows": 1,
+              "OutlineColor": [
+                0.0,
+                0.0,
+                0.0,
+                0.5
+              ]
+            },
+            "TypefaceFontName": "FF_BarlowCondensed-Regular",
+            "Size": 16.0
+          }
+        },
+        {
+          "export": "TextBlock_48",
+          "field": "Font",
+          "old": {
+            "FontObject": -132,
+            "TypefaceFontName": "Barlow-Medium",
+            "Size": 16.0
+          },
+          "new": {
+            "FontObject": -131,
+            "OutlineSettings": {
+              "OutlineSize": 1,
+              "bApplyOutlineToDropShadows": 1,
+              "OutlineColor": [
+                0.0,
+                0.0,
+                0.0,
+                0.5
+              ]
+            },
+            "TypefaceFontName": "FF_BarlowCondensed-Regular",
+            "Size": 16.0
+          }
+        },
+        {
+          "export": "TextBlock_49",
+          "field": "Font",
+          "old": {
+            "FontObject": -132,
+            "TypefaceFontName": "Barlow-Medium",
+            "Size": 14.0
+          },
+          "new": {
+            "FontObject": -131,
+            "OutlineSettings": {
+              "OutlineSize": 1,
+              "bApplyOutlineToDropShadows": 1,
+              "OutlineColor": [
+                0.0,
+                0.0,
+                0.0,
+                0.5
+              ]
+            },
+            "TypefaceFontName": "FF_BarlowCondensed-Regular",
+            "Size": 16.0
+          }
+        },
+        {
+          "export": "TextBlock_5",
+          "field": "Font",
+          "old": {
+            "FontObject": -132,
+            "TypefaceFontName": "Barlow-Medium",
+            "Size": 16.0
+          },
+          "new": {
+            "FontObject": -131,
+            "OutlineSettings": {
+              "OutlineSize": 1,
+              "bApplyOutlineToDropShadows": 1,
+              "OutlineColor": [
+                0.0,
+                0.0,
+                0.0,
+                0.5
+              ]
+            },
+            "TypefaceFontName": "FF_BarlowCondensed-Regular",
+            "Size": 16.0
+          }
+        },
+        {
+          "export": "TextBlock_50",
+          "field": "Font",
+          "old": {
+            "FontObject": -132,
+            "TypefaceFontName": "Barlow-Medium",
+            "Size": 16.0
+          },
+          "new": {
+            "FontObject": -131,
+            "OutlineSettings": {
+              "OutlineSize": 1,
+              "bApplyOutlineToDropShadows": 1,
+              "OutlineColor": [
+                0.0,
+                0.0,
+                0.0,
+                0.5
+              ]
+            },
+            "TypefaceFontName": "FF_BarlowCondensed-Regular",
+            "Size": 16.0
+          }
+        },
+        {
+          "export": "TextBlock_51",
+          "field": "Font",
+          "old": {
+            "FontObject": -132,
+            "TypefaceFontName": "Barlow-Medium",
+            "Size": 14.0
+          },
+          "new": {
+            "FontObject": -131,
+            "OutlineSettings": {
+              "OutlineSize": 1,
+              "bApplyOutlineToDropShadows": 1,
+              "OutlineColor": [
+                0.0,
+                0.0,
+                0.0,
+                0.5
+              ]
+            },
+            "TypefaceFontName": "FF_BarlowCondensed-Regular",
+            "Size": 16.0
+          }
+        },
+        {
+          "export": "TextBlock_52",
+          "field": "Font",
+          "old": {
+            "FontObject": -132,
+            "TypefaceFontName": "Barlow-Medium",
+            "Size": 16.0
+          },
+          "new": {
+            "FontObject": -131,
+            "OutlineSettings": {
+              "OutlineSize": 1,
+              "bApplyOutlineToDropShadows": 1,
+              "OutlineColor": [
+                0.0,
+                0.0,
+                0.0,
+                0.5
+              ]
+            },
+            "TypefaceFontName": "FF_BarlowCondensed-Regular",
+            "Size": 16.0
+          }
+        },
+        {
+          "export": "TextBlock_53",
+          "field": "Font",
+          "old": {
+            "FontObject": -132,
+            "TypefaceFontName": "Barlow-Medium",
+            "Size": 14.0
+          },
+          "new": {
+            "FontObject": -131,
+            "OutlineSettings": {
+              "OutlineSize": 1,
+              "bApplyOutlineToDropShadows": 1,
+              "OutlineColor": [
+                0.0,
+                0.0,
+                0.0,
+                0.5
+              ]
+            },
+            "TypefaceFontName": "FF_BarlowCondensed-Regular",
+            "Size": 16.0
+          }
+        },
+        {
+          "export": "TextBlock_54",
+          "field": "Font",
+          "old": {
+            "FontObject": -132,
+            "TypefaceFontName": "Barlow-Medium",
+            "Size": 16.0
+          },
+          "new": {
+            "FontObject": -131,
+            "OutlineSettings": {
+              "OutlineSize": 1,
+              "bApplyOutlineToDropShadows": 1,
+              "OutlineColor": [
+                0.0,
+                0.0,
+                0.0,
+                0.5
+              ]
+            },
+            "TypefaceFontName": "FF_BarlowCondensed-Regular",
+            "Size": 16.0
+          }
+        },
+        {
+          "export": "TextBlock_55",
+          "field": "Font",
+          "old": {
+            "FontObject": -132,
+            "TypefaceFontName": "Barlow-Medium",
+            "Size": 14.0
+          },
+          "new": {
+            "FontObject": -131,
+            "OutlineSettings": {
+              "OutlineSize": 1,
+              "bApplyOutlineToDropShadows": 1,
+              "OutlineColor": [
+                0.0,
+                0.0,
+                0.0,
+                0.5
+              ]
+            },
+            "TypefaceFontName": "FF_BarlowCondensed-Regular",
+            "Size": 16.0
+          }
+        },
+        {
+          "export": "TextBlock_56",
+          "field": "Font",
+          "old": {
+            "FontObject": -132,
+            "TypefaceFontName": "Barlow-Medium",
+            "Size": 16.0
+          },
+          "new": {
+            "FontObject": -131,
+            "OutlineSettings": {
+              "OutlineSize": 1,
+              "bApplyOutlineToDropShadows": 1,
+              "OutlineColor": [
+                0.0,
+                0.0,
+                0.0,
+                0.5
+              ]
+            },
+            "TypefaceFontName": "FF_BarlowCondensed-Regular",
+            "Size": 16.0
+          }
+        },
+        {
+          "export": "TextBlock_57",
+          "field": "Font",
+          "old": {
+            "FontObject": -132,
+            "TypefaceFontName": "Barlow-Medium",
+            "Size": 14.0
+          },
+          "new": {
+            "FontObject": -131,
+            "OutlineSettings": {
+              "OutlineSize": 1,
+              "bApplyOutlineToDropShadows": 1,
+              "OutlineColor": [
+                0.0,
+                0.0,
+                0.0,
+                0.5
+              ]
+            },
+            "TypefaceFontName": "FF_BarlowCondensed-Regular",
+            "Size": 16.0
+          }
+        },
+        {
+          "export": "TextBlock_58",
+          "field": "Font",
+          "old": {
+            "FontObject": -132,
+            "TypefaceFontName": "Barlow-Medium",
+            "Size": 16.0
+          },
+          "new": {
+            "FontObject": -131,
+            "OutlineSettings": {
+              "OutlineSize": 1,
+              "bApplyOutlineToDropShadows": 1,
+              "OutlineColor": [
+                0.0,
+                0.0,
+                0.0,
+                0.5
+              ]
+            },
+            "TypefaceFontName": "FF_BarlowCondensed-Regular",
+            "Size": 16.0
+          }
+        },
+        {
+          "export": "TextBlock_59",
+          "field": "Font",
+          "old": {
+            "FontObject": -132,
+            "TypefaceFontName": "Barlow-Medium",
+            "Size": 14.0
+          },
+          "new": {
+            "FontObject": -131,
+            "OutlineSettings": {
+              "OutlineSize": 1,
+              "bApplyOutlineToDropShadows": 1,
+              "OutlineColor": [
+                0.0,
+                0.0,
+                0.0,
+                0.5
+              ]
+            },
+            "TypefaceFontName": "FF_BarlowCondensed-Regular",
+            "Size": 16.0
+          }
+        },
+        {
+          "export": "TextBlock_6",
+          "field": "Font",
+          "old": {
+            "FontObject": -132,
+            "TypefaceFontName": "Barlow-Medium",
+            "Size": 14.0
+          },
+          "new": {
+            "FontObject": -131,
+            "OutlineSettings": {
+              "OutlineSize": 1,
+              "bApplyOutlineToDropShadows": 1,
+              "OutlineColor": [
+                0.0,
+                0.0,
+                0.0,
+                0.5
+              ]
+            },
+            "TypefaceFontName": "FF_BarlowCondensed-Regular",
+            "Size": 16.0
+          }
+        },
+        {
+          "export": "TextBlock_60",
+          "field": "Font",
+          "old": {
+            "FontObject": -132,
+            "TypefaceFontName": "Barlow-Medium",
+            "Size": 16.0
+          },
+          "new": {
+            "FontObject": -131,
+            "OutlineSettings": {
+              "OutlineSize": 1,
+              "bApplyOutlineToDropShadows": 1,
+              "OutlineColor": [
+                0.0,
+                0.0,
+                0.0,
+                0.5
+              ]
+            },
+            "TypefaceFontName": "FF_BarlowCondensed-Regular",
+            "Size": 16.0
+          }
+        },
+        {
+          "export": "TextBlock_61",
+          "field": "Font",
+          "old": {
+            "FontObject": -132,
+            "TypefaceFontName": "Barlow-Medium",
+            "Size": 14.0
+          },
+          "new": {
+            "FontObject": -131,
+            "OutlineSettings": {
+              "OutlineSize": 1,
+              "bApplyOutlineToDropShadows": 1,
+              "OutlineColor": [
+                0.0,
+                0.0,
+                0.0,
+                0.5
+              ]
+            },
+            "TypefaceFontName": "FF_BarlowCondensed-Regular",
+            "Size": 16.0
+          }
+        },
+        {
+          "export": "TextBlock_62",
+          "field": "Font",
+          "old": {
+            "FontObject": -132,
+            "TypefaceFontName": "Barlow-Medium",
+            "Size": 16.0
+          },
+          "new": {
+            "FontObject": -131,
+            "OutlineSettings": {
+              "OutlineSize": 1,
+              "bApplyOutlineToDropShadows": 1,
+              "OutlineColor": [
+                0.0,
+                0.0,
+                0.0,
+                0.5
+              ]
+            },
+            "TypefaceFontName": "FF_BarlowCondensed-Regular",
+            "Size": 16.0
+          }
+        },
+        {
+          "export": "TextBlock_63",
+          "field": "Font",
+          "old": {
+            "FontObject": -132,
+            "TypefaceFontName": "Barlow-Medium",
+            "Size": 14.0
+          },
+          "new": {
+            "FontObject": -131,
+            "OutlineSettings": {
+              "OutlineSize": 1,
+              "bApplyOutlineToDropShadows": 1,
+              "OutlineColor": [
+                0.0,
+                0.0,
+                0.0,
+                0.5
+              ]
+            },
+            "TypefaceFontName": "FF_BarlowCondensed-Regular",
+            "Size": 16.0
+          }
+        },
+        {
+          "export": "TextBlock_64",
+          "field": "Font",
+          "old": {
+            "FontObject": -132,
+            "TypefaceFontName": "Barlow-Medium",
+            "Size": 16.0
+          },
+          "new": {
+            "FontObject": -131,
+            "OutlineSettings": {
+              "OutlineSize": 1,
+              "bApplyOutlineToDropShadows": 1,
+              "OutlineColor": [
+                0.0,
+                0.0,
+                0.0,
+                0.5
+              ]
+            },
+            "TypefaceFontName": "FF_BarlowCondensed-Regular",
+            "Size": 16.0
+          }
+        },
+        {
+          "export": "TextBlock_65",
+          "field": "Font",
+          "old": {
+            "FontObject": -132,
+            "TypefaceFontName": "Barlow-Medium",
+            "Size": 14.0
+          },
+          "new": {
+            "FontObject": -131,
+            "OutlineSettings": {
+              "OutlineSize": 1,
+              "bApplyOutlineToDropShadows": 1,
+              "OutlineColor": [
+                0.0,
+                0.0,
+                0.0,
+                0.5
+              ]
+            },
+            "TypefaceFontName": "FF_BarlowCondensed-Regular",
+            "Size": 16.0
+          }
+        },
+        {
+          "export": "TextBlock_67",
+          "field": "Font",
+          "old": {
+            "FontObject": -132,
+            "TypefaceFontName": "Barlow-Medium",
+            "Size": 16.0
+          },
+          "new": {
+            "FontObject": -131,
+            "OutlineSettings": {
+              "OutlineSize": 1,
+              "bApplyOutlineToDropShadows": 1,
+              "OutlineColor": [
+                0.0,
+                0.0,
+                0.0,
+                0.5
+              ]
+            },
+            "TypefaceFontName": "FF_BarlowCondensed-Regular",
+            "Size": 16.0
+          }
+        },
+        {
+          "export": "TextBlock_68",
+          "field": "Font",
+          "old": {
+            "FontObject": -132,
+            "TypefaceFontName": "Barlow-Medium",
+            "Size": 14.0
+          },
+          "new": {
+            "FontObject": -131,
+            "OutlineSettings": {
+              "OutlineSize": 1,
+              "bApplyOutlineToDropShadows": 1,
+              "OutlineColor": [
+                0.0,
+                0.0,
+                0.0,
+                0.5
+              ]
+            },
+            "TypefaceFontName": "FF_BarlowCondensed-Regular",
+            "Size": 16.0
+          }
+        },
+        {
+          "export": "TextBlock_69",
+          "field": "Font",
+          "old": {
+            "FontObject": -132,
+            "TypefaceFontName": "Barlow-Medium",
+            "Size": 16.0
+          },
+          "new": {
+            "FontObject": -131,
+            "OutlineSettings": {
+              "OutlineSize": 1,
+              "bApplyOutlineToDropShadows": 1,
+              "OutlineColor": [
+                0.0,
+                0.0,
+                0.0,
+                0.5
+              ]
+            },
+            "TypefaceFontName": "FF_BarlowCondensed-Regular",
+            "Size": 16.0
+          }
+        },
+        {
+          "export": "TextBlock_7",
+          "field": "Font",
+          "old": {
+            "FontObject": -132,
+            "TypefaceFontName": "Barlow-Medium",
+            "Size": 16.0
+          },
+          "new": {
+            "FontObject": -131,
+            "OutlineSettings": {
+              "OutlineSize": 1,
+              "bApplyOutlineToDropShadows": 1,
+              "OutlineColor": [
+                0.0,
+                0.0,
+                0.0,
+                0.5
+              ]
+            },
+            "TypefaceFontName": "FF_BarlowCondensed-Regular",
+            "Size": 16.0
+          }
+        },
+        {
+          "export": "TextBlock_70",
+          "field": "Font",
+          "old": {
+            "FontObject": -132,
+            "TypefaceFontName": "Barlow-Medium",
+            "Size": 14.0
+          },
+          "new": {
+            "FontObject": -131,
+            "OutlineSettings": {
+              "OutlineSize": 1,
+              "bApplyOutlineToDropShadows": 1,
+              "OutlineColor": [
+                0.0,
+                0.0,
+                0.0,
+                0.5
+              ]
+            },
+            "TypefaceFontName": "FF_BarlowCondensed-Regular",
+            "Size": 16.0
+          }
+        },
+        {
+          "export": "TextBlock_8",
+          "field": "Font",
+          "old": {
+            "FontObject": -132,
+            "TypefaceFontName": "Barlow-Medium",
+            "Size": 14.0
+          },
+          "new": {
+            "FontObject": -131,
+            "OutlineSettings": {
+              "OutlineSize": 1,
+              "bApplyOutlineToDropShadows": 1,
+              "OutlineColor": [
+                0.0,
+                0.0,
+                0.0,
+                0.5
+              ]
+            },
+            "TypefaceFontName": "FF_BarlowCondensed-Regular",
+            "Size": 16.0
+          }
+        },
+        {
+          "export": "TextBlock_9",
+          "field": "Font",
+          "old": {
+            "FontObject": -132,
+            "TypefaceFontName": "Barlow-Medium",
+            "Size": 16.0
+          },
+          "new": {
+            "FontObject": -131,
+            "OutlineSettings": {
+              "OutlineSize": 1,
+              "bApplyOutlineToDropShadows": 1,
+              "OutlineColor": [
+                0.0,
+                0.0,
+                0.0,
+                0.5
+              ]
+            },
+            "TypefaceFontName": "FF_BarlowCondensed-Regular",
+            "Size": 16.0
+          }
+        },
+        {
+          "export": "SizeBox_38",
+          "field": "Visibility",
+          "old": 1,
+          "new": 3
+        },
+        {
+          "export": "Column1",
+          "field": "bOverride_WidthOverride",
+          "old": {},
+          "new": 1
+        },
+        {
+          "export": "Column2",
+          "field": "bOverride_WidthOverride",
+          "old": {},
+          "new": 1
+        },
+        {
+          "export": "WB_T3_SubHeadline",
+          "inherited_slot_index": 31,
+          "visibility_index": 48,
+          "visibility": 1,
+          "slot_ref": 492,
+          "typed_native_suffix": "PASS"
+        }
+      ],
+      "name": "WB_Stats_Full",
+      "edition": "Steam_current",
+      "mount": "Carnal_Instinct_UE5/Content/RPG_InventorySystem/UI/PlayerInventory/WB_Stats_Full.uasset",
+      "strict_functions": 36
+    },
+    {
+      "source_sha256": "3557b60a2749d62f0b7ef4e98e2522143fc4a9833cc1221a59bb51c65eaa8050",
+      "patched_sha256": "20fb1d1e125f8e14821aaf2909b2f20969f0c2e061793a2e29be64f249a8b69f",
+      "source_header": 17502,
+      "patched_header": 17583,
+      "source_exports": 59,
+      "patched_exports": 59,
+      "changed_exports": [
+        35,
+        53,
+        54,
+        55
+      ],
+      "evidence": [
+        {
+          "export": "Image_119",
+          "field": "Brush",
+          "old": {
+            "ImageType": 1,
+            "ResourceObject": -191
+          },
+          "new": {
+            "ResourceObject": -206
+          }
+        },
+        {
+          "export": "Text_OriginalStatLevel",
+          "field": "Font",
+          "old": {
+            "FontObject": -85,
+            "TypefaceFontName": "Barlow-SemiBold",
+            "Size": 16.0
+          },
+          "new": {
+            "FontObject": -84,
+            "OutlineSettings": {
+              "OutlineSize": 1,
+              "bApplyOutlineToDropShadows": 1,
+              "OutlineColor": [
+                0.0,
+                0.0,
+                0.0,
+                0.5
+              ]
+            },
+            "TypefaceFontName": "FF_BarlowCondensed-Medium",
+            "Size": 18.0
+          }
+        },
+        {
+          "export": "Text_OriginalStatLevel",
+          "field": "ColorAndOpacity",
+          "old": {
+            "SpecifiedColor": [
+              0.8627449870109558,
+              0.8235290050506592,
+              0.7294120192527771,
+              1.0
+            ]
+          },
+          "new": {
+            "SpecifiedColor": [
+              0.8323420286178589,
+              0.0,
+              0.9137259721755981,
+              1.0
+            ]
+          }
+        },
+        {
+          "export": "Text_StatLevel",
+          "field": "Font",
+          "old": {
+            "FontObject": -85,
+            "TypefaceFontName": "Barlow-SemiBold",
+            "Size": 16.0
+          },
+          "new": {
+            "FontObject": -84,
+            "OutlineSettings": {
+              "OutlineSize": 1,
+              "bApplyOutlineToDropShadows": 1,
+              "OutlineColor": [
+                0.0,
+                0.0,
+                0.0,
+                0.5
+              ]
+            },
+            "TypefaceFontName": "FF_BarlowCondensed-Medium",
+            "Size": 18.0
+          }
+        },
+        {
+          "export": "Text_StatLevel",
+          "field": "ColorAndOpacity",
+          "old": {
+            "SpecifiedColor": [
+              0.8627449870109558,
+              0.8235290050506592,
+              0.7294120192527771,
+              1.0
+            ]
+          },
+          "new": {
+            "SpecifiedColor": [
+              0.8323420286178589,
+              0.0,
+              0.9137259721755981,
+              1.0
+            ]
+          }
+        },
+        {
+          "export": "Text_StatName",
+          "field": "Font",
+          "old": {
+            "FontObject": -85,
+            "TypefaceFontName": "Barlow-Medium",
+            "Size": 16.0
+          },
+          "new": {
+            "FontObject": -84,
+            "OutlineSettings": {
+              "OutlineSize": 1,
+              "bApplyOutlineToDropShadows": 1,
+              "OutlineColor": [
+                0.0,
+                0.0,
+                0.0,
+                0.5
+              ]
+            },
+            "TypefaceFontName": "FF_BarlowCondensed-Medium",
+            "Size": 18.0
+          }
+        }
+      ],
+      "name": "WB_Stats_Main_Slot",
+      "edition": "Steam_current",
+      "mount": "Carnal_Instinct_UE5/Content/RPG_InventorySystem/UI/PlayerInventory/WB_Stats_Main_Slot.uasset",
+      "strict_functions": 20
+    },
+    {
+      "source_sha256": "75fadb661d4d8b02ca425452d96139c6fe303d936b0f5b2d11059fa11591b28a",
+      "patched_sha256": "2fdbeed3935758e33e8cbd9e2962c71b86679454fd4da51631edcff78052942c",
+      "source_header": 68910,
+      "patched_header": 68910,
+      "source_exports": 408,
+      "patched_exports": 408,
+      "changed_exports": [
+        4
+      ],
+      "evidence": [
+        {
+          "export": "Button_crafting",
+          "field": "Visibility",
+          "old": 1,
+          "new": 0
+        }
+      ],
+      "name": "WB_WindowSwitcher",
+      "edition": "Steam_current",
+      "mount": "Carnal_Instinct_UE5/Content/RPG_InventorySystem/UI/Misc/WB_WindowSwitcher.uasset",
+      "strict_functions": 55
+    },
+    {
+      "source_sha256": "95b8bcae11ecd0aad0a9374ed69c0e4c70fc817d2604bffa7658276482e8187c",
+      "patched_sha256": "95b8bcae11ecd0aad0a9374ed69c0e4c70fc817d2604bffa7658276482e8187c",
+      "source_header": 6124,
+      "patched_header": 6124,
+      "source_exports": 36,
+      "patched_exports": 36,
+      "changed_exports": [],
+      "evidence": [],
+      "name": "WB_UpperUIBar",
+      "edition": "Steam_current",
+      "mount": "Carnal_Instinct_UE5/Content/RPG_InventorySystem/UI/Misc/WB_UpperUIBar.uasset",
+      "strict_functions": 0
+    },
+    {
+      "source_sha256": "67f39b9d5dcef15c217a8198350486fe76605148351a095a418adf0b389ec8f1",
+      "patched_sha256": "f1eb1bec42d38aaded775de8ee81fcfeae3edab0e122e20f46564ab832debff5",
+      "source_header": 32294,
+      "patched_header": 34878,
+      "source_exports": 143,
+      "patched_exports": 145,
+      "changed_exports": [
+        36,
+        44,
+        45,
+        52,
+        65,
+        81,
+        85,
+        86,
+        137,
+        143,
+        144
+      ],
+      "evidence": [
+        {
+          "export": "CI_RU_ViewportSize",
+          "field": "Slots",
+          "old": {},
+          "new": [
+            145
+          ]
+        },
+        {
+          "export": "ScaleBoxSlot_0",
+          "field": "Content",
+          "old": 53,
+          "new": 144
+        },
+        {
+          "export": "Overlay_0",
+          "field": "Slot",
+          "old": 66,
+          "new": 145
+        },
+        {
+          "export": "HorizontalBox_2",
+          "old_class": "HorizontalBox",
+          "new_class": "VerticalBox"
+        },
+        {
+          "export": "HorizontalBoxSlot_0",
+          "field": "Padding",
+          "old": {
+            "Right": 20.0
+          },
+          "new": {
+            "Left": 0.0,
+            "Top": 0.0,
+            "Right": 0.0,
+            "Bottom": 20.0
+          }
+        },
+        {
+          "export": "HorizontalBoxSlot_0",
+          "field": "Size",
+          "old": {},
+          "new": {
+            "Value": 0.4,
+            "SizeRule": 1
+          }
+        },
+        {
+          "export": "HorizontalBoxSlot_1",
+          "field": "Padding",
+          "old": {},
+          "new": {
+            "Left": 0.0,
+            "Top": 0.0,
+            "Right": 0.0,
+            "Bottom": 20.0
+          }
+        },
+        {
+          "export": "HorizontalBoxSlot_1",
+          "field": "Size",
+          "old": {
+            "SizeRule": 1
+          },
+          "new": {
+            "Value": 0.6,
+            "SizeRule": 1
+          }
+        },
+        {
+          "export": "SizeBox_0",
+          "field": "bOverride_WidthOverride",
+          "old": 1,
+          "new": 0
+        },
+        {
+          "export": "SizeBox_0",
+          "field": "bOverride_MinDesiredWidth",
+          "old": 1,
+          "new": 0
+        },
+        {
+          "export": "ObjectivesText",
+          "field": "Font",
+          "old": {
+            "FontObject": -122,
+            "OutlineSettings": {
+              "OutlineSize": 1,
+              "OutlineColor": [
+                0.0,
+                0.0,
+                0.0,
+                0.5
+              ]
+            },
+            "TypefaceFontName": "Barlow-SemiBold",
+            "Size": 16.0,
+            "LetterSpacing": 50
+          },
+          "new": {
+            "FontObject": -122,
+            "OutlineSettings": {
+              "OutlineSize": 1,
+              "OutlineColor": [
+                0.0,
+                0.0,
+                0.0,
+                0.5
+              ]
+            },
+            "TypefaceFontName": "Barlow-SemiBold",
+            "Size": 22.0,
+            "LetterSpacing": 0
+          }
+        },
+        {
+          "export": "ObjectivesText",
+          "field": "ColorAndOpacity",
+          "old": {
+            "SpecifiedColor": [
+              0.8666669726371765,
+              0.6745100021362305,
+              0.21960799396038055,
+              1.0
+            ]
+          },
+          "new": {
+            "SpecifiedColor": [
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ]
+          }
+        },
+        {
+          "export": "ObjectivesText",
+          "field": "AutoWrapText",
+          "old": {},
+          "new": 1
+        },
+        {
+          "export": "ObjectivesText_1",
+          "field": "Font",
+          "old": {
+            "FontObject": -122,
+            "OutlineSettings": {
+              "OutlineSize": 1,
+              "OutlineColor": [
+                0.0,
+                0.0,
+                0.0,
+                0.5
+              ]
+            },
+            "TypefaceFontName": "Barlow-SemiBold",
+            "Size": 16.0,
+            "LetterSpacing": 50
+          },
+          "new": {
+            "FontObject": -122,
+            "OutlineSettings": {
+              "OutlineSize": 1,
+              "OutlineColor": [
+                0.0,
+                0.0,
+                0.0,
+                0.5
+              ]
+            },
+            "TypefaceFontName": "Barlow-SemiBold",
+            "Size": 22.0,
+            "LetterSpacing": 0
+          }
+        },
+        {
+          "export": "ObjectivesText_1",
+          "field": "ColorAndOpacity",
+          "old": {
+            "SpecifiedColor": [
+              0.8666669726371765,
+              0.6745100021362305,
+              0.21960799396038055,
+              1.0
+            ]
+          },
+          "new": {
+            "SpecifiedColor": [
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ]
+          }
+        },
+        {
+          "export": "ObjectivesText_1",
+          "field": "AutoWrapText",
+          "old": {},
+          "new": 1
+        },
+        {
+          "export": "WB_T3_SubHeadline",
+          "inherited_slot_index": 31,
+          "visibility_index": 48,
+          "visibility": 1,
+          "slot_ref": 118,
+          "typed_native_suffix": "PASS"
+        }
+      ],
+      "name": "WB_QuestScreen",
+      "edition": "Steam_current",
+      "mount": "Carnal_Instinct_UE5/Content/RPG_InventorySystem/UI/Quests/WB_QuestScreen.uasset",
+      "strict_functions": 17
+    },
+    {
+      "source_sha256": "1e1c830a8d1933f5301cb2be7b8a6b4f7ab917b89a694e807c7831085df9b63a",
+      "patched_sha256": "1e1c830a8d1933f5301cb2be7b8a6b4f7ab917b89a694e807c7831085df9b63a",
+      "source_header": 5463,
+      "patched_header": 5463,
+      "source_exports": 32,
+      "patched_exports": 32,
+      "changed_exports": [],
+      "evidence": [],
+      "name": "WB_QuestType",
+      "edition": "Steam_current",
+      "mount": "Carnal_Instinct_UE5/Content/RPG_InventorySystem/UI/Quests/WB_QuestType.uasset",
+      "strict_functions": 2
+    },
+    {
+      "source_sha256": "23becd97217ef516ac08c5b51388a7acbb8ca1aeb5d5da64d9e7dbe9f2d7c9ef",
+      "patched_sha256": "1603cd07249d8901e8c035985c428554c4a847e4a8a484426089e7d1169da7bc",
+      "source_header": 3552,
+      "patched_header": 3691,
+      "source_exports": 18,
+      "patched_exports": 18,
+      "changed_exports": [
+        4,
+        5,
+        11
+      ],
+      "evidence": [
+        {
+          "export": "T_SubHeadline",
+          "field": "Font",
+          "old": {
+            "Size": 16.0,
+            "LetterSpacing": 150
+          },
+          "new": {
+            "FontObject": -38,
+            "OutlineSettings": {
+              "OutlineSize": 1,
+              "bApplyOutlineToDropShadows": 1,
+              "OutlineColor": [
+                0.0,
+                0.0,
+                0.0,
+                0.5
+              ]
+            },
+            "TypefaceFontName": "FF_BarlowCondensed-SemiBold",
+            "Size": 32.0,
+            "LetterSpacing": 0
+          }
+        },
+        {
+          "export": "T_SubHeadline",
+          "field": "ColorAndOpacity",
+          "old": {
+            "SpecifiedColor": [
+              0.8666669726371765,
+              0.6745100021362305,
+              0.21960799396038055,
+              1.0
+            ]
+          },
+          "new": {
+            "SpecifiedColor": [
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ]
+          }
+        },
+        {
+          "export": "T_SubHeadline",
+          "field": "AutoWrapText",
+          "old": {},
+          "new": 1
+        },
+        {
+          "export": "T_SubHeadline",
+          "field": "Justification",
+          "old": {},
+          "new": 0
+        },
+        {
+          "export": "Image_180",
+          "field": "Visibility",
+          "old": {},
+          "new": 1
+        },
+        {
+          "export": "Image_337",
+          "field": "Visibility",
+          "old": {},
+          "new": 1
+        }
+      ],
+      "name": "WB_T3_SubHeadline",
+      "edition": "Steam_current",
+      "mount": "Carnal_Instinct_UE5/Content/NiceSettingsMenu/UI/Theme_3/WB_T3_SubHeadline.uasset",
+      "strict_functions": 2
+    }
+  ]
+}

@@ -115,11 +115,12 @@ def find_script(raw):
         try:
             reader = k.Reader(raw[pos + 8:pos + 8 + disk])
             nodes = reader.all()
+            assert reader.m == memory
             code, actual_memory, _ = k.serialize(nodes)
             assert reader.m == memory == actual_memory
             assert code == raw[pos + 8:pos + 8 + disk]
             matches.append((pos, memory, disk, nodes, reader))
-        except (ValueError, AssertionError, EOFError, IndexError, struct.error, UnicodeError):
+        except (ValueError, AssertionError, EOFError, IndexError, KeyError, struct.error, UnicodeError):
             pass
     assert len(matches) == 1, ('strict script match', len(matches), len(raw))
     return matches[0]
