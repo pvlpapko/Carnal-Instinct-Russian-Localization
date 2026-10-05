@@ -1,0 +1,12 @@
+{
+  "release": "18.10",
+  "source_identity": "Steam live GameInstance SHA256 unchanged756887fd7ef918293f74de69e5bec51f7a54c6dc43408a2e24599cfd9382e898",
+  "HUD": "w_06_objective_entry and w_07_sub_objective use objective/sub-objective FName to obtain localization output; SetText and formatted counter text read the untranslated fallback. CI_RU_Display_Quest has733 existing rows/731 unique FNames. Add translation at display reads, retaining original localization/audio output and unknown-name fallback.",
+  "NoSteam": "Available18.9 override widgets have font20/marker64/card550+padding; align these native fields with Steam18.9. The original journal container and both HUD child widgets are absent from cached NoSteam overrides and Drive has only Steam; requested3 actual NoSteam source widgets.",
+  "shader_plugin": "Engine/Plugins/Marketplace/ShaderCodcddcf8247c4V6 now accessible; compiler35474B. No shader acceleration or skipping applied before behavior analysis.",
+  "baseline_tests": {
+    "expected_failures": 3,
+    "gameplay_code_preservation_pass": 1
+  },
+  "runtime_tested": false
+}

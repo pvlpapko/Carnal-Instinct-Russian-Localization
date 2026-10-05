@@ -2,15 +2,15 @@
   "schema_version": "1.0",
   "edition": "Steam",
   "task": "shader_startup_investigation",
-  "status": "missing_inherited_shader_plugin_assets",
+  "status": "plugin_source_acquired_analysis_in_progress",
   "source_state_id": "steam_current_2026-10-03_16321_asset_verified_index_stale",
   "verified_game_version": "0.7.9.16321",
   "verified_build": null,
   "created_at": "2026-10-05T20:52:12.770026+00:00",
-  "updated_at": "2026-10-05T20:55:22.423943+00:00",
-  "current_phase": "source_discovery",
-  "last_completed_unit": "registry_confirms_parent_and_binary_search_positive_control_confirms_missing_accessible_file",
-  "next_unit": "retrieve_inherited_BP_ShaderCompiler_and_plugin_assets_from_extraction",
+  "updated_at": "2026-10-05T21:23:53.702110+00:00",
+  "current_phase": "plugin_analysis",
+  "last_completed_unit": "Engine_plugin_compiler_and_two_loader_assets_acquired",
+  "next_unit": "inspect_async_loader_bytecode_and_startup_scheduling",
   "completed_units": [
     "Read existing 18.8 startup investigation and 18.9 plugin report",
     "Fresh live GameInstance hash and embedded version unchanged",
@@ -18,10 +18,13 @@
     "Recorded descriptor versus cooked-asset distinction and provider file-search limitations",
     "User confirmed the same Drive source root",
     "Fresh AssetRegistry confirms the parent and eight plugin assets under /ShaderCompilationScreen",
-    "Exact binary filename search returned no plugin targets; known BP_CI_ShaderCompiler binary found as positive control"
+    "Exact binary filename search returned no plugin targets; known BP_CI_ShaderCompiler binary found as positive control",
+    "New Engine folder1mKW_RnRSsTmgImrsl1nMAC1AnwXoHnOh located under source project",
+    "BP_ShaderCompiler35474B and material/system loaders fetched",
+    "Parent graph enumerates material, Niagara, material-instance and static-mesh assets; asynchronous loader functions need additional typed opcode inspection"
   ],
   "pending_units": [
-    "Access inherited BP_ShaderCompiler.uasset and related assets from the complete extraction",
+    "Inspect complete plugin bytecode and scheduling",
     "Inspect inherited plugin initialization and scheduling",
     "Obtain repeated-startup timing and without-localization comparison",
     "Implement and verify a startup change only if a concrete cause is established"

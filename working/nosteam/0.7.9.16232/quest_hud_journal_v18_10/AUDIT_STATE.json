@@ -1,0 +1,53 @@
+{
+  "schema_version": "1.0",
+  "edition": "NoSteam",
+  "task": "quest_hud_journal_v18_10",
+  "status": "source_inspection",
+  "source_state_id": "nosteam_0.7.9.16232",
+  "verified_game_version": "0.7.9.16232",
+  "verified_build": "0.7.9.16232",
+  "created_at": "2026-10-05T21:08:48.890239+00:00",
+  "updated_at": "2026-10-05T21:23:53.702110+00:00",
+  "current_phase": "root_cause",
+  "last_completed_unit": "HUD_source_and_nostem_typography_root_causes_and_three_red_checks",
+  "next_unit": "build_Steam_objective_display_and_existing_NoSteam_native_refinements",
+  "completed_units": [
+    "Fresh live Steam GameInstance hash unchanged",
+    "Screenshot ZIP CRC and both images reviewed",
+    "New Engine folder found on Drive",
+    "Steam w_06 and w_07 display original localization text without the existing quest translation table",
+    "Confirmed731 unique quest display labels;733 existing rows, case-only duplicates have identical Russian",
+    "NoSteam body font20 vs Steam16, tracking64 vs28, card550 plus padding exceeds550",
+    "Baseline tests:3 expected FAIL and gameplay byte preservation PASS",
+    "User confirms Drive has only Steam; requested3 NoSteam source widgets"
+  ],
+  "pending_units": [
+    "HUD objective display source and remaining untranslated text",
+    "NoSteam journal native layout parity with18.9 Steam",
+    "Inherited shader plugin inspection",
+    "Validate and package release",
+    "Original NoSteam WB_QuestScreen, w_06_objective_entry and w_07_sub_objective requested; no Steam gameplay widgets copied to NoSteam"
+  ],
+  "source_files_used": [
+    "CI_SOURCE_INDEX.json",
+    "18.9 verified release",
+    "user screenshots ZIP"
+  ],
+  "working_files": [
+    "/workspace/project-context/carnal-instinct/v18.10"
+  ],
+  "validation_completed": [
+    "ZIP CRC",
+    "Live Steam source identity"
+  ],
+  "validation_pending": [
+    "Typed display and native graph checks",
+    "Container and installer checks",
+    "In-game appearance and startup timing"
+  ],
+  "notes": [
+    "No subagents; targeted source fetch only",
+    "Preserve each edition gameplay classes/CDOs and functions",
+    "First quest title is translated; English objective and optional weapon text remain on HUD"
+  ]
+}
