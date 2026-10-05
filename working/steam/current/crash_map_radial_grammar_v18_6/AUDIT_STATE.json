@@ -2,15 +2,15 @@
   "schema_version": "1.0",
   "edition": "Steam",
   "task": "crash_map_radial_grammar_v18_6",
-  "status": "in_progress",
+  "status": "v18.6_uploaded_static_verified_runtime_and_editorial_pending",
   "source_state_id": "steam_current_2026-10-03_16321_asset_verified_index_stale",
   "verified_game_version": "0.7.9.16321",
   "verified_build": null,
   "created_at": "2026-10-05T17:21:24.500298+00:00",
-  "updated_at": "2026-10-05T17:53:01.067534+00:00",
-  "current_phase": "static_validation_passed",
-  "last_completed_unit": "native_map_full_container_readback_11_regressions_pass_installer_built",
-  "next_unit": "clean_release_packaging_drive_upload_readback",
+  "updated_at": "2026-10-05T17:58:29.222723+00:00",
+  "current_phase": "release_delivered_pending_game_retest",
+  "last_completed_unit": "v18.6_zip_upload_exact_download_sha_crc_verified",
+  "next_unit": "steam_startup_settings_fps_and_both_map_rows_retest_then_remaining_dialogue_review",
   "completed_units": [
     "New crash archives read: both startup at seconds=0 and same normalized shipping stack",
     "User confirms all startup probes except 9 run; only delta 8→9 Essence_Tier_1_Small",
@@ -19,10 +19,10 @@
     "Essence source empty Namespace uses five serialized bytes; old substring replacement left 0x01 and created invalid length 6657",
     "Corrected three full native FText fields; all flags/keys/English/class/other item bytes retained",
     "RAQOTE, THE BREADBASKET and ANUBITE CAMP missing from both popup lookup tables; Breadbasket locres already exists",
-    "899 known caption union in both popup rows and all five icon switches per edition; reported Raqote/Anubite Camp + previously excluded Breadbasket added"
+    "899 known caption union in both popup rows and all five icon switches per edition; reported Raqote/Anubite Camp + previously excluded Breadbasket added",
+    "18.6 TEST uploaded; fresh download exact archive SHA256 and all 78 entries verified; direct link available"
   ],
   "pending_units": [
-    "Clean packaging and authorized direct Drive download links",
     "In-game Steam startup/settings FPS and both-row map retest",
     "Remaining manual linguistic review"
   ],
@@ -44,7 +44,8 @@
     "11 regression tests PASS on final container extraction",
     "Independent BLAKE3/container dependencies/export span checks: 34 Steam packages +71 NoSteam packages",
     "All 41137 TSV rows original English source hashes/placeholders validated; original rows and LOCRES entries retained",
-    "Windows installer built with six exact runtime payloads to be verified at packaging"
+    "Windows installer built with six exact runtime payloads to be verified at packaging",
+    "Installer core tests -race PASS; six exact embedded/trusted payloads PASS; uploaded ZIP readback PASS"
   ],
   "validation_pending": [
     "New release static and runtime checks"

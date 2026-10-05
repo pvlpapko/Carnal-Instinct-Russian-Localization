@@ -1,0 +1,21 @@
+{
+  "release": "v18.6 TEST",
+  "name": "Carnal_Instinct_RU_DontLook_MapCrash_2026-10-05_v18.6_TEST.zip",
+  "sha256": "b3a912faf92f224cd56795162c246c2202bed84c998424c35a1b61f6a3525149",
+  "archive_bytes": 18497879,
+  "archive_entries": 78,
+  "zip_crc_and_exact_entry_readback": "PASS",
+  "installer_sha256": "b9a7b058056449db5398e28459bf257f4e5aab31d9b98af6a6eb794f3210d411",
+  "exact_installer_payload": "PASS",
+  "runtime_tested": false,
+  "drive_upload": "PASS",
+  "verified_at": "2026-10-05T17:58:29.222723+00:00",
+  "drive_readback_sha256_verified": true,
+  "drive_readback_zip_crc_verified": true,
+  "drive_file_id": "17ZtOUuQiLMnyvelZRQ8b3k64TnBP1nz0",
+  "drive_folder_id": "1VwdnxngtZLDsPl1kP5H5HCJBePoRCF_a",
+  "drive_url": "https://drive.google.com/file/d/17ZtOUuQiLMnyvelZRQ8b3k64TnBP1nz0/view",
+  "direct_download_url": "https://drive.google.com/uc?export=download&id=17ZtOUuQiLMnyvelZRQ8b3k64TnBP1nz0",
+  "runtime_validation": "18.6 untested; prior Steam failure isolated by probe 8→9 and invalid Namespace FString 6657; corrected native readback PASS",
+  "full_manual_dialogue_proofread": "pending"
+}

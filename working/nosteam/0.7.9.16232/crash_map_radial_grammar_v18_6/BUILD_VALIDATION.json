@@ -1,0 +1,13 @@
+{
+  "release": "18.6 TEST",
+  "runtime_tested": false,
+  "static_status": "PASS",
+  "regression_tests_from_final_payload": "11/11 PASS",
+  "translated_caption_cases_checked": 12586,
+  "installer_core_tests_with_race_detector": "PASS",
+  "windows_amd64_build": "PASS; not launched in Windows",
+  "exact_six_embedded_and_trusted_payloads": "PASS",
+  "crash_cause": "Invalid native Namespace FString count in Essence, proven and corrected; runtime retest pending",
+  "settings_fps_visual_fit": "runtime pending",
+  "full_manual_dialogue_proofread": "unfinished"
+}

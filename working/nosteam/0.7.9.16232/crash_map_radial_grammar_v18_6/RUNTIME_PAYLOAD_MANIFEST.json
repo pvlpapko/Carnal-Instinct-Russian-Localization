@@ -1,0 +1,89 @@
+{
+  "release": "v18.6 TEST",
+  "created_at": "2026-10-05T17:56:21.162338+00:00",
+  "author": "Don't Look",
+  "runtime_tested": false,
+  "steam_verified_source_version": "0.7.9.16321",
+  "steam_installed_build": null,
+  "nosteam_fixed_source_build": "0.7.9.16232",
+  "installer_mode": "delete_and_replace_without_backups",
+  "installer_sha256": "b9a7b058056449db5398e28459bf257f4e5aab31d9b98af6a6eb794f3210d411",
+  "installer_bytes": 19635200,
+  "payloads": {
+    "Steam_current": {
+      "packages": 34,
+      "toc_entries": 35,
+      "blocks": 53,
+      "utoc_bytes": 4849,
+      "ucas_bytes": 3473408,
+      "container_id": 17329019104982967540,
+      "translation_rows": 21649,
+      "locres_entries": 21645,
+      "changed_packages": [
+        "Carnal_Instinct_UE5/Content/DLG_Tree/dmap_system/widgets/w_03_map_icon.uasset",
+        "Carnal_Instinct_UE5/Content/RPG_InventorySystem/Classes/MainItemClasses/Consumables/Essence/Essence_Tier_1_Small.uasset",
+        "Carnal_Instinct_UE5/Content/RPG_InventorySystem/UI/WorldMap/WB_WorldMapPopup.uasset"
+      ],
+      "strict_changed_widget_functions": 7,
+      "event_wrapper_entries": "PASS",
+      "all_source_hashes_placeholders_original_rows_and_locres_entries": "PASS",
+      "all_other_packages_including_radial_settings_wide_character_and_journal": "UNCHANGED",
+      "exact_full_container_readback": "PASS",
+      "native_essence_text_fields": "3/3 PASS",
+      "files": [
+        {
+          "path": "Files/Steam_current/pakchunk1015-Windows_P.pak",
+          "bytes": 2524696,
+          "sha256": "e4a0e112352e2627a7dbb8686a9e590d934a58723157b0eb4c16f0db03312fc7"
+        },
+        {
+          "path": "Files/Steam_current/pakchunk1015-Windows_P.ucas",
+          "bytes": 3473408,
+          "sha256": "4837bb7b87dca1fd58691ce0323eb049102d0f425aec7ffff8377b257c5676d9"
+        },
+        {
+          "path": "Files/Steam_current/pakchunk1015-Windows_P.utoc",
+          "bytes": 4849,
+          "sha256": "48c86d4d70896d78c4e3fd54b56ba290e97ef553db3c03e1d70b124453e65864"
+        }
+      ]
+    },
+    "NoSteam_0.7.9.16232": {
+      "packages": 71,
+      "toc_entries": 72,
+      "blocks": 116,
+      "utoc_bytes": 9107,
+      "ucas_bytes": 7602176,
+      "container_id": 17329019104982967540,
+      "translation_rows": 19488,
+      "locres_entries": 19488,
+      "changed_packages": [
+        "Carnal_Instinct_UE5/Content/DLG_Tree/dmap_system/widgets/w_03_map_icon.uasset",
+        "Carnal_Instinct_UE5/Content/RPG_InventorySystem/UI/WorldMap/WB_WorldMapPopup.uasset"
+      ],
+      "strict_changed_widget_functions": 7,
+      "event_wrapper_entries": "PASS",
+      "all_source_hashes_placeholders_original_rows_and_locres_entries": "PASS",
+      "all_other_packages_including_radial_settings_wide_character_and_journal": "UNCHANGED",
+      "exact_full_container_readback": "PASS",
+      "native_essence_text_fields": "no override",
+      "files": [
+        {
+          "path": "Files/NoSteam_0.7.9.16232/pakchunk1015-Windows_P.pak",
+          "bytes": 2410931,
+          "sha256": "9960478af81f5a6f818c374c3518459c8eb805061ebd9094dd5a4d982732d639"
+        },
+        {
+          "path": "Files/NoSteam_0.7.9.16232/pakchunk1015-Windows_P.ucas",
+          "bytes": 7602176,
+          "sha256": "f5b5a9101e05d250be93f14a783db5b1d2bcdaad7188266b83e54da68670a7d8"
+        },
+        {
+          "path": "Files/NoSteam_0.7.9.16232/pakchunk1015-Windows_P.utoc",
+          "bytes": 9107,
+          "sha256": "fea91df8fd855d057254a859beab215c820c3856f63182f21780f1a805150e62"
+        }
+      ]
+    }
+  }
+}
