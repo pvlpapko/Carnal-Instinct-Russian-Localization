@@ -1,0 +1,66 @@
+{
+  "schema_version": "1.0",
+  "edition": "Steam",
+  "release": "v18.1 Startup-Safe Full UI TEST",
+  "author": "Don't Look",
+  "source_state_id": "steam_current_2026-10-03_16321_asset_verified_index_stale",
+  "verified_game_version": "0.7.9.16321",
+  "verified_build": null,
+  "runtime_evidence": {
+    "v15_2_text_only": "PASS user reported",
+    "v15_3_single_current_source_iostore_canary": "PASS user reported",
+    "v18_full_77": "FAIL FAsyncLoadingThread user reported",
+    "v18_1": "PENDING"
+  },
+  "classification": {
+    "v18_total": 77,
+    "byte_identical_current_removed": 52,
+    "real_modified_or_current_schema_patch": 25,
+    "startup_data_isolated": 5,
+    "main_payload_packages": 20
+  },
+  "startup_data_isolated": [
+    "DLG_Tree/dmap_system/blueprints/bp_newQuest_marker.uasset",
+    "DLG_Tree/dqst_system/common/quest_list.uasset",
+    "DLG_Tree/dqst_system/common/quest_objectives.uasset",
+    "DLG_Tree/dqst_system/common/quest_sub_objectives.uasset",
+    "RPG_InventorySystem/Classes/MainItemClasses/Consumables/Essence/Essence_Tier_1_Small.uasset"
+  ],
+  "dependency_evidence": [
+    "RPGInventory_GameInstance imports bp_quest_component and DTC_All_Items",
+    "bp_quest_component imports quest_list and bp_newQuest_marker",
+    "quest_list imports quest_objectives and quest_sub_objectives",
+    "DTC_All_Items imports Essence_Tier_1_Small"
+  ],
+  "main_iostore": {
+    "packages": 20,
+    "readback": "20/20 PASS",
+    "utoc_sha256": "36a9a1f8cee28dcae8f0fa53392a02ede6838ed90b0fb360e05cf29298d0e2ee",
+    "ucas_sha256": "227f9ed2b5cf4729867a67b4bb841374368aad00738c5d6563434b34bdddbc55",
+    "pak_sha256": "270dd12b1a431d5454f5ae8fdc711a5d28bc53b0f11f1b40d28e8d701093d268"
+  },
+  "diagnostics": {
+    "A_QUEST_STARTUP_BRANCH": {
+      "packages": 24,
+      "readback": "24/24 PASS"
+    },
+    "B_ESSENCE_STARTUP_BRANCH": {
+      "packages": 21,
+      "readback": "21/21 PASS"
+    }
+  },
+  "installer": {
+    "sha256": "5cea02682497e0a5de7adab9b43ab3f32e2320c4f286276aba19efd78e8c9d7a",
+    "bytes": 16055808,
+    "go_tests": "PASS",
+    "windows_amd64_build": "PASS"
+  },
+  "archive": {
+    "name": "Carnal_Instinct_RU_DontLook_StartupSafeFullUI_2026-10-05_v18.1_TEST.zip",
+    "bytes": 29204511,
+    "sha256": "922238893484fbe630e145664c38d63702fb504d1c3e6b70c61756a529cc5ee6",
+    "zip_crc": "PASS"
+  },
+  "nosteam_payload": "byte-identical to v18/v15 lineage",
+  "runtime_tested": false
+}
