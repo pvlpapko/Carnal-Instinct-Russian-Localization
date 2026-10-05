@@ -21,9 +21,9 @@
   "source_index_sha256": "91b95dbc38b2f4ffbd3fbea35bb1e4906cec7ddb588be87a15cec17048282274",
   "source_tree_sha256": "f12967fe7bd1c3729caa285519b2acc0059959214bf1f453aefe6437b8fbfef3",
   "source_stock_status": "contains localization modifications; not a clean stock game extraction",
-  "binary_compatibility": "v18.4 TEST: 31 Steam packages read back; original function exports/imports verified against v18.3 baseline or fetched current 0.7.9.16321 source. Actual game startup validation pending.",
-  "ui_override_compatibility": "v18.4: current-source statistics and Lovense native layout overrides added; character/quest display layout retained and refined; source function bytecode unchanged. Map popup and neutral bytecode overrides absent; display source/key/hash checks PASS. Runtime visuals pending.",
-  "last_source_check_at": "2026-10-05T10:06:33.989051+00:00",
+  "binary_compatibility": "v18.4 Steam startup failed in game. v18.5 TEST: 34 Steam packages statically verified; installed BuildID unknown and startup crash root cause unconfirmed.",
+  "ui_override_compatibility": "v18.5 retains wide statistics/journal; patches own edition radial layout, Settings display activation, map spelling aliases and OnMouseLeave entry. 48 changed-widget Steam functions statically verified; runtime pending.",
+  "last_source_check_at": "2026-10-05T16:35:03.626142+00:00",
   "evidence": [
     "current Google Drive RPGInventory_GameInstance.uasset raw bytes",
     "embedded ASCII version 0.7.9.16321 at byte offset 313692",

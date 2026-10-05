@@ -1,0 +1,15 @@
+{
+  "name": "Carnal_Instinct_RU_Steam_Startup_Probe_v18.5.zip",
+  "sha256": "e21750eb81c0e491429613a8514b78fe2a4d83709c9bb7e2099a1beeb2215dfc",
+  "archive_bytes": 15436623,
+  "stages": 10,
+  "runtime_tested": false,
+  "last_stage_exact_failed_release_readback": "PASS",
+  "all_stage_container_and_file_readback": "PASS",
+  "host_verify_mode": "PASS",
+  "zip_crc_and_entry_readback": "PASS",
+  "installer_switch_0_5_9_0_no_backup_smoke": "PASS",
+  "drive_upload": "blocked_by_automatic_approval_review",
+  "drive_file_id": null,
+  "local_archive_path": "/workspace/project-context/carnal-instinct/Carnal_Instinct_RU_Steam_Startup_Probe_v18.5.zip"
+}

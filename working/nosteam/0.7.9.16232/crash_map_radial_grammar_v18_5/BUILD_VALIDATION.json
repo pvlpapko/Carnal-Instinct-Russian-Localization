@@ -1,0 +1,13 @@
+{
+  "release": "18.5 TEST",
+  "runtime_tested": false,
+  "static_status": "PASS",
+  "display_regressions": "8/8 PASS from final cooked payload",
+  "installer_core_tests_with_race_detector": "PASS",
+  "installer_core_go_vet": "PASS",
+  "windows_amd64_build": "PASS; not launched in Windows",
+  "exact_six_embedded_payloads": "PASS",
+  "steam_startup_crash_fixed": "not established",
+  "settings_fps_and_visual_fit": "runtime pending",
+  "full_human_dialogue_proofread": "not completed"
+}

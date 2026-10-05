@@ -1,0 +1,20 @@
+{
+  "release": "18.5",
+  "independent_reader": "iostore_simple with separate BLAKE3 implementation",
+  "editions": {
+    "Steam_current": {
+      "package_ids_and_imported_dependencies": "PASS",
+      "hashes_and_physical_cover": "PASS",
+      "export_serial_spans": "PASS",
+      "exports": 1742,
+      "packages": 34
+    },
+    "NoSteam_0.7.9.16232": {
+      "package_ids_and_imported_dependencies": "PASS",
+      "hashes_and_physical_cover": "PASS",
+      "export_serial_spans": "PASS",
+      "exports": 7104,
+      "packages": 71
+    }
+  }
+}

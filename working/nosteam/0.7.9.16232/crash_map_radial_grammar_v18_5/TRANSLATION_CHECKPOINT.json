@@ -4,7 +4,7 @@
   "base_table": "Data/NoSteam_0.7.9.16232/translation.tsv",
   "changes": "tools/map_audit_v18_5/editorial_changes.json",
   "rebuild": "tools/map_audit_v18_5/update_translation.py",
-  "result_sha256": "c612dbfd28b5b8be539bc7d2356e2c63133ba28a1ded851eac94de12859d0e37",
-  "result_bytes": 5632845,
+  "result_sha256": "7ed2ece194c3644673611ec79003cb1bf9583f568bcf41005cfa39d1004032fd",
+  "result_bytes": 5632859,
   "full_table_release_path": "Data/NoSteam_0.7.9.16232/translation.tsv"
 }

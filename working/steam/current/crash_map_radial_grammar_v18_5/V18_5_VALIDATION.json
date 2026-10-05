@@ -1,0 +1,40 @@
+{
+  "release": "18.5",
+  "runtime_tested": false,
+  "editions": {
+    "Steam_current": {
+      "packages": 34,
+      "toc_entries": 35,
+      "blocks": 45,
+      "utoc_bytes": 4753,
+      "ucas_bytes": 2949120,
+      "container_id": 17329019104982967540,
+      "translation_rows": 21647,
+      "locres_entries": 21643,
+      "reviewed_display_assets": 4,
+      "strict_function_roundtrip_and_control_checks": 48,
+      "event_wrapper_entries": "PASS",
+      "baseline_input_hashes": "PASS",
+      "container_exact_readback_and_hashes": "PASS",
+      "localization_identities_source_hashes_placeholders_tags_newlines": "PASS",
+      "other_baseline_packages_including_wide_character_and_journal": "UNCHANGED"
+    },
+    "NoSteam_0.7.9.16232": {
+      "packages": 71,
+      "toc_entries": 72,
+      "blocks": 108,
+      "utoc_bytes": 9011,
+      "ucas_bytes": 7077888,
+      "container_id": 17329019104982967540,
+      "translation_rows": 19486,
+      "locres_entries": 19486,
+      "reviewed_display_assets": 4,
+      "strict_function_roundtrip_and_control_checks": 46,
+      "event_wrapper_entries": "PASS",
+      "baseline_input_hashes": "PASS",
+      "container_exact_readback_and_hashes": "PASS",
+      "localization_identities_source_hashes_placeholders_tags_newlines": "PASS",
+      "other_baseline_packages_including_wide_character_and_journal": "UNCHANGED"
+    }
+  }
+}

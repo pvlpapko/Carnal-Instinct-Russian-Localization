@@ -7,9 +7,13 @@ ROOT = Path(os.environ.get('CI_RU_CHECK_ROOT', '/workspace/project-context/carna
 RADIAL = 'BlueprintSystems/DynamicRadialMenu/Widgets/W_MenuItem.uasset'
 
 
-class DisplayRegressions(unittest.TestCase):
+class DisplayRegressions:
+    edition = None
+
+    def assets(self):
+        return ROOT / os.environ.get('CI_RU_CHECK_SUBDIR', 'FinalExtracted') / self.edition
     def test_map_mouse_leave_enters_an_instruction(self):
-        path = next((ROOT / 'Extracted/NoSteam_0.7.9.16232').rglob('w_03_map_icon.uasset'))
+        path = next(self.assets().rglob('w_03_map_icon.uasset'))
         p = ui.zen.package(path)
         main = next(e for e in p['exports'] if e['name'].startswith('ExecuteUbergraph'))
         nodes = find_script(p['bytes'][main['start']:main['end']])[3]
@@ -22,7 +26,7 @@ class DisplayRegressions(unittest.TestCase):
         self.assertTrue(entry in starts, 'map OnMouseLeave enters string data at VM ' + str(entry))
 
     def test_caption_below_icon_without_resizing_hit_region(self):
-        p = NativePatch(next((ROOT / 'Extracted/NoSteam_0.7.9.16232').rglob('W_MenuItem.uasset')))
+        p = NativePatch(next(self.assets().rglob('W_MenuItem.uasset')))
         _, text, _ = p.properties('TXT_Item')
         slot = p.package['exports'][text['Slot']['value'] - 1]
         _, props, _ = p.properties(slot)
@@ -38,17 +42,19 @@ class DisplayRegressions(unittest.TestCase):
         self.assertEqual(area['HeightOverride']['value'], 100)
 
     def test_settings_open_does_not_reapply_saved_settings(self):
-        path = next((ROOT / 'Extracted/NoSteam_0.7.9.16232').rglob('WB_T3_MainMenu.uasset'))
+        path = next(self.assets().rglob('WB_T3_MainMenu.uasset'))
         p = ui.zen.package(path)
         e = next(e for e in p['exports'] if e['name'] == 'ExecuteUbergraph_WB_T3_MainMenu')
         _, _, _, nodes, _ = find_script(p['bytes'][e['start']:e['end']])
-        calls = [x for node in nodes for x in k.walk(node) if expr_name(x, p['names']) == 'Activate']
+        calls = [x.context for node in nodes for x in k.walk(node)
+                 if x.op in (0x19, 0x1a) and expr_name(x.object, p['names']) == 'WB_T3_SettingsMenu'
+                 and expr_name(x.context, p['names']) == 'Activate']
         settings_calls = [x for x in calls if len(x.parts) == 4 and x.parts[1].op == 0x27]
         self.assertGreaterEqual(len(settings_calls), 2)
         self.assertTrue(all(x.parts[2].op == 0x28 for x in settings_calls), 'opening Settings must be view-only')
 
     def test_minimap_label_apostrophe_alias_is_present(self):
-        path = next((ROOT / 'Extracted/NoSteam_0.7.9.16232').rglob('WB_WorldMapPopup.uasset'))
+        path = next(self.assets().rglob('WB_WorldMapPopup.uasset'))
         p = ui.zen.package(path)
         e = next(e for e in p['exports'] if e['name'] == 'ExecuteUbergraph_WB_WorldMapPopup')
         _, _, _, nodes, _ = find_script(p['bytes'][e['start']:e['end']])
@@ -59,6 +65,14 @@ class DisplayRegressions(unittest.TestCase):
             for label in ["Tal'Senet", 'Tal’Senet']:
                 self.assertTrue(label in aliases, 'missing displayed label alias: ' + label)
                 self.assertEqual(aliases[label].op, 0x29)
+
+
+class SteamDisplayTests(DisplayRegressions, unittest.TestCase):
+    edition = 'Steam_current'
+
+
+class NoSteamDisplayTests(DisplayRegressions, unittest.TestCase):
+    edition = 'NoSteam_0.7.9.16232'
 
 
 if __name__ == '__main__':

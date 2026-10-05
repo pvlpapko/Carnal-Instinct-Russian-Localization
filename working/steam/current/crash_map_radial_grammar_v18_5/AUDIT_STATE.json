@@ -2,15 +2,15 @@
   "schema_version": "1.0",
   "edition": "Steam",
   "task": "crash_map_radial_grammar_v18_5",
-  "status": "in_progress",
+  "status": "local_release_verified_runtime_editorial_and_upload_approval_pending",
   "source_state_id": "steam_current_2026-10-03_16321_asset_verified_index_stale",
   "verified_game_version": "0.7.9.16321",
   "verified_build": null,
   "created_at": "2026-10-05T10:57:53.922119+00:00",
-  "updated_at": "2026-10-05T14:08:06.579604+00:00",
-  "current_phase": "map_and_editorial_static_audit_complete",
-  "last_completed_unit": "2513_source_map_cells_115_editorial_rows_and_map_entry_repair",
-  "next_unit": "merge_final_payload_and_build_steam_startup_isolation",
+  "updated_at": "2026-10-05T16:39:14.931595+00:00",
+  "current_phase": "local_archives_verified",
+  "last_completed_unit": "both_archives_crc_hashes_and_installer_exact_payload_checked",
+  "next_unit": "explicit_drive_upload_authorization_and_steam_runtime_probe_results",
   "completed_units": [
     "v18.4 runtime feedback recorded",
     "new screenshots viewed: Tal'senet campfire and radial icon/title overlap",
@@ -20,13 +20,17 @@
     "All 2513 current Steam source map cells acquired and scanned; 212 BaseFText occurrences, 181 identities already localized in both tables",
     "Map display aliases added without changing actor/quest/save IDs",
     "Existing map OnMouseLeave entry 139894 inside data repaired to unique clear-hover handler",
-    "115 exact-identity editorial corrections: 63 Steam, 52 NoSteam"
+    "131 exact-identity editorial corrections: 72 Steam, 59 NoSteam",
+    "Final payloads: 34 Steam and 71 NoSteam packages; independent package IDs/imports/hashes/export spans PASS",
+    "8 cooked display regressions PASS; 94 changed-widget functions strict roundtrip/control checks PASS",
+    "Installer tests/race/vet PASS; new Windows binary compiled; exact embedded payload check follows during packaging",
+    "Steam startup probe: 10 stages; stage 0 exact 18.3, stage 9 exact failed 18.4; host replace 0/5/9/0 smoke PASS without backups"
   ],
   "pending_units": [
-    "Steam startup resource isolation in game",
-    "Settings performance and radial rendering in game",
-    "Broader dialogue editorial review beyond targeted corrections",
-    "release build/static checks/Drive readback"
+    "Google Drive upload and downloaded-file readback: blocked by auto-review until explicit user authorization",
+    "Steam startup isolation result and exact installed build",
+    "Settings performance, radial positioning and other visual checks in game",
+    "Remaining complete manual dialogue proofreading"
   ],
   "source_files_used": [
     "CI_SOURCE_INDEX.json",
@@ -35,15 +39,24 @@
     "user CrashContext.runtime-xml and UEMinidump.dmp",
     "user screenshots-v18_4-feedback"
   ],
-  "working_files": [],
+  "working_files": [
+    "tools/map_audit_v18_5",
+    "FINAL_ARCHIVE_VALIDATION.json",
+    "RUNTIME_PAYLOAD_MANIFEST.json",
+    "V18_5_STARTUP_PROBE.json"
+  ],
   "validation_completed": [
     "crash recorded in FAsyncLoadingThread at seconds_since_start=0",
     "Strict Kismet input/output roundtrip for edited MainMenu and every event wrapper",
-    "Unchanged native selection size and other radial function exports"
+    "Unchanged native selection size and other radial function exports",
+    "Final primary ZIP: CRC, all SHA256SUMS, installer SHA256 and six exact embedded files PASS",
+    "Startup probe ZIP: CRC and all 30 payload file checksums PASS"
   ],
   "validation_pending": [
-    "final_container_installer_readback",
-    "actual_game_startup_visual_performance_validation"
+    "Google Drive upload and downloaded-file readback: blocked by auto-review until explicit user authorization",
+    "Steam startup isolation result and exact installed build",
+    "Settings performance, radial positioning and other visual checks in game",
+    "Remaining complete manual dialogue proofreading"
   ],
   "notes": [
     "No subagents: minimize Codex usage.",
@@ -51,6 +64,7 @@
     "Map audit must include source FString/FName values and dynamically created actors, not only existing FText in display widgets.",
     "User confirms Settings smooth without localization. Performance of candidate still requires game measurement.",
     "Steam crash root cause not proven. Do not label release FINAL.",
-    "Map cell acquisition is current Steam source, not independent NoSteam progression-cell acquisition. Shared display captions matched against each edition table. Grammar: automated full-table checks plus targeted manual review; complete line-by-line editorial review not claimed."
+    "Map cell acquisition is current Steam source, not independent NoSteam progression-cell acquisition. Shared display captions matched against each edition table. Grammar: automated full-table checks plus targeted manual review; complete line-by-line editorial review not claimed.",
+    "Do not bypass rejected Drive upload. Two reviewed local ZIPs are ready; explicit user approval required for upload to Releases folder 1VwdnxngtZLDsPl1kP5H5HCJBePoRCF_a."
   ]
 }

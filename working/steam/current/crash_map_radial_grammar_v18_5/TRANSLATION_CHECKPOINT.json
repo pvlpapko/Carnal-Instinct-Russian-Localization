@@ -4,7 +4,7 @@
   "base_table": "Data/Steam_current/translation.tsv",
   "changes": "tools/map_audit_v18_5/editorial_changes.json",
   "rebuild": "tools/map_audit_v18_5/update_translation.py",
-  "result_sha256": "6638a38d3257c40d070bb116291da58cef2cf03acba6571e251e3d24e4dd5a0e",
-  "result_bytes": 6146269,
+  "result_sha256": "c55711e7fd823752a9b21dccd5697605469143df84968b0c197692059bfb2667",
+  "result_bytes": 6146287,
   "full_table_release_path": "Data/Steam_current/translation.tsv"
 }

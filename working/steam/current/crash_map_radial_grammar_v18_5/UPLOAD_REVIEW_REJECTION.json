@@ -1,0 +1,9 @@
+{
+  "tool": "google_drive_upload_file",
+  "action": "upload Steam startup probe ZIP to connected Pavel Drive Releases",
+  "rejected": true,
+  "reason": "External transfer of potentially non-public game package/source data; explicit authorization for this payload and destination not confirmed.",
+  "primary_upload_attempted": false,
+  "safer_result": "local checked primary and diagnostic archives; no alternative external upload attempted",
+  "pending_permission": "Upload both ready ZIPs to the existing Releases folder on pvlpapko@gmail.com Google Drive."
+}

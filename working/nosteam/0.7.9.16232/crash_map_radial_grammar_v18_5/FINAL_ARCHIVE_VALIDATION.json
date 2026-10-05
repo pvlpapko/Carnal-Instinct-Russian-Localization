@@ -1,0 +1,19 @@
+{
+  "release": "v18.5 TEST",
+  "name": "Carnal_Instinct_RU_DontLook_MapUI_2026-10-05_v18.5_TEST.zip",
+  "sha256": "0cd44ce3ab351b2b85a7fd0efbf45339a510b8184fa3d6b87423f5cfb2b323ef",
+  "archive_bytes": 17532557,
+  "archive_entries": 71,
+  "zip_crc": "PASS",
+  "every_archive_entry_readback": "PASS",
+  "exact_installer_payload": "PASS",
+  "installer_sha256": "ef1dbbbea14d9c7285d6a5cedda25552dcefa81d7e29862bc81ea08f6e2431c6",
+  "runtime_tested": false,
+  "steam_crash_root_cause": "unconfirmed",
+  "drive_upload": "blocked_by_automatic_approval_review",
+  "final_sha256sums_check": "PASS",
+  "drive_file_id": null,
+  "drive_readback_sha256_verified": false,
+  "drive_readback_zip_crc_verified": false,
+  "updated_at": "2026-10-05T16:39:14.931595+00:00"
+}

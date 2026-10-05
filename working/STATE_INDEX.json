@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "updated_at": "2026-10-05T14:08:06.579604+00:00",
+  "updated_at": "2026-10-05T16:39:14.931595+00:00",
   "active_tasks": [
     {
       "edition": "Steam",
@@ -132,13 +132,13 @@
       "edition": "Steam",
       "task": "crash_map_radial_grammar_v18_5",
       "state_path": "working/steam/current/crash_map_radial_grammar_v18_5/AUDIT_STATE.json",
-      "status": "in_progress"
+      "status": "local_release_verified_runtime_editorial_and_upload_approval_pending"
     },
     {
       "edition": "NoSteam",
       "task": "crash_map_radial_grammar_v18_5",
       "state_path": "working/nosteam/0.7.9.16232/crash_map_radial_grammar_v18_5/AUDIT_STATE.json",
-      "status": "in_progress"
+      "status": "local_release_verified_runtime_editorial_and_upload_approval_pending"
     }
   ],
   "latest_release": {
@@ -159,6 +159,51 @@
     "runtime_validation": "Steam v18 full failed startup; Q1/Q2/Q4 quest isolation PASS, Q3 quest_objectives FAIL; v18.3 objective display-boundary candidate pending. NoSteam v15 user-reported working"
   },
   "latest_test_hotfix": {
+    "release": "v18.5 TEST",
+    "name": "Carnal_Instinct_RU_DontLook_MapUI_2026-10-05_v18.5_TEST.zip",
+    "sha256": "0cd44ce3ab351b2b85a7fd0efbf45339a510b8184fa3d6b87423f5cfb2b323ef",
+    "archive_bytes": 17532557,
+    "archive_entries": 71,
+    "zip_crc": "PASS",
+    "every_archive_entry_readback": "PASS",
+    "exact_installer_payload": "PASS",
+    "installer_sha256": "ef1dbbbea14d9c7285d6a5cedda25552dcefa81d7e29862bc81ea08f6e2431c6",
+    "runtime_tested": false,
+    "steam_crash_root_cause": "unconfirmed",
+    "drive_upload": "blocked_by_automatic_approval_review",
+    "final_sha256sums_check": "PASS",
+    "drive_file_id": null,
+    "drive_readback_sha256_verified": false,
+    "drive_readback_zip_crc_verified": false,
+    "updated_at": "2026-10-05T16:39:14.931595+00:00",
+    "editions": [
+      "Steam",
+      "NoSteam"
+    ],
+    "task": "crash_map_radial_grammar_v18_5",
+    "steam_verified_source_version": "0.7.9.16321",
+    "steam_installed_build": null,
+    "nosteam_fixed_source_build": "0.7.9.16232",
+    "local_archive_path": "/workspace/project-context/carnal-instinct/Carnal_Instinct_RU_DontLook_MapUI_2026-10-05_v18.5_TEST.zip",
+    "startup_probe": {
+      "name": "Carnal_Instinct_RU_Steam_Startup_Probe_v18.5.zip",
+      "sha256": "e21750eb81c0e491429613a8514b78fe2a4d83709c9bb7e2099a1beeb2215dfc",
+      "archive_bytes": 15436623,
+      "stages": 10,
+      "runtime_tested": false,
+      "last_stage_exact_failed_release_readback": "PASS",
+      "all_stage_container_and_file_readback": "PASS",
+      "host_verify_mode": "PASS",
+      "zip_crc_and_entry_readback": "PASS",
+      "installer_switch_0_5_9_0_no_backup_smoke": "PASS",
+      "drive_upload": "blocked_by_automatic_approval_review",
+      "drive_file_id": null,
+      "local_archive_path": "/workspace/project-context/carnal-instinct/Carnal_Instinct_RU_Steam_Startup_Probe_v18.5.zip"
+    },
+    "runtime_validation": "not performed for 18.5; Steam 18.4 startup failed; crash root cause unconfirmed",
+    "full_manual_dialogue_proofread": "pending"
+  },
+  "previous_test_hotfix": {
     "release": "v18.4 Full UI TEST",
     "name": "Carnal_Instinct_RU_DontLook_FullUI_2026-10-05_v18.4_TEST.zip",
     "created_at": "2026-10-05T10:33:10.487413+00:00",

@@ -8,6 +8,7 @@ changes = json.loads(Path(__file__).with_name('editorial_changes.json').read_tex
 scan = json.loads(SCAN.read_text())
 assert scan['all_cells_acquired'] and not scan['errors']
 report = {'release': '18.5', 'runtime_tested': False, 'editions': {}, 'changes': changes,
+          'map_source_domain': 'Current Steam source cells; shared captions checked against both edition tables. NoSteam progression cells not independently acquired.',
           'morphology_candidates_manually_reviewed': 30,
           'linguistic_review_limit': 'Full-table automated checks and targeted manual source-context review; not a claim of a complete human line-by-line proofread.'}
 

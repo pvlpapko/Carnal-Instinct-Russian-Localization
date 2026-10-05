@@ -4,7 +4,7 @@
   "editions": {
     "Steam_current": {
       "rows": 21647,
-      "editorial_changes": 63,
+      "editorial_changes": 72,
       "source_cells_audited": 2513,
       "native_map_ftext_occurrences": 212,
       "unique_native_map_ftext_identities": 181,
@@ -13,7 +13,7 @@
     },
     "NoSteam_0.7.9.16232": {
       "rows": 19486,
-      "editorial_changes": 52,
+      "editorial_changes": 59,
       "source_cells_audited": 2513,
       "native_map_ftext_occurrences": 212,
       "unique_native_map_ftext_identities": 181,
@@ -1286,8 +1286,169 @@
       "new": "Заброшенный наблюдательный пункт",
       "assets": "Steam16315MapLegend",
       "source_evidence": "Display-only EX_TextConst; original source retained"
+    },
+    {
+      "edition": "Steam_current",
+      "namespace": "",
+      "key": "C121C91646566C511E3843A47999B5EF",
+      "source_hash": "3755219544",
+      "english": "Maz-Arjeni",
+      "old": "Маз-Аржени",
+      "new": "Маз-Арджени",
+      "reason": "Use established Maz-Arjeni spelling consistently in location, quest and map captions."
+    },
+    {
+      "edition": "Steam_current",
+      "namespace": "",
+      "key": "DBD83FA8446B13FAE31B08A3FF307FD1",
+      "source_hash": "3755219544",
+      "english": "Maz-Arjeni",
+      "old": "Маз-Аржени",
+      "new": "Маз-Арджени",
+      "reason": "Use established Maz-Arjeni spelling consistently in location, quest and map captions."
+    },
+    {
+      "edition": "Steam_current",
+      "namespace": "",
+      "key": "F82FE4B84F94C74233ACA4BC939284C3",
+      "source_hash": "3755219544",
+      "english": "Maz-Arjeni",
+      "old": "Маз-Аржени",
+      "new": "Маз-Арджени",
+      "reason": "Use established Maz-Arjeni spelling consistently in location, quest and map captions."
+    },
+    {
+      "edition": "Steam_current",
+      "namespace": "",
+      "key": "2993D1FA4ACAE6236C8FC9AF9B211157",
+      "source_hash": "3575249881",
+      "english": "Maz Arjeni",
+      "old": "Маз-Аржени",
+      "new": "Маз-Арджени",
+      "reason": "Use established Maz-Arjeni spelling consistently in location, quest and map captions."
+    },
+    {
+      "edition": "Steam_current",
+      "namespace": "",
+      "key": "568310A74C12130E97E1CF9325F72904",
+      "source_hash": "3575249881",
+      "english": "Maz Arjeni",
+      "old": "Маз-Аржени",
+      "new": "Маз-Арджени",
+      "reason": "Use established Maz-Arjeni spelling consistently in location, quest and map captions."
+    },
+    {
+      "edition": "Steam_current",
+      "namespace": "CI_RU_Display_Map",
+      "key": "2B40680C9AAFF82FBA9052517D459D39",
+      "source_hash": "3575249881",
+      "english": "Maz Arjeni",
+      "old": "Маз-Аржени",
+      "new": "Маз-Арджени",
+      "reason": "Use established Maz-Arjeni spelling consistently in location, quest and map captions."
+    },
+    {
+      "edition": "Steam_current",
+      "namespace": "CI_RU_Display_Audit2MapCaptions",
+      "key": "2B40680C9AAFF82FBA9052517D459D39",
+      "source_hash": "3575249881",
+      "english": "Maz Arjeni",
+      "old": "Маз-Аржени",
+      "new": "Маз-Арджени",
+      "reason": "Use established Maz-Arjeni spelling consistently in location, quest and map captions."
+    },
+    {
+      "edition": "Steam_current",
+      "namespace": "CI_RU_Display_Steam16315MapMarker",
+      "key": "2B40680C9AAFF82FBA9052517D459D39",
+      "source_hash": "3575249881",
+      "english": "Maz Arjeni",
+      "old": "Маз-Аржени",
+      "new": "Маз-Арджени",
+      "reason": "Use established Maz-Arjeni spelling consistently in location, quest and map captions."
+    },
+    {
+      "edition": "Steam_current",
+      "namespace": "CI_RU_Display_Steam16315MapLegend",
+      "key": "2B40680C9AAFF82FBA9052517D459D39",
+      "source_hash": "3575249881",
+      "english": "Maz Arjeni",
+      "old": "Маз-Аржени",
+      "new": "Маз-Арджени",
+      "reason": "Use established Maz-Arjeni spelling consistently in location, quest and map captions."
+    },
+    {
+      "edition": "NoSteam_0.7.9.16232",
+      "namespace": "",
+      "key": "C121C91646566C511E3843A47999B5EF",
+      "source_hash": "3755219544",
+      "english": "Maz-Arjeni",
+      "old": "Маз-Аржени",
+      "new": "Маз-Арджени",
+      "reason": "Use established Maz-Arjeni spelling consistently in location, quest and map captions."
+    },
+    {
+      "edition": "NoSteam_0.7.9.16232",
+      "namespace": "",
+      "key": "DBD83FA8446B13FAE31B08A3FF307FD1",
+      "source_hash": "3755219544",
+      "english": "Maz-Arjeni",
+      "old": "Маз-Аржени",
+      "new": "Маз-Арджени",
+      "reason": "Use established Maz-Arjeni spelling consistently in location, quest and map captions."
+    },
+    {
+      "edition": "NoSteam_0.7.9.16232",
+      "namespace": "",
+      "key": "F82FE4B84F94C74233ACA4BC939284C3",
+      "source_hash": "3755219544",
+      "english": "Maz-Arjeni",
+      "old": "Маз-Аржени",
+      "new": "Маз-Арджени",
+      "reason": "Use established Maz-Arjeni spelling consistently in location, quest and map captions."
+    },
+    {
+      "edition": "NoSteam_0.7.9.16232",
+      "namespace": "",
+      "key": "2993D1FA4ACAE6236C8FC9AF9B211157",
+      "source_hash": "3575249881",
+      "english": "Maz Arjeni",
+      "old": "Маз-Аржени",
+      "new": "Маз-Арджени",
+      "reason": "Use established Maz-Arjeni spelling consistently in location, quest and map captions."
+    },
+    {
+      "edition": "NoSteam_0.7.9.16232",
+      "namespace": "",
+      "key": "568310A74C12130E97E1CF9325F72904",
+      "source_hash": "3575249881",
+      "english": "Maz Arjeni",
+      "old": "Маз-Аржени",
+      "new": "Маз-Арджени",
+      "reason": "Use established Maz-Arjeni spelling consistently in location, quest and map captions."
+    },
+    {
+      "edition": "NoSteam_0.7.9.16232",
+      "namespace": "CI_RU_Display_Map",
+      "key": "2B40680C9AAFF82FBA9052517D459D39",
+      "source_hash": "3575249881",
+      "english": "Maz Arjeni",
+      "old": "Маз-Аржени",
+      "new": "Маз-Арджени",
+      "reason": "Use established Maz-Arjeni spelling consistently in location, quest and map captions."
+    },
+    {
+      "edition": "NoSteam_0.7.9.16232",
+      "namespace": "CI_RU_Display_Audit2MapCaptions",
+      "key": "2B40680C9AAFF82FBA9052517D459D39",
+      "source_hash": "3575249881",
+      "english": "Maz Arjeni",
+      "old": "Маз-Аржени",
+      "new": "Маз-Арджени",
+      "reason": "Use established Maz-Arjeni spelling consistently in location, quest and map captions."
     }
   ],
   "morphology_candidates_manually_reviewed": 30,
-  "linguistic_review_limit": "Full-table automated checks and targeted manual source-context review; not a claim of a complete human line-by-line proofread."
+  "linguistic_review_limit": "Full-table automated checks and targeted manual source-context review; not a claim of a complete human line-by-line proofread.",
+  "map_source_domain": "Current Steam source cells; shared captions checked against both edition tables. NoSteam progression cells not independently acquired."
 }

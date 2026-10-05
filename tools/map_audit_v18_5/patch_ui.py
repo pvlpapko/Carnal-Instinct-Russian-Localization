@@ -9,7 +9,7 @@ report = {'release': '18.5', 'runtime_tested': False, 'assets': []}
 
 def input_asset(edition, suffix):
     mount = 'Carnal_Instinct_UE5/Content/' + suffix
-    base = BASE / 'Extracted' / edition / mount
+    base = BASE / 'VerifiedExtracted' / edition / mount
     path = base if base.exists() else SOURCE / 'Content' / suffix
     assert path.exists(), (edition, suffix)
     return mount, path

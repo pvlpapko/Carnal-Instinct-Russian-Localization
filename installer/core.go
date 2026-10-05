@@ -25,7 +25,7 @@ type edition struct {
 }
 
 var editions = []edition{
-	{steamPayloadEditionID, "Steam", "Русификатор 18.4 для Steam. Проверенная исходная версия игры: 0.7.9.16321.", runtimeNames},
+	{steamPayloadEditionID, "Steam", "Русификатор 18.5 TEST для Steam. Запуск после краша требует проверки. Проверенная исходная версия игры: 0.7.9.16321.", runtimeNames},
 	{"NoSteam_0.7.9.16232", "NoSteam 0.7.9.16232", "Полный комплект для исходной NoSteam 0.7.9.16232.", runtimeNames},
 	{"NoSteam_0.7.9.16313plus", "NoSteam 0.7.9.16313 / 16315+", "Использует актуальный совместимый Steam_current комплект. NoSteam 0.7.9.16232 всегда остаётся отдельным payload.", runtimeNames},
 }

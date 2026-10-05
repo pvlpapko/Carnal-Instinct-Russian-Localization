@@ -30,7 +30,7 @@ for edition in ('Steam_current', 'NoSteam_0.7.9.16232'):
     for suffix in ('RPG_InventorySystem/UI/WorldMap/WB_WorldMapPopup.uasset',
                    'DLG_Tree/dmap_system/widgets/w_03_map_icon.uasset'):
         mount = 'Carnal_Instinct_UE5/Content/' + suffix
-        baseline = BASE / 'Extracted' / edition / mount
+        baseline = BASE / 'VerifiedExtracted' / edition / mount
         path = baseline if baseline.exists() else SOURCE / 'Content' / suffix
         assert path.exists(), path
         p = ui.zen.package(path)

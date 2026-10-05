@@ -1,0 +1,83 @@
+{
+  "release": "v18.5 TEST",
+  "created_at": "2026-10-05T16:36:31.024933+00:00",
+  "author": "Don't Look",
+  "runtime_tested": false,
+  "steam_crash_root_cause": "unconfirmed",
+  "steam_verified_source_version": "0.7.9.16321",
+  "steam_installed_build": null,
+  "nosteam_fixed_source_build": "0.7.9.16232",
+  "installer_mode": "delete_and_replace_without_backups",
+  "installer_sha256": "ef1dbbbea14d9c7285d6a5cedda25552dcefa81d7e29862bc81ea08f6e2431c6",
+  "installer_bytes": 18585600,
+  "payloads": {
+    "Steam_current": {
+      "packages": 34,
+      "toc_entries": 35,
+      "blocks": 45,
+      "utoc_bytes": 4753,
+      "ucas_bytes": 2949120,
+      "container_id": 17329019104982967540,
+      "translation_rows": 21647,
+      "locres_entries": 21643,
+      "reviewed_display_assets": 4,
+      "strict_function_roundtrip_and_control_checks": 48,
+      "event_wrapper_entries": "PASS",
+      "baseline_input_hashes": "PASS",
+      "container_exact_readback_and_hashes": "PASS",
+      "localization_identities_source_hashes_placeholders_tags_newlines": "PASS",
+      "other_baseline_packages_including_wide_character_and_journal": "UNCHANGED",
+      "files": [
+        {
+          "path": "Files/Steam_current/pakchunk1015-Windows_P.pak",
+          "bytes": 2524492,
+          "sha256": "61538bc0f6484268457bfadfb7320e56d95ea8b33bca2d238a851dcd429fa10b"
+        },
+        {
+          "path": "Files/Steam_current/pakchunk1015-Windows_P.ucas",
+          "bytes": 2949120,
+          "sha256": "e730dd79dac0cb05b590c17ece2ff746864694435855dc2d7955c8fc47442352"
+        },
+        {
+          "path": "Files/Steam_current/pakchunk1015-Windows_P.utoc",
+          "bytes": 4753,
+          "sha256": "aaf4c5b9d1ad56765abeff0582db1154eb358dc3e9c3697d6e863aa71d484d2b"
+        }
+      ]
+    },
+    "NoSteam_0.7.9.16232": {
+      "packages": 71,
+      "toc_entries": 72,
+      "blocks": 108,
+      "utoc_bytes": 9011,
+      "ucas_bytes": 7077888,
+      "container_id": 17329019104982967540,
+      "translation_rows": 19486,
+      "locres_entries": 19486,
+      "reviewed_display_assets": 4,
+      "strict_function_roundtrip_and_control_checks": 46,
+      "event_wrapper_entries": "PASS",
+      "baseline_input_hashes": "PASS",
+      "container_exact_readback_and_hashes": "PASS",
+      "localization_identities_source_hashes_placeholders_tags_newlines": "PASS",
+      "other_baseline_packages_including_wide_character_and_journal": "UNCHANGED",
+      "files": [
+        {
+          "path": "Files/NoSteam_0.7.9.16232/pakchunk1015-Windows_P.pak",
+          "bytes": 2410727,
+          "sha256": "934aafcd7cb1b34cdc33e94897f864085eb216b8f94f10a7acea5ea9433b94ba"
+        },
+        {
+          "path": "Files/NoSteam_0.7.9.16232/pakchunk1015-Windows_P.ucas",
+          "bytes": 7077888,
+          "sha256": "fb85a25cedba304e8ea3e2dd50b47290cd022e242665dd219f70ab8333f71ff2"
+        },
+        {
+          "path": "Files/NoSteam_0.7.9.16232/pakchunk1015-Windows_P.utoc",
+          "bytes": 9011,
+          "sha256": "1ec87b8f9295cbecd77daa1842c9f8cb5366fcb56d3ba727543abfcc20f40d9c"
+        }
+      ]
+    }
+  }
+}
