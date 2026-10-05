@@ -1,0 +1,43 @@
+{
+  "release": "18.9",
+  "reviewed_folders": {
+    "Plugin": {
+      "drive_id": "1SJ7koCsuPjoQ9KaTJXWsravJUx7J2hiO",
+      "children": [
+        "XeSS_UE5.5_Plugin_v3.0.5",
+        "StreamlineCore",
+        "FSR-550",
+        "DLSS"
+      ]
+    },
+    "Plugins": {
+      "drive_id": "1og_pR8qcJnQe_b2k8km9YTPVJfNRjDiA",
+      "children_count": 19,
+      "shader_compilation_screen_present": false
+    }
+  },
+  "manifest_sha256": "b2986275fb00d368b0fb585bb336ff3c6ec8fb5cd10f437b18b26b3e0c804dec",
+  "manifest_plugins_count": 207,
+  "shader_plugin_manifest_path": "../../../Engine/Plugins/Marketplace/ShaderCodcddcf8247c4V6/ShaderCompilationScreen.uplugin",
+  "shader_plugin_engine_version": "5.5.0",
+  "module_loading_phase": "PreLoadingScreen",
+  "inherited_blueprint": "/ShaderCompilationScreen/Blueprints/BP_ShaderCompiler",
+  "drive_exact_title_and_engine_folder_search": "empty",
+  "source_root_has_engine_folder": false,
+  "conclusion": "Uploaded project plugins are graphics/upscaling integrations. Required ShaderCompilationScreen belongs to Engine/Plugins/Marketplace; that folder/blueprint is not in current Drive source root. No unsupported shader disabling or acceleration applied.",
+  "shader_acceleration_applied": false,
+  "source_rows": {
+    "WB_QuestName": {
+      "sha256": "2351128a6f646645fd11e0a90336b07c534409bee302f7979c0575a3b98f91f3",
+      "bytes": 25891
+    },
+    "WB_QuestObjectiveDescription": {
+      "sha256": "9e14810d7bb9857e4d6ee7eb2147fea72f16715daaf4181b9cf5405043ec6476",
+      "bytes": 2722
+    },
+    "WB_QuestObjectiveName": {
+      "sha256": "5d0eaba6b987539d923cb58004ca98581002ca2b2dde72fd3ab366c62206510f",
+      "bytes": 3851
+    }
+  }
+}

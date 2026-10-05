@@ -7,17 +7,19 @@
   "verified_game_version": "0.7.9.16321",
   "verified_build": null,
   "created_at": "2026-10-05T20:30:54.542956+00:00",
-  "updated_at": "2026-10-05T20:30:54.542956+00:00",
-  "current_phase": "root_cause_and_baseline_regressions",
-  "last_completed_unit": "screenshots_source_identity_and_plugin_folder_review",
-  "next_unit": "font_tracking_prepatch_tests_and_native_only_fix",
+  "updated_at": "2026-10-05T20:33:56.400632+00:00",
+  "current_phase": "native_only_build",
+  "last_completed_unit": "three_prepatch_ui_failures_and_plugin_manifest_root_cause",
+  "next_unit": "native_only_fonts_and_tracking_overlay_build",
   "completed_units": [
     "New screenshot ZIP CRC and image review",
     "Fresh live GameInstance and Theme3 source identity unchanged",
     "Settings root cause: 18.7 shared SubHeadline font changed source 16 to 32 for journal",
     "Quest body 20 and section labels 22 too large per user feedback",
     "Tracked checkbox 64x64 with render scale1.1; negative right padding -16 extends outside quest card",
-    "Both Plugin and Plugins roots listed; ShaderCompilationScreen absent at root and exact search returned empty"
+    "Both Plugin and Plugins roots listed; ShaderCompilationScreen absent at root and exact search returned empty",
+    "Three meaningful 18.8 UI failures reproduced; unchanged gameplay-code baseline passes",
+    "Plugin manifest locates ShaderCompilationScreen in absent Engine/Plugins/Marketplace folder"
   ],
   "pending_units": [
     "Native font and tracking geometry fixes preserving handlers",
@@ -40,7 +42,8 @@
   "validation_completed": [
     "Screenshot CRC",
     "Current source identity",
-    "Actual cooked property root cause inspection"
+    "Actual cooked property root cause inspection",
+    "Prepatch RED: heading 32 vs original 16, body20 vs16, marker64 vs28"
   ],
   "validation_pending": [
     "18.9 UI appearance in game",
