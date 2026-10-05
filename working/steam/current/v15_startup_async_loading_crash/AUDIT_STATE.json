@@ -2,13 +2,13 @@
   "schema_version": "1.0",
   "edition": "Steam",
   "task": "v15_startup_async_loading_crash",
-  "status": "q3_quest_objectives_isolated_display_boundary_rebuild_in_progress",
+  "status": "v18_3_objective_display_boundary_built_runtime_pending",
   "source_state_id": "steam_current_2026-10-03_16321_asset_verified_index_stale",
   "verified_game_version": "0.7.9.16321",
   "verified_build": null,
-  "current_phase": "quest_objectives_display_boundary_rebuild",
-  "last_completed_unit": "q1_q2_q4_runtime_pass_q3_runtime_fail",
-  "next_unit": "build_current_source_objective_name_description_display_boundary_variants",
+  "current_phase": "runtime_validate_v18_3_objective_display_boundary",
+  "last_completed_unit": "v18_3_full_objective_display_boundary_build",
+  "next_unit": "runtime_startup_then_open_quest_journal_v18_3",
   "completed_units": [
     "v15 Steam startup failure reproduced by user; NoSteam v15 works",
     "full 71-package v15 Steam override comparison against current source completed",
@@ -104,13 +104,24 @@
     "USER RUNTIME FAIL: Q3 quest_objectives only -> EXCEPTION_ACCESS_VIOLATION reading 0x0000000d00000033 in FAsyncLoadingThread",
     "USER RUNTIME PASS: Q4 quest_sub_objectives only",
     "Exact crashing quest asset isolated to quest_objectives.uasset override",
-    "Current Steam WB_QuestObjectiveName and WB_QuestObjectiveDescription source assets re-fetched from Drive and match historical current-source hashes used by source-native QuestFix patches"
+    "Current Steam WB_QuestObjectiveName and WB_QuestObjectiveDescription source assets re-fetched from Drive and match historical current-source hashes used by source-native QuestFix patches",
+    "v18.3 current-source objective display-boundary candidate built",
+    "WB_QuestObjectiveName current source compatibility PASS: package/import/export schema retained",
+    "WB_QuestObjectiveDescription current source compatibility PASS: package/import/export schema retained",
+    "569/569 embedded CI_RU_Display_Quest FText literals resolve to current Game.locres with zero missing/empty/source mismatch",
+    "Minimal Hell of a Kitchen quest_objectives patch created: 12 refs only, header 60905 bytes vs 59213 source and 124533 crashing full patch",
+    "Combined reviewed objective coverage 531/531",
+    "v18.3 Steam IoStore exact readback 26/26 PASS; NoSteam payload byte-identical to v18.2",
+    "v18.3 installer Go tests PASS and Windows amd64 build PASS",
+    "v18.3 ZIP CRC PASS; SHA256 acb8b64ddd4caece240e29b6deae0e1aafe6d8d501578fa1bfe924d128c79b5b"
   ],
   "pending_units": [
-    "build v18.3 objective display-boundary variants from current-source WB_QuestObjectiveName/WB_QuestObjectiveDescription only",
-    "runtime open quest journal and inspect objective title/description translation",
-    "if display-boundary pair passes, rebuild installer with them in Steam main payload and keep quest_objectives stock",
-    "if one display widget fails, retain the passing widget and redesign only the failing field"
+    "runtime Steam startup with v18.3 main installer payload",
+    "open quest journal and switch multiple objectives",
+    "verify objective title and description localization",
+    "if main fails: isolate with D1/D2/D3/D4 diagnostics",
+    "if main passes: test Essence diagnostic or leave Essence stock for FINAL",
+    "final package/runtime regression and release promotion"
   ],
   "source_files_used": [
     "CI_SOURCE_INDEX.json",
@@ -133,7 +144,10 @@
     "working/steam/current/v15_startup_async_loading_crash/V18_1_QUEST_ISOLATION.json",
     "CI GPT/Releases/SteamQuestIsolation_2026-10-05_v18.1/Carnal_Instinct_RU_DontLook_Steam_v18.1_QUEST_ISOLATION_TEST.zip",
     "working/steam/current/v15_startup_async_loading_crash/V18_2_RUNTIME_VALIDATED_UI.json",
-    "CI GPT/Releases/Carnal_Instinct_RU_DontLook_RuntimeValidatedUI_2026-10-05_v18.2_TEST.zip"
+    "CI GPT/Releases/Carnal_Instinct_RU_DontLook_RuntimeValidatedUI_2026-10-05_v18.2_TEST.zip",
+    "working/steam/current/v15_startup_async_loading_crash/V18_3_OBJECTIVE_DISPLAY_BOUNDARY.json",
+    "working/steam/current/v15_startup_async_loading_crash/build_v18_3.py",
+    "Carnal_Instinct_RU_DontLook_ObjectiveDisplayBoundary_2026-10-05_v18.3_TEST.zip"
   ],
   "validation_completed": [
     "root-cause static schema audit",
@@ -173,10 +187,16 @@
     "v18.2 installer native Go tests / Windows build",
     "v18.2 Drive readback SHA256 and ZIP CRC",
     "Q1/Q2/Q4 individual runtime PASS",
-    "Q3 individual runtime FAIL"
+    "Q3 individual runtime FAIL",
+    "v18.3 26/26 exact IoStore readback",
+    "v18.3 objective FText locres coverage 569/569",
+    "v18.3 reviewed objective reference coverage 531/531",
+    "v18.3 minimal Q3 header below 65536",
+    "v18.3 installer Go tests/build and ZIP CRC"
   ],
   "validation_pending": [
-    "v18.3 objective display-boundary runtime validation"
+    "v18.3 runtime startup",
+    "v18.3 quest journal objective title/description runtime"
   ],
   "notes": [
     "Static root cause: v15 inherited WB_CharacterScreen, WB_Stats_Main, WB_Stats_Full and WB_Stats_Main_Slot from an older Steam schema.",
@@ -200,6 +220,7 @@
     "V15 quest_list/objectives/sub_objectives were field-aware FName display patches that append name-map entries; they remain suspect until individual runtime tests. Do not restore them wholesale.",
     "quest_objectives old patch appended 479 FNames and rewrote 531 references (267 objective_title, 264 objective_description); this method is now forbidden on current Steam because Q3 independently crashes AsyncLoading.",
     "Do not reintroduce quest_objectives.uasset FName patch on Steam current. Previous patch appends 479 names and rewrites 531 title/description references.",
-    "Historical source-native display widgets WB_QuestObjectiveName and WB_QuestObjectiveDescription remain candidates; prior v6 quest-tab crash bundled them together with WB_QuestName, so they were never individually runtime-isolated."
+    "Historical source-native display widgets WB_QuestObjectiveName and WB_QuestObjectiveDescription remain candidates; prior v6 quest-tab crash bundled them together with WB_QuestName, so they were never individually runtime-isolated.",
+    "v18.3 does not use the crashing 531-reference quest_objectives patch. Legacy objectives are localized at WB_QuestObjectiveName/WB_QuestObjectiveDescription display boundary; only 12 Hell of a Kitchen refs remain in a minimal current-source data patch."
   ]
 }
