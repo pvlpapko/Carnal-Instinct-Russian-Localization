@@ -86,7 +86,9 @@
     "A branch delta confirmed exactly four packages: bp_newQuest_marker, quest_list, quest_objectives, quest_sub_objectives",
     "built four independent 21-package diagnostics: v18.1 main 20 + exactly one quest override each",
     "Q1/Q2/Q3/Q4 exact IoStore readback 21/21 PASS for every diagnostic",
-    "quest isolation ZIP CRC PASS, SHA256 fe25d0198a53c974c597f70212d3ea0fa6a421059f50aebcb75ad3e3db5360d1"
+    "quest isolation ZIP CRC PASS, SHA256 fe25d0198a53c974c597f70212d3ea0fa6a421059f50aebcb75ad3e3db5360d1",
+    "quest isolation ZIP uploaded to CI GPT/Releases/SteamQuestIsolation_2026-10-05_v18.1",
+    "Drive readback size/SHA256 PASS; file id 1ETw8wK4s1yudT64EsEDDnepIMpHz7pfr"
   ],
   "pending_units": [
     "runtime Q1_MARKER_ONLY",
@@ -115,7 +117,8 @@
     "Carnal_Instinct_RU_DontLook_StartupSafeFullUI_2026-10-05_v18.1_TEST.zip",
     "working/steam/current/v15_startup_async_loading_crash/V18_1_STARTUP_SAFE_FULL_UI.json",
     "Carnal_Instinct_RU_DontLook_Steam_v18.1_QUEST_ISOLATION_TEST.zip",
-    "working/steam/current/v15_startup_async_loading_crash/V18_1_QUEST_ISOLATION.json"
+    "working/steam/current/v15_startup_async_loading_crash/V18_1_QUEST_ISOLATION.json",
+    "CI GPT/Releases/SteamQuestIsolation_2026-10-05_v18.1/Carnal_Instinct_RU_DontLook_Steam_v18.1_QUEST_ISOLATION_TEST.zip"
   ],
   "validation_completed": [
     "root-cause static schema audit",
