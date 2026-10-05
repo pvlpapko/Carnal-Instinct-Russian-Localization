@@ -134,5 +134,14 @@
     "zip_crc": "PASS",
     "entries": 373
   },
-  "runtime_tested": false
+  "runtime_tested": false,
+  "drive": {
+    "folder_id": "1tz_EhbVqYV-8gVDPaQ9zgu_KpEjCNN1Y",
+    "file_id": "1IE3t9ruN-dHD2JT4OlNO4cPxJ2F5iE7T",
+    "bytes": 34826861,
+    "readback_sha256": "acb8b64ddd4caece240e29b6deae0e1aafe6d8d501578fa1bfe924d128c79b5b",
+    "local_sha256_match": true,
+    "readback_zip_crc": "PASS",
+    "readback_entries": 373
+  }
 }
