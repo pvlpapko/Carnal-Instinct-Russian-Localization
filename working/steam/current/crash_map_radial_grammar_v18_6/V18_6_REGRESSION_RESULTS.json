@@ -1,0 +1,13 @@
+{
+  "release": "18.6 TEST",
+  "runtime_tested": false,
+  "regression_tests": {
+    "native_text_and_all_map_caption_resolution": "3/3 PASS",
+    "radial_settings_map_handler_aliases": "8/8 PASS"
+  },
+  "validated_map_caption_cases": 12586,
+  "native_item_serialization": "Complete three typed native FText fields parse within CDO export; keys/source/flags and all other bytes unchanged",
+  "steam_settings_fix": "Retained v18.5 False bApplySavedSettings on all three menu-open calls; old running probes use v18.3 menu",
+  "visual_fit_settings_fps_startup": "Require in-game retest",
+  "full_manual_dialogue_proofread": "unfinished"
+}

@@ -7,10 +7,10 @@
   "verified_game_version": "0.7.9.16232",
   "verified_build": "0.7.9.16232",
   "created_at": "2026-10-05T17:21:24.500298+00:00",
-  "updated_at": "2026-10-05T17:48:05.999422+00:00",
-  "current_phase": "caption_lookup_patch_complete",
-  "last_completed_unit": "seven_display_paths_receive_899_caption_union",
-  "next_unit": "build_final_container_readback_and_installer",
+  "updated_at": "2026-10-05T17:53:01.068602+00:00",
+  "current_phase": "static_validation_passed",
+  "last_completed_unit": "native_map_full_container_readback_11_regressions_pass_installer_built",
+  "next_unit": "clean_release_packaging_drive_upload_readback",
   "completed_units": [
     "New crash archives read: both startup at seconds=0 and same normalized shipping stack",
     "User confirms all startup probes except 9 run; only delta 8→9 Essence_Tier_1_Small",
@@ -22,11 +22,9 @@
     "899 known caption union in both popup rows and all five icon switches per edition; reported Raqote/Anubite Camp + previously excluded Breadbasket added"
   ],
   "pending_units": [
-    "Build corrected Essence package; validate complete native FText from shipped readback",
-    "Validate Steam settings display-only activation vs all old probes lagging",
-    "Trace and translate both map popup rows and minimap labels for both editions",
-    "Build, static verification, installer and direct Drive download links",
-    "Actual game validation and remaining linguistic review"
+    "Clean packaging and authorized direct Drive download links",
+    "In-game Steam startup/settings FPS and both-row map retest",
+    "Remaining manual linguistic review"
   ],
   "source_files_used": [
     "CI_SOURCE_INDEX.json",
@@ -41,7 +39,12 @@
     "tools/map_audit_v18_5/kismet.py"
   ],
   "validation_completed": [
-    "Adjacent probe resource delta identified by user runtime tests"
+    "Adjacent probe resource delta identified by user runtime tests",
+    "All 12586 map caption cases resolve by exact source/hash identity to shipped Russian LOCRES",
+    "11 regression tests PASS on final container extraction",
+    "Independent BLAKE3/container dependencies/export span checks: 34 Steam packages +71 NoSteam packages",
+    "All 41137 TSV rows original English source hashes/placeholders validated; original rows and LOCRES entries retained",
+    "Windows installer built with six exact runtime payloads to be verified at packaging"
   ],
   "validation_pending": [
     "New release static and runtime checks"

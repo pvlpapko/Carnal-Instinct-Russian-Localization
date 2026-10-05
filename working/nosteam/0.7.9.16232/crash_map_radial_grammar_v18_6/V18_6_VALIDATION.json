@@ -1,0 +1,47 @@
+{
+  "release": "18.6",
+  "runtime_tested": false,
+  "editions": {
+    "Steam_current": {
+      "packages": 34,
+      "toc_entries": 35,
+      "blocks": 53,
+      "utoc_bytes": 4849,
+      "ucas_bytes": 3473408,
+      "container_id": 17329019104982967540,
+      "translation_rows": 21649,
+      "locres_entries": 21645,
+      "changed_packages": [
+        "Carnal_Instinct_UE5/Content/DLG_Tree/dmap_system/widgets/w_03_map_icon.uasset",
+        "Carnal_Instinct_UE5/Content/RPG_InventorySystem/Classes/MainItemClasses/Consumables/Essence/Essence_Tier_1_Small.uasset",
+        "Carnal_Instinct_UE5/Content/RPG_InventorySystem/UI/WorldMap/WB_WorldMapPopup.uasset"
+      ],
+      "strict_changed_widget_functions": 7,
+      "event_wrapper_entries": "PASS",
+      "all_source_hashes_placeholders_original_rows_and_locres_entries": "PASS",
+      "all_other_packages_including_radial_settings_wide_character_and_journal": "UNCHANGED",
+      "exact_full_container_readback": "PASS",
+      "native_essence_text_fields": "3/3 PASS"
+    },
+    "NoSteam_0.7.9.16232": {
+      "packages": 71,
+      "toc_entries": 72,
+      "blocks": 116,
+      "utoc_bytes": 9107,
+      "ucas_bytes": 7602176,
+      "container_id": 17329019104982967540,
+      "translation_rows": 19488,
+      "locres_entries": 19488,
+      "changed_packages": [
+        "Carnal_Instinct_UE5/Content/DLG_Tree/dmap_system/widgets/w_03_map_icon.uasset",
+        "Carnal_Instinct_UE5/Content/RPG_InventorySystem/UI/WorldMap/WB_WorldMapPopup.uasset"
+      ],
+      "strict_changed_widget_functions": 7,
+      "event_wrapper_entries": "PASS",
+      "all_source_hashes_placeholders_original_rows_and_locres_entries": "PASS",
+      "all_other_packages_including_radial_settings_wide_character_and_journal": "UNCHANGED",
+      "exact_full_container_readback": "PASS",
+      "native_essence_text_fields": "no override"
+    }
+  }
+}

@@ -405,7 +405,7 @@ func payloadSourceLabel(e edition) string {
 func editionNote(index int) string {
 	switch index {
 	case 0:
-		return "Русификатор 18.5 TEST для Steam. Запуск после краша требует проверки. Исходная версия игры: 0.7.9.16321."
+		return "Русификатор 18.6 TEST для Steam. Исправлена запись текста эссенции; запуск требует проверки. Исходная версия игры: 0.7.9.16321."
 	case 1:
 		return "Отдельный полный комплект .pak, .utoc и .ucas для NoSteam 0.7.9.16232."
 	default:
