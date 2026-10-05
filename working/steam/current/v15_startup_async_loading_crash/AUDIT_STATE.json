@@ -2,13 +2,13 @@
   "schema_version": "1.0",
   "edition": "Steam",
   "task": "v15_startup_async_loading_crash",
-  "status": "v17_full_current_source_restore_built_static_validation_runtime_pending",
+  "status": "v18_full_71_current_source_restore_in_progress",
   "source_state_id": "steam_current_2026-10-03_16321_asset_verified_index_stale",
   "verified_game_version": "0.7.9.16321",
   "verified_build": null,
-  "current_phase": "full_current_source_restore_runtime_validation",
-  "last_completed_unit": "v17_full_restore_build_static_validation",
-  "next_unit": "runtime_test_v17_full_restore",
+  "current_phase": "full_71_current_source_ui_restore",
+  "last_completed_unit": "v17_drive_readback_and_ui_completeness_review",
+  "next_unit": "build_v18_71_current_source_payload",
   "completed_units": [
     "v15 Steam startup failure reproduced by user; NoSteam v15 works",
     "full 71-package v15 Steam override comparison against current source completed",
@@ -58,11 +58,16 @@
     "v17 exact named-package readback 39/39 PASS; TOC hashes PASS; physical UCAS block cover exact",
     "v17 installer rebuilt with visible Steam verified-version label, license flow, separate Steam_current and NoSteam_0.7.9.16232 embedded payloads",
     "v17 NoSteam 0.7.9.16232 payload byte-identical to user-confirmed-working v15",
-    "v17 final ZIP CRC PASS; SHA256 4abf564c13884789ea86f99795f1ba6135bcb605ebd51073093fbac37d90002c"
+    "v17 final ZIP CRC PASS; SHA256 4abf564c13884789ea86f99795f1ba6135bcb605ebd51073093fbac37d90002c",
+    "v17 Drive upload/readback exact SHA256 and ZIP CRC PASS; Drive file id 1E7g12FI1W_kYvx0ywhmU55usUs37zGtL",
+    "v17 completeness review found current-source WB_Master_* and W_MenuItem CI_RU assets were not all included; v17 is not promoted"
   ],
   "pending_units": [
-    "runtime Steam startup and regression test of v17 full restore",
-    "if PASS: promote v17 from TEST to FINAL and update canonical release metadata"
+    "build v18 using current 0.7.9.16321 bytes for all 71 historical Steam override paths",
+    "overlay only current-schema v14/v15 map/quest/fallback and character/stat/journal patches",
+    "rebuild installer and archive",
+    "validate 71/71 exact readback and provenance",
+    "runtime Steam v18 full regression"
   ],
   "source_files_used": [
     "CI_SOURCE_INDEX.json",
@@ -118,6 +123,7 @@
     "Correction after user clarification and live Drive verification: current Steam 0.7.9.16321 unpacked cooked assets ARE present on Drive. Only the original packed stock .utoc/.ucas/.pak containers are absent from the indexed source tree.",
     "Absence of stock containers is not a blocker for source asset provenance. The next investigation targets custom IoStore/package-store construction because v15.1 failed even with current-source-derived assets while v15.2 PAK-only passes.",
     "v15.3 PASS removes synthetic IoStore format as the immediate blocker. Full rebuild may proceed, but only current Steam 0.7.9.16321 cooked packages may be used as binary bases.",
-    "v17 restores functionality without wholesale reuse of stale 0.7.9.16313/NoSteam binaries. WB_WorldMapPopup and Neutral_Widget remain intentionally absent due prior crash evidence."
+    "v17 restores functionality without wholesale reuse of stale 0.7.9.16313/NoSteam binaries. WB_WorldMapPopup and Neutral_Widget remain intentionally absent due prior crash evidence.",
+    "User requested all previous interface fixes at once; v18 expands v17 to all 71 historical UI/display paths but replaces every stale old base with current Steam source."
   ]
 }
