@@ -1,0 +1,102 @@
+{
+  "schema_version": "1.0",
+  "edition": "Steam",
+  "task": "full_ui_translation_v18_4",
+  "status": "v18_4_uploaded_static_validation_runtime_pending",
+  "source_state_id": "steam_current_2026-10-03_16321_asset_verified_index_stale",
+  "verified_game_version": "0.7.9.16321",
+  "verified_build": null,
+  "created_at": "2026-10-05T09:43:01.180062+00:00",
+  "updated_at": "2026-10-05T10:35:29.913911+00:00",
+  "current_phase": "runtime_validation_pending",
+  "last_completed_unit": "archive_uploaded_and_drive_readback_hash_crc_verified",
+  "next_unit": "in_game_startup_and_visual_validation_for_steam",
+  "completed_units": [
+    "project rules and source index reviewed",
+    "user specified restore screenshot character and quest layouts in BOTH editions",
+    "screenshots 1/2/3 reviewed",
+    "v18.3 archive CRC/SHA256 verified",
+    "live current Steam GameInstance SHA256 matched existing build state",
+    "13 UI source packages fetched individually and source identities recorded",
+    "installer no-backup regression tests failed on v18.3 and passed after replacement changes",
+    "installer existing safety tests adapted to delete-and-replace requirements and passed",
+    "Steam statistics columns expanded using decoded matching-source native fields",
+    "both edition quest objectives and journal body use 20pt upright font and wrapping",
+    "Lovense labels shortened; current Steam instance spacing and button text wrapping corrected",
+    "Essence display namespace resolves three conflicting FText identities; original English/internal item identifiers retained",
+    "Steam exact container readback 31/31 PASS; NoSteam 71/71 PASS",
+    "source hashes and placeholders across 21647 Steam + 19486 NoSteam translation rows PASS",
+    "3263 Steam + 3103 NoSteam map display FText occurrences audited; no missing display translations",
+    "1942 existing function exports byte-identical against edition-matching inputs",
+    "installer Go suite with race detector PASS",
+    "Windows amd64 installer build including new no-backup tests PASS",
+    "final archive every entry byte readback + CRC + SHA256 PASS",
+    "Drive upload and full fetched archive SHA256/CRC/SHA256SUMS readback PASS"
+  ],
+  "pending_units": [
+    "in-game startup, UI visuals, long journal text, map/minimap hover, saves, input, combat and quest validation"
+  ],
+  "source_files_used": [
+    "/workspace/project-context/carnal-instinct/CI_SOURCE_INDEX.json",
+    "steam/current/BUILD_STATE.json",
+    "working/steam/current/v15_startup_async_loading_crash/V18_3_OBJECTIVE_DISPLAY_BOUNDARY.json",
+    "/workspace/project-context/carnal-instinct/screenshots/скрины/1.png",
+    "/workspace/project-context/carnal-instinct/screenshots/скрины/2.png",
+    "/workspace/project-context/carnal-instinct/screenshots/скрины/3.png",
+    "/workspace/project-context/carnal-instinct/current-ui-source/SOURCE_READBACK.json"
+  ],
+  "working_files": [
+    "working/steam/current/full_ui_translation_v18_4/AUDIT_STATE.json",
+    "tools/ui_translation_v18_4/build.py",
+    "tools/ui_translation_v18_4/validate.py",
+    "tools/ui_translation_v18_4/ui_properties.py",
+    "tools/ui_translation_v18_4/native_schema.json",
+    "installer/core.go",
+    "installer/main_windows.go",
+    "installer/core_test.go",
+    "installer/no_backup_test.go",
+    "working/steam/current/full_ui_translation_v18_4/SOURCE_READBACK.json",
+    "working/steam/current/full_ui_translation_v18_4/V18_4_DISPLAY_LAYOUT.json",
+    "working/steam/current/full_ui_translation_v18_4/V18_4_VALIDATION.json"
+  ],
+  "validation_completed": [
+    "local cached GameInstance SHA256 matches stored current source",
+    "installer core full Go suite PASS",
+    "V18_4_VALIDATION.json independent packaged resource readback PASS",
+    "installer Go vet and fresh race suite PASS",
+    "Windows amd64 installer cross-build PASS",
+    "all six embedded payloads byte-identical to released files",
+    "final local and Drive archive SHA256 + CRC + SHA256SUMS PASS"
+  ],
+  "validation_pending": [
+    "actual startup/UI/hover/gameplay tests in game"
+  ],
+  "notes": [
+    "User reports v18.3 is current; do not resurrect full crashing quest_objectives override",
+    "NoSteam current menus are NOT reference; screenshots define desired layouts for both editions",
+    "Minimize Codex usage with targeted downloads and deterministic audits. No subagents.",
+    "Runtime results must be stated separately from static checks."
+  ],
+  "release_candidate": {
+    "release": "v18.4 Full UI TEST",
+    "name": "Carnal_Instinct_RU_DontLook_FullUI_2026-10-05_v18.4_TEST.zip",
+    "created_at": "2026-10-05T10:33:10.487413+00:00",
+    "sha256": "b801a03e6027812f1434bfda822fe4cd5124f8202dd3f9f1a809be634e7cb0ca",
+    "archive_bytes": 17721201,
+    "archive_entries": 203,
+    "zip_crc": "PASS",
+    "all_entries_byte_readback": "PASS",
+    "runtime_tested": false,
+    "installer_sha256": "0b9d73f45227a07c910b7216acc0939394defe67b93b2102c93cd2a3e2ce7134",
+    "installer_bytes": 18125824,
+    "steam_packages": 31,
+    "nosteam_packages": 71,
+    "drive_upload": "PASS",
+    "drive_readback_sha256_verified": true,
+    "drive_readback_zip_crc_verified": true,
+    "drive_file_id": "1CVEQCI-B-hieYajjHAlzSVtra2MbfN8A",
+    "drive_folder_id": "1VwdnxngtZLDsPl1kP5H5HCJBePoRCF_a",
+    "drive_url": "https://drive.google.com/file/d/1CVEQCI-B-hieYajjHAlzSVtra2MbfN8A/view",
+    "updated_at": "2026-10-05T10:35:29.913911+00:00"
+  }
+}

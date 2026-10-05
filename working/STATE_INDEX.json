@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "updated_at": "2026-10-05T10:26:00+03:00",
+  "updated_at": "2026-10-05T10:35:29.913911+00:00",
   "active_tasks": [
     {
       "edition": "Steam",
@@ -115,6 +115,18 @@
       "task": "v15_startup_async_loading_crash",
       "state_path": "working/steam/current/v15_startup_async_loading_crash/AUDIT_STATE.json",
       "status": "v18_3_objective_display_boundary_built_runtime_pending"
+    },
+    {
+      "edition": "Steam",
+      "task": "full_ui_translation_v18_4",
+      "state_path": "working/steam/current/full_ui_translation_v18_4/AUDIT_STATE.json",
+      "status": "v18_4_uploaded_static_validation_runtime_pending"
+    },
+    {
+      "edition": "NoSteam",
+      "task": "full_ui_translation_v18_4",
+      "state_path": "working/nosteam/0.7.9.16232/full_ui_translation_v18_4/AUDIT_STATE.json",
+      "status": "v18_4_uploaded_static_validation_runtime_pending"
     }
   ],
   "latest_release": {
@@ -135,15 +147,35 @@
     "runtime_validation": "Steam v18 full failed startup; Q1/Q2/Q4 quest isolation PASS, Q3 quest_objectives FAIL; v18.3 objective display-boundary candidate pending. NoSteam v15 user-reported working"
   },
   "latest_test_hotfix": {
-    "edition": "Steam",
-    "task": "v15_startup_async_loading_crash",
-    "name": "Carnal_Instinct_RU_DontLook_ObjectiveDisplayBoundary_2026-10-05_v18.3_TEST.zip",
-    "sha256": "acb8b64ddd4caece240e29b6deae0e1aafe6d8d501578fa1bfe924d128c79b5b",
-    "bytes": 34826861,
+    "release": "v18.4 Full UI TEST",
+    "name": "Carnal_Instinct_RU_DontLook_FullUI_2026-10-05_v18.4_TEST.zip",
+    "created_at": "2026-10-05T10:33:10.487413+00:00",
+    "sha256": "b801a03e6027812f1434bfda822fe4cd5124f8202dd3f9f1a809be634e7cb0ca",
+    "archive_bytes": 17721201,
+    "archive_entries": 203,
+    "zip_crc": "PASS",
+    "all_entries_byte_readback": "PASS",
+    "runtime_tested": false,
+    "installer_sha256": "0b9d73f45227a07c910b7216acc0939394defe67b93b2102c93cd2a3e2ce7134",
+    "installer_bytes": 18125824,
+    "steam_packages": 31,
+    "nosteam_packages": 71,
+    "drive_upload": "PASS",
+    "drive_readback_sha256_verified": true,
+    "drive_readback_zip_crc_verified": true,
+    "drive_file_id": "1CVEQCI-B-hieYajjHAlzSVtra2MbfN8A",
+    "drive_folder_id": "1VwdnxngtZLDsPl1kP5H5HCJBePoRCF_a",
+    "drive_url": "https://drive.google.com/file/d/1CVEQCI-B-hieYajjHAlzSVtra2MbfN8A/view",
+    "updated_at": "2026-10-05T10:35:29.913911+00:00",
+    "editions": [
+      "Steam",
+      "NoSteam"
+    ],
+    "task": "full_ui_translation_v18_4",
+    "steam_verified_game_version": "0.7.9.16321",
+    "steam_verified_build": null,
+    "nosteam_baseline_build": "0.7.9.16232",
     "runtime_validation": "pending",
-    "steam_packages": 26,
-    "objective_translation_coverage": "531/531 static",
-    "full_quest_objectives_patch": "excluded",
-    "minimal_hell_kitchen_refs": 12
+    "full_quest_objectives_patch": "excluded; minimal v18.3 Hell of a Kitchen display refs retained"
   }
 }

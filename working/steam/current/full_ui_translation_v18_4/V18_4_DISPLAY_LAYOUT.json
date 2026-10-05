@@ -1,0 +1,694 @@
+{
+  "release": "18.4",
+  "runtime_tested": false,
+  "editions": {
+    "Steam_current": {
+      "translation_rows": 21647,
+      "locres_entries": 21643,
+      "existing_identities_preserved": true,
+      "placeholders": "PASS",
+      "text_updates": [
+        {
+          "namespace": "",
+          "key": "A6FD74C944809CEA68B123A58EEE754C",
+          "english": "Restore Defaults",
+          "old": "Сбросить настройки",
+          "new": "Сбросить"
+        },
+        {
+          "namespace": "",
+          "key": "0E78019C4121F7DAADEA908D7A2BE9E5",
+          "english": "Restore Defaults",
+          "old": "Сбросить настройки",
+          "new": "Сбросить"
+        },
+        {
+          "namespace": "",
+          "key": "8CF89A4747CFFA4BA097809CA63AE6F6",
+          "english": "Refresh Toy List",
+          "old": "Обновить список устройств",
+          "new": "Обновить список"
+        },
+        {
+          "namespace": "CI_RU_Display_Settings",
+          "key": "33A3925B62344E5775D0A04A01841A83",
+          "english": "Restore Defaults",
+          "old": "Сбросить настройки",
+          "new": "Сбросить"
+        },
+        {
+          "namespace": "",
+          "key": "43AF273A448C2BD0B8FB2BB10AD42C85",
+          "english": "Refresh Toy List",
+          "old": "Обновить список устройств",
+          "new": "Обновить список"
+        },
+        {
+          "namespace": "",
+          "key": "D37323BA447A022AE56B8A96CACA6C2A",
+          "english": "Restore Defaults",
+          "old": "Восстановить настройки",
+          "new": "Сбросить"
+        },
+        {
+          "namespace": "CI_RU_Display_SteamCoreSettings",
+          "key": "33A3925B62344E5775D0A04A01841A83",
+          "english": "Restore Defaults",
+          "old": "Восстановить настройки",
+          "new": "Сбросить"
+        },
+        {
+          "namespace": "CI_RU_Display_SteamCoreSettings",
+          "key": "1B61D57831722E37F78986185C40D6BA",
+          "english": "Refresh Toy List",
+          "old": "Обновить список устройств",
+          "new": "Обновить список"
+        },
+        {
+          "namespace": "CI_RU_Display_Steam16315Settings",
+          "key": "33A3925B62344E5775D0A04A01841A83",
+          "english": "Restore Defaults",
+          "old": "Восстановить настройки",
+          "new": "Сбросить"
+        },
+        {
+          "namespace": "CI_RU_Display_Steam16315Settings",
+          "key": "1B61D57831722E37F78986185C40D6BA",
+          "english": "Refresh Toy List",
+          "old": "Обновить список устройств",
+          "new": "Обновить список"
+        }
+      ],
+      "container": {
+        "packages": 31,
+        "toc_entries": 32,
+        "blocks": 38,
+        "utoc_bytes": 4316,
+        "ucas_bytes": 2490368,
+        "container_id": 17329019104982967540
+      },
+      "exact_readback": "31/31 PASS",
+      "toc_hashes": "PASS"
+    },
+    "NoSteam_0.7.9.16232": {
+      "translation_rows": 19486,
+      "locres_entries": 19486,
+      "existing_identities_preserved": true,
+      "placeholders": "PASS",
+      "text_updates": [
+        {
+          "namespace": "",
+          "key": "A6FD74C944809CEA68B123A58EEE754C",
+          "english": "Restore Defaults",
+          "old": "Сбросить настройки",
+          "new": "Сбросить"
+        },
+        {
+          "namespace": "",
+          "key": "0E78019C4121F7DAADEA908D7A2BE9E5",
+          "english": "Restore Defaults",
+          "old": "Сбросить настройки",
+          "new": "Сбросить"
+        },
+        {
+          "namespace": "",
+          "key": "9E31548944C23FE38121CEB10CCBFBEB",
+          "english": "Device IP Override",
+          "old": "Переопределить IP устройства",
+          "new": "IP-адрес устройства"
+        },
+        {
+          "namespace": "",
+          "key": "49D2DE574C307BFD4C0D21A966083B4E",
+          "english": "Device Port Override",
+          "old": "Переопределить порт устройства",
+          "new": "Порт устройства"
+        },
+        {
+          "namespace": "",
+          "key": "8CF89A4747CFFA4BA097809CA63AE6F6",
+          "english": "Refresh Toy List",
+          "old": "Обновить список игрушек",
+          "new": "Обновить список"
+        },
+        {
+          "namespace": "CI_RU_Display_Settings",
+          "key": "33A3925B62344E5775D0A04A01841A83",
+          "english": "Restore Defaults",
+          "old": "Сбросить настройки",
+          "new": "Сбросить"
+        }
+      ],
+      "container": {
+        "packages": 71,
+        "toc_entries": 72,
+        "blocks": 108,
+        "utoc_bytes": 9011,
+        "ucas_bytes": 7077888,
+        "container_id": 17329019104982967540
+      },
+      "exact_readback": "71/71 PASS",
+      "toc_hashes": "PASS"
+    }
+  },
+  "changes": [
+    {
+      "edition": "Steam_current",
+      "mount": "Carnal_Instinct_UE5/Content/RPG_InventorySystem/Classes/MainItemClasses/Consumables/Essence/Essence_Tier_1_Small.uasset",
+      "source_sha256": "f3482cfad2d1bd914ce710fed75387a7a4f8e4ead0b6f040046b82678726b6ce",
+      "patched_sha256": "bd8116bf7c11e8aac47cad6e2de90a2ab685c423ac932daff2f17e1e4e2b3010",
+      "source_header": 895,
+      "patched_header": 895,
+      "imports_unchanged": true,
+      "function_exports_unchanged": true,
+      "evidence": [
+        {
+          "export": "Default__Essence_Tier_1_Small_C",
+          "property": "FText.Namespace",
+          "key": "7161373344630149D4AE198A780FAC9B",
+          "english": "Weak Essence Fragment",
+          "russian": "Слабый фрагмент эссенции",
+          "old": "",
+          "new": "CI_RU_Display_V18_4_Items"
+        },
+        {
+          "export": "Default__Essence_Tier_1_Small_C",
+          "property": "FText.Namespace",
+          "key": "A5DAC0B440486F2FF22295AB9517C97B",
+          "english": "Lost Soul",
+          "russian": "Заблудшая душа",
+          "old": "",
+          "new": "CI_RU_Display_V18_4_Items"
+        },
+        {
+          "export": "Default__Essence_Tier_1_Small_C",
+          "property": "FText.Namespace",
+          "key": "444A551D4C5C423C08DF8F86C652F88E",
+          "english": "Soul of a lost Undead who has long ago gone Hollow.\r\n\r\nUse to acquire souls.\r\n\r\nSouls are the source of all life, and whether Undead, or even Hollow, one continues to seek them.",
+          "russian": "Душа заблудшего неживого, который давно опустошился.\r\n\r\nИспользуйте, чтобы получить души.\r\n\r\nДуши — источник всякой жизни. И неживые, даже опустошённые, продолжают их искать.",
+          "old": "",
+          "new": "CI_RU_Display_V18_4_Items"
+        }
+      ]
+    },
+    {
+      "edition": "Steam_current",
+      "mount": "Carnal_Instinct_UE5/Content/RPG_InventorySystem/UI/PlayerInventory/WB_Stats_Full.uasset",
+      "source_sha256": "e5091b460d59e442e012376998241369d90aaabd5656efdd7eb62e7c9b2f5763",
+      "patched_sha256": "cffd06217ccf656d12df7c86c1cfc6adfd6d3579a894a81de8a2635f5badd188",
+      "source_header": 72495,
+      "patched_header": 72495,
+      "imports_unchanged": true,
+      "function_exports_unchanged": true,
+      "evidence": [
+        {
+          "export": "Column1",
+          "export_index": 275,
+          "property": "WidthOverride",
+          "old": 480.0,
+          "new": 512.0
+        },
+        {
+          "export": "Column2",
+          "export_index": 276,
+          "property": "WidthOverride",
+          "old": 600.0,
+          "new": 584.0
+        },
+        {
+          "export": "SizeBox_31",
+          "export_index": 303,
+          "property": "WidthOverride",
+          "old": 1152.0,
+          "new": 1168.0
+        },
+        {
+          "export": "SizeBox_38",
+          "export_index": 311,
+          "property": "WidthOverride",
+          "old": 1152.0,
+          "new": 1168.0
+        },
+        {
+          "export": "SizeBox",
+          "export_index": 278,
+          "property": "WidthOverride",
+          "old": 320.0,
+          "new": 370.0
+        },
+        {
+          "export": "SizeBox_1",
+          "export_index": 279,
+          "property": "WidthOverride",
+          "old": 320.0,
+          "new": 370.0
+        },
+        {
+          "export": "SizeBox_12",
+          "export_index": 282,
+          "property": "WidthOverride",
+          "old": 320.0,
+          "new": 370.0
+        },
+        {
+          "export": "SizeBox_13",
+          "export_index": 283,
+          "property": "WidthOverride",
+          "old": 320.0,
+          "new": 370.0
+        },
+        {
+          "export": "SizeBox_14",
+          "export_index": 284,
+          "property": "WidthOverride",
+          "old": 320.0,
+          "new": 370.0
+        },
+        {
+          "export": "SizeBox_15",
+          "export_index": 285,
+          "property": "WidthOverride",
+          "old": 320.0,
+          "new": 370.0
+        },
+        {
+          "export": "SizeBox_16",
+          "export_index": 286,
+          "property": "WidthOverride",
+          "old": 320.0,
+          "new": 370.0
+        },
+        {
+          "export": "SizeBox_17",
+          "export_index": 287,
+          "property": "WidthOverride",
+          "old": 320.0,
+          "new": 370.0
+        },
+        {
+          "export": "SizeBox_19",
+          "export_index": 289,
+          "property": "WidthOverride",
+          "old": 320.0,
+          "new": 370.0
+        },
+        {
+          "export": "SizeBox_2",
+          "export_index": 290,
+          "property": "WidthOverride",
+          "old": 320.0,
+          "new": 370.0
+        },
+        {
+          "export": "SizeBox_20",
+          "export_index": 291,
+          "property": "WidthOverride",
+          "old": 320.0,
+          "new": 370.0
+        },
+        {
+          "export": "SizeBox_21",
+          "export_index": 292,
+          "property": "WidthOverride",
+          "old": 320.0,
+          "new": 370.0
+        },
+        {
+          "export": "SizeBox_22",
+          "export_index": 293,
+          "property": "WidthOverride",
+          "old": 320.0,
+          "new": 370.0
+        },
+        {
+          "export": "SizeBox_23",
+          "export_index": 294,
+          "property": "WidthOverride",
+          "old": 320.0,
+          "new": 370.0
+        },
+        {
+          "export": "SizeBox_24",
+          "export_index": 295,
+          "property": "WidthOverride",
+          "old": 320.0,
+          "new": 370.0
+        },
+        {
+          "export": "SizeBox_25",
+          "export_index": 296,
+          "property": "WidthOverride",
+          "old": 320.0,
+          "new": 370.0
+        },
+        {
+          "export": "SizeBox_26",
+          "export_index": 297,
+          "property": "WidthOverride",
+          "old": 320.0,
+          "new": 370.0
+        },
+        {
+          "export": "SizeBox_27",
+          "export_index": 298,
+          "property": "WidthOverride",
+          "old": 320.0,
+          "new": 370.0
+        },
+        {
+          "export": "SizeBox_3",
+          "export_index": 301,
+          "property": "WidthOverride",
+          "old": 320.0,
+          "new": 370.0
+        },
+        {
+          "export": "SizeBox_4",
+          "export_index": 313,
+          "property": "WidthOverride",
+          "old": 320.0,
+          "new": 370.0
+        },
+        {
+          "export": "SizeBox_44",
+          "export_index": 318,
+          "property": "WidthOverride",
+          "old": 320.0,
+          "new": 370.0
+        },
+        {
+          "export": "SizeBox_5",
+          "export_index": 319,
+          "property": "WidthOverride",
+          "old": 320.0,
+          "new": 370.0
+        },
+        {
+          "export": "SizeBox_6",
+          "export_index": 320,
+          "property": "WidthOverride",
+          "old": 320.0,
+          "new": 370.0
+        },
+        {
+          "export": "SizeBox_7",
+          "export_index": 321,
+          "property": "WidthOverride",
+          "old": 320.0,
+          "new": 370.0
+        },
+        {
+          "export": "SizeBox_9",
+          "export_index": 323,
+          "property": "WidthOverride",
+          "old": 320.0,
+          "new": 370.0
+        }
+      ]
+    },
+    {
+      "edition": "Steam_current",
+      "mount": "Carnal_Instinct_UE5/Content/RPG_InventorySystem/UI/PlayerInventory/WB_Stats_Main_Slot.uasset",
+      "source_sha256": "d0d2770fbee69850752d18a7c3d1f2017788c615210ed8fc707c867286695434",
+      "patched_sha256": "3557b60a2749d62f0b7ef4e98e2522143fc4a9833cc1221a59bb51c65eaa8050",
+      "source_header": 17502,
+      "patched_header": 17502,
+      "imports_unchanged": true,
+      "function_exports_unchanged": true,
+      "evidence": [
+        {
+          "export": "SizeBox_0",
+          "export_index": 39,
+          "property": "WidthOverride",
+          "old": 150.0,
+          "new": 250.0
+        },
+        {
+          "export": "SizeBox_25",
+          "export_index": 42,
+          "property": "WidthOverride",
+          "old": 530.0,
+          "new": 550.0
+        }
+      ]
+    },
+    {
+      "edition": "Steam_current",
+      "mount": "Carnal_Instinct_UE5/Content/RPG_InventorySystem/UI/Quests/WB_QuestObjectiveName.uasset",
+      "source_sha256": "8bfe06eb57e484ac6e8eab4e464b2bb34bda513180f1aa29985350bdd76290fa",
+      "patched_sha256": "7e2f4454a4fb57057d2cde2a6d8b88d5474d9198ef925a81f854a0b7b07ccced",
+      "source_header": 12597,
+      "patched_header": 12597,
+      "imports_unchanged": true,
+      "function_exports_unchanged": true,
+      "evidence": [
+        {
+          "export": "Text_ObjectiveName",
+          "export_index": 8,
+          "property": "Font.Size",
+          "old": 16.0,
+          "new": 20.0
+        },
+        {
+          "export": "Text_ObjectiveName",
+          "export_index": 8,
+          "property": "AutoWrapText",
+          "old": "native default",
+          "new": 1
+        }
+      ]
+    },
+    {
+      "edition": "Steam_current",
+      "mount": "Carnal_Instinct_UE5/Content/RPG_InventorySystem/UI/Quests/WB_QuestObjectiveDescription.uasset",
+      "source_sha256": "fc8cc6034ff69b593c4337dddc66ec0dd81f3c206f4ec9f87d5fe35b1b2a2844",
+      "patched_sha256": "f7ae678d31e6971f4050efe375cdd7b1a505ca316ab3fcefc143c518e4483f94",
+      "source_header": 35566,
+      "patched_header": 35590,
+      "imports_unchanged": true,
+      "function_exports_unchanged": true,
+      "evidence": [
+        {
+          "export": "Text_ObjectiveName",
+          "export_index": 2,
+          "property": "Font.Size",
+          "old": 16.0,
+          "new": 20.0
+        },
+        {
+          "export": "Text_ObjectiveName",
+          "export_index": 2,
+          "property": "Font.TypefaceFontName",
+          "old": "Barlow-Italic",
+          "new": [
+            306,
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "edition": "Steam_current",
+      "mount": "Carnal_Instinct_UE5/Content/RPG_InventorySystem/UI/Quests/WB_QuestName.uasset",
+      "source_sha256": "5e6c498451b8f09bad7db6e884a316e79a915f21cda7b17d50c0d6b5f3e633a9",
+      "patched_sha256": "2d09d0b198bc3ab781ac967c7d9930a8fdd4640177017929d0dfae0a0f56c0c9",
+      "source_header": 12774,
+      "patched_header": 12774,
+      "imports_unchanged": true,
+      "function_exports_unchanged": true,
+      "evidence": [
+        {
+          "export": "SizeBox_27",
+          "export_index": 35,
+          "property": "WidthOverride",
+          "old": 500.0,
+          "new": 550.0
+        },
+        {
+          "export": "SizeBox_27",
+          "export_index": 35,
+          "property": "HeightOverride",
+          "old": 112.0,
+          "new": 128.0
+        }
+      ]
+    },
+    {
+      "edition": "Steam_current",
+      "mount": "Carnal_Instinct_UE5/Content/NiceSettingsMenu/UI/Theme_3/WB_T3_Lovense.uasset",
+      "source_sha256": "9a2ac7c2a87df56d0fa9f741a61abcbbe0521b6751ed3db5554d3c5e5047c3f5",
+      "patched_sha256": "69699a8c6ec4e2f5adeee35c170ee73f555ef613cb7008f35094b73905fb510e",
+      "source_header": 18292,
+      "patched_header": 18292,
+      "imports_unchanged": true,
+      "function_exports_unchanged": true,
+      "evidence": [
+        {
+          "export": "SizeBox_0",
+          "export_index": 57,
+          "property": "WidthOverride",
+          "old": 1320.0,
+          "new": 1440.0
+        },
+        {
+          "export": "HorizontalBoxSlot_0",
+          "export_index": 25,
+          "property": "Padding.Left",
+          "old": 8.0,
+          "new": 20.0
+        },
+        {
+          "export": "HorizontalBoxSlot_0",
+          "export_index": 25,
+          "property": "Padding.Right",
+          "old": 8.0,
+          "new": 20.0
+        },
+        {
+          "export": "HorizontalBoxSlot_3",
+          "export_index": 26,
+          "property": "Padding.Left",
+          "old": 8.0,
+          "new": 20.0
+        },
+        {
+          "export": "HorizontalBoxSlot_3",
+          "export_index": 26,
+          "property": "Padding.Right",
+          "old": 8.0,
+          "new": 20.0
+        },
+        {
+          "export": "HorizontalBoxSlot_5",
+          "export_index": 27,
+          "property": "Padding.Left",
+          "old": 8.0,
+          "new": 20.0
+        },
+        {
+          "export": "HorizontalBoxSlot_5",
+          "export_index": 27,
+          "property": "Padding.Right",
+          "old": 8.0,
+          "new": 20.0
+        }
+      ]
+    },
+    {
+      "edition": "Steam_current",
+      "mount": "Carnal_Instinct_UE5/Content/NiceSettingsMenu/UI/Theme_3/WB_T3_NSM_Button.uasset",
+      "source_sha256": "0631c93feeeacc0ff955b0ba9170dfa9a9a3675479b30207f8d77dff000da7c9",
+      "patched_sha256": "0ce30cdb0c7859248ccf303dd07beda571928ce437be48b0e72cf6326f4ca034",
+      "source_header": 5272,
+      "patched_header": 5272,
+      "imports_unchanged": true,
+      "function_exports_unchanged": true,
+      "evidence": [
+        {
+          "export": "T_Title",
+          "export_index": 18,
+          "property": "Font.LetterSpacing",
+          "old": 150,
+          "new": 75
+        },
+        {
+          "export": "T_Title",
+          "export_index": 18,
+          "property": "AutoWrapText",
+          "old": "native default",
+          "new": 1
+        }
+      ]
+    },
+    {
+      "edition": "NoSteam_0.7.9.16232",
+      "mount": "Carnal_Instinct_UE5/Content/RPG_InventorySystem/UI/PlayerInventory/WB_Stats_Main_Slot.uasset",
+      "source_sha256": "7265ebd8ee751fcbe8c264a9d18b28c460edb80e74da1151ef72ca993754fef0",
+      "patched_sha256": "8989cd70ec589ac69a000c5f50a2355bfce8957dfb95fa3caf84b6edcc381828",
+      "source_header": 17126,
+      "patched_header": 17126,
+      "imports_unchanged": true,
+      "function_exports_unchanged": true,
+      "evidence": [
+        {
+          "export": "SizeBox_25",
+          "export_index": 41,
+          "property": "WidthOverride",
+          "old": 530.0,
+          "new": 550.0
+        }
+      ]
+    },
+    {
+      "edition": "NoSteam_0.7.9.16232",
+      "mount": "Carnal_Instinct_UE5/Content/RPG_InventorySystem/UI/Quests/WB_QuestObjectiveName.uasset",
+      "source_sha256": "4765e5fc8cf7c520bf78bc97934ea99a5f303dca27daa8992380896acac63e80",
+      "patched_sha256": "9e6349fa5be5b79c5f4e5cf9281f73ed1270e3b9638e3285a82c5d3b403cfaf5",
+      "source_header": 12642,
+      "patched_header": 12642,
+      "imports_unchanged": true,
+      "function_exports_unchanged": true,
+      "evidence": [
+        {
+          "export": "Text_ObjectiveName",
+          "export_index": 8,
+          "property": "Font.Size",
+          "old": 18.0,
+          "new": 20.0
+        },
+        {
+          "export": "Text_ObjectiveName",
+          "export_index": 8,
+          "property": "AutoWrapText",
+          "old": "native default",
+          "new": 1
+        }
+      ]
+    },
+    {
+      "edition": "NoSteam_0.7.9.16232",
+      "mount": "Carnal_Instinct_UE5/Content/RPG_InventorySystem/UI/Quests/WB_QuestObjectiveDescription.uasset",
+      "source_sha256": "6b82cc34280fa72f1748119616fb863971a6ab2a43a533c9dfeaa35390c0c02d",
+      "patched_sha256": "b1a626bb74b9797ade923b86291a924ce5c662cda78abe9cc5ee3417c6a37f88",
+      "source_header": 35619,
+      "patched_header": 35619,
+      "imports_unchanged": true,
+      "function_exports_unchanged": true,
+      "evidence": [
+        {
+          "export": "Text_ObjectiveName",
+          "export_index": 2,
+          "property": "Font.Size",
+          "old": 18.0,
+          "new": 20.0
+        }
+      ]
+    },
+    {
+      "edition": "NoSteam_0.7.9.16232",
+      "mount": "Carnal_Instinct_UE5/Content/RPG_InventorySystem/UI/Quests/WB_QuestName.uasset",
+      "source_sha256": "5e72c0a41685d726458e10ee69060fdfd51cf4b44195da22db4bdcbcf20a6c72",
+      "patched_sha256": "d09e6f5299bcd494aea3250b9754f0229248d5e9da8b5cd6545e09d42944517d",
+      "source_header": 12913,
+      "patched_header": 12913,
+      "imports_unchanged": true,
+      "function_exports_unchanged": true,
+      "evidence": [
+        {
+          "export": "SizeBox_27",
+          "export_index": 28,
+          "property": "WidthOverride",
+          "old": 500.0,
+          "new": 550.0
+        },
+        {
+          "export": "SizeBox_27",
+          "export_index": 28,
+          "property": "HeightOverride",
+          "old": 112.0,
+          "new": 128.0
+        }
+      ]
+    }
+  ]
+}

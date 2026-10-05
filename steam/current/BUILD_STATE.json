@@ -21,13 +21,14 @@
   "source_index_sha256": "91b95dbc38b2f4ffbd3fbea35bb1e4906cec7ddb588be87a15cec17048282274",
   "source_tree_sha256": "f12967fe7bd1c3729caa285519b2acc0059959214bf1f453aefe6437b8fbfef3",
   "source_stock_status": "contains localization modifications; not a clean stock game extraction",
-  "binary_compatibility": "v16 Steam current-schema hotfix: 71/71 override packages validated against current 0.7.9.16321 source package/import/export schema; runtime validation pending",
-  "ui_override_compatibility": "v16: stale WB_CharacterScreen/WB_Stats_Main/WB_Stats_Full/WB_Stats_Main_Slot overrides rebased to current source schema; map widget bytecode overrides remain absent; current-source w_03 display localizer retained",
-  "last_source_check_at": "2026-10-04T18:45:00Z",
+  "binary_compatibility": "v18.4 TEST: 31 Steam packages read back; original function exports/imports verified against v18.3 baseline or fetched current 0.7.9.16321 source. Actual game startup validation pending.",
+  "ui_override_compatibility": "v18.4: current-source statistics and Lovense native layout overrides added; character/quest display layout retained and refined; source function bytecode unchanged. Map popup and neutral bytecode overrides absent; display source/key/hash checks PASS. Runtime visuals pending.",
+  "last_source_check_at": "2026-10-05T10:06:33.989051+00:00",
   "evidence": [
     "current Google Drive RPGInventory_GameInstance.uasset raw bytes",
     "embedded ASCII version 0.7.9.16321 at byte offset 313692",
-    "source tree still has no EXE/appmanifest/Build.version/stock IoStore containers"
+    "source tree still has no EXE/appmanifest/Build.version/stock IoStore containers",
+    "2026-10-05 live GameInstance readback SHA256 unchanged; v18.4 targeted UI packages fetched from live indexed Drive IDs"
   ],
   "notes": [
     "Current embedded game version verified as 0.7.9.16321; exact Steam BuildID unavailable.",

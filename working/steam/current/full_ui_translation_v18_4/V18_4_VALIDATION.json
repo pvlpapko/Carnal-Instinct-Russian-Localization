@@ -1,0 +1,34 @@
+{
+  "release": "18.4",
+  "runtime_tested": false,
+  "editions": {
+    "Steam_current": {
+      "translation_rows": 21647,
+      "locres_entries": 21643,
+      "source_hashes": "PASS",
+      "placeholders": "PASS",
+      "pak_readback": "PASS",
+      "packages": 31,
+      "toc_hashes": "PASS",
+      "gameplay_function_exports_unchanged": 249,
+      "map_display_ftext_occurrences_checked": 3263,
+      "unresolved_map_display_texts": 0,
+      "journal_wrapping_font_and_character_width": "PASS",
+      "legacy_exact_fallback_rows": 4
+    },
+    "NoSteam_0.7.9.16232": {
+      "translation_rows": 19486,
+      "locres_entries": 19486,
+      "source_hashes": "PASS",
+      "placeholders": "PASS",
+      "pak_readback": "PASS",
+      "packages": 71,
+      "toc_hashes": "PASS",
+      "gameplay_function_exports_unchanged": 1693,
+      "map_display_ftext_occurrences_checked": 3103,
+      "unresolved_map_display_texts": 0,
+      "journal_wrapping_font_and_character_width": "PASS",
+      "legacy_exact_fallback_rows": 0
+    }
+  }
+}

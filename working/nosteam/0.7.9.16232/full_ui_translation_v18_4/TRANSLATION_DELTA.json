@@ -1,0 +1,86 @@
+{
+  "edition": "NoSteam",
+  "baseline": "v18.3",
+  "candidate": "v18.4",
+  "full_table_sha256": "4a13fc21afd3c99ce52263501a151aee87da5abd185a10bb576e1e06bab35830",
+  "changes": [
+    {
+      "Namespace": "",
+      "Key": "A6FD74C944809CEA68B123A58EEE754C",
+      "SourceStringHash": "1126338817",
+      "NamespaceHash": "0",
+      "KeyHash": "2370192701",
+      "English": "Restore Defaults",
+      "Russian": "Сбросить",
+      "SourceEvidence": "cooked Base FText",
+      "Assets": "NiceSettingsMenu/Other/Enumerations/E_NSM_ButtonMode.uasset",
+      "PreviousRussian": "Сбросить настройки",
+      "Change": "translation_correction"
+    },
+    {
+      "Namespace": "",
+      "Key": "0E78019C4121F7DAADEA908D7A2BE9E5",
+      "SourceStringHash": "1126338817",
+      "NamespaceHash": "0",
+      "KeyHash": "1096026439",
+      "English": "Restore Defaults",
+      "Russian": "Сбросить",
+      "SourceEvidence": "cooked Base FText",
+      "Assets": "NiceSettingsMenu/UI/Theme_3/WB_T3_SettingsMenu.uasset",
+      "PreviousRussian": "Сбросить настройки",
+      "Change": "translation_correction"
+    },
+    {
+      "Namespace": "",
+      "Key": "9E31548944C23FE38121CEB10CCBFBEB",
+      "SourceStringHash": "762441118",
+      "NamespaceHash": "0",
+      "KeyHash": "245975892",
+      "English": "Device IP Override",
+      "Russian": "IP-адрес устройства",
+      "SourceEvidence": "cooked Base FText",
+      "Assets": "HQUI/ProMainMenu/Widgets/Options/WB_Options_Lovense.uasset",
+      "PreviousRussian": "Переопределить IP устройства",
+      "Change": "translation_correction"
+    },
+    {
+      "Namespace": "",
+      "Key": "49D2DE574C307BFD4C0D21A966083B4E",
+      "SourceStringHash": "1076550297",
+      "NamespaceHash": "0",
+      "KeyHash": "724212184",
+      "English": "Device Port Override",
+      "Russian": "Порт устройства",
+      "SourceEvidence": "cooked Base FText",
+      "Assets": "HQUI/ProMainMenu/Widgets/Options/WB_Options_Lovense.uasset",
+      "PreviousRussian": "Переопределить порт устройства",
+      "Change": "translation_correction"
+    },
+    {
+      "Namespace": "",
+      "Key": "8CF89A4747CFFA4BA097809CA63AE6F6",
+      "SourceStringHash": "464893914",
+      "NamespaceHash": "0",
+      "KeyHash": "1859552660",
+      "English": "Refresh Toy List",
+      "Russian": "Обновить список",
+      "SourceEvidence": "cooked Base FText",
+      "Assets": "HQUI/ProMainMenu/Widgets/Options/WB_Options_Lovense.uasset",
+      "PreviousRussian": "Обновить список игрушек",
+      "Change": "translation_correction"
+    },
+    {
+      "Namespace": "CI_RU_Display_Settings",
+      "Key": "33A3925B62344E5775D0A04A01841A83",
+      "SourceStringHash": "1126338817",
+      "NamespaceHash": "2518682759",
+      "KeyHash": "350379307",
+      "English": "Restore Defaults",
+      "Russian": "Сбросить",
+      "SourceEvidence": "Display-only EX_TextConst; original source retained",
+      "Assets": "Settings",
+      "PreviousRussian": "Сбросить настройки",
+      "Change": "translation_correction"
+    }
+  ]
+}

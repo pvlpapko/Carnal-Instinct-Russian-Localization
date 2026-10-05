@@ -1,0 +1,119 @@
+{
+  "source_game_version": "0.7.9.16321",
+  "steam_build_id": null,
+  "gameinstance_sha256": "756887fd7ef918293f74de69e5bec51f7a54c6dc43408a2e24599cfd9382e898",
+  "files": [
+    {
+      "relative_path": "Content/RPG_InventorySystem/UI/PlayerInventory/WB_Stats_Full.uasset",
+      "drive_id": "16tmqr9MTyFX6zYnm5j8yesmkyjce1yRK",
+      "mime_type": "application/octet-stream",
+      "bytes": 123541,
+      "sha256": "e5091b460d59e442e012376998241369d90aaabd5656efdd7eb62e7c9b2f5763"
+    },
+    {
+      "relative_path": "Content/RPG_InventorySystem/UI/PlayerInventory/WB_Stats_Main_Slot.uasset",
+      "drive_id": "1e9TQ3z4RHX-itcTLH5zBfEFXIgnicwAV",
+      "mime_type": "application/octet-stream",
+      "bytes": 35411,
+      "sha256": "d0d2770fbee69850752d18a7c3d1f2017788c615210ed8fc707c867286695434"
+    },
+    {
+      "relative_path": "Content/RPG_InventorySystem/UI/PlayerInventory/WB_Stats_Main.uasset",
+      "drive_id": "1jn_xaDrnYzsqChvt8K0sr5GvmoEznk5V",
+      "mime_type": "application/octet-stream",
+      "bytes": 42273,
+      "sha256": "60dd3c66073a165b186f83edc69ee3d71bbc1b62d563644807d9710f9ec20410"
+    },
+    {
+      "relative_path": "Content/RPG_InventorySystem/UI/Quests/WB_QuestType.uasset",
+      "drive_id": "1XpCbTnzaneiDIAng5P7VLw1X_IM14V3H",
+      "mime_type": "application/octet-stream",
+      "bytes": 7891,
+      "sha256": "1e1c830a8d1933f5301cb2be7b8a6b4f7ab917b89a694e807c7831085df9b63a"
+    },
+    {
+      "relative_path": "Content/RPG_InventorySystem/UI/Quests/WB_QuestScreen.uasset",
+      "drive_id": "1kQoI_pGwXlytCLW_NYjIRlHvRV8f4WRA",
+      "mime_type": "application/octet-stream",
+      "bytes": 65221,
+      "sha256": "67f39b9d5dcef15c217a8198350486fe76605148351a095a418adf0b389ec8f1"
+    },
+    {
+      "relative_path": "Content/RPG_InventorySystem/UI/Quests/WB_QuestObjectiveName.uasset",
+      "drive_id": "1fqGnE3msL9xoKPvQjQbLw36QOwhfpc0K",
+      "mime_type": "application/octet-stream",
+      "bytes": 3851,
+      "sha256": "5d0eaba6b987539d923cb58004ca98581002ca2b2dde72fd3ab366c62206510f"
+    },
+    {
+      "relative_path": "Content/RPG_InventorySystem/UI/Quests/WB_QuestName.uasset",
+      "drive_id": "1kp_SQHvxkotUHzOeOROFoL1UaGPntFwQ",
+      "mime_type": "application/octet-stream",
+      "bytes": 25891,
+      "sha256": "2351128a6f646645fd11e0a90336b07c534409bee302f7979c0575a3b98f91f3"
+    },
+    {
+      "relative_path": "Content/RPG_InventorySystem/UI/Quests/WB_QuestObjectiveDescription.uasset",
+      "drive_id": "1SvA5BiJGgjw1f4TFpbCLJsSyb-s-c8NQ",
+      "mime_type": "application/octet-stream",
+      "bytes": 2722,
+      "sha256": "9e14810d7bb9857e4d6ee7eb2147fea72f16715daaf4181b9cf5405043ec6476"
+    },
+    {
+      "relative_path": "Content/RPG_InventorySystem/UI/WorldMap/WB_WorldMapPopup.uasset",
+      "drive_id": "1NR3NPiDVOJMoi04b_VoyiXjGfRgyVUUH",
+      "mime_type": "application/octet-stream",
+      "bytes": 292089,
+      "sha256": "f7521f0502734dfb3907fbf4b60daa59cac44565fa8f83dcda78f7d561a35875"
+    },
+    {
+      "relative_path": "Content/RPG_InventorySystem/UI/Character/WB_CharacterScreen.uasset",
+      "drive_id": "11CzJaqnLkme6gTJfq1-d5G6E92u9Rz6o",
+      "mime_type": "application/octet-stream",
+      "bytes": 22623,
+      "sha256": "28198932e5c097bbaf0c5ce8b47fd287539c62e10791b01e54df0794b7d5d38c"
+    },
+    {
+      "relative_path": "Content/RPG_InventorySystem/Classes/MainItemClasses/Consumables/Essence/Essence_Tier_1_Small.uasset",
+      "drive_id": "1OEQdcmcMzFCf-zixgd3vsn1k4Bl3gbB5",
+      "mime_type": "application/octet-stream",
+      "bytes": 1416,
+      "sha256": "f3482cfad2d1bd914ce710fed75387a7a4f8e4ead0b6f040046b82678726b6ce"
+    },
+    {
+      "relative_path": "Content/DLG_Tree/dmap_system/widgets/w_03_map_icon.uasset",
+      "drive_id": "1iUQ8NWxRTWgdB0i7atADYtJoIQyoyXTd",
+      "mime_type": "application/octet-stream",
+      "bytes": 167207,
+      "sha256": "bf60cbfa681dc042744a2fd2de2265f6fc6555ebe4f65780682f9bddc264ffda"
+    },
+    {
+      "relative_path": "Content/BlueprintSystems/Scalable_Map/Blueprints/Widgets/Return_Widgets/Neutral_Widget.uasset",
+      "drive_id": "1qh2s-_NxpwESx9Jq-qpjUIrIPPf-5fS6",
+      "mime_type": "application/octet-stream",
+      "bytes": 35714,
+      "sha256": "c5c1cc5bff1250430f33bc2f9d6b29d49c02c3bfbdf2b350629bccd1e497fa76"
+    },
+    {
+      "relative_path": "Content/NiceSettingsMenu/UI/Theme_3/WB_T3_SettingsMenu.uasset",
+      "drive_id": "1EMS_Gvz2XBcac1VM0FjkIoSOXGzLXee-",
+      "mime_type": "application/octet-stream",
+      "bytes": 131406,
+      "sha256": "3346599fdb83627e96a9c37c6545d22714dc410edf2812554601dfb7f43047e2"
+    },
+    {
+      "relative_path": "Content/NiceSettingsMenu/UI/Theme_3/WB_T3_Lovense.uasset",
+      "drive_id": "1MbaR4GGgQiVu-z8Mhy-hkCJAo5uoEc-d",
+      "mime_type": "application/octet-stream",
+      "bytes": 34480,
+      "sha256": "9a2ac7c2a87df56d0fa9f741a61abcbbe0521b6751ed3db5554d3c5e5047c3f5"
+    },
+    {
+      "relative_path": "Content/NiceSettingsMenu/UI/Theme_3/WB_T3_NSM_Button.uasset",
+      "drive_id": "1mSoQQtyHQYXatFo-nK4iZmeHZjO6vRJ1",
+      "mime_type": "application/octet-stream",
+      "bytes": 8400,
+      "sha256": "0631c93feeeacc0ff955b0ba9170dfa9a9a3675479b30207f8d77dff000da7c9"
+    }
+  ]
+}
