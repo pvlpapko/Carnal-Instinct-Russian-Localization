@@ -1,0 +1,27 @@
+{
+  "release": "18.8",
+  "channel": "release",
+  "name": "Carnal_Instinct_RU_DontLook_2026-10-05_v18.8_RELEASE.zip",
+  "sha256": "75c7f905d640a4670803daa1cc51b352d6c609f51ef6e2663f1dd09d9d1158e8",
+  "archive_bytes": 18309950,
+  "archive_entries": 88,
+  "zip_crc_and_exact_entry_readback": "PASS",
+  "installer_sha256": "0ac01e89430a67e9b7c19c85d966f1328366777ca08d804290b5cb7c8f3aa530",
+  "exact_installer_payload": "PASS",
+  "runtime_tested": false,
+  "shader_acceleration_applied": false,
+  "drive_upload": "verified",
+  "drive_file_id": "1gh0K8kAnSrcTrkc3GQkMJpBhRIiU7cBO",
+  "drive_folder_id": "1VwdnxngtZLDsPl1kP5H5HCJBePoRCF_a",
+  "direct_download_url": "https://drive.google.com/uc?export=download&id=1gh0K8kAnSrcTrkc3GQkMJpBhRIiU7cBO",
+  "drive_readback_sha256_verified": true,
+  "drive_readback_zip_crc_verified": true,
+  "drive_readback_all_entries_verified": 88,
+  "verified_at": "2026-10-05T20:09:30.974223+00:00",
+  "static_tests": {
+    "game_payload": 19,
+    "installer_race": 30
+  },
+  "user_runtime_feedback": "18.7 Steam starts, crafting appeared, UI nearly matches; 18.8 refinement/cache UI not yet run",
+  "full_manual_dialogue_proofread": "pending"
+}
