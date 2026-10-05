@@ -7,10 +7,10 @@
   "verified_game_version": "0.7.9",
   "verified_build": "0.7.9.16232",
   "created_at": "2026-10-05T19:54:35.914522+00:00",
-  "updated_at": "2026-10-05T20:02:43.800603+00:00",
-  "current_phase": "native_ui_and_release_build",
-  "last_completed_unit": "startup_investigation_optional_cache_core_and_prepatch_title_regression",
-  "next_unit": "native_title_overlay_installer_windows_build_final_validation",
+  "updated_at": "2026-10-05T20:06:52.669373+00:00",
+  "current_phase": "release_packaging",
+  "last_completed_unit": "final_payload_and_windows_installer_static_validation",
+  "next_unit": "clean_release_archive_and_verified_direct_download",
   "completed_units": [
     "18.7 user feedback: crafting tab appeared, menus nearly match; Steam startup now reported successful",
     "new ZIP CRC and screenshot review",
@@ -41,13 +41,18 @@
   ],
   "validation_completed": [
     "screenshot ZIP CRC",
-    "fresh Steam GameInstance SHA256"
+    "fresh Steam GameInstance SHA256",
+    "19 final cooked UI/map/crash/display regressions PASS",
+    "30 installer tests with race detection PASS",
+    "Windows amd64 installer compilation PASS",
+    "Independent BLAKE3 package/import/export span verification PASS",
+    "17 journal functions and generated class/CDO unchanged",
+    "Fresh live Steam QuestScreen source SHA256 unchanged"
   ],
   "validation_pending": [
-    "startup timings",
-    "settings FPS",
-    "new optional cache UI on Windows",
-    "full manual dialogue proofreading"
+    "New 18.8 UI in game and cache button on Windows",
+    "Settings FPS and startup timings",
+    "Full manual dialogue proofreading"
   ],
   "notes": [
     "User explicitly requests RELEASE, not TEST",

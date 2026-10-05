@@ -13,7 +13,7 @@ slot=next(s for s in e.exports if ui.CLASS.get(s['cls'])=='VerticalBoxSlot' and 
 e.set(slot,'HorizontalAlignment',2)
 box=e.add('CI_RU_QuestTitleUnderline','SizeBox',tree,{'HeightOverride':2.,'bOverride_HeightOverride':1})
 line=e.add('CI_RU_QuestTitleLine','Border',tree,{'BrushColor':[0.7,0.7,0.7,0.65],
-    'Brush':{'DrawAs':1,'TintColor':{'SpecifiedColor':[1.,1.,1.,1.]}}})
+    'Background':{'DrawAs':1,'TintColor':{'SpecifiedColor':[1.,1.,1.,1.]}}})
 bs=e.add('CI_RU_QuestTitleLineSlot','SizeBoxSlot',box-1,{'Parent':box,'Content':line,'HorizontalAlignment':0,'VerticalAlignment':0})
 vs=e.add('CI_RU_QuestTitleUnderlineSlot','VerticalBoxSlot',panel['index'],{'Parent':panel['index']+1,'Content':box,
     'HorizontalAlignment':0,'Padding':{'Left':0.,'Top':0.,'Right':0.,'Bottom':20.}})

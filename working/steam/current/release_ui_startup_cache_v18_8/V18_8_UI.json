@@ -1,0 +1,66 @@
+{
+  "release": "18.8",
+  "assets": [
+    {
+      "source_sha256": "7f2f8845b6c03faa0f21a05ea839f1e2b07463fb6a96a621be6ef0e2bbab2e03",
+      "patched_sha256": "6e676ac380c26d382f08471e7438d1f48b9c8c85c1b112af22e3c77811272975",
+      "source_header": 34878,
+      "patched_header": 40168,
+      "source_exports": 145,
+      "patched_exports": 149,
+      "changed_exports": [
+        94,
+        119,
+        145,
+        146,
+        147,
+        148
+      ],
+      "evidence": [
+        {
+          "export": "VerticalBoxSlot_1",
+          "field": "HorizontalAlignment",
+          "old": {},
+          "new": 2
+        },
+        {
+          "export": "CI_RU_QuestTitleUnderline",
+          "field": "Slots",
+          "old": {},
+          "new": [
+            148
+          ]
+        },
+        {
+          "export": "CI_RU_QuestTitleUnderline",
+          "field": "Slot",
+          "old": {},
+          "new": 149
+        },
+        {
+          "export": "CI_RU_QuestTitleLine",
+          "field": "Slot",
+          "old": {},
+          "new": 148
+        },
+        {
+          "export": "VerticalBox_1",
+          "field": "Slots",
+          "old": [
+            120,
+            119
+          ],
+          "new": [
+            120,
+            149,
+            119
+          ]
+        }
+      ],
+      "name": "WB_QuestScreen",
+      "edition": "Steam_current",
+      "mount": "Carnal_Instinct_UE5/Content/RPG_InventorySystem/UI/Quests/WB_QuestScreen.uasset"
+    }
+  ],
+  "runtime_tested": false
+}

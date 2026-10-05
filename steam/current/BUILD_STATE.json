@@ -21,8 +21,8 @@
   "source_index_sha256": "91b95dbc38b2f4ffbd3fbea35bb1e4906cec7ddb588be87a15cec17048282274",
   "source_tree_sha256": "f12967fe7bd1c3729caa285519b2acc0059959214bf1f453aefe6437b8fbfef3",
   "source_stock_status": "contains localization modifications; not a clean stock game extraction",
-  "binary_compatibility": "v18.6 TEST: 34 Steam packages statically verified. User 0–8 PASS / 9 FAIL isolated Essence; invalid native FString length 6657 corrected with typed full-record readback. Corrected startup and settings FPS still require game retest; BuildID unknown.",
-  "ui_override_compatibility": "v18.6 preserves v18.5 wide character/journal, radial labels below icons and settings activation fix. Both map popup rows and all five icon display switches contain 899 known captions. Fourteen changed-widget functions and all 12586 both-edition caption cases verified.",
+  "binary_compatibility": "18.8 release: 39 Steam packages statically verified; user reports 18.7 startup/UI working and Crafting visible; new 18.8 native title refinement runtime pending. Exact Steam BuildID unknown.",
+  "ui_override_compatibility": "18.7 modern character/crafting and wide journal retained; 18.8 selected quest title centered and underlined; 17 journal functions/class/CDO unchanged; 19 final cooked regression tests PASS.",
   "last_source_check_at": "2026-10-05T19:54:35.914522+00:00",
   "evidence": [
     "current Google Drive RPGInventory_GameInstance.uasset raw bytes",
