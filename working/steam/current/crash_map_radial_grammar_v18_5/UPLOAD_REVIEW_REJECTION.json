@@ -5,5 +5,8 @@
   "reason": "External transfer of potentially non-public game package/source data; explicit authorization for this payload and destination not confirmed.",
   "primary_upload_attempted": false,
   "safer_result": "local checked primary and diagnostic archives; no alternative external upload attempted",
-  "pending_permission": "Upload both ready ZIPs to the existing Releases folder on pvlpapko@gmail.com Google Drive."
+  "pending_permission": "Upload both ready ZIPs to the existing Releases folder on pvlpapko@gmail.com Google Drive.",
+  "resolved": true,
+  "resolution": "User requested direct download links for the two ready archives after the upload permission question; exact same destination used. Subsequent upload calls approved; both readbacks verified.",
+  "resolved_at": "2026-10-05T16:51:26.459719+00:00"
 }

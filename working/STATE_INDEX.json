@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "updated_at": "2026-10-05T16:39:14.931595+00:00",
+  "updated_at": "2026-10-05T16:51:26.459719+00:00",
   "active_tasks": [
     {
       "edition": "Steam",
@@ -132,13 +132,13 @@
       "edition": "Steam",
       "task": "crash_map_radial_grammar_v18_5",
       "state_path": "working/steam/current/crash_map_radial_grammar_v18_5/AUDIT_STATE.json",
-      "status": "local_release_verified_runtime_editorial_and_upload_approval_pending"
+      "status": "release_uploaded_static_verified_runtime_and_editorial_pending"
     },
     {
       "edition": "NoSteam",
       "task": "crash_map_radial_grammar_v18_5",
       "state_path": "working/nosteam/0.7.9.16232/crash_map_radial_grammar_v18_5/AUDIT_STATE.json",
-      "status": "local_release_verified_runtime_editorial_and_upload_approval_pending"
+      "status": "release_uploaded_static_verified_runtime_and_editorial_pending"
     }
   ],
   "latest_release": {
@@ -170,11 +170,11 @@
     "installer_sha256": "ef1dbbbea14d9c7285d6a5cedda25552dcefa81d7e29862bc81ea08f6e2431c6",
     "runtime_tested": false,
     "steam_crash_root_cause": "unconfirmed",
-    "drive_upload": "blocked_by_automatic_approval_review",
+    "drive_upload": "PASS",
     "final_sha256sums_check": "PASS",
-    "drive_file_id": null,
-    "drive_readback_sha256_verified": false,
-    "drive_readback_zip_crc_verified": false,
+    "drive_file_id": "10eop1T1x76Ll3GHYQVvvZijZEJSnljEJ",
+    "drive_readback_sha256_verified": true,
+    "drive_readback_zip_crc_verified": true,
     "updated_at": "2026-10-05T16:39:14.931595+00:00",
     "editions": [
       "Steam",
@@ -196,12 +196,22 @@
       "host_verify_mode": "PASS",
       "zip_crc_and_entry_readback": "PASS",
       "installer_switch_0_5_9_0_no_backup_smoke": "PASS",
-      "drive_upload": "blocked_by_automatic_approval_review",
-      "drive_file_id": null,
-      "local_archive_path": "/workspace/project-context/carnal-instinct/Carnal_Instinct_RU_Steam_Startup_Probe_v18.5.zip"
+      "drive_upload": "PASS",
+      "drive_file_id": "1Ep0HHgB64-o7T7y6LuAilq-lrNk0dIn5",
+      "local_archive_path": "/workspace/project-context/carnal-instinct/Carnal_Instinct_RU_Steam_Startup_Probe_v18.5.zip",
+      "drive_folder_id": "1VwdnxngtZLDsPl1kP5H5HCJBePoRCF_a",
+      "drive_url": "https://drive.google.com/file/d/1Ep0HHgB64-o7T7y6LuAilq-lrNk0dIn5/view",
+      "direct_download_url": "https://drive.google.com/uc?export=download&id=1Ep0HHgB64-o7T7y6LuAilq-lrNk0dIn5",
+      "drive_readback_sha256_verified": true,
+      "drive_readback_zip_crc_verified": true,
+      "verified_at": "2026-10-05T16:51:26.459719+00:00"
     },
     "runtime_validation": "not performed for 18.5; Steam 18.4 startup failed; crash root cause unconfirmed",
-    "full_manual_dialogue_proofread": "pending"
+    "full_manual_dialogue_proofread": "pending",
+    "drive_folder_id": "1VwdnxngtZLDsPl1kP5H5HCJBePoRCF_a",
+    "drive_url": "https://drive.google.com/file/d/10eop1T1x76Ll3GHYQVvvZijZEJSnljEJ/view",
+    "direct_download_url": "https://drive.google.com/uc?export=download&id=10eop1T1x76Ll3GHYQVvvZijZEJSnljEJ",
+    "verified_at": "2026-10-05T16:51:26.459719+00:00"
   },
   "previous_test_hotfix": {
     "release": "v18.4 Full UI TEST",

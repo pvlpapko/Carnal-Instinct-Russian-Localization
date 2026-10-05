@@ -10,10 +10,14 @@
   "installer_sha256": "ef1dbbbea14d9c7285d6a5cedda25552dcefa81d7e29862bc81ea08f6e2431c6",
   "runtime_tested": false,
   "steam_crash_root_cause": "unconfirmed",
-  "drive_upload": "blocked_by_automatic_approval_review",
+  "drive_upload": "PASS",
   "final_sha256sums_check": "PASS",
-  "drive_file_id": null,
-  "drive_readback_sha256_verified": false,
-  "drive_readback_zip_crc_verified": false,
-  "updated_at": "2026-10-05T16:39:14.931595+00:00"
+  "drive_file_id": "10eop1T1x76Ll3GHYQVvvZijZEJSnljEJ",
+  "drive_readback_sha256_verified": true,
+  "drive_readback_zip_crc_verified": true,
+  "updated_at": "2026-10-05T16:39:14.931595+00:00",
+  "drive_folder_id": "1VwdnxngtZLDsPl1kP5H5HCJBePoRCF_a",
+  "drive_url": "https://drive.google.com/file/d/10eop1T1x76Ll3GHYQVvvZijZEJSnljEJ/view",
+  "direct_download_url": "https://drive.google.com/uc?export=download&id=10eop1T1x76Ll3GHYQVvvZijZEJSnljEJ",
+  "verified_at": "2026-10-05T16:51:26.459719+00:00"
 }
