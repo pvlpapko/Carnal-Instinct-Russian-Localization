@@ -114,7 +114,7 @@
       "edition": "Steam",
       "task": "v15_startup_async_loading_crash",
       "state_path": "working/steam/current/v15_startup_async_loading_crash/AUDIT_STATE.json",
-      "status": "v18_2_runtime_validated_ui_built_runtime_pending"
+      "status": "v18_3_objective_display_boundary_built_runtime_pending"
     }
   ],
   "latest_release": {
@@ -132,17 +132,18 @@
     "steam_verified_game_version": "0.7.9.16321",
     "steam_verified_build": null,
     "nosteam_baseline_build": "0.7.9.16232",
-    "runtime_validation": "Steam v18 full FAIL; v18.1 quest isolation identified Q3 quest_objectives as sole failing Q test; v18.2 main pending runtime. NoSteam v15 user-reported working."
+    "runtime_validation": "Steam v18 full failed startup; Q1/Q2/Q4 quest isolation PASS, Q3 quest_objectives FAIL; v18.3 objective display-boundary candidate pending. NoSteam v15 user-reported working"
   },
   "latest_test_hotfix": {
     "edition": "Steam",
     "task": "v15_startup_async_loading_crash",
-    "name": "Carnal_Instinct_RU_DontLook_RuntimeValidatedUI_2026-10-05_v18.2_TEST.zip",
-    "sha256": "900c26c9bd28010eb69961f8c9c22b7161db97518ad3b4c3eabc33cda1754765",
-    "bytes": 27972341,
-    "drive_file_id": "1wrpv2_tWWhYz49TjW_Qiyhlb4jjX-BP5",
-    "runtime_validation": "pending main; Q1/Q2/Q4 pass, Q3 fail isolated",
-    "steam_packages": 23,
-    "excluded_crashing_asset": "quest_objectives.uasset"
+    "name": "Carnal_Instinct_RU_DontLook_ObjectiveDisplayBoundary_2026-10-05_v18.3_TEST.zip",
+    "sha256": "acb8b64ddd4caece240e29b6deae0e1aafe6d8d501578fa1bfe924d128c79b5b",
+    "bytes": 34826861,
+    "runtime_validation": "pending",
+    "steam_packages": 26,
+    "objective_translation_coverage": "531/531 static",
+    "full_quest_objectives_patch": "excluded",
+    "minimal_hell_kitchen_refs": 12
   }
 }
