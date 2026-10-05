@@ -172,6 +172,13 @@ class Edit:
         bundles=b[h[9]:h[10]]+b''.join(struct.pack('<II',i,c) for i in range(nold,n) for c in (0,1))
         pieces.append(bundles)
         oldentries=list(struct.unpack('<'+'i'*((h[12]-h[11])//4),b[h[11]:h[12]]));entries=[];depheaders=[]
+        def object_refs(v,f):
+            if f['type']=='ObjectProperty':return {v} if v else set()
+            if f['type']=='ArrayProperty':return set().union(*(object_refs(x,f['inner']) for x in v)) if v else set()
+            if f['type']=='StructProperty' and f['struct'] not in ui.NATIVE:
+                fs={x['name']:x for x in ui.fields(f['struct'])}
+                return set().union(*(object_refs(x,fs[key]) for key,x in v.items())) if v else set()
+            return set()
         for e in self.exports:
             if e['index']<nold:
                 first,*counts=struct.unpack_from('<i4I',b,h[10]+20*e['index']);old=oldentries[first:first+sum(counts)] if sum(counts) else []
@@ -181,6 +188,12 @@ class Edit:
                 groups[2]+=list(range(nold+1,n+1))
             else:
                 groups=[[e['outer']+1] if e['outer']>>62==0 else [],[],list(range(1,n+1)),[]]
+            if is_widget(e) and e['index'] in self.changed:
+                values=plain(self.values(e));fs={f['name']:f for f in ui.fields('/Script/UMG.'+ui.CLASS[e['cls']])}
+                refs=set().union(*(object_refs(v,fs[key]) for key,v in values.items())) if values else set()
+                # A serialized imported font/texture must exist before ResolveObjectRef.
+                imported={r for r in refs if r<0}
+                groups[2]=list(dict.fromkeys(groups[2]+sorted(imported)))
             depheaders.append((len(entries),*[len(g) for g in groups]));entries.extend(x for g in groups for x in g)
         pieces.append(b''.join(struct.pack('<i4I',*x) for x in depheaders))
         pieces.append(struct.pack('<'+'i'*len(entries),*entries))

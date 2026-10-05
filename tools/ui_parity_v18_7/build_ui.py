@@ -15,7 +15,7 @@ def path_for(name,edition=ED):
 
 def patch(name):return Edit(path_for(name))
 
-def copy_visual(editor,name,fields=('Font','ColorAndOpacity','Brush','BrushColor','BackgroundColor','ContentColorAndOpacity')):
+def copy_visual(editor,name,fields=('Font','ColorAndOpacity','Brush','BrushColor','BackgroundColor','ContentColorAndOpacity','WidgetStyle')):
     """Only named native appearance fields; resource refs remap by package/public hash."""
     ref=ui.zen.package(path_for(name,'NoSteam_0.7.9.16232'))
     def remap(v,f):
@@ -31,6 +31,8 @@ def copy_visual(editor,name,fields=('Font','ColorAndOpacity','Brush','BrushColor
         e=matches[0];v=props(ref,source);fs={f['name']:f for f in ui.fields('/Script/UMG.'+ui.CLASS[e['cls']])}
         for field in fields:
             if field in v:editor.set(e,field,remap(plain(v[field]),fs[field]))
+        if ui.CLASS[e['cls']]=='TextBlock' and 'ColorAndOpacity' not in v:
+            editor.set(e,'ColorAndOpacity',{'SpecifiedColor':[1.,1.,1.,1.]})
 
 def fixed_canvas(editor):editor.fixed_canvas()
 
@@ -128,12 +130,15 @@ for i in slots:
 e.set('SizeBox_0','bOverride_WidthOverride',0);e.set('SizeBox_0','bOverride_MinDesiredWidth',0)
 for n in ['ObjectivesText','ObjectivesText_1']:
     font=plain(e.values(n))['Font'];font['Size']=22.;font['LetterSpacing']=0
-    e.set(n,'Font',font);e.set(n,'ColorAndOpacity',{'SpecifiedColor':[1.,1.,1.,1.]})
+    e.set(n,'Font',font)
     e.set(n,'AutoWrapText',1)
 # Existing modern grouped list stays in use. Only its redundant old headings disappear.
 for n in ['WB_T3_SubHeadline','WB_T3_OptionSwitcher']:e.custom_visibility(n,1)
+e.set('HorizontalBox_1','Visibility',1)  # Source right-click tracking route remains available.
 finish(e,'WB_QuestScreen')
 e=patch('WB_QuestType');finish(e,'WB_QuestType')
+for name in ['WB_QuestName','WB_QuestObjectiveName','WB_QuestObjectiveDescription']:
+    e=patch(name);copy_visual(e,name);finish(e,name)
 
 # The selected quest heading uses this source class. Modernize native appearance;
 # preserve its Text, T_SubHeadline member, casing and update handlers.
@@ -142,8 +147,8 @@ font_source=ui.zen.package(path_for('WB_Stats_Main'))
 font_export=next(x for x in font_source['exports'] if x['name']=='TextBlock_66')
 font=plain(props(font_source,font_export))['Font'];font['FontObject']=e.import_resource(font_source,font['FontObject'])
 font['Size']=32.;font['LetterSpacing']=0
-e.set('T_SubHeadline','Font',font);e.set('T_SubHeadline','ColorAndOpacity',{'SpecifiedColor':[1.,1.,1.,1.]})
-e.set('T_SubHeadline','AutoWrapText',1);e.set('T_SubHeadline','Justification',0)
+e.set('T_SubHeadline','Font',font)
+e.set('T_SubHeadline','AutoWrapText',1);e.set('T_SubHeadline','Justification',1)
 for n in ['Image_180','Image_337']:e.set(n,'Visibility',1)
 finish(e,'WB_T3_SubHeadline')
 

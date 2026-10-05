@@ -7,10 +7,10 @@
   "verified_game_version": "0.7.9.16321",
   "verified_build": null,
   "created_at": "2026-10-05T18:27:25.092492+00:00",
-  "updated_at": "2026-10-05T19:12:28.475509+00:00",
-  "current_phase": "native_ui_prepared_container_validation_pending",
-  "last_completed_unit": "nine_source_based_steam_ui_packages_prepared",
-  "next_unit": "build_containers_and_validate_graph_bindings_existing_regressions",
+  "updated_at": "2026-10-05T19:32:07.973055+00:00",
+  "current_phase": "static_validation_passed_installer_pending",
+  "last_completed_unit": "final_containers_and_17_regressions_pass",
+  "next_unit": "build_windows_installer_clean_zip_upload_verify_direct_link",
   "completed_units": [
     "Six screenshots compared: NoSteam magenta borders, grouped vertical journal, crafting after Lore; Steam gold and horizontal objectives/journal, missing crafting tab",
     "Fresh Steam GameInstance SHA256 unchanged 756887fd...; source CharacterScreen and QuestScreen exact prior bytes",
@@ -23,7 +23,10 @@
     "Steam modern hidden sections activated; old duplicate controls collapsed without removing bindings",
     "Crafting tab visible after Lore; source enabled-state/progression/click/hover logic preserved",
     "Steam quest layout changed from columns to objectives above journal; source functions preserved",
-    "154 functions decoded and roundtripped; only one form-caption route and dependent event entry offsets edited; calculation/progression functions retained"
+    "154 functions decoded and roundtripped; only one form-caption route and dependent event entry offsets edited; calculation/progression functions retained",
+    "Steam 12 UI assets in 39-package final container; NoSteam 71 packages byte-identical to 18.6",
+    "Golden centered quest title retained according to screenshot; body font/white colors/wrapping match NoSteam reference",
+    "Legacy action row collapsed; original right-click quest tracking handler retained"
   ],
   "pending_units": [
     "Determine compatibility and minimal native theme/layout edits preserving functions",
@@ -46,7 +49,13 @@
     "ZIP CRC and safe image extraction PASS",
     "Fresh source GameInstance identity and CharacterScreen/QuestScreen bytes match prior source",
     "Baseline five layout regressions fail for the reported reasons",
-    "Prepared 9 Steam UI packages: all native widgets parse; 154 function scripts strictly valid"
+    "Prepared 9 Steam UI packages: all native widgets parse; 154 function scripts strictly valid",
+    "6 UI regression tests + 3 essence/map tests + 8 retained display regression tests PASS",
+    "174 strict function scripts and all event entries PASS",
+    "Native slot reciprocity, dependency ranges and acyclic Create/Serialize graphs PASS for all 12 UI packages",
+    "Independent full container BLAKE3, package IDs/import dependencies, export spans PASS; both translation tables/locres and NoSteam payload unchanged",
+    "Imported font/texture creation dependencies explicitly added to serialization graph; rebuilt containers and 17 regression checks PASS",
+    "Go installer core tests -race PASS; Windows EXE rebuilt from the final six files"
   ],
   "validation_pending": [
     "Native serialization and complete functions readback",
@@ -58,7 +67,7 @@
     "Crafting tab must follow Lore",
     "NoSteam known good screenshot/reference; preserve edition gameplay logic",
     "NoSteam payload will remain byte-identical to 18.6 because its screenshot layout and crafting are already correct",
-    "Selected quest heading source class native font/color updated; this also affects Steam Theme_3 headings, runtime fit pending",
-    "Exact pixel/visual equivalence and actual startup/crafting/settings FPS are unverified"
+    "Exact pixel/visual equivalence and actual startup/crafting/settings FPS are unverified",
+    "Selected quest heading native font enlarged; its golden centered styling retained; shared Steam Theme_3 headings affected, runtime fit pending"
   ]
 }

@@ -62,4 +62,12 @@ class SteamLayout(unittest.TestCase):
         self.assertEqual([p['exports'][i-1]['name'] for i in contents],['SizeBox_0','QuestObjectives_1'])
         self.assertEqual(widget(p,'SizeBox_0')[1]['bOverride_WidthOverride']['value'],0)
 
+    def test_journal_body_has_white_condensed_font_and_wrapping(self):
+        for name in ['WB_QuestObjectiveName','WB_QuestObjectiveDescription']:
+            p=package(name);_,v=widget(p,'Text_ObjectiveName')
+            font=v['Font']['value']
+            self.assertEqual(font['TypefaceFontName']['value'],'FF_BarlowCondensed-Regular')
+            self.assertEqual(list(v['ColorAndOpacity']['value']['SpecifiedColor']['value']),[1,1,1,1])
+            self.assertEqual(v['AutoWrapText']['value'],1)
+
 if __name__=='__main__':unittest.main()

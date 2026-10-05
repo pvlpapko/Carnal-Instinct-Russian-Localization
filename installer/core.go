@@ -25,9 +25,9 @@ type edition struct {
 }
 
 var editions = []edition{
-	{steamPayloadEditionID, "Steam", "Русификатор 18.6 TEST для Steam. Исправлена запись текста эссенции; запуск требует проверки. Исходная версия игры: 0.7.9.16321.", runtimeNames},
+	{steamPayloadEditionID, "Steam", "Русификатор 18.7 TEST. Обновлены меню персонажа и журнал, показана вкладка «Изготовление». Требуется проверка в игре. Исходная версия игры: 0.7.9.16321.", runtimeNames},
 	{"NoSteam_0.7.9.16232", "NoSteam 0.7.9.16232", "Полный комплект для исходной NoSteam 0.7.9.16232.", runtimeNames},
-	{"NoSteam_0.7.9.16313plus", "NoSteam 0.7.9.16313 / 16315+", "Использует актуальный совместимый Steam_current комплект. NoSteam 0.7.9.16232 всегда остаётся отдельным payload.", runtimeNames},
+	{"NoSteam_0.7.9.16313plus", "NoSteam 0.7.9.16313 / 16315+", "Комплект Steam для новых сборок NoSteam. Совместимость с 0.7.9.16313/16315+ пока не проверена.", runtimeNames},
 }
 
 func payloadEdition(e edition) string {

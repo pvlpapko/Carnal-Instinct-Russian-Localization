@@ -1,0 +1,105 @@
+{
+  "release": "18.7 TEST",
+  "runtime_tested": false,
+  "editions": {
+    "Steam_current": {
+      "packages": 39,
+      "new_packages": [
+        "Carnal_Instinct_UE5/Content/NiceSettingsMenu/UI/Theme_3/WB_T3_SubHeadline.uasset",
+        "Carnal_Instinct_UE5/Content/RPG_InventorySystem/UI/Misc/WB_UpperUIBar.uasset",
+        "Carnal_Instinct_UE5/Content/RPG_InventorySystem/UI/Misc/WB_WindowSwitcher.uasset",
+        "Carnal_Instinct_UE5/Content/RPG_InventorySystem/UI/Quests/WB_QuestScreen.uasset",
+        "Carnal_Instinct_UE5/Content/RPG_InventorySystem/UI/Quests/WB_QuestType.uasset"
+      ],
+      "strict_widget_functions": 174,
+      "all_event_entries": "PASS",
+      "graphs": {
+        "WB_CharacterScreen": {
+          "native_objects": 32,
+          "export_create_serialize_commands": 94,
+          "native_panel_slot_reciprocity": "PASS",
+          "dependency_indices_and_acyclic_order": "PASS"
+        },
+        "WB_Stats_Main": {
+          "native_objects": 123,
+          "export_create_serialize_commands": 302,
+          "native_panel_slot_reciprocity": "PASS",
+          "dependency_indices_and_acyclic_order": "PASS"
+        },
+        "WB_Stats_Full": {
+          "native_objects": 457,
+          "export_create_serialize_commands": 992,
+          "native_panel_slot_reciprocity": "PASS",
+          "dependency_indices_and_acyclic_order": "PASS"
+        },
+        "WB_Stats_Main_Slot": {
+          "native_objects": 36,
+          "export_create_serialize_commands": 118,
+          "native_panel_slot_reciprocity": "PASS",
+          "dependency_indices_and_acyclic_order": "PASS"
+        },
+        "WB_WindowSwitcher": {
+          "native_objects": 146,
+          "export_create_serialize_commands": 816,
+          "native_panel_slot_reciprocity": "PASS",
+          "dependency_indices_and_acyclic_order": "PASS"
+        },
+        "WB_UpperUIBar": {
+          "native_objects": 32,
+          "export_create_serialize_commands": 72,
+          "native_panel_slot_reciprocity": "PASS",
+          "dependency_indices_and_acyclic_order": "PASS"
+        },
+        "WB_QuestScreen": {
+          "native_objects": 105,
+          "export_create_serialize_commands": 290,
+          "native_panel_slot_reciprocity": "PASS",
+          "dependency_indices_and_acyclic_order": "PASS"
+        },
+        "WB_QuestType": {
+          "native_objects": 28,
+          "export_create_serialize_commands": 64,
+          "native_panel_slot_reciprocity": "PASS",
+          "dependency_indices_and_acyclic_order": "PASS"
+        },
+        "WB_QuestName": {
+          "native_objects": 30,
+          "export_create_serialize_commands": 98,
+          "native_panel_slot_reciprocity": "PASS",
+          "dependency_indices_and_acyclic_order": "PASS"
+        },
+        "WB_QuestObjectiveName": {
+          "native_objects": 8,
+          "export_create_serialize_commands": 24,
+          "native_panel_slot_reciprocity": "PASS",
+          "dependency_indices_and_acyclic_order": "PASS"
+        },
+        "WB_QuestObjectiveDescription": {
+          "native_objects": 2,
+          "export_create_serialize_commands": 12,
+          "native_panel_slot_reciprocity": "PASS",
+          "dependency_indices_and_acyclic_order": "PASS"
+        },
+        "WB_T3_SubHeadline": {
+          "native_objects": 14,
+          "export_create_serialize_commands": 36,
+          "native_panel_slot_reciprocity": "PASS",
+          "dependency_indices_and_acyclic_order": "PASS"
+        }
+      },
+      "exact_full_container_readback": "PASS",
+      "translations_essence_map_radial_settings_retained": "PASS",
+      "nosteam_payload_identical_to_18_6": false
+    },
+    "NoSteam_0.7.9.16232": {
+      "packages": 71,
+      "new_packages": [],
+      "strict_widget_functions": 0,
+      "all_event_entries": "PASS",
+      "graphs": {},
+      "exact_full_container_readback": "PASS",
+      "translations_essence_map_radial_settings_retained": "PASS",
+      "nosteam_payload_identical_to_18_6": true
+    }
+  }
+}
