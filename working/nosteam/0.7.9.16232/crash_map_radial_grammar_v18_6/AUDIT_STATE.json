@@ -7,10 +7,10 @@
   "verified_game_version": "0.7.9.16232",
   "verified_build": "0.7.9.16232",
   "created_at": "2026-10-05T17:21:24.500298+00:00",
-  "updated_at": "2026-10-05T17:42:35.177749+00:00",
-  "current_phase": "native_text_corruption_proven",
-  "last_completed_unit": "typed_native_essence_fix_and_reported_map_gaps",
-  "next_unit": "extend_all_seven_map_display_switches_and_package",
+  "updated_at": "2026-10-05T17:48:05.999422+00:00",
+  "current_phase": "caption_lookup_patch_complete",
+  "last_completed_unit": "seven_display_paths_receive_899_caption_union",
+  "next_unit": "build_final_container_readback_and_installer",
   "completed_units": [
     "New crash archives read: both startup at seconds=0 and same normalized shipping stack",
     "User confirms all startup probes except 9 run; only delta 8→9 Essence_Tier_1_Small",
@@ -18,7 +18,8 @@
     "Current Steam GameInstance source SHA256 unchanged",
     "Essence source empty Namespace uses five serialized bytes; old substring replacement left 0x01 and created invalid length 6657",
     "Corrected three full native FText fields; all flags/keys/English/class/other item bytes retained",
-    "RAQOTE, THE BREADBASKET and ANUBITE CAMP missing from both popup lookup tables; Breadbasket locres already exists"
+    "RAQOTE, THE BREADBASKET and ANUBITE CAMP missing from both popup lookup tables; Breadbasket locres already exists",
+    "899 known caption union in both popup rows and all five icon switches per edition; reported Raqote/Anubite Camp + previously excluded Breadbasket added"
   ],
   "pending_units": [
     "Build corrected Essence package; validate complete native FText from shipped readback",
@@ -34,7 +35,11 @@
     "startup probe stages 8 and 9",
     "user new crash ZIPs"
   ],
-  "working_files": [],
+  "working_files": [
+    "tools/native_ftext.py",
+    "tools/map_popup_crash_v18_6/",
+    "tools/map_audit_v18_5/kismet.py"
+  ],
   "validation_completed": [
     "Adjacent probe resource delta identified by user runtime tests"
   ],

@@ -107,7 +107,7 @@ class Reader:
         elif op==0x42:e.parts=[self.pointer(),self.expr()]
         elif op==0x4c:e.parts=[self.target()]
         elif op==0x4e:e.parts=[self.expr()]
-        elif op==0x4f:e.parts=[self.expr()]
+        elif op in (0x4f,0x51):e.parts=[self.expr()]
         elif op==0x5b:e.parts=[self.target()]
         elif op==0x61:e.parts=[self.fname(),self.expr(),self.expr()]
         elif op==0x64:e.parts=[self.pointer(),self.expr()]

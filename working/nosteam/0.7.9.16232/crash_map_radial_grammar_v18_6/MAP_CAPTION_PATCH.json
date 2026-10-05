@@ -1,0 +1,452 @@
+{
+  "release": "18.6",
+  "runtime_tested": false,
+  "source_map_cells_audited": 2513,
+  "gameplay_actor_quest_save_identifiers_changed": false,
+  "assets": [
+    {
+      "edition": "Steam_current",
+      "mount": "Carnal_Instinct_UE5/Content/RPG_InventorySystem/UI/WorldMap/WB_WorldMapPopup.uasset",
+      "source_sha256": "103719b825e8148ed61e1f4f83aecfc35695465824dca8f11c6129bc8a1e0738",
+      "patched_sha256": "1f6893b8e2d58c0486fb48236fd90ddc85a3d0208153830d84997d4463f06b1d",
+      "evidence": [
+        {
+          "old_switch_vm": 75,
+          "old_cases": 887,
+          "new_cases": 899,
+          "added_caption_count": 12
+        },
+        {
+          "old_switch_vm": 121485,
+          "old_cases": 887,
+          "new_cases": 899,
+          "added_caption_count": 12
+        }
+      ],
+      "old_memory": 238582,
+      "new_memory": 240458,
+      "old_disk": 231626,
+      "new_disk": 233406,
+      "latent_linkages_rebased": 0,
+      "wrappers_rebased": 0,
+      "wrapper_entries": [
+        {
+          "wrapper": "Construct",
+          "old": 10,
+          "new": 10,
+          "old_invalid_entry_repaired": false
+        }
+      ]
+    },
+    {
+      "edition": "Steam_current",
+      "mount": "Carnal_Instinct_UE5/Content/DLG_Tree/dmap_system/widgets/w_03_map_icon.uasset",
+      "source_sha256": "6508101bc8cdb0aaaf3c8a90f137df27176a32d1d726362cbb64666e7701fe6f",
+      "patched_sha256": "671a702b46dccf48c946d2daa07951ea049e9c126ba59267c87f05bd925a9116",
+      "evidence": [
+        {
+          "old_switch_vm": 2211,
+          "old_cases": 262,
+          "new_cases": 899,
+          "added_caption_count": 637
+        },
+        {
+          "old_switch_vm": 30195,
+          "old_cases": 216,
+          "new_cases": 899,
+          "added_caption_count": 683
+        },
+        {
+          "old_switch_vm": 52945,
+          "old_cases": 196,
+          "new_cases": 899,
+          "added_caption_count": 703
+        },
+        {
+          "old_switch_vm": 73246,
+          "old_cases": 444,
+          "new_cases": 899,
+          "added_caption_count": 455
+        },
+        {
+          "old_switch_vm": 121756,
+          "old_cases": 216,
+          "new_cases": 899,
+          "added_caption_count": 683
+        }
+      ],
+      "old_memory": 144473,
+      "new_memory": 618262,
+      "old_disk": 141509,
+      "new_disk": 602654,
+      "latent_linkages_rebased": 0,
+      "wrappers_rebased": 1,
+      "wrapper_entries": [
+        {
+          "wrapper": "OnMouseEnter",
+          "old": 1856,
+          "new": 1856,
+          "old_invalid_entry_repaired": false
+        },
+        {
+          "wrapper": "OnMouseLeave",
+          "old": 144410,
+          "new": 618199,
+          "old_invalid_entry_repaired": false
+        },
+        {
+          "wrapper": "update_icon",
+          "old": 10,
+          "new": 10,
+          "old_invalid_entry_repaired": false
+        }
+      ]
+    },
+    {
+      "edition": "NoSteam_0.7.9.16232",
+      "mount": "Carnal_Instinct_UE5/Content/RPG_InventorySystem/UI/WorldMap/WB_WorldMapPopup.uasset",
+      "source_sha256": "af7d1572a4975e09107ff3c23ab791d5f517d00e011f944db6a3b4f422bb4276",
+      "patched_sha256": "a4220d3d26d8346783d6bf808e6d53230c77ad92013843270d1a3b0c7e3a9da6",
+      "evidence": [
+        {
+          "old_switch_vm": 75,
+          "old_cases": 888,
+          "new_cases": 899,
+          "added_caption_count": 11
+        },
+        {
+          "old_switch_vm": 121580,
+          "old_cases": 888,
+          "new_cases": 899,
+          "added_caption_count": 11
+        }
+      ],
+      "old_memory": 238772,
+      "new_memory": 240458,
+      "old_disk": 231808,
+      "new_disk": 233406,
+      "latent_linkages_rebased": 0,
+      "wrappers_rebased": 0,
+      "wrapper_entries": [
+        {
+          "wrapper": "Construct",
+          "old": 10,
+          "new": 10,
+          "old_invalid_entry_repaired": false
+        }
+      ]
+    },
+    {
+      "edition": "NoSteam_0.7.9.16232",
+      "mount": "Carnal_Instinct_UE5/Content/DLG_Tree/dmap_system/widgets/w_03_map_icon.uasset",
+      "source_sha256": "6508101bc8cdb0aaaf3c8a90f137df27176a32d1d726362cbb64666e7701fe6f",
+      "patched_sha256": "671a702b46dccf48c946d2daa07951ea049e9c126ba59267c87f05bd925a9116",
+      "evidence": [
+        {
+          "old_switch_vm": 2211,
+          "old_cases": 262,
+          "new_cases": 899,
+          "added_caption_count": 637
+        },
+        {
+          "old_switch_vm": 30195,
+          "old_cases": 216,
+          "new_cases": 899,
+          "added_caption_count": 683
+        },
+        {
+          "old_switch_vm": 52945,
+          "old_cases": 196,
+          "new_cases": 899,
+          "added_caption_count": 703
+        },
+        {
+          "old_switch_vm": 73246,
+          "old_cases": 444,
+          "new_cases": 899,
+          "added_caption_count": 455
+        },
+        {
+          "old_switch_vm": 121756,
+          "old_cases": 216,
+          "new_cases": 899,
+          "added_caption_count": 683
+        }
+      ],
+      "old_memory": 144473,
+      "new_memory": 618262,
+      "old_disk": 141509,
+      "new_disk": 602654,
+      "latent_linkages_rebased": 0,
+      "wrappers_rebased": 1,
+      "wrapper_entries": [
+        {
+          "wrapper": "OnMouseEnter",
+          "old": 1856,
+          "new": 1856,
+          "old_invalid_entry_repaired": false
+        },
+        {
+          "wrapper": "OnMouseLeave",
+          "old": 144410,
+          "new": 618199,
+          "old_invalid_entry_repaired": false
+        },
+        {
+          "wrapper": "update_icon",
+          "old": 10,
+          "new": 10,
+          "old_invalid_entry_repaired": false
+        }
+      ]
+    }
+  ],
+  "editions": {
+    "Steam_current": {
+      "previous_popup_captions": 887,
+      "unified_caption_pool": 899,
+      "added_captions": [
+        {
+          "English": "Anubite",
+          "Russian": "Анубит",
+          "identity": [
+            "",
+            "E88B7CD046D28A26A77F98B8ECC324F8",
+            "2637187732"
+          ],
+          "source": "RPG_InventorySystem/ItemsData/Enums/E_PlayerTitle.uasset"
+        },
+        {
+          "English": "Bulls Shield",
+          "Russian": "Щит быков",
+          "identity": [
+            "",
+            "6248A7AB4ECE8B26AA7439AA4F41D597",
+            "2168821471"
+          ],
+          "source": "DLG_Tree/dqst_system/common/quest_list.uasset"
+        },
+        {
+          "English": "Maz-Arjeni",
+          "Russian": "Маз-Арджени",
+          "identity": [
+            "",
+            "C121C91646566C511E3843A47999B5EF",
+            "3755219544"
+          ],
+          "source": "DLG_Tree/dqst_system/common/quest_list.uasset"
+        },
+        {
+          "English": "Medin Island",
+          "Russian": "Остров Медин",
+          "identity": [
+            "",
+            "E47CBD5246B20263FA9619A8215A67BA",
+            "4234406540"
+          ],
+          "source": "DLG_Tree/dqst_system/common/quest_list.uasset"
+        },
+        {
+          "English": "The Breadbasket",
+          "Russian": "Житница",
+          "identity": [
+            "",
+            "D98F200B4B42358AA59761BADEA5B22E",
+            "964289506"
+          ],
+          "source": "DLG_Tree/dqst_system/common/quest_list.uasset"
+        },
+        {
+          "English": "The Throne",
+          "Russian": "Трон",
+          "identity": [
+            "",
+            "89CFD67B4CFC43DBB261A495669DB9B5",
+            "1116716890"
+          ],
+          "source": "DLG_Tree/dqst_system/common/quest_list.uasset"
+        },
+        {
+          "English": "Wased Heq",
+          "Russian": "Васед Хек",
+          "identity": [
+            "",
+            "47D853B74E2C2EC86D6F3BA156767F6C",
+            "603197567"
+          ],
+          "source": "DLG_Tree/dqst_system/common/quest_list.uasset"
+        },
+        {
+          "English": "Wased-Heq \"The Scepter\"",
+          "Russian": "Васед-Хек «Скипетр»",
+          "identity": [
+            "",
+            "3ED21B32449949B756250C89B67E09E4",
+            "3030788225"
+          ],
+          "source": "DLG_Tree/dqst_system/common/quest_list.uasset"
+        },
+        {
+          "English": "Fast Travel - Travel to this location?",
+          "Russian": "Быстрое перемещение — отправиться сюда?",
+          "identity": [
+            "",
+            "F2139089465FDF2642E35481312271F8",
+            "984127848"
+          ],
+          "source": "BlueprintSystems/Scalable_Map/Blueprints/Widgets/Return_Widgets/Neutral_Widget.uasset"
+        },
+        {
+          "English": "Dungeon",
+          "Russian": "Подземелье",
+          "identity": [
+            "CI_RU_Display_Audit2MapCaptions",
+            "73054BD649A0CBBD054A53CA55805F9A",
+            "874357728"
+          ],
+          "source": "DLG_Tree/dmap_system/widgets/w_03_map_icon.uasset"
+        },
+        {
+          "English": "Raqote",
+          "Russian": "Ракоте",
+          "identity": [
+            "CI_RU_Display_MapCaptions_V18_6",
+            "B044CB7547AC059AF5F1D3E4CC70CD43",
+            "1711538518"
+          ],
+          "source": "User observed RAQOTE as upper map-hover row in NoSteam 18.5"
+        },
+        {
+          "English": "Anubite Camp",
+          "Russian": "Лагерь анубитов",
+          "identity": [
+            "CI_RU_Display_MapCaptions_V18_6",
+            "FA8E6B1F43AA4D5AE01D505051DE9580",
+            "3103284924"
+          ],
+          "source": "User observed ANUBITE CAMP as lower map-hover row in NoSteam 18.5"
+        }
+      ],
+      "new_localization_rows": 2,
+      "source_map_raw_labels_missing_from_dictionary": []
+    },
+    "NoSteam_0.7.9.16232": {
+      "previous_popup_captions": 888,
+      "unified_caption_pool": 899,
+      "added_captions": [
+        {
+          "English": "Anubite",
+          "Russian": "Анубит",
+          "identity": [
+            "",
+            "E88B7CD046D28A26A77F98B8ECC324F8",
+            "2637187732"
+          ],
+          "source": "RPG_InventorySystem/ItemsData/Enums/E_PlayerTitle.uasset"
+        },
+        {
+          "English": "Bulls Shield",
+          "Russian": "Щит быков",
+          "identity": [
+            "",
+            "6248A7AB4ECE8B26AA7439AA4F41D597",
+            "2168821471"
+          ],
+          "source": "DLG_Tree/dqst_system/common/quest_list.uasset"
+        },
+        {
+          "English": "Maz-Arjeni",
+          "Russian": "Маз-Арджени",
+          "identity": [
+            "",
+            "C121C91646566C511E3843A47999B5EF",
+            "3755219544"
+          ],
+          "source": "DLG_Tree/dqst_system/common/quest_list.uasset"
+        },
+        {
+          "English": "Medin Island",
+          "Russian": "Остров Медин",
+          "identity": [
+            "",
+            "E47CBD5246B20263FA9619A8215A67BA",
+            "4234406540"
+          ],
+          "source": "DLG_Tree/dqst_system/common/quest_list.uasset"
+        },
+        {
+          "English": "The Breadbasket",
+          "Russian": "Житница",
+          "identity": [
+            "",
+            "D98F200B4B42358AA59761BADEA5B22E",
+            "964289506"
+          ],
+          "source": "DLG_Tree/dqst_system/common/quest_list.uasset"
+        },
+        {
+          "English": "The Throne",
+          "Russian": "Трон",
+          "identity": [
+            "",
+            "89CFD67B4CFC43DBB261A495669DB9B5",
+            "1116716890"
+          ],
+          "source": "DLG_Tree/dqst_system/common/quest_list.uasset"
+        },
+        {
+          "English": "Wased Heq",
+          "Russian": "Васед Хек",
+          "identity": [
+            "",
+            "47D853B74E2C2EC86D6F3BA156767F6C",
+            "603197567"
+          ],
+          "source": "DLG_Tree/dqst_system/common/quest_list.uasset"
+        },
+        {
+          "English": "Wased-Heq \"The Scepter\"",
+          "Russian": "Васед-Хек «Скипетр»",
+          "identity": [
+            "",
+            "3ED21B32449949B756250C89B67E09E4",
+            "3030788225"
+          ],
+          "source": "DLG_Tree/dqst_system/common/quest_list.uasset"
+        },
+        {
+          "English": "Fast Travel - Travel to this location?",
+          "Russian": "Быстрое перемещение — отправиться сюда?",
+          "identity": [
+            "",
+            "F2139089465FDF2642E35481312271F8",
+            "984127848"
+          ],
+          "source": "BlueprintSystems/Scalable_Map/Blueprints/Widgets/Return_Widgets/Neutral_Widget.uasset"
+        },
+        {
+          "English": "Raqote",
+          "Russian": "Ракоте",
+          "identity": [
+            "CI_RU_Display_MapCaptions_V18_6",
+            "B044CB7547AC059AF5F1D3E4CC70CD43",
+            "1711538518"
+          ],
+          "source": "User observed RAQOTE as upper map-hover row in NoSteam 18.5"
+        },
+        {
+          "English": "Anubite Camp",
+          "Russian": "Лагерь анубитов",
+          "identity": [
+            "CI_RU_Display_MapCaptions_V18_6",
+            "FA8E6B1F43AA4D5AE01D505051DE9580",
+            "3103284924"
+          ],
+          "source": "User observed ANUBITE CAMP as lower map-hover row in NoSteam 18.5"
+        }
+      ],
+      "new_localization_rows": 2,
+      "source_map_raw_labels_missing_from_dictionary": []
+    }
+  }
+}
