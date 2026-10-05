@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "updated_at": "2026-10-05T08:12:00+03:00",
+  "updated_at": "2026-10-05T08:52:00+03:00",
   "active_tasks": [
     {
       "edition": "Steam",
@@ -114,7 +114,7 @@
       "edition": "Steam",
       "task": "v15_startup_async_loading_crash",
       "state_path": "working/steam/current/v15_startup_async_loading_crash/AUDIT_STATE.json",
-      "status": "v17_full_current_source_restore_built_static_validation_runtime_pending"
+      "status": "v18_full_current_source_ui_restore_uploaded_static_validation_runtime_pending"
     }
   ],
   "latest_release": {
@@ -132,16 +132,21 @@
     "steam_verified_game_version": "0.7.9.16321",
     "steam_verified_build": null,
     "nosteam_baseline_build": "0.7.9.16232",
-    "runtime_validation": "Steam v15/v16 binary releases failed startup; v15.2 TEXT_ONLY PASS; v15.3 one-package current-source IoStore canary PASS; full current-source rebuild in progress. NoSteam v15 user-reported working"
+    "runtime_validation": "Steam v15/v16 failed startup; v15.2 TEXT_ONLY PASS; v15.3 corrected one-package current-source IoStore canary PASS; v18 full current-source restore pending. NoSteam v15 user-reported working"
   },
   "latest_test_hotfix": {
     "edition": "Steam",
     "task": "v15_startup_async_loading_crash",
-    "name": "Carnal_Instinct_RU_DontLook_CurrentSteamFullRestore_2026-10-05_v17_TEST.zip",
-    "sha256": "4abf564c13884789ea86f99795f1ba6135bcb605ebd51073093fbac37d90002c",
-    "bytes": 27474741,
-    "runtime_validation": "pending full v17 test",
-    "steam_packages": 39,
-    "installer_sha256": "70b4973086a988592a2901f00238b8d93edba8ccdc4922604b33b9cbf35d2c73"
+    "name": "Carnal_Instinct_RU_DontLook_FULL_CurrentSteam_2026-10-05_v18_TEST.zip",
+    "sha256": "f9864d38925418b5c0dfd17b187de887d3839b988bebd1d1bb5969a0402d3df7",
+    "bytes": 29690518,
+    "archive_entries": 344,
+    "drive_file_id": "1-0GzxB7_diN0v9IgWjpfDefvXdq27ziy",
+    "drive_readback_sha256_verified": true,
+    "drive_readback_zip_crc_verified": true,
+    "steam_packages": 77,
+    "installer_sha256": "8e15d2e846307cc75f46fae12f76a81716fb90189770852f0a70c29e458930d3",
+    "runtime_validation": "pending full v18 Steam test",
+    "current_source_rebase": true
   }
 }
