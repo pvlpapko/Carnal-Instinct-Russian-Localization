@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "updated_at": "2026-10-05T10:35:29.913911+00:00",
+  "updated_at": "2026-10-05T11:51:37.575884+00:00",
   "active_tasks": [
     {
       "edition": "Steam",
@@ -120,13 +120,25 @@
       "edition": "Steam",
       "task": "full_ui_translation_v18_4",
       "state_path": "working/steam/current/full_ui_translation_v18_4/AUDIT_STATE.json",
-      "status": "v18_4_uploaded_static_validation_runtime_pending"
+      "status": "runtime_failed_startup_async_loading"
     },
     {
       "edition": "NoSteam",
       "task": "full_ui_translation_v18_4",
       "state_path": "working/nosteam/0.7.9.16232/full_ui_translation_v18_4/AUDIT_STATE.json",
-      "status": "v18_4_uploaded_static_validation_runtime_pending"
+      "status": "user_reported_running_with_ui_translation_performance_issues"
+    },
+    {
+      "edition": "Steam",
+      "task": "crash_map_radial_grammar_v18_5",
+      "state_path": "working/steam/current/crash_map_radial_grammar_v18_5/AUDIT_STATE.json",
+      "status": "in_progress"
+    },
+    {
+      "edition": "NoSteam",
+      "task": "crash_map_radial_grammar_v18_5",
+      "state_path": "working/nosteam/0.7.9.16232/crash_map_radial_grammar_v18_5/AUDIT_STATE.json",
+      "status": "in_progress"
     }
   ],
   "latest_release": {
@@ -175,7 +187,7 @@
     "steam_verified_game_version": "0.7.9.16321",
     "steam_verified_build": null,
     "nosteam_baseline_build": "0.7.9.16232",
-    "runtime_validation": "pending",
+    "runtime_validation": "Steam v18.4 startup FAIL; NoSteam user-reported runs, unresolved map labels/radial overlap/settings lag",
     "full_quest_objectives_patch": "excluded; minimal v18.3 Hell of a Kitchen display refs retained"
   }
 }

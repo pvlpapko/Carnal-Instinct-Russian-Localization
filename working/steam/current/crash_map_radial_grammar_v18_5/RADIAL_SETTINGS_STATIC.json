@@ -1,0 +1,408 @@
+{
+  "release": "18.5",
+  "runtime_tested": false,
+  "assets": [
+    {
+      "edition": "Steam_current",
+      "mount": "Carnal_Instinct_UE5/Content/BlueprintSystems/DynamicRadialMenu/Widgets/W_MenuItem.uasset",
+      "source_sha256": "dc394ab1b8c85b1ad874a2147598c2995cd3060126736753399dd795ac1942cb",
+      "patched_sha256": "7e112f6fb2051045e099bac33f782cb5a9b18862fc04692c52bf249020fbd500",
+      "type": "native_caption_layout",
+      "function_exports_unchanged": true,
+      "selection_geometry_unchanged": true,
+      "properties": [
+        {
+          "export": "OverlaySlot_1",
+          "property": "Padding",
+          "old": "native default",
+          "new": {
+            "Left": -30.0,
+            "Top": 112.0,
+            "Right": -30.0,
+            "Bottom": -112.0
+          }
+        },
+        {
+          "export": "OverlaySlot_1",
+          "property": "VerticalAlignment",
+          "old": 3,
+          "new": 1
+        },
+        {
+          "export": "TXT_Item",
+          "property": "AutoWrapText",
+          "old": "native default",
+          "new": 1
+        },
+        {
+          "export": "TXT_Item",
+          "property": "WrapTextAt",
+          "old": "native default",
+          "new": 160.0
+        },
+        {
+          "export": "TXT_Item",
+          "property": "TextTransformPolicy",
+          "old": 2,
+          "new": 0
+        }
+      ]
+    },
+    {
+      "edition": "Steam_current",
+      "mount": "Carnal_Instinct_UE5/Content/NiceSettingsMenu/UI/Theme_3/WB_T3_MainMenu.uasset",
+      "source_sha256": "a601f3bb867c5a5ad6abd52d99880c4be80eccb01094ee23904010a4ab1be465",
+      "patched_sha256": "a66fc5e85b5bd36d9b916267222f6fc5a1e5252fdd47469d3734f3059626ecbd",
+      "type": "skip_reapplying_on_display_activation",
+      "manual_apply_and_save_component_unchanged": true,
+      "calls": [
+        {
+          "old_call_vm_offset": 1670,
+          "old_apply_argument": "CI_RU_LoadSettingsOnOpen",
+          "new_apply_argument": "False",
+          "bActivate": true
+        },
+        {
+          "old_call_vm_offset": 2449,
+          "old_apply_argument": "True",
+          "new_apply_argument": "False",
+          "bActivate": true
+        }
+      ],
+      "old_memory": 6330,
+      "new_memory": 6322,
+      "old_disk": 8454,
+      "new_disk": 8438,
+      "latent_linkages_rebased": 0,
+      "wrappers_rebased": 24,
+      "wrapper_entries": [
+        {
+          "wrapper": "BndEvt__WB_T3_MainMenu_WB_T3_NSM_Button_Continue_K2Node_ComponentBoundEvent_2_OnClicked__DelegateSignature",
+          "old": 4714,
+          "new": 4706
+        },
+        {
+          "wrapper": "BndEvt__WB_T3_MainMenu_WB_T3_NSM_Button_Credits_K2Node_ComponentBoundEvent_10_OnClicked__DelegateSignature",
+          "old": 4395,
+          "new": 4387
+        },
+        {
+          "wrapper": "BndEvt__WB_T3_MainMenu_WB_T3_NSM_Button_CreditsBack_K2Node_ComponentBoundEvent_12_OnClicked__DelegateSignature",
+          "old": 4529,
+          "new": 4521
+        },
+        {
+          "wrapper": "BndEvt__WB_T3_MainMenu_WB_T3_NSM_Button_ExitGame_K2Node_ComponentBoundEvent_11_OnClicked__DelegateSignature",
+          "old": 4524,
+          "new": 4516
+        },
+        {
+          "wrapper": "BndEvt__WB_T3_MainMenu_WB_T3_NSM_Button_LoadGame_K2Node_ComponentBoundEvent_0_OnClicked__DelegateSignature",
+          "old": 4534,
+          "new": 4526
+        },
+        {
+          "wrapper": "BndEvt__WB_T3_MainMenu_WB_T3_NSM_Button_LoadGameBack_2_K2Node_ComponentBoundEvent_15_OnClicked__DelegateSignature",
+          "old": 15,
+          "new": 15
+        },
+        {
+          "wrapper": "BndEvt__WB_T3_MainMenu_WB_T3_NSM_Button_LoadGameBack_K2Node_ComponentBoundEvent_1_OnClicked__DelegateSignature",
+          "old": 4704,
+          "new": 4696
+        },
+        {
+          "wrapper": "BndEvt__WB_T3_MainMenu_WB_T3_NSM_Button_Lovense_K2Node_ComponentBoundEvent_13_OnClicked__DelegateSignature",
+          "old": 6199,
+          "new": 6191
+        },
+        {
+          "wrapper": "BndEvt__WB_T3_MainMenu_WB_T3_NSM_Button_Play_K2Node_ComponentBoundEvent_8_OnClicked__DelegateSignature",
+          "old": 4061,
+          "new": 4053
+        },
+        {
+          "wrapper": "BndEvt__WB_T3_MainMenu_WB_T3_NSM_Button_Settings_K2Node_ComponentBoundEvent_9_OnClicked__DelegateSignature",
+          "old": 4390,
+          "new": 4382
+        },
+        {
+          "wrapper": "BndEvt__WB_T3_MainMenu_WB_T3_NSM_Slot_Button_1_K2Node_ComponentBoundEvent_4_OnClicked__DelegateSignature",
+          "old": 5381,
+          "new": 5373
+        },
+        {
+          "wrapper": "BndEvt__WB_T3_MainMenu_WB_T3_NSM_Slot_Button_2_K2Node_ComponentBoundEvent_5_OnClicked__DelegateSignature",
+          "old": 5645,
+          "new": 5637
+        },
+        {
+          "wrapper": "BndEvt__WB_T3_MainMenu_WB_T3_NSM_Slot_Button_3_K2Node_ComponentBoundEvent_6_OnClicked__DelegateSignature",
+          "old": 5785,
+          "new": 5777
+        },
+        {
+          "wrapper": "BndEvt__WB_T3_MainMenu_WB_T3_NSM_Slot_Button_4_K2Node_ComponentBoundEvent_14_OnClicked__DelegateSignature",
+          "old": 5925,
+          "new": 5917
+        },
+        {
+          "wrapper": "BndEvt__WB_T3_MainMenu_WB_T3_NSM_Slot_Button_K2Node_ComponentBoundEvent_3_OnClicked__DelegateSignature",
+          "old": 5241,
+          "new": 5233
+        },
+        {
+          "wrapper": "BndEvt__WB_T3_MainMenu_WB_T3_SettingsMenu_K2Node_ComponentBoundEvent_7_RequestClosingMenu__DelegateSignature",
+          "old": 4056,
+          "new": 4048
+        },
+        {
+          "wrapper": "Cancel Over-Ride",
+          "old": 6193,
+          "new": 6185
+        },
+        {
+          "wrapper": "Check Over-Ride",
+          "old": 6194,
+          "new": 6186
+        },
+        {
+          "wrapper": "Confirm Over-Ride",
+          "old": 6065,
+          "new": 6057
+        },
+        {
+          "wrapper": "Construct",
+          "old": 4709,
+          "new": 4701
+        },
+        {
+          "wrapper": "Finished_D631F4F048D948A8602041A20925315A",
+          "old": 67,
+          "new": 67
+        },
+        {
+          "wrapper": "Load Game",
+          "old": 5640,
+          "new": 5632
+        },
+        {
+          "wrapper": "New Game",
+          "old": 5521,
+          "new": 5513
+        },
+        {
+          "wrapper": "OnInitialized",
+          "old": 1867,
+          "new": 1859
+        },
+        {
+          "wrapper": "OnRequestGoBack",
+          "old": 1872,
+          "new": 1864
+        },
+        {
+          "wrapper": "ShowHome",
+          "old": 2330,
+          "new": 2322
+        }
+      ]
+    },
+    {
+      "edition": "NoSteam_0.7.9.16232",
+      "mount": "Carnal_Instinct_UE5/Content/BlueprintSystems/DynamicRadialMenu/Widgets/W_MenuItem.uasset",
+      "source_sha256": "c7681e02c0ee42f8d015addb531729caac041e9e8e9d07c9480620f3f64feb1d",
+      "patched_sha256": "d9404aeec26e10a6760128c9b2116ded6dde9cd3823ec7c6482f4e52a0bd9b3f",
+      "type": "native_caption_layout",
+      "function_exports_unchanged": true,
+      "selection_geometry_unchanged": true,
+      "properties": [
+        {
+          "export": "OverlaySlot_1",
+          "property": "Padding",
+          "old": "native default",
+          "new": {
+            "Left": -30.0,
+            "Top": 112.0,
+            "Right": -30.0,
+            "Bottom": -112.0
+          }
+        },
+        {
+          "export": "OverlaySlot_1",
+          "property": "VerticalAlignment",
+          "old": 3,
+          "new": 1
+        },
+        {
+          "export": "TXT_Item",
+          "property": "AutoWrapText",
+          "old": "native default",
+          "new": 1
+        },
+        {
+          "export": "TXT_Item",
+          "property": "WrapTextAt",
+          "old": "native default",
+          "new": 160.0
+        },
+        {
+          "export": "TXT_Item",
+          "property": "TextTransformPolicy",
+          "old": 2,
+          "new": 0
+        }
+      ]
+    },
+    {
+      "edition": "NoSteam_0.7.9.16232",
+      "mount": "Carnal_Instinct_UE5/Content/NiceSettingsMenu/UI/Theme_3/WB_T3_MainMenu.uasset",
+      "source_sha256": "5daebaff45e0d91c9cc575f3846fb5f82380f39b220ba09ffe14c1b78697afb8",
+      "patched_sha256": "5323ba5256552942804688c3fdc108551365527afd9ca2b2a4387052d637ddd3",
+      "type": "skip_reapplying_on_display_activation",
+      "manual_apply_and_save_component_unchanged": true,
+      "calls": [
+        {
+          "old_call_vm_offset": 1670,
+          "old_apply_argument": "CI_RU_LoadSettingsOnOpen",
+          "new_apply_argument": "False",
+          "bActivate": true
+        },
+        {
+          "old_call_vm_offset": 2449,
+          "old_apply_argument": "True",
+          "new_apply_argument": "False",
+          "bActivate": true
+        }
+      ],
+      "old_memory": 6207,
+      "new_memory": 6199,
+      "old_disk": 8303,
+      "new_disk": 8287,
+      "latent_linkages_rebased": 0,
+      "wrappers_rebased": 23,
+      "wrapper_entries": [
+        {
+          "wrapper": "BndEvt__WB_T3_MainMenu_WB_T3_NSM_Button_Continue_K2Node_ComponentBoundEvent_2_OnClicked__DelegateSignature",
+          "old": 4714,
+          "new": 4706
+        },
+        {
+          "wrapper": "BndEvt__WB_T3_MainMenu_WB_T3_NSM_Button_Credits_K2Node_ComponentBoundEvent_10_OnClicked__DelegateSignature",
+          "old": 4395,
+          "new": 4387
+        },
+        {
+          "wrapper": "BndEvt__WB_T3_MainMenu_WB_T3_NSM_Button_CreditsBack_K2Node_ComponentBoundEvent_12_OnClicked__DelegateSignature",
+          "old": 4529,
+          "new": 4521
+        },
+        {
+          "wrapper": "BndEvt__WB_T3_MainMenu_WB_T3_NSM_Button_ExitGame_K2Node_ComponentBoundEvent_11_OnClicked__DelegateSignature",
+          "old": 4524,
+          "new": 4516
+        },
+        {
+          "wrapper": "BndEvt__WB_T3_MainMenu_WB_T3_NSM_Button_LoadGame_K2Node_ComponentBoundEvent_0_OnClicked__DelegateSignature",
+          "old": 4534,
+          "new": 4526
+        },
+        {
+          "wrapper": "BndEvt__WB_T3_MainMenu_WB_T3_NSM_Button_LoadGameBack_K2Node_ComponentBoundEvent_1_OnClicked__DelegateSignature",
+          "old": 4704,
+          "new": 4696
+        },
+        {
+          "wrapper": "BndEvt__WB_T3_MainMenu_WB_T3_NSM_Button_Play_K2Node_ComponentBoundEvent_8_OnClicked__DelegateSignature",
+          "old": 4061,
+          "new": 4053
+        },
+        {
+          "wrapper": "BndEvt__WB_T3_MainMenu_WB_T3_NSM_Button_Settings_K2Node_ComponentBoundEvent_9_OnClicked__DelegateSignature",
+          "old": 4390,
+          "new": 4382
+        },
+        {
+          "wrapper": "BndEvt__WB_T3_MainMenu_WB_T3_NSM_Slot_Button_1_K2Node_ComponentBoundEvent_4_OnClicked__DelegateSignature",
+          "old": 5500,
+          "new": 5492
+        },
+        {
+          "wrapper": "BndEvt__WB_T3_MainMenu_WB_T3_NSM_Slot_Button_2_K2Node_ComponentBoundEvent_5_OnClicked__DelegateSignature",
+          "old": 5650,
+          "new": 5642
+        },
+        {
+          "wrapper": "BndEvt__WB_T3_MainMenu_WB_T3_NSM_Slot_Button_3_K2Node_ComponentBoundEvent_6_OnClicked__DelegateSignature",
+          "old": 5790,
+          "new": 5782
+        },
+        {
+          "wrapper": "BndEvt__WB_T3_MainMenu_WB_T3_NSM_Slot_Button_4_K2Node_ComponentBoundEvent_14_OnClicked__DelegateSignature",
+          "old": 5930,
+          "new": 5922
+        },
+        {
+          "wrapper": "BndEvt__WB_T3_MainMenu_WB_T3_NSM_Slot_Button_K2Node_ComponentBoundEvent_3_OnClicked__DelegateSignature",
+          "old": 5360,
+          "new": 5352
+        },
+        {
+          "wrapper": "BndEvt__WB_T3_MainMenu_WB_T3_SettingsMenu_K2Node_ComponentBoundEvent_7_RequestClosingMenu__DelegateSignature",
+          "old": 4056,
+          "new": 4048
+        },
+        {
+          "wrapper": "Cancel Over-Ride",
+          "old": 6198,
+          "new": 6190
+        },
+        {
+          "wrapper": "Check Over-Ride",
+          "old": 6199,
+          "new": 6191
+        },
+        {
+          "wrapper": "Confirm Over-Ride",
+          "old": 6070,
+          "new": 6062
+        },
+        {
+          "wrapper": "Construct",
+          "old": 4709,
+          "new": 4701
+        },
+        {
+          "wrapper": "Finished_D631F4F048D948A8602041A20925315A",
+          "old": 52,
+          "new": 52
+        },
+        {
+          "wrapper": "Load Game",
+          "old": 5645,
+          "new": 5637
+        },
+        {
+          "wrapper": "New Game",
+          "old": 5640,
+          "new": 5632
+        },
+        {
+          "wrapper": "OnInitialized",
+          "old": 1867,
+          "new": 1859
+        },
+        {
+          "wrapper": "OnRequestGoBack",
+          "old": 1872,
+          "new": 1864
+        },
+        {
+          "wrapper": "ShowHome",
+          "old": 2330,
+          "new": 2322
+        }
+      ]
+    }
+  ]
+}

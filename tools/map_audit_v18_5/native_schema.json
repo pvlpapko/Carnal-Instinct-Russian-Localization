@@ -1,0 +1,22 @@
+{
+  "/Script/UMG.OverlaySlot": {
+    "super": "/Script/UMG.PanelSlot",
+    "properties": [
+      {
+        "name": "Padding",
+        "type": "StructProperty",
+        "struct": "/Script/SlateCore.Margin"
+      },
+      {
+        "name": "HorizontalAlignment",
+        "type": "ByteProperty",
+        "enum": "/Script/SlateCore.EHorizontalAlignment"
+      },
+      {
+        "name": "VerticalAlignment",
+        "type": "ByteProperty",
+        "enum": "/Script/SlateCore.EVerticalAlignment"
+      }
+    ]
+  }
+}

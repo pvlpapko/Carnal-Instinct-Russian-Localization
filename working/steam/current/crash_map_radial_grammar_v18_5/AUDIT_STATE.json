@@ -1,0 +1,53 @@
+{
+  "schema_version": "1.0",
+  "edition": "Steam",
+  "task": "crash_map_radial_grammar_v18_5",
+  "status": "in_progress",
+  "source_state_id": "steam_current_2026-10-03_16321_asset_verified_index_stale",
+  "verified_game_version": "0.7.9.16321",
+  "verified_build": null,
+  "created_at": "2026-10-05T10:57:53.922119+00:00",
+  "updated_at": "2026-10-05T11:51:37.575884+00:00",
+  "current_phase": "native_radial_and_settings_display_fixes_built",
+  "last_completed_unit": "radial_caption_native_margin_and_settings_activation_rebase",
+  "next_unit": "all_map_cell_scan_aliases_and_editorial_review",
+  "completed_units": [
+    "v18.4 runtime feedback recorded",
+    "new screenshots viewed: Tal'senet campfire and radial icon/title overlap",
+    "minidump confirms malformed large read during startup; asset remains unidentified",
+    "radial native layout built, gameplay functions unchanged",
+    "Settings Activate display call skips repeated apply; wrapper entry points rebased"
+  ],
+  "pending_units": [
+    "Steam crash root cause and regression check",
+    "settings performance investigation",
+    "radial label layout both editions",
+    "full map input/name/progression coverage audit",
+    "dialogue grammar and terminology review",
+    "release build/static checks/Drive readback"
+  ],
+  "source_files_used": [
+    "CI_SOURCE_INDEX.json",
+    "v18.3 verified baseline",
+    "v18.4 runtime-failed Steam candidate",
+    "user CrashContext.runtime-xml and UEMinidump.dmp",
+    "user screenshots-v18_4-feedback"
+  ],
+  "working_files": [],
+  "validation_completed": [
+    "crash recorded in FAsyncLoadingThread at seconds_since_start=0",
+    "Strict Kismet input/output roundtrip for edited MainMenu and every event wrapper",
+    "Unchanged native selection size and other radial function exports"
+  ],
+  "validation_pending": [
+    "all new fixes",
+    "actual game validation"
+  ],
+  "notes": [
+    "No subagents: minimize Codex usage.",
+    "Do not infer runtime success from container or bytecode checks.",
+    "Map audit must include source FString/FName values and dynamically created actors, not only existing FText in display widgets.",
+    "User confirms Settings smooth without localization. Performance of candidate still requires game measurement.",
+    "Steam crash root cause not proven. Do not label release FINAL."
+  ]
+}

@@ -2,12 +2,12 @@
   "schema_version": "1.0",
   "edition": "NoSteam",
   "task": "full_ui_translation_v18_4",
-  "status": "v18_4_uploaded_static_validation_runtime_pending",
+  "status": "user_reported_running_with_map_radial_and_settings_issues",
   "source_state_id": "nosteam_0.7.9.16232_v18.3_payload_sha256_verified",
   "verified_game_version": "0.7.9",
   "verified_build": "0.7.9.16232",
   "created_at": "2026-10-05T09:43:01.180062+00:00",
-  "updated_at": "2026-10-05T10:35:29.913911+00:00",
+  "updated_at": "2026-10-05T10:57:53.922119+00:00",
   "current_phase": "runtime_validation_pending",
   "last_completed_unit": "archive_uploaded_and_drive_readback_hash_crc_verified",
   "next_unit": "in_game_startup_and_visual_validation_for_nosteam",
@@ -70,7 +70,8 @@
     "User reports v18.3 is current; do not resurrect full crashing quest_objectives override",
     "NoSteam current menus are NOT reference; screenshots define desired layouts for both editions",
     "Minimize Codex usage with targeted downloads and deterministic audits. No subagents.",
-    "Runtime results must be stated separately from static checks."
+    "Runtime results must be stated separately from static checks.",
+    "2026-10-05 feedback: Steam v18.4 startup crash; NoSteam runs, map Tal'senet remains English; radial titles overlap icons; main-menu settings severe lag."
   ],
   "release_candidate": {
     "release": "v18.4 Full UI TEST",
