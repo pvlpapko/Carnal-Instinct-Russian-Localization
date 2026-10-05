@@ -1,0 +1,119 @@
+{
+  "schema_version": "1.0",
+  "edition": "Steam",
+  "release": "v17 Current-Source Full Restore TEST",
+  "author": "Don't Look",
+  "source_state_id": "steam_current_2026-10-03_16321_asset_verified_index_stale",
+  "verified_game_version": "0.7.9.16321",
+  "verified_build": null,
+  "runtime_evidence": {
+    "v15_2_text_only": "PASS user reported",
+    "v15_3_single_current_source_iostore_canary": "PASS user reported",
+    "v17_full_restore": "PENDING"
+  },
+  "strategy": "minimal full-feature current-source restore: 39 targeted packages only; no stale cross-build UI wholesale reuse",
+  "package_count": 39,
+  "forbidden_overrides_absent": [
+    "Neutral_Widget.uasset",
+    "WB_WorldMapPopup.uasset"
+  ],
+  "iostore": {
+    "packages": 39,
+    "toc_entries": 40,
+    "blocks": 47,
+    "utoc_bytes": 5565,
+    "ucas_bytes": 3080192,
+    "container_id": 17329019104982967540
+  },
+  "files": {
+    "pak": {
+      "bytes": 2524021,
+      "sha256": "270dd12b1a431d5454f5ae8fdc711a5d28bc53b0f11f1b40d28e8d701093d268"
+    },
+    "utoc": {
+      "bytes": 5565,
+      "sha256": "5c6ab72e21c2b164793af33b070fe693ebe2188aadae9df7d5a83a864ad83a00"
+    },
+    "ucas": {
+      "bytes": 3080192,
+      "sha256": "e38dcbd635a3b3a07903febb8cfef543aebdfde03c249da91fc0a84e13a238a8"
+    }
+  },
+  "validation": [
+    "39/39 exact named-package readback PASS",
+    "TOC BLAKE3 metadata PASS",
+    "physical UCAS block cover exact",
+    "Zen package path identity PASS",
+    "current-source import/export-count checks PASS where source bytes available",
+    "NoSteam 0.7.9.16232 byte-identical to working v15",
+    "WB_WorldMapPopup absent",
+    "Neutral_Widget absent"
+  ],
+  "runtime_tested": false,
+  "package_groups": {
+    "current Steam source; byte-identical to v15 desired asset": [
+      "Carnal_Instinct_UE5/Content/BlueprintSystems/Books/Blueprints/BP_BookTemplate.uasset",
+      "Carnal_Instinct_UE5/Content/BlueprintSystems/Books/Blueprints/WB_PageBookDefault.uasset",
+      "Carnal_Instinct_UE5/Content/BlueprintSystems/DynamicRadialMenu/Components/AC_RadialMenu.uasset",
+      "Carnal_Instinct_UE5/Content/BlueprintSystems/DynamicRadialMenu/Widgets/W_Menu.uasset",
+      "Carnal_Instinct_UE5/Content/DLG_Tree/dlg_system/widgets/base/w_01_dlg_2d_layout.uasset",
+      "Carnal_Instinct_UE5/Content/DLG_Tree/dlg_system/widgets/base/w_02_dlg_2d_subtitle_entry.uasset",
+      "Carnal_Instinct_UE5/Content/DLG_Tree/dlg_system/widgets/base/w_02_dlg_2d_subtitles.uasset",
+      "Carnal_Instinct_UE5/Content/NiceSettingsMenu/UI/General/MASTER/WB_Master_SettingsMenu.uasset",
+      "Carnal_Instinct_UE5/Content/NiceSettingsMenu/UI/Theme_3/WB_T3_LoadGameSlot.uasset",
+      "Carnal_Instinct_UE5/Content/NiceSettingsMenu/UI/Theme_3/WB_T3_Lovense.uasset",
+      "Carnal_Instinct_UE5/Content/NiceSettingsMenu/UI/Theme_3/WB_T3_MainMenu.uasset",
+      "Carnal_Instinct_UE5/Content/RPG_InventorySystem/Integration/DCSMagic/UI/WB_AbilityTree.uasset",
+      "Carnal_Instinct_UE5/Content/RPG_InventorySystem/UI/SaveSystem/WB_LoadGameSlot.uasset",
+      "Carnal_Instinct_UE5/Content/RPG_InventorySystem/UI/ToolTip/WB_ToolTipItemStatsSlot.uasset"
+    ],
+    "v14 current-source map UI/data-only patch": [
+      "Carnal_Instinct_UE5/Content/DLG_Tree/dmap_system/blueprints/bp_newQuest_marker.uasset",
+      "Carnal_Instinct_UE5/Content/DLG_Tree/dmap_system/blueprints/bp_quest_marker.uasset",
+      "Carnal_Instinct_UE5/Content/RPG_InventorySystem/UI/WorldMap/BP_CustomWaypoint.uasset",
+      "Carnal_Instinct_UE5/Content/RPG_InventorySystem/UI/WorldMap/BP_NewQuest_Notif.uasset",
+      "Carnal_Instinct_UE5/Content/RPG_InventorySystem/UI/WorldMap/BP_Obj_SearchArea_Base.uasset",
+      "Carnal_Instinct_UE5/Content/RPG_InventorySystem/UI/WorldMap/WB_MapLegend_Item.uasset",
+      "Carnal_Instinct_UE5/Content/RPG_InventorySystem/UI/WorldMap/WB_WorldMap.uasset"
+    ],
+    "v15 current-source-derived localization/display patch": [
+      "Carnal_Instinct_UE5/Content/DLG_Tree/dmap_system/widgets/w_03_map_icon.uasset",
+      "Carnal_Instinct_UE5/Content/DLG_Tree/dqst_system/common/quest_list.uasset",
+      "Carnal_Instinct_UE5/Content/DLG_Tree/dqst_system/common/quest_objectives.uasset",
+      "Carnal_Instinct_UE5/Content/DLG_Tree/dqst_system/common/quest_sub_objectives.uasset",
+      "Carnal_Instinct_UE5/Content/MSL_Toolkit/localization_system/language_data/en/text/Quests/loc_dlg_bored_anubite.uasset",
+      "Carnal_Instinct_UE5/Content/MSL_Toolkit/localization_system/language_data/en/text/Quests/loc_dlg_kordon.uasset",
+      "Carnal_Instinct_UE5/Content/RPG_InventorySystem/Classes/MainItemClasses/Consumables/Essence/Essence_Tier_1_Small.uasset",
+      "Carnal_Instinct_UE5/Content/RPG_InventorySystem/UI/Crafting/WB_CraftingList.uasset",
+      "Carnal_Instinct_UE5/Content/RPG_InventorySystem/UI/Crafting/WB_CraftingWindow.uasset",
+      "Carnal_Instinct_UE5/Content/RPG_InventorySystem/UI/Dev/WB_CheatMenuOption.uasset",
+      "Carnal_Instinct_UE5/Content/RPG_InventorySystem/UI/Dev/WB_CheatMenuOption_Forms.uasset",
+      "Carnal_Instinct_UE5/Content/RPG_InventorySystem/UI/Dev/WB_CheatMenuOption_Stats.uasset",
+      "Carnal_Instinct_UE5/Content/RPG_InventorySystem/UI/Dev/WB_CheatMenu_Button_Normal.uasset",
+      "Carnal_Instinct_UE5/Content/RPG_InventorySystem/UI/Misc/WB_LevelExpBar_Carnal.uasset",
+      "Carnal_Instinct_UE5/Content/RPG_InventorySystem/UI/Vendor/WB_VendorInventory.uasset"
+    ],
+    "current Steam schema primitive layout patch": [
+      "Carnal_Instinct_UE5/Content/RPG_InventorySystem/UI/Character/WB_CharacterScreen.uasset",
+      "Carnal_Instinct_UE5/Content/RPG_InventorySystem/UI/PlayerInventory/WB_Stats_Main.uasset"
+    ],
+    "current Steam schema quest journal layout patch": [
+      "Carnal_Instinct_UE5/Content/RPG_InventorySystem/UI/Quests/WB_QuestName.uasset"
+    ]
+  },
+  "archive": {
+    "name": "Carnal_Instinct_RU_DontLook_CurrentSteamFullRestore_2026-10-05_v17_TEST.zip",
+    "bytes": 27474741,
+    "sha256": "4abf564c13884789ea86f99795f1ba6135bcb605ebd51073093fbac37d90002c",
+    "zip_crc": "PASS"
+  },
+  "installer": {
+    "name": "CarnalInstinct_RU_Setup.exe",
+    "bytes": 17565184,
+    "sha256": "70b4973086a988592a2901f00238b8d93edba8ccdc4922604b33b9cbf35d2c73"
+  },
+  "nosteam": {
+    "baseline": "0.7.9.16232",
+    "byte_identical_to_v15_working_payload": true
+  }
+}
