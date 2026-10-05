@@ -2,13 +2,13 @@
   "schema_version": "1.0",
   "edition": "Steam",
   "task": "v15_startup_async_loading_crash",
-  "status": "v15_3_iostore_canary_uploaded_runtime_pending",
+  "status": "v15_3_iostore_canary_runtime_pass_full_rebuild_in_progress",
   "source_state_id": "steam_current_2026-10-03_16321_asset_verified_index_stale",
   "verified_game_version": "0.7.9.16321",
   "verified_build": null,
-  "current_phase": "iostore_builder_runtime_canary",
-  "last_completed_unit": "v15_3_single_current_gameinstance_canary_build_and_drive_readback",
-  "next_unit": "runtime_test_v15_3_iostore_canary",
+  "current_phase": "full_current_source_binary_restore",
+  "last_completed_unit": "runtime_v15_3_iostore_canary_startup_pass",
+  "next_unit": "rebuild_full_steam_payload_from_current_source_and_restore_ui_fixes",
   "completed_units": [
     "v15 Steam startup failure reproduced by user; NoSteam v15 works",
     "full 71-package v15 Steam override comparison against current source completed",
@@ -51,12 +51,16 @@
     "v15.3 canary exact package readback PASS and UTOC/UCAS meta hashes PASS",
     "v15.3 ZIP CRC PASS; SHA256 74d3570a446875ad8fac2eadfdc9b4d703b0d14408100c1d50c719be75277830",
     "v15.3 Drive upload/readback exact SHA256 PASS; file id 1oUh7b_89-IYZSEgJJKT7J9RjINL7zs5r",
-    "archived ci_formats.build_container helper directory argument-order defect identified; v15 clean build and v15.3 use corrected build_container_fixed wrapper"
+    "archived ci_formats.build_container helper directory argument-order defect identified; v15 clean build and v15.3 use corrected build_container_fixed wrapper",
+    "USER RUNTIME PASS: Steam v15.3 single-package current-source IoStore canary starts successfully",
+    "custom corrected IoStore construction is therefore runtime-compatible with current Steam startup for byte-identical current package"
   ],
   "pending_units": [
-    "runtime Steam startup test with v15.3 single-package IoStore canary",
-    "if v15.3 passes: add modified current-Steam packages in small subsystem batches",
-    "if v15.3 crashes: replace synthetic IoStore construction path; do not reintroduce binary overrides until corrected"
+    "rebuild full Steam binary payload from current 0.7.9.16321 cooked sources only",
+    "port prior UI/map/quest/character/stat fixes onto matching current-source packages",
+    "assemble installer with strict Steam/NoSteam payload separation",
+    "static validate package provenance, exact readback, locres, installer and final archive",
+    "runtime regression test full Steam build"
   ],
   "source_files_used": [
     "CI_SOURCE_INDEX.json",
@@ -87,10 +91,12 @@
     "runtime Steam v15.2 TEXT_ONLY startup PASS reported by user",
     "live current-source Drive byte readback for GameInstance, Master Slider, CharacterScreen and w_03_map_icon",
     "v15.3 exact current-source GameInstance byte readback from custom IoStore",
-    "v15.3 Drive readback SHA256 and ZIP CRC"
+    "v15.3 Drive readback SHA256 and ZIP CRC",
+    "runtime Steam v15.3 single-package IoStore canary startup PASS reported by user"
   ],
   "validation_pending": [
-    "runtime v15.3 IoStore canary startup"
+    "static full-current-source binary payload validation",
+    "runtime full Steam regression"
   ],
   "notes": [
     "Static root cause: v15 inherited WB_CharacterScreen, WB_Stats_Main, WB_Stats_Full and WB_Stats_Main_Slot from an older Steam schema.",
@@ -104,6 +110,7 @@
     "Do not claim any Steam cooked payload compatible until v15.2 isolation passes.",
     "Authoritative current Steam stock .utoc/.ucas/.pak are absent from the indexed source tree; this is now a proven blocker for a metadata-preserving binary rebuild if text-only succeeds.",
     "Correction after user clarification and live Drive verification: current Steam 0.7.9.16321 unpacked cooked assets ARE present on Drive. Only the original packed stock .utoc/.ucas/.pak containers are absent from the indexed source tree.",
-    "Absence of stock containers is not a blocker for source asset provenance. The next investigation targets custom IoStore/package-store construction because v15.1 failed even with current-source-derived assets while v15.2 PAK-only passes."
+    "Absence of stock containers is not a blocker for source asset provenance. The next investigation targets custom IoStore/package-store construction because v15.1 failed even with current-source-derived assets while v15.2 PAK-only passes.",
+    "v15.3 PASS removes synthetic IoStore format as the immediate blocker. Full rebuild may proceed, but only current Steam 0.7.9.16321 cooked packages may be used as binary bases."
   ]
 }
