@@ -1,0 +1,79 @@
+{
+  "schema_version": "1.0",
+  "edition": "Steam",
+  "release": "v18 FULL Current-Source UI Restore TEST",
+  "author": "Don't Look",
+  "source_state_id": "steam_current_2026-10-03_16321_asset_verified_index_stale",
+  "verified_game_version": "0.7.9.16321",
+  "verified_build": null,
+  "strategy": "71 historical Steam override paths rebased to current unpacked Steam cooked source plus 6 v14 current-source map/UI packages; only current-schema overlays retained",
+  "package_count": 77,
+  "provenance_counts": {
+    "current Steam 0.7.9.16321 unpacked cooked source": 52,
+    "v15 current-source-derived localization/display patch": 15,
+    "current Steam schema primitive Character/Stats layout patch": 2,
+    "current Steam schema quest journal layout patch": 1,
+    "v14 current-source map UI/data patch": 7
+  },
+  "runtime_evidence": {
+    "v15_2_text_only": "PASS user reported",
+    "v15_3_single_current_source_iostore_canary": "PASS user reported",
+    "v18_full77": "PENDING"
+  },
+  "preserved_ui": [
+    "Settings/Controls WB_Master_* and Theme_3 current-source assets",
+    "radial menu current-source assets including W_MenuItem",
+    "Character/Stats current-schema layout",
+    "quest journal/tracking current-schema layout",
+    "map hover/legend/current-source v14 paths",
+    "HQUI main/pause/save/options paths",
+    "Ability Tree, tooltip/stat UI, books and dialogue layout",
+    "crafting/vendor/dev UI and Game.locres localization",
+    "bottom-left localization branding from current WB_T3_MainMenu"
+  ],
+  "intentionally_absent": [
+    "WB_WorldMapPopup.uasset",
+    "Neutral_Widget.uasset"
+  ],
+  "validation": [
+    "77/77 exact named-package readback PASS",
+    "TOC BLAKE3 metadata PASS",
+    "physical UCAS block coverage exact",
+    "77/77 current package identity/export-count PASS",
+    "current-source CI_RU marker UI assets verified",
+    "NoSteam 0.7.9.16232 byte-identical to working v15",
+    "installer rebuilt with separated Steam_current and NoSteam_0.7.9.16232 payloads",
+    "ZIP CRC PASS",
+    "Drive readback size/SHA256/ZIP CRC PASS"
+  ],
+  "steam_files": {
+    "pak": {
+      "bytes": 2524021,
+      "sha256": "270dd12b1a431d5454f5ae8fdc711a5d28bc53b0f11f1b40d28e8d701093d268"
+    },
+    "utoc": {
+      "bytes": 9859,
+      "sha256": "a35ae0b13887311e7bf669dc856d83199086a0eb302e8197af67b71a1b6f3285"
+    },
+    "ucas": {
+      "bytes": 7208960,
+      "sha256": "2cfd200edf192a35c10e96da575b4b447dab390b205a058903ad3016c2877a34"
+    }
+  },
+  "installer": {
+    "name": "CarnalInstinct_RU_Setup.exe",
+    "bytes": 21698560,
+    "sha256": "8e15d2e846307cc75f46fae12f76a81716fb90189770852f0a70c29e458930d3"
+  },
+  "archive": {
+    "name": "Carnal_Instinct_RU_DontLook_FULL_CurrentSteam_2026-10-05_v18_TEST.zip",
+    "bytes": 29690518,
+    "entries": 344,
+    "sha256": "f9864d38925418b5c0dfd17b187de887d3839b988bebd1d1bb5969a0402d3df7",
+    "drive_file_id": "1-0GzxB7_diN0v9IgWjpfDefvXdq27ziy",
+    "drive_folder_id": "1VwdnxngtZLDsPl1kP5H5HCJBePoRCF_a",
+    "drive_readback_sha256_verified": true,
+    "drive_readback_zip_crc_verified": true
+  },
+  "runtime_tested": false
+}
