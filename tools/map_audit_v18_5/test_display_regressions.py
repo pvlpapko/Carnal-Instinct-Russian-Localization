@@ -1,13 +1,26 @@
 """Regression evidence uses the cooked UI consumed by the game."""
 from pathlib import Path
 import os, struct, unittest
-from display_tools import NativePatch, find_script, expr_name, k, ui
+from display_tools import NativePatch, find_script, expr_name, k, ui, FUNCTION
 
 ROOT = Path(os.environ.get('CI_RU_CHECK_ROOT', '/workspace/project-context/carnal-instinct/v18.4'))
 RADIAL = 'BlueprintSystems/DynamicRadialMenu/Widgets/W_MenuItem.uasset'
 
 
 class DisplayRegressions(unittest.TestCase):
+    def test_map_mouse_leave_enters_an_instruction(self):
+        path = next((ROOT / 'Extracted/NoSteam_0.7.9.16232').rglob('w_03_map_icon.uasset'))
+        p = ui.zen.package(path)
+        main = next(e for e in p['exports'] if e['name'].startswith('ExecuteUbergraph'))
+        nodes = find_script(p['bytes'][main['start']:main['end']])[3]
+        starts = {x.old for node in nodes for x in k.walk(node)}
+        wrapper = next(e for e in p['exports'] if e['name'] == 'OnMouseLeave')
+        wn = find_script(p['bytes'][wrapper['start']:wrapper['end']])[3]
+        calls = [x for node in wn for x in k.walk(node) if x.op == 0x46]
+        self.assertEqual(len(calls), 1)
+        entry = struct.unpack('<i', calls[0].parts[1].parts[0].data)[0]
+        self.assertTrue(entry in starts, 'map OnMouseLeave enters string data at VM ' + str(entry))
+
     def test_caption_below_icon_without_resizing_hit_region(self):
         p = NativePatch(next((ROOT / 'Extracted/NoSteam_0.7.9.16232').rglob('W_MenuItem.uasset')))
         _, text, _ = p.properties('TXT_Item')

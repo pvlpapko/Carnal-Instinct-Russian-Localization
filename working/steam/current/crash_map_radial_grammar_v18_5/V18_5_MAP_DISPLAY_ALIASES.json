@@ -1,0 +1,254 @@
+{
+  "release": "18.5",
+  "runtime_tested": false,
+  "source_cells_checked": 2513,
+  "internal_actor_quest_and_save_names_changed": false,
+  "assets": [
+    {
+      "edition": "Steam_current",
+      "mount": "Carnal_Instinct_UE5/Content/RPG_InventorySystem/UI/WorldMap/WB_WorldMapPopup.uasset",
+      "source_sha256": "f7521f0502734dfb3907fbf4b60daa59cac44565fa8f83dcda78f7d561a35875",
+      "patched_sha256": "103719b825e8148ed61e1f4f83aecfc35695465824dca8f11c6129bc8a1e0738",
+      "appended_input_names": [
+        "SearchArea",
+        "Tal'Senet",
+        "Tal’Senet"
+      ],
+      "evidence": [
+        {
+          "old_switch_vm": 75,
+          "old_cases": 884,
+          "new_cases": 887,
+          "aliases": [
+            {
+              "input": "SearchArea",
+              "canonical": "Search Area"
+            },
+            {
+              "input": "Tal'Senet",
+              "canonical": "Tal-Senet"
+            },
+            {
+              "input": "Tal’Senet",
+              "canonical": "Tal-Senet"
+            }
+          ]
+        },
+        {
+          "old_switch_vm": 121206,
+          "old_cases": 884,
+          "new_cases": 887,
+          "aliases": [
+            {
+              "input": "SearchArea",
+              "canonical": "Search Area"
+            },
+            {
+              "input": "Tal'Senet",
+              "canonical": "Tal-Senet"
+            },
+            {
+              "input": "Tal’Senet",
+              "canonical": "Tal-Senet"
+            }
+          ]
+        }
+      ],
+      "old_memory": 238024,
+      "new_memory": 238582,
+      "old_disk": 231092,
+      "new_disk": 231626,
+      "latent_linkages_rebased": 0,
+      "wrappers_rebased": 0,
+      "wrapper_entries": [
+        {
+          "wrapper": "Construct",
+          "old": 10,
+          "new": 10,
+          "old_invalid_entry_repaired": false
+        }
+      ]
+    },
+    {
+      "edition": "Steam_current",
+      "mount": "Carnal_Instinct_UE5/Content/DLG_Tree/dmap_system/widgets/w_03_map_icon.uasset",
+      "source_sha256": "5c7ec711eb3599ff3f67d45c5967c3a79e15008b866830e2eb4a3cc0889a1c08",
+      "patched_sha256": "6508101bc8cdb0aaaf3c8a90f137df27176a32d1d726362cbb64666e7701fe6f",
+      "appended_input_names": [
+        "SearchArea",
+        "Tal'Senet",
+        "Tal’Senet"
+      ],
+      "evidence": [
+        {
+          "old_switch_vm": 73246,
+          "old_cases": 441,
+          "new_cases": 444,
+          "aliases": [
+            {
+              "input": "SearchArea",
+              "canonical": "Search Area"
+            },
+            {
+              "input": "Tal'Senet",
+              "canonical": "Tal-Senet"
+            },
+            {
+              "input": "Tal’Senet",
+              "canonical": "Tal-Senet"
+            }
+          ]
+        }
+      ],
+      "old_memory": 144180,
+      "new_memory": 144473,
+      "old_disk": 141228,
+      "new_disk": 141509,
+      "latent_linkages_rebased": 0,
+      "wrappers_rebased": 1,
+      "wrapper_entries": [
+        {
+          "wrapper": "OnMouseEnter",
+          "old": 1856,
+          "new": 1856,
+          "old_invalid_entry_repaired": false
+        },
+        {
+          "wrapper": "OnMouseLeave",
+          "old": 139894,
+          "new": 144410,
+          "old_invalid_entry_repaired": true
+        },
+        {
+          "wrapper": "update_icon",
+          "old": 10,
+          "new": 10,
+          "old_invalid_entry_repaired": false
+        }
+      ]
+    },
+    {
+      "edition": "NoSteam_0.7.9.16232",
+      "mount": "Carnal_Instinct_UE5/Content/RPG_InventorySystem/UI/WorldMap/WB_WorldMapPopup.uasset",
+      "source_sha256": "a72115bff25b77e1423875beaae8587c1b4c0c74e0bdaff3d973955ee46472b9",
+      "patched_sha256": "af7d1572a4975e09107ff3c23ab791d5f517d00e011f944db6a3b4f422bb4276",
+      "appended_input_names": [
+        "SearchArea",
+        "Tal'Senet",
+        "Tal’Senet"
+      ],
+      "evidence": [
+        {
+          "old_switch_vm": 75,
+          "old_cases": 885,
+          "new_cases": 888,
+          "aliases": [
+            {
+              "input": "SearchArea",
+              "canonical": "Search Area"
+            },
+            {
+              "input": "Tal'Senet",
+              "canonical": "Tal-Senet"
+            },
+            {
+              "input": "Tal’Senet",
+              "canonical": "Tal-Senet"
+            }
+          ]
+        },
+        {
+          "old_switch_vm": 121301,
+          "old_cases": 885,
+          "new_cases": 888,
+          "aliases": [
+            {
+              "input": "SearchArea",
+              "canonical": "Search Area"
+            },
+            {
+              "input": "Tal'Senet",
+              "canonical": "Tal-Senet"
+            },
+            {
+              "input": "Tal’Senet",
+              "canonical": "Tal-Senet"
+            }
+          ]
+        }
+      ],
+      "old_memory": 238214,
+      "new_memory": 238772,
+      "old_disk": 231274,
+      "new_disk": 231808,
+      "latent_linkages_rebased": 0,
+      "wrappers_rebased": 0,
+      "wrapper_entries": [
+        {
+          "wrapper": "Construct",
+          "old": 10,
+          "new": 10,
+          "old_invalid_entry_repaired": false
+        }
+      ]
+    },
+    {
+      "edition": "NoSteam_0.7.9.16232",
+      "mount": "Carnal_Instinct_UE5/Content/DLG_Tree/dmap_system/widgets/w_03_map_icon.uasset",
+      "source_sha256": "5c7ec711eb3599ff3f67d45c5967c3a79e15008b866830e2eb4a3cc0889a1c08",
+      "patched_sha256": "6508101bc8cdb0aaaf3c8a90f137df27176a32d1d726362cbb64666e7701fe6f",
+      "appended_input_names": [
+        "SearchArea",
+        "Tal'Senet",
+        "Tal’Senet"
+      ],
+      "evidence": [
+        {
+          "old_switch_vm": 73246,
+          "old_cases": 441,
+          "new_cases": 444,
+          "aliases": [
+            {
+              "input": "SearchArea",
+              "canonical": "Search Area"
+            },
+            {
+              "input": "Tal'Senet",
+              "canonical": "Tal-Senet"
+            },
+            {
+              "input": "Tal’Senet",
+              "canonical": "Tal-Senet"
+            }
+          ]
+        }
+      ],
+      "old_memory": 144180,
+      "new_memory": 144473,
+      "old_disk": 141228,
+      "new_disk": 141509,
+      "latent_linkages_rebased": 0,
+      "wrappers_rebased": 1,
+      "wrapper_entries": [
+        {
+          "wrapper": "OnMouseEnter",
+          "old": 1856,
+          "new": 1856,
+          "old_invalid_entry_repaired": false
+        },
+        {
+          "wrapper": "OnMouseLeave",
+          "old": 139894,
+          "new": 144410,
+          "old_invalid_entry_repaired": true
+        },
+        {
+          "wrapper": "update_icon",
+          "old": 10,
+          "new": 10,
+          "old_invalid_entry_repaired": false
+        }
+      ]
+    }
+  ]
+}

@@ -7,23 +7,25 @@
   "verified_game_version": "0.7.9.16321",
   "verified_build": null,
   "created_at": "2026-10-05T10:57:53.922119+00:00",
-  "updated_at": "2026-10-05T11:51:37.575884+00:00",
-  "current_phase": "native_radial_and_settings_display_fixes_built",
-  "last_completed_unit": "radial_caption_native_margin_and_settings_activation_rebase",
-  "next_unit": "all_map_cell_scan_aliases_and_editorial_review",
+  "updated_at": "2026-10-05T14:08:06.579604+00:00",
+  "current_phase": "map_and_editorial_static_audit_complete",
+  "last_completed_unit": "2513_source_map_cells_115_editorial_rows_and_map_entry_repair",
+  "next_unit": "merge_final_payload_and_build_steam_startup_isolation",
   "completed_units": [
     "v18.4 runtime feedback recorded",
     "new screenshots viewed: Tal'senet campfire and radial icon/title overlap",
     "minidump confirms malformed large read during startup; asset remains unidentified",
     "radial native layout built, gameplay functions unchanged",
-    "Settings Activate display call skips repeated apply; wrapper entry points rebased"
+    "Settings Activate display call skips repeated apply; wrapper entry points rebased",
+    "All 2513 current Steam source map cells acquired and scanned; 212 BaseFText occurrences, 181 identities already localized in both tables",
+    "Map display aliases added without changing actor/quest/save IDs",
+    "Existing map OnMouseLeave entry 139894 inside data repaired to unique clear-hover handler",
+    "115 exact-identity editorial corrections: 63 Steam, 52 NoSteam"
   ],
   "pending_units": [
-    "Steam crash root cause and regression check",
-    "settings performance investigation",
-    "radial label layout both editions",
-    "full map input/name/progression coverage audit",
-    "dialogue grammar and terminology review",
+    "Steam startup resource isolation in game",
+    "Settings performance and radial rendering in game",
+    "Broader dialogue editorial review beyond targeted corrections",
     "release build/static checks/Drive readback"
   ],
   "source_files_used": [
@@ -40,14 +42,15 @@
     "Unchanged native selection size and other radial function exports"
   ],
   "validation_pending": [
-    "all new fixes",
-    "actual game validation"
+    "final_container_installer_readback",
+    "actual_game_startup_visual_performance_validation"
   ],
   "notes": [
     "No subagents: minimize Codex usage.",
     "Do not infer runtime success from container or bytecode checks.",
     "Map audit must include source FString/FName values and dynamically created actors, not only existing FText in display widgets.",
     "User confirms Settings smooth without localization. Performance of candidate still requires game measurement.",
-    "Steam crash root cause not proven. Do not label release FINAL."
+    "Steam crash root cause not proven. Do not label release FINAL.",
+    "Map cell acquisition is current Steam source, not independent NoSteam progression-cell acquisition. Shared display captions matched against each edition table. Grammar: automated full-table checks plus targeted manual review; complete line-by-line editorial review not claimed."
   ]
 }

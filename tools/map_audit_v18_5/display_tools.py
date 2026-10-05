@@ -173,7 +173,7 @@ def rebase_latent(nodes, function_name, mapping, names):
     return count
 
 
-def replace_function(package, export, nodes):
+def replace_function(package, export, nodes, entry_repairs=None):
     raw = package['bytes'][export['start']:export['end']]
     pos, old_memory, old_disk, old_nodes, _ = find_script(raw)
     code, memory, mapping = k.serialize(nodes)
@@ -185,6 +185,7 @@ def replace_function(package, export, nodes):
     replacements = {export['index']: result}
     wrapper_count = 0
     entry_targets = []
+    entry_repairs = entry_repairs or {}
     for wrapper in package['exports']:
         if wrapper['cls'] != FUNCTION or wrapper['index'] == export['index']:
             continue
@@ -198,11 +199,16 @@ def replace_function(package, export, nodes):
                 arg = expr.parts[1]
                 assert arg.op in (0x1d, 0x25, 0x26), (wrapper['name'], arg.op)
                 old = struct.unpack('<i', arg.parts[0].data)[0] if arg.op == 0x1d else (0 if arg.op == 0x25 else 1)
-                assert old in mapping, ('wrapper entry missing', wrapper['name'], old)
-                entry_targets.append({'wrapper': wrapper['name'], 'old': old, 'new': mapping[old]})
-                if old != mapping[old]:
+                actual_old = old
+                if wrapper['name'] in entry_repairs:
+                    expected, actual_old = entry_repairs[wrapper['name']]
+                    assert old == expected and old not in mapping
+                assert actual_old in mapping, ('wrapper entry missing', wrapper['name'], actual_old)
+                entry_targets.append({'wrapper': wrapper['name'], 'old': old, 'new': mapping[actual_old],
+                                      'old_invalid_entry_repaired': actual_old != old})
+                if old != mapping[actual_old]:
                     assert arg.op == 0x1d
-                    arg.parts[0].data = struct.pack('<i', mapping[old])
+                    arg.parts[0].data = struct.pack('<i', mapping[actual_old])
                     changed = True
         if changed:
             wc, wm, _ = k.serialize(wn)

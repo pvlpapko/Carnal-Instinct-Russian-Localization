@@ -1,0 +1,10 @@
+{
+  "base_release_sha256": "b801a03e6027812f1434bfda822fe4cd5124f8202dd3f9f1a809be634e7cb0ca",
+  "base_drive_id": "1CVEQCI-B-hieYajjHAlzSVtra2MbfN8A",
+  "base_table": "Data/NoSteam_0.7.9.16232/translation.tsv",
+  "changes": "tools/map_audit_v18_5/editorial_changes.json",
+  "rebuild": "tools/map_audit_v18_5/update_translation.py",
+  "result_sha256": "c612dbfd28b5b8be539bc7d2356e2c63133ba28a1ded851eac94de12859d0e37",
+  "result_bytes": 5632845,
+  "full_table_release_path": "Data/NoSteam_0.7.9.16232/translation.tsv"
+}
