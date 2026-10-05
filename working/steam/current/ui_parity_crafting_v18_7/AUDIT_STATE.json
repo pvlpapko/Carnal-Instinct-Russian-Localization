@@ -1,0 +1,47 @@
+{
+  "schema_version": "1.0",
+  "edition": "Steam",
+  "task": "ui_parity_crafting_v18_7",
+  "status": "in_progress",
+  "source_state_id": "steam_current_2026-10-03_16321_asset_verified_index_stale",
+  "verified_game_version": "0.7.9.16321",
+  "verified_build": null,
+  "created_at": "2026-10-05T18:27:25.092492+00:00",
+  "updated_at": "2026-10-05T18:27:25.092492+00:00",
+  "current_phase": "stock_ui_theme_and_caption_routes_analysis",
+  "last_completed_unit": "six_screens_compared_source_identity_unchanged",
+  "next_unit": "inspect_modern_upper_bar_crafting_visibility_and_character_quest_layouts",
+  "completed_units": [
+    "Six screenshots compared: NoSteam magenta borders, grouped vertical journal, crafting after Lore; Steam gold and horizontal objectives/journal, missing crafting tab",
+    "Fresh Steam GameInstance SHA256 unchanged 756887fd...; source CharacterScreen and QuestScreen exact prior bytes",
+    "Steam original QuestScreen/UpperUIBar/WindowSwitcher are not overridden by 18.6; only Character/Stats and QuestName/Objective widgets overridden",
+    "Source WindowSwitcher already contains crafting button and handlers; source UpperUIBar modern banner available"
+  ],
+  "pending_units": [
+    "Determine compatibility and minimal native theme/layout edits preserving functions",
+    "Restore crafting display after Lore without bypassing progression conditions",
+    "Build final containers, regression tests, installer, direct download",
+    "In-game visual and functional checks"
+  ],
+  "source_files_used": [
+    "CI_SOURCE_INDEX.json",
+    "v18.6 verified final payloads",
+    "user скрины.zip SHA256 840a6821c2577bba9698d30a70e17476f72a80e11b178d22c0338e3d46f79ec0",
+    "live Drive GameInstance/CharacterScreen/QuestScreen/WindowSwitcher/UpperUIBar"
+  ],
+  "working_files": [],
+  "validation_completed": [
+    "ZIP CRC and safe image extraction PASS",
+    "Fresh source GameInstance identity and CharacterScreen/QuestScreen bytes match prior source"
+  ],
+  "validation_pending": [
+    "Native serialization and complete functions readback",
+    "In-game parity and crafting behavior"
+  ],
+  "notes": [
+    "No subagents; minimize Codex usage",
+    "User has not checked Steam UI without localization; do not assume mod causes all stock theme differences",
+    "Crafting tab must follow Lore",
+    "NoSteam known good screenshot/reference; preserve edition gameplay logic"
+  ]
+}

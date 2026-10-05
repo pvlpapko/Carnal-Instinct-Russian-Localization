@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "updated_at": "2026-10-05T17:58:29.222723+00:00",
+  "updated_at": "2026-10-05T18:27:25.092492+00:00",
   "active_tasks": [
     {
       "edition": "Steam",
@@ -151,6 +151,18 @@
       "task": "crash_map_radial_grammar_v18_6",
       "state_path": "working/nosteam/0.7.9.16232/crash_map_radial_grammar_v18_6/AUDIT_STATE.json",
       "status": "v18.6_uploaded_static_verified_runtime_and_editorial_pending"
+    },
+    {
+      "edition": "Steam",
+      "task": "ui_parity_crafting_v18_7",
+      "state_path": "working/steam/current/ui_parity_crafting_v18_7/AUDIT_STATE.json",
+      "status": "in_progress"
+    },
+    {
+      "edition": "NoSteam",
+      "task": "ui_parity_crafting_v18_7",
+      "state_path": "working/nosteam/0.7.9.16232/ui_parity_crafting_v18_7/AUDIT_STATE.json",
+      "status": "in_progress"
     }
   ],
   "latest_release": {
