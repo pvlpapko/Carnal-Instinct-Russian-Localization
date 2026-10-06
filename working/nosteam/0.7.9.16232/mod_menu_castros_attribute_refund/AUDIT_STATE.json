@@ -7,7 +7,7 @@
   "verified_game_version": "0.7.9.16232",
   "verified_build": null,
   "current_phase": "release_candidate_static_validation",
-  "last_completed_unit": "v1.1.0_static_and_iostore_validation",
+  "last_completed_unit": "v1.1.0_release_uploaded_and_readback_verified",
   "next_unit": "in_game_validate_v1.1.0",
   "completed_units": [
     "source_index_read",
@@ -31,10 +31,10 @@
     "v1.1.0_static_tests_10_of_10",
     "modified_kismet_static_validation_504_calls_229_assignments",
     "iostore_v1.1.0_container_built",
-    "iostore_chunk_hash_directory_index_validation_passed"
+    "iostore_chunk_hash_directory_index_validation_passed",
+    "v1.1.0_release_uploaded_and_readback_verified"
   ],
   "pending_units": [
-    "release_package_upload_readback",
     "in_game_validation"
   ],
   "source_files_used": [
@@ -60,11 +60,11 @@
     "world_partition_actor_desc_struct_and_native_signatures_checked",
     "modified_kismet_static_validation_504_native_calls_229_assignments_21_reference_args",
     "v1.1.0_tests_10_of_10",
-    "iostore_header_chunk_ranges_blake3_directory_index"
+    "iostore_header_chunk_ranges_blake3_directory_index",
+    "drive_release_readback_sha256_e3a43cd8da22ac5dfa3588bd6e53da6a2f1339544f9ba4cfe90eac17ede9a2f1"
   ],
   "validation_pending": [
-    "runtime_in_game",
-    "drive_release_readback"
+    "runtime_in_game"
   ],
   "notes": [
     "User requests complete removal of flight and free camera, all Castros/fast-travel points activation button, and permanent attribute point removal/refund after persisted allocation.",
@@ -82,6 +82,7 @@
     "v1.1.0 final static design uses WorldPartitionBlueprintLibrary.GetActorDescs -> ActorDesc.Class filter for BP_Campfire -> LoadActors(Guid[]) -> GetAllActorsOfClass -> BP_Campfire.ActivatePoint -> stock Quick Save. If descriptor API fails at runtime, it falls back to currently loaded BP_Campfire actors.",
     "Permanent attribute refund is implemented by changing only WB_Stats_Main_Slot.OriginalStatValue floor capture to constant 1.0; stock Stats Change Value -> AddStatPoints(1) is preserved.",
     "Final candidate contains only five overrides. BP_CombatCharacter and all three free-camera camera packages are excluded. Legacy WB_CheatMenu Fly click handlers are neutralized to Return/End and no P binding is added.",
-    "Static validation passed: 10/10 unit tests; 504 native calls, 10 script calls, 229 assignments, 21 addressable reference arguments; IoStore header/chunk ranges/BLAKE3-160/directory index passed. Runtime game test remains unverified."
+    "Static validation passed: 10/10 unit tests; 504 native calls, 10 script calls, 229 assignments, 21 addressable reference arguments; IoStore header/chunk ranges/BLAKE3-160/directory index passed. Runtime game test remains unverified.",
+    "TEST release uploaded to CI GPT/Releases as CI_Mod_Menu_v1.1.0_TEST_0.7.9.16321.zip (Drive id 1THj-HY093bH9hwG2RldoDEHYfcPnuz2s). Drive readback size 218524 bytes and SHA-256 e3a43cd8da22ac5dfa3588bd6e53da6a2f1339544f9ba4cfe90eac17ede9a2f1 exactly match local archive."
   ]
 }
