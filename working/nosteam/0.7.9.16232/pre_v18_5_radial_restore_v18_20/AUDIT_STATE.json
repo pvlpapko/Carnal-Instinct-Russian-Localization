@@ -2,12 +2,12 @@
   "schema_version": "1.0",
   "edition": "NoSteam",
   "task": "pre_v18_5_radial_restore_v18_20",
-  "status": "runtime_validated_user_reported",
+  "status": "release_uploaded_drive_verified_runtime_validated",
   "source_state_id": "nosteam_0.7.9.16232_fixed",
   "verified_game_version": "0.7.9",
   "verified_build": "0.7.9.16232",
   "current_phase": "completed",
-  "last_completed_unit": "user_runtime_validation_radial_menu_working",
+  "last_completed_unit": "v18_20_release_drive_readback_verified",
   "next_unit": null,
   "completed_units": [
     "record_v18_19_runtime_crash",
@@ -49,7 +49,9 @@
     "go test -race PASS",
     "installer 6/6 payloads embedded and trusted",
     "ZIP CRC/exact entry readback PASS",
-    "User runtime validation: radial menu and direct actions working"
+    "User runtime validation: radial menu and direct actions working",
+    "Final RELEASE archive ZIP CRC/exact readback PASS",
+    "Google Drive upload/readback SHA-256 PASS"
   ],
   "validation_pending": [],
   "notes": [
@@ -60,6 +62,9 @@
     "Test archive: Carnal_Instinct_RU_DontLook_RadialRestore_2026-10-06_v18.20_TEST.zip; SHA-256 2885b2cdc6bf93451eed678b858c8a88dfdca63720f3580c525e706d3c4f7a45; 18945451 bytes; 123 entries.",
     "Installer SHA-256 6e55d4d251afce8570e1b3108dc77adf56212db188f041c62f827fe1503de432.",
     "Runtime success is not claimed until user retest.",
-    "2026-10-06 user report: v18.20 radial menu works; regression resolved by restoring pre-v18.5/current-source radial stack and removing v18.5 W_MenuItem layout override."
+    "2026-10-06 user report: v18.20 radial menu works; regression resolved by restoring pre-v18.5/current-source radial stack and removing v18.5 W_MenuItem layout override.",
+    "Canonical release: Carnal_Instinct_RU_DontLook_2026-10-06_v18.20_RELEASE.zip; SHA-256 464976a11b84695dbb6b8dcd2afd6a640b477929b50c91597d29d04527cd0eef; 18915632 bytes; 121 entries.",
+    "Installer SHA-256 480cc285e66645bdd75a4833d2f12bddce8396fa6e2794d2814fccb417115f1b; 20836864 bytes.",
+    "Drive release file ID 1iJKlxxOLOkQo8cXdWNszBnKyOPEooyUZ; readback SHA-256 and ZIP CRC verified."
   ]
 }
