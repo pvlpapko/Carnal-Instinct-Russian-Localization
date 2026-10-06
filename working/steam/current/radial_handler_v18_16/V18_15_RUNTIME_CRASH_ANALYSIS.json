@@ -1,0 +1,9 @@
+{
+  "error": "EXCEPTION_ACCESS_VIOLATION writing 0x0000000000000000",
+  "thread": "GameThread",
+  "reported_editions": [
+    "Steam",
+    "NoSteam"
+  ],
+  "status": "rejected"
+}
