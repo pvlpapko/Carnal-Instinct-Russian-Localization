@@ -2,51 +2,58 @@
   "schema_version": "1.0",
   "edition": "Steam",
   "task": "radial_action_fix_v18_14",
-  "status": "in_progress",
+  "status": "archive_built_static_verified_upload_pending",
   "source_state_id": "steam_current_2026-10-03_16321_asset_verified_index_stale",
   "verified_game_version": "0.7.9.16321",
   "verified_build": null,
-  "current_phase": "root_cause_confirmed_pre_container_rebuild",
-  "last_completed_unit": "v18_5_common_W_MenuItem_regression_isolated",
-  "next_unit": "rebuild_v18_14_payloads",
+  "current_phase": "release_upload",
+  "last_completed_unit": "v18_14_archive_static_validation",
+  "next_unit": "upload_release_and_verify_readback",
   "completed_units": [
     "read_v18_13_release_manifest_and_reports",
-    "compare_v18_13_against_v18_4_radial_payload",
-    "verify_live_current_W_MenuItem_source",
-    "confirm_v18_5_only_changed_W_MenuItem_native_layout_records"
+    "trace_current_AC_RadialMenu_HandleItemSelected",
+    "confirm_exact_english_string_dispatch",
+    "restore_seven_DT_Menu_runtime_FText_values",
+    "rebuild_localization_pak",
+    "verify_45_package_iostore_meta_hashes",
+    "run_3_targeted_radial_tests",
+    "run_30_top_level_installer_race_tests",
+    "build_windows_amd64_installer",
+    "package_v18_14_archive_and_verify_zip_crc"
   ],
   "pending_units": [
-    "remove_Steam_W_MenuItem_override",
-    "restore_NoSteam_W_MenuItem_to_v18_4_bytes",
-    "rebuild_both_containers",
-    "static_validate_containers_and_regressions",
-    "package_v18_14",
     "upload_release_and_verify_readback",
-    "runtime_test_radial_action_both_editions"
+    "runtime_test_radial_actions_steam"
   ],
   "source_files_used": [
     "CI GPT/Releases/Carnal_Instinct_RU_DontLook_2026-10-06_v18.13_RELEASE.zip",
-    "CI GPT/Releases/Carnal_Instinct_RU_DontLook_FullUI_2026-10-05_v18.4_TEST.zip",
+    "Carnal_Instinct_UE5/Content/BlueprintSystems/DynamicRadialMenu/Actors/AC_RadialMenu.uasset",
+    "Carnal_Instinct_UE5/Content/BlueprintSystems/DynamicRadialMenu/Tables/DT_Menu.uasset",
     "Carnal_Instinct_UE5/Content/BlueprintSystems/DynamicRadialMenu/Widgets/W_MenuItem.uasset"
   ],
   "working_files": [
-    "working/steam/current/radial_action_fix_v18_14/AUDIT_STATE.json"
+    "working/steam/current/radial_action_fix_v18_14/AUDIT_STATE.json",
+    "working/steam/current/radial_action_fix_v18_14/ROOT_CAUSE.json",
+    "working/steam/current/radial_action_fix_v18_14/V18_14_VALIDATION.json",
+    "working/steam/current/radial_action_fix_v18_14/fix_radial_action_ids.py",
+    "working/steam/current/radial_action_fix_v18_14/test_radial_action_fix.py"
   ],
   "validation_completed": [
-    "v18.13 Steam contains W_MenuItem override added after v18.4",
-    "v18.13 Steam W_MenuItem has identical 64-export structure and identical gameplay/function exports to current source",
-    "only OverlaySlot_1 and TXT_Item native layout records differ from current source",
-    "same v18.5 layout delta is present in NoSteam"
+    "HandleItemSelected exact literals: Summon Aadi; Korvoth's Sceptre; Torch; Shade Sight; Masturbate; Fishing; Canopic Capture",
+    "7/7 matching DT_Menu Namespace+Key+SourceStringHash identities restored to original English runtime values",
+    "only seven locres values and seven matching TSV rows differ from v18.13",
+    "Steam UTOC/UCAS byte-identical v18.13; 45 package meta hashes PASS",
+    "3/3 targeted Python tests PASS",
+    "30 top-level / 46 including subtests Go race tests PASS",
+    "6/6 installer payload files embedded and trusted"
   ],
   "validation_pending": [
-    "rebuilt container exact readback",
-    "independent IoStore hashes/spans/import dependencies",
-    "existing localization regression suite",
-    "in-game radial selection/action execution"
+    "actual in-game radial action execution"
   ],
   "notes": [
-    "User reports radial menu opens and selection is visible, but selected action does not execute in both Steam and NoSteam v18.13.",
-    "The first common cross-edition radial change after v18.4 is v18.5 W_MenuItem caption layout. Steam had no radial package override in v18.4; NoSteam W_MenuItem changed only in OverlaySlot_1/TXT_Item native UMG records while function exports remained byte-identical.",
-    "Fix strategy is rollback of only this display override, not a new bytecode patch."
+    "The earlier W_MenuItem layout hypothesis was rejected after tracing the live action handler.",
+    "Root cause is localization of DisplayName values that the game reuses as exact FString dispatch identifiers.",
+    "No AC_RadialMenu bytecode was modified in v18.14.",
+    "Seven visible command captions remain English to preserve gameplay; Russian display aliases remain available for a future safe display-boundary implementation."
   ]
 }
