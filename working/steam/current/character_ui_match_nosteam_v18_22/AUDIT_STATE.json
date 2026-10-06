@@ -2,13 +2,13 @@
   "schema_version": "1.0",
   "edition": "Steam",
   "task": "character_ui_match_nosteam_v18_22",
-  "status": "test_archive_built_static_verified_runtime_pending",
+  "status": "rejected_by_user_keep_v18_21",
   "source_state_id": "steam_current_2026-10-03_16321_asset_verified_index_stale",
   "verified_game_version": "0.7.9.16321",
   "verified_build": null,
-  "current_phase": "runtime_validation",
-  "last_completed_unit": "v18_22_test_archive_static_validation",
-  "next_unit": "runtime_test_Steam_character_visual_parity",
+  "current_phase": "closed",
+  "last_completed_unit": "user_rejected_v18_22_visual_change",
+  "next_unit": null,
   "completed_units": [
     "read_STATE_INDEX",
     "read_BUILD_STATE",
@@ -25,9 +25,7 @@
     "go_test_race_pass",
     "verify_installer_payload_embedding_6_of_6"
   ],
-  "pending_units": [
-    "runtime_test_Steam_character_visual_parity"
-  ],
+  "pending_units": [],
   "source_files_used": [
     "CI_SOURCE_INDEX.json",
     "v18.21 canonical release",
@@ -48,9 +46,7 @@
     "go test -race PASS",
     "ZIP CRC/exact entry readback PASS"
   ],
-  "validation_pending": [
-    "in-game Steam character menu visual comparison to NoSteam screenshot"
-  ],
+  "validation_pending": [],
   "notes": [
     "Goal: make Steam character menu geometry/scale match NoSteam screenshot without changing NoSteam.",
     "Preserve v18.21 radial/settings fixes and all existing localization.",
@@ -59,6 +55,8 @@
     "v18.21 remains canonical until runtime visual confirmation of v18.22.",
     "Test archive: Carnal_Instinct_RU_DontLook_CharacterUI_2026-10-06_v18.22_TEST.zip; SHA-256 3bd7d844b971f580c0f16312db01e0bd56bbd3e1e90a35c209ec790c6deecc56; 23851956 bytes; 156 entries.",
     "Installer SHA-256 d2febfa4e2f79d5ba9900bc12c5a40b6a0c53c4c363bedad8ca2f146de71a62d.",
-    "Canonical release remains v18.21 until runtime visual confirmation."
+    "Canonical release remains v18.21 until runtime visual confirmation.",
+    "2026-10-06 user decision: do not use v18.22 Steam character UI parity patch; keep Steam character menu as in canonical v18.21 RELEASE.",
+    "Do not carry v18.22 character/stat geometry edits into future releases unless explicitly requested again."
   ]
 }
