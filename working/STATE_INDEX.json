@@ -228,7 +228,7 @@
       "edition": "Steam",
       "task": "character_ui_match_nosteam_v18_22",
       "state_path": "working/steam/current/character_ui_match_nosteam_v18_22/AUDIT_STATE.json",
-      "status": "analysis_started"
+      "status": "static_validated_installer_built_package_pending"
     }
   ],
   "latest_release": {
