@@ -1,0 +1,11 @@
+{
+  "release": "18.19 TEST",
+  "runtime_history": {
+    "v18_15": "crash on radial open",
+    "v18_16": "menu opens; seven direct actions no-op",
+    "v18_17": "Sorcery works; seven direct actions no-op",
+    "v18_18": "Sorcery works; seven direct actions still no-op"
+  },
+  "conclusion": "Previous fixes were too early in the pipeline or depended on inferred enum/index state. v18.19 changes only the actual value passed to the main ItemSelected gameplay delegate.",
+  "runtime_validation": "pending"
+}
