@@ -1,0 +1,50 @@
+{
+  "release": "18.17 TEST",
+  "runtime_tested": false,
+  "design": "Keep localized Russian DisplayName in UI; only W_Menu.GetSelectedItemData converts Main indices 1..7 to English culture-invariant technical FText before ItemSelected delegate.",
+  "main_order": {
+    "0": "Sorcery",
+    "1": "Fishing",
+    "2": "Summon Aadi",
+    "3": "Masturbate",
+    "4": "Canopic Capture",
+    "5": "Shade Sight",
+    "6": "Torch",
+    "7": "Korvoth's Sceptre"
+  },
+  "scope": "CurrentMenu == Main only",
+  "tests": {
+    "selection_bridge_structure": "PASS",
+    "scope_Main_only": "PASS",
+    "visual_Russian_7_of_7": "PASS",
+    "W_MenuItem_untouched": "PASS",
+    "AC_RadialMenu_untouched": "PASS",
+    "locres_pak_untouched": "PASS",
+    "IoStore_meta_exact_readback": "PASS",
+    "installer_go_race": "PASS",
+    "installer_payloads": "6/6 PASS",
+    "zip_crc_exact_readback": "PASS"
+  },
+  "payloads": {
+    "Steam_current": {
+      "packages": 46,
+      "utoc_sha256": "dcbc613fa8ca88b4f40d574341d13d0ca4205d814d3ca30529ee3062461a4629",
+      "ucas_sha256": "60b2d45fad190824adb6e9c309300cb09c4fb0b1d7bcf67002dbd4141d2a65eb",
+      "pak_sha256": "2faea84a4cc4cfac31bc18e4c8588a90af6cf6a8ca0c2de55e04237def120ec8"
+    },
+    "NoSteam_0_7_9_16232": {
+      "packages": 74,
+      "utoc_sha256": "cd2fafad6787d686fb00880de4c5b602b0641acb1861644e19f93f8891d47c0a",
+      "ucas_sha256": "271703b0f1e856c19737d9eb796c3411bcc177b3d1ba71fdd27fefb031445ad5",
+      "pak_sha256": "507d1f951a38aa03a5789867fe0c68cb69e47cc2d5fc64c8c8ffb7b4cfd416ae"
+    }
+  },
+  "installer_sha256": "570206eb72afcc0e996021e33465703afd010b653eb09ca3a315a32f50cfc5e5",
+  "archive": {
+    "name": "Carnal_Instinct_RU_DontLook_RadialSelection_2026-10-06_v18.17_TEST.zip",
+    "sha256": "d50079ce07a062460f8f2b1aee3cfae22eeaf5c27d8f2d015d11fa06894a5ddb",
+    "bytes": 18950770,
+    "entries": 120
+  },
+  "runtime_validation": "pending"
+}
