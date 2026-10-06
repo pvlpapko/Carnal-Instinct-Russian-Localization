@@ -2,13 +2,13 @@
   "schema_version": "1.0",
   "edition": "Steam",
   "task": "settings_persistence_v18_21",
-  "status": "root_cause_identified_patch_pending",
+  "status": "payload_installer_static_verified_package_pending",
   "source_state_id": "steam_current_2026-10-03_16321_asset_verified_index_stale",
   "verified_game_version": "0.7.9.16321",
   "verified_build": null,
-  "current_phase": "binary_patch",
-  "last_completed_unit": "trace_settings_activation_and_v18_5_regression",
-  "next_unit": "restore_startup_load_apply_only",
+  "current_phase": "package_test_archive",
+  "last_completed_unit": "v18_21_payload_installer_static_validation",
+  "next_unit": "package_test_archive_and_runtime_validate",
   "completed_units": [
     "inspect_v18_20_payload_settings_stack",
     "audit_localized_video_option_values",
@@ -16,14 +16,18 @@
     "trace_WB_Master_SettingsMenu_Activate",
     "trace_v18_5_WB_T3_MainMenu_antifreeze_patch",
     "identify_two_Activate_calls_changed_from_load_apply_to_false",
-    "identify_safe_startup_call_vs_settings_open_call"
+    "identify_safe_startup_call_vs_settings_open_call",
+    "patch_startup_load_apply_only",
+    "patch_iostore_both_editions",
+    "validate_single_asset_single_byte_diff",
+    "verify_radial_v18_20_preserved",
+    "verify_locres_pak_preserved",
+    "rebuild_installer",
+    "go_test_race_pass",
+    "verify_installer_6_of_6_payloads"
   ],
   "pending_units": [
-    "restore_startup_load_apply_only",
-    "patch_iostore_both_editions",
-    "static_validate",
-    "rebuild_installer",
-    "package_test_archive",
+    "package_test_archive_and_crc_readback",
     "runtime_test_settings_persistence"
   ],
   "source_files_used": [
@@ -38,16 +42,20 @@
     "working/steam/current/settings_persistence_v18_21/AUDIT_STATE.json"
   ],
   "validation_completed": [
-    "WB_Master_SettingsMenu.Activate calls Load and Apply Settings only when LoadAndApplySettingsOnActivation is true",
-    "v18.5 patch forced both WB_T3_MainMenu settings Activate calls to false in both editions",
-    "manual settings-open call remains intentionally false to preserve anti-freeze behavior",
-    "separate startup/post-show activation originally used true and is candidate for restoration"
+    "Only WB_T3_MainMenu changed in each edition",
+    "Exactly one asset byte changed per edition",
+    "Manual settings-open LoadAndApplySettingsOnActivation=False",
+    "Startup/post-show LoadAndApplySettingsOnActivation=True",
+    "Radial stack byte-identical to runtime-validated v18.20",
+    "Game.locres and PAK byte-identical to v18.20",
+    "IoStore metadata/readback PASS",
+    "go test -race PASS",
+    "installer payload embedding/trust 6/6 PASS"
   ],
   "validation_pending": [
-    "patched Kismet exact diff",
-    "IoStore meta/readback",
-    "installer embedding",
-    "in-game restart/save persistence"
+    "ZIP CRC/readback",
+    "in-game restart/settings persistence",
+    "main-menu settings anti-freeze regression check"
   ],
   "notes": [
     "User reports video settings reset/appear dirty after every game restart in both editions.",
