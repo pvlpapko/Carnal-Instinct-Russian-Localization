@@ -1,0 +1,67 @@
+{
+  "schema_version": "1.0",
+  "edition": "both",
+  "task": "mod_menu_installer",
+  "status": "release_candidate_windows_runtime_unverified",
+  "source_state_id": "CI_Mod_Menu_v1.1.1_runtime_validated",
+  "verified_game_version": "0.7.9.16321",
+  "verified_build": null,
+  "current_phase": "installer_release_candidate",
+  "last_completed_unit": "installer_build_drive_readback",
+  "next_unit": "user_windows_installer_runtime_test",
+  "completed_units": [
+    "source_index_read",
+    "github_state_index_read",
+    "ci_mod_menu_v1.1.1_user_runtime_validation_confirmed",
+    "steam_nosteam_separate_payload_layout_created",
+    "dual_game_path_selection_implemented",
+    "old_mod_cleanup_without_backups_implemented",
+    "thematic_icon_created_and_embedded",
+    "administrator_manifest_embedded",
+    "windows_x64_gui_exe_cross_compiled",
+    "pe_resource_static_validation",
+    "payload_embedding_static_validation",
+    "localization_exclusion_validation",
+    "cleanup_and_localization_untouched_simulation",
+    "release_zip_uploaded_to_drive",
+    "drive_release_readback_verified"
+  ],
+  "pending_units": [
+    "user_windows_installer_runtime_test"
+  ],
+  "source_files_used": [
+    "CI_Mod_Menu_v1.1.1_TEST_0.7.9.16321.zip",
+    "working/nosteam/0.7.9.16232/mod_menu_castros_attribute_refund/V111_PATCH_SPEC.json"
+  ],
+  "working_files": [
+    "working/steam/current/mod_menu_installer/AUDIT_STATE.json",
+    "working/steam/current/mod_menu_installer/INSTALLER_MANIFEST.json",
+    "working/steam/current/mod_menu_installer/BUILD.md",
+    "working/steam/current/mod_menu_installer/app.manifest",
+    "working/steam/current/mod_menu_installer/icon_generator.py",
+    "working/steam/current/mod_menu_installer/main.go.gz.b64",
+    "working/steam/current/mod_menu_installer/restore_main_source.py"
+  ],
+  "validation_completed": [
+    "PE32+ Windows GUI x86-64",
+    "resource_directory_contains_icon_group_and_manifest",
+    "manifest_requireAdministrator",
+    "embedded_mod_payload_bytes_found",
+    "forbidden_localization_markers_absent",
+    "update_cleanup_simulation_PASS",
+    "localization_untouched_simulation_PASS",
+    "drive_readback_sha256_9871143600ab358a072d0dd7a259cbc3f79c847f7d98b1c2187d62c87393541a"
+  ],
+  "validation_pending": [
+    "windows_runtime_installer_UI_and_install_flow"
+  ],
+  "notes": [
+    "This installer is only for CI Mod Menu. It does not contain or modify the Russian localization, Game.locres, pakchunk1015, or RussianTranslation_P.",
+    "Steam and NoSteam have independent checkboxes and independent game-folder selectors. Both can be selected in one run.",
+    "On every install, files matching CI_ModMenu_P.* and legacy CI_Mod_Menu_P.* are deleted from the selected Content/Paks before the new payload is written. No backups are created.",
+    "Steam payload is labeled verified for 0.7.9.16321. NoSteam payload is labeled verified for 0.7.9.16232. Payload folders remain separate although current bytes are identical.",
+    "Installer EXE SHA-256: 632f740e6468a0f5692f6bd532edb38bf0967c421b441d52c7190b3fec019a9a.",
+    "Release package ZIP SHA-256: 9871143600ab358a072d0dd7a259cbc3f79c847f7d98b1c2187d62c87393541a. Drive id 1OLOL4yhvqc48TsyNEBzX3-1oaOPSvtfJ.",
+    "Windows runtime execution is not available in the build environment; installer UI/install-flow runtime remains pending user test."
+  ]
+}
