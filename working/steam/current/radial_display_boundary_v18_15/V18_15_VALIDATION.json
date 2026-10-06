@@ -1,0 +1,23 @@
+{
+  "release": "18.15",
+  "runtime_tested": false,
+  "tests": {
+    "kismet_display_boundary": "PASS",
+    "technical_ids_english": "PASS",
+    "display_aliases_russian": "PASS",
+    "only_SetItemText_export_changed_inside_W_MenuItem": "PASS",
+    "locres_and_pak_unchanged_v18_14": "PASS",
+    "installer_payloads_embedded": "6/6 PASS",
+    "installer_trusted_hashes": "6/6 PASS",
+    "installer_version_string": "18.15 PASS",
+    "installer_go_race_tests": "46/46 PASS"
+  },
+  "installer_sha256": "9e9f7d29395011d2c5328d5c1c5387336ee74560bfaba7cc769fb777f288f5a1",
+  "archive": {
+    "name": "Carnal_Instinct_RU_DontLook_2026-10-06_v18.15_RELEASE.zip",
+    "sha256": "42ec01f9051437d3305a31077b3ef19ec68019d5bf907de4c1674244592df491",
+    "bytes": 19023629,
+    "entries": 129,
+    "installer_sha256": "9e9f7d29395011d2c5328d5c1c5387336ee74560bfaba7cc769fb777f288f5a1"
+  }
+}
