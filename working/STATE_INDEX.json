@@ -192,13 +192,13 @@
       "edition": "Steam",
       "task": "radial_delegate_boundary_v18_19",
       "state_path": "working/steam/current/radial_delegate_boundary_v18_19/AUDIT_STATE.json",
-      "status": "analysis_complete_patch_pending"
+      "status": "test_archive_built_static_verified_runtime_pending"
     },
     {
       "edition": "NoSteam",
       "task": "radial_delegate_boundary_v18_19",
       "state_path": "working/nosteam/0.7.9.16232/radial_delegate_boundary_v18_19/AUDIT_STATE.json",
-      "status": "analysis_complete_patch_pending"
+      "status": "test_archive_built_static_verified_runtime_pending"
     }
   ],
   "latest_release": {
@@ -231,12 +231,12 @@
     "minimal_hell_kitchen_refs": 12
   },
   "latest_local_candidate": {
-    "name": "Carnal_Instinct_RU_DontLook_RadialSelection_2026-10-06_v18.18_TEST.zip",
-    "task": "radial_selection_bridge_v18_18",
-    "sha256": "cc55f2f95f558b10b9786501bab553638cc9710ce12cf97d620b4c0b2af3db42",
-    "archive_bytes": 23789864,
-    "archive_entries": 127,
-    "installer_sha256": "eb6379593879107d26332ff4b064f35e56e453e19347bea7b35fc5a9bee18a77",
+    "name": "Carnal_Instinct_RU_DontLook_RadialDelegate_2026-10-06_v18.19_TEST.zip",
+    "task": "radial_delegate_boundary_v18_19",
+    "sha256": "88a1ece53e63763fb1a68f70da499a4c6565c29d206302687e11fbd748a7895e",
+    "archive_bytes": 18895561,
+    "archive_entries": 118,
+    "installer_sha256": "09921972261332be9c57c187340e049743cfe5acb01803fd2ccf88c1c61e058f",
     "zip_crc_and_exact_entry_readback": true,
     "drive_upload": "pending",
     "runtime_validation": "pending"
