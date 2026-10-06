@@ -2,21 +2,26 @@
   "schema_version": "1.0",
   "edition": "NoSteam",
   "task": "mod_menu_castros_attribute_refund",
-  "status": "in_progress",
+  "status": "blocked_missing_development_source",
   "source_state_id": "CI_Mod_Menu_v1.0.5_DEVELOPMENT.zip:restored",
   "verified_game_version": "0.7.9.16232",
   "verified_build": null,
   "current_phase": "architecture_audit",
-  "last_completed_unit": "restored_v1.0.5_development_archive",
-  "next_unit": "audit_controller_castros_attribute_save_path",
+  "last_completed_unit": "experimental_release_archive_audited",
+  "next_unit": "restore_or_receive_v1.0.5_development_workspace",
   "completed_units": [
     "source_index_read",
     "github_state_index_read",
-    "v1.0.5_archives_restored_crc_checked"
+    "v1.0.5_archives_restored_crc_checked",
+    "experimental_release_archive_audited",
+    "flight_and_free_camera_override_scope_identified",
+    "fast_travel_semantic_assets_identified",
+    "attribute_refund_api_surface_identified"
   ],
   "pending_units": [
-    "audit_existing_menu",
-    "audit_castros",
+    "restore_or_receive_v1.0.5_development_workspace",
+    "audit_controller_castros_attribute_save_path",
+    "audit_castros_persistence",
     "audit_attribute_persistence",
     "remove_flight_camera",
     "implement_castros",
@@ -28,20 +33,29 @@
   ],
   "source_files_used": [
     "project_sources/02-CI_SOURCE_INDEX.json",
-    "CI_Mod_Menu_v1.0.5_DEVELOPMENT.zip"
+    "CI_Mod_Menu_v1.0.5_DEVELOPMENT.zip",
+    "CI_Mod_Menu_v1.0.5_0.7.9.16232_EXPERIMENTAL.zip"
   ],
   "working_files": [
     "working/nosteam/0.7.9.16232/mod_menu_castros_attribute_refund/AUDIT_STATE.json"
   ],
   "validation_completed": [
-    "recovered_archive_zip_crc"
+    "recovered_archive_zip_crc",
+    "experimental_release_structure_review"
   ],
   "validation_pending": [
     "source_build_and_schema",
+    "modified_kismet_static_validation",
+    "iostore_roundtrip",
     "runtime"
   ],
   "notes": [
-    "User requests complete removal of flight and free camera, all Castros travel points activation button, attribute point removal after persisted allocation.",
-    "Mod source claims NoSteam 0.7.9.16232; exact baseline schema audit pending. Current Drive sources are Steam and cannot be blindly substituted."
+    "User requests complete removal of flight and free camera, all Castros/fast-travel points activation button, and permanent attribute point removal/refund after persisted allocation.",
+    "Experimental archive contains cooked CI_ModMenu_P.pak/.utoc/.ucas plus reports/docs, but no development patch scripts or editable build workspace.",
+    "Flight/free-camera scope in v1.0.5 includes BP_CombatCharacter plus BP_DSS2_AmbientScene_Camera, BP_DSS2_CoreCamera and BP_DSS2_SceneCamera overrides; these should be removed from both UI/control flow and cooked overrides, not merely hidden.",
+    "Fast-travel audit found WB_FastTravel/BP_CustomWaypoint/shrine-related source assets and a Discovered_* symbol in the existing cooked mod, but the authoritative NoSteam 0.7.9.16232 discovery/save write path still requires development-source audit.",
+    "Attribute audit found AddStatPoints, ChangeStatBaseValue and GetStatValue references in the cooked mod; permanent decrement/refund must use the game's persisted stat/save path with floor validation and one-for-one point refund.",
+    "Current Drive game source is Steam-derived and cannot be blindly substituted for NoSteam 0.7.9.16232 cooked binary work.",
+    "The development archive referenced by source_state_id is not present in the current conversation, GitHub task directory, or CI GPT Drive search, so safe rebuild is blocked. Blind binary/Kismet patching is intentionally not attempted."
   ]
 }
