@@ -1,0 +1,50 @@
+{
+  "release": "18.15",
+  "runtime_tested": false,
+  "goal": "Preserve English runtime action identifiers while rendering Russian captions only at W_MenuItem.SetItemText.",
+  "mechanism": {
+    "runtime_source": "DT_Menu.DisplayName remains English for the seven exact-string dispatched actions.",
+    "display_boundary": "W_MenuItem.SetItemText converts DisplayName to Name, switches on seven English action IDs, and passes CI_RU_Display_RadialAudit FText aliases to TXT_Item.SetText.",
+    "default_path": "All non-target radial entries pass through the original Item.DisplayName unchanged.",
+    "controller_change": "none",
+    "dt_menu_change": "none relative to 18.14",
+    "game_locres_change": "none relative to 18.14"
+  },
+  "display_cases": {
+    "Canopic Capture": "Захват канопой",
+    "Fishing": "Рыбалка",
+    "Korvoth's Sceptre": "Скипетр Корвота",
+    "Masturbate": "Мастурбировать",
+    "Summon Aadi": "Призвать Аади",
+    "Torch": "Факел",
+    "Shade Sight": "Зрение тени"
+  },
+  "asset_patch": {
+    "Steam_current": {
+      "patched_W_MenuItem_sha256": "56d71855886a911a918af6d334eb392084f899dcceb8ea078444ed0f85d1e7f2",
+      "bytes": 53307,
+      "name_map_entries_appended": []
+    },
+    "NoSteam_0.7.9.16232": {
+      "patched_W_MenuItem_sha256": "403c8a37404a680ac3389f04309c6a851d06713ccb7fa0d41e2591811c3fc8b4",
+      "bytes": 34251,
+      "name_map_entries_appended": [
+        "Canopic Capture",
+        "Fishing",
+        "Korvoth's Sceptre",
+        "Masturbate",
+        "Summon Aadi",
+        "Torch",
+        "Shade Sight"
+      ]
+    }
+  },
+  "static_validation": {
+    "technical_runtime_ids": "7/7 English PASS",
+    "russian_display_aliases": "7/7 PASS",
+    "kismet_parse_roundtrip": "PASS",
+    "other_W_MenuItem_exports": "byte-identical",
+    "AC_RadialMenu_modified": false,
+    "PAK_modified_from_18_14": false
+  }
+}
