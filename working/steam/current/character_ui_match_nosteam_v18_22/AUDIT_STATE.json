@@ -2,25 +2,32 @@
   "schema_version": "1.0",
   "edition": "Steam",
   "task": "character_ui_match_nosteam_v18_22",
-  "status": "analysis_started",
+  "status": "static_validated_installer_built_package_pending",
   "source_state_id": "steam_current_2026-10-03_16321_asset_verified_index_stale",
   "verified_game_version": "0.7.9.16321",
   "verified_build": null,
-  "current_phase": "asset_diff",
-  "last_completed_unit": "resume_v18_21_and_verify_build_state",
-  "next_unit": "identify_character_ui_asset_diff",
+  "current_phase": "package_test_archive",
+  "last_completed_unit": "steam_character_geometry_rebase_and_installer_validation",
+  "next_unit": "package_test_archive_and_runtime_validate",
   "completed_units": [
     "read_STATE_INDEX",
     "read_BUILD_STATE",
-    "confirm_v18_21_canonical_base"
+    "confirm_v18_21_canonical_base",
+    "compare_v18_21_Steam_vs_NoSteam_character_native_UMG",
+    "identify_semantic_geometry_diffs",
+    "patch_four_Steam_schema_character_packages",
+    "verify_80_Kismet_functions_byte_identical",
+    "rebuild_Steam_IoStore",
+    "verify_IoStore_meta_and_exact_readback",
+    "verify_NoSteam_payload_byte_identical_v18_21",
+    "verify_PAK_and_localization_unchanged",
+    "rebuild_installer_18_22_TEST",
+    "go_test_race_pass",
+    "verify_installer_payload_embedding_6_of_6"
   ],
   "pending_units": [
-    "identify_character_ui_asset_diff",
-    "build_minimal_steam_ui_patch",
-    "static_validate",
-    "rebuild_installer",
-    "package_test_archive",
-    "runtime_test"
+    "package_test_archive_and_crc_readback",
+    "runtime_test_Steam_character_visual_parity"
   ],
   "source_files_used": [
     "CI_SOURCE_INDEX.json",
@@ -31,15 +38,25 @@
   "working_files": [
     "working/steam/current/character_ui_match_nosteam_v18_22/AUDIT_STATE.json"
   ],
-  "validation_completed": [],
+  "validation_completed": [
+    "Changed Steam packages = WB_CharacterScreen, WB_Stats_Main, WB_Stats_Full, WB_Stats_Main_Slot only",
+    "Target NoSteam Size/Alignment/Transform geometry parity PASS",
+    "80/80 Kismet Function exports byte-identical to v18.21",
+    "Steam IoStore meta/readback PASS",
+    "Steam PAK/Game.locres/translation/glossary unchanged",
+    "NoSteam payload/Data byte-identical to v18.21",
+    "Installer 6/6 payloads embedded and trusted",
+    "go test -race PASS"
+  ],
   "validation_pending": [
-    "source-schema match",
-    "NoSteam visual geometry mapping",
-    "Steam runtime"
+    "ZIP CRC/readback",
+    "in-game Steam character-screen visual comparison"
   ],
   "notes": [
     "Goal: make Steam character menu geometry/scale match NoSteam screenshot without changing NoSteam.",
     "Preserve v18.21 radial/settings fixes and all existing localization.",
-    "No full UI rebuild; use minimal cooked override."
+    "No full UI rebuild; use minimal cooked override.",
+    "NoSteam packages were not copied into Steam; only native UMG geometry fields were rebased onto current Steam-schema packages.",
+    "v18.21 remains canonical until runtime visual confirmation of v18.22."
   ]
 }
