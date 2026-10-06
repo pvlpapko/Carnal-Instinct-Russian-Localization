@@ -1,0 +1,52 @@
+{
+  "schema_version": "1.0",
+  "edition": "Steam",
+  "task": "radial_delegate_boundary_v18_19",
+  "status": "analysis_complete_patch_pending",
+  "source_state_id": "steam_current_2026-10-03_16321_asset_verified_index_stale",
+  "verified_game_version": "0.7.9.16321",
+  "verified_build": null,
+  "current_phase": "binary_patch",
+  "last_completed_unit": "trace_exact_Main_ItemSelected_delegate_call",
+  "next_unit": "patch_MakeSelection_delegate_argument_and_validate",
+  "completed_units": [
+    "record_v18_18_runtime_failure",
+    "trace_AC_RadialMenu_delegate_binding_to_HandleItemSelected",
+    "trace_W_Menu_MakeSelection_direct_ItemSelected_call",
+    "separate_main_ItemSelected_call_from_outer_ring_ItemSelected_call",
+    "confirm_Sorcery_is_local_submenu_path"
+  ],
+  "pending_units": [
+    "patch_MakeSelection_delegate_argument_and_validate",
+    "rebuild_iostore_both_editions",
+    "rebuild_installer",
+    "package_test_archive",
+    "runtime_test"
+  ],
+  "source_files_used": [
+    "v18.13 release payload",
+    "current Steam W_Menu.uasset",
+    "v18.13 NoSteam W_Menu.uasset",
+    "current AC_RadialMenu.uasset",
+    "user runtime result from v18.18"
+  ],
+  "working_files": [
+    "working/steam/current/radial_delegate_boundary_v18_19/AUDIT_STATE.json"
+  ],
+  "validation_completed": [
+    "AC_RadialMenu ExecuteUbergraph binds Menu.ItemSelected to HandleItemSelected",
+    "W_Menu.MakeSelection direct-action path calls ItemSelected after GetSelectedItemData",
+    "second ItemSelected call belongs to GetSelectedRingItemData outer-ring path and will remain untouched"
+  ],
+  "validation_pending": [
+    "patched Kismet roundtrip",
+    "IoStore meta/readback",
+    "installer payload embedding",
+    "runtime test"
+  ],
+  "notes": [
+    "v18.19 will patch only the direct main ItemSelected argument at the UI-to-gameplay delegate boundary.",
+    "No CurrentMenu enum gate and no SelectedItem index mapping will be used.",
+    "Russian-to-English mapping will be based on the actual DisplayName string at selection time; English values pass through unchanged."
+  ]
+}
