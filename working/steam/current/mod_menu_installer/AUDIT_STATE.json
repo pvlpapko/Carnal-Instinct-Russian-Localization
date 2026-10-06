@@ -2,13 +2,13 @@
   "schema_version": "1.0",
   "edition": "both",
   "task": "mod_menu_installer",
-  "status": "release_candidate_windows_runtime_unverified",
+  "status": "in_progress_runtime_hang_ui_redesign",
   "source_state_id": "CI_Mod_Menu_v1.1.1_runtime_validated",
   "verified_game_version": "0.7.9.16321",
   "verified_build": null,
-  "current_phase": "installer_release_candidate",
-  "last_completed_unit": "installer_build_drive_readback",
-  "next_unit": "user_windows_installer_runtime_test",
+  "current_phase": "installer_runtime_fix",
+  "last_completed_unit": "v1.1.1_installer_user_runtime_hang_reported",
+  "next_unit": "replace_installer_ui_and_async_install_flow",
   "completed_units": [
     "source_index_read",
     "github_state_index_read",
@@ -24,10 +24,17 @@
     "localization_exclusion_validation",
     "cleanup_and_localization_untouched_simulation",
     "release_zip_uploaded_to_drive",
-    "drive_release_readback_verified"
+    "drive_release_readback_verified",
+    "v1.1.1_installer_user_runtime_hang_reported",
+    "modern_ui_redesign_requested"
   ],
   "pending_units": [
-    "user_windows_installer_runtime_test"
+    "replace_installer_ui_and_async_install_flow",
+    "dual_path_runtime_validation",
+    "cleanup_without_backups_validation",
+    "modern_icon_resource_validation",
+    "release_build_and_drive_readback",
+    "user_windows_runtime_retest"
   ],
   "source_files_used": [
     "CI_Mod_Menu_v1.1.1_TEST_0.7.9.16321.zip",
@@ -53,7 +60,8 @@
     "drive_readback_sha256_9871143600ab358a072d0dd7a259cbc3f79c847f7d98b1c2187d62c87393541a"
   ],
   "validation_pending": [
-    "windows_runtime_installer_UI_and_install_flow"
+    "windows_runtime_installer_UI_and_install_flow",
+    "new_installer_static_validation"
   ],
   "notes": [
     "This installer is only for CI Mod Menu. It does not contain or modify the Russian localization, Game.locres, pakchunk1015, or RussianTranslation_P.",
@@ -62,6 +70,9 @@
     "Steam payload is labeled verified for 0.7.9.16321. NoSteam payload is labeled verified for 0.7.9.16232. Payload folders remain separate although current bytes are identical.",
     "Installer EXE SHA-256: 632f740e6468a0f5692f6bd532edb38bf0967c421b441d52c7190b3fec019a9a.",
     "Release package ZIP SHA-256: 9871143600ab358a072d0dd7a259cbc3f79c847f7d98b1c2187d62c87393541a. Drive id 1OLOL4yhvqc48TsyNEBzX3-1oaOPSvtfJ.",
-    "Windows runtime execution is not available in the build environment; installer UI/install-flow runtime remains pending user test."
+    "Windows runtime execution is not available in the build environment; installer UI/install-flow runtime remains pending user test.",
+    "User runtime report: previous installer window hangs/freezes. Replace prior installer implementation rather than patching around it.",
+    "User requests a more modern installer UI. New build must retain thematic CI Mod Menu icon, separate Steam/NoSteam folder selection, automatic old-mod removal without backups, and must not touch localization files.",
+    "Runtime responsiveness fix requirement: file operations must not run on the UI message loop; installation/removal will run on a worker goroutine and report progress back to the Win32 UI."
   ]
 }
