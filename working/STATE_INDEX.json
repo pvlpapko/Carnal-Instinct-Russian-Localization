@@ -228,7 +228,7 @@
       "edition": "Steam",
       "task": "character_ui_match_nosteam_v18_22",
       "state_path": "working/steam/current/character_ui_match_nosteam_v18_22/AUDIT_STATE.json",
-      "status": "static_validated_installer_built_package_pending"
+      "status": "test_archive_built_static_verified_runtime_pending"
     }
   ],
   "latest_release": {
@@ -262,21 +262,14 @@
     "minimal_hell_kitchen_refs": 12
   },
   "latest_local_candidate": {
-    "name": "Carnal_Instinct_RU_DontLook_2026-10-06_v18.21_RELEASE.zip",
-    "sha256": "d968e1ad018b71d3b84db4beaa33bf3dd318e6acacd8cba7315f140864c711ff",
-    "archive_bytes": 23654810,
-    "archive_entries": 137,
-    "installer_sha256": "ac75f203471793462d0031480a12b4046b0eb3c0a1ba40ea80b35f4830109f21",
-    "installer_bytes": 20837376,
-    "drive_folder_id": "1VwdnxngtZLDsPl1kP5H5HCJBePoRCF_a",
-    "drive_file_id": "15la_MvSFht_nkeYcefH6pyN5ThoQ9dD6",
-    "drive_metadata_file_id": "16DJHOPLUcsOmiDTL_QcjuBlm5fGBmS8z",
-    "drive_readback_sha256_verified": true,
-    "drive_readback_zip_crc_verified": true,
-    "steam_payload_id": "Steam_current",
-    "steam_verified_game_version": "0.7.9.16321",
-    "steam_verified_build": null,
-    "nosteam_baseline_build": "0.7.9.16232",
-    "runtime_validation": "user reported working: settings persist after restart; clean Apply state; no main-menu freeze regression; radial menu preserved"
+    "name": "Carnal_Instinct_RU_DontLook_CharacterUI_2026-10-06_v18.22_TEST.zip",
+    "task": "character_ui_match_nosteam_v18_22",
+    "sha256": "3bd7d844b971f580c0f16312db01e0bd56bbd3e1e90a35c209ec790c6deecc56",
+    "archive_bytes": 23851956,
+    "archive_entries": 156,
+    "installer_sha256": "d2febfa4e2f79d5ba9900bc12c5a40b6a0c53c4c363bedad8ca2f146de71a62d",
+    "zip_crc_and_exact_entry_readback": true,
+    "runtime_validation": "pending",
+    "canonical_release_remains": "18.21 RELEASE"
   }
 }
