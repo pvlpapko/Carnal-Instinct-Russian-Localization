@@ -180,13 +180,13 @@
       "edition": "Steam",
       "task": "radial_selection_bridge_v18_18",
       "state_path": "working/steam/current/radial_selection_bridge_v18_18/AUDIT_STATE.json",
-      "status": "payload_built_static_validated_installer_built"
+      "status": "test_archive_built_static_verified_runtime_pending"
     },
     {
       "edition": "NoSteam",
       "task": "radial_selection_bridge_v18_18",
       "state_path": "working/nosteam/0.7.9.16232/radial_selection_bridge_v18_18/AUDIT_STATE.json",
-      "status": "payload_built_static_validated_installer_built"
+      "status": "test_archive_built_static_verified_runtime_pending"
     }
   ],
   "latest_release": {
@@ -219,12 +219,12 @@
     "minimal_hell_kitchen_refs": 12
   },
   "latest_local_candidate": {
-    "name": "Carnal_Instinct_RU_DontLook_RadialSelection_2026-10-06_v18.17_TEST.zip",
-    "task": "radial_selection_bridge_v18_17",
-    "sha256": "d50079ce07a062460f8f2b1aee3cfae22eeaf5c27d8f2d015d11fa06894a5ddb",
-    "archive_bytes": 18950770,
-    "archive_entries": 120,
-    "installer_sha256": "570206eb72afcc0e996021e33465703afd010b653eb09ca3a315a32f50cfc5e5",
+    "name": "Carnal_Instinct_RU_DontLook_RadialSelection_2026-10-06_v18.18_TEST.zip",
+    "task": "radial_selection_bridge_v18_18",
+    "sha256": "cc55f2f95f558b10b9786501bab553638cc9710ce12cf97d620b4c0b2af3db42",
+    "archive_bytes": 23789864,
+    "archive_entries": 127,
+    "installer_sha256": "eb6379593879107d26332ff4b064f35e56e453e19347bea7b35fc5a9bee18a77",
     "zip_crc_and_exact_entry_readback": true,
     "drive_upload": "pending",
     "runtime_validation": "pending"
