@@ -1,0 +1,57 @@
+{
+  "schema_version": "1.0",
+  "edition": "NoSteam",
+  "task": "settings_persistence_v18_21",
+  "status": "root_cause_identified_patch_pending",
+  "source_state_id": "nosteam_0.7.9.16232_fixed",
+  "verified_game_version": "0.7.9",
+  "verified_build": "0.7.9.16232",
+  "current_phase": "binary_patch",
+  "last_completed_unit": "trace_settings_activation_and_v18_5_regression",
+  "next_unit": "restore_startup_load_apply_only",
+  "completed_units": [
+    "inspect_v18_20_payload_settings_stack",
+    "audit_localized_video_option_values",
+    "reject_unproven_string_translation_root_cause",
+    "trace_WB_Master_SettingsMenu_Activate",
+    "trace_v18_5_WB_T3_MainMenu_antifreeze_patch",
+    "identify_two_Activate_calls_changed_from_load_apply_to_false",
+    "identify_safe_startup_call_vs_settings_open_call"
+  ],
+  "pending_units": [
+    "restore_startup_load_apply_only",
+    "patch_iostore_both_editions",
+    "static_validate",
+    "rebuild_installer",
+    "package_test_archive",
+    "runtime_test_settings_persistence"
+  ],
+  "source_files_used": [
+    "v18.20 canonical release",
+    "Content/NiceSettingsMenu/UI/Theme_3/WB_T3_MainMenu.uasset",
+    "Content/NiceSettingsMenu/UI/General/MASTER/WB_Master_SettingsMenu.uasset",
+    "Content/NiceSettingsMenu/Blueprints/AC_PC_NiceSettingsComponent.uasset",
+    "tools/map_audit_v18_5/patch_ui.py",
+    "Reports/V18_5_RADIAL_SETTINGS.json"
+  ],
+  "working_files": [
+    "working/nosteam/0.7.9.16232/settings_persistence_v18_21/AUDIT_STATE.json"
+  ],
+  "validation_completed": [
+    "WB_Master_SettingsMenu.Activate calls Load and Apply Settings only when LoadAndApplySettingsOnActivation is true",
+    "v18.5 patch forced both WB_T3_MainMenu settings Activate calls to false in both editions",
+    "manual settings-open call remains intentionally false to preserve anti-freeze behavior",
+    "separate startup/post-show activation originally used true and is candidate for restoration"
+  ],
+  "validation_pending": [
+    "patched Kismet exact diff",
+    "IoStore meta/readback",
+    "installer embedding",
+    "in-game restart/save persistence"
+  ],
+  "notes": [
+    "User reports video settings reset/appear dirty after every game restart in both editions.",
+    "Do not modify radial stack from runtime-validated v18.20.",
+    "Do not restore heavy load/apply on every main-menu settings click; restore only one-time startup activation."
+  ]
+}
