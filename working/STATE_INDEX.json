@@ -211,6 +211,18 @@
       "task": "pre_v18_5_radial_restore_v18_20",
       "state_path": "working/nosteam/0.7.9.16232/pre_v18_5_radial_restore_v18_20/AUDIT_STATE.json",
       "status": "release_uploaded_drive_verified_runtime_validated"
+    },
+    {
+      "edition": "Steam",
+      "task": "settings_persistence_v18_21",
+      "state_path": "working/steam/current/settings_persistence_v18_21/AUDIT_STATE.json",
+      "status": "root_cause_identified_patch_pending"
+    },
+    {
+      "edition": "NoSteam",
+      "task": "settings_persistence_v18_21",
+      "state_path": "working/nosteam/0.7.9.16232/settings_persistence_v18_21/AUDIT_STATE.json",
+      "status": "root_cause_identified_patch_pending"
     }
   ],
   "latest_release": {
