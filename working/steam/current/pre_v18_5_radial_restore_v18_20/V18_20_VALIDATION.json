@@ -1,0 +1,50 @@
+{
+  "release": "18.20 TEST",
+  "runtime_tested": false,
+  "regression_boundary": {
+    "v18_4_NoSteam_W_MenuItem": {
+      "bytes": 33389,
+      "sha256": "c7681e02c0ee42f8d015addb531729caac041e9e8e9d07c9480620f3f64feb1d"
+    },
+    "v18_5_plus_NoSteam_W_MenuItem": {
+      "bytes": 33430,
+      "sha256": "d9404aeec26e10a6760128c9b2116ded6dde9cd3823ec7c6482f4e52a0bd9b3f"
+    },
+    "current_Steam_source_W_MenuItem": {
+      "bytes": 52591,
+      "sha256": "dc394ab1b8c85b1ad874a2147598c2995cd3060126736753399dd795ac1942cb"
+    },
+    "v18_5_plus_Steam_W_MenuItem": {
+      "bytes": 52632,
+      "sha256": "7e112f6fb2051045e099bac33f782cb5a9b18862fc04692c52bf249020fbd500"
+    }
+  },
+  "tests": {
+    "NoSteam_exact_WORKING_v3_radial_stack": "PASS",
+    "Steam_current_source_radial_trio": "PASS",
+    "v18_5_W_MenuItem_layout_override_removed_both": "PASS",
+    "no_new_Kismet_edits_in_v18_20": "PASS",
+    "Game_locres_exact_v18_13": "PASS",
+    "PAK_exact_v18_13": "PASS",
+    "IoStore_meta_exact_readback": "PASS",
+    "installer_payloads": "6/6 PASS",
+    "installer_version": "18.20 TEST PASS",
+    "go_test_race": "PASS"
+  },
+  "payloads": {
+    "Steam_current": {
+      "packages": 47,
+      "utoc_sha256": "c391e68b47825c7313d6865a758fc0c151feb3a0624962175e65638a666872ea",
+      "ucas_sha256": "db4898b8c7842736976ba2e156817129bfecab3d18dbc24cf49bd81efef8d2dc",
+      "pak_sha256": "2faea84a4cc4cfac31bc18e4c8588a90af6cf6a8ca0c2de55e04237def120ec8"
+    },
+    "NoSteam_0_7_9_16232": {
+      "packages": 74,
+      "utoc_sha256": "8b2aad7d2f40c75093235c073058ed6c2d01f48f3293cbf6a956cf23d5cf7e87",
+      "ucas_sha256": "e5d935b57af68430fa39fd46d7d00f7d2001edb4ee27013754363567aa55711e",
+      "pak_sha256": "507d1f951a38aa03a5789867fe0c68cb69e47cc2d5fc64c8c8ffb7b4cfd416ae"
+    }
+  },
+  "installer_sha256": "6e55d4d251afce8570e1b3108dc77adf56212db188f041c62f827fe1503de432",
+  "runtime_validation": "pending"
+}
