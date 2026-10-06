@@ -2,13 +2,13 @@
   "schema_version": "1.0",
   "edition": "NoSteam",
   "task": "mod_menu_castros_attribute_refund",
-  "status": "blocked_missing_development_source",
+  "status": "in_progress_steam_16321_source_approved",
   "source_state_id": "CI_Mod_Menu_v1.0.5_DEVELOPMENT.zip:restored",
   "verified_game_version": "0.7.9.16232",
   "verified_build": null,
   "current_phase": "architecture_audit",
   "last_completed_unit": "experimental_release_archive_audited",
-  "next_unit": "restore_or_receive_v1.0.5_development_workspace",
+  "next_unit": "audit_steam_16321_controller_castros_attribute_save_path",
   "completed_units": [
     "source_index_read",
     "github_state_index_read",
@@ -16,10 +16,10 @@
     "experimental_release_archive_audited",
     "flight_and_free_camera_override_scope_identified",
     "fast_travel_semantic_assets_identified",
-    "attribute_refund_api_surface_identified"
+    "attribute_refund_api_surface_identified",
+    "steam_0.7.9.16321_source_use_user_approved"
   ],
   "pending_units": [
-    "restore_or_receive_v1.0.5_development_workspace",
     "audit_controller_castros_attribute_save_path",
     "audit_castros_persistence",
     "audit_attribute_persistence",
@@ -55,8 +55,9 @@
     "Flight/free-camera scope in v1.0.5 includes BP_CombatCharacter plus BP_DSS2_AmbientScene_Camera, BP_DSS2_CoreCamera and BP_DSS2_SceneCamera overrides; these should be removed from both UI/control flow and cooked overrides, not merely hidden.",
     "Fast-travel audit found WB_FastTravel/BP_CustomWaypoint/shrine-related source assets and a Discovered_* symbol in the existing cooked mod, but the authoritative NoSteam 0.7.9.16232 discovery/save write path still requires development-source audit.",
     "Attribute audit found AddStatPoints, ChangeStatBaseValue and GetStatValue references in the cooked mod; permanent decrement/refund must use the game's persisted stat/save path with floor validation and one-for-one point refund.",
-    "The development archive referenced by source_state_id is not present in the current conversation, GitHub task directory, or CI GPT Drive search, so safe rebuild is blocked. Blind binary/Kismet patching is intentionally not attempted.",
     "Steam current source identity is verified in steam/current/BUILD_STATE.json as embedded game version 0.7.9.16321. The global CI_SOURCE_INDEX.json copy currently surfaced in project/Drive still reports 0.7.9.16315 and is therefore stale for version metadata; use BUILD_STATE plus direct current-source byte checks for Steam-sensitive work until that manifest is refreshed.",
-    "For this NoSteam 0.7.9.16232 mod-menu task, Steam 0.7.9.16321 assets may be used only as audited reference or when package/schema compatibility with the NoSteam target is explicitly proven."
+    "For this NoSteam 0.7.9.16232 mod-menu task, Steam 0.7.9.16321 assets may be used only as audited reference or when package/schema compatibility with the NoSteam target is explicitly proven.",
+    "User explicitly confirmed the existing mod works on Steam 0.7.9.16321 and approved using current Steam source files for this mod-menu work, including binary/UI source assets where needed.",
+    "Steam/current remains the source location for active Steam files. NoSteam and Steam release payloads must still remain separated even when a Steam-derived compatible override is reused."
   ]
 }
