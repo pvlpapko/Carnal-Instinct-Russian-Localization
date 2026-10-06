@@ -1,0 +1,52 @@
+{
+  "release": "18.22 TEST",
+  "base": "18.21 RELEASE",
+  "edition": "Steam",
+  "goal": "Match Steam character/stat menu geometry to NoSteam reference while retaining Steam gameplay/schema.",
+  "changed_packages": [
+    "Carnal_Instinct_UE5/Content/RPG_InventorySystem/UI/Character/WB_CharacterScreen.uasset",
+    "Carnal_Instinct_UE5/Content/RPG_InventorySystem/UI/PlayerInventory/WB_Stats_Main.uasset",
+    "Carnal_Instinct_UE5/Content/RPG_InventorySystem/UI/PlayerInventory/WB_Stats_Full.uasset",
+    "Carnal_Instinct_UE5/Content/RPG_InventorySystem/UI/PlayerInventory/WB_Stats_Main_Slot.uasset"
+  ],
+  "edits": {
+    "WB_CharacterScreen": [
+      "HorizontalBox_83->SizeBox_161 HorizontalAlignment=Fill(0)",
+      "HorizontalBox_83->StatsSize SizeRule=Fill(1)"
+    ],
+    "WB_Stats_Main": [
+      "Overlay_1->Box_Attributes Padding.Left=132; align Center/Center",
+      "Overlay_53->VerticalBox_0 VerticalAlignment=Center",
+      "Image_Border_1 scale=1.4x1.4",
+      "SizeBox_12 angle=0",
+      "SizeBox_27 HeightOverride disabled",
+      "Text_Attributes MinDesiredWidth=0"
+    ],
+    "WB_Stats_Full": [
+      "Column1/Column2 parent slots Auto sizing and center alignment as NoSteam",
+      "Column child SizeBoxSlot alignment as NoSteam",
+      "SizeBox_38 width override enabled"
+    ],
+    "WB_Stats_Main_Slot": [
+      "SizeBox_143/234/86 parent slots Auto sizing",
+      "SizeBox_234 default alignment",
+      "Image_119 scale=1.2x1.0",
+      "Text_StatLevel center justification"
+    ]
+  },
+  "invariants": [
+    "No NoSteam cooked package copied into Steam",
+    "80 Kismet Function exports unchanged",
+    "NoSteam payload unchanged",
+    "PAK/localization unchanged",
+    "v18.21 radial/settings fixes preserved"
+  ],
+  "runtime_tested": false,
+  "archive": {
+    "name": "Carnal_Instinct_RU_DontLook_CharacterUI_2026-10-06_v18.22_TEST.zip",
+    "sha256": "3bd7d844b971f580c0f16312db01e0bd56bbd3e1e90a35c209ec790c6deecc56",
+    "bytes": 23851956,
+    "entries": 156,
+    "installer_sha256": "d2febfa4e2f79d5ba9900bc12c5a40b6a0c53c4c363bedad8ca2f146de71a62d"
+  }
+}
