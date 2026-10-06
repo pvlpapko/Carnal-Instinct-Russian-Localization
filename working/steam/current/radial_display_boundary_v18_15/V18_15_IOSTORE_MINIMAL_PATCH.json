@@ -1,0 +1,35 @@
+{
+  "release": "18.15",
+  "method": "minimal_single_chunk_patch",
+  "target": "Carnal_Instinct_UE5/Content/BlueprintSystems/DynamicRadialMenu/Widgets/W_MenuItem.uasset",
+  "editions": {
+    "Steam_current": {
+      "chunk_index": 7,
+      "offset": 524288,
+      "old_length": 52632,
+      "new_length": 53307,
+      "old_chunk_sha256": "7e112f6fb2051045e099bac33f782cb5a9b18862fc04692c52bf249020fbd500",
+      "new_chunk_sha256": "56d71855886a911a918af6d334eb392084f899dcceb8ea078444ed0f85d1e7f2",
+      "new_chunk_blake3_160": "d1d955f4842fc230f24994f55b945fa01e4c1649",
+      "utoc_sha256": "4137a642eef355dce4ccfdf657b71906dd5f10e1fca19a9e7f643d3e1510a379",
+      "ucas_sha256": "b4474cbaa397fe5bbd37e74da6ef83d47daa91e58e1b6ee183184e3f75919738",
+      "other_named_chunks_exact_readback": "PASS",
+      "utoc_changes_limited_to_offset_length_and_meta": "PASS",
+      "ucas_changes_limited_to_target_physical_block": "PASS"
+    },
+    "NoSteam_0.7.9.16232": {
+      "chunk_index": 10,
+      "offset": 786432,
+      "old_length": 33430,
+      "new_length": 34251,
+      "old_chunk_sha256": "d9404aeec26e10a6760128c9b2116ded6dde9cd3823ec7c6482f4e52a0bd9b3f",
+      "new_chunk_sha256": "403c8a37404a680ac3389f04309c6a851d06713ccb7fa0d41e2591811c3fc8b4",
+      "new_chunk_blake3_160": "bf0b01c999a32063a00fcf931c8365d0e0603740",
+      "utoc_sha256": "b9cf23074bf499964b243baeea6589454ce0a499240795b3c163512d330adb01",
+      "ucas_sha256": "07eacfb2f6c49c4725b453ce3693938122775979696354546bba9f9cad572ea2",
+      "other_named_chunks_exact_readback": "PASS",
+      "utoc_changes_limited_to_offset_length_and_meta": "PASS",
+      "ucas_changes_limited_to_target_physical_block": "PASS"
+    }
+  }
+}
