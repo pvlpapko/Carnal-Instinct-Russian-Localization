@@ -204,31 +204,31 @@
       "edition": "Steam",
       "task": "pre_v18_5_radial_restore_v18_20",
       "state_path": "working/steam/current/pre_v18_5_radial_restore_v18_20/AUDIT_STATE.json",
-      "status": "runtime_validated_user_reported"
+      "status": "release_uploaded_drive_verified_runtime_validated"
     },
     {
       "edition": "NoSteam",
       "task": "pre_v18_5_radial_restore_v18_20",
       "state_path": "working/nosteam/0.7.9.16232/pre_v18_5_radial_restore_v18_20/AUDIT_STATE.json",
-      "status": "runtime_validated_user_reported"
+      "status": "release_uploaded_drive_verified_runtime_validated"
     }
   ],
   "latest_release": {
-    "name": "Carnal_Instinct_RU_DontLook_SteamAsyncLoadHotfix_2026-10-04_v16_FINAL.zip",
-    "sha256": "c61b4f30b7a4e3bf95dfa005306672fe1a52e8b81d0fd2a2409ab72d71032911",
-    "archive_bytes": 29085003,
-    "archive_entries": 345,
-    "installer_sha256": "3184b383533b68757af97ccc8be8dbaf5a9eb481bdeff4b5fa32bb91b9bed565",
-    "installer_bytes": 20976640,
-    "drive_folder_id": "1GK2OWhdupfIcxS0vkBJ_0EaM7oM2Vp1o",
-    "drive_file_id": "18eR6ykzUcKk3gF58PO3WEdVUbb0ZkW1y",
+    "name": "Carnal_Instinct_RU_DontLook_2026-10-06_v18.20_RELEASE.zip",
+    "sha256": "464976a11b84695dbb6b8dcd2afd6a640b477929b50c91597d29d04527cd0eef",
+    "archive_bytes": 18915632,
+    "archive_entries": 121,
+    "installer_sha256": "480cc285e66645bdd75a4833d2f12bddce8396fa6e2794d2814fccb417115f1b",
+    "installer_bytes": 20836864,
+    "drive_folder_id": "1VwdnxngtZLDsPl1kP5H5HCJBePoRCF_a",
+    "drive_file_id": "1iJKlxxOLOkQo8cXdWNszBnKyOPEooyUZ",
     "drive_readback_sha256_verified": true,
     "drive_readback_zip_crc_verified": true,
     "steam_payload_id": "Steam_current",
     "steam_verified_game_version": "0.7.9.16321",
     "steam_verified_build": null,
     "nosteam_baseline_build": "0.7.9.16232",
-    "runtime_validation": "Steam v18 full failed startup; Q1/Q2/Q4 quest isolation PASS, Q3 quest_objectives FAIL; v18.3 objective display-boundary candidate pending. NoSteam v15 user-reported working"
+    "runtime_validation": "user_reported_working: radial menu and direct actions"
   },
   "latest_test_hotfix": {
     "edition": "Steam",
@@ -243,14 +243,20 @@
     "minimal_hell_kitchen_refs": 12
   },
   "latest_local_candidate": {
-    "name": "Carnal_Instinct_RU_DontLook_RadialRestore_2026-10-06_v18.20_TEST.zip",
-    "task": "pre_v18_5_radial_restore_v18_20",
-    "sha256": "2885b2cdc6bf93451eed678b858c8a88dfdca63720f3580c525e706d3c4f7a45",
-    "archive_bytes": 18945451,
-    "archive_entries": 123,
-    "installer_sha256": "6e55d4d251afce8570e1b3108dc77adf56212db188f041c62f827fe1503de432",
-    "zip_crc_and_exact_entry_readback": true,
-    "drive_upload": "pending",
-    "runtime_validation": "user_reported_working"
+    "name": "Carnal_Instinct_RU_DontLook_2026-10-06_v18.20_RELEASE.zip",
+    "sha256": "464976a11b84695dbb6b8dcd2afd6a640b477929b50c91597d29d04527cd0eef",
+    "archive_bytes": 18915632,
+    "archive_entries": 121,
+    "installer_sha256": "480cc285e66645bdd75a4833d2f12bddce8396fa6e2794d2814fccb417115f1b",
+    "installer_bytes": 20836864,
+    "drive_folder_id": "1VwdnxngtZLDsPl1kP5H5HCJBePoRCF_a",
+    "drive_file_id": "1iJKlxxOLOkQo8cXdWNszBnKyOPEooyUZ",
+    "drive_readback_sha256_verified": true,
+    "drive_readback_zip_crc_verified": true,
+    "steam_payload_id": "Steam_current",
+    "steam_verified_game_version": "0.7.9.16321",
+    "steam_verified_build": null,
+    "nosteam_baseline_build": "0.7.9.16232",
+    "runtime_validation": "user_reported_working: radial menu and direct actions"
   }
 }
