@@ -2,13 +2,13 @@
   "schema_version": "1.0",
   "edition": "NoSteam",
   "task": "radial_handler_v18_16",
-  "status": "archive_built_static_verified_runtime_pending",
+  "status": "runtime_failed_radial_actions_noop_menu_opens",
   "source_state_id": "nosteam_0.7.9.16232_fixed",
   "verified_game_version": "0.7.9",
   "verified_build": "0.7.9.16232",
-  "current_phase": "runtime_validation",
-  "last_completed_unit": "v18_16_archive_static_validation",
-  "next_unit": "runtime_test_radial_open_and_actions_nosteam",
+  "current_phase": "runtime_failure_analysis",
+  "last_completed_unit": "user_runtime_test_menu_opens_actions_noop",
+  "next_unit": "superseded_by_radial_selection_bridge_v18_17",
   "completed_units": [
     "analyze_user_crash_context_v18_15",
     "reject_v18_15_W_MenuItem_display_boundary",
@@ -20,7 +20,7 @@
     "verify_W_MenuItem_Game_locres_PAK_identical_v18_13"
   ],
   "pending_units": [
-    "runtime_test_radial_open_and_actions_nosteam"
+    "superseded_by_radial_selection_bridge_v18_17"
   ],
   "source_files_used": [
     "CI GPT/Releases/Carnal_Instinct_RU_DontLook_2026-10-06_v18.13_RELEASE.zip",
@@ -40,14 +40,15 @@
     "Game.locres and PAK byte-identical to v18.13",
     "IoStore metadata hashes PASS"
   ],
-  "validation_pending": [
-    "actual in-game radial menu opening and seven actions"
-  ],
+  "validation_pending": [],
   "notes": [
     "v18.16 abandons the v18.15 display-boundary approach.",
     "The fix is a minimal handler-literal change in AC_RadialMenu.HandleItemSelected.",
     "Runtime success is not claimed until user retests.",
     "Final local archive: Carnal_Instinct_RU_DontLook_2026-10-06_v18.16_RELEASE.zip; SHA-256 485081fdaa9e54626bdd45b7ce0a4c3a9b5f1ad2ca9869f5c7a0c27403ef72cb; 18,860,416 bytes; 121 entries; ZIP CRC/exact readback PASS.",
-    "Installer SHA-256 ff467044b6c6aacc60f4c68489b45376236b3890116865b38b5c6109a03eda33."
+    "Installer SHA-256 ff467044b6c6aacc60f4c68489b45376236b3890116865b38b5c6109a03eda33.",
+    "User runtime test 2026-10-06: radial menu opens without crash, hover/highlight and center description work, but action selection still performs no action.",
+    "Screenshot confirms exactly eight current Main entries are visible: Sorcery plus seven direct gameplay actions.",
+    "v18.16 handler-literal rewrite is rejected for release use."
   ]
 }
