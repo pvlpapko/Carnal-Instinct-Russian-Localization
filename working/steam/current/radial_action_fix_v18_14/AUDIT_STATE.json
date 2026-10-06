@@ -2,7 +2,7 @@
   "schema_version": "1.0",
   "edition": "Steam",
   "task": "radial_action_fix_v18_14",
-  "status": "archive_built_static_verified_upload_pending",
+  "status": "archive_built_static_verified_drive_upload_pending",
   "source_state_id": "steam_current_2026-10-03_16321_asset_verified_index_stale",
   "verified_game_version": "0.7.9.16321",
   "verified_build": null,
@@ -54,6 +54,8 @@
     "The earlier W_MenuItem layout hypothesis was rejected after tracing the live action handler.",
     "Root cause is localization of DisplayName values that the game reuses as exact FString dispatch identifiers.",
     "No AC_RadialMenu bytecode was modified in v18.14.",
-    "Seven visible command captions remain English to preserve gameplay; Russian display aliases remain available for a future safe display-boundary implementation."
+    "Seven visible command captions remain English to preserve gameplay; Russian display aliases remain available for a future safe display-boundary implementation.",
+    "Final local archive: Carnal_Instinct_RU_DontLook_2026-10-06_v18.14_RELEASE.zip; SHA-256 950582a0deff37772a942883c053309bd43383d6d357cbe4166b15bf7d7510d1; 18,851,828 bytes; 120 entries; ZIP CRC/exact readback PASS.",
+    "Drive upload was attempted in this chat, but the current Drive connector could not consume the local container artifact because no transferable connector file reference was available. No Drive upload/readback is claimed."
   ]
 }
