@@ -1,0 +1,26 @@
+{
+  "release": "18.21 TEST",
+  "base": "18.20 RELEASE",
+  "target": "Carnal_Instinct_UE5/Content/NiceSettingsMenu/UI/Theme_3/WB_T3_MainMenu.uasset",
+  "operation": "Change only the startup/post-show WB_T3_SettingsMenu.Activate second argument from EX_False (0x28) to EX_True (0x27). Keep the manual Settings-button call at EX_False.",
+  "editions": {
+    "Steam_current": {
+      "base_asset_sha256": "a66fc5e85b5bd36d9b916267222f6fc5a1e5252fdd47469d3734f3059626ecbd",
+      "patched_asset_sha256": "0af9bdf9d0d9b067b0361e4ebde83b1dbe8d7e506e99587ef1c199c6015f8cd9",
+      "asset_byte_offset": 42002
+    },
+    "NoSteam_0.7.9.16232": {
+      "base_asset_sha256": "5323ba5256552942804688c3fdc108551365527afd9ca2b2a4387052d637ddd3",
+      "patched_asset_sha256": "904527b59be85c28b0ba449111719dfeda8e6581833e1ae49ba1434814e7391e",
+      "asset_byte_offset": 39499
+    }
+  },
+  "invariants": [
+    "one asset byte changed per edition",
+    "asset size unchanged",
+    "manual-open anti-freeze path remains False",
+    "radial stack exact v18.20",
+    "Game.locres exact v18.20",
+    "PAK exact v18.20"
+  ]
+}
