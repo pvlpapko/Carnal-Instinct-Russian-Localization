@@ -1,0 +1,59 @@
+{
+  "schema_version": "1.0",
+  "version": "1.1.1",
+  "author": "Don't Look",
+  "steam_source": "0.7.9.16321",
+  "nosteam_target": "0.7.9.16232",
+  "runtime_tested": false,
+  "campfire_fix": {
+    "rejected_v110_method": "WorldPartitionBlueprintLibrary.GetActorDescs/LoadActors",
+    "persisted_source": "RPGInventory_GameInstance.Loaded Interactables",
+    "struct": "/Game/RPG_InventorySystem/ItemsData/Structs/SaveSystem/S_SaveInteractables",
+    "actor_field": "InteractableActor_105_A54CDEE64DCAA995596C58BA398BF419",
+    "filter": "soft object reference string contains BP_Campfire_C",
+    "value_field": "InteractionValue_96_E78CE6FC42BFFB7ABF4D61B7B5F59AD6",
+    "value": 1,
+    "live_refresh": "BP_Campfire.ActivatePoint on currently loaded actors",
+    "persistence": "AC_Saving.Quick Save Game"
+  },
+  "ui_fix": {
+    "panel_width": 620,
+    "row_wrap_at": 560,
+    "all_rows_auto_wrap": true,
+    "attribute_row": "Характеристики: −1 = +1 очко | минимум 1 | постоянно",
+    "attribute_font_size": 14
+  },
+  "overrides": [
+    "RPG_InventorySystem/Blueprints/Components/AC_Leveling.uasset",
+    "RPG_InventorySystem/Blueprints/Components/AC_Saving.uasset",
+    "RPG_InventorySystem/Blueprints/Player/BP_RPGInventoryPlayerController.uasset",
+    "RPG_InventorySystem/UI/Dev/WB_CheatMenu.uasset",
+    "RPG_InventorySystem/UI/PlayerInventory/WB_Stats_Main_Slot.uasset"
+  ],
+  "excluded": [
+    "DynamicCombatSystem/Blueprints/BP_CombatCharacter.uasset",
+    "Character/PhysicsControl/BP_DSS2_CoreCamera.uasset",
+    "Character/PhysicsControl/BP_DSS2_SceneCamera.uasset",
+    "Character/PhysicsControl/AmbientScene/BP_DSS2_AmbientScene_Camera.uasset"
+  ],
+  "validation": {
+    "tests": "10/10",
+    "native_calls_checked": 531,
+    "script_calls_checked": 12,
+    "assignments_checked": 247,
+    "reference_arguments_checked": 29,
+    "iostore": "header/ranges/BLAKE3-160/directory index passed"
+  },
+  "release": {
+    "filename": "CI_Mod_Menu_v1.1.1_TEST_0.7.9.16321.zip",
+    "drive_id": "1h0DsXcpV4HkzTX7DRsjAOgg1eCadRntE",
+    "bytes": 215828,
+    "sha256": "7f26405c491738384d0117583f2f7e2361eabe806ecb88bb88ace7d52c5e52b6"
+  },
+  "development": {
+    "filename": "CI_Mod_Menu_v1.1.1_DEVELOPMENT.zip",
+    "drive_id": "1N4hMiA7x1Y64VVbV6B0ihQRc1GZhubd4",
+    "bytes": 991010,
+    "sha256": "1149675e4a572a2d8ca11b984b84c4b33904c14b46e7f02aa10d92144e54ffeb"
+  }
+}
