@@ -2,13 +2,13 @@
   "schema_version": "1.0",
   "edition": "NoSteam",
   "task": "mod_menu_castros_attribute_refund",
-  "status": "in_progress_steam_16321_source_approved",
-  "source_state_id": "CI_Mod_Menu_v1.0.5_DEVELOPMENT.zip:restored",
+  "status": "awaiting_in_game_validation",
+  "source_state_id": "steam_current_0.7.9.16321_user_approved_v1.0.5_compatible",
   "verified_game_version": "0.7.9.16232",
   "verified_build": null,
-  "current_phase": "architecture_audit",
-  "last_completed_unit": "attribute_save_and_campfire_architecture_identified",
-  "next_unit": "trace_bp_campfire_activatepoint_and_stat_minimum",
+  "current_phase": "release_candidate_static_validation",
+  "last_completed_unit": "v1.1.0_static_and_iostore_validation",
+  "next_unit": "in_game_validate_v1.1.0",
   "completed_units": [
     "source_index_read",
     "github_state_index_read",
@@ -22,17 +22,18 @@
     "steam_16321_modded_controller_ui_byte_match_confirmed",
     "stock_attribute_decrease_refund_path_identified",
     "attribute_save_persistence_path_confirmed",
-    "campfire_fast_travel_asset_identified"
+    "campfire_fast_travel_asset_identified",
+    "bp_campfire_activatepoint_persistence_traced",
+    "world_partition_actor_desc_api_traced",
+    "flight_freecam_removed_from_output_and_ui_logic",
+    "permanent_attribute_refund_implemented",
+    "campfire_world_partition_unlock_implemented_with_loaded_fallback",
+    "v1.1.0_static_tests_10_of_10",
+    "modified_kismet_static_validation_504_calls_229_assignments",
+    "iostore_v1.1.0_container_built",
+    "iostore_chunk_hash_directory_index_validation_passed"
   ],
   "pending_units": [
-    "audit_controller_castros_attribute_save_path",
-    "audit_castros_persistence",
-    "audit_attribute_persistence",
-    "remove_flight_camera",
-    "implement_castros",
-    "implement_attribute_refund",
-    "static_validation",
-    "iostore_roundtrip",
     "release_package_upload_readback",
     "in_game_validation"
   ],
@@ -42,17 +43,28 @@
     "CI_Mod_Menu_v1.0.5_0.7.9.16232_EXPERIMENTAL.zip"
   ],
   "working_files": [
-    "working/nosteam/0.7.9.16232/mod_menu_castros_attribute_refund/AUDIT_STATE.json"
+    "working/nosteam/0.7.9.16232/mod_menu_castros_attribute_refund/AUDIT_STATE.json",
+    "local:ci_modmenu_v110_work/modmenu/dev/build_controller.py",
+    "local:ci_modmenu_v110_work/modmenu/dev/build_ui.py",
+    "local:ci_modmenu_v110_work/modmenu/dev/build_respec.py",
+    "local:ci_modmenu_v110_work/modmenu/dev/test_v110.py",
+    "local:ci_modmenu_v110_work/modmenu/dev/validate_assets.py",
+    "local:ci_modmenu_v110_work/modmenu/dev/pack_v110_python.py",
+    "local:ci_modmenu_v110_work/modmenu/dev/verify_v110_container.py"
   ],
   "validation_completed": [
     "recovered_archive_zip_crc",
-    "experimental_release_structure_review"
+    "experimental_release_structure_review",
+    "steam_0.7.9.16321_source_use_approved",
+    "bp_campfire_stock_save_semantics_traced",
+    "world_partition_actor_desc_struct_and_native_signatures_checked",
+    "modified_kismet_static_validation_504_native_calls_229_assignments_21_reference_args",
+    "v1.1.0_tests_10_of_10",
+    "iostore_header_chunk_ranges_blake3_directory_index"
   ],
   "validation_pending": [
-    "source_build_and_schema",
-    "modified_kismet_static_validation",
-    "iostore_roundtrip",
-    "runtime"
+    "runtime_in_game",
+    "drive_release_readback"
   ],
   "notes": [
     "User requests complete removal of flight and free camera, all Castros/fast-travel points activation button, and permanent attribute point removal/refund after persisted allocation.",
@@ -66,6 +78,10 @@
     "Steam/current remains the source location for active Steam files. NoSteam and Steam release payloads must still remain separated even when a Steam-derived compatible override is reused.",
     "Development workspace is available locally as CI_Mod_Menu_v1.0.5_DEVELOPMENT.zip and contains generator/build/test scripts plus source/patched assets.",
     "Permanent respec should patch WB_Stats_Main_Slot stock Decrease lower-bound semantics: the stock path already decrements the stat and refunds exactly one Stat Point, but OriginalStatValue is session/saved-state anchored.",
-    "Fast-travel discovery is tied to /Game/RPG_InventorySystem/Classes/Other/PlayerBed/BP_Campfire and its ActivatePoint/Display on Worldmap/Game Load flow; do not implement as map-icon-only visibility."
+    "Fast-travel discovery is tied to /Game/RPG_InventorySystem/Classes/Other/PlayerBed/BP_Campfire and its ActivatePoint/Display on Worldmap/Game Load flow; do not implement as map-icon-only visibility.",
+    "v1.1.0 final static design uses WorldPartitionBlueprintLibrary.GetActorDescs -> ActorDesc.Class filter for BP_Campfire -> LoadActors(Guid[]) -> GetAllActorsOfClass -> BP_Campfire.ActivatePoint -> stock Quick Save. If descriptor API fails at runtime, it falls back to currently loaded BP_Campfire actors.",
+    "Permanent attribute refund is implemented by changing only WB_Stats_Main_Slot.OriginalStatValue floor capture to constant 1.0; stock Stats Change Value -> AddStatPoints(1) is preserved.",
+    "Final candidate contains only five overrides. BP_CombatCharacter and all three free-camera camera packages are excluded. Legacy WB_CheatMenu Fly click handlers are neutralized to Return/End and no P binding is added.",
+    "Static validation passed: 10/10 unit tests; 504 native calls, 10 script calls, 229 assignments, 21 addressable reference arguments; IoStore header/chunk ranges/BLAKE3-160/directory index passed. Runtime game test remains unverified."
   ]
 }
