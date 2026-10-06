@@ -168,13 +168,25 @@
       "edition": "Steam",
       "task": "radial_selection_bridge_v18_17",
       "state_path": "working/steam/current/radial_selection_bridge_v18_17/AUDIT_STATE.json",
-      "status": "test_archive_built_static_verified_runtime_pending"
+      "status": "runtime_partial_sorcery_works_direct_actions_noop"
     },
     {
       "edition": "NoSteam",
       "task": "radial_selection_bridge_v18_17",
       "state_path": "working/nosteam/0.7.9.16232/radial_selection_bridge_v18_17/AUDIT_STATE.json",
-      "status": "test_archive_built_static_verified_runtime_pending"
+      "status": "runtime_partial_sorcery_works_direct_actions_noop"
+    },
+    {
+      "edition": "Steam",
+      "task": "radial_selection_bridge_v18_18",
+      "state_path": "working/steam/current/radial_selection_bridge_v18_18/AUDIT_STATE.json",
+      "status": "payload_built_static_validated_installer_built"
+    },
+    {
+      "edition": "NoSteam",
+      "task": "radial_selection_bridge_v18_18",
+      "state_path": "working/nosteam/0.7.9.16232/radial_selection_bridge_v18_18/AUDIT_STATE.json",
+      "status": "payload_built_static_validated_installer_built"
     }
   ],
   "latest_release": {
