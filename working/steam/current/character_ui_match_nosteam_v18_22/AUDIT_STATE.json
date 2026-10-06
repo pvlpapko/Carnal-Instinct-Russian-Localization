@@ -2,13 +2,13 @@
   "schema_version": "1.0",
   "edition": "Steam",
   "task": "character_ui_match_nosteam_v18_22",
-  "status": "static_validated_installer_built_package_pending",
+  "status": "test_archive_built_static_verified_runtime_pending",
   "source_state_id": "steam_current_2026-10-03_16321_asset_verified_index_stale",
   "verified_game_version": "0.7.9.16321",
   "verified_build": null,
-  "current_phase": "package_test_archive",
-  "last_completed_unit": "steam_character_geometry_rebase_and_installer_validation",
-  "next_unit": "package_test_archive_and_runtime_validate",
+  "current_phase": "runtime_validation",
+  "last_completed_unit": "v18_22_test_archive_static_validation",
+  "next_unit": "runtime_test_Steam_character_visual_parity",
   "completed_units": [
     "read_STATE_INDEX",
     "read_BUILD_STATE",
@@ -26,7 +26,6 @@
     "verify_installer_payload_embedding_6_of_6"
   ],
   "pending_units": [
-    "package_test_archive_and_crc_readback",
     "runtime_test_Steam_character_visual_parity"
   ],
   "source_files_used": [
@@ -39,24 +38,27 @@
     "working/steam/current/character_ui_match_nosteam_v18_22/AUDIT_STATE.json"
   ],
   "validation_completed": [
-    "Changed Steam packages = WB_CharacterScreen, WB_Stats_Main, WB_Stats_Full, WB_Stats_Main_Slot only",
-    "Target NoSteam Size/Alignment/Transform geometry parity PASS",
+    "Steam changed packages limited to four character/stat widgets",
+    "Target NoSteam geometry parity PASS on semantic UMG nodes",
     "80/80 Kismet Function exports byte-identical to v18.21",
-    "Steam IoStore meta/readback PASS",
+    "Steam IoStore meta/exact readback PASS",
     "Steam PAK/Game.locres/translation/glossary unchanged",
     "NoSteam payload/Data byte-identical to v18.21",
     "Installer 6/6 payloads embedded and trusted",
-    "go test -race PASS"
+    "go test -race PASS",
+    "ZIP CRC/exact entry readback PASS"
   ],
   "validation_pending": [
-    "ZIP CRC/readback",
-    "in-game Steam character-screen visual comparison"
+    "in-game Steam character menu visual comparison to NoSteam screenshot"
   ],
   "notes": [
     "Goal: make Steam character menu geometry/scale match NoSteam screenshot without changing NoSteam.",
     "Preserve v18.21 radial/settings fixes and all existing localization.",
     "No full UI rebuild; use minimal cooked override.",
     "NoSteam packages were not copied into Steam; only native UMG geometry fields were rebased onto current Steam-schema packages.",
-    "v18.21 remains canonical until runtime visual confirmation of v18.22."
+    "v18.21 remains canonical until runtime visual confirmation of v18.22.",
+    "Test archive: Carnal_Instinct_RU_DontLook_CharacterUI_2026-10-06_v18.22_TEST.zip; SHA-256 3bd7d844b971f580c0f16312db01e0bd56bbd3e1e90a35c209ec790c6deecc56; 23851956 bytes; 156 entries.",
+    "Installer SHA-256 d2febfa4e2f79d5ba9900bc12c5a40b6a0c53c4c363bedad8ca2f146de71a62d.",
+    "Canonical release remains v18.21 until runtime visual confirmation."
   ]
 }
