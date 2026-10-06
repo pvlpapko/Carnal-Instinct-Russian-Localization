@@ -1,6 +1,13 @@
 {
   "release": "18.21 TEST",
   "runtime_tested": false,
+  "root_cause": "v18.5 anti-freeze patch forced both WB_T3_SettingsMenu.Activate LoadAndApplySettingsOnActivation arguments to False; startup/post-show saved-settings synchronization was disabled together with manual-open reapply.",
+  "fix": {
+    "asset": "Carnal_Instinct_UE5/Content/NiceSettingsMenu/UI/Theme_3/WB_T3_MainMenu.uasset",
+    "manual_settings_open_load_apply": false,
+    "startup_post_show_load_apply": true,
+    "changed_asset_bytes_per_edition": 1
+  },
   "tests": {
     "single_asset_only_both_editions": "PASS",
     "single_byte_asset_patch_both_editions": "PASS",
@@ -8,13 +15,41 @@
     "radial_v18_20_preserved": "PASS",
     "locres_pak_preserved": "PASS",
     "iostore_meta_readback": "PASS",
-    "installer_embedding": "PASS",
-    "go_test_race": "PASS"
+    "reproducible_payload_rebuild_from_clean_v18_20": "PASS",
+    "installer_embedding": "6/6 PASS",
+    "go_test_race": "PASS",
+    "zip_crc_exact_entry_readback": "PASS"
+  },
+  "payloads": {
+    "Steam_current": {
+      "mainmenu_sha256": "0af9bdf9d0d9b067b0361e4ebde83b1dbe8d7e506e99587ef1c199c6015f8cd9",
+      "utoc_sha256": "850b6bc1e116cdb10f8649f743bf05efb608cce31efac455a29cbd46238254e8",
+      "ucas_sha256": "13f8e9231c31faab583da1f41cbd5d20b842eb75323e3a991d0a22109ce7b5ac",
+      "pak_sha256": "2faea84a4cc4cfac31bc18e4c8588a90af6cf6a8ca0c2de55e04237def120ec8"
+    },
+    "NoSteam_0.7.9.16232": {
+      "mainmenu_sha256": "904527b59be85c28b0ba449111719dfeda8e6581833e1ae49ba1434814e7391e",
+      "utoc_sha256": "667a078162fd51fa86668efd0e6523ed972a92fd581d2c5f0aec43870863decc",
+      "ucas_sha256": "6065e6bd2bcfb21bcd884ac872afde4df1ea330ba77e6df85a8b4347d1c9cabc",
+      "pak_sha256": "507d1f951a38aa03a5789867fe0c68cb69e47cc2d5fc64c8c8ffb7b4cfd416ae"
+    }
   },
   "installer": {
     "sha256": "a887a3759aab32ac600dee221b6585a6d78030849dd78a8784a2a3f1719f3932",
-    "bytes": 20837376,
-    "payloads_embedded": "6/6 PASS",
-    "trusted_hashes": "6/6 PASS"
-  }
+    "bytes": 20837376
+  },
+  "archive": {
+    "name": "Carnal_Instinct_RU_DontLook_SettingsPersistence_2026-10-06_v18.21_TEST.zip",
+    "sha256": "204d64ddd8f3d2dde6a308d4e1570132cca84a3967ed31945289011e152cefc1",
+    "bytes": 23653219,
+    "entries": 136,
+    "installer_sha256": "a887a3759aab32ac600dee221b6585a6d78030849dd78a8784a2a3f1719f3932",
+    "installer_bytes": 20837376
+  },
+  "runtime_validation_pending": [
+    "saved video values persist after full game restart",
+    "Apply is not dirty without user changes",
+    "main-menu settings still opens without prior freeze",
+    "radial menu remains working"
+  ]
 }
