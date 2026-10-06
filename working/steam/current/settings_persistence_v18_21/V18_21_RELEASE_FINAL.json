@@ -1,0 +1,50 @@
+{
+  "release": "18.21 RELEASE",
+  "author": "Don't Look",
+  "status": "canonical_release",
+  "runtime_validation": {
+    "status": "PASS",
+    "source": "user reported in-game validation",
+    "settings_persist_after_restart": true,
+    "clean_apply_state_without_changes": true,
+    "main_menu_settings_freeze_regression": false,
+    "radial_regression": false
+  },
+  "patch": {
+    "target": "Carnal_Instinct_UE5/Content/NiceSettingsMenu/UI/Theme_3/WB_T3_MainMenu.uasset",
+    "changed_asset_bytes_per_edition": 1,
+    "manual_open_load_apply": false,
+    "startup_post_show_load_apply": true
+  },
+  "payload_identity": {
+    "steam_utoc": "850b6bc1e116cdb10f8649f743bf05efb608cce31efac455a29cbd46238254e8",
+    "steam_ucas": "13f8e9231c31faab583da1f41cbd5d20b842eb75323e3a991d0a22109ce7b5ac",
+    "steam_pak": "2faea84a4cc4cfac31bc18e4c8588a90af6cf6a8ca0c2de55e04237def120ec8",
+    "nosteam_utoc": "667a078162fd51fa86668efd0e6523ed972a92fd581d2c5f0aec43870863decc",
+    "nosteam_ucas": "6065e6bd2bcfb21bcd884ac872afde4df1ea330ba77e6df85a8b4347d1c9cabc",
+    "nosteam_pak": "507d1f951a38aa03a5789867fe0c68cb69e47cc2d5fc64c8c8ffb7b4cfd416ae"
+  },
+  "installer": {
+    "sha256": "ac75f203471793462d0031480a12b4046b0eb3c0a1ba40ea80b35f4830109f21",
+    "bytes": 20837376,
+    "version": "18.21 RELEASE",
+    "go_test_race": "PASS",
+    "payloads_embedded_and_trusted": "6/6 PASS"
+  },
+  "archive": {
+    "name": "Carnal_Instinct_RU_DontLook_2026-10-06_v18.21_RELEASE.zip",
+    "sha256": "d968e1ad018b71d3b84db4beaa33bf3dd318e6acacd8cba7315f140864c711ff",
+    "bytes": 23654810,
+    "entries": 137,
+    "zip_crc_and_exact_readback": true
+  },
+  "drive": {
+    "folder_id": "1VwdnxngtZLDsPl1kP5H5HCJBePoRCF_a",
+    "file_id": "15la_MvSFht_nkeYcefH6pyN5ThoQ9dD6",
+    "metadata_file_id": "16DJHOPLUcsOmiDTL_QcjuBlm5fGBmS8z",
+    "readback_sha256_verified": true,
+    "readback_zip_crc_verified": true,
+    "readback_size_verified": true,
+    "readback_entries_verified": true
+  }
+}
