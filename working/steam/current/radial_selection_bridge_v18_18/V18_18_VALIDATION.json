@@ -1,0 +1,40 @@
+{
+  "release": "18.18 TEST",
+  "runtime_tested": false,
+  "tests": {
+    "root_cause_enum_type": "PASS",
+    "enum_Main_value_2": "PASS",
+    "selection_bridge_structure": "PASS",
+    "scope_Main_byte_2_only": "PASS",
+    "visual_Russian_7_of_7": "PASS",
+    "W_MenuItem_untouched": "PASS",
+    "AC_RadialMenu_untouched": "PASS",
+    "locres_pak_untouched": "PASS",
+    "IoStore_meta_exact_readback": "PASS",
+    "installer_go_race": "PASS",
+    "installer_payloads": "6/6 PASS",
+    "zip_crc_exact_readback": "PASS"
+  },
+  "payloads": {
+    "Steam_current": {
+      "packages": 46,
+      "utoc_sha256": "ad19de72cf3c7356d83d7a182c9f6cf166e1ac247b8f3979475d6540837114a1",
+      "ucas_sha256": "b800b44d27cbbe69471545d3fd20b0bbc847656f3bba8c0703107c87fb6ae3f9",
+      "pak_sha256": "2faea84a4cc4cfac31bc18e4c8588a90af6cf6a8ca0c2de55e04237def120ec8"
+    },
+    "NoSteam_0_7_9_16232": {
+      "packages": 74,
+      "utoc_sha256": "19120be00121081e36dfa2dfcf0e87c142c946cdf62b80e09e8d344f2c473f4b",
+      "ucas_sha256": "4dfa21853b8d1b97b842715e458386a9a09b0a662e711dd71e6d74cb1eea0139",
+      "pak_sha256": "507d1f951a38aa03a5789867fe0c68cb69e47cc2d5fc64c8c8ffb7b4cfd416ae"
+    }
+  },
+  "installer_sha256": "eb6379593879107d26332ff4b064f35e56e453e19347bea7b35fc5a9bee18a77",
+  "archive": {
+    "name": "Carnal_Instinct_RU_DontLook_RadialSelection_2026-10-06_v18.18_TEST.zip",
+    "sha256": "cc55f2f95f558b10b9786501bab553638cc9710ce12cf97d620b4c0b2af3db42",
+    "bytes": 23789864,
+    "entries": 127,
+    "installer_sha256": "eb6379593879107d26332ff4b064f35e56e453e19347bea7b35fc5a9bee18a77"
+  }
+}
