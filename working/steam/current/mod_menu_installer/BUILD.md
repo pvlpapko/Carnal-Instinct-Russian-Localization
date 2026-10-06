@@ -1,38 +1,57 @@
-# CI Mod Menu installer build
+# CI Mod Menu Modern Installer 2.0
 
-Target: Windows x64. Installer version: 1.1.1. Author: Don't Look.
+Target: Windows x64. Mod version: 1.1.1. Author: Don't Look.
 
-The installer contains only `CI_ModMenu_P.pak/.utoc/.ucas`. It does not contain or modify the Russian localization, `Game.locres`, `pakchunk1015-*`, or `RussianTranslation_P`.
+This installer is only for CI Mod Menu. It does not contain or modify the Russian localization, Game.locres, pakchunk1015-* or RussianTranslation_P.
 
-## Payload layout
+## Runtime-hang fix
 
-- `payload/steam/` — Steam payload, verified with 0.7.9.16321.
-- `payload/nosteam/` — NoSteam payload, verified with 0.7.9.16232.
+- No Steam-library or game-path scan runs during WM_CREATE/startup.
+- Install/update runs on a worker goroutine and posts progress to the Win32 UI.
+- Removal runs on a worker goroutine.
+- COM is initialized STA before the system folder picker is used with BIF_NEWDIALOGSTYLE.
+- The UI message loop stays free during file copy/hash verification.
 
-Both directories are deliberately kept separate even when their current bytes are identical.
+## UI 2.0
+
+- Native dark Win32 UI.
+- DWM immersive dark mode.
+- Rounded Windows 11 corners and Mica where supported.
+- Cyan accent and owner-drawn buttons.
+- Thematic CI Mod Menu icon.
+- Separate Steam and NoSteam cards with independent game folders.
+
+## Editions
+
+- Steam: verified game version 0.7.9.16321.
+- NoSteam: verified baseline 0.7.9.16232.
 
 ## Update semantics
 
-Before every installation, all files matching `CI_ModMenu_P.*` and legacy `CI_Mod_Menu_P.*` in the selected game's `Content/Paks` are deleted. No backups are created. Then the selected edition payload is written and SHA-256 verified from the embedded data.
+Before every install, delete only:
+- CI_ModMenu_P.*
+- CI_Mod_Menu_P.*
 
-## Source restoration
+No backups are created. Then the selected edition payload is written and SHA-256 verified.
 
-`main.go.gz.b64` is the gzip-compressed, base64-encoded canonical `main.go`. Run `restore_main_source.py` to restore it. Restored `main.go` SHA-256 must be:
+## Source
 
-`825139bfc2a54648a1f406261d47d60815a26879b2cb6d67310653f45f8a9741`
+Canonical Installer 2.0 development archive:
+- CI GPT/Working/CI_Mod_Menu_v1.1.1_Installer_v2_DEVELOPMENT.zip
+- Drive id: 17Zp64Rg4g_IPOEjsMJWqTBZ8uQRWQ5AM
+- SHA-256: 50e9c5ddb679e39bb1c9da17cc1628ef87a6e4a6abdc4b385ce29ce28187b946
+- main.go SHA-256: 4cc0be346da7c0cf8bae86f0e9a7bcbbf444b9b9f997ca14335c89debd9250da
 
-## Build
+The archive contains main.go, go.mod, app.manifest, payloads, icon, build notes, static validator and the constrained-environment PE resource patcher.
 
-1. Install Go 1.23+.
-2. Install `github.com/akavel/rsrc` v0.10.2.
-3. Restore `main.go`.
-4. Generate `assets/ci_mod_menu.ico` with `icon_generator.py`.
-5. Put the three mod container files in each payload directory.
-6. Run:
+## Release
 
-```bash
-rsrc -arch amd64 -ico assets/ci_mod_menu.ico -manifest app.manifest -o rsrc_windows_amd64.syso
-GOOS=windows GOARCH=amd64 CGO_ENABLED=0 go build -trimpath -ldflags="-H windowsgui -s -w" -o CI_Mod_Menu_v1.1.1_Setup.exe .
-```
+CI GPT/Releases/CI_Mod_Menu_v1.1.1_Setup_Modern_Package.zip
+- Drive id: 1OTAAYVPiy9bf5ByZVWWtytS2gA4qVGcE
+- SHA-256: 8a0dae731da74d2c304a3aedbea6c6bff25e6b137049b622eb3118d2b4a89f24
 
-The manifest requests administrator rights so installation under Program Files works.
+Installer EXE:
+- CI_Mod_Menu_v1.1.1_Setup_Modern.exe
+- SHA-256: 2e40d9660f72720b0eaca3c7df7bf8a4fd47525f7ab145572feb660e4a16fada
+
+Windows runtime test of Installer 2.0 is still pending user validation.
