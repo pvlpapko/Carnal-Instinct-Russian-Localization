@@ -1,0 +1,84 @@
+{
+  "release": "18.14",
+  "base_release": "18.13",
+  "runtime_tested": false,
+  "root_cause_confirmed": true,
+  "handler_exact_string_cases": [
+    "Summon Aadi",
+    "Korvoth's Sceptre",
+    "Torch",
+    "Shade Sight",
+    "Masturbate",
+    "Fishing",
+    "Canopic Capture"
+  ],
+  "editions": {
+    "Steam_current": {
+      "packages": 45,
+      "toc_entries": 46,
+      "container_meta_hashes": "PASS",
+      "exact_pak_locres_readback": "PASS",
+      "cooked_packages_changed_from_18_13": 0,
+      "localization_entries_changed": 7,
+      "files": [
+        {
+          "path": "Files/Steam_current/pakchunk1015-Windows_P.pak",
+          "bytes": 2524884,
+          "sha256": "5b5091a77375da81337a2607620fd7957c8e32932d26eeb657eab94f963fa017"
+        },
+        {
+          "path": "Files/Steam_current/pakchunk1015-Windows_P.utoc",
+          "bytes": 6170,
+          "sha256": "6c0a0905c39217b63113366afe1f33105da8b1ca5da2739093c745db664889f3"
+        },
+        {
+          "path": "Files/Steam_current/pakchunk1015-Windows_P.ucas",
+          "bytes": 4784128,
+          "sha256": "3ad7bb2163de47621a5dbc119ae8da9fa0475ee9ca377eed78cd08409432c581"
+        }
+      ]
+    },
+    "NoSteam_0.7.9.16232": {
+      "packages": 74,
+      "toc_entries": 75,
+      "container_meta_hashes": "PASS",
+      "exact_pak_locres_readback": "PASS",
+      "cooked_packages_changed_from_18_13": 0,
+      "localization_entries_changed": 7,
+      "files": [
+        {
+          "path": "Files/NoSteam_0.7.9.16232/pakchunk1015-Windows_P.pak",
+          "bytes": 2411244,
+          "sha256": "bd338f7b78c31795b8dd03d8b2f5e6fae1aa14f5486efb65ba460d704fa01dd5"
+        },
+        {
+          "path": "Files/NoSteam_0.7.9.16232/pakchunk1015-Windows_P.utoc",
+          "bytes": 9465,
+          "sha256": "5dead014ea0c5da3307ab892041f8da8eacce3d622700f9dc33b26f2197dd7f7"
+        },
+        {
+          "path": "Files/NoSteam_0.7.9.16232/pakchunk1015-Windows_P.ucas",
+          "bytes": 8126464,
+          "sha256": "a66dac47e01a43fdea35bcfe0a4a94ab237e2b5da91abae17433eb7ab1d86769"
+        }
+      ]
+    }
+  },
+  "targeted_tests": {
+    "radial_action_fix_unittest": 3,
+    "status": "PASS"
+  },
+  "installer_go_race_tests": {
+    "top_level": 30,
+    "with_subtests": 46,
+    "status": "PASS"
+  },
+  "installer_embeds_exact_six_payload_files": "PASS",
+  "installer_sha256": "b4bb7466428b6499be320901f85d6c96495a9c6f38ae3ae26715908c39ba5341",
+  "archive_name": "Carnal_Instinct_RU_DontLook_2026-10-06_v18.14_RELEASE.zip",
+  "archive_sha256": "f077bdadc715b051504123a39885ba1b11be1444cd8e0371e1f5a8b0802ffdc0",
+  "archive_bytes": 18851311,
+  "archive_entries": 120,
+  "zip_crc_and_exact_entry_readback": "PASS",
+  "runtime_validation": "pending"
+}
