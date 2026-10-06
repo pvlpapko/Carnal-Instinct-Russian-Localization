@@ -196,6 +196,8 @@
     "drive_metadata_file_id": "18o96hqHrFxEAkaptGmJWy-yTCrOVmhUJ",
     "drive_readback_sha256_verified": true,
     "drive_readback_zip_crc_verified": true,
-    "runtime_validation": "pending"
+    "runtime_validation": "pending",
+    "drive_verified_metadata_file_id": "1g8Y_LGvsLxJZrTeFdDikiW--hHHjCztv",
+    "drive_verified_metadata_sha256": "ed7dd791084cc914c4410d7dcc6201fc4b5c253331eb2846070ee307ba37a32b"
   }
 }
