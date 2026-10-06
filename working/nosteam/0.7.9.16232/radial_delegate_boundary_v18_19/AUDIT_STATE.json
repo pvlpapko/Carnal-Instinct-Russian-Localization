@@ -2,13 +2,13 @@
   "schema_version": "1.0",
   "edition": "NoSteam",
   "task": "radial_delegate_boundary_v18_19",
-  "status": "test_archive_built_static_verified_runtime_pending",
+  "status": "runtime_failed_crash_on_direct_action_selection",
   "source_state_id": "nosteam_0.7.9.16232_fixed",
   "verified_game_version": "0.7.9",
   "verified_build": "0.7.9.16232",
-  "current_phase": "runtime_validation",
-  "last_completed_unit": "v18_19_test_archive_static_validation",
-  "next_unit": "runtime_test_radial_direct_actions_nosteam",
+  "current_phase": "runtime_failure_analysis",
+  "last_completed_unit": "user_runtime_test_crash_on_selection",
+  "next_unit": "superseded_by_pre_v18_5_radial_restore_v18_20",
   "completed_units": [
     "record_v18_18_runtime_failure",
     "trace_AC_RadialMenu_delegate_binding_to_HandleItemSelected",
@@ -17,7 +17,7 @@
     "confirm_Sorcery_is_local_submenu_path"
   ],
   "pending_units": [
-    "runtime_test_radial_direct_actions_nosteam"
+    "superseded_by_pre_v18_5_radial_restore_v18_20"
   ],
   "source_files_used": [
     "v18.13 release payload",
@@ -45,15 +45,16 @@
     "installer payload embedding/trust 6/6 PASS",
     "ZIP CRC/exact readback PASS"
   ],
-  "validation_pending": [
-    "actual in-game radial direct-action execution"
-  ],
+  "validation_pending": [],
   "notes": [
     "v18.19 will patch only the direct main ItemSelected argument at the UI-to-gameplay delegate boundary.",
     "No CurrentMenu enum gate and no SelectedItem index mapping will be used.",
     "Russian-to-English mapping will be based on the actual DisplayName string at selection time; English values pass through unchanged.",
     "Test archive: Carnal_Instinct_RU_DontLook_RadialDelegate_2026-10-06_v18.19_TEST.zip; SHA-256 88a1ece53e63763fb1a68f70da499a4c6565c29d206302687e11fbd748a7895e; 18895561 bytes; 118 entries.",
     "Installer SHA-256 09921972261332be9c57c187340e049743cfe5acb01803fd2ccf88c1c61e058f.",
-    "Runtime success is not claimed until user retest."
+    "Runtime success is not claimed until user retest.",
+    "User runtime test 2026-10-06: menu opens, but selecting a direct function crashes with EXCEPTION_ACCESS_VIOLATION reading 0x0.",
+    "CrashContext: GameThread, SecondsSinceStart=118, PCallStackHash=17DB7718731D49B4264A96DA0E3E7EAE3AB00ED0.",
+    "v18.19 delegate-argument Kismet injection is rejected and must not be reused."
   ]
 }
