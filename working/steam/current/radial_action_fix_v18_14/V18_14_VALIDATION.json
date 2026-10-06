@@ -76,9 +76,11 @@
   "installer_embeds_exact_six_payload_files": "PASS",
   "installer_sha256": "b4bb7466428b6499be320901f85d6c96495a9c6f38ae3ae26715908c39ba5341",
   "archive_name": "Carnal_Instinct_RU_DontLook_2026-10-06_v18.14_RELEASE.zip",
-  "archive_sha256": "f077bdadc715b051504123a39885ba1b11be1444cd8e0371e1f5a8b0802ffdc0",
-  "archive_bytes": 18851311,
+  "archive_sha256": "950582a0deff37772a942883c053309bd43383d6d357cbe4166b15bf7d7510d1",
+  "archive_bytes": 18851828,
   "archive_entries": 120,
   "zip_crc_and_exact_entry_readback": "PASS",
-  "runtime_validation": "pending"
+  "runtime_validation": "pending",
+  "drive_upload": "pending_connector_file_reference_bridge",
+  "drive_readback_verified": false
 }
