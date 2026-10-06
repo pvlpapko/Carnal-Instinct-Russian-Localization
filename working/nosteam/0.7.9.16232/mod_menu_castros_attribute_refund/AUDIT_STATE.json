@@ -7,8 +7,8 @@
   "verified_game_version": "0.7.9.16232",
   "verified_build": null,
   "current_phase": "architecture_audit",
-  "last_completed_unit": "experimental_release_archive_audited",
-  "next_unit": "audit_steam_16321_controller_castros_attribute_save_path",
+  "last_completed_unit": "attribute_save_and_campfire_architecture_identified",
+  "next_unit": "trace_bp_campfire_activatepoint_and_stat_minimum",
   "completed_units": [
     "source_index_read",
     "github_state_index_read",
@@ -17,7 +17,12 @@
     "flight_and_free_camera_override_scope_identified",
     "fast_travel_semantic_assets_identified",
     "attribute_refund_api_surface_identified",
-    "steam_0.7.9.16321_source_use_user_approved"
+    "steam_0.7.9.16321_source_use_user_approved",
+    "v1.0.5_development_archive_restored",
+    "steam_16321_modded_controller_ui_byte_match_confirmed",
+    "stock_attribute_decrease_refund_path_identified",
+    "attribute_save_persistence_path_confirmed",
+    "campfire_fast_travel_asset_identified"
   ],
   "pending_units": [
     "audit_controller_castros_attribute_save_path",
@@ -58,6 +63,9 @@
     "Steam current source identity is verified in steam/current/BUILD_STATE.json as embedded game version 0.7.9.16321. The global CI_SOURCE_INDEX.json copy currently surfaced in project/Drive still reports 0.7.9.16315 and is therefore stale for version metadata; use BUILD_STATE plus direct current-source byte checks for Steam-sensitive work until that manifest is refreshed.",
     "For this NoSteam 0.7.9.16232 mod-menu task, Steam 0.7.9.16321 assets may be used only as audited reference or when package/schema compatibility with the NoSteam target is explicitly proven.",
     "User explicitly confirmed the existing mod works on Steam 0.7.9.16321 and approved using current Steam source files for this mod-menu work, including binary/UI source assets where needed.",
-    "Steam/current remains the source location for active Steam files. NoSteam and Steam release payloads must still remain separated even when a Steam-derived compatible override is reused."
+    "Steam/current remains the source location for active Steam files. NoSteam and Steam release payloads must still remain separated even when a Steam-derived compatible override is reused.",
+    "Development workspace is available locally as CI_Mod_Menu_v1.0.5_DEVELOPMENT.zip and contains generator/build/test scripts plus source/patched assets.",
+    "Permanent respec should patch WB_Stats_Main_Slot stock Decrease lower-bound semantics: the stock path already decrements the stat and refunds exactly one Stat Point, but OriginalStatValue is session/saved-state anchored.",
+    "Fast-travel discovery is tied to /Game/RPG_InventorySystem/Classes/Other/PlayerBed/BP_Campfire and its ActivatePoint/Display on Worldmap/Game Load flow; do not implement as map-icon-only visibility."
   ]
 }
