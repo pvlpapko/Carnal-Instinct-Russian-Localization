@@ -1,0 +1,43 @@
+{
+  "schema_version": "1.0",
+  "product": "CI Mod Menu",
+  "version": "1.1.1",
+  "author": "Don't Look",
+  "installer": {
+    "filename": "CI_Mod_Menu_v1.1.1_Setup.exe",
+    "sha256": "632f740e6468a0f5692f6bd532edb38bf0967c421b441d52c7190b3fec019a9a",
+    "windows": "x64",
+    "requires_admin": true,
+    "signed": false
+  },
+  "editions": {
+    "steam": {
+      "verified_game_version": "0.7.9.16321",
+      "payload_dir": "payload/steam"
+    },
+    "nosteam": {
+      "verified_game_version": "0.7.9.16232",
+      "payload_dir": "payload/nosteam"
+    }
+  },
+  "payload": {
+    "CI_ModMenu_P.pak": "86f60adce2c31c7c4ea72d5cf70fda8b24336d5e31ef7ede236f03a45f0cd7ee",
+    "CI_ModMenu_P.utoc": "59a71828c3b7be46154e8d5cf21898f6458a11f0602880b829f1d81aff1b16c3",
+    "CI_ModMenu_P.ucas": "c45841f5a8c856b0ab8450f26364ca56ffb1dcb2a2788e2e744d6e75f481c604"
+  },
+  "update_policy": {
+    "delete_patterns": ["CI_ModMenu_P.*", "CI_Mod_Menu_P.*"],
+    "backups": false
+  },
+  "localization_touched": false,
+  "validation": {
+    "pe_gui_x64": true,
+    "icon_resource": true,
+    "manifest_require_administrator": true,
+    "payload_embedded": true,
+    "localization_markers_absent": true,
+    "cleanup_simulation": "PASS",
+    "localization_untouched_simulation": "PASS",
+    "windows_runtime_tested": false
+  }
+}
