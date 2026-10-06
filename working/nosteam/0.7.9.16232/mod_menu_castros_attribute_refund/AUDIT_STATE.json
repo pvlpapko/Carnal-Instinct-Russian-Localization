@@ -2,13 +2,13 @@
   "schema_version": "1.0",
   "edition": "NoSteam",
   "task": "mod_menu_castros_attribute_refund",
-  "status": "awaiting_in_game_validation_v1.1.1",
+  "status": "completed_runtime_validated_v1.1.1",
   "source_state_id": "steam_current_0.7.9.16321_user_approved_v1.0.5_compatible",
   "verified_game_version": "0.7.9.16232",
   "verified_build": null,
-  "current_phase": "v1.1.1_test_release_ready",
-  "last_completed_unit": "v1.1.1_release_and_development_readback_verified",
-  "next_unit": "in_game_validate_v1.1.1",
+  "current_phase": "completed",
+  "last_completed_unit": "v1.1.1_user_runtime_validation_passed",
+  "next_unit": null,
   "completed_units": [
     "source_index_read",
     "github_state_index_read",
@@ -44,11 +44,10 @@
     "v1.1.1_iostore_validation_passed",
     "v1.1.1_release_uploaded_and_readback_verified",
     "v1.1.1_development_archive_uploaded_and_readback_verified",
-    "v1.1.1_patch_spec_committed"
+    "v1.1.1_patch_spec_committed",
+    "v1.1.1_user_runtime_validation_passed"
   ],
-  "pending_units": [
-    "v1.1.1_in_game_validation"
-  ],
+  "pending_units": [],
   "source_files_used": [
     "project_sources/02-CI_SOURCE_INDEX.json",
     "CI_Mod_Menu_v1.0.5_DEVELOPMENT.zip",
@@ -76,11 +75,10 @@
     "v1.1.1_combined_static_531_native_12_script_247_assignments_29_reference_args",
     "v1.1.1_iostore_header_chunk_ranges_blake3_directory_index",
     "v1.1.1_release_readback_sha256_7f26405c491738384d0117583f2f7e2361eabe806ecb88bb88ace7d52c5e52b6",
-    "v1.1.1_development_readback_sha256_1149675e4a572a2d8ca11b984b84c4b33904c14b46e7f02aa10d92144e54ffeb"
+    "v1.1.1_development_readback_sha256_1149675e4a572a2d8ca11b984b84c4b33904c14b46e7f02aa10d92144e54ffeb",
+    "v1.1.1_runtime_in_game_user_confirmed"
   ],
-  "validation_pending": [
-    "v1.1.1_runtime_in_game"
-  ],
+  "validation_pending": [],
   "notes": [
     "User requests complete removal of flight and free camera, all Castros/fast-travel points activation button, and permanent attribute point removal/refund after persisted allocation.",
     "Experimental archive contains cooked CI_ModMenu_P.pak/.utoc/.ucas plus reports/docs, but no development patch scripts or editable build workspace.",
@@ -106,6 +104,7 @@
     "v1.1.1 UI fix: all eight row TextBlocks have AutoWrapText enabled with WrapTextAt=560 inside the 620-wide panel. Attribute row text is shortened to 'Характеристики: −1 = +1 очко | минимум 1 | постоянно' and uses 14 pt instead of 16 pt.",
     "v1.1.1 static validation: 10/10 tests; combined controller/UI click audit 531 native calls, 12 script calls, 247 assignments, 29 addressable reference/out args. IoStore UTOC/UCAS header, ranges, BLAKE3-160 and directory index pass. Runtime test still pending.",
     "v1.1.1 TEST release Drive readback verified: 215828 bytes, SHA-256 7f26405c491738384d0117583f2f7e2361eabe806ecb88bb88ace7d52c5e52b6.",
-    "v1.1.1 development workspace archived to CI GPT/Working and read back: 991010 bytes, SHA-256 1149675e4a572a2d8ca11b984b84c4b33904c14b46e7f02aa10d92144e54ffeb."
+    "v1.1.1 development workspace archived to CI GPT/Working and read back: 991010 bytes, SHA-256 1149675e4a572a2d8ca11b984b84c4b33904c14b46e7f02aa10d92144e54ffeb.",
+    "User confirmed v1.1.1 works in game. Runtime validation for campfire unlock and UI bounds fix is therefore recorded as passed based on user test."
   ]
 }
