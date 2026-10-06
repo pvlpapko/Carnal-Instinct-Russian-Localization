@@ -1,7 +1,12 @@
 #!/usr/bin/env python3
-"""Restore DynamicRadialMenu action DisplayName FText identities used as runtime string IDs."""
+"""Restore DynamicRadialMenu action DisplayName FText identities used as runtime string IDs.
+
+Canonical placement: tools/radial_action_v18_14/fix_radial_action_ids.py inside an extracted
+release tree. The same source is checkpointed here in GitHub for reproducibility.
+"""
 from pathlib import Path
 import json, sys, hashlib
+
 ROOT = Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(ROOT / 'Developer/SafeUIFix/tools'))
 import ci_formats as cf
@@ -15,17 +20,27 @@ TECHNICAL = {
     '86304DA1490FFECCD302FE9B9B15D119': ('Summon Aadi', 1824976582),
     'D7A77ABE4ABEE67D22AE9FA9D8D06220': ('Torch', 1261106821),
 }
+V18_13_LOCALIZED = {
+    '2658420B4FD907B4111E3493B20DE1D4': 'Захват канопой',
+    '73D7C99F4BFC15F37038A78A260A26D8': 'Рыбалка',
+    '61A1BF914358BC1944053EAC831C41BB': 'Скипетр Корвота',
+    'FFD8476A472BA585601FF8B43AD324B0': 'Мастурбировать',
+    '4ACBBA2B411E9ED180EAE98189BA072D': 'Зрение тени',
+    '86304DA1490FFECCD302FE9B9B15D119': 'Призвать Аади',
+    'D7A77ABE4ABEE67D22AE9FA9D8D06220': 'Факел',
+}
 EDITIONS=['Steam_current','NoSteam_0.7.9.16232']
 ASSET='BlueprintSystems/DynamicRadialMenu/Tables/DT_Menu.uasset'
 INTERNAL='Carnal_Instinct_UE5/Content/Localization/Game/en/Game.locres'
 def sha(p): return hashlib.sha256(Path(p).read_bytes()).hexdigest()
 def fix(ed):
-    d=ROOT/'Data'/ed; lp=d/'Game.locres'; tp=d/'translation.tsv'; before=sha(lp)
+    d=ROOT/'Data'/ed; lp=d/'Game.locres'; tp=d/'translation.tsv'
     loc=cf.Locres(lp); found={}
     for e in loc.entries:
         if e['namespace']=='' and e['key'] in TECHNICAL:
             en,sh=TECHNICAL[e['key']]; assert e['source_hash']==sh
-            found[e['key']]={'before':e['value'],'after':en,'source_hash':sh}; e['value']=en
+            found[e['key']]={'observed_before':e['value'],'v18_13_localized_value':V18_13_LOCALIZED[e['key']],'after':en,'source_hash':sh}
+            e['value']=en
     assert set(found)==set(TECHNICAL); loc.write(lp)
     raw=tp.read_bytes(); bom=b'\xef\xbb\xbf' if raw.startswith(b'\xef\xbb\xbf') else b''; text=raw[len(bom):].decode('utf-8')
     out=[]; n=0
@@ -40,8 +55,8 @@ def fix(ed):
     assert n==7; tp.write_bytes(bom+''.join(out).encode('utf-8'))
     pak=ROOT/'Files'/ed/'pakchunk1015-Windows_P.pak'; cf.build_pak_one(lp.read_bytes(),INTERNAL,pak)
     assert cf.parse_pak_one(pak)['data']==lp.read_bytes()
-    return {'edition':ed,'locres_before_sha256':before,'locres_after_sha256':sha(lp),'translation_tsv_sha256':sha(tp),'pak_sha256':sha(pak),'restored':found}
+    return {'edition':ed,'locres_after_sha256':sha(lp),'translation_tsv_sha256':sha(tp),'pak_sha256':sha(pak),'restored':found}
 def main():
-    r={'release':'18.14','fix':'radial exact-string action identifiers','editions':[fix(e) for e in EDITIONS]}
+    r={'release':'18.14','base_release':'18.13','fix':'radial exact-string action identifiers','editions':[fix(e) for e in EDITIONS]}
     (ROOT/'Reports/V18_14_RADIAL_ACTION_FIX.json').write_text(json.dumps(r,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
 if __name__=='__main__': main()
