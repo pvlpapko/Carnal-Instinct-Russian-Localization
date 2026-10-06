@@ -2,13 +2,13 @@
   "schema_version": "1.0",
   "edition": "Steam",
   "task": "radial_selection_bridge_v18_18",
-  "status": "test_archive_built_static_verified_runtime_pending",
+  "status": "runtime_failed_direct_actions_noop_sorcery_works",
   "source_state_id": "steam_current_2026-10-03_16321_asset_verified_index_stale",
   "verified_game_version": "0.7.9.16321",
   "verified_build": null,
-  "current_phase": "runtime_validation",
-  "last_completed_unit": "v18_18_test_archive_static_validation",
-  "next_unit": "runtime_test_radial_direct_actions_steam",
+  "current_phase": "runtime_failure_analysis",
+  "last_completed_unit": "user_runtime_test_v18_18_direct_actions_noop",
+  "next_unit": "superseded_by_radial_delegate_boundary_v18_19",
   "completed_units": [
     "record_v18_17_runtime_partial",
     "inspect_E_Menus_cooked_enum",
@@ -24,7 +24,7 @@
     "verify_installer_payload_embedding_6_of_6"
   ],
   "pending_units": [
-    "runtime_test_radial_direct_actions_steam"
+    "superseded_by_radial_delegate_boundary_v18_19"
   ],
   "source_files_used": [
     "v18.13 release payload",
@@ -54,15 +54,15 @@
     "installer payload embedding/trust 6/6 PASS",
     "ZIP CRC/exact readback PASS"
   ],
-  "validation_pending": [
-    "actual in-game direct radial action execution"
-  ],
+  "validation_pending": [],
   "notes": [
     "v18.18 corrects only the enum type/value gate from v18.17.",
     "Russian visible labels remain unchanged.",
     "Runtime success is not claimed until user retest.",
     "Test archive: Carnal_Instinct_RU_DontLook_RadialSelection_2026-10-06_v18.18_TEST.zip; SHA-256 cc55f2f95f558b10b9786501bab553638cc9710ce12cf97d620b4c0b2af3db42; 23789864 bytes; 127 entries.",
     "Installer SHA-256 eb6379593879107d26332ff4b064f35e56e453e19347bea7b35fc5a9bee18a77.",
-    "Runtime success is not claimed until user retest."
+    "Runtime success is not claimed until user retest.",
+    "User runtime test 2026-10-06: Sorcery still works; seven direct actions remain no-op in v18.18.",
+    "v18.18 CurrentMenu enum gate is therefore not sufficient and is rejected."
   ]
 }
