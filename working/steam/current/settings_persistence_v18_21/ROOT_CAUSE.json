@@ -1,0 +1,27 @@
+{
+  "release": "18.21 TEST",
+  "symptom": "After restarting the game, Video settings in the main menu appear reset/out of sync and the UI immediately behaves as if unapplied changes exist.",
+  "editions": [
+    "Steam",
+    "NoSteam"
+  ],
+  "root_cause": {
+    "regression_origin": "v18.5 main-menu anti-freeze patch",
+    "asset": "/Game/NiceSettingsMenu/UI/Theme_3/WB_T3_MainMenu",
+    "base_function": "WB_Master_SettingsMenu.Activate",
+    "parameter": "LoadAndApplySettingsOnActivation",
+    "behavior": "When true, Activate calls AC_PC_NiceSettingsComponent.Load and Apply Settings.",
+    "v18_5_change": "Both WB_T3_SettingsMenu.Activate call sites in WB_T3_MainMenu were forced to False.",
+    "consequence": "Manual settings-open became fast, but the separate startup/post-show settings synchronization was also disabled."
+  },
+  "fix": {
+    "manual_settings_open": "False (preserved to keep anti-freeze behavior)",
+    "startup_post_show": "True (restored)",
+    "changed_asset_bytes_per_edition": 1,
+    "radial_stack": "exact v18.20",
+    "game_locres": "exact v18.20",
+    "pak": "exact v18.20"
+  },
+  "rejected_hypothesis": "Localized Borderless/Fullscreen/Windowed strings were inspected but not proven to be technical dispatch identifiers in the NiceSettings save/apply path.",
+  "runtime_tested": false
+}
