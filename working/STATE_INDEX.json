@@ -156,13 +156,13 @@
       "edition": "Steam",
       "task": "radial_handler_v18_16",
       "state_path": "working/steam/current/radial_handler_v18_16/AUDIT_STATE.json",
-      "status": "container_built_static_validated_installer_pending"
+      "status": "archive_built_static_verified_runtime_pending"
     },
     {
       "edition": "NoSteam",
       "task": "radial_handler_v18_16",
       "state_path": "working/nosteam/0.7.9.16232/radial_handler_v18_16/AUDIT_STATE.json",
-      "status": "container_built_static_validated_installer_pending"
+      "status": "archive_built_static_verified_runtime_pending"
     }
   ],
   "latest_release": {
@@ -195,21 +195,14 @@
     "minimal_hell_kitchen_refs": 12
   },
   "latest_local_candidate": {
-    "name": "Carnal_Instinct_RU_DontLook_2026-10-06_v18.15_RELEASE.zip",
-    "task": "radial_display_boundary_v18_15",
-    "sha256": "42ec01f9051437d3305a31077b3ef19ec68019d5bf907de4c1674244592df491",
-    "archive_bytes": 19023629,
-    "archive_entries": 129,
-    "installer_sha256": "9e9f7d29395011d2c5328d5c1c5387336ee74560bfaba7cc769fb777f288f5a1",
+    "name": "Carnal_Instinct_RU_DontLook_2026-10-06_v18.16_RELEASE.zip",
+    "task": "radial_handler_v18_16",
+    "sha256": "485081fdaa9e54626bdd45b7ce0a4c3a9b5f1ad2ca9869f5c7a0c27403ef72cb",
+    "archive_bytes": 18860416,
+    "archive_entries": 121,
+    "installer_sha256": "ff467044b6c6aacc60f4c68489b45376236b3890116865b38b5c6109a03eda33",
     "zip_crc_and_exact_entry_readback": true,
-    "drive_upload": "verified",
-    "drive_folder_id": "1VwdnxngtZLDsPl1kP5H5HCJBePoRCF_a",
-    "drive_file_id": "1hBLQhHJaqadiCsI-dZpe1LiJEojHmJoa",
-    "drive_metadata_file_id": "18o96hqHrFxEAkaptGmJWy-yTCrOVmhUJ",
-    "drive_readback_sha256_verified": true,
-    "drive_readback_zip_crc_verified": true,
-    "runtime_validation": "pending",
-    "drive_verified_metadata_file_id": "1g8Y_LGvsLxJZrTeFdDikiW--hHHjCztv",
-    "drive_verified_metadata_sha256": "ed7dd791084cc914c4410d7dcc6201fc4b5c253331eb2846070ee307ba37a32b"
+    "drive_upload": "pending",
+    "runtime_validation": "pending"
   }
 }
