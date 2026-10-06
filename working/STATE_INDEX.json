@@ -138,13 +138,13 @@
       "edition": "Steam",
       "task": "radial_display_boundary_v18_15",
       "state_path": "working/steam/current/radial_display_boundary_v18_15/AUDIT_STATE.json",
-      "status": "asset_patch_built_container_patch_pending"
+      "status": "archive_built_static_verified_drive_upload_pending"
     },
     {
       "edition": "NoSteam",
       "task": "radial_display_boundary_v18_15",
       "state_path": "working/nosteam/0.7.9.16232/radial_display_boundary_v18_15/AUDIT_STATE.json",
-      "status": "asset_patch_built_container_patch_pending"
+      "status": "archive_built_static_verified_drive_upload_pending"
     },
     {
       "edition": "Both",
@@ -183,12 +183,12 @@
     "minimal_hell_kitchen_refs": 12
   },
   "latest_local_candidate": {
-    "name": "Carnal_Instinct_RU_DontLook_2026-10-06_v18.14_RELEASE.zip",
-    "task": "radial_action_fix_v18_14",
-    "sha256": "950582a0deff37772a942883c053309bd43383d6d357cbe4166b15bf7d7510d1",
-    "archive_bytes": 18851828,
-    "archive_entries": 120,
-    "installer_sha256": "b4bb7466428b6499be320901f85d6c96495a9c6f38ae3ae26715908c39ba5341",
+    "name": "Carnal_Instinct_RU_DontLook_2026-10-06_v18.15_RELEASE.zip",
+    "task": "radial_display_boundary_v18_15",
+    "sha256": "42ec01f9051437d3305a31077b3ef19ec68019d5bf907de4c1674244592df491",
+    "archive_bytes": 19023629,
+    "archive_entries": 129,
+    "installer_sha256": "9e9f7d29395011d2c5328d5c1c5387336ee74560bfaba7cc769fb777f288f5a1",
     "zip_crc_and_exact_entry_readback": true,
     "drive_upload": "pending_connector_file_reference_bridge",
     "runtime_validation": "pending"
