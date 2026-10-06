@@ -1,0 +1,54 @@
+{
+  "schema_version": "1.0",
+  "edition": "Steam",
+  "task": "radial_handler_v18_16",
+  "status": "container_built_static_validated_installer_pending",
+  "source_state_id": "steam_current_2026-10-03_16321_asset_verified_index_stale",
+  "verified_game_version": "0.7.9.16321",
+  "verified_build": null,
+  "current_phase": "installer_and_release",
+  "last_completed_unit": "v18_16_iostore_static_validation",
+  "next_unit": "rebuild_installer_and_package",
+  "completed_units": [
+    "analyze_user_crash_context_v18_15",
+    "reject_v18_15_W_MenuItem_display_boundary",
+    "restore_v18_13_W_MenuItem",
+    "patch_7_HandleItemSelected_dispatch_literals_to_Russian",
+    "rebuild_Steam_IoStore_with_AC_RadialMenu",
+    "rebuild_NoSteam_IoStore_with_AC_RadialMenu",
+    "verify_IoStore_meta_and_exact_readback",
+    "verify_W_MenuItem_Game_locres_PAK_identical_v18_13"
+  ],
+  "pending_units": [
+    "rebuild_installer_and_package",
+    "runtime_test_radial_open_and_actions"
+  ],
+  "source_files_used": [
+    "CI GPT/Releases/Carnal_Instinct_RU_DontLook_2026-10-06_v18.13_RELEASE.zip",
+    "Carnal_Instinct_UE5/Content/BlueprintSystems/DynamicRadialMenu/Components/AC_RadialMenu.uasset",
+    "user CrashContext.runtime-xml and UEMinidump.dmp"
+  ],
+  "working_files": [
+    "working/steam/current/radial_handler_v18_16/AUDIT_STATE.json",
+    "working/steam/current/radial_handler_v18_16/V18_16_RADIAL_HANDLER_VALIDATION.json"
+  ],
+  "validation_completed": [
+    "CrashContext confirms EXCEPTION_ACCESS_VIOLATION writing 0x0 on GameThread",
+    "same verified AC_RadialMenu source asset used by both editions",
+    "7/7 handler dispatch literals changed to localized Russian values",
+    "all other AC_RadialMenu exports byte-identical to source",
+    "W_MenuItem byte-identical to v18.13",
+    "Game.locres and PAK byte-identical to v18.13",
+    "IoStore metadata hashes PASS"
+  ],
+  "validation_pending": [
+    "installer tests",
+    "archive CRC/readback",
+    "in-game radial open and seven actions"
+  ],
+  "notes": [
+    "v18.16 abandons the v18.15 display-boundary approach.",
+    "The fix is a minimal handler-literal change in AC_RadialMenu.HandleItemSelected.",
+    "Runtime success is not claimed until user retests."
+  ]
+}
