@@ -1,0 +1,85 @@
+{
+  "release": "18.14",
+  "author": "Don't Look",
+  "issue": "radial menu opens and highlights a selection but selected action does not execute in Steam and NoSteam v18.13",
+  "root_cause": "DynamicRadialMenu action DisplayName FText entries were translated even though AC_RadialMenu.HandleItemSelected converts DisplayName to FString and dispatches through exact English string comparisons.",
+  "source_evidence": {
+    "steam_current_version": "0.7.9.16321",
+    "steam_build_id": null,
+    "AC_RadialMenu_source_sha256": "c4d052326c4ddbe49d574238c8d82151f94bed7c4df9fabeb1c03d835a1ad7fa",
+    "AC_RadialMenu_HandleItemSelected_exact_string_literals": [
+      "Summon Aadi",
+      "Korvoth's Sceptre",
+      "Torch",
+      "Shade Sight",
+      "Masturbate",
+      "Fishing",
+      "Canopic Capture"
+    ],
+    "DT_Menu_source_sha256": "87ba42c48bd1ed32e48a3eed26a10dd83ce289411531f298bdd34d0c36e0c423",
+    "W_MenuItem_source_sha256": "dc394ab1b8c85b1ad874a2147598c2995cd3060126736753399dd795ac1942cb",
+    "W_MenuItem_SetItemText": "sets TXT_Item from the Item FText parameter; current cooked widget has no separate safe localized display-ID boundary"
+  },
+  "affected_technical_ftext_identities": [
+    {
+      "namespace": "",
+      "key": "2658420B4FD907B4111E3493B20DE1D4",
+      "source_hash": 1009922021,
+      "english": "Canopic Capture",
+      "v18_13_localized_value": "Захват канопой",
+      "v18_14_runtime_value": "Canopic Capture"
+    },
+    {
+      "namespace": "",
+      "key": "73D7C99F4BFC15F37038A78A260A26D8",
+      "source_hash": 2680376353,
+      "english": "Fishing",
+      "v18_13_localized_value": "Рыбалка",
+      "v18_14_runtime_value": "Fishing"
+    },
+    {
+      "namespace": "",
+      "key": "61A1BF914358BC1944053EAC831C41BB",
+      "source_hash": 406990083,
+      "english": "Korvoth's Sceptre",
+      "v18_13_localized_value": "Скипетр Корвота",
+      "v18_14_runtime_value": "Korvoth's Sceptre"
+    },
+    {
+      "namespace": "",
+      "key": "FFD8476A472BA585601FF8B43AD324B0",
+      "source_hash": 2284028336,
+      "english": "Masturbate",
+      "v18_13_localized_value": "Мастурбировать",
+      "v18_14_runtime_value": "Masturbate"
+    },
+    {
+      "namespace": "",
+      "key": "4ACBBA2B411E9ED180EAE98189BA072D",
+      "source_hash": 2468818620,
+      "english": "Shade Sight",
+      "v18_13_localized_value": "Зрение тени",
+      "v18_14_runtime_value": "Shade Sight"
+    },
+    {
+      "namespace": "",
+      "key": "86304DA1490FFECCD302FE9B9B15D119",
+      "source_hash": 1824976582,
+      "english": "Summon Aadi",
+      "v18_13_localized_value": "Призвать Аади",
+      "v18_14_runtime_value": "Summon Aadi"
+    },
+    {
+      "namespace": "",
+      "key": "D7A77ABE4ABEE67D22AE9FA9D8D06220",
+      "source_hash": 1261106821,
+      "english": "Torch",
+      "v18_13_localized_value": "Факел",
+      "v18_14_runtime_value": "Torch"
+    }
+  ],
+  "fix": "Restore only the seven DT_Menu action-identifier locres values to their original English strings while preserving exact Namespace + Key + SourceStringHash. Keep all other localization and cooked UI payloads unchanged.",
+  "why_not_binary_patch": "No AC_RadialMenu bytecode/string-switch patch was introduced, avoiding build-specific control-flow edits.",
+  "display_tradeoff": "The seven command captions remain English because the game reuses the same FText as both visible label and runtime identifier. Russian display aliases are retained for a future safe display-boundary implementation.",
+  "runtime_validation": "pending user in-game test"
+}
