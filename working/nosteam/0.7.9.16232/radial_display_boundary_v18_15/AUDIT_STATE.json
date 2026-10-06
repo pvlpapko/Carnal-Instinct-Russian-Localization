@@ -2,13 +2,13 @@
   "schema_version": "1.0",
   "edition": "NoSteam",
   "task": "radial_display_boundary_v18_15",
-  "status": "archive_built_static_verified_drive_upload_pending",
+  "status": "release_uploaded_static_validation_runtime_pending",
   "source_state_id": "nosteam_0.7.9.16232_fixed",
   "verified_game_version": "0.7.9",
   "verified_build": "0.7.9.16232",
-  "current_phase": "release_upload",
-  "last_completed_unit": "v18_15_archive_static_validation",
-  "next_unit": "upload_release_and_verify_readback",
+  "current_phase": "runtime_validation",
+  "last_completed_unit": "drive_upload_and_readback_verification",
+  "next_unit": "runtime_test_radial_actions_nosteam",
   "completed_units": [
     "read_source_and_resume_v18_14_state",
     "preserve_seven_english_runtime_action_ids",
@@ -20,10 +20,11 @@
     "run_46_installer_go_race_test_pass_events",
     "build_windows_amd64_installer",
     "verify_6_of_6_installer_payloads_embedded_and_trusted",
-    "package_v18_15_archive_and_verify_zip_crc_exact_readback"
+    "package_v18_15_archive_and_verify_zip_crc_exact_readback",
+    "upload_release_to_CI_GPT_Releases",
+    "drive_readback_sha256_and_zip_crc_verification"
   ],
   "pending_units": [
-    "upload_release_and_verify_readback",
     "runtime_test_radial_actions_nosteam",
     "windows_installer_smoke_test"
   ],
@@ -63,6 +64,16 @@
     "Final local archive: Carnal_Instinct_RU_DontLook_2026-10-06_v18.15_RELEASE.zip; SHA-256 42ec01f9051437d3305a31077b3ef19ec68019d5bf907de4c1674244592df491; 19023629 bytes; 129 entries.",
     "Installer SHA-256 9e9f7d29395011d2c5328d5c1c5387336ee74560bfaba7cc769fb777f288f5a1.",
     "Runtime behavior is not claimed as tested.",
-    "Drive upload/readback remains pending."
-  ]
+    "Drive upload completed to CI GPT/Releases; archive raw readback SHA-256, size, entry count and ZIP CRC verified."
+  ],
+  "drive": {
+    "folder_id": "1VwdnxngtZLDsPl1kP5H5HCJBePoRCF_a",
+    "archive_file_id": "1hBLQhHJaqadiCsI-dZpe1LiJEojHmJoa",
+    "metadata_file_id": "18o96hqHrFxEAkaptGmJWy-yTCrOVmhUJ",
+    "archive_readback_sha256": "42ec01f9051437d3305a31077b3ef19ec68019d5bf907de4c1674244592df491",
+    "archive_readback_sha256_verified": true,
+    "archive_readback_bytes": 19023629,
+    "archive_readback_entries": 129,
+    "archive_readback_zip_crc_verified": true
+  }
 }
