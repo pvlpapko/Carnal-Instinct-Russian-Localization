@@ -138,19 +138,31 @@
       "edition": "Steam",
       "task": "radial_display_boundary_v18_15",
       "state_path": "working/steam/current/radial_display_boundary_v18_15/AUDIT_STATE.json",
-      "status": "release_uploaded_static_validation_runtime_pending"
+      "status": "runtime_failed_on_radial_open"
     },
     {
       "edition": "NoSteam",
       "task": "radial_display_boundary_v18_15",
       "state_path": "working/nosteam/0.7.9.16232/radial_display_boundary_v18_15/AUDIT_STATE.json",
-      "status": "release_uploaded_static_validation_runtime_pending"
+      "status": "runtime_failed_on_radial_open"
     },
     {
       "edition": "Both",
       "task": "mod_menu_installer",
       "state_path": "working/steam/current/mod_menu_installer/AUDIT_STATE.json",
       "status": "modern_v2_release_uploaded_runtime_retest_pending"
+    },
+    {
+      "edition": "Steam",
+      "task": "radial_handler_v18_16",
+      "state_path": "working/steam/current/radial_handler_v18_16/AUDIT_STATE.json",
+      "status": "container_built_static_validated_installer_pending"
+    },
+    {
+      "edition": "NoSteam",
+      "task": "radial_handler_v18_16",
+      "state_path": "working/nosteam/0.7.9.16232/radial_handler_v18_16/AUDIT_STATE.json",
+      "status": "container_built_static_validated_installer_pending"
     }
   ],
   "latest_release": {
