@@ -1,0 +1,47 @@
+{
+  "release": "18.20 RELEASE",
+  "author": "Don't Look",
+  "status": "canonical_release",
+  "runtime_validation": {
+    "status": "PASS",
+    "source": "user_reported_in_game",
+    "result": "radial menu works; Sorcery and direct actions execute"
+  },
+  "archive": {
+    "name": "Carnal_Instinct_RU_DontLook_2026-10-06_v18.20_RELEASE.zip",
+    "sha256": "464976a11b84695dbb6b8dcd2afd6a640b477929b50c91597d29d04527cd0eef",
+    "bytes": 18915632,
+    "entries": 121,
+    "zip_crc_and_exact_readback": true
+  },
+  "installer": {
+    "sha256": "480cc285e66645bdd75a4833d2f12bddce8396fa6e2794d2814fccb417115f1b",
+    "bytes": 20836864,
+    "go_test_race": "PASS",
+    "embedded_payloads": "6/6 PASS",
+    "trusted_hashes": "6/6 PASS"
+  },
+  "drive": {
+    "folder_id": "1VwdnxngtZLDsPl1kP5H5HCJBePoRCF_a",
+    "file_id": "1iJKlxxOLOkQo8cXdWNszBnKyOPEooyUZ",
+    "verified_metadata_id": "1QL2t7pUOAgm7geLdIPbPd5RM7LaiiQR6",
+    "readback_sha256_verified": true,
+    "readback_zip_crc_verified": true
+  },
+  "payloads": {
+    "Steam_current": {
+      "verified_game_version": "0.7.9.16321",
+      "verified_build": null,
+      "packages": 47
+    },
+    "NoSteam_0.7.9.16232": {
+      "verified_game_version": "0.7.9",
+      "verified_build": "0.7.9.16232",
+      "packages": 74
+    }
+  },
+  "notes": [
+    "18.15-18.19 radial experiments rejected and excluded.",
+    "18.20 uses runtime-validated pre-v18.5/current-source radial stack without new Kismet edits."
+  ]
+}
