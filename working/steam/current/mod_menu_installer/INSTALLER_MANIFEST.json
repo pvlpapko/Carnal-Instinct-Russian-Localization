@@ -1,11 +1,13 @@
 {
-  "schema_version": "1.0",
+  "schema_version": "2.0",
   "product": "CI Mod Menu",
   "version": "1.1.1",
+  "installer_ui_version": "2.0",
   "author": "Don't Look",
   "installer": {
-    "filename": "CI_Mod_Menu_v1.1.1_Setup.exe",
-    "sha256": "632f740e6468a0f5692f6bd532edb38bf0967c421b441d52c7190b3fec019a9a",
+    "filename": "CI_Mod_Menu_v1.1.1_Setup_Modern.exe",
+    "sha256": "2e40d9660f72720b0eaca3c7df7bf8a4fd47525f7ab145572feb660e4a16fada",
+    "bytes": 2625024,
     "windows": "x64",
     "requires_admin": true,
     "signed": false
@@ -26,18 +28,40 @@
     "CI_ModMenu_P.ucas": "c45841f5a8c856b0ab8450f26364ca56ffb1dcb2a2788e2e744d6e75f481c604"
   },
   "update_policy": {
-    "delete_patterns": ["CI_ModMenu_P.*", "CI_Mod_Menu_P.*"],
+    "delete_patterns": [
+      "CI_ModMenu_P.*",
+      "CI_Mod_Menu_P.*"
+    ],
     "backups": false
   },
+  "responsiveness": {
+    "startup_library_scan": false,
+    "install_worker_thread": true,
+    "remove_worker_thread": true,
+    "folder_picker_com_sta": true
+  },
   "localization_touched": false,
+  "release": {
+    "package": "CI_Mod_Menu_v1.1.1_Setup_Modern_Package.zip",
+    "sha256": "8a0dae731da74d2c304a3aedbea6c6bff25e6b137049b622eb3118d2b4a89f24",
+    "drive_id": "1OTAAYVPiy9bf5ByZVWWtytS2gA4qVGcE"
+  },
+  "development": {
+    "package": "CI_Mod_Menu_v1.1.1_Installer_v2_DEVELOPMENT.zip",
+    "sha256": "50e9c5ddb679e39bb1c9da17cc1628ef87a6e4a6abdc4b385ce29ce28187b946",
+    "drive_id": "17Zp64Rg4g_IPOEjsMJWqTBZ8uQRWQ5AM",
+    "main_go_sha256": "4cc0be346da7c0cf8bae86f0e9a7bcbbf444b9b9f997ca14335c89debd9250da"
+  },
   "validation": {
     "pe_gui_x64": true,
     "icon_resource": true,
     "manifest_require_administrator": true,
     "payload_embedded": true,
-    "localization_markers_absent": true,
+    "localization_payload_absent": true,
     "cleanup_simulation": "PASS",
-    "localization_untouched_simulation": "PASS",
+    "startup_scan_removed": true,
+    "file_operations_off_ui_thread": true,
+    "drive_release_readback_verified": true,
     "windows_runtime_tested": false
   }
 }
