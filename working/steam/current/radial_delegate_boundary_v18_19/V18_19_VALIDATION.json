@@ -1,0 +1,30 @@
+{
+  "release": "18.19 TEST",
+  "runtime_tested": false,
+  "design": "Convert seven localized Russian DisplayName strings to stock English technical FText only at the main ItemSelected delegate argument in W_Menu.MakeSelection.",
+  "mapping": {
+    "Рыбалка": "Fishing",
+    "Призвать Аади": "Summon Aadi",
+    "Мастурбировать": "Masturbate",
+    "Захват канопой": "Canopic Capture",
+    "Зрение тени": "Shade Sight",
+    "Факел": "Torch",
+    "Скипетр Корвота": "Korvoth's Sceptre"
+  },
+  "invariants": [
+    "W_MenuItem unchanged",
+    "AC_RadialMenu unchanged",
+    "Game.locres unchanged",
+    "PAK unchanged",
+    "outer-ring ItemSelected unchanged"
+  ],
+  "static_validation": "PASS",
+  "runtime_validation": "pending",
+  "archive": {
+    "name": "Carnal_Instinct_RU_DontLook_RadialDelegate_2026-10-06_v18.19_TEST.zip",
+    "sha256": "88a1ece53e63763fb1a68f70da499a4c6565c29d206302687e11fbd748a7895e",
+    "bytes": 18895561,
+    "entries": 118,
+    "installer_sha256": "09921972261332be9c57c187340e049743cfe5acb01803fd2ccf88c1c61e058f"
+  }
+}
