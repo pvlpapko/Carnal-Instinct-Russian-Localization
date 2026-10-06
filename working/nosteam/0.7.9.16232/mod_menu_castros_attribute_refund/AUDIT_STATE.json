@@ -1,0 +1,47 @@
+{
+  "schema_version": "1.0",
+  "edition": "NoSteam",
+  "task": "mod_menu_castros_attribute_refund",
+  "status": "in_progress",
+  "source_state_id": "CI_Mod_Menu_v1.0.5_DEVELOPMENT.zip:restored",
+  "verified_game_version": "0.7.9.16232",
+  "verified_build": null,
+  "current_phase": "architecture_audit",
+  "last_completed_unit": "restored_v1.0.5_development_archive",
+  "next_unit": "audit_controller_castros_attribute_save_path",
+  "completed_units": [
+    "source_index_read",
+    "github_state_index_read",
+    "v1.0.5_archives_restored_crc_checked"
+  ],
+  "pending_units": [
+    "audit_existing_menu",
+    "audit_castros",
+    "audit_attribute_persistence",
+    "remove_flight_camera",
+    "implement_castros",
+    "implement_attribute_refund",
+    "static_validation",
+    "iostore_roundtrip",
+    "release_package_upload_readback",
+    "in_game_validation"
+  ],
+  "source_files_used": [
+    "project_sources/02-CI_SOURCE_INDEX.json",
+    "CI_Mod_Menu_v1.0.5_DEVELOPMENT.zip"
+  ],
+  "working_files": [
+    "working/nosteam/0.7.9.16232/mod_menu_castros_attribute_refund/AUDIT_STATE.json"
+  ],
+  "validation_completed": [
+    "recovered_archive_zip_crc"
+  ],
+  "validation_pending": [
+    "source_build_and_schema",
+    "runtime"
+  ],
+  "notes": [
+    "User requests complete removal of flight and free camera, all Castros travel points activation button, attribute point removal after persisted allocation.",
+    "Mod source claims NoSteam 0.7.9.16232; exact baseline schema audit pending. Current Drive sources are Steam and cannot be blindly substituted."
+  ]
+}
