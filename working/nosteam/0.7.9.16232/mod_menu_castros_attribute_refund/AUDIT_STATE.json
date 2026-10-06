@@ -2,13 +2,13 @@
   "schema_version": "1.0",
   "edition": "NoSteam",
   "task": "mod_menu_castros_attribute_refund",
-  "status": "awaiting_v1.1.1_release_packaging",
+  "status": "awaiting_in_game_validation_v1.1.1",
   "source_state_id": "steam_current_0.7.9.16321_user_approved_v1.0.5_compatible",
   "verified_game_version": "0.7.9.16232",
   "verified_build": null,
-  "current_phase": "v1.1.1_static_validation_complete",
-  "last_completed_unit": "v1.1.1_save_cache_and_ui_bounds_static_validation",
-  "next_unit": "package_upload_readback_v1.1.1",
+  "current_phase": "v1.1.1_test_release_ready",
+  "last_completed_unit": "v1.1.1_release_and_development_readback_verified",
+  "next_unit": "in_game_validate_v1.1.1",
   "completed_units": [
     "source_index_read",
     "github_state_index_read",
@@ -41,10 +41,12 @@
     "v1.1.1_tests_10_of_10",
     "v1.1.1_controller_static_validation",
     "v1.1.1_click_event_static_validation",
-    "v1.1.1_iostore_validation_passed"
+    "v1.1.1_iostore_validation_passed",
+    "v1.1.1_release_uploaded_and_readback_verified",
+    "v1.1.1_development_archive_uploaded_and_readback_verified",
+    "v1.1.1_patch_spec_committed"
   ],
   "pending_units": [
-    "v1.1.1_release_upload_readback",
     "v1.1.1_in_game_validation"
   ],
   "source_files_used": [
@@ -54,13 +56,9 @@
   ],
   "working_files": [
     "working/nosteam/0.7.9.16232/mod_menu_castros_attribute_refund/AUDIT_STATE.json",
-    "local:ci_modmenu_v110_work/modmenu/dev/build_controller.py",
-    "local:ci_modmenu_v110_work/modmenu/dev/build_ui.py",
-    "local:ci_modmenu_v110_work/modmenu/dev/build_respec.py",
-    "local:ci_modmenu_v110_work/modmenu/dev/test_v110.py",
-    "local:ci_modmenu_v110_work/modmenu/dev/validate_assets.py",
-    "local:ci_modmenu_v110_work/modmenu/dev/pack_v110_python.py",
-    "local:ci_modmenu_v110_work/modmenu/dev/verify_v110_container.py"
+    "working/nosteam/0.7.9.16232/mod_menu_castros_attribute_refund/V111_PATCH_SPEC.json",
+    "Drive Working/CI_Mod_Menu_v1.1.1_DEVELOPMENT.zip (id 1N4hMiA7x1Y64VVbV6B0ihQRc1GZhubd4)",
+    "Drive Releases/CI_Mod_Menu_v1.1.1_TEST_0.7.9.16321.zip (id 1h0DsXcpV4HkzTX7DRsjAOgg1eCadRntE)"
   ],
   "validation_completed": [
     "recovered_archive_zip_crc",
@@ -76,11 +74,12 @@
     "v1.1.1_controller_graph_512_native_10_script_236_assignments_19_reference_args",
     "v1.1.1_click_event_19_native_2_script_11_assignments_10_reference_args",
     "v1.1.1_combined_static_531_native_12_script_247_assignments_29_reference_args",
-    "v1.1.1_iostore_header_chunk_ranges_blake3_directory_index"
+    "v1.1.1_iostore_header_chunk_ranges_blake3_directory_index",
+    "v1.1.1_release_readback_sha256_7f26405c491738384d0117583f2f7e2361eabe806ecb88bb88ace7d52c5e52b6",
+    "v1.1.1_development_readback_sha256_1149675e4a572a2d8ca11b984b84c4b33904c14b46e7f02aa10d92144e54ffeb"
   ],
   "validation_pending": [
-    "v1.1.1_runtime_in_game",
-    "v1.1.1_drive_release_readback"
+    "v1.1.1_runtime_in_game"
   ],
   "notes": [
     "User requests complete removal of flight and free camera, all Castros/fast-travel points activation button, and permanent attribute point removal/refund after persisted allocation.",
@@ -105,6 +104,8 @@
     "Save-file/source audit shows campfire entries are already present in SaveGame/Loaded Interactables as S_SaveInteractables with InteractableActor paths containing BP_Campfire_C and InteractionValue. v1.1.1 will update these persisted structs directly, then use stock Quick Save; live BP_Campfire actors will still receive ActivatePoint for immediate UI state.",
     "v1.1.1 removes WorldPartitionBlueprintLibrary calls entirely. F7 and the clickable button now edit RPGInventory_GameInstance.Loaded Interactables: entries whose InteractableActor string contains BP_Campfire_C receive S_SaveInteractables.InteractionValue=1; live campfires then receive ActivatePoint and stock Quick Save is requested.",
     "v1.1.1 UI fix: all eight row TextBlocks have AutoWrapText enabled with WrapTextAt=560 inside the 620-wide panel. Attribute row text is shortened to 'Характеристики: −1 = +1 очко | минимум 1 | постоянно' and uses 14 pt instead of 16 pt.",
-    "v1.1.1 static validation: 10/10 tests; combined controller/UI click audit 531 native calls, 12 script calls, 247 assignments, 29 addressable reference/out args. IoStore UTOC/UCAS header, ranges, BLAKE3-160 and directory index pass. Runtime test still pending."
+    "v1.1.1 static validation: 10/10 tests; combined controller/UI click audit 531 native calls, 12 script calls, 247 assignments, 29 addressable reference/out args. IoStore UTOC/UCAS header, ranges, BLAKE3-160 and directory index pass. Runtime test still pending.",
+    "v1.1.1 TEST release Drive readback verified: 215828 bytes, SHA-256 7f26405c491738384d0117583f2f7e2361eabe806ecb88bb88ace7d52c5e52b6.",
+    "v1.1.1 development workspace archived to CI GPT/Working and read back: 991010 bytes, SHA-256 1149675e4a572a2d8ca11b984b84c4b33904c14b46e7f02aa10d92144e54ffeb."
   ]
 }
