@@ -2,7 +2,7 @@
   "schema_version": "1.0",
   "edition": "NoSteam",
   "task": "radial_action_fix_v18_14",
-  "status": "archive_built_static_verified_upload_pending",
+  "status": "archive_built_static_verified_drive_upload_pending",
   "source_state_id": "nosteam_0.7.9.16232_fixed",
   "verified_game_version": "0.7.9",
   "verified_build": "0.7.9.16232",
@@ -44,6 +44,8 @@
   ],
   "notes": [
     "No cooked radial-menu package was changed in v18.14; only Game.locres/PAK changed.",
-    "Seven visible command captions remain English because the same FText is used as a runtime exact-string identifier."
+    "Seven visible command captions remain English because the same FText is used as a runtime exact-string identifier.",
+    "Final local archive is shared with Steam payload: SHA-256 950582a0deff37772a942883c053309bd43383d6d357cbe4166b15bf7d7510d1; ZIP CRC/exact readback PASS.",
+    "Drive upload/readback remains pending because the connector could not consume the local generated archive as a transferable file reference."
   ]
 }
