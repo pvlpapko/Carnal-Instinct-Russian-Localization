@@ -1,0 +1,65 @@
+{
+  "schema_version": "1.0",
+  "edition": "Steam",
+  "task": "pre_v18_5_radial_restore_v18_20",
+  "status": "payload_installer_built_static_verified_package_pending",
+  "source_state_id": "steam_current_2026-10-03_16321_asset_verified_index_stale",
+  "verified_game_version": "0.7.9.16321",
+  "verified_build": null,
+  "current_phase": "package_test_archive",
+  "last_completed_unit": "v18_20_payload_installer_static_validation",
+  "next_unit": "package_test_archive_and_runtime_validate",
+  "completed_units": [
+    "record_v18_19_runtime_crash",
+    "inspect_old_WORKING_v3_radial_optimization",
+    "identify_v18_5_W_MenuItem_layout_regression_boundary",
+    "restore_NoSteam_exact_WORKING_v3_radial_stack",
+    "restore_Steam_current_source_radial_trio_without_v18_5_layout_patch",
+    "rebuild_IoStore_for_both_editions",
+    "verify_IoStore_meta_and_exact_readback",
+    "verify_Game_locres_and_PAK_exact_v18_13",
+    "go_test_race_pass",
+    "build_windows_installer",
+    "verify_installer_payload_embedding_6_of_6"
+  ],
+  "pending_units": [
+    "package_test_archive_and_crc_readback",
+    "runtime_test_radial_open_and_direct_actions"
+  ],
+  "source_files_used": [
+    "CI GPT/Working/Carnal_Instinct_RU_Universal_AutoDetect_WORKING_2026-10-02_v3.zip",
+    "CI GPT/Working/RADIAL_RUNTIME_OPTIMIZATION.json",
+    "v18.13 release payload",
+    "current Steam W_Menu.uasset",
+    "current Steam W_MenuItem.uasset",
+    "current Steam AC_RadialMenu.uasset",
+    "user CrashContext.runtime-xml from v18.19"
+  ],
+  "working_files": [
+    "working/steam/current/pre_v18_5_radial_restore_v18_20/AUDIT_STATE.json",
+    "working/steam/current/pre_v18_5_radial_restore_v18_20/V18_20_VALIDATION.json",
+    "working/steam/current/pre_v18_5_radial_restore_v18_20/build.py",
+    "working/steam/current/pre_v18_5_radial_restore_v18_20/validate.py"
+  ],
+  "validation_completed": [
+    "NoSteam radial stack exact WORKING v3 bytes",
+    "Steam W_Menu/W_MenuItem/AC_RadialMenu exact current-source bytes",
+    "v18.5 W_MenuItem layout override removed in both editions",
+    "no new Kismet edits introduced by v18.20",
+    "Game.locres exact v18.13",
+    "PAK exact v18.13",
+    "IoStore meta/exact readback PASS",
+    "go test -race PASS",
+    "installer 6/6 payloads embedded and trusted"
+  ],
+  "validation_pending": [
+    "ZIP CRC/readback",
+    "actual in-game radial direct-action execution"
+  ],
+  "notes": [
+    "v18.20 is a regression-isolation restore, not another synthesized selection patch.",
+    "NoSteam W_MenuItem restored from 33430-byte v18.5+ layout to 33389-byte pre-v18.5 WORKING asset.",
+    "Steam W_MenuItem restored from 52632-byte v18.5+ layout override to 52591-byte current-source asset.",
+    "Runtime success is not claimed until user retest."
+  ]
+}
