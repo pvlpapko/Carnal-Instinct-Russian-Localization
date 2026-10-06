@@ -2,13 +2,13 @@
   "schema_version": "1.0",
   "edition": "NoSteam",
   "task": "radial_delegate_boundary_v18_19",
-  "status": "analysis_complete_patch_pending",
+  "status": "test_archive_built_static_verified_runtime_pending",
   "source_state_id": "nosteam_0.7.9.16232_fixed",
   "verified_game_version": "0.7.9",
   "verified_build": "0.7.9.16232",
-  "current_phase": "binary_patch",
-  "last_completed_unit": "trace_exact_Main_ItemSelected_delegate_call",
-  "next_unit": "patch_MakeSelection_delegate_argument_and_validate",
+  "current_phase": "runtime_validation",
+  "last_completed_unit": "v18_19_test_archive_static_validation",
+  "next_unit": "runtime_test_radial_direct_actions_nosteam",
   "completed_units": [
     "record_v18_18_runtime_failure",
     "trace_AC_RadialMenu_delegate_binding_to_HandleItemSelected",
@@ -17,11 +17,7 @@
     "confirm_Sorcery_is_local_submenu_path"
   ],
   "pending_units": [
-    "patch_MakeSelection_delegate_argument_and_validate",
-    "rebuild_iostore_both_editions",
-    "rebuild_installer",
-    "package_test_archive",
-    "runtime_test"
+    "runtime_test_radial_direct_actions_nosteam"
   ],
   "source_files_used": [
     "v18.13 release payload",
@@ -34,19 +30,30 @@
     "working/nosteam/0.7.9.16232/radial_delegate_boundary_v18_19/AUDIT_STATE.json"
   ],
   "validation_completed": [
-    "AC_RadialMenu ExecuteUbergraph binds Menu.ItemSelected to HandleItemSelected",
-    "W_Menu.MakeSelection direct-action path calls ItemSelected after GetSelectedItemData",
-    "second ItemSelected call belongs to GetSelectedRingItemData outer-ring path and will remain untouched"
+    "AC_RadialMenu ItemSelected binding to HandleItemSelected confirmed",
+    "W_Menu.MakeSelection main direct ItemSelected call isolated",
+    "only main ItemSelected argument wrapped in RU->EN conversion",
+    "outer-ring ItemSelected call unchanged",
+    "7/7 Russian action labels map to stock English technical FText",
+    "English/default values pass through unchanged",
+    "only MakeSelection export changed inside W_Menu",
+    "W_MenuItem exact v18.13",
+    "AC_RadialMenu exact v18.13 or stock absent override",
+    "Game.locres and PAK exact v18.13",
+    "IoStore meta/exact readback PASS",
+    "go test -race PASS",
+    "installer payload embedding/trust 6/6 PASS",
+    "ZIP CRC/exact readback PASS"
   ],
   "validation_pending": [
-    "patched Kismet roundtrip",
-    "IoStore meta/readback",
-    "installer payload embedding",
-    "runtime test"
+    "actual in-game radial direct-action execution"
   ],
   "notes": [
     "v18.19 will patch only the direct main ItemSelected argument at the UI-to-gameplay delegate boundary.",
     "No CurrentMenu enum gate and no SelectedItem index mapping will be used.",
-    "Russian-to-English mapping will be based on the actual DisplayName string at selection time; English values pass through unchanged."
+    "Russian-to-English mapping will be based on the actual DisplayName string at selection time; English values pass through unchanged.",
+    "Test archive: Carnal_Instinct_RU_DontLook_RadialDelegate_2026-10-06_v18.19_TEST.zip; SHA-256 88a1ece53e63763fb1a68f70da499a4c6565c29d206302687e11fbd748a7895e; 18895561 bytes; 118 entries.",
+    "Installer SHA-256 09921972261332be9c57c187340e049743cfe5acb01803fd2ccf88c1c61e058f.",
+    "Runtime success is not claimed until user retest."
   ]
 }
