@@ -1,0 +1,32 @@
+{
+  "schema_version": "1.0",
+  "installer_ui": "2.0 modern Win32 dark UI",
+  "exe": "CI_Mod_Menu_v1.1.1_Setup_Modern.exe",
+  "bytes": 2625024,
+  "sha256": "2e40d9660f72720b0eaca3c7df7bf8a4fd47525f7ab145572feb660e4a16fada",
+  "pe": {
+    "x64": true,
+    "gui_subsystem": true,
+    "sections": 9,
+    "resource_rva": "0x2c1000"
+  },
+  "resources": {
+    "icon_group": true,
+    "icons": true,
+    "requireAdministrator_manifest": true
+  },
+  "responsiveness": {
+    "startup_steam_library_scan": false,
+    "folder_picker_com_sta_initialized": true,
+    "install_worker_thread": true,
+    "remove_worker_thread": true
+  },
+  "payload_embedded": true,
+  "steam_nosteam_separate_embedded_payloads": true,
+  "old_mod_cleanup_no_backups": true,
+  "localization_payload_absent": true,
+  "cleanup_simulation": "PASS",
+  "release_drive_readback_sha256": "8a0dae731da74d2c304a3aedbea6c6bff25e6b137049b622eb3118d2b4a89f24",
+  "development_drive_readback_sha256": "50e9c5ddb679e39bb1c9da17cc1628ef87a6e4a6abdc4b385ce29ce28187b946",
+  "runtime_windows_tested": false
+}
