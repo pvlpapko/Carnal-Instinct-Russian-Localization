@@ -2,13 +2,13 @@
   "schema_version": "1.0",
   "edition": "Steam",
   "task": "settings_persistence_v18_21",
-  "status": "test_archive_built_static_verified_runtime_pending",
+  "status": "release_uploaded_drive_verified_runtime_validated",
   "source_state_id": "steam_current_2026-10-03_16321_asset_verified_index_stale",
   "verified_game_version": "0.7.9.16321",
   "verified_build": null,
-  "current_phase": "runtime_validation",
-  "last_completed_unit": "v18_21_test_archive_static_validation",
-  "next_unit": "runtime_test_settings_persistence_steam",
+  "current_phase": "completed",
+  "last_completed_unit": "v18_21_release_drive_readback_verified",
+  "next_unit": null,
   "completed_units": [
     "inspect_v18_20_payload_settings_stack",
     "audit_localized_video_option_values",
@@ -26,9 +26,7 @@
     "go_test_race_pass",
     "verify_installer_6_of_6_payloads"
   ],
-  "pending_units": [
-    "runtime_test_settings_persistence_steam"
-  ],
+  "pending_units": [],
   "source_files_used": [
     "v18.20 canonical release",
     "Content/NiceSettingsMenu/UI/Theme_3/WB_T3_MainMenu.uasset",
@@ -50,21 +48,24 @@
     "IoStore metadata/readback PASS",
     "Fresh reproducible rebuild from clean v18.20 produced byte-identical UTOC/UCAS",
     "go test -race PASS",
-    "installer payload embedding/trust 6/6 PASS",
-    "ZIP CRC and exact entry readback PASS"
+    "release installer payload embedding/trust 6/6 PASS",
+    "user runtime settings persistence PASS",
+    "clean Apply state after restart PASS",
+    "main-menu settings freeze regression PASS",
+    "radial regression check PASS",
+    "RELEASE ZIP CRC/exact readback PASS",
+    "Google Drive upload/readback SHA-256 PASS"
   ],
-  "validation_pending": [
-    "saved video settings after full restart",
-    "clean Apply state without user changes",
-    "main-menu settings anti-freeze regression check",
-    "radial menu regression check"
-  ],
+  "validation_pending": [],
   "notes": [
     "User reports video settings reset/appear dirty after every game restart in both editions.",
     "Do not modify radial stack from runtime-validated v18.20.",
     "Do not restore heavy load/apply on every main-menu settings click; restore only one-time startup activation.",
     "Test archive: Carnal_Instinct_RU_DontLook_SettingsPersistence_2026-10-06_v18.21_TEST.zip; SHA-256 204d64ddd8f3d2dde6a308d4e1570132cca84a3967ed31945289011e152cefc1; 23653219 bytes; 136 entries.",
     "Installer SHA-256 a887a3759aab32ac600dee221b6585a6d78030849dd78a8784a2a3f1719f3932; 20837376 bytes.",
-    "Canonical release remains v18.20 until v18.21 runtime validation succeeds."
+    "Canonical release remains v18.20 until v18.21 runtime validation succeeds.",
+    "Canonical release: Carnal_Instinct_RU_DontLook_2026-10-06_v18.21_RELEASE.zip; SHA-256 d968e1ad018b71d3b84db4beaa33bf3dd318e6acacd8cba7315f140864c711ff; 23654810 bytes; 137 entries.",
+    "Installer SHA-256 ac75f203471793462d0031480a12b4046b0eb3c0a1ba40ea80b35f4830109f21; 20837376 bytes.",
+    "Drive release file ID 15la_MvSFht_nkeYcefH6pyN5ThoQ9dD6; readback SHA-256/size/entry-count/ZIP CRC verified."
   ]
 }
