@@ -120,7 +120,7 @@
       "edition": "NoSteam",
       "task": "mod_menu_castros_attribute_refund",
       "state_path": "working/nosteam/0.7.9.16232/mod_menu_castros_attribute_refund/AUDIT_STATE.json",
-      "status": "blocked_missing_development_source"
+      "status": "in_progress_steam_16321_source_approved"
     }
   ],
   "latest_release": {
