@@ -1,0 +1,32 @@
+{
+  "release": "18.22 TEST",
+  "task": "Steam character UI parity with NoSteam",
+  "base": "18.21 RELEASE",
+  "runtime_tested": false,
+  "changed_packages": [
+    "Carnal_Instinct_UE5/Content/RPG_InventorySystem/UI/Character/WB_CharacterScreen.uasset",
+    "Carnal_Instinct_UE5/Content/RPG_InventorySystem/UI/PlayerInventory/WB_Stats_Main.uasset",
+    "Carnal_Instinct_UE5/Content/RPG_InventorySystem/UI/PlayerInventory/WB_Stats_Full.uasset",
+    "Carnal_Instinct_UE5/Content/RPG_InventorySystem/UI/PlayerInventory/WB_Stats_Main_Slot.uasset"
+  ],
+  "approach": "Rebase only NoSteam-equivalent UMG Size/Alignment/Transform geometry onto current Steam-schema packages. Do not copy NoSteam cooked packages.",
+  "validation": {
+    "target_geometry_matches_nosteam": "PASS",
+    "steam_kismet_functions_byte_identical": "80/80 PASS",
+    "steam_iostore_meta_readback": "PASS",
+    "nosteam_payload_identical_v18_21": "PASS",
+    "pak_and_localization_unchanged": "PASS",
+    "installer_payloads": "6/6 PASS",
+    "go_test_race": "PASS"
+  },
+  "payload_hashes": {
+    "steam_utoc": "12387ce96b9b9f9bcc9819e8ebb953f9ca9175047efc1aa42d52d03d80b34be1",
+    "steam_ucas": "c222187c2e6b51fb035adeb0b731e968b3bf6a4cb575621236e1a15a3f167684",
+    "steam_pak": "2faea84a4cc4cfac31bc18e4c8588a90af6cf6a8ca0c2de55e04237def120ec8",
+    "nosteam_utoc": "667a078162fd51fa86668efd0e6523ed972a92fd581d2c5f0aec43870863decc",
+    "nosteam_ucas": "6065e6bd2bcfb21bcd884ac872afde4df1ea330ba77e6df85a8b4347d1c9cabc",
+    "nosteam_pak": "507d1f951a38aa03a5789867fe0c68cb69e47cc2d5fc64c8c8ffb7b4cfd416ae"
+  },
+  "installer_sha256": "d2febfa4e2f79d5ba9900bc12c5a40b6a0c53c4c363bedad8ca2f146de71a62d",
+  "runtime_validation": "pending"
+}
