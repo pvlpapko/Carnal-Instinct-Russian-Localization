@@ -1,0 +1,45 @@
+{
+  "schema_version": "1.0",
+  "edition": "Steam",
+  "task": "character_ui_match_nosteam_v18_22",
+  "status": "analysis_started",
+  "source_state_id": "steam_current_2026-10-03_16321_asset_verified_index_stale",
+  "verified_game_version": "0.7.9.16321",
+  "verified_build": null,
+  "current_phase": "asset_diff",
+  "last_completed_unit": "resume_v18_21_and_verify_build_state",
+  "next_unit": "identify_character_ui_asset_diff",
+  "completed_units": [
+    "read_STATE_INDEX",
+    "read_BUILD_STATE",
+    "confirm_v18_21_canonical_base"
+  ],
+  "pending_units": [
+    "identify_character_ui_asset_diff",
+    "build_minimal_steam_ui_patch",
+    "static_validate",
+    "rebuild_installer",
+    "package_test_archive",
+    "runtime_test"
+  ],
+  "source_files_used": [
+    "CI_SOURCE_INDEX.json",
+    "v18.21 canonical release",
+    "NoSteam v18.21 payload",
+    "Steam current source assets"
+  ],
+  "working_files": [
+    "working/steam/current/character_ui_match_nosteam_v18_22/AUDIT_STATE.json"
+  ],
+  "validation_completed": [],
+  "validation_pending": [
+    "source-schema match",
+    "NoSteam visual geometry mapping",
+    "Steam runtime"
+  ],
+  "notes": [
+    "Goal: make Steam character menu geometry/scale match NoSteam screenshot without changing NoSteam.",
+    "Preserve v18.21 radial/settings fixes and all existing localization.",
+    "No full UI rebuild; use minimal cooked override."
+  ]
+}
