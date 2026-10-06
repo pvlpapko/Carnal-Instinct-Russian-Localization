@@ -150,7 +150,7 @@
       "edition": "Both",
       "task": "mod_menu_installer",
       "state_path": "working/steam/current/mod_menu_installer/AUDIT_STATE.json",
-      "status": "release_candidate_windows_runtime_unverified"
+      "status": "modern_v2_release_uploaded_runtime_retest_pending"
     }
   ],
   "latest_release": {
