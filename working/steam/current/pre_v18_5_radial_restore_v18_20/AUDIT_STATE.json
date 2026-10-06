@@ -2,13 +2,13 @@
   "schema_version": "1.0",
   "edition": "Steam",
   "task": "pre_v18_5_radial_restore_v18_20",
-  "status": "test_archive_built_static_verified_runtime_pending",
+  "status": "runtime_validated_user_reported",
   "source_state_id": "steam_current_2026-10-03_16321_asset_verified_index_stale",
   "verified_game_version": "0.7.9.16321",
   "verified_build": null,
-  "current_phase": "runtime_validation",
-  "last_completed_unit": "v18_20_test_archive_static_validation",
-  "next_unit": "runtime_test_radial_open_and_direct_actions_steam",
+  "current_phase": "completed",
+  "last_completed_unit": "user_runtime_validation_radial_menu_working",
+  "next_unit": null,
   "completed_units": [
     "record_v18_19_runtime_crash",
     "inspect_old_WORKING_v3_radial_optimization",
@@ -22,9 +22,7 @@
     "build_windows_installer",
     "verify_installer_payload_embedding_6_of_6"
   ],
-  "pending_units": [
-    "runtime_test_radial_open_and_direct_actions_steam"
-  ],
+  "pending_units": [],
   "source_files_used": [
     "CI GPT/Working/Carnal_Instinct_RU_Universal_AutoDetect_WORKING_2026-10-02_v3.zip",
     "CI GPT/Working/RADIAL_RUNTIME_OPTIMIZATION.json",
@@ -50,11 +48,10 @@
     "IoStore meta/exact readback PASS",
     "go test -race PASS",
     "installer 6/6 payloads embedded and trusted",
-    "ZIP CRC/exact entry readback PASS"
+    "ZIP CRC/exact entry readback PASS",
+    "User runtime validation: radial menu and direct actions working"
   ],
-  "validation_pending": [
-    "actual in-game radial menu opening and direct action execution"
-  ],
+  "validation_pending": [],
   "notes": [
     "v18.20 is a regression-isolation restore, not another synthesized selection patch.",
     "NoSteam W_MenuItem restored from 33430-byte v18.5+ layout to 33389-byte pre-v18.5 WORKING asset.",
@@ -62,6 +59,7 @@
     "Runtime success is not claimed until user retest.",
     "Test archive: Carnal_Instinct_RU_DontLook_RadialRestore_2026-10-06_v18.20_TEST.zip; SHA-256 2885b2cdc6bf93451eed678b858c8a88dfdca63720f3580c525e706d3c4f7a45; 18945451 bytes; 123 entries.",
     "Installer SHA-256 6e55d4d251afce8570e1b3108dc77adf56212db188f041c62f827fe1503de432.",
-    "Runtime success is not claimed until user retest."
+    "Runtime success is not claimed until user retest.",
+    "2026-10-06 user report: v18.20 radial menu works; regression resolved by restoring pre-v18.5/current-source radial stack and removing v18.5 W_MenuItem layout override."
   ]
 }
