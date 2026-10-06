@@ -2,13 +2,13 @@
   "schema_version": "1.0",
   "edition": "NoSteam",
   "task": "mod_menu_castros_attribute_refund",
-  "status": "in_progress_v1.1.1_runtime_fix",
+  "status": "awaiting_v1.1.1_release_packaging",
   "source_state_id": "steam_current_0.7.9.16321_user_approved_v1.0.5_compatible",
   "verified_game_version": "0.7.9.16232",
   "verified_build": null,
-  "current_phase": "runtime_failure_fix",
-  "last_completed_unit": "v1.1.0_runtime_feedback_recorded",
-  "next_unit": "replace_campfire_world_partition_path_with_loaded_interactables_save_patch",
+  "current_phase": "v1.1.1_static_validation_complete",
+  "last_completed_unit": "v1.1.1_save_cache_and_ui_bounds_static_validation",
+  "next_unit": "package_upload_readback_v1.1.1",
   "completed_units": [
     "source_index_read",
     "github_state_index_read",
@@ -34,13 +34,16 @@
     "iostore_chunk_hash_directory_index_validation_passed",
     "v1.1.0_release_uploaded_and_readback_verified",
     "v1.1.0_runtime_campfire_failure_confirmed",
-    "v1.1.0_ui_attribute_row_overflow_confirmed"
+    "v1.1.0_ui_attribute_row_overflow_confirmed",
+    "v1.1.1_saved_interactables_campfire_unlock_implemented",
+    "v1.1.1_world_partition_unlock_removed",
+    "v1.1.1_menu_text_bounds_fixed",
+    "v1.1.1_tests_10_of_10",
+    "v1.1.1_controller_static_validation",
+    "v1.1.1_click_event_static_validation",
+    "v1.1.1_iostore_validation_passed"
   ],
   "pending_units": [
-    "implement_saved_interactables_campfire_unlock",
-    "fix_menu_text_bounds",
-    "v1.1.1_static_validation",
-    "v1.1.1_iostore_roundtrip",
     "v1.1.1_release_upload_readback",
     "v1.1.1_in_game_validation"
   ],
@@ -68,12 +71,16 @@
     "modified_kismet_static_validation_504_native_calls_229_assignments_21_reference_args",
     "v1.1.0_tests_10_of_10",
     "iostore_header_chunk_ranges_blake3_directory_index",
-    "drive_release_readback_sha256_e3a43cd8da22ac5dfa3588bd6e53da6a2f1339544f9ba4cfe90eac17ede9a2f1"
+    "drive_release_readback_sha256_e3a43cd8da22ac5dfa3588bd6e53da6a2f1339544f9ba4cfe90eac17ede9a2f1",
+    "v1.1.1_tests_10_of_10",
+    "v1.1.1_controller_graph_512_native_10_script_236_assignments_19_reference_args",
+    "v1.1.1_click_event_19_native_2_script_11_assignments_10_reference_args",
+    "v1.1.1_combined_static_531_native_12_script_247_assignments_29_reference_args",
+    "v1.1.1_iostore_header_chunk_ranges_blake3_directory_index"
   ],
   "validation_pending": [
-    "v1.1.1_static",
-    "v1.1.1_iostore",
-    "v1.1.1_runtime_in_game"
+    "v1.1.1_runtime_in_game",
+    "v1.1.1_drive_release_readback"
   ],
   "notes": [
     "User requests complete removal of flight and free camera, all Castros/fast-travel points activation button, and permanent attribute point removal/refund after persisted allocation.",
@@ -95,6 +102,9 @@
     "TEST release uploaded to CI GPT/Releases as CI_Mod_Menu_v1.1.0_TEST_0.7.9.16321.zip (Drive id 1THj-HY093bH9hwG2RldoDEHYfcPnuz2s). Drive readback size 218524 bytes and SHA-256 e3a43cd8da22ac5dfa3588bd6e53da6a2f1339544f9ba4cfe90eac17ede9a2f1 exactly match local archive.",
     "User runtime test of v1.1.0 on 0.7.9.16321: F7/button did not unlock campfires. WorldPartition GetActorDescs/LoadActors approach is therefore rejected as the primary implementation.",
     "User screenshot confirms the attribute-respec informational row overflows the right edge of the 620-wide menu panel. v1.1.1 must shorten/wrap row text and prevent all menu TextBlocks from drawing outside panel bounds.",
-    "Save-file/source audit shows campfire entries are already present in SaveGame/Loaded Interactables as S_SaveInteractables with InteractableActor paths containing BP_Campfire_C and InteractionValue. v1.1.1 will update these persisted structs directly, then use stock Quick Save; live BP_Campfire actors will still receive ActivatePoint for immediate UI state."
+    "Save-file/source audit shows campfire entries are already present in SaveGame/Loaded Interactables as S_SaveInteractables with InteractableActor paths containing BP_Campfire_C and InteractionValue. v1.1.1 will update these persisted structs directly, then use stock Quick Save; live BP_Campfire actors will still receive ActivatePoint for immediate UI state.",
+    "v1.1.1 removes WorldPartitionBlueprintLibrary calls entirely. F7 and the clickable button now edit RPGInventory_GameInstance.Loaded Interactables: entries whose InteractableActor string contains BP_Campfire_C receive S_SaveInteractables.InteractionValue=1; live campfires then receive ActivatePoint and stock Quick Save is requested.",
+    "v1.1.1 UI fix: all eight row TextBlocks have AutoWrapText enabled with WrapTextAt=560 inside the 620-wide panel. Attribute row text is shortened to 'Характеристики: −1 = +1 очко | минимум 1 | постоянно' and uses 14 pt instead of 16 pt.",
+    "v1.1.1 static validation: 10/10 tests; combined controller/UI click audit 531 native calls, 12 script calls, 247 assignments, 29 addressable reference/out args. IoStore UTOC/UCAS header, ranges, BLAKE3-160 and directory index pass. Runtime test still pending."
   ]
 }
