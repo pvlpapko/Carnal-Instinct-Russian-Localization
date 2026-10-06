@@ -64,7 +64,8 @@
     "Final local archive: Carnal_Instinct_RU_DontLook_2026-10-06_v18.15_RELEASE.zip; SHA-256 42ec01f9051437d3305a31077b3ef19ec68019d5bf907de4c1674244592df491; 19023629 bytes; 129 entries.",
     "Installer SHA-256 9e9f7d29395011d2c5328d5c1c5387336ee74560bfaba7cc769fb777f288f5a1.",
     "Runtime behavior is not claimed as tested.",
-    "Drive upload completed to CI GPT/Releases; archive raw readback SHA-256, size, entry count and ZIP CRC verified."
+    "Drive upload completed to CI GPT/Releases; archive raw readback SHA-256, size, entry count and ZIP CRC verified.",
+    "Final readback-aware metadata uploaded separately as Carnal_Instinct_RU_DontLook_2026-10-06_v18.15_RELEASE_VERIFIED.json and read back exactly."
   ],
   "drive": {
     "folder_id": "1VwdnxngtZLDsPl1kP5H5HCJBePoRCF_a",
@@ -74,6 +75,9 @@
     "archive_readback_sha256_verified": true,
     "archive_readback_bytes": 19023629,
     "archive_readback_entries": 129,
-    "archive_readback_zip_crc_verified": true
+    "archive_readback_zip_crc_verified": true,
+    "verified_metadata_file_id": "1g8Y_LGvsLxJZrTeFdDikiW--hHHjCztv",
+    "verified_metadata_sha256": "ed7dd791084cc914c4410d7dcc6201fc4b5c253331eb2846070ee307ba37a32b",
+    "verified_metadata_readback": true
   }
 }
