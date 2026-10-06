@@ -1,0 +1,63 @@
+{
+  "schema_version": "1.0",
+  "edition": "Steam",
+  "task": "radial_selection_bridge_v18_18",
+  "status": "payload_built_static_validated_installer_built",
+  "source_state_id": "steam_current_2026-10-03_16321_asset_verified_index_stale",
+  "verified_game_version": "0.7.9.16321",
+  "verified_build": null,
+  "current_phase": "package_test_archive",
+  "last_completed_unit": "v18_18_payload_installer_static_validation",
+  "next_unit": "package_test_archive_and_runtime_validate",
+  "completed_units": [
+    "record_v18_17_runtime_partial",
+    "inspect_E_Menus_cooked_enum",
+    "prove_Main_enum_value_2",
+    "patch_only_W_Menu_GetSelectedItemData",
+    "scope_bridge_to_CurrentMenu_byte_2",
+    "map_Main_indices_1_through_7_to_English_technical_FText",
+    "rebuild_IoStore_for_both_editions",
+    "verify_IoStore_meta_and_exact_readback",
+    "verify_W_MenuItem_AC_RadialMenu_Game_locres_PAK_untouched",
+    "go_test_race_pass",
+    "build_windows_installer",
+    "verify_installer_payload_embedding_6_of_6"
+  ],
+  "pending_units": [
+    "package_test_archive_and_crc_readback",
+    "runtime_test_sorcery_and_direct_actions"
+  ],
+  "source_files_used": [
+    "v18.13 release payload",
+    "current Steam W_Menu.uasset",
+    "v18.13 NoSteam W_Menu.uasset",
+    "current E_Menus.uasset",
+    "user runtime result from v18.17"
+  ],
+  "working_files": [
+    "working/steam/current/radial_selection_bridge_v18_18/AUDIT_STATE.json",
+    "working/steam/current/radial_selection_bridge_v18_18/V18_18_VALIDATION.json",
+    "working/steam/current/radial_selection_bridge_v18_18/build.py",
+    "working/steam/current/radial_selection_bridge_v18_18/validate.py"
+  ],
+  "validation_completed": [
+    "E_Menus cooked source: Consumables=0, None=1, Main=2",
+    "CurrentMenu property proven byte enum by Kismet ByteByte comparisons",
+    "bridge case key is ByteConst 2",
+    "7/7 Main direct actions convert to English technical FText",
+    "W_MenuItem byte-identical to v18.13",
+    "AC_RadialMenu byte-identical to v18.13 or stock absent override",
+    "Game.locres and PAK byte-identical to v18.13",
+    "IoStore meta/readback PASS",
+    "installer 6/6 payloads embedded and trusted"
+  ],
+  "validation_pending": [
+    "ZIP CRC/readback",
+    "actual in-game direct action execution"
+  ],
+  "notes": [
+    "v18.18 corrects only the enum type/value gate from v18.17.",
+    "Russian visible labels remain unchanged.",
+    "Runtime success is not claimed until user retest."
+  ]
+}
