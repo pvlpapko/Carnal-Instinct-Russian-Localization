@@ -1,0 +1,57 @@
+{
+  "schema_version": "1.0",
+  "edition": "NoSteam",
+  "task": "radial_selection_bridge_v18_17",
+  "status": "payload_installer_built_static_validation_pending",
+  "source_state_id": "nosteam_0.7.9.16232_fixed",
+  "verified_game_version": "0.7.9",
+  "verified_build": "0.7.9.16232",
+  "current_phase": "static_validation",
+  "last_completed_unit": "build_v18_17_payload_and_installer",
+  "next_unit": "validate_exact_diff_and_package_test_archive",
+  "completed_units": [
+    "record_v18_16_runtime_noop",
+    "trace_W_Menu_selection_pipeline",
+    "confirm_hover_and_SelectedItem_work_from_user_screenshot",
+    "confirm_current_Main_has_8_top_level_entries",
+    "patch_only_W_Menu_GetSelectedItemData",
+    "map_Main_indices_1_through_7_to_English_technical_FText",
+    "rebuild_IoStore_for_both_editions",
+    "rebuild_installer",
+    "go_test_race_pass"
+  ],
+  "pending_units": [
+    "validate_exact_diff_and_package_test_archive",
+    "runtime_test_radial_actions"
+  ],
+  "source_files_used": [
+    "v18.13 release payload",
+    "current Steam W_Menu.uasset",
+    "v18.13 NoSteam W_Menu.uasset",
+    "current DT_Menu.uasset",
+    "user screenshot of v18.16 radial menu"
+  ],
+  "working_files": [
+    "working/nosteam/0.7.9.16232/radial_selection_bridge_v18_17/AUDIT_STATE.json",
+    "working/steam/current/radial_selection_bridge_v18_17/radial_selection_bridge_v18_17_build.py"
+  ],
+  "validation_completed": [
+    "W_Menu.GetSelectedItemData strict Kismet parse/roundtrip",
+    "only GetSelectedItemData export changed inside W_Menu",
+    "W_MenuItem exact v18.13",
+    "Game.locres exact v18.13",
+    "AC_RadialMenu exact v18.13 or absent for Steam",
+    "IoStore metadata and exact readback PASS",
+    "go test -race PASS"
+  ],
+  "validation_pending": [
+    "installer embedded payload hashes",
+    "archive CRC/readback",
+    "in-game radial selection"
+  ],
+  "notes": [
+    "v18.17 does not execute custom code when the menu opens.",
+    "UI keeps localized Russian DisplayName. Only selection output for Main indices 1..7 is converted to English technical FText.",
+    "Top-level Main has 8 stock entries: Sorcery plus seven direct actions. Demo/submenu DT_Menu rows are not wired as extra CI gameplay commands."
+  ]
+}
