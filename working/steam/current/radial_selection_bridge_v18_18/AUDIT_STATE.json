@@ -2,13 +2,13 @@
   "schema_version": "1.0",
   "edition": "Steam",
   "task": "radial_selection_bridge_v18_18",
-  "status": "payload_built_static_validated_installer_built",
+  "status": "test_archive_built_static_verified_runtime_pending",
   "source_state_id": "steam_current_2026-10-03_16321_asset_verified_index_stale",
   "verified_game_version": "0.7.9.16321",
   "verified_build": null,
-  "current_phase": "package_test_archive",
-  "last_completed_unit": "v18_18_payload_installer_static_validation",
-  "next_unit": "package_test_archive_and_runtime_validate",
+  "current_phase": "runtime_validation",
+  "last_completed_unit": "v18_18_test_archive_static_validation",
+  "next_unit": "runtime_test_radial_direct_actions_steam",
   "completed_units": [
     "record_v18_17_runtime_partial",
     "inspect_E_Menus_cooked_enum",
@@ -24,8 +24,7 @@
     "verify_installer_payload_embedding_6_of_6"
   ],
   "pending_units": [
-    "package_test_archive_and_crc_readback",
-    "runtime_test_sorcery_and_direct_actions"
+    "runtime_test_radial_direct_actions_steam"
   ],
   "source_files_used": [
     "v18.13 release payload",
@@ -41,23 +40,29 @@
     "working/steam/current/radial_selection_bridge_v18_18/validate.py"
   ],
   "validation_completed": [
-    "E_Menus cooked source: Consumables=0, None=1, Main=2",
-    "CurrentMenu property proven byte enum by Kismet ByteByte comparisons",
-    "bridge case key is ByteConst 2",
-    "7/7 Main direct actions convert to English technical FText",
-    "W_MenuItem byte-identical to v18.13",
-    "AC_RadialMenu byte-identical to v18.13 or stock absent override",
-    "Game.locres and PAK byte-identical to v18.13",
-    "IoStore meta/readback PASS",
-    "installer 6/6 payloads embedded and trusted"
+    "v18.17 runtime result recorded: Sorcery works; seven direct actions no-op",
+    "CurrentMenu property proven byte enum",
+    "current E_Menus.uasset proves friendly value order Consumables=0, None=1, Main=2",
+    "GetSelectedItemData outer bridge case is ByteConst 2",
+    "Main indices 1..7 convert to English technical FText",
+    "only GetSelectedItemData export changed inside W_Menu",
+    "W_MenuItem exact v18.13",
+    "AC_RadialMenu exact v18.13 or stock absent override",
+    "Game.locres and PAK exact v18.13",
+    "IoStore meta/exact readback PASS",
+    "go test -race PASS",
+    "installer payload embedding/trust 6/6 PASS",
+    "ZIP CRC/exact readback PASS"
   ],
   "validation_pending": [
-    "ZIP CRC/readback",
-    "actual in-game direct action execution"
+    "actual in-game direct radial action execution"
   ],
   "notes": [
     "v18.18 corrects only the enum type/value gate from v18.17.",
     "Russian visible labels remain unchanged.",
+    "Runtime success is not claimed until user retest.",
+    "Test archive: Carnal_Instinct_RU_DontLook_RadialSelection_2026-10-06_v18.18_TEST.zip; SHA-256 cc55f2f95f558b10b9786501bab553638cc9710ce12cf97d620b4c0b2af3db42; 23789864 bytes; 127 entries.",
+    "Installer SHA-256 eb6379593879107d26332ff4b064f35e56e453e19347bea7b35fc5a9bee18a77.",
     "Runtime success is not claimed until user retest."
   ]
 }
