@@ -1,0 +1,30 @@
+{
+  "release": "18.18 TEST",
+  "base": "v18.13",
+  "target": "Carnal_Instinct_UE5/Content/BlueprintSystems/DynamicRadialMenu/Widgets/W_Menu.uasset",
+  "function": "GetSelectedItemData",
+  "scope": {
+    "property": "CurrentMenu",
+    "type": "E_Menus byte enum",
+    "case_value": 2,
+    "case_name": "Main"
+  },
+  "index_map": {
+    "1": "Fishing",
+    "2": "Summon Aadi",
+    "3": "Masturbate",
+    "4": "Canopic Capture",
+    "5": "Shade Sight",
+    "6": "Torch",
+    "7": "Korvoth's Sceptre"
+  },
+  "output": "culture-invariant English technical FText via existing Conv_StringToText import",
+  "default": "original Item.DisplayName",
+  "invariants": [
+    "no new imports",
+    "no W_MenuItem changes",
+    "no AC_RadialMenu changes",
+    "no Game.locres changes",
+    "no PAK changes"
+  ]
+}
