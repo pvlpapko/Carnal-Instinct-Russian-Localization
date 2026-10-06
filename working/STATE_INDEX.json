@@ -156,13 +156,25 @@
       "edition": "Steam",
       "task": "radial_handler_v18_16",
       "state_path": "working/steam/current/radial_handler_v18_16/AUDIT_STATE.json",
-      "status": "archive_built_static_verified_runtime_pending"
+      "status": "runtime_failed_radial_actions_noop_menu_opens"
     },
     {
       "edition": "NoSteam",
       "task": "radial_handler_v18_16",
       "state_path": "working/nosteam/0.7.9.16232/radial_handler_v18_16/AUDIT_STATE.json",
-      "status": "archive_built_static_verified_runtime_pending"
+      "status": "runtime_failed_radial_actions_noop_menu_opens"
+    },
+    {
+      "edition": "Steam",
+      "task": "radial_selection_bridge_v18_17",
+      "state_path": "working/steam/current/radial_selection_bridge_v18_17/AUDIT_STATE.json",
+      "status": "payload_installer_built_static_validation_pending"
+    },
+    {
+      "edition": "NoSteam",
+      "task": "radial_selection_bridge_v18_17",
+      "state_path": "working/nosteam/0.7.9.16232/radial_selection_bridge_v18_17/AUDIT_STATE.json",
+      "status": "payload_installer_built_static_validation_pending"
     }
   ],
   "latest_release": {
