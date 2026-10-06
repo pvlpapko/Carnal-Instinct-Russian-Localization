@@ -133,6 +133,18 @@
       "task": "radial_action_fix_v18_14",
       "state_path": "working/nosteam/0.7.9.16232/radial_action_fix_v18_14/AUDIT_STATE.json",
       "status": "archive_built_static_verified_drive_upload_pending"
+    },
+    {
+      "edition": "Steam",
+      "task": "radial_display_boundary_v18_15",
+      "state_path": "working/steam/current/radial_display_boundary_v18_15/AUDIT_STATE.json",
+      "status": "asset_patch_built_container_patch_pending"
+    },
+    {
+      "edition": "NoSteam",
+      "task": "radial_display_boundary_v18_15",
+      "state_path": "working/nosteam/0.7.9.16232/radial_display_boundary_v18_15/AUDIT_STATE.json",
+      "status": "asset_patch_built_container_patch_pending"
     }
   ],
   "latest_release": {
