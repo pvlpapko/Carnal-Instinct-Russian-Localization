@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "updated_at": "2026-10-05T10:26:00+03:00",
+  "updated_at": "2026-10-06",
   "active_tasks": [
     {
       "edition": "Steam",
@@ -115,6 +115,12 @@
       "task": "v15_startup_async_loading_crash",
       "state_path": "working/steam/current/v15_startup_async_loading_crash/AUDIT_STATE.json",
       "status": "v18_3_objective_display_boundary_built_runtime_pending"
+    },
+    {
+      "edition": "NoSteam",
+      "task": "mod_menu_castros_attribute_refund",
+      "state_path": "working/nosteam/0.7.9.16232/mod_menu_castros_attribute_refund/AUDIT_STATE.json",
+      "status": "in_progress"
     }
   ],
   "latest_release": {
