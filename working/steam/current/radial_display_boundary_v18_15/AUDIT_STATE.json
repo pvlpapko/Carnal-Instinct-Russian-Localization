@@ -2,47 +2,67 @@
   "schema_version": "1.0",
   "edition": "Steam",
   "task": "radial_display_boundary_v18_15",
-  "status": "asset_patch_built_container_patch_pending",
+  "status": "archive_built_static_verified_drive_upload_pending",
   "source_state_id": "steam_current_2026-10-03_16321_asset_verified_index_stale",
   "verified_game_version": "0.7.9.16321",
   "verified_build": null,
-  "current_phase": "container_patch",
-  "last_completed_unit": "patch_W_MenuItem_SetItemText_display_boundary",
-  "next_unit": "patch_iostore_and_validate",
+  "current_phase": "release_upload",
+  "last_completed_unit": "v18_15_archive_static_validation",
+  "next_unit": "upload_release_and_verify_readback",
   "completed_units": [
-    "read_source_index",
-    "read_state_index",
-    "reuse_v18_14_technical_id_fix",
-    "patch_W_MenuItem_SetItemText_with_7_case_display_switch",
-    "strict_kismet_roundtrip"
+    "read_source_and_resume_v18_14_state",
+    "preserve_seven_english_runtime_action_ids",
+    "patch_W_MenuItem_SetItemText_display_boundary",
+    "strict_kismet_parse_and_roundtrip",
+    "minimal_single_chunk_iostore_patch",
+    "verify_other_named_chunks_exact_readback",
+    "verify_pak_and_game_locres_unchanged_from_v18_14",
+    "run_46_installer_go_race_test_pass_events",
+    "build_windows_amd64_installer",
+    "verify_6_of_6_installer_payloads_embedded_and_trusted",
+    "package_v18_15_archive_and_verify_zip_crc_exact_readback"
   ],
   "pending_units": [
-    "patch_iostore_and_validate",
-    "rebuild_installer",
-    "package_release",
-    "runtime_test_radial_actions_steam"
+    "upload_release_and_verify_readback",
+    "runtime_test_radial_actions_steam",
+    "windows_installer_smoke_test"
   ],
   "source_files_used": [
     "v18.14 release payload",
-    "current W_MenuItem/DT_Menu/AC_RadialMenu analysis"
+    "Carnal_Instinct_UE5/Content/BlueprintSystems/DynamicRadialMenu/Widgets/W_MenuItem.uasset",
+    "Carnal_Instinct_UE5/Content/BlueprintSystems/DynamicRadialMenu/Actors/AC_RadialMenu.uasset",
+    "Carnal_Instinct_UE5/Content/BlueprintSystems/DynamicRadialMenu/Tables/DT_Menu.uasset"
   ],
   "working_files": [
-    "working/steam/current/radial_display_boundary_v18_15/AUDIT_STATE.json"
+    "working/steam/current/radial_display_boundary_v18_15/AUDIT_STATE.json",
+    "working/steam/current/radial_display_boundary_v18_15/V18_15_RADIAL_DISPLAY_BOUNDARY.json",
+    "working/steam/current/radial_display_boundary_v18_15/V18_15_IOSTORE_MINIMAL_PATCH.json",
+    "working/steam/current/radial_display_boundary_v18_15/V18_15_VALIDATION.json",
+    "working/steam/current/radial_display_boundary_v18_15/patch_radial_display_boundary.py",
+    "working/steam/current/radial_display_boundary_v18_15/patch_iostore_minimal.py",
+    "working/steam/current/radial_display_boundary_v18_15/test_radial_display_boundary.py"
   ],
   "validation_completed": [
-    "technical DisplayName remains English",
-    "7 Russian display aliases referenced only at TextBlock.SetText boundary",
-    "SetItemText Kismet parses and roundtrips",
-    "other W_MenuItem exports unchanged in asset patch"
+    "7/7 technical runtime action IDs remain English",
+    "7/7 Russian display aliases selected only at TXT_Item.SetText boundary",
+    "SetItemText Kismet strict parse/roundtrip PASS",
+    "all other W_MenuItem exports byte-identical",
+    "AC_RadialMenu unchanged",
+    "PAK and Game.locres byte-identical to v18.14",
+    "minimal IoStore patch scope PASS",
+    "46/46 Go race test pass events; 0 failures",
+    "6/6 installer payload files embedded and trusted",
+    "ZIP CRC and exact entry readback PASS"
   ],
   "validation_pending": [
-    "IoStore exact readback",
-    "installer tests",
-    "in-game radial execution"
+    "actual in-game radial action execution"
   ],
   "notes": [
-    "No AC_RadialMenu bytecode changes.",
-    "No DT_Menu runtime FText retranslation.",
-    "Steam W_MenuItem uses existing name-map entries for all seven action IDs."
+    "v18.15 keeps command identity and display text separate.",
+    "AC_RadialMenu receives stock English action identifiers while W_MenuItem shows Russian captions.",
+    "Final local archive: Carnal_Instinct_RU_DontLook_2026-10-06_v18.15_RELEASE.zip; SHA-256 42ec01f9051437d3305a31077b3ef19ec68019d5bf907de4c1674244592df491; 19023629 bytes; 129 entries.",
+    "Installer SHA-256 9e9f7d29395011d2c5328d5c1c5387336ee74560bfaba7cc769fb777f288f5a1.",
+    "Runtime behavior is not claimed as tested.",
+    "Drive upload/readback remains pending."
   ]
 }
