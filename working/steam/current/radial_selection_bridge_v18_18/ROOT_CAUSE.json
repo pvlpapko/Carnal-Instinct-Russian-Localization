@@ -1,0 +1,23 @@
+{
+  "release": "18.18 TEST",
+  "prior_release": "18.17 TEST",
+  "user_runtime_result": "Sorcery submenu works; seven direct actions no-op.",
+  "root_cause": {
+    "property": "W_Menu.CurrentMenu",
+    "actual_type": "E_Menus byte enum",
+    "v18_17_bug": "Compared CurrentMenu against FName 'Main'.",
+    "consequence": "Bridge never matched; localized Russian DisplayName passed through unchanged to AC_RadialMenu exact English string dispatch.",
+    "source_evidence": {
+      "enum_asset": "/Game/BlueprintSystems/DynamicRadialMenu/Enums/E_Menus",
+      "enum_asset_sha256": "f8632c144bbc7899625901e9704d5561a8b3f6a24f449086258a635e14f1aad2",
+      "friendly_value_order": {
+        "0": "Consumables",
+        "1": "None",
+        "2": "Main"
+      },
+      "main_value": 2
+    }
+  },
+  "v18_18_fix": "Use ByteConst(2) as the outer SwitchValue case in W_Menu.GetSelectedItemData; keep Russian UI and emit English technical FText only for Main indices 1..7.",
+  "runtime_tested": false
+}
