@@ -204,13 +204,13 @@
       "edition": "Steam",
       "task": "pre_v18_5_radial_restore_v18_20",
       "state_path": "working/steam/current/pre_v18_5_radial_restore_v18_20/AUDIT_STATE.json",
-      "status": "payload_installer_built_static_verified_package_pending"
+      "status": "test_archive_built_static_verified_runtime_pending"
     },
     {
       "edition": "NoSteam",
       "task": "pre_v18_5_radial_restore_v18_20",
       "state_path": "working/nosteam/0.7.9.16232/pre_v18_5_radial_restore_v18_20/AUDIT_STATE.json",
-      "status": "payload_installer_built_static_verified_package_pending"
+      "status": "test_archive_built_static_verified_runtime_pending"
     }
   ],
   "latest_release": {
@@ -243,12 +243,12 @@
     "minimal_hell_kitchen_refs": 12
   },
   "latest_local_candidate": {
-    "name": "Carnal_Instinct_RU_DontLook_RadialDelegate_2026-10-06_v18.19_TEST.zip",
-    "task": "radial_delegate_boundary_v18_19",
-    "sha256": "88a1ece53e63763fb1a68f70da499a4c6565c29d206302687e11fbd748a7895e",
-    "archive_bytes": 18895561,
-    "archive_entries": 118,
-    "installer_sha256": "09921972261332be9c57c187340e049743cfe5acb01803fd2ccf88c1c61e058f",
+    "name": "Carnal_Instinct_RU_DontLook_RadialRestore_2026-10-06_v18.20_TEST.zip",
+    "task": "pre_v18_5_radial_restore_v18_20",
+    "sha256": "2885b2cdc6bf93451eed678b858c8a88dfdca63720f3580c525e706d3c4f7a45",
+    "archive_bytes": 18945451,
+    "archive_entries": 123,
+    "installer_sha256": "6e55d4d251afce8570e1b3108dc77adf56212db188f041c62f827fe1503de432",
     "zip_crc_and_exact_entry_readback": true,
     "drive_upload": "pending",
     "runtime_validation": "pending"
