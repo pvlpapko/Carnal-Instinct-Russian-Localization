@@ -216,13 +216,13 @@
       "edition": "Steam",
       "task": "settings_persistence_v18_21",
       "state_path": "working/steam/current/settings_persistence_v18_21/AUDIT_STATE.json",
-      "status": "root_cause_identified_patch_pending"
+      "status": "payload_installer_static_verified_package_pending"
     },
     {
       "edition": "NoSteam",
       "task": "settings_persistence_v18_21",
       "state_path": "working/nosteam/0.7.9.16232/settings_persistence_v18_21/AUDIT_STATE.json",
-      "status": "root_cause_identified_patch_pending"
+      "status": "payload_installer_static_verified_package_pending"
     }
   ],
   "latest_release": {
