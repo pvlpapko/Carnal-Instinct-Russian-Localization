@@ -1,0 +1,47 @@
+{
+  "schema_version": "1.0",
+  "edition": "NoSteam",
+  "task": "radial_action_fix_v18_14",
+  "status": "in_progress",
+  "source_state_id": "nosteam_0.7.9.16232_fixed",
+  "verified_game_version": "0.7.9",
+  "verified_build": "0.7.9.16232",
+  "current_phase": "root_cause_confirmed_pre_container_rebuild",
+  "last_completed_unit": "v18_5_common_W_MenuItem_regression_isolated",
+  "next_unit": "rebuild_v18_14_payloads",
+  "completed_units": [
+    "read_v18_13_release_manifest_and_reports",
+    "compare_v18_13_against_v18_4_radial_payload",
+    "confirm_v18_5_only_changed_W_MenuItem_native_layout_records"
+  ],
+  "pending_units": [
+    "restore_NoSteam_W_MenuItem_to_v18_4_bytes",
+    "rebuild_container",
+    "static_validate_container_and_regressions",
+    "package_v18_14",
+    "upload_release_and_verify_readback",
+    "runtime_test_radial_action"
+  ],
+  "source_files_used": [
+    "CI GPT/Releases/Carnal_Instinct_RU_DontLook_2026-10-06_v18.13_RELEASE.zip",
+    "CI GPT/Releases/Carnal_Instinct_RU_DontLook_FullUI_2026-10-05_v18.4_TEST.zip"
+  ],
+  "working_files": [
+    "working/nosteam/0.7.9.16232/radial_action_fix_v18_14/AUDIT_STATE.json"
+  ],
+  "validation_completed": [
+    "v18.13 and v18.4 NoSteam radial W_Menu/W_ScrollableUI/AC_RadialMenu are byte-identical",
+    "only W_MenuItem differs between v18.4 and v18.13",
+    "NoSteam W_MenuItem function exports are byte-identical; only OverlaySlot_1 and TXT_Item native layout records changed in v18.5"
+  ],
+  "validation_pending": [
+    "rebuilt container exact readback",
+    "independent IoStore hashes/spans/import dependencies",
+    "existing localization regression suite",
+    "in-game radial selection/action execution"
+  ],
+  "notes": [
+    "User reports radial menu opens and selection is visible, but selected action does not execute in NoSteam v18.13.",
+    "Rollback target is the v18.4 NoSteam W_MenuItem bytes only; all other v18.13 fixes remain."
+  ]
+}
