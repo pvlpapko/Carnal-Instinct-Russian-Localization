@@ -1,0 +1,49 @@
+{
+  "release": "18.16",
+  "runtime_tested": false,
+  "archive": {
+    "name": "Carnal_Instinct_RU_DontLook_2026-10-06_v18.16_RELEASE.zip",
+    "sha256": "485081fdaa9e54626bdd45b7ce0a4c3a9b5f1ad2ca9869f5c7a0c27403ef72cb",
+    "bytes": 18860416,
+    "entries": 121,
+    "zip_crc_and_exact_readback": true
+  },
+  "installer_sha256": "ff467044b6c6aacc60f4c68489b45376236b3890116865b38b5c6109a03eda33",
+  "design": "Restore v18.13 W_MenuItem and patch only seven exact dispatch literals in AC_RadialMenu.HandleItemSelected to the localized Russian strings actually delivered by DT_Menu.",
+  "crash_18_15": {
+    "error": "EXCEPTION_ACCESS_VIOLATION writing 0x0000000000000000",
+    "thread": "GameThread",
+    "reported_editions": [
+      "Steam",
+      "NoSteam"
+    ],
+    "status": "rejected"
+  },
+  "payloads": {
+    "Steam_current": {
+      "packages": 46,
+      "AC_RadialMenu_sha256": "2dc4b713bb9d90776fc3ae98c264436b4c474444f960ed14541a888d46569517",
+      "utoc_sha256": "76c1685fbfc91760fbb9f805ef946cbe8350eaca410fdf049d07b66d59ea7283",
+      "ucas_sha256": "d87bd28d34a6f44c1dfa1f8599b7613dc9b2c08204a4c3524fc08a851dee017a",
+      "pak_sha256": "2faea84a4cc4cfac31bc18e4c8588a90af6cf6a8ca0c2de55e04237def120ec8"
+    },
+    "NoSteam_0.7.9.16232": {
+      "packages": 74,
+      "AC_RadialMenu_sha256": "2dc4b713bb9d90776fc3ae98c264436b4c474444f960ed14541a888d46569517",
+      "utoc_sha256": "ff761c59fccfd9e2787ab7a6dfacc630d3f780f92aa917a3e047d7f619ec0947",
+      "ucas_sha256": "0066f64c5c20f314d8100c3899e068c3bf04452fd0a9a59461afc76c84a9891c",
+      "pak_sha256": "507d1f951a38aa03a5789867fe0c68cb69e47cc2d5fc64c8c8ffb7b4cfd416ae"
+    }
+  },
+  "static_validation": [
+    "7/7 Russian dispatch literals PASS",
+    "all other AC_RadialMenu exports byte-identical to source",
+    "W_MenuItem byte-identical to v18.13",
+    "Game.locres byte-identical to v18.13",
+    "PAK byte-identical to v18.13",
+    "IoStore meta PASS",
+    "go test -race PASS",
+    "installer payload embedding 6/6 PASS"
+  ],
+  "runtime_validation": "pending"
+}
