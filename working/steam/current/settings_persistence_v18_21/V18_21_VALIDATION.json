@@ -1,0 +1,20 @@
+{
+  "release": "18.21 TEST",
+  "runtime_tested": false,
+  "tests": {
+    "single_asset_only_both_editions": "PASS",
+    "single_byte_asset_patch_both_editions": "PASS",
+    "startup_load_apply_true_manual_open_false": "PASS",
+    "radial_v18_20_preserved": "PASS",
+    "locres_pak_preserved": "PASS",
+    "iostore_meta_readback": "PASS",
+    "installer_embedding": "PASS",
+    "go_test_race": "PASS"
+  },
+  "installer": {
+    "sha256": "a887a3759aab32ac600dee221b6585a6d78030849dd78a8784a2a3f1719f3932",
+    "bytes": 20837376,
+    "payloads_embedded": "6/6 PASS",
+    "trusted_hashes": "6/6 PASS"
+  }
+}
