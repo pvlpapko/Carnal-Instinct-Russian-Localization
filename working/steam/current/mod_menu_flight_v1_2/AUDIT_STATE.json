@@ -1,0 +1,56 @@
+{
+  "schema_version": "1.0",
+  "edition": "Both",
+  "task": "mod_menu_flight_v1_2",
+  "status": "in_progress_architecture_and_current_source_validation",
+  "source_state_id": "steam_current_0.7.9.16321 + CI_Mod_Menu_v1.1.1_runtime_validated",
+  "verified_game_version": "0.7.9.16321",
+  "verified_build": null,
+  "current_phase": "architecture_audit",
+  "last_completed_unit": "requirements_fixed",
+  "next_unit": "rebuild_current_16321_flight_patch_from_stock",
+  "completed_units": [
+    "source_index_read",
+    "github_state_index_read",
+    "v1.1.1_runtime_validated_base_selected",
+    "flight_requirements_fixed",
+    "current_steam_16321_BP_CombatCharacter_fetched",
+    "historical_flight_semantics_audited"
+  ],
+  "pending_units": [
+    "reconstruct_build_tooling",
+    "patch_current_BP_CombatCharacter_minimally",
+    "add_F8_controller_toggle",
+    "add_F8_menu_row",
+    "static_kismet_validation",
+    "iostore_rebuild",
+    "release_package_upload_readback",
+    "runtime_validation"
+  ],
+  "source_files_used": [
+    "CI_Mod_Menu_v1.1.1_DEVELOPMENT.zip",
+    "steam/current BP_CombatCharacter.uasset (Drive id 1Fp8ERsLbt8UF8rJ7u8hX6EBY9xfS4L3J)",
+    "CarnalInstinct_0.7.9.16232.usm",
+    "scriptobjects.bin"
+  ],
+  "working_files": [
+    "working/steam/current/mod_menu_flight_v1_2/AUDIT_STATE.json"
+  ],
+  "validation_completed": [
+    "historical_flight_design_review",
+    "current_BP_CombatCharacter_source_size_633193_confirmed"
+  ],
+  "validation_pending": [
+    "current_source_schema_and_script",
+    "modified_kismet_static_validation",
+    "iostore_roundtrip",
+    "runtime"
+  ],
+  "notes": [
+    "User requests flight using standard keyboard/mouse controls: WASD, camera pitch drives climb/descent, no noclip, sprint key gives x3 speed.",
+    "Flight will use CharacterMovement MOVE_Flying and Pawn.AddMovementInput with capsule/world collision retained; SetActorLocation/no-collision/ghost mechanics are prohibited.",
+    "Free camera remains removed.",
+    "Historical v1.0.5 flight implementation is reference only because user previously reported flight crashes; current Steam 0.7.9.16321 BP_CombatCharacter must be the patch base.",
+    "Preferred design is controller-centric flight state with only a minimal BP_CombatCharacter ReceiveTick trampoline, avoiding broad character input graph rewrites."
+  ]
+}
