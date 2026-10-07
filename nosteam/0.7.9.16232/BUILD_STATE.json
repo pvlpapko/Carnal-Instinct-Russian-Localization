@@ -1,5 +1,5 @@
 {
-  "schema_version": "1.0",
+  "schema_version": "1.1",
   "edition": "NoSteam",
   "channel": "fixed",
   "rolling": false,
@@ -8,5 +8,16 @@
   "product_version": "++UE5+Release-5.5-CL-40574608",
   "ue_version": "5.5.4",
   "source_verified": true,
-  "notes": "Fixed NoSteam project baseline."
+  "source_state_id": "nosteam_0.7.9.16232_unpacked_drive_2026-10-07",
+  "unpacked_source_root_name": "Carnal_Instinct_UE5_Nosteam",
+  "unpacked_source_root_drive_id": "1utEQ4N93dZ3PUJRO5M0jX5gg1BydoAQ1",
+  "source_state_path": "nosteam/0.7.9.16232/SOURCE_STATE.json",
+  "source_index_summary_path": "nosteam/0.7.9.16232/SOURCE_INDEX_SUMMARY.json",
+  "source_index_drive_id": "1AW90tbEjxz7RfB1kZiQHcZNqj2hHRr5N",
+  "source_tree_drive_id": "1yRLeb6AB3Z7fE10GUOl8mp-N_5lzf8CF",
+  "notes": [
+    "Fixed NoSteam 0.7.9.16232 project baseline.",
+    "NoSteam unpacked source is independently indexed and must not be confused with steam/current.",
+    "Logical package index is complete from AssetRegistry; exact duplicate physical filenames/sidecars are resolved from the indexed NoSteam parent folder before build-dependent use."
+  ]
 }
