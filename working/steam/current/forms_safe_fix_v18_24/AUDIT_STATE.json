@@ -2,13 +2,13 @@
   "schema_version": "1.0",
   "edition": "Steam",
   "task": "forms_safe_fix_v18_24",
-  "status": "analysis_complete_patch_in_progress",
+  "status": "test_archive_built_static_verified_runtime_pending",
   "source_state_id": "steam_current_2026-10-03_16321_asset_verified_index_stale",
   "verified_game_version": "0.7.9.16321",
   "verified_build": null,
-  "current_phase": "binary_patch",
-  "last_completed_unit": "reject_v18_23_display_switch_and_select_data_boundary_fix",
-  "next_unit": "build_minimal_action_fix_and_datatable_descriptions",
+  "current_phase": "runtime_validation",
+  "last_completed_unit": "v18_24_test_archive_static_validation",
+  "next_unit": "runtime_test_forms_steam_and_newer_nosteam",
   "completed_units": [
     "record_v18_23_runtime_crash",
     "confirm_crash_occurs_on_form_menu_open_before_action",
@@ -17,12 +17,7 @@
     "select_description_data_boundary_translation"
   ],
   "pending_units": [
-    "build_minimal_action_fix_and_datatable_descriptions",
-    "rebuild_iostore",
-    "static_validate",
-    "rebuild_installer",
-    "package_test",
-    "runtime_test"
+    "runtime_test_forms_steam_and_newer_nosteam"
   ],
   "source_files_used": [
     "v18.21 canonical release",
@@ -35,14 +30,29 @@
     "working/steam/current/forms_safe_fix_v18_24/AUDIT_STATE.json"
   ],
   "validation_completed": [
-    "v18.23 display switch rejected",
-    "DT_FormUnlocks is byte-identical between matching editions",
-    "SidePanelDescription is a string field and can be translated at data boundary without changing form IDs",
-    "Steam action gate requires source string; NoSteam baseline already uses source string"
+    "v18.23 display-switch Kismet injection rejected",
+    "Steam WB_FormScreen changed only ExecuteUbergraph action source calls",
+    "Steam action probes use source text; no 55-case display switches",
+    "NoSteam 0.7.9.16232 WB_FormScreen byte-identical to v18.21",
+    "11 unique long SidePanelDescription translations applied in DT_FormUnlocks (48 serialized row occurrences)",
+    "Short FormName values/IDs preserved in English",
+    "PAK and Game.locres byte-identical to v18.21",
+    "IoStore metadata/exact readback PASS",
+    "go test -race PASS",
+    "installer payload embedding/trust 6/6 PASS",
+    "ZIP CRC/exact readback PASS"
   ],
   "validation_pending": [
-    "patched package readback",
-    "IoStore meta/readback",
-    "runtime menu open/buy/apply"
+    "form menu opens at Ascension Sanctuary without crash",
+    "purchase/unlock locked form",
+    "essence deduction",
+    "apply/transform unlocked form",
+    "Russian long description",
+    "radial/settings regression smoke"
+  ],
+  "notes": [
+    "Test archive: Carnal_Instinct_RU_DontLook_FormsSafe_2026-10-07_v18.24_TEST.zip; SHA-256 0fc0531e506bdc2fa6bebdaca171bb0c06668baf75ae1f65be0935c54e51da41; 23817799 bytes; 143 entries.",
+    "Installer SHA-256 a6daa7050fcbc9662f5747715a7df3ad990acea1e900258f59ba6328c5ac47d3.",
+    "Canonical release remains v18.21 until v18.24 runtime validation passes."
   ]
 }
