@@ -9,7 +9,7 @@ Goals: Russian localization, asset analysis, UI fixes, installer work and valida
 
 ## Edition separation
 
-NoSteam and Steam are separate compatibility domains.
+NoSteam and Steam are separate compatibility domains. Source files, cooked overrides, hashes, Drive IDs and compatibility results must remain edition-qualified.
 
 ### NoSteam
 
@@ -20,118 +20,85 @@ Fixed baseline:
 - UE: 5.5.4
 - ProductVersion: ++UE5+Release-5.5-CL-40574608
 
-Use build-qualified NoSteam paths.
+Paths:
+
+- `nosteam/0.7.9.16232/`
+- `working/nosteam/0.7.9.16232/<task>/`
+- `nosteam/0.7.9.16232/SOURCE_STATE.json`
+
+Unpacked NoSteam source:
+
+- `Carnal_Instinct_UE5_Nosteam`
+- Drive ID `1utEQ4N93dZ3PUJRO5M0jX5gg1BydoAQ1`
+
+Navigation:
+
+- `CI GPT/Manifests/CI_NOSTEAM_SOURCE_INDEX.json`
+- `CI GPT/Manifests/CI_NOSTEAM_SOURCE_TREE.txt`
+- folder catalog: `working/nosteam/0.7.9.16232/source_index/FOLDERS.json`
+
+The NoSteam folder catalog is exact. The logical cooked package/asset catalog comes from the matching `AssetRegistry.bin`. Extracted duplicate files can have generated or non-sequential suffixes, and sidecars such as `.ubulk` are not logical AssetRegistry packages. Before build-dependent use, resolve the exact physical filename and Drive ID by listing the indexed NoSteam parent folder and verify its current metadata/bytes. Never fabricate a physical filename.
 
 ### Steam
 
-Steam is rolling and must not use a version number as the primary working path.
+Steam is rolling.
 
-Use:
+Paths:
 
 - `steam/current/`
 - `working/steam/current/<task>/`
+- `steam/current/BUILD_STATE.json`
 
-The actual verified Steam version/build belongs in metadata, not in the active workspace path.
+Unpacked Steam source:
 
-At the start of each Steam task or continuation, verify whether the source changed before reusing build-dependent binary/UI overrides.
+- `Carnal_Instinct_UE5`
+- Drive ID `1-kOUHTe33iZDj4wvLk-KpA6rqWGvmFnC`
 
-Strong build/source evidence, in descending preference:
+Navigation:
+
+- `CI GPT/Manifests/CI_SOURCE_INDEX.json`
+- `CI GPT/Manifests/CI_SOURCE_TREE.txt`
+
+Actual Steam version/build belongs in metadata, not the active path. Before reusing build-dependent binary/UI overrides, verify the current Steam source.
+
+Evidence priority:
 
 1. executable ProductVersion / file version;
 2. Build.version / app manifest / package manifests;
 3. container identities, sizes and hashes;
 4. localization, cooked-asset or schema changes;
-5. filenames and dates only as secondary evidence.
+5. filenames and dates as secondary evidence.
 
-If the source changed:
+If Steam changed, update `steam/current/BUILD_STATE.json`, preserve compatible translation identities, revalidate cooked overrides, invalidate only affected work and continue from the earliest affected unit. If the exact build cannot be proven, store null/unknown.
 
-- update `steam/current/BUILD_STATE.json`;
-- mark build-dependent binary/UI compatibility as requiring revalidation;
-- do not silently reuse previous cooked binary overrides;
-- keep translation work only where key/hash/source compatibility remains verified;
-- preserve prior state through Git history or explicit snapshots.
+## Source selection
 
-If the exact Steam build cannot be proven, set it to unknown/unverified rather than inventing it.
+Determine edition before choosing an index.
 
-## Sources
+- Steam -> Steam index/tree + Steam BUILD_STATE.
+- NoSteam -> NoSteam index/tree + NoSteam SOURCE_STATE.
+- Both -> both source states and both indexes.
 
-Original game source is read-only unless explicitly allowed.
+Never overwrite or merge edition indexes. `Content.zip` is not used.
 
-Primary source navigation remains:
-
-- `CI_SOURCE_INDEX.json`
-- `CI_SOURCE_TREE.txt`
-
-Large original game assets, PAK/UTOC/UCAS containers and large cooked binaries stay on Google Drive or the original source store. Do not mirror them into GitHub.
-
-GitHub stores:
-
-- project state;
-- translation tables;
-- audit queues;
-- reports;
-- scripts;
-- installer source;
-- manifests;
-- hashes and identities;
-- reproducible validation metadata.
+Large binary assets and releases stay on Drive. GitHub stores state, translations, reports, scripts, installer source, compact manifests, hashes and checkpoints.
 
 ## Localization integrity
 
-Preserve exact:
+Preserve exact Namespace, Key, original SourceStringHash, source/hash relation, placeholders, tags, escapes and newlines.
 
-- Namespace;
-- Key;
-- original SourceStringHash;
-- English source/hash relation;
-- placeholders;
-- tags;
-- escapes;
-- newlines.
-
-Never hash Russian text.  
-Never deduplicate solely by identical English text.  
-Never translate technical identifiers merely because they are visible strings.
-
-Preserve internal names such as:
-
-- montage names;
-- row/internal IDs;
-- object/package paths;
-- bindings;
-- event/function names;
-- save-slot identifiers.
-
-Translate at display boundaries.
+Never hash Russian text or deduplicate solely by identical English. Preserve internal IDs, paths, montage names, bindings, events/functions and save-slot identifiers. Translate at display boundaries.
 
 ## Binary and cooked assets
 
-Before modification, inspect architecture, dependencies, serialization, class/CDO schemas and handlers.
+Before modification, inspect architecture, dependencies, serialization, class/CDO schemas and handlers. Do not perform blind byte patches.
 
-Do not perform blind byte patches.
-
-For build-dependent cooked assets, verify matching source identity before reuse.
-
-A prior Steam override is not assumed compatible with the next Steam update.
+For build-dependent work, verify matching edition, source_state_id and exact physical bytes. Matching logical package paths alone do not prove cross-edition compatibility.
 
 ## Persistent work
 
-Long tasks must be resumable.
-
-The authoritative WIP state is the committed GitHub checkpoint, not chat context and not temporary local/container files.
-
-Every substantial task must use a matching `AUDIT_STATE.json` as defined in WORKFLOW.md.
+The authoritative WIP state is the committed GitHub checkpoint. Every substantial task uses a matching `AUDIT_STATE.json` as defined in WORKFLOW.md.
 
 ## Validation
 
-Separate:
-
-- historical reports;
-- current static validation;
-- actual in-game/runtime tests.
-
-Never claim runtime compatibility unless actually tested.
-
-Do not ship original global game containers.
-
-Final release artifacts remain separated by edition and verified compatibility state.
+Separate historical reports, static validation and in-game/runtime tests. Never claim runtime compatibility unless actually tested. Final release artifacts stay separated by edition and verified compatibility state.
