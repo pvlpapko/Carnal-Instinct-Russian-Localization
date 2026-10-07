@@ -1,0 +1,48 @@
+{
+  "schema_version": "1.0",
+  "edition": "NoSteam",
+  "task": "source_index",
+  "status": "in_progress",
+  "source_state_id": "nosteam_0.7.9.16232_unpacked_drive_2026-10-07",
+  "verified_game_version": "0.7.9",
+  "verified_build": "0.7.9.16232",
+  "created_at": "2026-10-07",
+  "updated_at": "2026-10-07",
+  "current_phase": "recursive_drive_index",
+  "last_completed_unit": "source_root_identified",
+  "next_unit": "enumerate_all_descendants_with_pagination",
+  "completed_units": [
+    "Read existing Steam CI_SOURCE_INDEX baseline",
+    "Read working/STATE_INDEX.json",
+    "Verified NoSteam unpacked source root Carnal_Instinct_UE5_Nosteam on Google Drive",
+    "Verified NoSteam source root Drive ID 1utEQ4N93dZ3PUJRO5M0jX5gg1BydoAQ1"
+  ],
+  "pending_units": [
+    "Enumerate all NoSteam folders/files recursively",
+    "Generate CI_NOSTEAM_SOURCE_INDEX.json",
+    "Generate CI_NOSTEAM_SOURCE_TREE.txt",
+    "Write NoSteam source state metadata",
+    "Update project rules/workflow/instruction",
+    "Verify written manifests and GitHub state"
+  ],
+  "source_files_used": [
+    "Google Drive folder Carnal_Instinct_UE5_Nosteam",
+    "CI_SOURCE_INDEX.json (Steam reference)",
+    "working/STATE_INDEX.json"
+  ],
+  "working_files": [
+    "working/nosteam/0.7.9.16232/source_index/AUDIT_STATE.json"
+  ],
+  "validation_completed": [
+    "NoSteam source root metadata read successfully"
+  ],
+  "validation_pending": [
+    "full recursive enumeration completeness",
+    "manifest readback",
+    "GitHub checkpoint readback"
+  ],
+  "notes": [
+    "NoSteam unpacked source is indexed separately from Steam. Do not overwrite the Steam CI_SOURCE_INDEX.",
+    "Use current repository with separate NoSteam namespace; no second repository is required."
+  ]
+}
