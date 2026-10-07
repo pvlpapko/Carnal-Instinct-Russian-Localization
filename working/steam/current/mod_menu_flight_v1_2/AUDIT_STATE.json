@@ -2,13 +2,13 @@
   "schema_version": "1.0",
   "edition": "Both",
   "task": "mod_menu_flight_v1_2",
-  "status": "in_progress_static_build_passed_container_pending",
+  "status": "awaiting_in_game_validation_v1.2.0",
   "source_state_id": "steam_current_0.7.9.16321 + CI_Mod_Menu_v1.1.1_runtime_validated",
   "verified_game_version": "0.7.9.16321",
   "verified_build": null,
-  "current_phase": "pre_container_checkpoint",
-  "last_completed_unit": "v1.2.0_flight_graphs_built_and_static_tests_passed",
-  "next_unit": "iostore_rebuild_v1.2.0",
+  "current_phase": "test_release_ready",
+  "last_completed_unit": "v1.2.0_release_and_development_drive_readback_verified",
+  "next_unit": "in_game_validate_v1.2.0_flight",
   "completed_units": [
     "source_index_read",
     "github_state_index_read",
@@ -25,13 +25,18 @@
     "minimal_current_BP_CombatCharacter_ReceiveTick_trampoline_implemented",
     "stock_combat_ubergraph_and_input_functions_preserved",
     "v1.2.0_unit_tests_9_of_9",
-    "v1.2.0_static_type_reference_validation_passed"
+    "v1.2.0_static_type_reference_validation_passed",
+    "safe_flight_branch_appended_to_current_combat_ubergraph",
+    "receive_tick_old_flight_entry_retargeted_to_safe_entry",
+    "stock_tick_entry_66192_preserved",
+    "F8_hotkey_info_row_implemented",
+    "iostore_v1.2.0_rebuilt",
+    "iostore_v1.2.0_meta_and_directory_validation_passed",
+    "release_zip_crc_passed",
+    "release_drive_readback_verified",
+    "development_archive_drive_readback_verified"
   ],
   "pending_units": [
-    "iostore_rebuild",
-    "iostore_roundtrip",
-    "release_package_upload_readback",
-    "development_archive_upload_readback",
     "runtime_validation"
   ],
   "source_files_used": [
@@ -42,26 +47,29 @@
   ],
   "working_files": [
     "working/steam/current/mod_menu_flight_v1_2/AUDIT_STATE.json",
-    "Drive-development-pending: build_controller_v120.py",
-    "Drive-development-pending: build_ui_v120.py",
-    "Drive-development-pending: build_combat_flight_v120.py",
-    "Drive-development-pending: build_menu_v120.py",
-    "Drive-development-pending: test_v120.py",
-    "Drive-development-pending: validate_v120.py"
+    "working/steam/current/mod_menu_flight_v1_2/V120_FLIGHT_SPEC.json",
+    "CI GPT/Releases/CI_Mod_Menu_v1.2.0_TEST_0.7.9.16321.zip (Drive id 1odkwoRvAaTKQdv4fte-f6sd7XbnzlH98)",
+    "CI GPT/Working/CI_Mod_Menu_v1.2.0_DEVELOPMENT.zip (Drive id 1q2uJ7AfuqfmdlZBKBK__wKUv_TiP-Kuo)"
   ],
   "validation_completed": [
-    "v1.2.0_tests_9_of_9",
-    "v1.2.0_static_94_native_calls_2_script_calls_35_assignments_16_reference_args",
-    "current_BP_CombatCharacter_only_ReceiveTick_changed",
+    "combat_zen_rebuild_changed_exports_140_357_only",
+    "safe_entry_98268",
+    "stock_tick_entry_66192_preserved",
+    "branch_jump_targets_valid_28",
+    "branch_native_calls_checked_60",
     "AddMovementInput_Force_true_4_of_4",
-    "SetMovementMode_Flying_5_and_Falling_3_present",
-    "SetIgnoreMoveInput_true_false_balanced_in_active_paths",
+    "SetIgnoreMoveInput_balanced_2_calls",
+    "SetMovementMode_calls_2",
     "WorldStatic_Block_and_query_collision_checks_present",
-    "no_SetActorLocation_no_Teleport_no_collision_disable_calls_in_flight_path"
+    "no_SetActorLocation_no_Teleport_no_collision_disable_calls_in_safe_branch",
+    "ui_F8_row_exact_length_replacement_controller_1_ui_2",
+    "iostore_6_packages_meta_BLAKE3_PASS",
+    "release_zip_crc_PASS",
+    "release_drive_readback_sha256_1ae6be77769217b8d0dbf54c556eeff5fd265efb97eff169db5665d940aeaf9c",
+    "development_drive_readback_sha256_02fe3e80a98418b196144af485786460cfde046f4340f5fda87d881fb65403e2"
   ],
   "validation_pending": [
-    "iostore_roundtrip",
-    "runtime_in_game"
+    "runtime_in_game_flight"
   ],
   "notes": [
     "User requests flight using standard keyboard/mouse controls: WASD, camera pitch drives climb/descent, no noclip, sprint key gives x3 speed.",
@@ -69,7 +77,9 @@
     "Free camera remains removed.",
     "Historical v1.0.5 flight implementation is reference only because user previously reported flight crashes; current Steam 0.7.9.16321 BP_CombatCharacter must be the patch base.",
     "Preferred design is controller-centric flight state with only a minimal BP_CombatCharacter ReceiveTick trampoline, avoiding broad character input graph rewrites.",
-    "Pre-container checkpoint: v1.2.0 flight code builds 6 override packages. Steam 0.7.9.16321 BP_CombatCharacter is the binary base and only its ReceiveTick export is modified; ExecuteUbergraph and stock input functions remain byte-identical.",
-    "Static validation passed for new flight paths: 94 native calls, 2 script calls, 35 assignments, 16 reference/out args; unit tests 9/9. Runtime remains unverified."
+    "v1.2.0 final TEST candidate modifies only BP_CombatCharacter exports 140 (ExecuteUbergraph append) and 357 (ReceiveTick old-flight entry retarget). The existing graph prefix and stock Tick entry 66192 are preserved.",
+    "F8 is exposed as a menu information row/hotkey in this TEST build; it is not a clickable menu button. Flight is toggled by F8 after the game world is fully loaded.",
+    "Static validation of the appended safe branch: 60 native calls parsed; four AddMovementInput calls all use bForce=true; SetIgnoreMoveInput is balanced true/false; no SetActorLocation, TeleportTo, SetActorEnableCollision or collision-disable call occurs in the safe branch.",
+    "Release uploaded/read back from CI GPT/Releases: CI_Mod_Menu_v1.2.0_TEST_0.7.9.16321.zip, 252526 bytes, SHA-256 1ae6be77769217b8d0dbf54c556eeff5fd265efb97eff169db5665d940aeaf9c. Runtime flight validation remains pending."
   ]
 }
