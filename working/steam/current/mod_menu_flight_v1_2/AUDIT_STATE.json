@@ -2,13 +2,13 @@
   "schema_version": "1.0",
   "edition": "Both",
   "task": "mod_menu_flight_v1_2",
-  "status": "awaiting_in_game_validation_v1.2.0",
+  "status": "in_progress_v1.2.1_crash_fix",
   "source_state_id": "steam_current_0.7.9.16321 + CI_Mod_Menu_v1.1.1_runtime_validated",
   "verified_game_version": "0.7.9.16321",
   "verified_build": null,
-  "current_phase": "test_release_ready",
-  "last_completed_unit": "v1.2.0_release_and_development_drive_readback_verified",
-  "next_unit": "in_game_validate_v1.2.0_flight",
+  "current_phase": "runtime_crash_rearchitecture",
+  "last_completed_unit": "v1.2.0_runtime_crash_confirmed",
+  "next_unit": "remove_input_interception_and_rebuild_standard_wasd_mouse_flight",
   "completed_units": [
     "source_index_read",
     "github_state_index_read",
@@ -34,10 +34,21 @@
     "iostore_v1.2.0_meta_and_directory_validation_passed",
     "release_zip_crc_passed",
     "release_drive_readback_verified",
-    "development_archive_drive_readback_verified"
+    "development_archive_drive_readback_verified",
+    "v1.2.0_runtime_crash_confirmed",
+    "v1.2.0_rejected_due_to_access_violation",
+    "standard_wasd_mouse_requirement_reconfirmed"
   ],
   "pending_units": [
-    "runtime_validation"
+    "remove_SetIgnoreMoveInput_path",
+    "remove_manual_full_WASD_reimplementation",
+    "use_stock_WASD_mouse_input",
+    "add_camera_pitch_vertical_component_only",
+    "retain_shift_x3",
+    "static_validation_v1.2.1",
+    "iostore_rebuild_v1.2.1",
+    "release_upload_readback",
+    "runtime_validation_v1.2.1"
   ],
   "source_files_used": [
     "CI_Mod_Menu_v1.1.1_DEVELOPMENT.zip",
@@ -69,7 +80,9 @@
     "development_drive_readback_sha256_02fe3e80a98418b196144af485786460cfde046f4340f5fda87d881fb65403e2"
   ],
   "validation_pending": [
-    "runtime_in_game_flight"
+    "v1.2.1_static",
+    "v1.2.1_iostore",
+    "v1.2.1_runtime"
   ],
   "notes": [
     "User requests flight using standard keyboard/mouse controls: WASD, camera pitch drives climb/descent, no noclip, sprint key gives x3 speed.",
@@ -80,6 +93,9 @@
     "v1.2.0 final TEST candidate modifies only BP_CombatCharacter exports 140 (ExecuteUbergraph append) and 357 (ReceiveTick old-flight entry retarget). The existing graph prefix and stock Tick entry 66192 are preserved.",
     "F8 is exposed as a menu information row/hotkey in this TEST build; it is not a clickable menu button. Flight is toggled by F8 after the game world is fully loaded.",
     "Static validation of the appended safe branch: 60 native calls parsed; four AddMovementInput calls all use bForce=true; SetIgnoreMoveInput is balanced true/false; no SetActorLocation, TeleportTo, SetActorEnableCollision or collision-disable call occurs in the safe branch.",
-    "Release uploaded/read back from CI GPT/Releases: CI_Mod_Menu_v1.2.0_TEST_0.7.9.16321.zip, 252526 bytes, SHA-256 1ae6be77769217b8d0dbf54c556eeff5fd265efb97eff169db5665d940aeaf9c. Runtime flight validation remains pending."
+    "Release uploaded/read back from CI GPT/Releases: CI_Mod_Menu_v1.2.0_TEST_0.7.9.16321.zip, 252526 bytes, SHA-256 1ae6be77769217b8d0dbf54c556eeff5fd265efb97eff169db5665d940aeaf9c. Runtime flight validation remains pending.",
+    "User runtime test of v1.2.0: pressing F8 immediately causes EXCEPTION_ACCESS_VIOLATION writing address 0x0000000000000000. v1.2.0 flight is rejected.",
+    "v1.2.0 architecture used Controller.SetIgnoreMoveInput plus manual IsInputKeyDown/AddMovementInput reimplementation of WASD. User explicitly requires standard WASD + mouse controls. v1.2.1 removes that interception architecture completely.",
+    "v1.2.1 target architecture: stock game WASD/mouse remains active; mod only toggles MOVE_Flying, supplements vertical motion from camera pitch for W/S as needed, and applies Shift x3 MaxFlySpeed. No input-ignore native calls and no noclip."
   ]
 }
