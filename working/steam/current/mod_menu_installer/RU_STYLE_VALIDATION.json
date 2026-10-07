@@ -1,0 +1,24 @@
+{
+  "schema_version": "1.0",
+  "template_release": "Carnal_Instinct_RU_DontLook_2026-10-06_v18.13_RELEASE.zip",
+  "template_source": "Developer/Installer_Source",
+  "ui_layout_changed": false,
+  "ui_colors_changed": false,
+  "wizard_flow_changed": false,
+  "product": "CI Mod Menu",
+  "mod_version": "1.1.1",
+  "installer_sha256": "15c226f80c10d4221d3a5a2f5dc0f195a4d78b4b466fa89a90a9c9f675f7a0ec",
+  "installer_bytes": 3058176,
+  "package_sha256": "335b86ac008d1cbe78aeb04d2341c0f9b12fd06524dd3068e570812475320fe3",
+  "source_archive_sha256": "f1fb8100526d2207095270511f4a51ed889514c3899b30492656b2138c24088c",
+  "edition_mapping": {
+    "Steam": "Steam_current",
+    "NoSteam_0.7.9.16232": "NoSteam_0.7.9.16232",
+    "NoSteam_0.7.9.16313plus": "Steam_current"
+  },
+  "steam_verified_game_version": "0.7.9.16321",
+  "no_backup": true,
+  "localization_payload_absent": true,
+  "go_tests": "PASS",
+  "windows_runtime_tested": false
+}
