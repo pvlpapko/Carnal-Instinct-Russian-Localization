@@ -1,0 +1,18 @@
+{
+  "release": "18.24 TEST",
+  "runtime_tested": false,
+  "prior_failure": "v18.23 crashed on form-menu open with EXCEPTION_ACCESS_VIOLATION writing 0x0; the injected 55-case display switches are rejected.",
+  "safe_design": {
+    "Steam_WB_FormScreen": "Patch only two existing action probes from localized visible Text -> source Text. No display switches or new selection logic.",
+    "NoSteam_0_7_9_16232": "WB_FormScreen unchanged; matching source already uses source text.",
+    "descriptions": "Translate only SidePanelDescription data strings in DT_FormUnlocks. Preserve short FormName strings and IDs."
+  },
+  "static_validation": "PASS",
+  "archive": {
+    "name": "Carnal_Instinct_RU_DontLook_FormsSafe_2026-10-07_v18.24_TEST.zip",
+    "sha256": "0fc0531e506bdc2fa6bebdaca171bb0c06668baf75ae1f65be0935c54e51da41",
+    "bytes": 23817799,
+    "entries": 143,
+    "installer_sha256": "a6daa7050fcbc9662f5747715a7df3ad990acea1e900258f59ba6328c5ac47d3"
+  }
+}
