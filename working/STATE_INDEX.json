@@ -235,6 +235,12 @@
       "task": "source_index",
       "state_path": "working/nosteam/0.7.9.16232/source_index/AUDIT_STATE.json",
       "status": "in_progress"
+    },
+    {
+      "edition": "Both",
+      "task": "mod_menu_flight_v1_2",
+      "state_path": "working/steam/current/mod_menu_flight_v1_2/AUDIT_STATE.json",
+      "status": "in_progress_architecture_and_current_source_validation"
     }
   ],
   "latest_release": {
