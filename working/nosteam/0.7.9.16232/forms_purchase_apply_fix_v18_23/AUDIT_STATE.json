@@ -2,13 +2,13 @@
   "schema_version": "1.0",
   "edition": "NoSteam",
   "task": "forms_purchase_apply_fix_v18_23",
-  "status": "test_archive_built_static_verified_runtime_pending",
+  "status": "runtime_failed_crash_on_form_menu_open",
   "source_state_id": "nosteam_0.7.9.16232_fixed",
   "verified_game_version": "0.7.9",
   "verified_build": "0.7.9.16232",
-  "current_phase": "runtime_validation",
-  "last_completed_unit": "v18_23_test_archive_static_validation",
-  "next_unit": "runtime_test_forms_nosteam_0_7_9_16232",
+  "current_phase": "runtime_failure_analysis",
+  "last_completed_unit": "user_runtime_test_crash_on_shrine_form_menu_open",
+  "next_unit": "superseded_by_forms_safe_fix_v18_24",
   "completed_units": [
     "task_initialized",
     "resolve_form_assets_from_matching_source",
@@ -19,7 +19,7 @@
     "verify_installer_newer_NoSteam_uses_Steam_current_payload"
   ],
   "pending_units": [
-    "runtime_test_forms_nosteam_0_7_9_16232"
+    "superseded_by_forms_safe_fix_v18_24"
   ],
   "source_files_used": [
     "CI_NOSTEAM_SOURCE_INDEX.json",
@@ -44,19 +44,15 @@
     "Installer payload embedding/trust 6/6 PASS",
     "ZIP CRC and exact entry readback PASS"
   ],
-  "validation_pending": [
-    "unlock/purchase form",
-    "essence deduction",
-    "transform/apply unlocked form",
-    "Russian form name and description",
-    "radial/settings regression smoke"
-  ],
+  "validation_pending": [],
   "notes": [
     "User reports form purchase/apply buttons do nothing and form descriptions are untranslated/missing. Treat visible labels vs technical identifiers separately. Preserve v18.21 radial/settings fixes.",
     "Steam_current is also the installer payload for NoSteam 0.7.9.16313/16315+, so the Steam action-gate bug explains the same symptom in those builds.",
     "NoSteam 0.7.9.16232 already has the source-string-safe action gate; do not replace it with Steam cooked files.",
     "Test archive: Carnal_Instinct_RU_DontLook_FormsFix_2026-10-07_v18.23_TEST.zip; SHA-256 5e1b98eeb177b440bb49c978e221dcfeb771d07ce9732e6484c2e23ee9f3fc85; 23785022 bytes; 140 entries.",
     "Installer SHA-256 a5baa19439d3b5dcc3e2992dc68498073e92eaeba4150437319c463fa5202c33.",
-    "Fixed baseline NoSteam 0.7.9.16232 already contained the source-string-safe form implementation; it is intentionally unchanged."
+    "Fixed baseline NoSteam 0.7.9.16232 already contained the source-string-safe form implementation; it is intentionally unchanged.",
+    "2026-10-07 user runtime: approaching Ascension Sanctuary, pressing Touch and opening the forms menu crashes with EXCEPTION_ACCESS_VIOLATION writing 0x0.",
+    "Reject v18.23 Steam WB_FormScreen display-switch injection; do not reuse."
   ]
 }
