@@ -1,0 +1,48 @@
+{
+  "schema_version": "1.0",
+  "edition": "Steam",
+  "task": "forms_safe_fix_v18_24",
+  "status": "analysis_complete_patch_in_progress",
+  "source_state_id": "steam_current_2026-10-03_16321_asset_verified_index_stale",
+  "verified_game_version": "0.7.9.16321",
+  "verified_build": null,
+  "current_phase": "binary_patch",
+  "last_completed_unit": "reject_v18_23_display_switch_and_select_data_boundary_fix",
+  "next_unit": "build_minimal_action_fix_and_datatable_descriptions",
+  "completed_units": [
+    "record_v18_23_runtime_crash",
+    "confirm_crash_occurs_on_form_menu_open_before_action",
+    "audit_s_formUnlocks_schema",
+    "prove_FormName_and_SidePanelDescription_are_StrProperty",
+    "select_description_data_boundary_translation"
+  ],
+  "pending_units": [
+    "build_minimal_action_fix_and_datatable_descriptions",
+    "rebuild_iostore",
+    "static_validate",
+    "rebuild_installer",
+    "package_test",
+    "runtime_test"
+  ],
+  "source_files_used": [
+    "v18.21 canonical release",
+    "current Steam WB_FormScreen",
+    "matching DT_FormUnlocks",
+    "s_formUnlocks",
+    "CI_RU_Display_Forms translations"
+  ],
+  "working_files": [
+    "working/steam/current/forms_safe_fix_v18_24/AUDIT_STATE.json"
+  ],
+  "validation_completed": [
+    "v18.23 display switch rejected",
+    "DT_FormUnlocks is byte-identical between matching editions",
+    "SidePanelDescription is a string field and can be translated at data boundary without changing form IDs",
+    "Steam action gate requires source string; NoSteam baseline already uses source string"
+  ],
+  "validation_pending": [
+    "patched package readback",
+    "IoStore meta/readback",
+    "runtime menu open/buy/apply"
+  ]
+}
