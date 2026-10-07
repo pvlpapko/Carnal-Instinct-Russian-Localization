@@ -2,13 +2,13 @@
   "schema_version": "1.0",
   "edition": "NoSteam",
   "task": "forms_safe_fix_v18_24",
-  "status": "test_archive_built_static_verified_runtime_pending",
+  "status": "release_uploaded_drive_verified_user_approved",
   "source_state_id": "nosteam_0.7.9.16232_fixed",
   "verified_game_version": "0.7.9",
   "verified_build": "0.7.9.16232",
-  "current_phase": "runtime_validation",
-  "last_completed_unit": "v18_24_test_archive_static_validation",
-  "next_unit": "runtime_test_forms_nosteam_0_7_9_16232",
+  "current_phase": "completed",
+  "last_completed_unit": "v18_24_release_drive_readback_verified",
+  "next_unit": null,
   "completed_units": [
     "record_v18_23_runtime_crash",
     "confirm_crash_occurs_on_form_menu_open_before_action",
@@ -16,9 +16,7 @@
     "prove_FormName_and_SidePanelDescription_are_StrProperty",
     "select_description_data_boundary_translation"
   ],
-  "pending_units": [
-    "runtime_test_forms_nosteam_0_7_9_16232"
-  ],
+  "pending_units": [],
   "source_files_used": [
     "v18.21 canonical release",
     "current Steam WB_FormScreen",
@@ -39,20 +37,19 @@
     "PAK and Game.locres byte-identical to v18.21",
     "IoStore metadata/exact readback PASS",
     "go test -race PASS",
-    "installer payload embedding/trust 6/6 PASS",
-    "ZIP CRC/exact readback PASS"
+    "release installer 6/6 payload embedding/trust PASS",
+    "RELEASE ZIP CRC/exact readback PASS",
+    "Google Drive upload/readback SHA-256 PASS",
+    "User explicitly requested promotion to RELEASE"
   ],
-  "validation_pending": [
-    "form menu opens at Ascension Sanctuary without crash",
-    "purchase/unlock locked form",
-    "essence deduction",
-    "apply/transform unlocked form",
-    "Russian long description",
-    "radial/settings regression smoke"
-  ],
+  "validation_pending": [],
   "notes": [
     "Test archive: Carnal_Instinct_RU_DontLook_FormsSafe_2026-10-07_v18.24_TEST.zip; SHA-256 0fc0531e506bdc2fa6bebdaca171bb0c06668baf75ae1f65be0935c54e51da41; 23817799 bytes; 143 entries.",
     "Installer SHA-256 a6daa7050fcbc9662f5747715a7df3ad990acea1e900258f59ba6328c5ac47d3.",
-    "Canonical release remains v18.21 until v18.24 runtime validation passes."
+    "Canonical release remains v18.21 until v18.24 runtime validation passes.",
+    "Canonical release: Carnal_Instinct_RU_DontLook_2026-10-07_v18.24_RELEASE.zip; SHA-256 a85ad59a62604c7d044b7239c20eb726f0023e35f73de5cac3143ad829254abe; 23819185 bytes; 144 entries.",
+    "Installer SHA-256 0aa91ba2a22634e14f25ac910f4001e48992ec4ed6ea7c1b53ac57931e095dc9; 21231616 bytes.",
+    "Drive release file ID 1ivWDLzehquNTGeCDZSUVKDrxu7ckzzsV; readback SHA-256/size/entry-count/ZIP CRC verified.",
+    "Specific per-check runtime outcomes after v18.24 TEST were not separately restated; do not claim them beyond user release approval."
   ]
 }
