@@ -1,0 +1,49 @@
+{
+  "schema_version": "1.0",
+  "version": "1.2.1 TEST",
+  "author": "Don't Look",
+  "replaces": "1.2.0 TEST (rejected: runtime EXCEPTION_ACCESS_VIOLATION on F8)",
+  "source_state_id": "steam_current_0.7.9.16321 + CI_Mod_Menu_v1.1.1_runtime_validated",
+  "controls": {
+    "toggle": "F8",
+    "movement": "stock WASD + mouse",
+    "camera_pitch": "W/S final direction follows camera",
+    "sprint": "Shift x3"
+  },
+  "architecture": {
+    "input_interception": false,
+    "set_ignore_move_input_calls": 0,
+    "standard_game_move_input_preserved": true,
+    "manual_a_d_calls": 0,
+    "w_s_correction": "camera forward - yaw forward, added with bForce=false",
+    "movement_mode": "MOVE_Flying / MOVE_Falling",
+    "custom_object_storage_references": 0,
+    "f8_debounce_state": "CI_SprintGait byte only",
+    "collision_disabled": false,
+    "noclip": false,
+    "free_camera": false
+  },
+  "validation": {
+    "branch_disk": 2874,
+    "branch_memory": 2438,
+    "add_movement_input_calls": 2,
+    "add_movement_force_false": "2/2",
+    "set_movement_mode_calls": 2,
+    "stop_movement_immediately_calls": 0,
+    "iostore_meta": "PASS",
+    "ui_text_instances": 3,
+    "runtime_tested": false
+  },
+  "release": {
+    "filename": "CI_Mod_Menu_v1.2.1_TEST_0.7.9.16321.zip",
+    "bytes": 251203,
+    "sha256": "995d39471f48fc26c72ab3e3e210171d08150072bed1e4a0ffd6b5ad09493ff9",
+    "drive_id": null
+  },
+  "development": {
+    "filename": "CI_Mod_Menu_v1.2.1_DEVELOPMENT.zip",
+    "bytes": 11770,
+    "sha256": "2072dd6800909b8a2f78b43de329da9c623ddf20cc9470de6f0abbb12df8e014",
+    "drive_id": null
+  }
+}
