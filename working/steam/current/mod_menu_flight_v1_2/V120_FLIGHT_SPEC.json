@@ -1,0 +1,48 @@
+{
+  "schema_version": "1.0",
+  "version": "1.2.0 TEST",
+  "author": "Don't Look",
+  "source_state_id": "steam_current_0.7.9.16321 + CI_Mod_Menu_v1.1.1_runtime_validated",
+  "behavior": {
+    "toggle": "F8 rising-edge",
+    "movement": "WASD via Pawn.AddMovementInput",
+    "vertical": "W/S use full Controller.GetControlRotation -> GetForwardVector, including pitch",
+    "sprint": "LeftShift or RightShift => MaxFlySpeed x3",
+    "movement_mode": "MOVE_Flying",
+    "collision": "actor collision enabled + capsule query collision enabled + WorldStatic response Block required continuously",
+    "noclip": false,
+    "teleport": false,
+    "free_camera": false,
+    "saves_modified": false
+  },
+  "implementation": {
+    "packages": 6,
+    "combat_asset": "DynamicCombatSystem/Blueprints/BP_CombatCharacter.uasset",
+    "safe_ubergraph_entry": 98268,
+    "stock_tick_entry_preserved": 66192,
+    "changed_combat_exports": [
+      140,
+      357
+    ],
+    "added_name": "F8",
+    "added_script_import": "/Script/Engine.Controller:SetIgnoreMoveInput",
+    "added_script_import_ref": -1335,
+    "add_movement_input_force_true": "4/4",
+    "set_ignore_move_input_calls": 2,
+    "set_movement_mode_calls": 2,
+    "dangerous_motion_or_collision_calls": 0
+  },
+  "release": {
+    "filename": "CI_Mod_Menu_v1.2.0_TEST_0.7.9.16321.zip",
+    "bytes": 252526,
+    "sha256": "1ae6be77769217b8d0dbf54c556eeff5fd265efb97eff169db5665d940aeaf9c",
+    "drive_id": "1odkwoRvAaTKQdv4fte-f6sd7XbnzlH98"
+  },
+  "development": {
+    "filename": "CI_Mod_Menu_v1.2.0_DEVELOPMENT.zip",
+    "bytes": 17446,
+    "sha256": "02fe3e80a98418b196144af485786460cfde046f4340f5fda87d881fb65403e2",
+    "drive_id": "1q2uJ7AfuqfmdlZBKBK__wKUv_TiP-Kuo"
+  },
+  "runtime_tested": false
+}
