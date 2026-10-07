@@ -1,0 +1,38 @@
+{
+  "release": "18.24 TEST",
+  "runtime_tested": false,
+  "tests": {
+    "steam_action_gate_minimal_source_patch": "PASS",
+    "steam_no_55_case_display_switches": "PASS",
+    "descriptions_11_unique_48_occurrences": "PASS",
+    "short_form_names_preserved": "PASS",
+    "nosteam_16232_screen_unchanged": "PASS",
+    "pak_locres_exact_v18_21": "PASS",
+    "iostore_meta_exact_readback": "PASS",
+    "installer_go_race": "PASS",
+    "installer_payloads": "6/6 PASS",
+    "zip_crc_exact_readback": "PASS"
+  },
+  "payloads": {
+    "Steam_current": {
+      "packages": 49,
+      "utoc_sha256": "a6cb553644cf79f350192989add1048e792ee8afce3aa933d47a8505630c2b9e",
+      "ucas_sha256": "38262696bf103e44d101d248f61032e7555be01023f9970cf82f9facafbf6c7c",
+      "pak_sha256": "2faea84a4cc4cfac31bc18e4c8588a90af6cf6a8ca0c2de55e04237def120ec8"
+    },
+    "NoSteam_0.7.9.16232": {
+      "packages": 75,
+      "utoc_sha256": "afe723208581d6e5b657ac992c1969d3e4f55783642092b8bca5a80b9ccef39a",
+      "ucas_sha256": "0841dbf8def38198967351c39f0f9799a51a4a01c16d38cd591f55d0ad500a5e",
+      "pak_sha256": "507d1f951a38aa03a5789867fe0c68cb69e47cc2d5fc64c8c8ffb7b4cfd416ae"
+    }
+  },
+  "installer_sha256": "a6daa7050fcbc9662f5747715a7df3ad990acea1e900258f59ba6328c5ac47d3",
+  "archive": {
+    "name": "Carnal_Instinct_RU_DontLook_FormsSafe_2026-10-07_v18.24_TEST.zip",
+    "sha256": "0fc0531e506bdc2fa6bebdaca171bb0c06668baf75ae1f65be0935c54e51da41",
+    "bytes": 23817799,
+    "entries": 143,
+    "installer_sha256": "a6daa7050fcbc9662f5747715a7df3ad990acea1e900258f59ba6328c5ac47d3"
+  }
+}
