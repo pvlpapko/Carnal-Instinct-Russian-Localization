@@ -258,13 +258,13 @@
       "edition": "Steam",
       "task": "forms_safe_fix_v18_24",
       "state_path": "working/steam/current/forms_safe_fix_v18_24/AUDIT_STATE.json",
-      "status": "analysis_complete_patch_in_progress"
+      "status": "test_archive_built_static_verified_runtime_pending"
     },
     {
       "edition": "NoSteam",
       "task": "forms_safe_fix_v18_24",
       "state_path": "working/nosteam/0.7.9.16232/forms_safe_fix_v18_24/AUDIT_STATE.json",
-      "status": "analysis_complete_patch_in_progress"
+      "status": "test_archive_built_static_verified_runtime_pending"
     }
   ],
   "latest_release": {
@@ -298,12 +298,12 @@
     "minimal_hell_kitchen_refs": 12
   },
   "latest_local_candidate": {
-    "name": "Carnal_Instinct_RU_DontLook_FormsFix_2026-10-07_v18.23_TEST.zip",
-    "task": "forms_purchase_apply_fix_v18_23",
-    "sha256": "5e1b98eeb177b440bb49c978e221dcfeb771d07ce9732e6484c2e23ee9f3fc85",
-    "archive_bytes": 23785022,
-    "archive_entries": 140,
-    "installer_sha256": "a5baa19439d3b5dcc3e2992dc68498073e92eaeba4150437319c463fa5202c33",
+    "name": "Carnal_Instinct_RU_DontLook_FormsSafe_2026-10-07_v18.24_TEST.zip",
+    "task": "forms_safe_fix_v18_24",
+    "sha256": "0fc0531e506bdc2fa6bebdaca171bb0c06668baf75ae1f65be0935c54e51da41",
+    "archive_bytes": 23817799,
+    "archive_entries": 143,
+    "installer_sha256": "a6daa7050fcbc9662f5747715a7df3ad990acea1e900258f59ba6328c5ac47d3",
     "zip_crc_and_exact_entry_readback": true,
     "runtime_validation": "pending",
     "canonical_release_remains": "18.21 RELEASE"
