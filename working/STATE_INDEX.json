@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "updated_at": "2026-10-06",
+  "updated_at": "2026-10-07",
   "active_tasks": [
     {
       "edition": "Steam",
@@ -229,6 +229,12 @@
       "task": "character_ui_match_nosteam_v18_22",
       "state_path": "working/steam/current/character_ui_match_nosteam_v18_22/AUDIT_STATE.json",
       "status": "rejected_by_user_keep_v18_21"
+    },
+    {
+      "edition": "NoSteam",
+      "task": "source_index",
+      "state_path": "working/nosteam/0.7.9.16232/source_index/AUDIT_STATE.json",
+      "status": "in_progress"
     }
   ],
   "latest_release": {
