@@ -1,0 +1,49 @@
+{
+  "release": "18.24 RELEASE",
+  "author": "Don't Look",
+  "status": "canonical_release",
+  "user_release_approval": true,
+  "runtime_tested": false,
+  "runtime_note": "User explicitly requested promotion of v18.24 TEST to RELEASE; detailed per-check runtime outcomes were not separately restated.",
+  "fixes": {
+    "Steam_current": [
+      "WB_FormScreen action checks use source text instead of localized visible button text",
+      "DT_FormUnlocks long descriptions translated at data boundary"
+    ],
+    "NoSteam_0.7.9.16232": [
+      "WB_FormScreen unchanged because matching source is already source-string-safe",
+      "DT_FormUnlocks long descriptions translated at data boundary"
+    ],
+    "preserved": [
+      "short FormName values and gameplay IDs remain English",
+      "v18.21 PAK and Game.locres unchanged",
+      "v18.21 radial/settings fixes preserved"
+    ]
+  },
+  "rejected": [
+    "v18.23 55-case display-switch injection"
+  ],
+  "installer": {
+    "sha256": "0aa91ba2a22634e14f25ac910f4001e48992ec4ed6ea7c1b53ac57931e095dc9",
+    "bytes": 21231616,
+    "version": "18.24 RELEASE",
+    "go_test_race": "PASS",
+    "payloads_embedded_and_trusted": "6/6 PASS"
+  },
+  "archive": {
+    "name": "Carnal_Instinct_RU_DontLook_2026-10-07_v18.24_RELEASE.zip",
+    "sha256": "a85ad59a62604c7d044b7239c20eb726f0023e35f73de5cac3143ad829254abe",
+    "bytes": 23819185,
+    "entries": 144,
+    "zip_crc_and_exact_readback": true
+  },
+  "drive": {
+    "folder_id": "1VwdnxngtZLDsPl1kP5H5HCJBePoRCF_a",
+    "file_id": "1ivWDLzehquNTGeCDZSUVKDrxu7ckzzsV",
+    "verified_metadata_file_id": "1DtM4vyGm_PGDUbJzlB-pICyJiP2pP2KE",
+    "readback_sha256_verified": true,
+    "readback_zip_crc_verified": true,
+    "readback_size_verified": true,
+    "readback_entries_verified": true
+  }
+}
