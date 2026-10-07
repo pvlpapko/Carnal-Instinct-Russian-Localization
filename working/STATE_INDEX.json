@@ -234,7 +234,7 @@
       "edition": "NoSteam",
       "task": "source_index",
       "state_path": "working/nosteam/0.7.9.16232/source_index/AUDIT_STATE.json",
-      "status": "in_progress"
+      "status": "completed_navigation_index_physical_full_inventory_not_claimed"
     },
     {
       "edition": "Both",
