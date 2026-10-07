@@ -1,1 +1,20 @@
-{"schema_version":"1.0","offset":0,"batch_size":85,"total_folders":3045,"files_found":0,"known_bytes":0,"unknown_size_files":0,"file_shard_no":1,"complete":false,"errors":[],"updated_at":"2026-10-07T06:16:30.116Z"}
+{
+  "schema_version": "1.1",
+  "status": "superseded_by_hybrid_assetregistry_index",
+  "source_state_id": "nosteam_0.7.9.16232_unpacked_drive_2026-10-07",
+  "direct_folder_file_scan_completed_ranges": [
+    [
+      0,
+      34
+    ]
+  ],
+  "direct_folder_file_scan_shards": [
+    "working/nosteam/0.7.9.16232/source_index/file_shards/files-0001.json",
+    "working/nosteam/0.7.9.16232/source_index/file_shards/files-0002.json"
+  ],
+  "reason": "The Drive metadata search surface did not provide a scalable paginated all-binary-file traversal for the computer-backed source folder. The canonical NoSteam navigation index uses the complete exact folder catalog plus the matching AssetRegistry logical package/asset catalog, with exact physical duplicate names and sidecars resolved by parent-folder listing on demand.",
+  "canonical_index_drive_id": "1AW90tbEjxz7RfB1kZiQHcZNqj2hHRr5N",
+  "canonical_tree_drive_id": "1yRLeb6AB3Z7fE10GUOl8mp-N_5lzf8CF",
+  "full_physical_file_metadata_complete": false,
+  "updated_at": "2026-10-07"
+}
