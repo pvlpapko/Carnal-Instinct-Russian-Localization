@@ -1,0 +1,23 @@
+{
+  "release": "18.23 TEST",
+  "runtime_tested": false,
+  "tests": {
+    "steam_action_source_calls": "2/2 PASS",
+    "steam_display_switches": "2 x 55 PASS",
+    "steam_locres_aliases": "55/55 PASS",
+    "steam_script_parse_roundtrip": "PASS",
+    "nosteam_16232_payload_unchanged": "PASS",
+    "steam_iostore_meta_readback": "PASS",
+    "pak_locres_unchanged": "PASS",
+    "installer_go_test_race": "PASS",
+    "installer_payloads": "6/6 PASS",
+    "zip_crc_exact_readback": "PASS"
+  },
+  "archive": {
+    "name": "Carnal_Instinct_RU_DontLook_FormsFix_2026-10-07_v18.23_TEST.zip",
+    "sha256": "5e1b98eeb177b440bb49c978e221dcfeb771d07ce9732e6484c2e23ee9f3fc85",
+    "bytes": 23785022,
+    "entries": 140,
+    "installer_sha256": "a5baa19439d3b5dcc3e2992dc68498073e92eaeba4150437319c463fa5202c33"
+  }
+}
