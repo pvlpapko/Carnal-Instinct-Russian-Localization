@@ -2,29 +2,36 @@
   "schema_version": "1.0",
   "edition": "Both",
   "task": "mod_menu_flight_v1_2",
-  "status": "in_progress_architecture_and_current_source_validation",
+  "status": "in_progress_static_build_passed_container_pending",
   "source_state_id": "steam_current_0.7.9.16321 + CI_Mod_Menu_v1.1.1_runtime_validated",
   "verified_game_version": "0.7.9.16321",
   "verified_build": null,
-  "current_phase": "architecture_audit",
-  "last_completed_unit": "requirements_fixed",
-  "next_unit": "rebuild_current_16321_flight_patch_from_stock",
+  "current_phase": "pre_container_checkpoint",
+  "last_completed_unit": "v1.2.0_flight_graphs_built_and_static_tests_passed",
+  "next_unit": "iostore_rebuild_v1.2.0",
   "completed_units": [
     "source_index_read",
     "github_state_index_read",
     "v1.1.1_runtime_validated_base_selected",
     "flight_requirements_fixed",
     "current_steam_16321_BP_CombatCharacter_fetched",
-    "historical_flight_semantics_audited"
+    "historical_flight_semantics_audited",
+    "current_steam_16321_BP_CombatCharacter_source_copied",
+    "controller_owned_move_flying_implemented",
+    "F8_hotkey_and_clickable_menu_row_implemented",
+    "camera_pitch_forward_vector_vertical_flight_implemented",
+    "shift_x3_flight_speed_implemented",
+    "capsule_collision_checks_and_no_noclip_confirmed",
+    "minimal_current_BP_CombatCharacter_ReceiveTick_trampoline_implemented",
+    "stock_combat_ubergraph_and_input_functions_preserved",
+    "v1.2.0_unit_tests_9_of_9",
+    "v1.2.0_static_type_reference_validation_passed"
   ],
   "pending_units": [
-    "reconstruct_build_tooling",
-    "patch_current_BP_CombatCharacter_minimally",
-    "add_F8_controller_toggle",
-    "add_F8_menu_row",
-    "static_kismet_validation",
     "iostore_rebuild",
+    "iostore_roundtrip",
     "release_package_upload_readback",
+    "development_archive_upload_readback",
     "runtime_validation"
   ],
   "source_files_used": [
@@ -34,23 +41,35 @@
     "scriptobjects.bin"
   ],
   "working_files": [
-    "working/steam/current/mod_menu_flight_v1_2/AUDIT_STATE.json"
+    "working/steam/current/mod_menu_flight_v1_2/AUDIT_STATE.json",
+    "Drive-development-pending: build_controller_v120.py",
+    "Drive-development-pending: build_ui_v120.py",
+    "Drive-development-pending: build_combat_flight_v120.py",
+    "Drive-development-pending: build_menu_v120.py",
+    "Drive-development-pending: test_v120.py",
+    "Drive-development-pending: validate_v120.py"
   ],
   "validation_completed": [
-    "historical_flight_design_review",
-    "current_BP_CombatCharacter_source_size_633193_confirmed"
+    "v1.2.0_tests_9_of_9",
+    "v1.2.0_static_94_native_calls_2_script_calls_35_assignments_16_reference_args",
+    "current_BP_CombatCharacter_only_ReceiveTick_changed",
+    "AddMovementInput_Force_true_4_of_4",
+    "SetMovementMode_Flying_5_and_Falling_3_present",
+    "SetIgnoreMoveInput_true_false_balanced_in_active_paths",
+    "WorldStatic_Block_and_query_collision_checks_present",
+    "no_SetActorLocation_no_Teleport_no_collision_disable_calls_in_flight_path"
   ],
   "validation_pending": [
-    "current_source_schema_and_script",
-    "modified_kismet_static_validation",
     "iostore_roundtrip",
-    "runtime"
+    "runtime_in_game"
   ],
   "notes": [
     "User requests flight using standard keyboard/mouse controls: WASD, camera pitch drives climb/descent, no noclip, sprint key gives x3 speed.",
     "Flight will use CharacterMovement MOVE_Flying and Pawn.AddMovementInput with capsule/world collision retained; SetActorLocation/no-collision/ghost mechanics are prohibited.",
     "Free camera remains removed.",
     "Historical v1.0.5 flight implementation is reference only because user previously reported flight crashes; current Steam 0.7.9.16321 BP_CombatCharacter must be the patch base.",
-    "Preferred design is controller-centric flight state with only a minimal BP_CombatCharacter ReceiveTick trampoline, avoiding broad character input graph rewrites."
+    "Preferred design is controller-centric flight state with only a minimal BP_CombatCharacter ReceiveTick trampoline, avoiding broad character input graph rewrites.",
+    "Pre-container checkpoint: v1.2.0 flight code builds 6 override packages. Steam 0.7.9.16321 BP_CombatCharacter is the binary base and only its ReceiveTick export is modified; ExecuteUbergraph and stock input functions remain byte-identical.",
+    "Static validation passed for new flight paths: 94 native calls, 2 script calls, 35 assignments, 16 reference/out args; unit tests 9/9. Runtime remains unverified."
   ]
 }
