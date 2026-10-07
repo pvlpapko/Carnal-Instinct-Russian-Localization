@@ -1,0 +1,54 @@
+{
+  "schema_version": "1.0",
+  "version": "1.2.2 TEST",
+  "author": "Don't Look",
+  "source_state_id": "steam_current_0.7.9.16321 + CI_Mod_Menu_v1.1.1_runtime_validated",
+  "crash_evidence": {
+    "source_files": [
+      "CrashContext.runtime-xml",
+      "UEMinidump.dmp"
+    ],
+    "exception": "EXCEPTION_ACCESS_VIOLATION writing address 0x0",
+    "first_game_rva": "0x3A55743",
+    "null_register": "RSI=0",
+    "observed_speed_values": {
+      "base": 361,
+      "multiplier": 3,
+      "triple": 1083
+    },
+    "root_cause": "SelectFloat native result write through null result pointer in v1.2.0/v1.2.1 handcrafted flight speed expression"
+  },
+  "changes": {
+    "select_float_removed": true,
+    "speed_selection": "explicit control-flow branches: MaxWalkSpeed or Multiply_DoubleDouble(MaxWalkSpeed,3)",
+    "set_ignore_move_input_calls": 0,
+    "manual_A_D_calls": 0,
+    "add_movement_input_calls": 2,
+    "movement": "stock WASD+mouse; W/S correction only",
+    "sprint": "Shift x3",
+    "collision_disabled": false,
+    "noclip": false,
+    "free_camera": false
+  },
+  "static_validation": {
+    "branch_disk": 2874,
+    "branch_memory": 2438,
+    "select_float_calls": 0,
+    "multiply_double_calls": 1,
+    "set_movement_mode_calls": 2,
+    "custom_object_storage_references": 0,
+    "iostore_blake3": "PASS",
+    "zip_crc": "PASS"
+  },
+  "release": {
+    "filename": "CI_Mod_Menu_v1.2.2_TEST_0.7.9.16321.zip",
+    "bytes": 251325,
+    "sha256": "1f779e48411a51cff003fd3130fc5629ff4da49d319aff3bd54059a6cec1965d"
+  },
+  "development": {
+    "filename": "CI_Mod_Menu_v1.2.2_DEVELOPMENT.zip",
+    "bytes": 12284,
+    "sha256": "a97bdacd48d98c06dc87c7b9bd621bde04b7c30ae6dc16a3a8b7d75bcd772dd6"
+  },
+  "runtime_tested": false
+}
