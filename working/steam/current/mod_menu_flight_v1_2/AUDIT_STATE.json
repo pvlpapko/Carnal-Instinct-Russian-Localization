@@ -2,13 +2,13 @@
   "schema_version": "1.0",
   "edition": "Both",
   "task": "mod_menu_flight_v1_2",
-  "status": "awaiting_in_game_validation_v1.2.3",
+  "status": "awaiting_in_game_validation_v1.2.4",
   "source_state_id": "steam_current_0.7.9.16321 + CI_Mod_Menu_v1.1.1_runtime_validated",
   "verified_game_version": "0.7.9.16321",
   "verified_build": null,
-  "current_phase": "v1.2.3_test_release_ready",
-  "last_completed_unit": "v1.2.3_sprint_crash_fix_built_static_passed",
-  "next_unit": "in_game_validate_v1.2.3",
+  "current_phase": "v1.2.4_speed_rotation_test_candidate",
+  "last_completed_unit": "v1.2.4_static_and_iostore_validation_passed",
+  "next_unit": "runtime_validate_v1.2.4_speed_rotation",
   "completed_units": [
     "source_index_read",
     "github_state_index_read",
@@ -68,10 +68,21 @@
     "v1.2.3_SelectFloat_absent",
     "v1.2.3_speed_constants_600_1800",
     "v1.2.3_iostore_meta_passed",
-    "v1.2.3_release_zip_crc_passed"
+    "v1.2.3_release_zip_crc_passed",
+    "v1.2.3_runtime_partial_flight_works",
+    "v1.2.3_shift_no_crash_reported_but_speed_ineffective",
+    "v1.2.3_stationary_camera_facing_rotation_bug_reported",
+    "v1.2.4_flight_speed_rebased_to_361_1083",
+    "v1.2.4_max_acceleration_4332",
+    "v1.2.4_stock_SetRotationMode_1_during_flight",
+    "v1.2.4_SetRotationMode_0_on_disable",
+    "v1.2.4_static_validation_passed",
+    "v1.2.4_iostore_blake3_passed",
+    "v1.2.4_zip_crc_passed"
   ],
   "pending_units": [
-    "runtime_validation_v1.2.3"
+    "runtime_validation_v1.2.4",
+    "drive_release_upload_readback"
   ],
   "source_files_used": [
     "CI_Mod_Menu_v1.1.1_DEVELOPMENT.zip",
@@ -86,20 +97,27 @@
     "CI GPT/Working/CI_Mod_Menu_v1.2.2_DEVELOPMENT.zip (Drive id 1VDRTqjkHDITyUjxtGf2vxyoxktmG5slF)"
   ],
   "validation_completed": [
-    "v1.2.3_set_ignore_move_input_calls_0",
-    "v1.2.3_manual_A_D_calls_0",
-    "v1.2.3_add_movement_input_calls_2_force_false_2_of_2",
-    "v1.2.3_select_float_calls_0",
-    "v1.2.3_multiply_double_calls_0",
-    "v1.2.3_normal_fly_speed_600",
-    "v1.2.3_shift_fly_speed_1800",
-    "v1.2.3_collision_not_disabled",
-    "v1.2.3_iostore_BLAKE3_meta_PASS",
-    "v1.2.3_release_zip_crc_PASS",
-    "v1.2.3_release_sha256_9429e732f331fde2434230968bb586d861cec5c86791e24cc0bd79561036cbcc"
+    "v1.2.4_branch_disk_2874_memory_2438",
+    "v1.2.4_SetIgnoreMoveInput_calls_0",
+    "v1.2.4_AddMovementInput_calls_2_force_false_2_of_2",
+    "v1.2.4_manual_A_D_calls_0",
+    "v1.2.4_SetMovementMode_calls_2",
+    "v1.2.4_StopMovementImmediately_calls_0",
+    "v1.2.4_SelectFloat_calls_0",
+    "v1.2.4_Multiply_DoubleDouble_calls_0",
+    "v1.2.4_speed_normal_361",
+    "v1.2.4_speed_shift_1083",
+    "v1.2.4_MaxAcceleration_4332",
+    "v1.2.4_SetRotationMode_1_present_during_flight",
+    "v1.2.4_SetRotationMode_0_present_on_disable",
+    "v1.2.4_collision_not_disabled",
+    "v1.2.4_iostore_BLAKE3_meta_PASS",
+    "v1.2.4_release_zip_crc_PASS",
+    "v1.2.4_release_sha256_55b1691fa74f33db760ff2228321cdc6f011e651f270faddbd4f23e5fd0b7d42"
   ],
   "validation_pending": [
-    "runtime_in_game_v1.2.3"
+    "runtime_in_game_v1.2.4",
+    "drive_release_readback"
   ],
   "notes": [
     "User requests flight using standard keyboard/mouse controls: WASD, camera pitch drives climb/descent, no noclip, sprint key gives x3 speed.",
@@ -126,6 +144,10 @@
     "v1.2.2 release read back from Drive: 251325 bytes, SHA-256 1f779e48411a51cff003fd3130fc5629ff4da49d319aff3bd54059a6cec1965d. Development readback: 12284 bytes, SHA-256 a97bdacd48d98c06dc87c7b9bd621bde04b7c30ae6dc16a3a8b7d75bcd772dd6.",
     "User runtime v1.2.2: F8 flight itself works; pressing Shift causes EXCEPTION_ACCESS_VIOLATION writing 0x0.",
     "New v1.2.2 minidump: crash RIP RVA 0x3A45423, RDI=0, XMM0=1800.0. This matches Multiply_DoubleDouble(600,3) producing 1800 then attempting to write through a null native result pointer.",
-    "v1.2.3 removes both Multiply_DoubleDouble and SelectFloat from the active sprint path. MaxFlySpeed is assigned directly: 600 normal, 1800 while Shift is held. No native math result/output temporary remains in the speed branch."
+    "v1.2.3 removes both Multiply_DoubleDouble and SelectFloat from the active sprint path. MaxFlySpeed is assigned directly: 600 normal, 1800 while Shift is held. No native math result/output temporary remains in the speed branch.",
+    "User runtime feedback on v1.2.3: flight enables; when stopping, character turns to face the camera instead of keeping movement-facing orientation. Also normal and Shift flight movement look like slow motion and actual travel speed appears the same.",
+    "v1.2.4 addresses both behaviors without reintroducing input interception: normal MaxFlySpeed=361, Shift MaxFlySpeed=1083 (exact x3), MaxAcceleration=4332 for fast response. No SelectFloat or Multiply_DoubleDouble runtime math.",
+    "v1.2.4 calls the stock BP_CombatCharacter SetRotationMode(1) while flying and SetRotationMode(0) when disabling flight, rather than adding raw rotation bool properties. Runtime orientation effect remains pending user test.",
+    "Local v1.2.4 TEST: CI_Mod_Menu_v1.2.4_TEST_0.7.9.16321.zip, 251664 bytes, SHA-256 55b1691fa74f33db760ff2228321cdc6f011e651f270faddbd4f23e5fd0b7d42."
   ]
 }
