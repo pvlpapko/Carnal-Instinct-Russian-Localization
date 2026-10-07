@@ -246,13 +246,13 @@
       "edition": "Steam",
       "task": "forms_purchase_apply_fix_v18_23",
       "state_path": "working/steam/current/forms_purchase_apply_fix_v18_23/AUDIT_STATE.json",
-      "status": "root_cause_identified_binary_patch_in_progress"
+      "status": "test_archive_built_static_verified_runtime_pending"
     },
     {
       "edition": "NoSteam",
       "task": "forms_purchase_apply_fix_v18_23",
       "state_path": "working/nosteam/0.7.9.16232/forms_purchase_apply_fix_v18_23/AUDIT_STATE.json",
-      "status": "root_cause_identified_binary_patch_in_progress"
+      "status": "test_archive_built_static_verified_runtime_pending"
     }
   ],
   "latest_release": {
@@ -286,21 +286,14 @@
     "minimal_hell_kitchen_refs": 12
   },
   "latest_local_candidate": {
-    "name": "Carnal_Instinct_RU_DontLook_2026-10-06_v18.21_RELEASE.zip",
-    "sha256": "d968e1ad018b71d3b84db4beaa33bf3dd318e6acacd8cba7315f140864c711ff",
-    "archive_bytes": 23654810,
-    "archive_entries": 137,
-    "installer_sha256": "ac75f203471793462d0031480a12b4046b0eb3c0a1ba40ea80b35f4830109f21",
-    "installer_bytes": 20837376,
-    "drive_folder_id": "1VwdnxngtZLDsPl1kP5H5HCJBePoRCF_a",
-    "drive_file_id": "15la_MvSFht_nkeYcefH6pyN5ThoQ9dD6",
-    "drive_metadata_file_id": "16DJHOPLUcsOmiDTL_QcjuBlm5fGBmS8z",
-    "drive_readback_sha256_verified": true,
-    "drive_readback_zip_crc_verified": true,
-    "steam_payload_id": "Steam_current",
-    "steam_verified_game_version": "0.7.9.16321",
-    "steam_verified_build": null,
-    "nosteam_baseline_build": "0.7.9.16232",
-    "runtime_validation": "user reported working: settings persist after restart; clean Apply state; no main-menu freeze regression; radial menu preserved"
+    "name": "Carnal_Instinct_RU_DontLook_FormsFix_2026-10-07_v18.23_TEST.zip",
+    "task": "forms_purchase_apply_fix_v18_23",
+    "sha256": "5e1b98eeb177b440bb49c978e221dcfeb771d07ce9732e6484c2e23ee9f3fc85",
+    "archive_bytes": 23785022,
+    "archive_entries": 140,
+    "installer_sha256": "a5baa19439d3b5dcc3e2992dc68498073e92eaeba4150437319c463fa5202c33",
+    "zip_crc_and_exact_entry_readback": true,
+    "runtime_validation": "pending",
+    "canonical_release_remains": "18.21 RELEASE"
   }
 }
