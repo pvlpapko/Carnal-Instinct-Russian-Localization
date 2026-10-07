@@ -2,13 +2,13 @@
   "schema_version": "1.0",
   "edition": "both",
   "task": "mod_menu_installer",
-  "status": "modern_v2_release_uploaded_runtime_retest_pending",
+  "status": "in_progress_clone_localization_installer_template",
   "source_state_id": "CI_Mod_Menu_v1.1.1_runtime_validated",
   "verified_game_version": "0.7.9.16321",
   "verified_build": null,
-  "current_phase": "modern_installer_v2_release_candidate",
-  "last_completed_unit": "modern_v2_drive_readback_verified",
-  "next_unit": "user_windows_runtime_retest_modern_v2",
+  "current_phase": "localization_installer_template_adaptation",
+  "last_completed_unit": "ru_installer_v18_13_source_extracted_and_mod_adaptation_tests_passed",
+  "next_unit": "build_exact_ru_style_mod_installer",
   "completed_units": [
     "source_index_read",
     "github_state_index_read",
@@ -37,10 +37,21 @@
     "modern_v2_payload_embedding_validation",
     "modern_v2_cleanup_localization_simulation_pass",
     "modern_v2_release_uploaded_drive_readback_verified",
-    "modern_v2_development_archive_uploaded_drive_readback_verified"
+    "modern_v2_development_archive_uploaded_drive_readback_verified",
+    "ru_v18_13_installer_source_extracted_from_canonical_release",
+    "exact_wizard_ui_template_reused",
+    "mod_payload_names_applied",
+    "steam_nosteam_three_edition_mapping_applied",
+    "newer_nosteam_aliases_steam_current_payload",
+    "no_backup_update_policy_preserved",
+    "linux_core_tests_passed"
   ],
   "pending_units": [
-    "user_windows_runtime_retest_modern_v2"
+    "build_exact_ru_style_mod_installer",
+    "pe_resource_static_validation",
+    "payload_and_alias_validation",
+    "release_upload_readback",
+    "user_windows_runtime_test"
   ],
   "source_files_used": [
     "CI_Mod_Menu_v1.1.1_TEST_0.7.9.16321.zip",
@@ -66,10 +77,13 @@
     "remove_worker_thread_static_confirmed",
     "folder_picker_COM_STA_static_confirmed",
     "release_drive_readback_sha256_8a0dae731da74d2c304a3aedbea6c6bff25e6b137049b622eb3118d2b4a89f24",
-    "development_drive_readback_sha256_50e9c5ddb679e39bb1c9da17cc1628ef87a6e4a6abdc4b385ce29ce28187b946"
+    "development_drive_readback_sha256_50e9c5ddb679e39bb1c9da17cc1628ef87a6e4a6abdc4b385ce29ce28187b946",
+    "ru_style_core_tests_PASS"
   ],
   "validation_pending": [
-    "windows_runtime_modern_v2_UI_folder_picker_install_remove"
+    "ru_style_windows_build",
+    "ru_style_pe_resources",
+    "ru_style_runtime"
   ],
   "notes": [
     "This installer is only for CI Mod Menu. It does not contain or modify the Russian localization, Game.locres, pakchunk1015, or RussianTranslation_P.",
@@ -84,6 +98,8 @@
     "Runtime responsiveness fix requirement: file operations must not run on the UI message loop; installation/removal will run on a worker goroutine and report progress back to the Win32 UI.",
     "Previous installer was user-reported to hang. Modern Installer 2.0 removes startup Steam-library probing and moves install/remove file I/O plus SHA-256 verification to worker goroutines so the Win32 message loop remains responsive.",
     "Modern Installer 2.0 uses a native dark UI with DWM immersive dark mode, rounded Windows 11 corners/Mica where supported, cyan accent, owner-drawn buttons, separate Steam/NoSteam cards, and the thematic CI Mod Menu icon.",
-    "Release EXE SHA-256 2e40d9660f72720b0eaca3c7df7bf8a4fd47525f7ab145572feb660e4a16fada. Release ZIP Drive id 1OTAAYVPiy9bf5ByZVWWtytS2gA4qVGcE. Windows runtime retest remains pending."
+    "Release EXE SHA-256 2e40d9660f72720b0eaca3c7df7bf8a4fd47525f7ab145572feb660e4a16fada. Release ZIP Drive id 1OTAAYVPiy9bf5ByZVWWtytS2gA4qVGcE. Windows runtime retest remains pending.",
+    "User requested the CI Mod Menu installer to be exactly the same wizard/UI as the localization installer. Canonical Developer/Installer_Source from Carnal_Instinct_RU_DontLook_2026-10-06_v18.13_RELEASE.zip was extracted and reused as the code/layout template; only mod-specific text, payload names/state and branding are changed.",
+    "Edition mapping mirrors localization installer: Steam -> Steam_current, NoSteam 0.7.9.16232 -> dedicated payload, NoSteam 0.7.9.16313+ / newer -> Steam_current. This keeps later compatible NoSteam builds on the current Steam-derived binary payload."
   ]
 }
