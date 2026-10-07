@@ -2,13 +2,13 @@
   "schema_version": "1.0",
   "edition": "Both",
   "task": "mod_menu_flight_v1_2",
-  "status": "in_progress_v1.2.2_minidump_root_cause_fix",
+  "status": "v1.2.2_local_release_ready_runtime_pending",
   "source_state_id": "steam_current_0.7.9.16321 + CI_Mod_Menu_v1.1.1_runtime_validated",
   "verified_game_version": "0.7.9.16321",
   "verified_build": null,
-  "current_phase": "runtime_crash_root_cause_fix",
-  "last_completed_unit": "v1.2.1_minidump_root_cause_identified",
-  "next_unit": "replace_SelectFloat_speed_path_and_rebuild_v1.2.2",
+  "current_phase": "v1.2.2_test_release_ready_local",
+  "last_completed_unit": "v1.2.2_static_iostore_zip_validation_passed",
+  "next_unit": "in_game_validate_v1.2.2",
   "completed_units": [
     "source_index_read",
     "github_state_index_read",
@@ -51,15 +51,18 @@
     "minidump_exception_context_parsed",
     "null_result_pointer_RSI_confirmed",
     "SelectFloat_speed_path_identified_as_crash_site",
-    "contaminated_steam_BP_CombatCharacter_old_flight_fields_confirmed"
+    "contaminated_steam_BP_CombatCharacter_old_flight_fields_confirmed",
+    "v1.2.2_SelectFloat_removed",
+    "v1.2.2_explicit_shift_speed_branches_implemented",
+    "v1.2.2_standard_WASD_mouse_preserved",
+    "v1.2.2_static_validation_passed",
+    "v1.2.2_iostore_BLAKE3_passed",
+    "v1.2.2_zip_crc_passed",
+    "v1.2.2_local_release_built"
   ],
   "pending_units": [
-    "replace_SelectFloat_with_explicit_shift_branches",
-    "validate_no_SelectFloat_in_active_flight_branch",
-    "validate_standard_WASD_mouse_path",
-    "iostore_rebuild_v1.2.2",
-    "release_upload_readback",
-    "runtime_validation_v1.2.2"
+    "v1.2.2_runtime_validation",
+    "v1.2.2_drive_upload_readback"
   ],
   "source_files_used": [
     "CI_Mod_Menu_v1.1.1_DEVELOPMENT.zip",
@@ -69,27 +72,26 @@
   ],
   "working_files": [
     "working/steam/current/mod_menu_flight_v1_2/AUDIT_STATE.json",
-    "working/steam/current/mod_menu_flight_v1_2/V120_FLIGHT_SPEC.json",
-    "CI GPT/Releases/CI_Mod_Menu_v1.2.0_TEST_0.7.9.16321.zip (Drive id 1odkwoRvAaTKQdv4fte-f6sd7XbnzlH98)",
-    "CI GPT/Working/CI_Mod_Menu_v1.2.0_DEVELOPMENT.zip (Drive id 1q2uJ7AfuqfmdlZBKBK__wKUv_TiP-Kuo)"
+    "working/steam/current/mod_menu_flight_v1_2/V122_FLIGHT_SPEC.json",
+    "/mnt/data/CI_Mod_Menu_v1.2.2_TEST_0.7.9.16321.zip",
+    "/mnt/data/CI_Mod_Menu_v1.2.2_DEVELOPMENT.zip"
   ],
   "validation_completed": [
-    "v1.2.1_branch_disk_2874_memory_2438",
-    "v1.2.1_SetIgnoreMoveInput_calls_0",
-    "v1.2.1_AddMovementInput_calls_2_force_false_2_of_2",
-    "v1.2.1_manual_A_D_calls_0",
-    "v1.2.1_custom_object_storage_refs_0",
-    "v1.2.1_SetMovementMode_calls_2",
-    "v1.2.1_StopMovementImmediately_calls_0",
-    "v1.2.1_collision_not_disabled",
-    "v1.2.1_iostore_BLAKE3_meta_PASS",
-    "v1.2.1_release_zip_crc_PASS",
-    "v1.2.1_release_sha256_995d39471f48fc26c72ab3e3e210171d08150072bed1e4a0ffd6b5ad09493ff9"
+    "v1.2.2_SelectFloat_calls_0",
+    "v1.2.2_Multiply_DoubleDouble_calls_1",
+    "v1.2.2_SetIgnoreMoveInput_calls_0",
+    "v1.2.2_manual_A_D_calls_0",
+    "v1.2.2_AddMovementInput_calls_2_force_false_2_of_2",
+    "v1.2.2_SetMovementMode_calls_2",
+    "v1.2.2_custom_object_storage_refs_0",
+    "v1.2.2_collision_not_disabled",
+    "v1.2.2_iostore_BLAKE3_PASS",
+    "v1.2.2_release_zip_crc_PASS",
+    "v1.2.2_release_sha256_1f779e48411a51cff003fd3130fc5629ff4da49d319aff3bd54059a6cec1965d"
   ],
   "validation_pending": [
-    "v1.2.2_static",
-    "v1.2.2_iostore",
-    "v1.2.2_runtime"
+    "runtime_in_game_v1.2.2",
+    "drive_release_readback"
   ],
   "notes": [
     "User requests flight using standard keyboard/mouse controls: WASD, camera pitch drives climb/descent, no noclip, sprint key gives x3 speed.",
@@ -110,6 +112,8 @@
     "User runtime test of v1.2.1 reproduces the same immediate F8 crash: EXCEPTION_ACCESS_VIOLATION writing address 0x0.",
     "CrashContext/minidump: first game RVA 0x3A55743; exception context RSI=0. Stack/native argument values around the crash are 3.0, 1083.0 and 361.0. This matches the flight speed expression Multiply_DoubleDouble(361,3)=1083 followed by SelectFloat(1083,361,shift). The native thunk writes the selected double through a null result pointer.",
     "v1.2.2 removes SelectFloat from the active flight branch. Shift selection will use explicit control-flow branches: base speed assignment when not sprinting and Multiply_DoubleDouble(base,3) assignment when sprinting.",
-    "Current Steam BP_CombatCharacter source contains historical CI_Flight* fields and an old flight ReceiveTick hook; it is not a clean stock combat asset. v1.2.2 will keep the historical branch unreachable and will not reactivate its tag/input suppression path."
+    "Current Steam BP_CombatCharacter source contains historical CI_Flight* fields and an old flight ReceiveTick hook; it is not a clean stock combat asset. v1.2.2 will keep the historical branch unreachable and will not reactivate its tag/input suppression path.",
+    "v1.2.2 local TEST built from the v1.2.1 safe branch with the minidump-confirmed SelectFloat crash site removed. Shift uses explicit branches: normal MaxWalkSpeed or Multiply_DoubleDouble(MaxWalkSpeed,3).",
+    "v1.2.2 static checks: SelectFloat calls 0; SetIgnoreMoveInput 0; manual A/D 0; AddMovementInput correction calls 2 with bForce=false; collision not disabled; IoStore BLAKE3 metadata and ZIP CRC pass. Runtime remains pending."
   ]
 }
