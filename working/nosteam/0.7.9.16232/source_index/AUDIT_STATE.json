@@ -1,48 +1,66 @@
 {
-  "schema_version": "1.0",
+  "schema_version": "1.1",
   "edition": "NoSteam",
   "task": "source_index",
-  "status": "in_progress",
+  "status": "completed_navigation_index_physical_full_inventory_not_claimed",
   "source_state_id": "nosteam_0.7.9.16232_unpacked_drive_2026-10-07",
   "verified_game_version": "0.7.9",
   "verified_build": "0.7.9.16232",
   "created_at": "2026-10-07",
   "updated_at": "2026-10-07",
-  "current_phase": "recursive_drive_index",
-  "last_completed_unit": "source_root_identified",
-  "next_unit": "enumerate_all_descendants_with_pagination",
+  "current_phase": "completed",
+  "last_completed_unit": "drive_manifest_and_repository_readback",
+  "next_unit": "resolve_exact_physical_file_on_demand_for_build_dependent_tasks",
   "completed_units": [
-    "Read existing Steam CI_SOURCE_INDEX baseline",
-    "Read working/STATE_INDEX.json",
-    "Verified NoSteam unpacked source root Carnal_Instinct_UE5_Nosteam on Google Drive",
-    "Verified NoSteam source root Drive ID 1utEQ4N93dZ3PUJRO5M0jX5gg1BydoAQ1"
+    "Read existing Steam CI_SOURCE_INDEX baseline without overwriting it",
+    "Registered NoSteam source-index task in working/STATE_INDEX.json",
+    "Verified NoSteam unpacked source root Carnal_Instinct_UE5_Nosteam and Drive ID",
+    "Recursively enumerated exact NoSteam folder topology: 3045 descendant folders, max depth 10",
+    "Stored exact folder catalog in working/nosteam/0.7.9.16232/source_index/FOLDERS.json",
+    "Downloaded and parsed matching NoSteam AssetRegistry.bin",
+    "Validated AssetRegistry version 17 AssetPackageDataHasExtension",
+    "Parsed 77112 names and 43876 asset records without parser remainder mismatch",
+    "Indexed 43123 project asset records and 35942 unique project packages; 2515 World packages",
+    "Generated CI_NOSTEAM_SOURCE_INDEX.json and CI_NOSTEAM_SOURCE_TREE.txt",
+    "Uploaded NoSteam index/tree to CI GPT/Manifests",
+    "Verified Drive readback metadata: index 43872040 bytes; tree 6927810 bytes",
+    "Created nosteam/0.7.9.16232/SOURCE_STATE.json and SOURCE_INDEX_SUMMARY.json",
+    "Bound nosteam BUILD_STATE to the new source_state_id",
+    "Updated README.md, PROJECT_RULES.md, WORKFLOW.md and PROJECT_INSTRUCTION.md for separate Steam/NoSteam sources",
+    "Marked partial direct file crawl as superseded by canonical hybrid navigation index"
   ],
-  "pending_units": [
-    "Enumerate all NoSteam folders/files recursively",
-    "Generate CI_NOSTEAM_SOURCE_INDEX.json",
-    "Generate CI_NOSTEAM_SOURCE_TREE.txt",
-    "Write NoSteam source state metadata",
-    "Update project rules/workflow/instruction",
-    "Verify written manifests and GitHub state"
-  ],
+  "pending_units": [],
   "source_files_used": [
-    "Google Drive folder Carnal_Instinct_UE5_Nosteam",
-    "CI_SOURCE_INDEX.json (Steam reference)",
+    "Google Drive Carnal_Instinct_UE5_Nosteam",
+    "AssetRegistry.bin Drive ID 1wnfKFbREZTlwVk951sftaGt5zhmTjA4Q",
+    "Steam CI_SOURCE_INDEX.json as structural reference only",
     "working/STATE_INDEX.json"
   ],
   "working_files": [
-    "working/nosteam/0.7.9.16232/source_index/AUDIT_STATE.json"
+    "working/nosteam/0.7.9.16232/source_index/FOLDERS.json",
+    "working/nosteam/0.7.9.16232/source_index/CRAWL_STATE.json",
+    "working/nosteam/0.7.9.16232/source_index/FILE_CRAWL_STATE.json",
+    "nosteam/0.7.9.16232/SOURCE_STATE.json",
+    "nosteam/0.7.9.16232/SOURCE_INDEX_SUMMARY.json",
+    "PROJECT_INSTRUCTION.md"
   ],
   "validation_completed": [
-    "NoSteam source root metadata read successfully"
+    "NoSteam source root metadata read",
+    "folder crawl complete with no missing discovered folder branch",
+    "AssetRegistry parser consumed all 43876 asset records and reached final state footer",
+    "AssetRegistry SHA256 927962f37343520e02448fef575464e43193b97e1ad3527f4ea564922244ff96",
+    "NoSteam index local SHA256 21a04ab2a3e9049a534b87e52a5ade5afe758bc018192fe3e11bd79689551db2",
+    "NoSteam tree local SHA256 7bcedbc53fd19e6ca4eabaaca4199f2c5c0188134002112f2195944c6a2db682",
+    "Drive folder readback shows CI_NOSTEAM_SOURCE_INDEX.json and CI_NOSTEAM_SOURCE_TREE.txt with matching byte sizes",
+    "Steam index remains separate"
   ],
   "validation_pending": [
-    "full recursive enumeration completeness",
-    "manifest readback",
-    "GitHub checkpoint readback"
+    "A global byte-for-byte physical file-ID inventory is intentionally not claimed; duplicate extraction names and sidecars are resolved and verified from the indexed parent folder when a build-dependent task needs them."
   ],
   "notes": [
-    "NoSteam unpacked source is indexed separately from Steam. Do not overwrite the Steam CI_SOURCE_INDEX.",
-    "Use current repository with separate NoSteam namespace; no second repository is required."
+    "Use the current GitHub repository for both editions; NoSteam has its own namespace/source state.",
+    "NoSteam logical package navigation is complete. Exact physical duplicate filenames and .ubulk sidecars must be resolved by direct parent-folder listing before binary work.",
+    "Do not copy Steam file IDs/sizes/hashes into NoSteam metadata without explicit compatibility verification.",
+    "Drive index ID: 1AW90tbEjxz7RfB1kZiQHcZNqj2hHRr5N; tree ID: 1yRLeb6AB3Z7fE10GUOl8mp-N_5lzf8CF."
   ]
 }
