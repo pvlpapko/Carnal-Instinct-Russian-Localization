@@ -2,12 +2,12 @@
   "schema_version": "1.0",
   "edition": "Both",
   "task": "mod_menu_flight_v1_2",
-  "status": "v1.2.2_local_release_ready_runtime_pending",
+  "status": "awaiting_in_game_validation_v1.2.2",
   "source_state_id": "steam_current_0.7.9.16321 + CI_Mod_Menu_v1.1.1_runtime_validated",
   "verified_game_version": "0.7.9.16321",
   "verified_build": null,
-  "current_phase": "v1.2.2_test_release_ready_local",
-  "last_completed_unit": "v1.2.2_static_iostore_zip_validation_passed",
+  "current_phase": "v1.2.2_test_release_uploaded",
+  "last_completed_unit": "v1.2.2_release_and_development_drive_readback_verified",
   "next_unit": "in_game_validate_v1.2.2",
   "completed_units": [
     "source_index_read",
@@ -58,11 +58,12 @@
     "v1.2.2_static_validation_passed",
     "v1.2.2_iostore_BLAKE3_passed",
     "v1.2.2_zip_crc_passed",
-    "v1.2.2_local_release_built"
+    "v1.2.2_local_release_built",
+    "v1.2.2_release_drive_readback_verified",
+    "v1.2.2_development_drive_readback_verified"
   ],
   "pending_units": [
-    "v1.2.2_runtime_validation",
-    "v1.2.2_drive_upload_readback"
+    "runtime_validation_v1.2.2"
   ],
   "source_files_used": [
     "CI_Mod_Menu_v1.1.1_DEVELOPMENT.zip",
@@ -73,8 +74,8 @@
   "working_files": [
     "working/steam/current/mod_menu_flight_v1_2/AUDIT_STATE.json",
     "working/steam/current/mod_menu_flight_v1_2/V122_FLIGHT_SPEC.json",
-    "/mnt/data/CI_Mod_Menu_v1.2.2_TEST_0.7.9.16321.zip",
-    "/mnt/data/CI_Mod_Menu_v1.2.2_DEVELOPMENT.zip"
+    "CI GPT/Releases/CI_Mod_Menu_v1.2.2_TEST_0.7.9.16321.zip (Drive id 1I1PaOkxG632zZi_gYk6jai3wBy4Im0-f)",
+    "CI GPT/Working/CI_Mod_Menu_v1.2.2_DEVELOPMENT.zip (Drive id 1VDRTqjkHDITyUjxtGf2vxyoxktmG5slF)"
   ],
   "validation_completed": [
     "v1.2.2_SelectFloat_calls_0",
@@ -87,11 +88,12 @@
     "v1.2.2_collision_not_disabled",
     "v1.2.2_iostore_BLAKE3_PASS",
     "v1.2.2_release_zip_crc_PASS",
-    "v1.2.2_release_sha256_1f779e48411a51cff003fd3130fc5629ff4da49d319aff3bd54059a6cec1965d"
+    "v1.2.2_release_sha256_1f779e48411a51cff003fd3130fc5629ff4da49d319aff3bd54059a6cec1965d",
+    "v1.2.2_drive_release_sha256_1f779e48411a51cff003fd3130fc5629ff4da49d319aff3bd54059a6cec1965d",
+    "v1.2.2_drive_development_sha256_a97bdacd48d98c06dc87c7b9bd621bde04b7c30ae6dc16a3a8b7d75bcd772dd6"
   ],
   "validation_pending": [
-    "runtime_in_game_v1.2.2",
-    "drive_release_readback"
+    "runtime_in_game_v1.2.2"
   ],
   "notes": [
     "User requests flight using standard keyboard/mouse controls: WASD, camera pitch drives climb/descent, no noclip, sprint key gives x3 speed.",
@@ -114,6 +116,7 @@
     "v1.2.2 removes SelectFloat from the active flight branch. Shift selection will use explicit control-flow branches: base speed assignment when not sprinting and Multiply_DoubleDouble(base,3) assignment when sprinting.",
     "Current Steam BP_CombatCharacter source contains historical CI_Flight* fields and an old flight ReceiveTick hook; it is not a clean stock combat asset. v1.2.2 will keep the historical branch unreachable and will not reactivate its tag/input suppression path.",
     "v1.2.2 local TEST built from the v1.2.1 safe branch with the minidump-confirmed SelectFloat crash site removed. Shift uses explicit branches: normal MaxWalkSpeed or Multiply_DoubleDouble(MaxWalkSpeed,3).",
-    "v1.2.2 static checks: SelectFloat calls 0; SetIgnoreMoveInput 0; manual A/D 0; AddMovementInput correction calls 2 with bForce=false; collision not disabled; IoStore BLAKE3 metadata and ZIP CRC pass. Runtime remains pending."
+    "v1.2.2 static checks: SelectFloat calls 0; SetIgnoreMoveInput 0; manual A/D 0; AddMovementInput correction calls 2 with bForce=false; collision not disabled; IoStore BLAKE3 metadata and ZIP CRC pass. Runtime remains pending.",
+    "v1.2.2 release read back from Drive: 251325 bytes, SHA-256 1f779e48411a51cff003fd3130fc5629ff4da49d319aff3bd54059a6cec1965d. Development readback: 12284 bytes, SHA-256 a97bdacd48d98c06dc87c7b9bd621bde04b7c30ae6dc16a3a8b7d75bcd772dd6."
   ]
 }
