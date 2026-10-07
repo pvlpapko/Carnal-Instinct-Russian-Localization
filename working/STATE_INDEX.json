@@ -240,7 +240,7 @@
       "edition": "Both",
       "task": "mod_menu_flight_v1_2",
       "state_path": "working/steam/current/mod_menu_flight_v1_2/AUDIT_STATE.json",
-      "status": "in_progress_architecture_and_current_source_validation"
+      "status": "awaiting_in_game_validation_v1.2.0"
     }
   ],
   "latest_release": {
