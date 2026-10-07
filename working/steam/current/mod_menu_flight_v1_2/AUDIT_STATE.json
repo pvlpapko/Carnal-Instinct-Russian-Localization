@@ -2,13 +2,13 @@
   "schema_version": "1.0",
   "edition": "Both",
   "task": "mod_menu_flight_v1_2",
-  "status": "in_progress_v1.2.1_crash_fix",
+  "status": "awaiting_in_game_validation_v1.2.1",
   "source_state_id": "steam_current_0.7.9.16321 + CI_Mod_Menu_v1.1.1_runtime_validated",
   "verified_game_version": "0.7.9.16321",
   "verified_build": null,
-  "current_phase": "runtime_crash_rearchitecture",
-  "last_completed_unit": "v1.2.0_runtime_crash_confirmed",
-  "next_unit": "remove_input_interception_and_rebuild_standard_wasd_mouse_flight",
+  "current_phase": "v1.2.1_test_release_ready_local",
+  "last_completed_unit": "v1.2.1_static_and_iostore_validation_passed",
+  "next_unit": "in_game_validate_v1.2.1",
   "completed_units": [
     "source_index_read",
     "github_state_index_read",
@@ -37,18 +37,19 @@
     "development_archive_drive_readback_verified",
     "v1.2.0_runtime_crash_confirmed",
     "v1.2.0_rejected_due_to_access_violation",
-    "standard_wasd_mouse_requirement_reconfirmed"
+    "standard_wasd_mouse_requirement_reconfirmed",
+    "v1.2.1_SetIgnoreMoveInput_removed",
+    "v1.2.1_standard_wasd_mouse_preserved",
+    "v1.2.1_manual_A_D_removed",
+    "v1.2.1_camera_pitch_correction_implemented",
+    "v1.2.1_custom_object_storage_removed",
+    "v1.2.1_shift_x3_retained",
+    "v1.2.1_iostore_meta_passed",
+    "v1.2.1_release_zip_crc_passed"
   ],
   "pending_units": [
-    "remove_SetIgnoreMoveInput_path",
-    "remove_manual_full_WASD_reimplementation",
-    "use_stock_WASD_mouse_input",
-    "add_camera_pitch_vertical_component_only",
-    "retain_shift_x3",
-    "static_validation_v1.2.1",
-    "iostore_rebuild_v1.2.1",
-    "release_upload_readback",
-    "runtime_validation_v1.2.1"
+    "runtime_validation_v1.2.1",
+    "drive_release_upload_readback"
   ],
   "source_files_used": [
     "CI_Mod_Menu_v1.1.1_DEVELOPMENT.zip",
@@ -63,26 +64,21 @@
     "CI GPT/Working/CI_Mod_Menu_v1.2.0_DEVELOPMENT.zip (Drive id 1q2uJ7AfuqfmdlZBKBK__wKUv_TiP-Kuo)"
   ],
   "validation_completed": [
-    "combat_zen_rebuild_changed_exports_140_357_only",
-    "safe_entry_98268",
-    "stock_tick_entry_66192_preserved",
-    "branch_jump_targets_valid_28",
-    "branch_native_calls_checked_60",
-    "AddMovementInput_Force_true_4_of_4",
-    "SetIgnoreMoveInput_balanced_2_calls",
-    "SetMovementMode_calls_2",
-    "WorldStatic_Block_and_query_collision_checks_present",
-    "no_SetActorLocation_no_Teleport_no_collision_disable_calls_in_safe_branch",
-    "ui_F8_row_exact_length_replacement_controller_1_ui_2",
-    "iostore_6_packages_meta_BLAKE3_PASS",
-    "release_zip_crc_PASS",
-    "release_drive_readback_sha256_1ae6be77769217b8d0dbf54c556eeff5fd265efb97eff169db5665d940aeaf9c",
-    "development_drive_readback_sha256_02fe3e80a98418b196144af485786460cfde046f4340f5fda87d881fb65403e2"
+    "v1.2.1_branch_disk_2874_memory_2438",
+    "v1.2.1_SetIgnoreMoveInput_calls_0",
+    "v1.2.1_AddMovementInput_calls_2_force_false_2_of_2",
+    "v1.2.1_manual_A_D_calls_0",
+    "v1.2.1_custom_object_storage_refs_0",
+    "v1.2.1_SetMovementMode_calls_2",
+    "v1.2.1_StopMovementImmediately_calls_0",
+    "v1.2.1_collision_not_disabled",
+    "v1.2.1_iostore_BLAKE3_meta_PASS",
+    "v1.2.1_release_zip_crc_PASS",
+    "v1.2.1_release_sha256_995d39471f48fc26c72ab3e3e210171d08150072bed1e4a0ffd6b5ad09493ff9"
   ],
   "validation_pending": [
-    "v1.2.1_static",
-    "v1.2.1_iostore",
-    "v1.2.1_runtime"
+    "runtime_in_game_v1.2.1",
+    "drive_release_readback"
   ],
   "notes": [
     "User requests flight using standard keyboard/mouse controls: WASD, camera pitch drives climb/descent, no noclip, sprint key gives x3 speed.",
@@ -96,6 +92,9 @@
     "Release uploaded/read back from CI GPT/Releases: CI_Mod_Menu_v1.2.0_TEST_0.7.9.16321.zip, 252526 bytes, SHA-256 1ae6be77769217b8d0dbf54c556eeff5fd265efb97eff169db5665d940aeaf9c. Runtime flight validation remains pending.",
     "User runtime test of v1.2.0: pressing F8 immediately causes EXCEPTION_ACCESS_VIOLATION writing address 0x0000000000000000. v1.2.0 flight is rejected.",
     "v1.2.0 architecture used Controller.SetIgnoreMoveInput plus manual IsInputKeyDown/AddMovementInput reimplementation of WASD. User explicitly requires standard WASD + mouse controls. v1.2.1 removes that interception architecture completely.",
-    "v1.2.1 target architecture: stock game WASD/mouse remains active; mod only toggles MOVE_Flying, supplements vertical motion from camera pitch for W/S as needed, and applies Shift x3 MaxFlySpeed. No input-ignore native calls and no noclip."
+    "v1.2.1 target architecture: stock game WASD/mouse remains active; mod only toggles MOVE_Flying, supplements vertical motion from camera pitch for W/S as needed, and applies Shift x3 MaxFlySpeed. No input-ignore native calls and no noclip.",
+    "v1.2.1 removes the v1.2.0 SetIgnoreMoveInput/manual-WASD architecture. Stock game WASD+mouse remains active. Only W/S receive correction vector camera-forward minus yaw-forward, so stock yaw-forward plus correction equals the camera-forward direction.",
+    "v1.2.1 uses no CI_FlightPC/CI_FlightMovement/CI_FlightCapsule/CI_FlightRotation/CI_FlightVector custom object/struct storage in the active branch. F8 debounce retains only the existing CI_SprintGait byte field.",
+    "Local TEST release prepared: CI_Mod_Menu_v1.2.1_TEST_0.7.9.16321.zip, 251203 bytes, SHA-256 995d39471f48fc26c72ab3e3e210171d08150072bed1e4a0ffd6b5ad09493ff9. Runtime validation remains pending."
   ]
 }
