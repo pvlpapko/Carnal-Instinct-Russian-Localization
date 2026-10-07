@@ -2,24 +2,26 @@
   "schema_version": "1.0",
   "edition": "NoSteam",
   "task": "forms_purchase_apply_fix_v18_23",
-  "status": "analysis_started",
+  "status": "root_cause_identified_binary_patch_in_progress",
   "source_state_id": "nosteam_0.7.9.16232_fixed",
   "verified_game_version": "0.7.9",
   "verified_build": "0.7.9.16232",
-  "current_phase": "source_audit",
-  "last_completed_unit": "task_initialized",
-  "next_unit": "identify_form_shop_assets_and_localized_technical_strings",
+  "current_phase": "binary_patch",
+  "last_completed_unit": "trace_form_action_gate_and_display_localization",
+  "next_unit": "verify_existing_NoSteam_safe_form_path",
   "completed_units": [
-    "task_initialized"
+    "task_initialized",
+    "resolve_form_assets_from_matching_source",
+    "trace_WB_FormScreen_unlock_transform_handler",
+    "trace_WB_FormUnlockPopup_confirm_delegate",
+    "trace_AC_PlayerEquipment_Unlock_Form_and_Equip_Form_Unlock",
+    "audit_CI_RU_Display_Forms_55_aliases",
+    "verify_installer_newer_NoSteam_uses_Steam_current_payload"
   ],
   "pending_units": [
-    "identify_form_shop_assets_and_localized_technical_strings",
-    "trace_buy_apply_handlers",
-    "audit_missing_form_descriptions",
-    "build_minimal_fix",
-    "static_validate",
-    "package_test",
-    "runtime_test"
+    "verify_existing_NoSteam_safe_form_path",
+    "static_validate_unchanged_payload",
+    "runtime_test_baseline_if_available"
   ],
   "source_files_used": [
     "CI_NOSTEAM_SOURCE_INDEX.json",
@@ -29,12 +31,23 @@
   "working_files": [
     "working/nosteam/0.7.9.16232/forms_purchase_apply_fix_v18_23/AUDIT_STATE.json"
   ],
-  "validation_completed": [],
+  "validation_completed": [
+    "DT_FormUnlocks and DT_CI_Forms are byte-identical between matching Steam/NoSteam sources",
+    "Form button/tree child widgets are byte-identical between Steam/NoSteam",
+    "Steam WB_FormScreen action gate uses localized display Text via Conv_TextToString",
+    "NoSteam WB_FormScreen action gate uses GetTextSourceString",
+    "NoSteam WB_FormScreen contains two 55-case CI_RU_Display_Forms display switches",
+    "Steam/NoSteam Game.locres both contain 55 CI_RU_Display_Forms Russian aliases",
+    "AC_PlayerEquipment form unlock/equip functions use the same gameplay path and no translated form caption dispatch"
+  ],
   "validation_pending": [
-    "source trace",
-    "runtime"
+    "patched asset Kismet parse/roundtrip",
+    "IoStore meta/readback",
+    "runtime form unlock/transform"
   ],
   "notes": [
-    "User reports form purchase/apply buttons do nothing and form descriptions are untranslated/missing. Treat visible labels vs technical identifiers separately. Preserve v18.21 radial/settings fixes."
+    "User reports form purchase/apply buttons do nothing and form descriptions are untranslated/missing. Treat visible labels vs technical identifiers separately. Preserve v18.21 radial/settings fixes.",
+    "Steam_current is also the installer payload for NoSteam 0.7.9.16313/16315+, so the Steam action-gate bug explains the same symptom in those builds.",
+    "NoSteam 0.7.9.16232 already has the source-string-safe action gate; do not replace it with Steam cooked files."
   ]
 }
