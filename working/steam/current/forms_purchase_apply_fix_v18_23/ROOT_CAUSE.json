@@ -1,0 +1,25 @@
+{
+  "release": "18.23 TEST",
+  "runtime_tested": false,
+  "root_cause": {
+    "Steam_current": "WB_FormScreen used visible localized Text_UnlockTransform -> Conv_TextToString -> Contains('UNLOCK'/'TRANSFORM'). Russian button labels caused the English probes to fall through.",
+    "NoSteam_0_7_9_16232": "Matching baseline asset already uses GetTextSourceString before the probes and already contains the form display localizer.",
+    "newer_NoSteam": "Installer maps NoSteam 0.7.9.16313/16315+ to Steam_current payload, so it inherited the Steam bug.",
+    "descriptions": "55 Russian CI_RU_Display_Forms aliases already existed in locres; current Steam WB_FormScreen did not use them for raw FormName/SidePanelDescription."
+  },
+  "fix": {
+    "target": "/Game/RPG_InventorySystem/UI/Forms/WB_FormScreen",
+    "Steam_current": [
+      "replace exactly two action probes to use GetTextSourceString",
+      "add two 55-case display-only mappings for form names/descriptions"
+    ],
+    "NoSteam_0_7_9_16232": "unchanged; already source-string-safe"
+  },
+  "archive": {
+    "name": "Carnal_Instinct_RU_DontLook_FormsFix_2026-10-07_v18.23_TEST.zip",
+    "sha256": "5e1b98eeb177b440bb49c978e221dcfeb771d07ce9732e6484c2e23ee9f3fc85",
+    "bytes": 23785022,
+    "entries": 140,
+    "installer_sha256": "a5baa19439d3b5dcc3e2992dc68498073e92eaeba4150437319c463fa5202c33"
+  }
+}
