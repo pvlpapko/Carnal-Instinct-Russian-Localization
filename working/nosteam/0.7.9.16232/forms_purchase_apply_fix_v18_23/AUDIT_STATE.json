@@ -1,0 +1,40 @@
+{
+  "schema_version": "1.0",
+  "edition": "NoSteam",
+  "task": "forms_purchase_apply_fix_v18_23",
+  "status": "analysis_started",
+  "source_state_id": "nosteam_0.7.9.16232_fixed",
+  "verified_game_version": "0.7.9",
+  "verified_build": "0.7.9.16232",
+  "current_phase": "source_audit",
+  "last_completed_unit": "task_initialized",
+  "next_unit": "identify_form_shop_assets_and_localized_technical_strings",
+  "completed_units": [
+    "task_initialized"
+  ],
+  "pending_units": [
+    "identify_form_shop_assets_and_localized_technical_strings",
+    "trace_buy_apply_handlers",
+    "audit_missing_form_descriptions",
+    "build_minimal_fix",
+    "static_validate",
+    "package_test",
+    "runtime_test"
+  ],
+  "source_files_used": [
+    "CI_NOSTEAM_SOURCE_INDEX.json",
+    "CI_NOSTEAM_SOURCE_TREE.txt",
+    "v18.21 canonical release"
+  ],
+  "working_files": [
+    "working/nosteam/0.7.9.16232/forms_purchase_apply_fix_v18_23/AUDIT_STATE.json"
+  ],
+  "validation_completed": [],
+  "validation_pending": [
+    "source trace",
+    "runtime"
+  ],
+  "notes": [
+    "User reports form purchase/apply buttons do nothing and form descriptions are untranslated/missing. Treat visible labels vs technical identifiers separately. Preserve v18.21 radial/settings fixes."
+  ]
+}
