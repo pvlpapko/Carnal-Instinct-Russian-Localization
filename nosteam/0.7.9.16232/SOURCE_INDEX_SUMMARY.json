@@ -1,0 +1,21 @@
+{
+  "schema_version": "1.0",
+  "edition": "NoSteam",
+  "source_state_id": "nosteam_0.7.9.16232_unpacked_drive_2026-10-07",
+  "generated_at": "2026-10-07",
+  "source_root_drive_id": "1utEQ4N93dZ3PUJRO5M0jX5gg1BydoAQ1",
+  "exact_recursive_folder_count": 3045,
+  "max_depth": 10,
+  "asset_registry_sha256": "927962f37343520e02448fef575464e43193b97e1ad3527f4ea564922244ff96",
+  "asset_registry_records_total": 43876,
+  "project_asset_records": 43123,
+  "unique_project_packages": 35942,
+  "world_packages": 2515,
+  "logical_index_complete": true,
+  "full_physical_file_metadata_complete": false,
+  "index_drive_id": "1AW90tbEjxz7RfB1kZiQHcZNqj2hHRr5N",
+  "index_sha256": "21a04ab2a3e9049a534b87e52a5ade5afe758bc018192fe3e11bd79689551db2",
+  "tree_drive_id": "1yRLeb6AB3Z7fE10GUOl8mp-N_5lzf8CF",
+  "tree_sha256": "7bcedbc53fd19e6ca4eabaaca4199f2c5c0188134002112f2195944c6a2db682",
+  "resolution_policy": "Resolve exact physical duplicate names, .ubulk sidecars and file Drive IDs by direct listing of the indexed NoSteam parent folder before build-dependent use."
+}
