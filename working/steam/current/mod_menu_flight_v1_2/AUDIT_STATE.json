@@ -2,13 +2,13 @@
   "schema_version": "1.0",
   "edition": "Both",
   "task": "mod_menu_flight_v1_2",
-  "status": "awaiting_in_game_validation_v1.2.1",
+  "status": "in_progress_v1.2.2_minidump_root_cause_fix",
   "source_state_id": "steam_current_0.7.9.16321 + CI_Mod_Menu_v1.1.1_runtime_validated",
   "verified_game_version": "0.7.9.16321",
   "verified_build": null,
-  "current_phase": "v1.2.1_test_release_ready_local",
-  "last_completed_unit": "v1.2.1_static_and_iostore_validation_passed",
-  "next_unit": "in_game_validate_v1.2.1",
+  "current_phase": "runtime_crash_root_cause_fix",
+  "last_completed_unit": "v1.2.1_minidump_root_cause_identified",
+  "next_unit": "replace_SelectFloat_speed_path_and_rebuild_v1.2.2",
   "completed_units": [
     "source_index_read",
     "github_state_index_read",
@@ -45,11 +45,21 @@
     "v1.2.1_custom_object_storage_removed",
     "v1.2.1_shift_x3_retained",
     "v1.2.1_iostore_meta_passed",
-    "v1.2.1_release_zip_crc_passed"
+    "v1.2.1_release_zip_crc_passed",
+    "v1.2.1_runtime_crash_confirmed",
+    "v1.2.1_rejected_due_to_access_violation",
+    "minidump_exception_context_parsed",
+    "null_result_pointer_RSI_confirmed",
+    "SelectFloat_speed_path_identified_as_crash_site",
+    "contaminated_steam_BP_CombatCharacter_old_flight_fields_confirmed"
   ],
   "pending_units": [
-    "runtime_validation_v1.2.1",
-    "drive_release_upload_readback"
+    "replace_SelectFloat_with_explicit_shift_branches",
+    "validate_no_SelectFloat_in_active_flight_branch",
+    "validate_standard_WASD_mouse_path",
+    "iostore_rebuild_v1.2.2",
+    "release_upload_readback",
+    "runtime_validation_v1.2.2"
   ],
   "source_files_used": [
     "CI_Mod_Menu_v1.1.1_DEVELOPMENT.zip",
@@ -77,8 +87,9 @@
     "v1.2.1_release_sha256_995d39471f48fc26c72ab3e3e210171d08150072bed1e4a0ffd6b5ad09493ff9"
   ],
   "validation_pending": [
-    "runtime_in_game_v1.2.1",
-    "drive_release_readback"
+    "v1.2.2_static",
+    "v1.2.2_iostore",
+    "v1.2.2_runtime"
   ],
   "notes": [
     "User requests flight using standard keyboard/mouse controls: WASD, camera pitch drives climb/descent, no noclip, sprint key gives x3 speed.",
@@ -95,6 +106,10 @@
     "v1.2.1 target architecture: stock game WASD/mouse remains active; mod only toggles MOVE_Flying, supplements vertical motion from camera pitch for W/S as needed, and applies Shift x3 MaxFlySpeed. No input-ignore native calls and no noclip.",
     "v1.2.1 removes the v1.2.0 SetIgnoreMoveInput/manual-WASD architecture. Stock game WASD+mouse remains active. Only W/S receive correction vector camera-forward minus yaw-forward, so stock yaw-forward plus correction equals the camera-forward direction.",
     "v1.2.1 uses no CI_FlightPC/CI_FlightMovement/CI_FlightCapsule/CI_FlightRotation/CI_FlightVector custom object/struct storage in the active branch. F8 debounce retains only the existing CI_SprintGait byte field.",
-    "Local TEST release prepared: CI_Mod_Menu_v1.2.1_TEST_0.7.9.16321.zip, 251203 bytes, SHA-256 995d39471f48fc26c72ab3e3e210171d08150072bed1e4a0ffd6b5ad09493ff9. Runtime validation remains pending."
+    "Local TEST release prepared: CI_Mod_Menu_v1.2.1_TEST_0.7.9.16321.zip, 251203 bytes, SHA-256 995d39471f48fc26c72ab3e3e210171d08150072bed1e4a0ffd6b5ad09493ff9. Runtime validation remains pending.",
+    "User runtime test of v1.2.1 reproduces the same immediate F8 crash: EXCEPTION_ACCESS_VIOLATION writing address 0x0.",
+    "CrashContext/minidump: first game RVA 0x3A55743; exception context RSI=0. Stack/native argument values around the crash are 3.0, 1083.0 and 361.0. This matches the flight speed expression Multiply_DoubleDouble(361,3)=1083 followed by SelectFloat(1083,361,shift). The native thunk writes the selected double through a null result pointer.",
+    "v1.2.2 removes SelectFloat from the active flight branch. Shift selection will use explicit control-flow branches: base speed assignment when not sprinting and Multiply_DoubleDouble(base,3) assignment when sprinting.",
+    "Current Steam BP_CombatCharacter source contains historical CI_Flight* fields and an old flight ReceiveTick hook; it is not a clean stock combat asset. v1.2.2 will keep the historical branch unreachable and will not reactivate its tag/input suppression path."
   ]
 }
