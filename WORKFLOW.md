@@ -4,13 +4,20 @@
 
 Before substantial work:
 
-1. Read the source index.
-2. Determine edition: NoSteam or Steam.
-3. For Steam, refresh or verify `steam/current/BUILD_STATE.json`.
-4. Locate the matching working task.
-5. Read existing `AUDIT_STATE.json` if present.
-6. Resume from `next_unit`.
-7. If no task state exists, create it before expensive analysis begins.
+1. Determine edition: NoSteam, Steam, or both.
+2. Read `working/STATE_INDEX.json`.
+3. Load the matching source state and index.
+4. For Steam, verify the current rolling source.
+5. Locate the matching working task.
+6. Read its `AUDIT_STATE.json`.
+7. Resume from `next_unit`.
+8. If state is absent, create it before expensive analysis.
+
+Source selection:
+
+- NoSteam: `nosteam/0.7.9.16232/SOURCE_STATE.json`, `CI_NOSTEAM_SOURCE_INDEX.json`, `CI_NOSTEAM_SOURCE_TREE.txt`.
+- Steam: `steam/current/BUILD_STATE.json`, `CI_SOURCE_INDEX.json`, `CI_SOURCE_TREE.txt`.
+- Both: load both sets separately.
 
 ## Working paths
 
@@ -18,11 +25,23 @@ NoSteam:
 
 `working/nosteam/0.7.9.16232/<task>/`
 
-Steam rolling channel:
+Steam:
 
 `working/steam/current/<task>/`
 
-Steam task paths do not change when the game updates.
+## NoSteam physical-file resolution
+
+The NoSteam source index contains an exact folder catalog and an exact logical AssetRegistry package/asset catalog.
+
+Some extracted duplicate assets have generated filename suffixes, and sidecars such as `.ubulk` are separate physical files. When a NoSteam record has no verified physical file ID:
+
+1. read the parent folder ID from `working/nosteam/0.7.9.16232/source_index/FOLDERS.json`;
+2. list that exact folder on Drive;
+3. select the exact file and required sidecars;
+4. verify the metadata or bytes needed for the current task;
+5. record that physical identity in the task report/state.
+
+Edition-specific source identities remain separate.
 
 ## AUDIT_STATE.json minimum fields
 
@@ -46,77 +65,50 @@ Steam task paths do not change when the game updates.
 - validation_pending
 - notes
 
-For Steam, `verified_game_version` and `verified_build` may be null when not yet proven. Never invent them.
+For Steam, verified version/build may be null when not proven.
 
 ## Stable work identifiers
 
-Localization rows:
+Localization:
 
 `Namespace + Key + original SourceStringHash`
 
-Cooked assets:
+Cooked asset:
 
 `package/path + edition + source_state_id`
 
-Subsystem work:
+Resolved physical file:
 
-exact package/subsystem path.
+`relative path + edition + source_state_id + verified file identity`
 
 ## Checkpoint policy
 
-Commit a checkpoint:
+Commit checkpoints after completed translation batches, packages/subsystems, significant analysis results and meaningful artifacts, and before binary/container work or final validation.
 
-- after every completed translation batch;
-- after every completed package/subsystem;
-- after a significant asset-analysis result;
-- after generating or modifying a meaningful artifact;
-- before another expensive phase;
-- before binary/container work;
-- before final validation;
-- whenever repeating completed work would be wasteful.
-
-A checkpoint should update both working data and `AUDIT_STATE.json`.
-
-The state must record explicit `last_completed_unit` and `next_unit`.
+Each checkpoint updates working data and `AUDIT_STATE.json` with explicit `last_completed_unit` and `next_unit`.
 
 ## Resume policy
 
-On Retry, continuation or new chat:
+On continuation:
 
-1. read the current source index;
-2. read the task state;
-3. verify source identity;
-4. skip completed verified units;
-5. resume exactly from `next_unit`.
+1. determine edition;
+2. read the matching source state/index;
+3. read `working/STATE_INDEX.json`;
+4. read the task state;
+5. verify source identity;
+6. skip completed verified units;
+7. resume from `next_unit`.
 
-If interruption occurred mid-unit, repeat only that incomplete unit.
+If interruption occurred mid-unit, repeat only that unit.
 
 ## Steam source change policy
 
-Steam is a rolling source.
+When Steam changes, keep the existing rolling workspace. Preserve compatible translation identities, revalidate build-dependent cooked/UI work, update source metadata and continue from the earliest affected unit.
 
-If current source identity differs from the state recorded by a task:
+## NoSteam source replacement policy
 
-- do not discard the task;
-- mark source compatibility as changed;
-- invalidate only work that depends on the changed source/schema;
-- preserve compatible translation rows whose source/key/hash identity still matches;
-- revalidate cooked binary/UI overrides;
-- update `source_state_id`;
-- continue from the earliest actually affected unit.
-
-Do not create a new version-bound workspace merely because Steam updated.
-
-Git history is the default history mechanism. Explicit snapshots are created only when a release, regression comparison or compatibility investigation requires one.
+NoSteam stays fixed at 0.7.9.16232. If its unpacked source is re-exported, compare source identity and AssetRegistry hash, refresh the NoSteam index only when needed, and invalidate only work affected by changed bytes/schema.
 
 ## Finalization
 
-A task becomes complete only when:
-
-- required phases are complete;
-- validation is recorded;
-- final reports are committed;
-- release artifacts are produced in the correct external/output location;
-- runtime-test status is stated accurately.
-
-Working state must never silently replace a verified release.
+Complete a task only after required phases and validation are recorded, reports are committed, external release artifacts are in their intended location, and runtime-test status is stated accurately.
