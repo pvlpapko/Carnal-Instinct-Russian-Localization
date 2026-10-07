@@ -246,13 +246,13 @@
       "edition": "Steam",
       "task": "forms_purchase_apply_fix_v18_23",
       "state_path": "working/steam/current/forms_purchase_apply_fix_v18_23/AUDIT_STATE.json",
-      "status": "analysis_started"
+      "status": "root_cause_identified_binary_patch_in_progress"
     },
     {
       "edition": "NoSteam",
       "task": "forms_purchase_apply_fix_v18_23",
       "state_path": "working/nosteam/0.7.9.16232/forms_purchase_apply_fix_v18_23/AUDIT_STATE.json",
-      "status": "analysis_started"
+      "status": "root_cause_identified_binary_patch_in_progress"
     }
   ],
   "latest_release": {
