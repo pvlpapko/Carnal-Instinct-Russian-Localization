@@ -1,0 +1,53 @@
+{
+  "schema_version": "1.0",
+  "edition": "NoSteam",
+  "channel": "fixed",
+  "rolling": false,
+  "source_state_id": "nosteam_0.7.9.16232_unpacked_drive_2026-10-07",
+  "verified_game_version": "0.7.9",
+  "verified_build": "0.7.9.16232",
+  "ue_version": "5.5.4",
+  "product_version": "++UE5+Release-5.5-CL-40574608",
+  "source_root": {
+    "name": "Carnal_Instinct_UE5_Nosteam",
+    "drive_id": "1utEQ4N93dZ3PUJRO5M0jX5gg1BydoAQ1",
+    "url": "https://drive.google.com/drive/folders/1utEQ4N93dZ3PUJRO5M0jX5gg1BydoAQ1"
+  },
+  "source_index": {
+    "drive_folder_id": "1cr_VHxdQshnan__XGrSUL9zmIB70oi3s",
+    "index_name": "CI_NOSTEAM_SOURCE_INDEX.json",
+    "index_drive_id": "1AW90tbEjxz7RfB1kZiQHcZNqj2hHRr5N",
+    "index_bytes": 43872040,
+    "index_sha256": "21a04ab2a3e9049a534b87e52a5ade5afe758bc018192fe3e11bd79689551db2",
+    "tree_name": "CI_NOSTEAM_SOURCE_TREE.txt",
+    "tree_drive_id": "1yRLeb6AB3Z7fE10GUOl8mp-N_5lzf8CF",
+    "tree_bytes": 6927810,
+    "tree_sha256": "7bcedbc53fd19e6ca4eabaaca4199f2c5c0188134002112f2195944c6a2db682"
+  },
+  "folder_catalog": {
+    "github_path": "working/nosteam/0.7.9.16232/source_index/FOLDERS.json",
+    "github_blob_sha": "25b9b79b65aa9deef76fff296e5dde7cb5722750",
+    "descendant_folders": 3045,
+    "max_depth": 10,
+    "complete": true
+  },
+  "asset_registry": {
+    "drive_id": "1wnfKFbREZTlwVk951sftaGt5zhmTjA4Q",
+    "bytes": 12240600,
+    "sha256": "927962f37343520e02448fef575464e43193b97e1ad3527f4ea564922244ff96",
+    "version": 17,
+    "asset_records_total": 43876,
+    "project_asset_records": 43123,
+    "unique_project_packages": 35942,
+    "world_packages": 2515
+  },
+  "index_mode": "exact folder catalog + exact logical AssetRegistry package/asset records; physical duplicate filenames and sidecars resolve lazily by exact parent-folder listing",
+  "full_physical_file_metadata_complete": false,
+  "physical_resolution_required_for_build_dependent_work": true,
+  "notes": [
+    "NoSteam source is separate from the rolling Steam source.",
+    "Do not copy Steam Drive IDs, sizes, hashes or cooked bytes into NoSteam metadata without explicit compatibility verification.",
+    "FModel extraction can suffix duplicate physical filenames non-sequentially; never invent those names from logical package names.",
+    "For .ubulk and duplicate physical exports, resolve the exact NoSteam parent folder and verify current Drive metadata/bytes before binary work."
+  ]
+}
